@@ -1,0 +1,7 @@
+{
+  "status": "FAIL",
+  "scope": "F supplemental revalidation harness; incorrect selected cell addresses",
+  "retained_first_result": true,
+  "frozen_protocol_changed": false,
+  "reader_field_checks": "all three FIELD_PASS 41; worksheet contexts unchanged"
+}

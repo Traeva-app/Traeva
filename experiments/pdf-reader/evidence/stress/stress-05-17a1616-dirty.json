@@ -1,0 +1,1075 @@
+{
+ "commit": "17a16165fd9c9057c4864a3e8974187ea7b40a46",
+ "worktree_dirty": true,
+ "probe": {
+  "path": "target/release/pdf-probe",
+  "sha256": "e25a7ec4f53461ae34a0603e1b752dd4964c924906d942f8cb97d28999f92730"
+ },
+ "environment": {
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.9.6"
+ },
+ "kind": "developer self-test (Claude-G); not an independent Codex-R4 result",
+ "protocol_sha256": "5154d486e7604afcb1e6899c6e3998469856f4bce223b5722c050bc23d338706",
+ "cutoff_seconds": 5,
+ "runs": {
+  "S1-big-string-64KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 65536,
+   "sha256": "d6e3987d0a487044aa63577bfb722a364058809480ebc8969645014a59fa856f",
+   "manifest_sha256": "d6e3987d0a487044aa63577bfb722a364058809480ebc8969645014a59fa856f",
+   "outcome": "returned",
+   "wall_seconds": 0.0052,
+   "millis": 0,
+   "peak_rss_kib": 4423680,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S1-big-string-128KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 131072,
+   "sha256": "366b7ebdd6d2f9167dde98d4fea9d84154ee1fa1b4dccc81a32e1a347f09b1da",
+   "manifest_sha256": "366b7ebdd6d2f9167dde98d4fea9d84154ee1fa1b4dccc81a32e1a347f09b1da",
+   "outcome": "returned",
+   "wall_seconds": 0.0061,
+   "millis": 1,
+   "peak_rss_kib": 4882432,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S1-big-string-256KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 262144,
+   "sha256": "8e88cca1f9b09c956b42d03a0678c3d47c53691410d3596f61cc8a9c74b3472f",
+   "manifest_sha256": "8e88cca1f9b09c956b42d03a0678c3d47c53691410d3596f61cc8a9c74b3472f",
+   "outcome": "returned",
+   "wall_seconds": 0.008,
+   "millis": 2,
+   "peak_rss_kib": 5308416,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S1-big-string-512KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 524288,
+   "sha256": "07650475b455a3a6f34842202d3cff20a9ca559a9e62c276df5b938d039e2809",
+   "manifest_sha256": "07650475b455a3a6f34842202d3cff20a9ca559a9e62c276df5b938d039e2809",
+   "outcome": "returned",
+   "wall_seconds": 0.0113,
+   "millis": 5,
+   "peak_rss_kib": 5701632,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S1-big-string-1MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 1048576,
+   "sha256": "3e24e93eac3664716575dcb10ea79f9db4303b0143c1e90d8ec5dbd4860da165",
+   "manifest_sha256": "3e24e93eac3664716575dcb10ea79f9db4303b0143c1e90d8ec5dbd4860da165",
+   "outcome": "returned",
+   "wall_seconds": 0.019,
+   "millis": 10,
+   "peak_rss_kib": 7749632,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S1-big-string-2MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 2097152,
+   "sha256": "97f6cd42f117ebccab2ada021ba9f5b20857ef3e1a8a49b896f3b6845198e608",
+   "manifest_sha256": "97f6cd42f117ebccab2ada021ba9f5b20857ef3e1a8a49b896f3b6845198e608",
+   "outcome": "returned",
+   "wall_seconds": 0.0332,
+   "millis": 20,
+   "peak_rss_kib": 11141120,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S1-big-string-4MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 4194304,
+   "sha256": "8925699b15e17ac385b7694a02afecc9df08bde5feaa2779abe1a62a28aaed91",
+   "manifest_sha256": "8925699b15e17ac385b7694a02afecc9df08bde5feaa2779abe1a62a28aaed91",
+   "outcome": "returned",
+   "wall_seconds": 0.0634,
+   "millis": 41,
+   "peak_rss_kib": 25083904,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S1-big-string-8MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 8388608,
+   "sha256": "2b1e0dfda76ce07dac4c2a4efd69c85fd3efed5446f4ec1ae02333599625ccc5",
+   "manifest_sha256": "2b1e0dfda76ce07dac4c2a4efd69c85fd3efed5446f4ec1ae02333599625ccc5",
+   "outcome": "returned",
+   "wall_seconds": 0.1233,
+   "millis": 81,
+   "peak_rss_kib": 40828928,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-64KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 65536,
+   "sha256": "a5364bbff1261d1012492349170d14dc4f3e660dbaf8964d9dace1f27db0ee80",
+   "manifest_sha256": "a5364bbff1261d1012492349170d14dc4f3e660dbaf8964d9dace1f27db0ee80",
+   "outcome": "returned",
+   "wall_seconds": 0.0072,
+   "millis": 1,
+   "peak_rss_kib": 4554752,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 65571,
+    "elements": 3693
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-128KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 131072,
+   "sha256": "9ae0d10e82aa400ef3646209d484988ef983e752c0f143a5dba9b4d1ab9d12c8",
+   "manifest_sha256": "9ae0d10e82aa400ef3646209d484988ef983e752c0f143a5dba9b4d1ab9d12c8",
+   "outcome": "returned",
+   "wall_seconds": 0.0101,
+   "millis": 3,
+   "peak_rss_kib": 4964352,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 131109,
+    "elements": 7335
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-256KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 262144,
+   "sha256": "932a700c2ecc00605e61d3b043f8d2d734bfd6dedcfaacd88b6956ce38df4f64",
+   "manifest_sha256": "932a700c2ecc00605e61d3b043f8d2d734bfd6dedcfaacd88b6956ce38df4f64",
+   "outcome": "returned",
+   "wall_seconds": 0.016,
+   "millis": 6,
+   "peak_rss_kib": 5423104,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 262185,
+    "elements": 14617
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-512KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 524288,
+   "sha256": "37e78cc3b45599c8b7b69644badf3787a78548dd8a7f8bbfb2c319f6ef7ae9ab",
+   "manifest_sha256": "37e78cc3b45599c8b7b69644badf3787a78548dd8a7f8bbfb2c319f6ef7ae9ab",
+   "outcome": "returned",
+   "wall_seconds": 0.0279,
+   "millis": 11,
+   "peak_rss_kib": 5898240,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 524337,
+    "elements": 29181
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-1MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 1048576,
+   "sha256": "44f06d723376b7d9ce0d536220d258658e87195c5aa0c106b592de37d24416df",
+   "manifest_sha256": "44f06d723376b7d9ce0d536220d258658e87195c5aa0c106b592de37d24416df",
+   "outcome": "returned",
+   "wall_seconds": 0.0514,
+   "millis": 23,
+   "peak_rss_kib": 8241152,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 1048623,
+    "elements": 58309
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-2MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 2097152,
+   "sha256": "79e5d4b342f2d95101e0af43cb468bff8086db467b49223a26fd0efc2432c025",
+   "manifest_sha256": "79e5d4b342f2d95101e0af43cb468bff8086db467b49223a26fd0efc2432c025",
+   "outcome": "returned",
+   "wall_seconds": 0.0958,
+   "millis": 46,
+   "peak_rss_kib": 14532608,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 2097195,
+    "elements": 116563
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-4MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 4194304,
+   "sha256": "de0a7bfa17cd47a753f4d4aca257e440c242bd97c6382b7d17fd924e32575f07",
+   "manifest_sha256": "de0a7bfa17cd47a753f4d4aca257e440c242bd97c6382b7d17fd924e32575f07",
+   "outcome": "returned",
+   "wall_seconds": 0.1807,
+   "millis": 90,
+   "peak_rss_kib": 25198592,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 4194339,
+    "elements": 233071
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S2-comment-stress-8MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 8388608,
+   "sha256": "14f71a8a393f5137746575d0e5c966453c715f86bdb16ece892782dac7f3488a",
+   "manifest_sha256": "14f71a8a393f5137746575d0e5c966453c715f86bdb16ece892782dac7f3488a",
+   "outcome": "returned",
+   "wall_seconds": 0.377,
+   "millis": 194,
+   "peak_rss_kib": 47071232,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 8388645,
+    "elements": 466088
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-64KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 65536,
+   "sha256": "54c4ecafbab4ec30029b276059d82a63db7a39804753fea29c7b3a2df2f11f3d",
+   "manifest_sha256": "54c4ecafbab4ec30029b276059d82a63db7a39804753fea29c7b3a2df2f11f3d",
+   "outcome": "returned",
+   "wall_seconds": 0.0098,
+   "millis": 2,
+   "peak_rss_kib": 4620288,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 8242
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-128KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 131072,
+   "sha256": "0a00c1c7a0b3708700a1ae2863f563bdeeb03f8e5c1fbcf284bb0e9793d88eef",
+   "manifest_sha256": "0a00c1c7a0b3708700a1ae2863f563bdeeb03f8e5c1fbcf284bb0e9793d88eef",
+   "outcome": "returned",
+   "wall_seconds": 0.0139,
+   "millis": 5,
+   "peak_rss_kib": 5013504,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 16434
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-256KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 262144,
+   "sha256": "26c3842452ec59a130210ca3b65b7fbed253506b184b495f527c611f1c625688",
+   "manifest_sha256": "26c3842452ec59a130210ca3b65b7fbed253506b184b495f527c611f1c625688",
+   "outcome": "returned",
+   "wall_seconds": 0.0243,
+   "millis": 10,
+   "peak_rss_kib": 5652480,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 32818
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-512KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 524288,
+   "sha256": "29807228025ac7065ff91a3acf60541de036d7e35e8afa7a1eedcc755154db97",
+   "manifest_sha256": "29807228025ac7065ff91a3acf60541de036d7e35e8afa7a1eedcc755154db97",
+   "outcome": "returned",
+   "wall_seconds": 0.0441,
+   "millis": 20,
+   "peak_rss_kib": 6946816,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 65586
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-1MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 1048576,
+   "sha256": "223fc0b8511c142cf14b71fcc736179c9256b9b5d1202685bad259b2f76a0d32",
+   "manifest_sha256": "223fc0b8511c142cf14b71fcc736179c9256b9b5d1202685bad259b2f76a0d32",
+   "outcome": "returned",
+   "wall_seconds": 0.0864,
+   "millis": 41,
+   "peak_rss_kib": 9912320,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 131122
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-2MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 2097152,
+   "sha256": "4c2a7c57db9f7bdd4ad44bcde3b480df98437e65960a25c95f0898b4026fa2cc",
+   "manifest_sha256": "4c2a7c57db9f7bdd4ad44bcde3b480df98437e65960a25c95f0898b4026fa2cc",
+   "outcome": "returned",
+   "wall_seconds": 0.1681,
+   "millis": 81,
+   "peak_rss_kib": 14680064,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 262194
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-4MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 4194304,
+   "sha256": "6dcb80e55c9f627887946f58372e4a7b8e573a7a90c9bb0f1a8b0c69a979a135",
+   "manifest_sha256": "6dcb80e55c9f627887946f58372e4a7b8e573a7a90c9bb0f1a8b0c69a979a135",
+   "outcome": "returned",
+   "wall_seconds": 0.343,
+   "millis": 168,
+   "peak_rss_kib": 26083328,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 524338
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S3-open-literal-8MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 8388608,
+   "sha256": "fd32a0eb36daa6e1248427ed8e950c4c7a7da908a442a4b4b001854e3bcd34cf",
+   "manifest_sha256": "fd32a0eb36daa6e1248427ed8e950c4c7a7da908a442a4b4b001854e3bcd34cf",
+   "outcome": "returned",
+   "wall_seconds": 0.8055,
+   "millis": 372,
+   "peak_rss_kib": 47890432,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 1048626
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-64KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 65536,
+   "sha256": "c27dd3a6f5328019e30c447a60dfd6c0de7bd769bdee1e7583cbf0763b37659f",
+   "manifest_sha256": "c27dd3a6f5328019e30c447a60dfd6c0de7bd769bdee1e7583cbf0763b37659f",
+   "outcome": "returned",
+   "wall_seconds": 0.008,
+   "millis": 2,
+   "peak_rss_kib": 4636672,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 16434
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-128KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 131072,
+   "sha256": "0e393e95ec03577c24ead69347882776046c969292956e1fcbe2c79c3b111c1d",
+   "manifest_sha256": "0e393e95ec03577c24ead69347882776046c969292956e1fcbe2c79c3b111c1d",
+   "outcome": "returned",
+   "wall_seconds": 0.0119,
+   "millis": 4,
+   "peak_rss_kib": 5029888,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 32818
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-256KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 262144,
+   "sha256": "c414079df08187defe8b315ec7d6619b4f9f06f502ce16cdf8e00863f73cbd76",
+   "manifest_sha256": "c414079df08187defe8b315ec7d6619b4f9f06f502ce16cdf8e00863f73cbd76",
+   "outcome": "returned",
+   "wall_seconds": 0.0204,
+   "millis": 8,
+   "peak_rss_kib": 5652480,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 65586
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-512KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 524288,
+   "sha256": "38c8eed8b08638c28b3a493b0b43b538942b1d1d302173a8ea5d2788d7ffea94",
+   "manifest_sha256": "38c8eed8b08638c28b3a493b0b43b538942b1d1d302173a8ea5d2788d7ffea94",
+   "outcome": "returned",
+   "wall_seconds": 0.0354,
+   "millis": 16,
+   "peak_rss_kib": 6963200,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 131122
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-1MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 1048576,
+   "sha256": "8fb590ce490e10c31cf39ab67f3cd0ccc853b90674534a82b8ce06cb9abc379f",
+   "manifest_sha256": "8fb590ce490e10c31cf39ab67f3cd0ccc853b90674534a82b8ce06cb9abc379f",
+   "outcome": "returned",
+   "wall_seconds": 0.0685,
+   "millis": 32,
+   "peak_rss_kib": 9928704,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 262194
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-2MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 2097152,
+   "sha256": "0c6c5c51979ae2df820b15f4069e63f4eb04d9a0418dbfbd950f2944d4ac1859",
+   "manifest_sha256": "0c6c5c51979ae2df820b15f4069e63f4eb04d9a0418dbfbd950f2944d4ac1859",
+   "outcome": "returned",
+   "wall_seconds": 0.1334,
+   "millis": 65,
+   "peak_rss_kib": 14680064,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 524338
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-4MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 4194304,
+   "sha256": "67e79b2dbfccc4f3492315b00cc180625bc246f7f3640d3712de6a676ab089c8",
+   "manifest_sha256": "67e79b2dbfccc4f3492315b00cc180625bc246f7f3640d3712de6a676ab089c8",
+   "outcome": "returned",
+   "wall_seconds": 0.2639,
+   "millis": 132,
+   "peak_rss_kib": 26099712,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 1048626
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S4-open-hex-8MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 8388608,
+   "sha256": "f5c26080f793fba355825cb600315676eac5e93f64c3b1418c903c45d2875b2b",
+   "manifest_sha256": "f5c26080f793fba355825cb600315676eac5e93f64c3b1418c903c45d2875b2b",
+   "outcome": "returned",
+   "wall_seconds": 0.5372,
+   "millis": 268,
+   "peak_rss_kib": 47890432,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 2097202
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S5-no-endstream-64KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 65536,
+   "sha256": "019954e75a682296b63d3e948cf55db9c158a1329a4101a91f9f399e8a187d3a",
+   "manifest_sha256": "019954e75a682296b63d3e948cf55db9c158a1329a4101a91f9f399e8a187d3a",
+   "outcome": "returned",
+   "wall_seconds": 0.0057,
+   "millis": 1,
+   "peak_rss_kib": 6062080,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 103070811,
+    "elements": 38
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S5-no-endstream-128KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 131072,
+   "sha256": "662ddaf59af8b5c070d08df3ce1d5302d93fb67f8855ec319e08060059262c99",
+   "manifest_sha256": "662ddaf59af8b5c070d08df3ce1d5302d93fb67f8855ec319e08060059262c99",
+   "outcome": "returned",
+   "wall_seconds": 0.0066,
+   "millis": 1,
+   "peak_rss_kib": 6668288,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "scan_work": null,
+   "problems": [
+    "status 'unsupported' != 'complete'",
+    "note \"The PDF's non-image streams expand to more than this reader's limit (128 MiB).\" != None",
+    "text differs"
+   ],
+   "verdict": "FAIL"
+  },
+  "S5-no-endstream-256KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 262144,
+   "sha256": "be560b1ee88661f107ac99f83c573996baf34ee29574f50bb4b966c371c1c367",
+   "manifest_sha256": "be560b1ee88661f107ac99f83c573996baf34ee29574f50bb4b966c371c1c367",
+   "outcome": "returned",
+   "wall_seconds": 0.0089,
+   "millis": 2,
+   "peak_rss_kib": 11386880,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "scan_work": null,
+   "problems": [
+    "status 'unsupported' != 'complete'",
+    "note \"The PDF's non-image streams expand to more than this reader's limit (128 MiB).\" != None",
+    "text differs"
+   ],
+   "verdict": "FAIL"
+  },
+  "S5-no-endstream-512KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 524288,
+   "sha256": "ee84d613b0b7eaf2126017dacd86384581e225197bea79b418febd96f65e8e4f",
+   "manifest_sha256": "ee84d613b0b7eaf2126017dacd86384581e225197bea79b418febd96f65e8e4f",
+   "outcome": "returned",
+   "wall_seconds": 0.0142,
+   "millis": 5,
+   "peak_rss_kib": 28377088,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "scan_work": null,
+   "problems": [
+    "status 'unsupported' != 'complete'",
+    "note \"The PDF's non-image streams expand to more than this reader's limit (128 MiB).\" != None",
+    "text differs"
+   ],
+   "verdict": "FAIL"
+  },
+  "S5-no-endstream-1MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 1048576,
+   "sha256": "69ff23c831bb96b2f5ee73d556b4903c1c67f5f55953783ffdd4a9b776b14d08",
+   "manifest_sha256": "69ff23c831bb96b2f5ee73d556b4903c1c67f5f55953783ffdd4a9b776b14d08",
+   "outcome": "returned",
+   "wall_seconds": 0.0249,
+   "millis": 10,
+   "peak_rss_kib": 51888128,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "scan_work": null,
+   "problems": [
+    "status 'unsupported' != 'complete'",
+    "note \"The PDF's non-image streams expand to more than this reader's limit (128 MiB).\" != None",
+    "text differs"
+   ],
+   "verdict": "FAIL"
+  },
+  "S5-no-endstream-2MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 2097152,
+   "sha256": "ee5daab4025d3ce303f8b06f310c66c0cd871012dd21daa222ae0118e035cb22",
+   "manifest_sha256": "ee5daab4025d3ce303f8b06f310c66c0cd871012dd21daa222ae0118e035cb22",
+   "outcome": "returned",
+   "wall_seconds": 0.0338,
+   "millis": 14,
+   "peak_rss_kib": 32440320,
+   "status": "unsupported",
+   "note": "The PDF has more streams than this reader's limit (50000).",
+   "scan_work": null,
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S5-no-endstream-4MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 4194304,
+   "sha256": "24f637c36914d445de78cc466a5806e1e92c253a9dbfb04bfc733a4cc9f99765",
+   "manifest_sha256": "24f637c36914d445de78cc466a5806e1e92c253a9dbfb04bfc733a4cc9f99765",
+   "outcome": "returned",
+   "wall_seconds": 0.0563,
+   "millis": 25,
+   "peak_rss_kib": 39075840,
+   "status": "unsupported",
+   "note": "The PDF has more streams than this reader's limit (50000).",
+   "scan_work": null,
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S5-no-endstream-8MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 8388608,
+   "sha256": "e6f8f6f28984187f0fdc674b32509275fe5bfd147345b51ded5fae8969694bc1",
+   "manifest_sha256": "e6f8f6f28984187f0fdc674b32509275fe5bfd147345b51ded5fae8969694bc1",
+   "outcome": "returned",
+   "wall_seconds": 0.1027,
+   "millis": 49,
+   "peak_rss_kib": 51003392,
+   "status": "unsupported",
+   "note": "The PDF has more streams than this reader's limit (50000).",
+   "scan_work": null,
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-64KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 65536,
+   "sha256": "d6f8364644130486a37cd90c4fc86ba1da45812b01350e776c6773851ad6322f",
+   "manifest_sha256": "d6f8364644130486a37cd90c4fc86ba1da45812b01350e776c6773851ad6322f",
+   "outcome": "returned",
+   "wall_seconds": 0.0054,
+   "millis": 0,
+   "peak_rss_kib": 4374528,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-128KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 131072,
+   "sha256": "261f4ab1ca378a8872e912848f19f23f3052ce92b8020f202f2856934c941023",
+   "manifest_sha256": "261f4ab1ca378a8872e912848f19f23f3052ce92b8020f202f2856934c941023",
+   "outcome": "returned",
+   "wall_seconds": 0.0067,
+   "millis": 1,
+   "peak_rss_kib": 4751360,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-256KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 262144,
+   "sha256": "cae602c7d1bf18d56b9f9293cfb079c93e99c09208497fd3f9bd450e6519cde7",
+   "manifest_sha256": "cae602c7d1bf18d56b9f9293cfb079c93e99c09208497fd3f9bd450e6519cde7",
+   "outcome": "returned",
+   "wall_seconds": 0.0097,
+   "millis": 3,
+   "peak_rss_kib": 5046272,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-512KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 524288,
+   "sha256": "b15c1ea7a64bab2bf374cab52cebf3990ecfa6fa7d49eb2504261daa782589a6",
+   "manifest_sha256": "b15c1ea7a64bab2bf374cab52cebf3990ecfa6fa7d49eb2504261daa782589a6",
+   "outcome": "returned",
+   "wall_seconds": 0.0154,
+   "millis": 5,
+   "peak_rss_kib": 5505024,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-1MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 1048576,
+   "sha256": "8a3d2ff5ff06153bc68a2d64b66ee3ba0aaa8426c54d76fa940cdf5c29dcd376",
+   "manifest_sha256": "8a3d2ff5ff06153bc68a2d64b66ee3ba0aaa8426c54d76fa940cdf5c29dcd376",
+   "outcome": "returned",
+   "wall_seconds": 0.0278,
+   "millis": 12,
+   "peak_rss_kib": 6668288,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-2MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 2097152,
+   "sha256": "2fec94a3d0c1022954952acacae3a7e57b375ab9c64d1e9f250735558d304f79",
+   "manifest_sha256": "2fec94a3d0c1022954952acacae3a7e57b375ab9c64d1e9f250735558d304f79",
+   "outcome": "returned",
+   "wall_seconds": 0.0503,
+   "millis": 23,
+   "peak_rss_kib": 11124736,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-4MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 4194304,
+   "sha256": "305929f1f1a3fb3acc6f04650beb41dd8a3b51c3f05e6248fab846ac15c3c618",
+   "manifest_sha256": "305929f1f1a3fb3acc6f04650beb41dd8a3b51c3f05e6248fab846ac15c3c618",
+   "outcome": "returned",
+   "wall_seconds": 0.0968,
+   "millis": 44,
+   "peak_rss_kib": 20873216,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S6-comment-line-8MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 8388608,
+   "sha256": "3306289adb4c15e21d5512babdcbff42b1c67875ecad91880496c664c5090266",
+   "manifest_sha256": "3306289adb4c15e21d5512babdcbff42b1c67875ecad91880496c664c5090266",
+   "outcome": "returned",
+   "wall_seconds": 0.1951,
+   "millis": 95,
+   "peak_rss_kib": 32423936,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-64KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 65536,
+   "sha256": "3fba652700d14cecb22afacecca4abdca0bbe0912077965a872e061c07fa505e",
+   "manifest_sha256": "3fba652700d14cecb22afacecca4abdca0bbe0912077965a872e061c07fa505e",
+   "outcome": "returned",
+   "wall_seconds": 0.0247,
+   "millis": 19,
+   "peak_rss_kib": 4702208,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 27523
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-128KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 131072,
+   "sha256": "b8bb4c951e47896e2e4cf0218177feeedf41fb1dcf7f627f57c8b14b30e96e79",
+   "manifest_sha256": "b8bb4c951e47896e2e4cf0218177feeedf41fb1dcf7f627f57c8b14b30e96e79",
+   "outcome": "returned",
+   "wall_seconds": 0.0445,
+   "millis": 38,
+   "peak_rss_kib": 5144576,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53737
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-256KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 262144,
+   "sha256": "a33e41fe9581d398cc385917dee2821f1b2f164abbcc23e14cb692503bf343f9",
+   "manifest_sha256": "a33e41fe9581d398cc385917dee2821f1b2f164abbcc23e14cb692503bf343f9",
+   "outcome": "returned",
+   "wall_seconds": 0.0839,
+   "millis": 75,
+   "peak_rss_kib": 5750784,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 106165
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-512KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 524288,
+   "sha256": "46553b9b57ac5851d718264fc402a17adb153fbcbe21e08a4e230c955f5eacbe",
+   "manifest_sha256": "46553b9b57ac5851d718264fc402a17adb153fbcbe21e08a4e230c955f5eacbe",
+   "outcome": "returned",
+   "wall_seconds": 0.1667,
+   "millis": 153,
+   "peak_rss_kib": 6881280,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 211023
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-1MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 1048576,
+   "sha256": "56f540d4784014b039f4aad794c4de4203f98cca862615d0aab3b2e4c2307229",
+   "manifest_sha256": "56f540d4784014b039f4aad794c4de4203f98cca862615d0aab3b2e4c2307229",
+   "outcome": "returned",
+   "wall_seconds": 0.3352,
+   "millis": 312,
+   "peak_rss_kib": 9093120,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 420739
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-2MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 2097152,
+   "sha256": "b7854e5bf5172383dd7e15e97bfea3b03860055fb81dbaf1d9494c0e7485b86f",
+   "manifest_sha256": "b7854e5bf5172383dd7e15e97bfea3b03860055fb81dbaf1d9494c0e7485b86f",
+   "outcome": "returned",
+   "wall_seconds": 0.6524,
+   "millis": 612,
+   "peak_rss_kib": 15597568,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 840169
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-4MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 4194304,
+   "sha256": "2decf44ba81ac17e2bd5f92acf3199046b5eb38561516d1fa011b15d75c0af51",
+   "manifest_sha256": "2decf44ba81ac17e2bd5f92acf3199046b5eb38561516d1fa011b15d75c0af51",
+   "outcome": "returned",
+   "wall_seconds": 1.2916,
+   "millis": 1213,
+   "peak_rss_kib": 27049984,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 1679029
+   },
+   "problems": [],
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts-8MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 8388608,
+   "sha256": "48dc24485a7edbfcf952b575a3d40741f04b61b5affa126f19e656ebb053d247",
+   "manifest_sha256": "48dc24485a7edbfcf952b575a3d40741f04b61b5affa126f19e656ebb053d247",
+   "outcome": "returned",
+   "wall_seconds": 2.5076,
+   "millis": 2359,
+   "peak_rss_kib": 47939584,
+   "status": "complete",
+   "note": null,
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 3356751
+   },
+   "problems": [],
+   "verdict": "PASS"
+  }
+ },
+ "inputs_generated_ok": true,
+ "ratios": {
+  "S1-big-string": {
+   "millis_small": 10,
+   "millis_large": 81,
+   "ratio": 8.1,
+   "verdict": "PASS"
+  },
+  "S2-comment-stress": {
+   "millis_small": 23,
+   "millis_large": 194,
+   "ratio": 8.43,
+   "verdict": "PASS"
+  },
+  "S3-open-literal": {
+   "millis_small": 41,
+   "millis_large": 372,
+   "ratio": 9.07,
+   "verdict": "PASS"
+  },
+  "S4-open-hex": {
+   "millis_small": 32,
+   "millis_large": 268,
+   "ratio": 8.38,
+   "verdict": "PASS"
+  },
+  "S5-no-endstream": {
+   "millis_small": 10,
+   "millis_large": 49,
+   "ratio": 4.9,
+   "verdict": "PASS"
+  },
+  "S6-comment-line": {
+   "millis_small": 12,
+   "millis_large": 95,
+   "ratio": 7.92,
+   "verdict": "PASS"
+  },
+  "S7-nested-dicts": {
+   "millis_small": 312,
+   "millis_large": 2359,
+   "ratio": 7.56,
+   "verdict": "PASS"
+  }
+ },
+ "totals": {
+  "inputs": 56,
+  "pass": 52,
+  "fail": 4,
+  "time_outs": 0,
+  "ratios_pass": 7,
+  "ratios_fail": 0,
+  "inputs_generated_ok": true
+ }
+}

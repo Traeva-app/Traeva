@@ -1,0 +1,128 @@
+{
+  "as_of": "2026-10-10",
+  "baseline": "6e42bf89b5a6242e7eead823e5657a8bc3b83bb8",
+  "reader_source_sha256": "e0bd93f5d180bd23ca42e90cf23fa09f8980d6664515064b02222d912c1d057f",
+  "environment": {
+    "platform": "macOS 27.0.1 arm64",
+    "rust": "1.98.1",
+    "word": "16.78"
+  },
+  "developer_tests": {
+    "reader": 57,
+    "core_snapshot_api": 3,
+    "total": 60,
+    "passed": 60
+  },
+  "word_tests": {
+    "v1": {
+      "expected_matches": true,
+      "input_bytes": 12229,
+      "input_sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+      "iterations": 200,
+      "mean_ms": 0.7922179199999999,
+      "summary": {
+        "chars": 64,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-1",
+        "status": "complete"
+      },
+      "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+      "total_ms": 158.443584
+    },
+    "v2": {
+      "expected_matches": true,
+      "input_bytes": 12265,
+      "input_sha256": "d2c09b9b149be16ef4a22a75f91a18a06401d7717c8aa35bf6e01cb1484e3793",
+      "iterations": 200,
+      "mean_ms": 0.7868389600000001,
+      "summary": {
+        "chars": 72,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-1",
+        "status": "complete"
+      },
+      "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+      "total_ms": 157.367792
+    }
+  },
+  "benchmark": {
+    "expected_matches": true,
+    "input_bytes": 433762,
+    "input_sha256": "44051739b1e2b6bd03d0979c8b9a37d761379693f722af3efeff22807b1555bd",
+    "iterations": 10,
+    "mean_ms": 12.2629834,
+    "summary": {
+      "chars": 888889,
+      "covered": [
+        "main body paragraphs, runs, tabs and explicit line breaks"
+      ],
+      "left_out": [],
+      "note": null,
+      "reader": "docx-1",
+      "status": "complete"
+    },
+    "text_sha256": "814ea8ec850f64a54f62742785243cfaba3c31dcb71bf0c88f56ff9ed797ad10",
+    "total_ms": 122.62983399999999
+  },
+  "benchmark_resources": "        0.13 real         0.12 user         0.00 sys\n            14139392  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1061  page reclaims\n                   0  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   3  voluntary context switches\n                 197  involuntary context switches\n          2035631959  instructions retired\n           455823731  cycles elapsed\n             9765344  peak memory footprint\n",
+  "snapshot_after_source_rename": {
+    "reader": {
+      "expected_matches": true,
+      "input_bytes": 12229,
+      "input_sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+      "iterations": 1,
+      "mean_ms": 1.047791,
+      "summary": {
+        "chars": 64,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-1",
+        "status": "complete"
+      },
+      "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+      "total_ms": 1.047791
+    },
+    "snapshot": {
+      "byte_length": 12229,
+      "captured_at_ms": 1791615532212,
+      "file_id": "60f7bfd8-6e74-435a-804e-a44df03177b9",
+      "file_revision": 1,
+      "relative_path": "word-v1.docx",
+      "root_id": "9158e5da-a1c6-4228-95f2-485390b683bb",
+      "sequence": 1,
+      "sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+      "snapshot_id": "9224e65c-2ee4-423c-829d-c9cbca435957"
+    }
+  },
+  "not_accepted": [
+    "shared production dispatch not wired by A",
+    "full Word Memory/real model Semantic Change/Retrieval not run",
+    "Codex-R final acceptance pending",
+    "10/13 final decision pending"
+  ],
+  "core_regression": {
+    "passed": 688,
+    "failed": 0,
+    "ignored": 9,
+    "first_sandbox_run": {
+      "passed": 511,
+      "failed": 82,
+      "ignored": 4,
+      "failure": "all 82 at model_tests.rs:90 loopback bind Operation not permitted"
+    },
+    "rerun": "unsandboxed offline test suite; no ignored tests enabled"
+  },
+  "usable_as_current_acceptance": false,
+  "superseded_by": "validation.json docx-2"
+}

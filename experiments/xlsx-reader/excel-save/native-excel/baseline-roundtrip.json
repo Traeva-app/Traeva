@@ -1,0 +1,10 @@
+{
+  "stage": "baseline",
+  "capture_utc": "2026-10-11T23:09:04.141405+00:00",
+  "sha256_first_closed": "c78ea807b695b297027463160b7a9e86e9d579ef035b5ffa67c6df55d6eabcf2",
+  "sha256_after_reopen_closed": "c78ea807b695b297027463160b7a9e86e9d579ef035b5ffa67c6df55d6eabcf2",
+  "unchanged": true,
+  "bytes": 11471,
+  "source": "historical original Excel output; not a reopened sanitized derivative",
+  "original_output_not_retained_in_rewritten_history": true
+}

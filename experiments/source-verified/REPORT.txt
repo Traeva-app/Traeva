@@ -1,0 +1,184 @@
+# TRAEVA 有条件自动 VERIFIED：Go / No-Go 实验报告
+
+日期：2026-10-10。执行者：Codex-C。性质：开发者实验与证据核对，未经过 Codex-R 独立审核。
+
+结论：GO — 可以继续受限可信获取机制的研究与核心实现设计。
+NO-GO — 现在不能接入正式 #27、默认开启接管或宣称产品自动 VERIFIED 已验收。
+
+新原型修复了旧的临时路径 rename 交付问题，并走通真实有窗口 Chrome 的
+Fetch → Stream → 持久 Native Messaging → Writer。自动验证所需的直接获取链
+已有受限实测依据；正式核心登记、macOS 下载安全保护和权限 UI 验收尚未完成。
+
+## 1. 不改变已验收产品
+
+- 所有代码在 experiments/source-verified；没有修改产品 feature、共享 contracts、
+  migrations、workspace manifests、Tauri 注册/权限或 #37 集成。
+- 没有写入正式 Source 数据库，没有升级任何 User Confirmed。
+- 实验状态为 HISTORICAL_ACQUISITION_OBSERVED；没有生成产品 VERIFIED。
+- 既有 #27 仍已完成；这项实验是新增研究，不重新解释旧验收，也不自行 merge。
+
+主仓库基线：1c0ff381a0331e270e8f38c3e0e21a56c4ee478e。
+实际实验版本：证据包 MANIFEST.json 的 sourceRevision 与各次运行冻结源码 hash。
+该基线 SHA 不代表主仓库已经包含这些实验；PR commit 承载对应新文件。
+
+## 2. 交付机制及证据在哪里直接绑定
+
+Chrome：一个明确的 tab / debugger epoch / Fetch request / IO stream 对应一个新 acquisition ID。
+实际 IO.read 返回的数据按顺序发送到同一持久 native host；该任务独占新建 staging 文件，
+从创建起持续持有其描述符。各块写入这个描述符，而不是再次按 staging 路径打开。
+跨任务既不以 URL/文件名配对，也不以 hash 或时间寻找对应文件。
+
+直接获取：请求调用直接返回本任务持续持有的 HTTPS response；该 response 的字节写入
+本任务 staging 描述符。使用 TRAEVA_DIRECT_HTTPS_ACQUISITION 命名空间。
+Chrome 接管使用 TRAEVA_CHROME_FETCH_ACQUISITION；两者 chromeDownloadId 均为 null。
+direct 的 request/response handle 标识是本任务生成的诊断 ID，不冒充浏览器 ID。
+
+交付步骤：
+1. 定长响应 EOF，接收字节数严格等于唯一 Content-Length，且不支持的 framing 已拒绝。
+2. 从持续持有的源句柄读取有界、稳定的不可变内存快照。hash 用于确认快照仍等于
+   已接收流，不作为来源与对象关联的独立证明。
+3. 在已持有的交付目录句柄内，用 O_EXCL / O_NOFOLLOW 独占创建新目标；创建调用
+   直接返回目标句柄。目标是新的文件对象，明确记录该事实，不把它说成原临时对象移动。
+4. 用目标句柄写下载 quarantine 和 WhereFroms，随后只通过此句柄写入内存快照。
+   全程不 rename、link 或复制可被替换的 staging 名称。
+5. fsync、稳定回读、比较创建对象 / 活目标句柄 / 当前名称对象，核对内容和属性。
+6. 保存本地历史收据。观察时间在最后对象观察处记录；收据要求当前路径重新核对。
+
+macOS fclonefileat 已探测能克隆持有的源句柄，也拒绝覆盖目标；但接口不返回目标句柄。
+为避免克隆后重新打开目标的窗口，本版没有用它建立获取依据。
+Apple 原始接口说明：
+https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/man/man2/clonefile.2
+
+安全交付在本报告中的具体结论是：本次反例没有使 Writer 把被替换的源对象发布到交付目录。
+它不承诺整份文件原子出现。写入失败/崩溃可留下本任务自己的空文件、部分文件或完整文件，
+必须标为 DELIVERY_UNCERTAIN，不能因为“没收据”就笼统宣称交付安全。
+不按目标名称盲删残留，以免删除后来被替换的其他对象。
+
+## 3. 环境与实测
+
+macOS 27.0.1 / Darwin 27.0.0，arm64，本机文件系统；Python 3.9。
+有窗口的 Google Chrome 155.0.8059.39，revision 3ff7ac5a9224be9156d7f8703a06e22890aafd34。
+独立 Profile、合成下载目录、隔离 app-data，未使用个人 Chrome 资料或凭据。
+真实 TLS 连接合成 HTTPS 服务；Chrome 只对该随机证书 SPKI 作例外信任。
+没有关闭全部证书校验。这仍然不是公共 CA 网站的独立验收。
+
+最终 Chrome 原始运行：/private/tmp/traeva-c-verified-chrome-UGwLNU。
+直接获取运行：/private/tmp/traeva-c-verified-direct-mbctjbsf。
+审查时使用证据包中的持久副本，不依赖这些临时路径仍存在。
+
+本机测试：22 项 PASS，包含两个实际 os._exit(73) 子进程及新的只读重启进程。
+Chrome：15 个下载场景，另有默认禁用/未勾选授权 2 项；15 个接管任务，
+11 个历史收据，4 个取流后的明确失败，4 个交回 Chrome 的实际完成下载。
+证据核对：313 项 PASS_FROZEN_LAB_CONSISTENCY_ONLY；不是产品验收或 R 的审核。
+直接获取：5 个任务尝试，3 个历史观察成功、2 个拒绝；其中 chunked 在读取正文前拒绝。
+
+| 场景 | 实际结果 | 本轮结论 |
+| --- | --- | --- |
+| Chrome 正常点下载 | 原响应流直接进入 Writer，独占新目标，历史收据保存 | PASS，合成 HTTPS 范围 |
+| 302 → 307 → 200 | 保留 Fetch 的直接 redirect request chain | PASS，同一受支持来源范围 |
+| 两标签不同内容并发 | 接收时间确实重叠，各自响应/句柄/目标独立 | PASS |
+| 相同 URL、相同内容并发 | 两个获取 ID、流和目标对象，不能去重为同一事件 | PASS |
+| 同标签点两次下载 | 两份正确结果，但接收时间不重叠 | 仅顺序 PASS，并发未建立 |
+| 同内容伪造临时文件 | fake inode 不同；只从原活句柄交付，不发布 fake | PASS |
+| 两任务临时路径交换 | 名称确实交换；各自正确响应仍到各自新目标 | PASS |
+| 已有目标 / symlink | O_EXCL 拒绝，已有对象和内容保留 | PASS，拒绝完成 |
+| 固定长度中途断开 | Chrome 与 direct 均拒绝，没有创建交付文件 | PASS，失败处理 |
+| chunked / gzip / 不支持文件 / HTTP | Chrome 在取流前放行，实际由 Chrome 完成；未建收据 | PASS，回退边界 |
+| 直接获取畸形 chunked | headers 阶段拒绝，没创建 task/目标，不再解析后误成功 | PASS，拒绝支持此格式 |
+| 取流后 debugger detach | 明确 FAILED_AFTER_TAKE，未假称 Chrome 下载完成 | PASS，API detach 实测 |
+| 接收中 native 端口断开 | host 保存拒绝，授权失效，无目标/收据、无隐式重新下载 | PASS |
+| 目标创建后被替换 | 继续只写原目标句柄；fake 保持原内容，完成被拒绝 | PASS，无写入替换对象 |
+| 写入故障 / 收据故障 | 可留自己的部分/完整目标；DELIVERY_UNCERTAIN，没有成功返回 | PASS，注入故障 |
+| quarantine 写失败 | 新目标为空，第一块正文尚未写入，状态不确定 | PASS，注入故障 |
+| 交付目录交换 | 创建前对象核对拒绝，两个目录均无交付文件 | PASS，注入反例 |
+| 中途/完整交付后硬退出 | 留自己的部分/完整目标；新进程无收据、不恢复描述符链 | PASS，真实进程中断 |
+| 正常重启 / 收据损坏 | 历史只读；当前关联 UNKNOWN；损坏明确 READ_FAILED_UNCERTAIN | PASS |
+| 最后观察后、收据前替换目标 | 历史收据仍只描述此前原对象；活句柄重新核对失败 | 边界成立，不能据收据绑定当前路径 |
+
+## 4. 仍然存在的窗口与不支持范围
+
+- 目标文件从创建到写完会在目录可见，故障可留残缺文件；还未实现原子发布和安全清理。
+- 对象观察与数据库/收据提交不是跨文件系统事务。最后观察之后，外部行为仍可改变名称。
+  本实验只能保存原对象的历史获取事实；正式 core 必须登记该明确对象，而不是随后按路径
+  查到哪个 FileRecord 就绑定哪个。此接入尚未实现，不能把测试收据当作最终关联。
+- 进程结束丢失活句柄。只凭历史 inode / birth time / hash / 当前路径不恢复 VERIFIED，
+  不自动重试已取流任务或将重下载冒充原任务。
+- 未证明同标签同时接收；未测跨域重定向、iframe/worker、新标签自动附着、登录下载、
+  blob/data/service-worker、POST、压缩/未知长度/chunked、HTTP/2 和 HTTP/3。
+- 实验白名单只有合成 HTTPS origin，20 MiB 内、GET / 200、单一正数 CL、无 TE、无压缩、
+  text/plain 和简单 txt/md attachment 名称。文件名/声明 MIME 不能证明内容安全。
+- 未测正式发布 Chrome 的安装授权流程、公共 CA 站点、真实掉电、磁盘/文件系统故障；
+  ENOSPC/EIO/属性错误是注入，不冒充真实磁盘耗尽或真实物理断电。
+- 目录核对原型不是生产 core 的完整授权路径遍历。app-data 被同用户恶意代码篡改、
+  browser/extension/native host 本身被攻破，也不属于已建立的可信边界。
+
+## 5. 权限、桥接和 macOS 安全保护
+
+Native Messaging：真实 connectNative 持久进程，按 native-endian 长度编码 JSON。
+manifest 仅当前临时 user-data-dir/NativeMessagingHosts，allowed_origins 精确 extension ID；
+host 校验 Chrome 提供的 caller origin、每条消息的随机 token、0600 配置、消息上限、命令白名单。
+未授权来源/错误 token/未授权写入/非法帧/未知命令均有实际子进程测试。
+没有可供网页调用的 loopback Writer 端口、shell 命令或任意路径写入接口。
+它不等于对任意同 OS 用户恶意进程的身份认证；正式安装、配对、密钥轮换和签名待设计/R 审查。
+Chrome 官方 Native Messaging 生命周期及身份参数：
+https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging
+
+debugger：确实 attach 并成功使用 Fetch/IO；官方权限警告涉及读取和改变网站数据，
+不应把保存目录授权误说成限制了 debugger 自身的广泛能力。
+本轮 CUA 读取实验窗口两次超时，没有取得实际权限提示截图，标为 BLOCKED_UI_CAPTURE。
+unpacked 加载也不代替安装提示验收；本轮没有用 silent-debugger 参数隐藏提示。
+官方权限与 debugger 边界：
+https://developer.chrome.com/docs/extensions/reference/permissions-list
+https://developer.chrome.com/docs/extensions/reference/api/debugger
+
+macOS：新目标通过持有句柄写入 0001;...;Traeva-Lab; quarantine 与响应 URL 的 WhereFroms，
+在正文写入前执行，完成前回读核对；目标 0600，未赋予执行权限。
+真实 Chrome 回退文件显示 0081;...;Chrome;，与原型标记不同。
+不能据“有 quarantine 属性”证明 Gatekeeper / XProtect / Safe Browsing 等同 Chrome；
+未验证风险文件打开流程，没有运行任何下载的程序，也没有关闭系统保护。
+正式安全属性设置方法、系统行为及浏览器安全检查如何保留：NO-GO / 必须补测。
+Apple URL quarantine 公开属性文档：
+https://developer.apple.com/documentation/foundation/urlresourcekey/quarantinepropertieskey
+
+用户操作成本：未来需安装/更新扩展并理解 debugger/native 权限，明确启用接管、授权保存位置。
+正常下载点击可以保留；附着标签和失败通知仍需产品设计，本原型仅人工控制实验附着。
+新获得文件的必要系统下载属性与“不得改已有用户文件/植入隐藏来源元数据”需在正式集成时
+分别解释。现在没有改动任何已有用户文件或正式权限。
+
+## 6. 建议的受限方案及集成放行条件
+
+两条路线共享同一可信 Writer：Chrome 路线优先保留点击体验；Download with TRAEVA
+作为明确新任务入口备选。后者不需要 debugger，但需要新的 UI、网络获取和保存授权，
+也不能把下载交付正确就当作已完成全部产品/系统安全验收。
+
+建议自动 VERIFIED 只描述新可信获取的具体目标对象：
+授权有效 + 已独立验证的 HTTPS/响应格式 + 请求/流到持有写入对象的直接链 +
+完整接收 + 安全交付 + 必要系统保护 + core 精确对象登记 + 持久化成功。
+这是待集成方案，不是本报告替学生修改已 Accepted 的材料。
+
+取流前不支持 → Chrome 正常下载 → 沿用原有候选、User Confirmed、UNKNOWN。
+取流后失败 → 明确失败/不确定 → 不承诺 Chrome 已正常下载，不自动重复请求。
+旧记录、候选、家族成员、相同内容副本均不因这项能力升级。
+
+正式集成前至少需要：
+1. A 核对 descriptor-aware 的核心登记/绑定与授权路径方案；不由 C 修改共享文件。
+2. R 在 PR 确切 commit 上独立复验交换、替换、拒绝、崩溃与收据窗口，确认残留策略。
+3. 补齐公共 CA HTTPS、权限实际 UI、macOS 下载保护、桥接安装配对及错误状态 UI。
+4. 学生依据审查结果决定支持范围和是否接入正式产品；不改变 #37 的现有接线。
+
+因此本轮可交付实验 PR；正式集成暂不放行。
+
+## 7. 保留旧 FAIL 与证据包
+
+旧比较包原样嵌入：legacy-comparison-evidence.zip，SHA-256：
+b44db618a174f7c07c11be32a22c5b2702dae5111e539f394cd2bb8a84d555fd。
+其中保留：旧 writer 错对象先进入 delivery 后拒绝、畸形 chunked 得到成功收据的 FAIL。
+新机制不同、拒绝不支持 framing；不将旧未实现能力改标 PASS。
+首次新 Chrome harness EEXIST、首次核对发现同标签未重叠、CUA 超时也记录在 retained-failures.json。
+
+本轮证据包：source-verified-evidence.zip，502041 bytes，170 entries，SHA-256：
+043334e6dfd6fa944c1c72d30eae5c7fa259eaec3f71cdfbf42f9f67acd0c2d0。
+含实际合成输出、对象和顺序日志、收据、源码副本、测试日志、属性读回、原旧比较包。
+不含个人正文、浏览器 Profile、host token/config 或 TLS 私钥。
+ZIP 不保留系统 xattr 的行为验收；属性读回另列 file-attributes.json。
+仓库未配置 GitHub Actions；本机 PASS 不冒充 CI PASS、独立 R PASS 或生产 PASS。

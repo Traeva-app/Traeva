@@ -1,0 +1,282 @@
+[
+  {
+    "context": "bad",
+    "info": {
+      "CFBundleExecutable": "ocr-core-check",
+      "CFBundleIdentifier": "dev.traeva.ocr.port.First.20261013T072424216549Z",
+      "CFBundleName": "First",
+      "CFBundlePackageType": "APPL",
+      "CFBundleVersion": "1",
+      "LSMinimumSystemVersion": "13.0"
+    },
+    "trace_binary_sha256": "ddbc7cc49033e49b80c017e5cb91cb96ecb05e8b983a9914d6c37ea90933fd99",
+    "result": {
+      "answer": {
+        "left_out": [
+          "page 1: a scanned page OCR could not read",
+          "page 2: a scanned page OCR could not read",
+          "page 3: a scanned page OCR could not read",
+          "page 4: a scanned page past the OCR page limit (3)"
+        ],
+        "note": "The scanned pages could not be rendered or recognized.",
+        "pages": [
+          {
+            "chars": 0,
+            "error": "Failed to create CVPixelBuffer",
+            "lines": [],
+            "ocr_ms": 66,
+            "page": 1,
+            "pixels": null,
+            "render_ms": 16,
+            "source": "failed"
+          },
+          {
+            "chars": 0,
+            "error": "Failed to create CVPixelBuffer",
+            "lines": [],
+            "ocr_ms": 2,
+            "page": 2,
+            "pixels": null,
+            "render_ms": 12,
+            "source": "failed"
+          },
+          {
+            "chars": 0,
+            "error": "Failed to create CVPixelBuffer",
+            "lines": [],
+            "ocr_ms": 2,
+            "page": 3,
+            "pixels": null,
+            "render_ms": 11,
+            "source": "failed"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 4,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 4,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "status": "failed",
+        "text": "[Page 1]\n[Page 2]\n[Page 3]\n[Page 4]",
+        "timing": {
+          "ocr_ms": 70,
+          "reader_ms": 9,
+          "render_ms": 39,
+          "total_ms": 121
+        },
+        "usable_text": false
+      },
+      "child_pid": 33217,
+      "child_reaped": true,
+      "exit_code": 0,
+      "final_kernel_lifetime_peak_bytes": 48612072,
+      "kill_to_exit_ms": null,
+      "max_observation_gap_ms": 38.282334,
+      "outcome": "finished",
+      "over_budget_bytes": 0,
+      "peak_footprint_bytes": 48612072,
+      "raw_stdout": "{\"status\":\"failed\",\"usable_text\":false,\"text\":\"[Page 1]\\n[Page 2]\\n[Page 3]\\n[Page 4]\",\"note\":\"The scanned pages could not be rendered or recognized.\",\"left_out\":[\"page 1: a scanned page OCR could not read\",\"page 2: a scanned page OCR could not read\",\"page 3: a scanned page OCR could not read\",\"page 4: a scanned page past the OCR page limit (3)\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":4},\"pages\":[{\"page\":1,\"source\":\"failed\",\"chars\":0,\"lines\":[],\"render_ms\":16,\"ocr_ms\":66,\"pixels\":null,\"error\":\"Failed to create CVPixelBuffer\"},{\"page\":2,\"source\":\"failed\",\"chars\":0,\"lines\":[],\"render_ms\":12,\"ocr_ms\":2,\"pixels\":null,\"error\":\"Failed to create CVPixelBuffer\"},{\"page\":3,\"source\":\"failed\",\"chars\":0,\"lines\":[],\"render_ms\":11,\"ocr_ms\":2,\"pixels\":null,\"error\":\"Failed to create CVPixelBuffer\"},{\"page\":4,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":9,\"render_ms\":39,\"ocr_ms\":70,\"total_ms\":121},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+      "sampled_peak_bytes": 48579304,
+      "samples": 75,
+      "stderr": "{\"automaticallyDetectsLanguage\":true,\"diagnostic\":\"vision_request_before_perform\",\"height\":2338,\"minimumTextHeight\":0.0,\"pixels_sha256\":\"d56f0adcde8228fa04d03dbdc574dc83bc2b4b0654e0c333385921cbac5556e8\",\"recognitionLanguages\":[\"zh-Hans\",\"en-US\"],\"recognitionLevel\":0,\"revision\":3,\"usesLanguageCorrection\":true,\"width\":1654}\nsysctlbyname for kern.hv_vmm_present failed with status -1{\"automaticallyDetectsLanguage\":true,\"diagnostic\":\"vision_request_before_perform\",\"height\":2338,\"minimumTextHeight\":0.0,\"pixels_sha256\":\"a75f7eff68a070a665391daed7f6d4d479613703af598839f242311339d275ab\",\"recognitionLanguages\":[\"zh-Hans\",\"en-US\"],\"recognitionLevel\":0,\"revision\":3,\"usesLanguageCorrection\":true,\"width\":1654}\n{\"automaticallyDetectsLanguage\":true,\"diagnostic\":\"vision_request_before_perform\",\"height\":2338,\"minimumTextHeight\":0.0,\"pixels_sha256\":\"9d5c2652e827be9e78227359501d6753a4439e860cc8288d41c7d0283473dd68\",\"recognitionLanguages\":[\"zh-Hans\",\"en-US\"],\"recognitionLevel\":0,\"revision\":3,\"usesLanguageCorrection\":true,\"width\":1654}\n",
+      "stderr_io_error": false,
+      "stdout_io_error": false,
+      "wall_ms": 503.89387500000004
+    },
+    "traces": [
+      {
+        "automaticallyDetectsLanguage": true,
+        "diagnostic": "vision_request_before_perform",
+        "height": 2338,
+        "minimumTextHeight": 0.0,
+        "pixels_sha256": "d56f0adcde8228fa04d03dbdc574dc83bc2b4b0654e0c333385921cbac5556e8",
+        "recognitionLanguages": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "recognitionLevel": 0,
+        "revision": 3,
+        "usesLanguageCorrection": true,
+        "width": 1654
+      },
+      {
+        "automaticallyDetectsLanguage": true,
+        "diagnostic": "vision_request_before_perform",
+        "height": 2338,
+        "minimumTextHeight": 0.0,
+        "pixels_sha256": "9d5c2652e827be9e78227359501d6753a4439e860cc8288d41c7d0283473dd68",
+        "recognitionLanguages": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "recognitionLevel": 0,
+        "revision": 3,
+        "usesLanguageCorrection": true,
+        "width": 1654
+      }
+    ]
+  },
+  {
+    "context": "good",
+    "info": {
+      "CFBundleExecutable": "probe",
+      "CFBundleIdentifier": "dev.traeva.ocr.port.baseline.diag0729",
+      "CFBundleName": "BaselineDiagnostic",
+      "CFBundlePackageType": "APPL",
+      "CFBundleVersion": "1",
+      "LSMinimumSystemVersion": "13.0"
+    },
+    "trace_binary_sha256": "67ef584e566014c310a98db4dd4ea431dc1f3d190de5b05f3d775ca7081fa8fa",
+    "result": {
+      "answer": {
+        "left_out": [
+          "page 1: a scanned page OCR could not read",
+          "page 2: a scanned page OCR could not read",
+          "page 3: a scanned page OCR could not read",
+          "page 4: a scanned page past the OCR page limit (3)"
+        ],
+        "note": "The scanned pages could not be rendered or recognized.",
+        "pages": [
+          {
+            "chars": 0,
+            "error": "Failed to create CVPixelBuffer",
+            "lines": [],
+            "ocr_ms": 11,
+            "page": 1,
+            "pixels": null,
+            "render_ms": 13,
+            "source": "failed"
+          },
+          {
+            "chars": 0,
+            "error": "Failed to create CVPixelBuffer",
+            "lines": [],
+            "ocr_ms": 2,
+            "page": 2,
+            "pixels": null,
+            "render_ms": 10,
+            "source": "failed"
+          },
+          {
+            "chars": 0,
+            "error": "Failed to create CVPixelBuffer",
+            "lines": [],
+            "ocr_ms": 2,
+            "page": 3,
+            "pixels": null,
+            "render_ms": 11,
+            "source": "failed"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 4,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 4,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "status": "failed",
+        "text": "[Page 1]\n[Page 2]\n[Page 3]\n[Page 4]",
+        "timing": {
+          "ocr_ms": 15,
+          "reader_ms": 7,
+          "render_ms": 34,
+          "total_ms": 58
+        },
+        "usable_text": false
+      },
+      "child_pid": 33227,
+      "child_reaped": true,
+      "exit_code": 0,
+      "final_kernel_lifetime_peak_bytes": 49824440,
+      "kill_to_exit_ms": null,
+      "max_observation_gap_ms": 9.94475,
+      "outcome": "finished",
+      "over_budget_bytes": 0,
+      "peak_footprint_bytes": 49824440,
+      "raw_stdout": "{\"status\":\"failed\",\"usable_text\":false,\"text\":\"[Page 1]\\n[Page 2]\\n[Page 3]\\n[Page 4]\",\"note\":\"The scanned pages could not be rendered or recognized.\",\"left_out\":[\"page 1: a scanned page OCR could not read\",\"page 2: a scanned page OCR could not read\",\"page 3: a scanned page OCR could not read\",\"page 4: a scanned page past the OCR page limit (3)\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":4},\"pages\":[{\"page\":1,\"source\":\"failed\",\"chars\":0,\"lines\":[],\"render_ms\":13,\"ocr_ms\":11,\"pixels\":null,\"error\":\"Failed to create CVPixelBuffer\"},{\"page\":2,\"source\":\"failed\",\"chars\":0,\"lines\":[],\"render_ms\":10,\"ocr_ms\":2,\"pixels\":null,\"error\":\"Failed to create CVPixelBuffer\"},{\"page\":3,\"source\":\"failed\",\"chars\":0,\"lines\":[],\"render_ms\":11,\"ocr_ms\":2,\"pixels\":null,\"error\":\"Failed to create CVPixelBuffer\"},{\"page\":4,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":7,\"render_ms\":34,\"ocr_ms\":15,\"total_ms\":58},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+      "sampled_peak_bytes": 49791672,
+      "samples": 73,
+      "stderr": "{\"automaticallyDetectsLanguage\":true,\"diagnostic\":\"vision_request_before_perform\",\"height\":2338,\"minimumTextHeight\":0.0,\"pixels_sha256\":\"d56f0adcde8228fa04d03dbdc574dc83bc2b4b0654e0c333385921cbac5556e8\",\"recognitionLanguages\":[\"zh-Hans\",\"en-US\"],\"recognitionLevel\":0,\"revision\":3,\"usesLanguageCorrection\":true,\"width\":1654}\nsysctlbyname for kern.hv_vmm_present failed with status -1{\"automaticallyDetectsLanguage\":true,\"diagnostic\":\"vision_request_before_perform\",\"height\":2338,\"minimumTextHeight\":0.0,\"pixels_sha256\":\"a75f7eff68a070a665391daed7f6d4d479613703af598839f242311339d275ab\",\"recognitionLanguages\":[\"zh-Hans\",\"en-US\"],\"recognitionLevel\":0,\"revision\":3,\"usesLanguageCorrection\":true,\"width\":1654}\n{\"automaticallyDetectsLanguage\":true,\"diagnostic\":\"vision_request_before_perform\",\"height\":2338,\"minimumTextHeight\":0.0,\"pixels_sha256\":\"9d5c2652e827be9e78227359501d6753a4439e860cc8288d41c7d0283473dd68\",\"recognitionLanguages\":[\"zh-Hans\",\"en-US\"],\"recognitionLevel\":0,\"revision\":3,\"usesLanguageCorrection\":true,\"width\":1654}\n",
+      "stderr_io_error": false,
+      "stdout_io_error": false,
+      "wall_ms": 459.838459
+    },
+    "traces": [
+      {
+        "automaticallyDetectsLanguage": true,
+        "diagnostic": "vision_request_before_perform",
+        "height": 2338,
+        "minimumTextHeight": 0.0,
+        "pixels_sha256": "d56f0adcde8228fa04d03dbdc574dc83bc2b4b0654e0c333385921cbac5556e8",
+        "recognitionLanguages": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "recognitionLevel": 0,
+        "revision": 3,
+        "usesLanguageCorrection": true,
+        "width": 1654
+      },
+      {
+        "automaticallyDetectsLanguage": true,
+        "diagnostic": "vision_request_before_perform",
+        "height": 2338,
+        "minimumTextHeight": 0.0,
+        "pixels_sha256": "9d5c2652e827be9e78227359501d6753a4439e860cc8288d41c7d0283473dd68",
+        "recognitionLanguages": [
+          "zh-Hans",
+          "en-US"
+        ],
+        "recognitionLevel": 0,
+        "revision": 3,
+        "usesLanguageCorrection": true,
+        "width": 1654
+      }
+    ]
+  }
+]

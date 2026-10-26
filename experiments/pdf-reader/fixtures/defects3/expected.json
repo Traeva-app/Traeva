@@ -1,0 +1,384 @@
+{
+ "frozen": "Written before any fix; changes must state their basis. g14-g17 re-frozen before any fix from range_basis.json (hayro 0.8.0's range rule and pypdf).",
+ "source": "Codex-R4's third-round description of R4-PDF-08 (its inputs t05-t07 were not seen)",
+ "roles": {
+  "defect": "fails as R4 describes before the fix (a stream over 16 MiB without filters is read)",
+  "control": "the rule that must hold before and after the fix",
+  "range": "hayro reads the data its own rule gives (a /Length that does not end at endstream falls back to the first endstream); re-frozen from range_basis.json",
+  "related": "a dictionary without data that hayro reads as a stream: data the raw-byte check never measured with that dictionary's filters"
+ },
+ "fixtures": {
+  "g01-contents-raw-under-limit.pdf": {
+   "path": "defects3/generated/g01-contents-raw-under-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nContents under the limit",
+   "chars": 33,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 33
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g02-contents-raw-at-limit.pdf": {
+   "path": "defects3/generated/g02-contents-raw-at-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nContents at the limit",
+   "chars": 30,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 30
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g03-contents-raw-over-limit.pdf": {
+   "path": "defects3/generated/g03-contents-raw-over-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g04-contents-raw-17mib-early-endstream.pdf": {
+   "path": "defects3/generated/g04-contents-raw-17mib-early-endstream.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g05-form-raw-under-limit.pdf": {
+   "path": "defects3/generated/g05-form-raw-under-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nPage text\nForm under the limit",
+   "chars": 39,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 39
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g06-form-raw-at-limit.pdf": {
+   "path": "defects3/generated/g06-form-raw-at-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nPage text\nForm at the limit",
+   "chars": 36,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 36
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g07-form-raw-over-limit.pdf": {
+   "path": "defects3/generated/g07-form-raw-over-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g08-form-raw-17mib-early-endstream.pdf": {
+   "path": "defects3/generated/g08-form-raw-17mib-early-endstream.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g09-indirect-length-over-limit.pdf": {
+   "path": "defects3/generated/g09-indirect-length-over-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g10-indirect-length-under-limit-early-endstream.pdf": {
+   "path": "defects3/generated/g10-indirect-length-under-limit-early-endstream.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nIndirect length under the limit",
+   "chars": 40,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 40
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g11-length-in-objstm-over-limit.pdf": {
+   "path": "defects3/generated/g11-length-in-objstm-over-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g12-length-in-objstm-under-limit.pdf": {
+   "path": "defects3/generated/g12-length-in-objstm-under-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nLength in an object stream under the limit",
+   "chars": 51,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 51
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g13-matching-length-endstream-comment.pdf": {
+   "path": "defects3/generated/g13-matching-length-endstream-comment.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nMatching length",
+   "chars": 24,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 24
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g14-length-too-short.pdf": {
+   "path": "defects3/generated/g14-length-too-short.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "range",
+   "status": "complete",
+   "text": "[Page 1]\nLength too short",
+   "chars": 25,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 25
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g15-length-too-long.pdf": {
+   "path": "defects3/generated/g15-length-too-long.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "range",
+   "status": "complete",
+   "text": "[Page 1]\nLength too long",
+   "chars": 24,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 24
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g16-length-missing.pdf": {
+   "path": "defects3/generated/g16-length-missing.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "range",
+   "status": "complete",
+   "text": "[Page 1]\nNo length",
+   "chars": 18,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 18
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g17-wrong-length-17mib-early-endstream.pdf": {
+   "path": "defects3/generated/g17-wrong-length-17mib-early-endstream.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "range",
+   "status": "unsupported",
+   "note": "The PDF has no text to read: its pages draw no text.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g18-flate-bomb-wrong-length.pdf": {
+   "path": "defects3/generated/g18-flate-bomb-wrong-length.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g19-objstm-bomb-in-image-data.pdf": {
+   "path": "defects3/generated/g19-objstm-bomb-in-image-data.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g20-objstm-raw-over-limit.pdf": {
+   "path": "defects3/generated/g20-objstm-raw-over-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g21-rebuilt-xref-raw-over-limit.pdf": {
+   "path": "defects3/generated/g21-rebuilt-xref-raw-over-limit.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g22-rebuilt-xref-flate-bomb.pdf": {
+   "path": "defects3/generated/g22-rebuilt-xref-flate-bomb.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "g23-rebuilt-xref-control.pdf": {
+   "path": "defects3/generated/g23-rebuilt-xref-control.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nRebuilt control",
+   "chars": 24,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 24
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g24-unbroken-xref-control.pdf": {
+   "path": "defects3/generated/g24-unbroken-xref-control.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nRebuilt control",
+   "chars": 24,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 24
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "g25-dictionary-read-as-stream.pdf": {
+   "path": "defects3/generated/g25-dictionary-read-as-stream.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "related",
+   "status": "unsupported",
+   "note": "A dictionary in the PDF names stream filters but has no stream data.",
+   "text": "",
+   "chars": 0,
+   "left_out": [],
+   "unverified": "unverified: the construction does not reach the path it was written for (run 15 on pdf-experiment-5), so it reproduces nothing; the result is recorded, not judged"
+  },
+  "g26-xref-stream-without-data.pdf": {
+   "path": "defects3/generated/g26-xref-stream-without-data.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "related",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": [],
+   "unverified": "unverified: the construction does not reach the path it was written for (run 15 on pdf-experiment-5), so it reproduces nothing; the result is recorded, not judged"
+  },
+  "g27-objstm-without-data.pdf": {
+   "path": "defects3/generated/g27-objstm-without-data.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-08",
+   "role": "related",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": [],
+   "unverified": "unverified: the construction does not reach the path it was written for (run 15 on pdf-experiment-5), so it reproduces nothing; the result is recorded, not judged"
+  }
+ }
+}

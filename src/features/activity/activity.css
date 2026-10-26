@@ -1,0 +1,24 @@
+/* Activity (#248): moves, Undos and dropped files, in Find's rows
+ * (find.css). */
+.activity-page {
+  /* Find's icon colours (find.css sets them on its own page). */
+  --icon-edge: #c3d4de;
+}
+
+@media (prefers-color-scheme: dark) {
+  .activity-page {
+    --icon-edge: #3d4f5a;
+  }
+}
+
+/* The moves, cut by day: a small title above each day's rows. */
+.activity-day + .activity-day {
+  margin-top: 12px;
+}
+
+.activity-day-title {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}

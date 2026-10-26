@@ -1,0 +1,6 @@
+{
+  "error": {
+    "code": "not_plain_xlsx_workbook_content_type",
+    "kind": "unsupported"
+  }
+}

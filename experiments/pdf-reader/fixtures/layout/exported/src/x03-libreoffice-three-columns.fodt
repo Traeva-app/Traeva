@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+ xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+ xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+ xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
+ xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
+ xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
+ <office:font-face-decls>
+  <style:font-face style:name="Liberation Serif" svg:font-family="'Liberation Serif'"/>
+ </office:font-face-decls>
+ <office:styles>
+  <style:default-style style:family="paragraph">
+   <style:text-properties style:font-name="Liberation Serif" fo:font-size="11pt"/>
+  </style:default-style>
+  <style:style style:name="Header" style:family="paragraph"><style:paragraph-properties>
+   <style:tab-stops><style:tab-stop style:position="6.5in" style:type="right"/></style:tab-stops>
+  </style:paragraph-properties></style:style>
+ </office:styles>
+ <office:automatic-styles>
+  <style:page-layout style:name="Page"><style:page-layout-properties fo:page-width="8.5in" fo:page-height="11in"
+   fo:margin-top="0.6in" fo:margin-bottom="0.8in" fo:margin-left="1in" fo:margin-right="1in"/>
+   <style:header-style><style:header-footer-properties fo:min-height="0.3in" fo:margin-bottom="0.2in"/></style:header-style>
+  </style:page-layout>
+  <style:style style:name="Title" style:family="paragraph"><style:paragraph-properties fo:text-align="center"/>
+   <style:text-properties fo:font-size="16pt" fo:font-weight="bold"/></style:style>
+  <style:style style:name="Body" style:family="paragraph"><style:paragraph-properties fo:text-align="justify"
+   fo:margin-bottom="0.08in"/></style:style>
+  <style:style style:name="Columns" style:family="section"><style:section-properties>
+   <style:columns fo:column-count="3" fo:column-gap="0.4in"/></style:section-properties></style:style>
+  <style:style style:name="Table" style:family="table"><style:table-properties style:width="5in" table:align="left"/></style:style>
+  <style:style style:name="Cell" style:family="table-cell"><style:table-cell-properties fo:border="0.5pt solid #000000"
+   fo:padding="0.04in"/></style:style>
+ </office:automatic-styles>
+ <office:master-styles><style:master-page style:name="Standard" style:page-layout-name="Page">
+ <style:header><text:p text:style-name="Header">Layout header<text:tab/>Page <text:page-number text:select-page="current">1</text:page-number></text:p></style:header>
+</style:master-page></office:master-styles>
+ <office:body><office:text>
+  <text:p text:style-name="Title">Three column export</text:p>
+  <text:section text:style-name="Columns" text:name="Flow">
+   <text:p text:style-name="Body">tri001 tri002 tri003 tri004 tri005 tri006 tri007 tri008 tri009 tri010 tri011 tri012 tri013 tri014 tri015 tri016 tri017 tri018 tri019 tri020 tri021 tri022 tri023 tri024 tri025 tri026 tri027 tri028 tri029 tri030 tri031 tri032 tri033 tri034 tri035 tri036 tri037 tri038 tri039 tri040 tri041 tri042 tri043 tri044 tri045 tri046 tri047 tri048 tri049 tri050 tri051 tri052 tri053 tri054 tri055 tri056 tri057 tri058 tri059 tri060 tri061 tri062 tri063 tri064 tri065 tri066 tri067 tri068 tri069 tri070 tri071 tri072 tri073 tri074 tri075 tri076 tri077 tri078 tri079 tri080 tri081 tri082 tri083 tri084 tri085 tri086 tri087 tri088 tri089 tri090 tri091 tri092 tri093 tri094 tri095 tri096 tri097 tri098 tri099 tri100 tri101 tri102 tri103 tri104 tri105 tri106 tri107 tri108 tri109 tri110 tri111 tri112 tri113 tri114 tri115 tri116 tri117 tri118 tri119 tri120 tri121 tri122 tri123 tri124 tri125 tri126 tri127 tri128 tri129 tri130 tri131 tri132 tri133 tri134 tri135 tri136 tri137 tri138 tri139 tri140 tri141 tri142 tri143 tri144 tri145 tri146 tri147 tri148 tri149 tri150 tri151 tri152 tri153 tri154 tri155 tri156 tri157 tri158 tri159 tri160 tri161 tri162 tri163 tri164 tri165 tri166 tri167 tri168 tri169 tri170 tri171 tri172 tri173 tri174 tri175 tri176 tri177 tri178 tri179 tri180</text:p>
+  </text:section>
+  <text:p text:style-name="Body">end01 end02 end03 end04 end05 end06 end07 end08 end09 end10</text:p></office:text></office:body>
+</office:document>

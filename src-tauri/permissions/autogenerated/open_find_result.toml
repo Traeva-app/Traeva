@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-open-find-result"
+description = "Enables the open_find_result command without any pre-configured scope."
+commands.allow = ["open_find_result"]
+
+[[permission]]
+identifier = "deny-open-find-result"
+description = "Denies the open_find_result command without any pre-configured scope."
+commands.deny = ["open_find_result"]

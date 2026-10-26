@@ -1,0 +1,12 @@
+{
+  "crates/traeva-core/src/xlsx_projection.rs": "09047f6e429b67d3d4e94512f3f256fb47f59428baef77a9fba6f7a52e43eebd",
+  "crates/traeva-core/src/xlsx_projection_tests.rs": "19ec2fc2e5a6fdb38198651af22d38f7ee0b57a57a8a2e67e2def19d96cf7591",
+  "crates/traeva-core/src/xlsx_xml.rs": "429cd6254a85421e58c09443aa8471d8d85b301961306a1da1dc8993ac19dbdd",
+  "crates/traeva-core/src/xlsx_helper_tests.rs": "49bee379b937ec71a0bbaccbda6227f7582cc953c0c1f9c748929f0c09f501b9",
+  "crates/traeva-core/src/xlsx.rs": "43669e49fa40b7d26e7b614e96ccdffb7d9898e4c5a7b4325c7c5107aae5f701",
+  "crates/traeva-core/src/xlsx_package.rs": "20f185164d5668aefde5fad8806ccbe4d76443d9a067002ccd6c0c1c1bfd1aa5",
+  "crates/traeva-core/tests/xlsx_reader/Cargo.toml": "54038f383a55c058d31f67e14805b9af40923d9f10c4a6b637c82809af9fe12d",
+  "crates/traeva-core/tests/xlsx_reader/Cargo.lock": "bf07840acb958e9b63c7491e63880e21e4ed7f38452f63b70831ddbfb5ed0304",
+  "crates/traeva-core/tests/xlsx_reader/lib.rs": "53e0b99f75f3c9d08e5cc00b0441aba9e936a6d58994b05f13ab96f5c8ff7b6c",
+  "crates/traeva-core/tests/xlsx_reader/probe.rs": "37240b6d8a89d1a689878463dc4634bc52f7d32776608ddc62af15aa45f9016c"
+}

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-memory-relation"
+description = "Enables the preview_memory_relation command without any pre-configured scope."
+commands.allow = ["preview_memory_relation"]
+
+[[permission]]
+identifier = "deny-preview-memory-relation"
+description = "Denies the preview_memory_relation command without any pre-configured scope."
+commands.deny = ["preview_memory_relation"]

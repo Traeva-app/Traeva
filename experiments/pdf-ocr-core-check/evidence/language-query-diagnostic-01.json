@@ -1,0 +1,305 @@
+[
+  {
+    "phase": "old prepare same ID",
+    "reading": {
+      "isolation": {
+        "acceptance_check_ms": 223.792,
+        "child_pid": 24093,
+        "child_reaped": true,
+        "environment": "cleared",
+        "exit_status": 0,
+        "first_over_threshold_observed_ms": null,
+        "kill_errno": null,
+        "kill_to_exit_ms": null,
+        "last_polled_footprint_bytes": 100975480,
+        "max_observation_gap_ms": 7.535084,
+        "max_rss_bytes": 51593216,
+        "memory_cap_mib": 384,
+        "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+        "observed_lifetime_peak_bytes": 100975480,
+        "outcome": "finished",
+        "over_512_mib_bytes": 0,
+        "over_threshold_bytes": 0,
+        "peak_footprint_bytes": 101155728,
+        "poll_ms": 5,
+        "polled_peak_footprint_bytes": 100975480,
+        "samples": 31,
+        "stderr_bytes": 0,
+        "stdout_bytes": 778,
+        "stop_action": null,
+        "stop_trigger_ms": null,
+        "timeout_s": 90.0,
+        "wall_ms": 223
+      },
+      "preparation": {
+        "lines": [
+          {
+            "bbox": [
+              0.27246555414065876,
+              0.6188511348361073,
+              0.4489203135172526,
+              0.27498327891031904
+            ],
+            "confidence": 1.0,
+            "text": "OCR READY"
+          },
+          {
+            "bbox": [
+              0.2458333332566391,
+              0.1666666667376373,
+              0.5,
+              0.2583333333333334
+            ],
+            "confidence": 1.0,
+            "text": "0123456789"
+          }
+        ],
+        "ocr_ms": 212,
+        "pixels": [
+          960,
+          240
+        ],
+        "recognized_chars": 18,
+        "synthetic_fixture": "ocr-ready-bitmap-v1"
+      },
+      "rust_peak_heap_bytes": 231770,
+      "status": "prepared",
+      "text": "",
+      "usable_text": false,
+      "vision": {
+        "current_revision": 3,
+        "supported_languages_accurate": [
+          "en-US",
+          "fr-FR",
+          "it-IT",
+          "de-DE",
+          "es-ES",
+          "pt-BR",
+          "zh-Hans",
+          "zh-Hant",
+          "yue-Hans",
+          "yue-Hant",
+          "ko-KR",
+          "ja-JP",
+          "ru-RU",
+          "uk-UA",
+          "th-TH",
+          "vi-VT",
+          "ar-SA",
+          "ars-SA",
+          "tr-TR",
+          "id-ID",
+          "cs-CZ",
+          "da-DK",
+          "nl-NL",
+          "no-NO",
+          "nn-NO",
+          "nb-NO",
+          "ms-MY",
+          "pl-PL",
+          "ro-RO",
+          "sv-SE",
+          "fi-FI",
+          "hi-IN",
+          "mr-IN"
+        ]
+      }
+    }
+  },
+  {
+    "phase": "new read after old prepare same ID",
+    "reading": {
+      "answer": {
+        "left_out": [
+          "page 4: a scanned page past the OCR page limit (3)"
+        ],
+        "note": null,
+        "pages": [
+          {
+            "chars": 16,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10864519924091846,
+                  0.8923201083459463,
+                  0.3720738550483676,
+                  0.02919109465221348
+                ],
+                "confidence": 1.0,
+                "text": "Organic Chemistry"
+              }
+            ],
+            "ocr_ms": 202,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 16,
+            "source": "ocr"
+          },
+          {
+            "chars": 55,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10882957796681088,
+                  0.8952095809410646,
+                  0.35728950915630664,
+                  0.026302047220430724
+                ],
+                "confidence": 0.5,
+                "text": "有机化学 第七草 烯烃"
+              },
+              {
+                "bbox": [
+                  0.1084357080910563,
+                  0.8486147529827028,
+                  0.23494758283068504,
+                  0.02350406304091046
+                ],
+                "confidence": 1.0,
+                "text": "烯烃是含有碳碳双键的烃。"
+              },
+              {
+                "bbox": [
+                  0.10882957478827558,
+                  0.8270348841061111,
+                  0.34907596315985867,
+                  0.017441859706229357
+                ],
+                "confidence": 0.5,
+                "text": "乙烯是最简单的烯烃，可以使湨水褪色。"
+              },
+              {
+                "bbox": [
+                  0.10868585698827168,
+                  0.8051410846757199,
+                  0.3144960414974116,
+                  0.02024698706138228
+                ],
+                "confidence": 1.0,
+                "text": "烯烃能够发生加成反应和聚合反应。"
+              }
+            ],
+            "ocr_ms": 215,
+            "page": 2,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 12,
+            "source": "ocr"
+          },
+          {
+            "chars": 112,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10849706666087286,
+                  0.8922693734711781,
+                  0.41140451857948535,
+                  0.032014837012115493
+                ],
+                "confidence": 0.5,
+                "text": "实验室安全 Lab Safety"
+              },
+              {
+                "bbox": [
+                  0.1088295678825674,
+                  0.8502906980616487,
+                  0.4743326503103272,
+                  0.017545058851674344
+                ],
+                "confidence": 1.0,
+                "text": "1. 进入实验室必须佩戴护目镜 Wear safety goggles"
+              },
+              {
+                "bbox": [
+                  0.10662534998650616,
+                  0.8254175871587658,
+                  0.5136436084161503,
+                  0.02023106012923581
+                ],
+                "confidence": 0.5,
+                "text": "2. 有机溶剂远离明火 Keep solvents away from flames"
+              },
+              {
+                "bbox": [
+                  0.10882957367574876,
+                  0.8052325582195443,
+                  0.44147842942298976,
+                  0.015988371941245805
+                ],
+                "confidence": 0.5,
+                "text": "3. 废液倒入指定容器 Use the waste containers"
+              }
+            ],
+            "ocr_ms": 119,
+            "page": 3,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 10,
+            "source": "ocr"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 4,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 4,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "status": "ocr",
+        "text": "[Page 1]\nOrganic Chemistry\n[Page 2]\n有机化学 第七草 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers\n[Page 4]",
+        "timing": {
+          "ocr_ms": 536,
+          "reader_ms": 10,
+          "render_ms": 38,
+          "total_ms": 587
+        },
+        "usable_text": true
+      },
+      "child_pid": 24096,
+      "child_reaped": true,
+      "exit_code": 0,
+      "final_kernel_lifetime_peak_bytes": 210256856,
+      "kill_to_exit_ms": null,
+      "max_observation_gap_ms": 9.127417000000001,
+      "outcome": "finished",
+      "over_budget_bytes": 0,
+      "peak_footprint_bytes": 210256856,
+      "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\nOrganic Chemistry\\n[Page 2]\\n有机化学 第七草 烯烃\\n烯烃是含有碳碳双键的烃。\\n乙烯是最简单的烯烃，可以使湨水褪色。\\n烯烃能够发生加成反应和聚合反应。\\n[Page 3]\\n实验室安全 Lab Safety\\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\\n2. 有机溶剂远离明火 Keep solvents away from flames\\n3. 废液倒入指定容器 Use the waste containers\\n[Page 4]\",\"note\":null,\"left_out\":[\"page 4: a scanned page past the OCR page limit (3)\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":4},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":16,\"lines\":[{\"text\":\"Organic Chemistry\",\"confidence\":1.0,\"bbox\":[0.10864519924091846,0.8923201083459463,0.3720738550483676,0.02919109465221348]}],\"render_ms\":16,\"ocr_ms\":202,\"pixels\":[1654,2338],\"error\":null},{\"page\":2,\"source\":\"ocr\",\"chars\":55,\"lines\":[{\"text\":\"有机化学 第七草 烯烃\",\"confidence\":0.5,\"bbox\":[0.10882957796681089,0.8952095809410646,0.35728950915630664,0.026302047220430724]},{\"text\":\"烯烃是含有碳碳双键的烃。\",\"confidence\":1.0,\"bbox\":[0.1084357080910563,0.8486147529827028,0.23494758283068506,0.02350406304091046]},{\"text\":\"乙烯是最简单的烯烃，可以使湨水褪色。\",\"confidence\":0.5,\"bbox\":[0.10882957478827558,0.8270348841061111,0.34907596315985867,0.017441859706229357]},{\"text\":\"烯烃能够发生加成反应和聚合反应。\",\"confidence\":1.0,\"bbox\":[0.10868585698827167,0.8051410846757199,0.3144960414974116,0.020246987061382282]}],\"render_ms\":12,\"ocr_ms\":215,\"pixels\":[1654,2338],\"error\":null},{\"page\":3,\"source\":\"ocr\",\"chars\":112,\"lines\":[{\"text\":\"实验室安全 Lab Safety\",\"confidence\":0.5,\"bbox\":[0.10849706666087286,0.8922693734711781,0.41140451857948535,0.032014837012115493]},{\"text\":\"1. 进入实验室必须佩戴护目镜 Wear safety goggles\",\"confidence\":1.0,\"bbox\":[0.1088295678825674,0.8502906980616487,0.47433265031032723,0.017545058851674344]},{\"text\":\"2. 有机溶剂远离明火 Keep solvents away from flames\",\"confidence\":0.5,\"bbox\":[0.10662534998650615,0.8254175871587658,0.5136436084161503,0.02023106012923581]},{\"text\":\"3. 废液倒入指定容器 Use the waste containers\",\"confidence\":0.5,\"bbox\":[0.10882957367574876,0.8052325582195443,0.44147842942298976,0.015988371941245805]}],\"render_ms\":10,\"ocr_ms\":119,\"pixels\":[1654,2338],\"error\":null},{\"page\":4,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":10,\"render_ms\":38,\"ocr_ms\":536,\"total_ms\":587},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+      "sampled_peak_bytes": 210256856,
+      "samples": 84,
+      "stderr": "",
+      "wall_ms": 615.17875
+    }
+  }
+]

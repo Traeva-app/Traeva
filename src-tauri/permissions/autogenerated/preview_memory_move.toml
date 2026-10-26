@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-memory-move"
+description = "Enables the preview_memory_move command without any pre-configured scope."
+commands.allow = ["preview_memory_move"]
+
+[[permission]]
+identifier = "deny-preview-memory-move"
+description = "Denies the preview_memory_move command without any pre-configured scope."
+commands.deny = ["preview_memory_move"]

@@ -1,0 +1,685 @@
+{
+  "review_date_utc": "2026-10-10T19:36:25.468858+00:00",
+  "role": "Independent development-stage code review by D sub-agent; not Codex-R final acceptance",
+  "scope": "Read-only review of frozen docx-2 source and existing synthetic DOCX fixtures; offline independent crate tests. Reviewer changed no product/shared files, generated no R2 attack fixtures, used no GUI or external document resources.",
+  "worktree": "<HOME>/.codex/.chatgpt-projects/g-p-6ab9a85b203c81918d45ed03753c8e91/development/traeva-docx",
+  "worktree_head": "037d0939317731739cc4b783f48afedf9431079e",
+  "candidate_is_uncommitted_overlay": true,
+  "reader_version": "docx-2",
+  "source_sha256": {
+    "crates/traeva-core/src/docx.rs": "4ebddd23b43a2b3f14253a04f4f348b7a8105bc5c3c74ec694d012bfb2333626",
+    "crates/traeva-core/src/docx_tests.rs": "f6cd179f1cb82a74cbc79d37d8e5691cc3c6fa91467a551da21b40e8ba6c0483",
+    "crates/traeva-core/tests/docx_reader/snapshot_tests.rs": "7d51535e31c86f7e89f65e673aaa00448f973105ed25e11b7d8f595a6dd28faf",
+    "crates/traeva-core/tests/docx_reader/probe.rs": "7aeb9254863c125888e65a492cd16a53872fa92ccb5f82964476ea64d3366ef1",
+    "crates/traeva-core/tests/docx_reader/Cargo.toml": "6e28ccbd111a0cc6e529c6142e1296b7bc8cf957ede8615c415876d28fe3e1ec",
+    "crates/traeva-core/tests/docx_reader/Cargo.lock": "e197441e128bedb869a0a34d7676cdfdefecec3c55c4b9e707b05bcd3b3de6dd"
+  },
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)"
+  },
+  "old_review_revocation": {
+    "previous_report": "/private/tmp/traeva-docx-review/independent-review.json",
+    "previous_source_sha256": "e0bd93f5d180bd23ca42e90cf23fa09f8980d6664515064b02222d912c1d057f",
+    "previous_PASS_is_invalidated": true,
+    "reason": "Claude-A PR #100 comment 6101165382 showed EOCD view mismatch and AES extra method override accepted by docx-1. Those inputs were independently rerun against the retained reviewer executable and accepted. This report is a fresh candidate review, not an extension of old PASS.",
+    "reported_counterexample_url": "https://github.com/P30g53/Traeva/pull/100#issuecomment-6101165382",
+    "retained_docx1_reviewer_binary_sha256": "98808757e0dba52da29c4d9ef76bef2db1d7ea86c0217ddb7bfa526c117c1069"
+  },
+  "checks": {
+    "offline_tests": {
+      "command": "cargo test --offline --manifest-path crates/traeva-core/tests/docx_reader/Cargo.toml",
+      "exit_code": 0,
+      "reader_tests": 75,
+      "real_core_snapshot_api_tests": 3,
+      "total": 78,
+      "passed": 78,
+      "failed": 0,
+      "ignored": 0,
+      "test_runtime_seconds": 1.7
+    },
+    "clippy": {
+      "command": "cargo clippy --offline --manifest-path crates/traeva-core/tests/docx_reader/Cargo.toml --all-targets -- -D warnings",
+      "exit_code": 0
+    },
+    "fmt": {
+      "command": "cargo fmt --manifest-path crates/traeva-core/tests/docx_reader/Cargo.toml --check",
+      "exit_code": 0
+    },
+    "preliminary_check_failures_retained": {
+      "candidate_source_sha256": "8d66d88fa27857e6aa1fbd2b70fd2fec4deb176c41313b4cb4292a16ae754ac0",
+      "tests_passed": 76,
+      "clippy_exit_code": 101,
+      "clippy_reason": "unused unit expression in check_extra growth-hint arm",
+      "fmt_exit_code": 1,
+      "fmt_reason": "matches! test layout required rustfmt",
+      "resolution": "Parent removed redundant unit and formatted tests; exact final candidate checks above passed."
+    }
+  },
+  "zip_attacks": [
+    {
+      "fixture": "nested-eocd-control.docx",
+      "input_sha256": "61ec12b80694e8c92554f1ad04dcb97b28cfe2cd32a3833e194f7044e1bfe7ca",
+      "input_bytes": 1257,
+      "preexisting_docx1_binary_actual_status": "complete",
+      "preexisting_docx1_binary_synthetic_body_marker": "REAL BODY",
+      "docx2_actual_summary": {
+        "chars": 9,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-2",
+        "status": "complete"
+      },
+      "docx2_text_sha256": "a516b4a3d0ba84a6b48156b54805880bd39478c72daca51db5dedc9128231181"
+    },
+    {
+      "fixture": "nested-eocd.docx",
+      "input_sha256": "a1e4be5158c547d9c41908aa2fc8a24391834d0da70f30b218ce48371891be0c",
+      "input_bytes": 1521,
+      "preexisting_docx1_binary_actual_status": "complete",
+      "preexisting_docx1_binary_synthetic_body_marker": "FAKE BODY",
+      "docx2_actual_summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "ZIP archive comments are unsupported.",
+        "reader": "docx-2",
+        "status": "unsupported"
+      },
+      "docx2_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "fixture": "aes-method-override.docx",
+      "input_sha256": "c6110ba2f8de3d2fc4d107f9c34704ed8918d2bdecdd5beb4d4d1a0f3ec3506e",
+      "input_bytes": 956,
+      "preexisting_docx1_binary_actual_status": "complete",
+      "preexisting_docx1_binary_synthetic_body_marker": "AES METHOD BODY",
+      "docx2_actual_summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "AES ZIP metadata is unsupported.",
+        "reader": "docx-2",
+        "status": "unsupported"
+      },
+      "docx2_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "new_targeted_unit_test_evidence": [
+    "nested_eocd_comment_cannot_select_an_unchecked_body independently passed; asserts zip 8.6.0 selects FAKE BODY, archive count 4 and offset 0 before docx-2 rejects archive comment.",
+    "aes_extra_cannot_override_outer_stored_method independently passed; asserts zip 8.6.0 reports Deflated without encryption before docx-2 rejects AES metadata.",
+    "zip_library_view_must_match_every_preflight_field independently passed for name, local/central/data offsets, flags, method, CRC and both sizes.",
+    "only_valid_inert_office_growth_hint_extra_is_allowed independently passed; whitelist accepts bounded signature/padding format and rejects invalid or unknown extras.",
+    "case_fold_duplicate_package_parts_are_rejected independently passed.",
+    "namespace_work_and_namespace_byte_limits_precede_large_clones independently passed for 1025-byte URI and weighted attribute-resolution work exhaustion.",
+    "fields_spanning_paragraphs_preserve_retained_text_boundaries independently passed after reviewer found retained BEFORE/AFTER paragraphs were concatenated; final output has LF and caches remain omitted.",
+    "foreign_story_text_is_an_actual_omission independently passed; foreign nonempty header text is disclosed.",
+    "network_path_relationships_are_not_internal_part_paths independently passed for main and story double-leading-slash targets."
+  ],
+  "prior_independent_inputs_fresh_rerun": {
+    "count": 28,
+    "passed": 28,
+    "probe_binary_sha256": "09e98adbd2361fe5f81a9cde62d41b1d06ce7ee6ccbc89c02b390ce151c751e8",
+    "results": [
+      {
+        "case": "adjacent_attributes",
+        "input_sha256": "62791014c867357f4b6b9e9a6268e39d5135025e4efdfa87c064c3879131b1e8",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "adjacent_decl_attrs",
+        "input_sha256": "c7cfe950664e2c22d39578bffe1a53caa3e4543e9edbb296fda73203ed429b62",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "nbsp_outside_root",
+        "input_sha256": "8843c3fa2ac4285a1933a412f66fc1037c64921d46d098788ddaf959be3240eb",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "nbsp_after_root",
+        "input_sha256": "7d6f045c9d348d10c9924941b02dcb4013226ac2edccae38eae15242b32bede8",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "raw_cdata_close",
+        "input_sha256": "d6fef44b625c3d71aff40267e4b8b07454de168d50b02f36d88fc4efe961832a",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "lt_in_attribute",
+        "input_sha256": "7a04fd2056f17c1ca41e36b87b5b175d98f7cd1e1971f207a8b1a0933960ac57",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "undeclared_attr",
+        "input_sha256": "7f5f0da7b7803a0bfcd6e6c7eb5424d292e1c7d8628a4753286994fc4df86c57",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "invalid_attr_name",
+        "input_sha256": "a54ba2627799d64e17a1501836695e53bbd205d9823b3c65c78bbe16774c2367",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "invalid_name",
+        "input_sha256": "8c9fb6a4d321266f4adc4d0322da680b37f67323bbe98f6f36d5460815a9853d",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "prefixed_attribute_alias",
+        "input_sha256": "9fbf625303de55548ad45b099bb161a1d4bdfc42e98578dc9b715000f6f73c93",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "duplicate_decl_attr",
+        "input_sha256": "017a5fc7b1c5a94b3f2e7137e63fcce9ce2d9b8bbb044b441d5fd351ee2f4eac",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "bad_decl_standalone",
+        "input_sha256": "ae2b711bf906f9141420932ce44d3986a2343ac30a43198da3372a6b9b72faec",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "leading_decl_comment",
+        "input_sha256": "54e3ee6089a7f664d52605404c77d1b6c94f731ec98a33c885e2e24f1141e634",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "leading_decl_whitespace",
+        "input_sha256": "3c93d40e4d42eecd07c0b746913341d560d579beed7f6ce7792eb71ac5f5d923",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "nested_contenttype",
+        "input_sha256": "ddd9259ea9826faafcf4887d23251888edd36a8c277d4912cd6a34be9c7ccacf",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "macro_default_type",
+        "input_sha256": "724c4e7895d21ff2c5a11d770075b618b8c842bcb0dd2bdd9ebc1243afed7088",
+        "expected_status": "unsupported",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "Macro-bearing Word packages are unsupported.",
+          "reader": "docx-2",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "unicode_path_override",
+        "input_sha256": "b90d1d31127cce006d7cad9e31c1025d49d9c56a83c077a409ef3cd7a61f6033",
+        "expected_status": "unsupported",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "Unicode ZIP path aliases are unsupported.",
+          "reader": "docx-2",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "deflate_trailing",
+        "input_sha256": "7cd50991c14adb4cdc933664c0ac2f7a97aaf066966a82fd48f6c32ca42c2426",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "deflate_truncated",
+        "input_sha256": "878df2f08fcf8519725ccc90756218fcc0b7d90792cede2576757fbb1b464844",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "deflate_unterminated",
+        "input_sha256": "874916f113d71423742c4671d202a230aecb2dc85a44dec755eb6151d85ceae3",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "lying_size_actual_bomb",
+        "input_sha256": "127fd260f7fcfaa8d3a575a8dcfb2c757039f768c0aed5d88ed0e9dc00557b06",
+        "expected_status": "unsupported",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "Expanded ZIP entry exceeds the 8 MiB limit.",
+          "reader": "docx-2",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "aggregate_real_limit",
+        "input_sha256": "6a4c79a2e17ec2419393591a5052baea415e7ef5acb441ce74b87b99f1aeaded",
+        "expected_status": "unsupported",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "DOCX exceeds the 32 MiB expanded-package limit.",
+          "reader": "docx-2",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "namespace257",
+        "input_sha256": "332a6c6d23262046ba938b80852ce6ef143bddd61df496319b77bbe9393f47ab",
+        "expected_status": "unsupported",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "DOCX exceeds the 256 namespace-binding limit.",
+          "reader": "docx-2",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "colon100000",
+        "input_sha256": "c8bcc256387effa7eabf3500e4bd474d05cbdbd0f022635dd89a5d59b958d9f9",
+        "expected_status": "failed",
+        "actual_summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-2",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pass": true
+      },
+      {
+        "case": "char_ref_cr",
+        "input_sha256": "d8778ef1b15187da4606c951d5a9735ca30ec0200e1ced8513fafec4d135a4c3",
+        "expected_status": "complete",
+        "actual_summary": {
+          "chars": 5,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "2e70d7238a20934f7a8a145e8750ee44d6e043a7a8c9b3a1a0979d640e62af8c",
+        "pass": true
+      },
+      {
+        "case": "cdata_cr",
+        "input_sha256": "18dc08a3dba7f52afbf1fb2bb75342a23441c4b6fa9b0969dee74ff9233ccf7e",
+        "expected_status": "complete",
+        "actual_summary": {
+          "chars": 5,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "2e70d7238a20934f7a8a145e8750ee44d6e043a7a8c9b3a1a0979d640e62af8c",
+        "pass": true
+      },
+      {
+        "case": "cr_split_runs",
+        "input_sha256": "4623af57e4b027ca699574259219fe4859a693424e76ad4077c8701fecad68b5",
+        "expected_status": "complete",
+        "actual_summary": {
+          "chars": 3,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "23519a43c66b4c342f25b32e09797ec5f3fc0be388cd8243fb3449afbdce4013",
+        "pass": true
+      },
+      {
+        "case": "cr_then_break",
+        "input_sha256": "4b3e33be9ce43fa989fb68c95687584e945ec47355d1a34ab2c0b353a56912c8",
+        "expected_status": "complete",
+        "actual_summary": {
+          "chars": 4,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "13c8c841fb53ad9953fbadbc2bcf1608d590d32828d3e5bc117b0f39f6c33679",
+        "pass": true
+      }
+    ]
+  },
+  "word_original_layout_independent_checks": [
+    {
+      "version": "v1",
+      "same_length": true,
+      "byte_differences_outside_core_payload_and_two_crc_ranges": 0,
+      "original_and_fixture_hashes_match_layout_manifest": true,
+      "checks": [
+        {
+          "kind": "original_word_synthetic",
+          "input_sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+          "input_bytes": 12229,
+          "summary": {
+            "chars": 64,
+            "covered": [
+              "main body paragraphs, runs, tabs and explicit line breaks"
+            ],
+            "left_out": [],
+            "note": null,
+            "reader": "docx-2",
+            "status": "complete"
+          },
+          "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "expected_matches": true
+        },
+        {
+          "kind": "metadata_scrub_preserved_layout",
+          "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+          "input_bytes": 12229,
+          "summary": {
+            "chars": 64,
+            "covered": [
+              "main body paragraphs, runs, tabs and explicit line breaks"
+            ],
+            "left_out": [],
+            "note": null,
+            "reader": "docx-2",
+            "status": "complete"
+          },
+          "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "expected_matches": true
+        }
+      ]
+    },
+    {
+      "version": "v2",
+      "same_length": true,
+      "byte_differences_outside_core_payload_and_two_crc_ranges": 0,
+      "original_and_fixture_hashes_match_layout_manifest": true,
+      "checks": [
+        {
+          "kind": "original_word_synthetic",
+          "input_sha256": "d2c09b9b149be16ef4a22a75f91a18a06401d7717c8aa35bf6e01cb1484e3793",
+          "input_bytes": 12265,
+          "summary": {
+            "chars": 72,
+            "covered": [
+              "main body paragraphs, runs, tabs and explicit line breaks"
+            ],
+            "left_out": [],
+            "note": null,
+            "reader": "docx-2",
+            "status": "complete"
+          },
+          "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "expected_matches": true
+        },
+        {
+          "kind": "metadata_scrub_preserved_layout",
+          "input_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "input_bytes": 12265,
+          "summary": {
+            "chars": 72,
+            "covered": [
+              "main body paragraphs, runs, tabs and explicit line breaks"
+            ],
+            "left_out": [],
+            "note": null,
+            "reader": "docx-2",
+            "status": "complete"
+          },
+          "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "expected_matches": true
+        }
+      ]
+    }
+  ],
+  "review_findings_resolved": [
+    {
+      "severity": "blocker",
+      "issue": "Preflight and ZIP library selected different EOCD directories",
+      "resolution": "Archive comments rejected; preflight inventory compared with each actual raw ZIP entry before decoding; independently tested malicious and control input."
+    },
+    {
+      "severity": "blocker",
+      "issue": "AES extra field replaced compression method after preflight",
+      "resolution": "Explicit extra whitelist rejects 0x9901, Stored sizes must match, and actual ZIP method must equal inventory method; independently tested."
+    },
+    {
+      "severity": "correctness",
+      "issue": "Reader omitted LF between retained paragraphs when an omitted field spanned paragraphs",
+      "resolution": "Pending paragraph boundary restored only when retained text/tab/break resumes; independently rerun the added regression."
+    }
+  ],
+  "code_review": {
+    "zip_directory_and_actual_metadata_consistent_before_decompression": true,
+    "declared_and_actual_sizes_crc_and_deflate_StreamEnd_checked": true,
+    "xml_resource_limits_status_unsupported": true,
+    "relationship_processing_only_in_memory": true,
+    "reader_filesystem_network_process_calls_found": false,
+    "remaining_reviewed_blockers": []
+  },
+  "conclusion": "PASS for this exact frozen limited docx-2 Reader candidate in independent development review. No remaining reviewed code blocker was found. This is not formal acceptance or a guarantee of complete Word rendering.",
+  "known_limits": [
+    "UTF-8 XML and canonical ASCII part names only; fixed word/document.xml main story.",
+    "ZIP comments, encryption, ZIP64, multipart archives and extras other than validated inert Office growth hints unsupported.",
+    "Resource policy remains bounded at 20 MiB input, 512 entries, 8 MiB entry, 32 MiB declared expanded package, 200:1 ratio, 4 MiB XML part, depth64, 500000 events/attributes and1000000 namespace-resolution work units; names256 bytes, namespace URI1024 bytes,64 attributes/element,256 bindings.",
+    "Table/story text, revision wrappers, fields and caches, objects/text boxes and alternate/foreign body content remain omitted with Partial or Unsupported as implemented. Formatting/layout and full OOXML schema semantics are not validated."
+  ],
+  "not_validated_by_this_reviewer": [
+    "Word GUI creation/save steps; original files were pre-existing synthetic Word-produced artifacts.",
+    "A #103 production Reader dispatch and shared workspace integration/CI.",
+    "Real Word snapshots connected to Semantic Change and Retrieval.",
+    "Worst-case performance and multi-document concurrency.",
+    "Student-owned #31/#34/#27 algorithm/material acceptance.",
+    "Codex-R acceptance, Oct13 Go/No-Go, merge or issue closure."
+  ],
+  "no_external_publication_or_merge": true
+}

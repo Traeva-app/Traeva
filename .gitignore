@@ -1,0 +1,33 @@
+# Rust build output (also holds the bundled Traeva.app under target/release/bundle)
+/target/
+
+# Node / Vite
+node_modules/
+/dist/
+*.tsbuildinfo
+.vite/
+
+# Tauri generated capability schemas (rebuilt on every build)
+/src-tauri/gen/
+
+# App data, databases, credentials and diagnostics must never be committed.
+# Real app data lives in ~/Library/Application Support/Traeva/, outside the repo.
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+/diagnostics/
+/evidence/
+*.log
+
+# macOS and editors
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

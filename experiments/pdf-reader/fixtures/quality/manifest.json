@@ -1,0 +1,22 @@
+{
+  "generator": "fixtures/quality/generate.py",
+  "note": "Synthetic files only; fixtures for the quality diagnostics.",
+  "files": {
+    "q01-no-unicode-only.pdf": {
+      "sha256": "c91f035978beff1fb1029efe45b8ed91fc7b91bc197512d1a1d0f4efa9eabddb",
+      "bytes": 1154
+    },
+    "q02-ruled-table-long-cells.pdf": {
+      "sha256": "e30b22dbf72061632a58733aa200b706023d2d1f884ade63412826c3b23248e6",
+      "bytes": 901
+    },
+    "q03-unruled-long-cells.pdf": {
+      "sha256": "070235daabce8e7605781e1319d16af6d4933f8e7bcb133892664a6a0a68e562",
+      "bytes": 850
+    },
+    "q04-label-block.pdf": {
+      "sha256": "707eb4133568b8655dd30c9dca48678fe0e55e5602ef78ca19c7f05b9fe3281d",
+      "bytes": 837
+    }
+  }
+}

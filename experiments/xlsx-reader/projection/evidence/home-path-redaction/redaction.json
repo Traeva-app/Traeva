@@ -1,0 +1,261 @@
+{
+  "note": "原文件因含本机路径而改写，原 hash 逐文件保留；脱敏只替换 home 前缀，历史诊断/FAIL/PASS 含义不变。",
+  "base_main": "9b40b39481a933a558556790f84374728545ce8b",
+  "files_with_paths": 14,
+  "home_prefix_occurrences_replaced": 23,
+  "projection_files": 6,
+  "core_test_files": 8,
+  "other_format_metadata_files_in_requested_directory": 3,
+  "files": [
+    {
+      "file": "crates/traeva-core/tests/fixtures/docx/r2-review.json",
+      "occurrences": 1,
+      "original_sha256": "3f6d63b4ed1348777ae008579f5685f8467646c41254c0b08f0d4efd7843abec",
+      "redacted_sha256": "13e96f5a3963181315929c826feac757cdf0239e5412a91c32d7866b3c3609bb",
+      "original_bytes": 28103,
+      "redacted_bytes": 28093,
+      "note": "原文件因含本机路径而改写，原 hash 为 3f6d63b4ed1348777ae008579f5685f8467646c41254c0b08f0d4efd7843abec",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "crates/traeva-core/tests/fixtures/pptx/README.md",
+      "occurrences": 1,
+      "original_sha256": "8c42d849dc13db0e5c290dbb14edeccc628029caaf09f2a3f913ebd441e4ed9b",
+      "redacted_sha256": "3d3df33a394699017ab0a48d206542fe22b679de24d85665dface31aaf141b59",
+      "original_bytes": 2806,
+      "redacted_bytes": 2796,
+      "note": "原文件因含本机路径而改写，原 hash 为 8c42d849dc13db0e5c290dbb14edeccc628029caaf09f2a3f913ebd441e4ed9b",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "crates/traeva-core/tests/fixtures/pptx/validation.json",
+      "occurrences": 1,
+      "original_sha256": "da9335cfec5ac341d09a85255f26ff936776c1978f7046f4d567104b801161bf",
+      "redacted_sha256": "078e880e01616ccfce3b6003a9d48225353c9f59fde8fab3979485bd549d69f2",
+      "original_bytes": 14355,
+      "redacted_bytes": 14345,
+      "note": "原文件因含本机路径而改写，原 hash 为 da9335cfec5ac341d09a85255f26ff936776c1978f7046f4d567104b801161bf",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "crates/traeva-core/tests/xlsx_reader/evidence/core-clippy.txt",
+      "occurrences": 2,
+      "original_sha256": "85d0ece02ac491b5bea01fc47e60f331281953fead6358389c33e20245a6e11e",
+      "redacted_sha256": "b2ab7eb0685929bb44518fa33e9312d73e5999cbfe2be64f5a9a73822c20a2f6",
+      "original_bytes": 2771,
+      "redacted_bytes": 2751,
+      "note": "原文件因含本机路径而改写，原 hash 为 85d0ece02ac491b5bea01fc47e60f331281953fead6358389c33e20245a6e11e",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "crates/traeva-core/tests/xlsx_reader/evidence/core-tests.txt",
+      "occurrences": 2,
+      "original_sha256": "2de4c6427b6eda47e35715ebcb1129ebeac575d227712259bbcbeea28236e7ae",
+      "redacted_sha256": "22ac8d6e83c36a7370598fdb9a58d9fec2dfb0a151977ec3b3c0d8a5b170a730",
+      "original_bytes": 5511,
+      "redacted_bytes": 5491,
+      "note": "原文件因含本机路径而改写，原 hash 为 2de4c6427b6eda47e35715ebcb1129ebeac575d227712259bbcbeea28236e7ae",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "crates/traeva-core/tests/xlsx_reader/evidence/first-shim-compile-FAIL.txt",
+      "occurrences": 3,
+      "original_sha256": "9760c1fdc5e8670439936eebfa9d695725082f8aac5eb7e92ebbf7f648dff206",
+      "redacted_sha256": "9d3ed076e903c24102053c0d01cb7979dd5c8ca1f2cb5e739b68cef90c24c824",
+      "original_bytes": 8271,
+      "redacted_bytes": 8241,
+      "note": "原文件因含本机路径而改写，原 hash 为 9760c1fdc5e8670439936eebfa9d695725082f8aac5eb7e92ebbf7f648dff206",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "crates/traeva-core/tests/xlsx_reader/evidence/legacy-shim-clippy.txt",
+      "occurrences": 1,
+      "original_sha256": "00bac842e5d4d22bd8dac76576ea8e66f9f9259282e35ab46618c402e0522e80",
+      "redacted_sha256": "c49ca8edacd413a048403821ab0bef3f3e6b8e7684613c1eeb75bbe034037dea",
+      "original_bytes": 187,
+      "redacted_bytes": 177,
+      "note": "原文件因含本机路径而改写，原 hash 为 00bac842e5d4d22bd8dac76576ea8e66f9f9259282e35ab46618c402e0522e80",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "crates/traeva-core/tests/xlsx_reader/evidence/projection-shim-fixed.txt",
+      "occurrences": 1,
+      "original_sha256": "6808bbb6c6ace1e81d0a6056b8205b093a7b0f238dbc3d0113541593f8cb250a",
+      "redacted_sha256": "5522d56d6d568f5389bc7e32f24205e0f1292593d44ba27bff4e407db6940431",
+      "original_bytes": 208,
+      "redacted_bytes": 198,
+      "note": "原文件因含本机路径而改写，原 hash 为 6808bbb6c6ace1e81d0a6056b8205b093a7b0f238dbc3d0113541593f8cb250a",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/aligned-clippy.txt",
+      "occurrences": 1,
+      "original_sha256": "89ff78e503b9ab751f12a06d705ddfaa6dd5385758b59f9111d8698de5867420",
+      "redacted_sha256": "cce2e34f9a8b2856b697783cd7f7e3ab6f0c77150c7c4e2838c0599fa0f1378a",
+      "original_bytes": 214,
+      "redacted_bytes": 204,
+      "note": "原文件因含本机路径而改写，原 hash 为 89ff78e503b9ab751f12a06d705ddfaa6dd5385758b59f9111d8698de5867420",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/aligned-tests.txt",
+      "occurrences": 2,
+      "original_sha256": "5fed4689450b2812f355e53d835d5596eb4861cacf5441f6106ed51b6f6ad814",
+      "redacted_sha256": "e2b0f071cdf768ac94c6c32ecf2f45ec1d096a8a76b8631f1fd8a154d470d21a",
+      "original_bytes": 2723,
+      "redacted_bytes": 2703,
+      "note": "原文件因含本机路径而改写，原 hash 为 5fed4689450b2812f355e53d835d5596eb4861cacf5441f6106ed51b6f6ad814",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/binding-budget-recheck.txt",
+      "occurrences": 1,
+      "original_sha256": "16c05a129327f4f60f6967bb1566668de0d7fb0734357b5c82251732db5fafce",
+      "redacted_sha256": "a78bdb46c2c7cbd70b5bfa2060b7763afdd58a57613ac956040b666238f4c2bc",
+      "original_bytes": 1012,
+      "redacted_bytes": 1002,
+      "note": "原文件因含本机路径而改写，原 hash 为 16c05a129327f4f60f6967bb1566668de0d7fb0734357b5c82251732db5fafce",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/first-A151-compat-FAIL.txt",
+      "occurrences": 2,
+      "original_sha256": "6f5b3627bce6929272c538ccba880f9fa4d939d61f06b1dfc85bceddbc3ba2a3",
+      "redacted_sha256": "d2b4789726ef6d0d2bc1c6a4738c55090e68f571a94fec0c83d55c8be4bdc500",
+      "original_bytes": 1811,
+      "redacted_bytes": 1791,
+      "note": "原文件因含本机路径而改写，原 hash 为 6f5b3627bce6929272c538ccba880f9fa4d939d61f06b1dfc85bceddbc3ba2a3",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/first-build-FAIL.txt",
+      "occurrences": 4,
+      "original_sha256": "08770cc181a854cc62720e351bf82f4e1becd9deea952743ee021161bcd141e5",
+      "redacted_sha256": "74a4e6f706692b8b50b8ff2d7e7d6f6d8a450f740036bc94eaeda948de1e1af1",
+      "original_bytes": 4792,
+      "redacted_bytes": 4752,
+      "note": "原文件因含本机路径而改写，原 hash 为 08770cc181a854cc62720e351bf82f4e1becd9deea952743ee021161bcd141e5",
+      "only_home_prefix_replaced": true
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/v23-compat-FAIL.txt",
+      "occurrences": 1,
+      "original_sha256": "710c936fbd64094428abddaf0543358ee89f92594be1e2380f69fb8f66feb318",
+      "redacted_sha256": "a0e8a8968547306b50b920f6dceb5322b95b40dd57b719dce49ce35e7bdf30ef",
+      "original_bytes": 2764,
+      "redacted_bytes": 2754,
+      "note": "原文件因含本机路径而改写，原 hash 为 710c936fbd64094428abddaf0543358ee89f92594be1e2380f69fb8f66feb318",
+      "only_home_prefix_replaced": true
+    }
+  ],
+  "hash_manifests_updated": [
+    {
+      "file": "crates/traeva-core/tests/pptx_reader/projection-validation.json",
+      "original_manifest_sha256": "07328aeb6ed52a40f37896bbc07d8c9a09a8776c21542baefe314d9ec552e964",
+      "updated_manifest_sha256": "a692211d2951ed3c6d71a729f249bb495b79a32beca353a65a161ca6efa7029a",
+      "updated_hash_fields": 1
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/phase-1-verification.json",
+      "original_manifest_sha256": "5c633c0df8b8253f9fb83f0d28545ec69926c7b475fb4d1c21bf7c31527779d6",
+      "updated_manifest_sha256": "7a341319c5b10a1ceee863087046423ddb8b5ff4ed6ac519ab95a2f8ef1aff11",
+      "updated_hash_fields": 1
+    },
+    {
+      "file": "experiments/xlsx-reader/projection/evidence/verification.json",
+      "original_manifest_sha256": "2e75f92c83cd449152b012a46c41f26237a95c2945b7c0f783cefcf434638c25",
+      "updated_manifest_sha256": "53f3202227710874e5574cc452765d9d4c0322acaf6be089f88d7e973e64ad6c",
+      "updated_hash_fields": 3
+    }
+  ],
+  "source_or_test_expectations_modified": false,
+  "historical_commits_rewritten": false,
+  "validation": {
+    "at_utc": "2026-10-13T00:50:56.232715+00:00",
+    "results": [
+      {
+        "package": "core",
+        "operation": "fmt",
+        "command": "cargo fmt --manifest-path crates/traeva-core/tests/xlsx_reader/Cargo.toml --all --check",
+        "exit_code": 0,
+        "status": "PASS",
+        "log": "experiments/xlsx-reader/projection/evidence/home-path-redaction/core-fmt.txt",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_summaries": []
+      },
+      {
+        "package": "core",
+        "operation": "tests",
+        "command": "cargo test --offline --locked --manifest-path crates/traeva-core/tests/xlsx_reader/Cargo.toml",
+        "exit_code": 0,
+        "status": "PASS",
+        "log": "experiments/xlsx-reader/projection/evidence/home-path-redaction/core-tests.txt",
+        "log_sha256": "b4da622c52e1f896e00413d9a7ce1fd18ca129ef2f779b7f0aeab311b8858e76",
+        "test_summaries": [
+          "test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+        ]
+      },
+      {
+        "package": "projection",
+        "operation": "fmt",
+        "command": "cargo fmt --manifest-path experiments/xlsx-reader/projection/Cargo.toml --all --check",
+        "exit_code": 1,
+        "status": "FAIL",
+        "log": "experiments/xlsx-reader/projection/evidence/home-path-redaction/projection-fmt.txt",
+        "log_sha256": "bf28b6d909a3ee8ff2f068bd069f66dd656df323957e754334d29bc7a7522d4f",
+        "test_summaries": []
+      },
+      {
+        "package": "projection",
+        "operation": "tests",
+        "command": "cargo test --offline --locked --manifest-path experiments/xlsx-reader/projection/Cargo.toml",
+        "exit_code": 0,
+        "status": "PASS",
+        "log": "experiments/xlsx-reader/projection/evidence/home-path-redaction/projection-tests.txt",
+        "log_sha256": "361e167a755fc3031a8b1ae9aa72302e077fe181d43543166925dc0520191429",
+        "test_summaries": [
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s",
+          "test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+          "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+        ]
+      }
+    ],
+    "root_cargo_lock_unchanged": true,
+    "tracked_nested_lock_sha256": {
+      "core": "bf07840acb958e9b63c7491e63880e21e4ed7f38452f63b70831ddbfb5ed0304",
+      "projection": "9412cd6858b9e18cdf8a14cea66c97f11eea8cd1d7178983014c97b96765ec0c"
+    },
+    "tracked_nested_locks_unchanged": true,
+    "real_model_requests": 0,
+    "gui_operations": 0,
+    "projection_fmt_baseline_failure": {
+      "status": "FAIL_RETAINED",
+      "scope": "main 已有的兼容转接格式问题，非本次路径改写",
+      "file": "experiments/xlsx-reader/src/lib.rs",
+      "baseline_and_worktree_source_sha256": "e96bd177286e5ad04062f257077e4e0a4782aa1fcc71ac9cb6be6820ad50aad8",
+      "source_identical_to_base": true,
+      "source_not_changed": true
+    },
+    "total_passed_tests": 43,
+    "final_scan": {
+      "files_scanned": 138,
+      "remaining_known_home_login_tokens": 0,
+      "json_syntax": "PASS",
+      "only_prefix_replacement_in_14_original_files": "PASS",
+      "hash_references": "PASS",
+      "source_manifests_locks_unchanged": true,
+      "diff_check": "PASS"
+    }
+  },
+  "new_evidence_sha256": {
+    "README.md": "4f6e80dd67203fefdb5f7c99cbca071accbadb08eaf8ccad0570d549c5c65c82",
+    "core-fmt.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "core-tests.txt": "b4da622c52e1f896e00413d9a7ce1fd18ca129ef2f779b7f0aeab311b8858e76",
+    "first-test-preparation-FAIL.json": "678819c1e7c64f11590dfb0846b9428d0580e1ff1a012201fece531aba6eac89",
+    "projection-fmt.txt": "bf28b6d909a3ee8ff2f068bd069f66dd656df323957e754334d29bc7a7522d4f",
+    "projection-tests.txt": "361e167a755fc3031a8b1ae9aa72302e077fe181d43543166925dc0520191429"
+  }
+}

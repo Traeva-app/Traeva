@@ -1,0 +1,365 @@
+{
+ "frozen": "Written before any fix; changes must state their basis.",
+ "source": "Codex-R4's descriptions of its findings on 07ce381 (its inputs were not seen)",
+ "fixtures": {
+  "d01-nested-form-string-bomb.pdf": {
+   "path": "defects/generated/d01-nested-form-string-bomb.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 1,
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d02-comment-before-stream-bomb.pdf": {
+   "path": "defects/generated/d02-comment-before-stream-bomb.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 1,
+   "role": "defect",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d03-nested-form-string-ok.pdf": {
+   "path": "defects/generated/d03-nested-form-string-ok.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 1,
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nPage text\nNested form text",
+   "chars": 35,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 35
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d04-comment-before-content-stream.pdf": {
+   "path": "defects/generated/d04-comment-before-content-stream.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 1,
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nComment before stream",
+   "chars": 30,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 30
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d05-strings-in-stream-dict.pdf": {
+   "path": "defects/generated/d05-strings-in-stream-dict.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 1,
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nStrings in a stream dictionary",
+   "chars": 39,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 39
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d06-encrypt-as-words.pdf": {
+   "path": "defects/generated/d06-encrypt-as-words.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 2,
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nKey /Encrypt is not set",
+   "chars": 32,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 32
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d07-size-as-words.pdf": {
+   "path": "defects/generated/d07-size-as-words.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 2,
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nPaper /Size 999999 sheets",
+   "chars": 34,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 34
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d08-script-names-as-words.pdf": {
+   "path": "defects/generated/d08-script-names-as-words.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 2,
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nNames /JS /JavaScript /EmbeddedFiles appear here",
+   "chars": 57,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 57
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d09-escaped-javascript-action.pdf": {
+   "path": "defects/generated/d09-escaped-javascript-action.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 3,
+   "role": "defect",
+   "status": "partial",
+   "text": "[Page 1]\nEscaped JavaScript action",
+   "chars": 34,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 34
+    }
+   },
+   "left_out": [
+    "JavaScript (not run and not read)"
+   ],
+   "note": "Not all of this PDF is in the text. Left out: JavaScript."
+  },
+  "d10-escaped-embedded-file.pdf": {
+   "path": "defects/generated/d10-escaped-embedded-file.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 3,
+   "role": "defect",
+   "status": "partial",
+   "text": "[Page 1]\nEscaped attachment",
+   "chars": 27,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 27
+    }
+   },
+   "left_out": [
+    "embedded files (not opened)"
+   ],
+   "note": "Not all of this PDF is in the text. Left out: embedded files."
+  },
+  "d11-escaped-link-javascript.pdf": {
+   "path": "defects/generated/d11-escaped-link-javascript.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 3,
+   "role": "defect",
+   "status": "partial",
+   "text": "[Page 1]\nEscaped link script",
+   "chars": 28,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 28
+    }
+   },
+   "left_out": [
+    "JavaScript (not run and not read)"
+   ],
+   "note": "Not all of this PDF is in the text. Left out: JavaScript."
+  },
+  "d12-escaped-attachment-annotation.pdf": {
+   "path": "defects/generated/d12-escaped-attachment-annotation.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 3,
+   "role": "defect",
+   "status": "partial",
+   "text": "[Page 1]\nAttachment annotation",
+   "chars": 30,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 30
+    }
+   },
+   "left_out": [
+    "annotations on page 1 (1: comments, highlights, stamps or attachments; not read)",
+    "embedded files (not opened)"
+   ],
+   "note": "Not all of this PDF is in the text. Left out: annotations, embedded files."
+  },
+  "d13-contents-missing-member.pdf": {
+   "path": "defects/generated/d13-contents-missing-member.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 4,
+   "role": "defect",
+   "status": "failed",
+   "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d14-contents-string-member.pdf": {
+   "path": "defects/generated/d14-contents-string-member.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 4,
+   "role": "defect",
+   "status": "failed",
+   "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d15-contents-dangling.pdf": {
+   "path": "defects/generated/d15-contents-dangling.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 4,
+   "role": "defect",
+   "status": "failed",
+   "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d16-contents-two-parts.pdf": {
+   "path": "defects/generated/d16-contents-two-parts.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 4,
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nFirst part\nSecond part",
+   "chars": 31,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 31
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d17-flate-wrong-adler.pdf": {
+   "path": "defects/generated/d17-flate-wrong-adler.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 5,
+   "role": "defect",
+   "status": "failed",
+   "note": "A compressed stream in the PDF is damaged.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d18-flate-missing-adler.pdf": {
+   "path": "defects/generated/d18-flate-missing-adler.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 5,
+   "role": "defect",
+   "status": "failed",
+   "note": "A compressed stream in the PDF is damaged.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d19-flate-no-zlib-header.pdf": {
+   "path": "defects/generated/d19-flate-no-zlib-header.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 5,
+   "role": "defect",
+   "status": "failed",
+   "note": "A compressed stream in the PDF is damaged.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d20-form-wrong-adler.pdf": {
+   "path": "defects/generated/d20-form-wrong-adler.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 5,
+   "role": "defect",
+   "status": "failed",
+   "note": "A compressed stream in the PDF is damaged.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d21-image-wrong-adler.pdf": {
+   "path": "defects/generated/d21-image-wrong-adler.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 5,
+   "role": "control",
+   "status": "partial",
+   "text": "[Page 1]\nImage with a damaged checksum",
+   "chars": 38,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 38
+    }
+   },
+   "left_out": [
+    "images on page 1 (1 in all; images are not read, no OCR)"
+   ],
+   "note": "Not all of this PDF is in the text. Left out: images."
+  },
+  "d22-xref-stream.pdf": {
+   "path": "defects/generated/d22-xref-stream.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 0,
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nObject stream page",
+   "chars": 27,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 27
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "d23-xref-stream-escaped-encrypt.pdf": {
+   "path": "defects/generated/d23-xref-stream-escaped-encrypt.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 0,
+   "role": "control",
+   "status": "unsupported",
+   "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "d24-incremental-update.pdf": {
+   "path": "defects/generated/d24-incremental-update.pdf",
+   "kind": "defect-reproduction",
+   "r4_class": 0,
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nUpdated text",
+   "chars": 21,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 21
+    }
+   },
+   "left_out": [],
+   "note": null
+  }
+ }
+}

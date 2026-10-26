@@ -1,0 +1,3440 @@
+{
+ "kind": "developer self-test (Claude-G); not an independent Codex-R4 result",
+ "old_probe_sha256": "e25a7ec4f53461ae34a0603e1b752dd4964c924906d942f8cb97d28999f92730",
+ "new_probe_sha256": "249079ca9042c1ccc6f250e89b8a19c1bbe1aaf7f7df74920918fda1de62e3bc",
+ "limits": {
+  "timeout_seconds": 20,
+  "memory_mib": 1024
+ },
+ "files": {
+  "a01-flate-bomb.pdf": {
+   "sha256": "9fb3801f6198819c2a80a6bf21bc7299f6b8bd4b532c47dd8bda5d19f01e6332",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 13,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 24,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "a02-nested-flate.pdf": {
+   "sha256": "68c803b08d6d134ea919b0f3e6c67d330a441aa9e6a867031cdd9cc35f5a354f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 13,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "a03-image-label-bomb.pdf": {
+   "sha256": "0c43c257cad36ef00ee6d92b7fe95f0e2d442140b1025ec4d44be2929d9c78d8",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 36,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 64 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 35,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 64 MiB."
+   }
+  },
+  "a04-decoded-total.pdf": {
+   "sha256": "d61d2006d3712a2b8a3d0a15ef7f7d8586c208318a577ba0c280bcd23ef06cc9",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 144,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 157,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   }
+  },
+  "a05-too-many-pages.pdf": {
+   "sha256": "80b65cd4ed3a4fbc50d24ccc53d429dc99ad846976622d4bf1be9e1285271081",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF has more pages than this reader's limit (500)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF has more pages than this reader's limit (500)."
+   }
+  },
+  "a06-declared-objects.pdf": {
+   "sha256": "a581b949de07bf3bf5ff96a76983c67c8b8af828b0cfd84c5d999dad26a22678",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF declares more objects than this reader's limit (200000)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF declares more objects than this reader's limit (200000)."
+   }
+  },
+  "a07a-deep-stream-dict.pdf": {
+   "sha256": "d63394bbed188ae6a3bb2e6e61e95afaf541ba43587d418edd3945a793cb6894",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "A stream's dictionary could not be checked before reading."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream's dictionary could not be checked before reading."
+   }
+  },
+  "a07b-deep-page-dict.pdf": {
+   "sha256": "43113ab8ae8d44c6f6302fa9fbc3113e7f702887b871985a65a7efad408738dc",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The PDF has no pages."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The PDF has no pages."
+   }
+  },
+  "a08-form-recursion.pdf": {
+   "sha256": "b3fcc48cdd5b2dd142e28f1636d90ac9759e55278ae7fda6621b74f6071fcca5",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "a09-form-fanout.pdf": {
+   "sha256": "b782e8e1b3ded008c504a376c347e2fcfc40b1ceb9ea2e10701e75d8b470be63",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 659,
+    "status": "unsupported",
+    "note": "The PDF passes this reader's limit on characters drawn."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 693,
+    "status": "unsupported",
+    "note": "The PDF passes this reader's limit on characters drawn."
+   }
+  },
+  "a10-lzw.pdf": {
+   "sha256": "57eb6344d58164dc6047ce9920b85b7b1078bfb876557155edf6d8c3c0615243",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF uses legacy LZW compression, which this experiment does not read."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF uses legacy LZW compression, which this experiment does not read."
+   }
+  },
+  "a11-codec-on-content.pdf": {
+   "sha256": "a6359b08d6b8b23cfafd3d83778b7fe943854902a2e0be146deac933539fa442",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "An image codec is used on a stream that is not an image."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "An image codec is used on a stream that is not an image."
+   }
+  },
+  "a12-indirect-filter.pdf": {
+   "sha256": "dc16d598403997a87c52963180b4bed52c9f80c6d1bc1358a456d4ca7f2f08dd",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "A stream's filter list is stored elsewhere in the file; this reader does not guess its size."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream's filter list is stored elsewhere in the file; this reader does not guess its size."
+   }
+  },
+  "a13-unknown-filter.pdf": {
+   "sha256": "e717c3bb5aee617957f2ed74d619d4213e237def33ee80ad3249fd9c5e134448",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream uses a filter this reader does not know."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream uses a filter this reader does not know."
+   }
+  },
+  "a14-run-length-bomb.pdf": {
+   "sha256": "101f32c8ac7d6dfdd51305bf92f243ce1ed62cd741a149a14f4dc1ad295be1fb",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "a15-stream-count.pdf": {
+   "sha256": "0ddc80fd2bc9433e00fce24cdab228eda752ebb514df90057f341fc739708144",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 244,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 149,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   }
+  },
+  "a16-big-input.pdf": {
+   "sha256": "da3f12fa23d557118162917c4f2a1288278cdd41ba7c0882758712bac3feae1f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 39,
+    "status": "unsupported",
+    "note": "The PDF is larger than this reader's input limit (32 MiB)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 39,
+    "status": "unsupported",
+    "note": "The PDF is larger than this reader's input limit (32 MiB)."
+   }
+  },
+  "a17-fake-endstream.pdf": {
+   "sha256": "d7d06b8e1c126eb0633b8481647ec6f95589d4e22e1219e86e3df423b3b7f4b3",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "a18-encrypted-owner-only.pdf": {
+   "sha256": "7ce351b13a871dc4d70231a1b7781d06b117d2cd6973937f906f962302d6b6ba",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   }
+  },
+  "a19-encrypted-user-password.pdf": {
+   "sha256": "bd9d42d221910febc2093f3cfdd9bc76c1625cd8a4d9eb2f10281fa56219ca77",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   }
+  },
+  "a20-escaped-encrypt.pdf": {
+   "sha256": "9a45307dd9e7b9899c4eb88e8153342d6609c1335f8add623032cbcac32c22c9",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   }
+  },
+  "c01-truncated-half.pdf": {
+   "sha256": "f63b545276485d60d4827094835211abd919970d6b31c33712c84ae98fcdce22",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file ends before its end-of-file marker; it is truncated or damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file ends before its end-of-file marker; it is truncated or damaged."
+   }
+  },
+  "c02-truncated-tail.pdf": {
+   "sha256": "a469df01766a19e5cd3f38862c420cbbd498b439af9a3108ad7be04e0a35c495",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file ends before its end-of-file marker; it is truncated or damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file ends before its end-of-file marker; it is truncated or damaged."
+   }
+  },
+  "c03-wrong-startxref.pdf": {
+   "sha256": "6ed6fb3c062d2033f2e63c741ee77d46d3a8bfdd1a61b449a8622ad4c40a1961",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The PDF's cross-reference data is damaged (the offset at its end is wrong)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The PDF's cross-reference data is damaged (the offset at its end is wrong)."
+   }
+  },
+  "c04-damaged-flate.pdf": {
+   "sha256": "2afede156d914baab2fad425c549408896206558aa91fb69493fb45b36e6c859",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   }
+  },
+  "c05-not-a-pdf.pdf": {
+   "sha256": "88917e70d33dc5fd8f493a1923b4f37e2a45d9aa20bc30f484fe8ab82a6cae80",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file has no PDF header."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file has no PDF header."
+   }
+  },
+  "c06-garbage.pdf": {
+   "sha256": "2d1d7654e9a7d520bdf666c91c25959b2d8b4e7077884d0029b714af83701df3",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file ends before its end-of-file marker; it is truncated or damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file ends before its end-of-file marker; it is truncated or damaged."
+   }
+  },
+  "c07-page-count.pdf": {
+   "sha256": "7760200ea2080e1553edc9db00020456ba425240254ed994b9c467fc8a74f708",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "The PDF's page tree is damaged: it declares 3 pages but 2 were found."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The PDF's page tree is damaged: it declares 3 pages but 2 were found."
+   }
+  },
+  "c08-empty.pdf": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "The file has no PDF header."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "The file has no PDF header."
+   }
+  },
+  "p01-single-en.pdf": {
+   "sha256": "0bdca643ab48658bc7837ded68a8404ce51c2b4d7c0aef77cf9ebb5bb38b02a2",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "p02-multi-en.pdf": {
+   "sha256": "7e880a027cd946650fcb4518d42a7eccdbbfde237f632b855764e42a87e3f89e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "p03-cjk-reportlab.pdf": {
+   "sha256": "e2c6b9340a19e69072cd8fda8a12d100f41c63214ae974963ed67f123efe23eb",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 13,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "p04-rotated.pdf": {
+   "sha256": "6a466e97671ac11063138e832b731c227caa4531e70b1a0781c785c93b773d51",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "p05-two-column.pdf": {
+   "sha256": "e59fe3cdd7c0047124c0b4c1beb8e5f66e8c7b7199f06f7ff8297343a8549513",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 13,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "p06-font-mapping.pdf": {
+   "sha256": "2d217aed9399b3c1b3b52d29ddb8ca7fd7a62c90d0fa0902790debb3ee08c24f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: characters without Unicode."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: characters without Unicode."
+   }
+  },
+  "p07-blank.pdf": {
+   "sha256": "2ca3d073196f4cf64fc176a0c28b95598e04474eef2b635efb8cd905825928ab",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   }
+  },
+  "p08-scanned-images.pdf": {
+   "sha256": "dd5f3ea5ecd9b106a1f43c8cd125c230f56b466c0615446b3d7bbfa7792e8e68",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "No page has a text layer that this reader can use. 2 of 2 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "No page has a text layer that this reader can use. 2 of 2 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do."
+   }
+  },
+  "p09-mixed-pages.pdf": {
+   "sha256": "c6b20ed4a2ec5ad485b682e0a18cc33479758e82386c4dbd197bb260d8563aab",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: scanned or image-only pages, images."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: scanned or image-only pages, images."
+   }
+  },
+  "p10-ruled-table.pdf": {
+   "sha256": "8ab96a84ef0c789f81b446ead9852f6ea2b30abfb35ba5ded71fc5d736cc66ed",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   }
+  },
+  "p11-formula.pdf": {
+   "sha256": "07641bfe012187dc1b686789cbac020949c7267056a2b7a57f13582349f84e64",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: formula layout."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: formula layout."
+   }
+  },
+  "p12-annotations-form.pdf": {
+   "sha256": "3ecc350cf64f3896be29c8b49020211b95c0ecf30a881da6eeeb51a56a1d9882",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: annotations, form fields, JavaScript, embedded files."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: annotations, form fields, JavaScript, embedded files."
+   }
+  },
+  "p13-invisible-ocr-layer.pdf": {
+   "sha256": "8a2cd245266b7aba8fa54e2e6aa6100d980cdbd46e7bbc394276cae4602ab1e9",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images."
+   }
+  },
+  "p14-outside-and-duplicates.pdf": {
+   "sha256": "706c2ba2ffcebf2ac6625d09db4a9b1284401e8cb2117d8539c61bfee92129cf",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: text outside the page."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: text outside the page."
+   }
+  },
+  "p15-positioned-words.pdf": {
+   "sha256": "fbb319f049fa518c15961d937986bc7414ab432d43b027c0273911c357430d41",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "p16-text-cap.pdf": {
+   "sha256": "7b26b99aaf1515bc3c15fed92ebcd078b6fd2e3b2a07d78971af1b253208b201",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 251,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: text past the length limit."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 241,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: text past the length limit."
+   }
+  },
+  "p17-glyph-budget.pdf": {
+   "sha256": "cea65f0c92fa31c6648849a0a2b3bf4109a0053e8669c0849758943bf774d6da",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 261,
+    "status": "unsupported",
+    "note": "The PDF passes this reader's limit on characters drawn."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 281,
+    "status": "unsupported",
+    "note": "The PDF passes this reader's limit on characters drawn."
+   }
+  },
+  "p18-draw-budget.pdf": {
+   "sha256": "d41ebf229302b92d205468d74a758df8a3d209f6838b28a66f2fe80ee554f69c",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 332,
+    "status": "unsupported",
+    "note": "The PDF passes this reader's limit on drawing operations."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 342,
+    "status": "unsupported",
+    "note": "The PDF passes this reader's limit on drawing operations."
+   }
+  },
+  "d01-nested-form-string-bomb.pdf": {
+   "sha256": "4f50f9aeb2071c06ecdd4609ed60672ff1453a7383f84e8d46944daa60096459",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "d02-comment-before-stream-bomb.pdf": {
+   "sha256": "06248ad0a3e93a5b4eb0fe20a18dbce4419ff40c2aacd01d6885675e359597f1",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "d03-nested-form-string-ok.pdf": {
+   "sha256": "8b2b91c54d8ca3315e70955650620cc1bc032bbd06786daa618746d4c86c9051",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d04-comment-before-content-stream.pdf": {
+   "sha256": "fd72e09674aaa6a7df7559f28bf9988708e2d9089fda9713de77e560689ff4d7",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d05-strings-in-stream-dict.pdf": {
+   "sha256": "907ac313e89aa35dad6db1a158452ac5a73c88e9cfd2fb17bef56a1ba12c2f63",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d06-encrypt-as-words.pdf": {
+   "sha256": "5bc3736750376917957f7f81ad08e93ae2efcb8cfd3bf973ce59469ff5827385",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d07-size-as-words.pdf": {
+   "sha256": "f512627f529fd4bd98fb89db43ea9a8a603e6972c8ca08ce831dfb717748277a",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d08-script-names-as-words.pdf": {
+   "sha256": "87e0a379f8c449f41c715f90800628cb72ec95ac01d149190a507c38fd86da8f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d09-escaped-javascript-action.pdf": {
+   "sha256": "c5fbd2543ff853c8dc350841914e1f907de764a10cf93c7bd29e6bfe49f105a5",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: JavaScript."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: JavaScript."
+   }
+  },
+  "d10-escaped-embedded-file.pdf": {
+   "sha256": "d9c546b9889d5a628cb12a692605f7a8b310168be4a86997fb3bd6bdafdcbf5d",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: embedded files."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: embedded files."
+   }
+  },
+  "d11-escaped-link-javascript.pdf": {
+   "sha256": "8e55c07c8506e29cd5ed9a5f15f02a3e83eb063a954f0ee6db1f2a5fa3c81d61",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: JavaScript."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: JavaScript."
+   }
+  },
+  "d12-escaped-attachment-annotation.pdf": {
+   "sha256": "33b7fc2288d08d5bc3a1a793b6adb543ab65b097c7ae0b890917894438b84ae9",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: annotations, embedded files."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: annotations, embedded files."
+   }
+  },
+  "d13-contents-missing-member.pdf": {
+   "sha256": "87fc0895eb15018c098995927eead4f16368f92bcf1fb92fb27d8ccad63c4520",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   }
+  },
+  "d14-contents-string-member.pdf": {
+   "sha256": "c42dc0b124cafb7853f313aeb3a5c3a9fe3d7eab9815bff20b6560dea6fefdfc",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   }
+  },
+  "d15-contents-dangling.pdf": {
+   "sha256": "924a553324431d9742781d6f779a2821e5d0651b5988f884accc4eeb57e82b6b",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   }
+  },
+  "d16-contents-two-parts.pdf": {
+   "sha256": "09bfd4bd429aba4395d021bc7c863cc0d8e2def4b2e7d016c6bbd9309a075f21",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d17-flate-wrong-adler.pdf": {
+   "sha256": "a97cef0deeed137910f9e7b419bead01b2e68b1d685790d7d9ce392a8fbecdcc",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   }
+  },
+  "d18-flate-missing-adler.pdf": {
+   "sha256": "925530220896c605c69de5c2dd76c5c18223f1a423e85b3070647730ca817bbf",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   }
+  },
+  "d19-flate-no-zlib-header.pdf": {
+   "sha256": "ce3abe9a00e9ab4a1fe0e3fb68b6233b5206ccfc79f851b7db51b9383fefb1bb",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   }
+  },
+  "d20-form-wrong-adler.pdf": {
+   "sha256": "ffce40089e59c8eb6a430ba5113594c895185769fa0d58b17067b9ac42ac5ddb",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   }
+  },
+  "d21-image-wrong-adler.pdf": {
+   "sha256": "b547ed0988b73a06e117a668396d19a59cdaf914d5bfbc7273c892be0668e771",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images."
+   }
+  },
+  "d22-xref-stream.pdf": {
+   "sha256": "ef187023efd99640c06f99574245300de059587981fdcb872690fba24940f03e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "d23-xref-stream-escaped-encrypt.pdf": {
+   "sha256": "b83931de48e8fb343f71f2177c53b5e5e513d11a884249892347cfab97d14e1e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   }
+  },
+  "d24-incremental-update.pdf": {
+   "sha256": "19d0d890ddf097fe84e8a3594a21b3a531a261614e7f658180c532d3a7267685",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f01-listing-in-text.pdf": {
+   "sha256": "e57795b87e0570e66593f3796d5406f57334b36c7b93ca68c47b5544fb5c874d",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f02-listing-in-file-comment.pdf": {
+   "sha256": "39221f2824ad183aa4e2d41eea290a3c32d8a0dc3c863667c8c647f8fc88a14c",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f03-flate-listing-in-text.pdf": {
+   "sha256": "43cd8f683687d449691459e8593ce45caff3df1fe9024e646b314a61ba32cafe",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f04-listing-in-content-comment.pdf": {
+   "sha256": "b653d4d05e85e06c6c6297c5da9360eb6a1b4e5f45313374f058756e5edb35aa",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f05-listing-in-strings.pdf": {
+   "sha256": "5707c71d63c68367a7e46504beb898f16c01f3176a8067c43248736180aeda04",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f06-lzw-listing-in-image-data.pdf": {
+   "sha256": "f6d9391e1d9a43d46a9328743b8775f24b9e1d63f48347001b8d016dbffa6e96",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images."
+   }
+  },
+  "f07-endstream-in-text.pdf": {
+   "sha256": "29994da89bf8d26972622ae305cba758ead1fae28b28134e64c6ad5cc62cb3cf",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f08-endstream-in-text-indirect-length.pdf": {
+   "sha256": "d46326169dcd994c1f6e3f4cfa735b1b4406a8996c6a1a44c6a9ed7b22808e6c",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f09-objstm-listing-in-text.pdf": {
+   "sha256": "f266b76c1fac59bf9f6c78ee274124268bcbe9f2066296711f7b514f6a57bd16",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f10-objstm-lzw-listing-in-text.pdf": {
+   "sha256": "194510f198e29a3e88d1a32f9d9c00e1facd8a809173e47569c1cf75f687fbb4",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF uses legacy LZW compression, which this experiment does not read."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF uses legacy LZW compression, which this experiment does not read."
+   }
+  },
+  "f11-listing-and-real-bomb.pdf": {
+   "sha256": "06ea9a606387d779457b81a0473e069dee393cc4bd545508add4e18462a34dc1",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "f12-damaged-part-and-listing.pdf": {
+   "sha256": "2684c349ca2f12c90dadc01cd683e7014a2b4d3206aab3ea040752d2814dc717",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A compressed stream in the PDF is damaged."
+   }
+  },
+  "f13-real-unknown-filter.pdf": {
+   "sha256": "1e12f9f4e166b2709fc7027d2afa20b93ac5e05fb4d0057863d066c0a1c97e29",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream uses a filter this reader does not know."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream uses a filter this reader does not know."
+   }
+  },
+  "f14-bomb-listing-in-image-data.pdf": {
+   "sha256": "2b24159b15a63a79dd01de9d260ec33628a5506226b2532a21eaf307a5641f5e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "f15-contents-direct-null.pdf": {
+   "sha256": "87a923453370336ffef9339419d7dc3da18d587815c3778ef6ac417b7ff36c9d",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   }
+  },
+  "f16-contents-indirect-null.pdf": {
+   "sha256": "4851bacd47cf54c06c04a71006167d86e139a356b6247a7e5119ce7cfbc24174",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   }
+  },
+  "f17-text-and-indirect-null-page.pdf": {
+   "sha256": "9d4018a40ad585bac3b5120c1fd1cc96ad74d4d6b584cd7ac72acd3554355e96",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f18-text-and-missing-reference-page.pdf": {
+   "sha256": "cbe2e1a62f82cb900fdbb4665d6d270c916066527cf9dc0691fb21ed5d11993b",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   }
+  },
+  "f19-contents-number.pdf": {
+   "sha256": "8a5bb712434a2daa2d7f023795b907de85dc5c9f2c86fc451298c0bfb4aca732",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   }
+  },
+  "f20-contents-dictionary.pdf": {
+   "sha256": "8cd0ce22fc1809438bf03040a932a7f2c8dab05946621e2d4511cd89d0174461",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   }
+  },
+  "f21-contents-array-null-member.pdf": {
+   "sha256": "6e1f598f9804f764d63b6c672b26d0b53b5554bdd50ec30db360dd2d5161fe98",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "failed",
+    "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream."
+   }
+  },
+  "f22-contents-null-in-object-stream.pdf": {
+   "sha256": "3caaaca27cd84e55da5c6e352ee40d57d3afdc2b2ea9e50406bb3c714630dea8",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   }
+  },
+  "f23-text-and-direct-null-page.pdf": {
+   "sha256": "57cf912a4468c1b13255dc3f80e4d06b1c586243c14ad9caa81392ea05660a44",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "f24-header-with-comment.pdf": {
+   "sha256": "5f18b26ec499d8953c0c225f62d231e86fba477f5cd392eeb7a33d3e62e109df",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g01-contents-raw-under-limit.pdf": {
+   "sha256": "d20b90fbcfd04871b19c3e8594bb3910f66ac52f1f58394cd9b3f3ab4f41f91b",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 151,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 148,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g02-contents-raw-at-limit.pdf": {
+   "sha256": "de6fde9b5e62dde60bc990da435d88bd6466d14decef9325fc2700f92013380f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 192,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 150,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g03-contents-raw-over-limit.pdf": {
+   "sha256": "499fabd9a2d5d501725ea6042c6124cd510abba4e3a29e4999d054a9e650534b",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 140,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 135,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g04-contents-raw-17mib-early-endstream.pdf": {
+   "sha256": "cf07dddc0498952fa4430748a1a1b62a106c5c3fc5a7a49f25886623d20e7b4e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 147,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 144,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g05-form-raw-under-limit.pdf": {
+   "sha256": "5c86594e332fe77e7bf0eb971f00102e3ee8824a82b47be131d0fb46c74c5830",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 134,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 144,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g06-form-raw-at-limit.pdf": {
+   "sha256": "e202792f0be807590af07360c6495bcd3f9c71d6860d4f5edc954594a4d78ae1",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 139,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 136,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g07-form-raw-over-limit.pdf": {
+   "sha256": "9bcbb2ea7d15bf06a20439d3e6518613be78f234e92b94f463060762f5e33b76",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 134,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 135,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g08-form-raw-17mib-early-endstream.pdf": {
+   "sha256": "32d2cd54babfa55d4721cdc5875fa51ab54fc6a9e0c354f374e18c36e9173a4a",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 141,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 144,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g09-indirect-length-over-limit.pdf": {
+   "sha256": "8dfbe750e0c20be0316128628b6da466d6d7f12d1cc4dc2ff932f8a53e00cc5c",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 136,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 136,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g10-indirect-length-under-limit-early-endstream.pdf": {
+   "sha256": "d7cc41f1c7ac2f287031e568914d6f0b47318196e4326a493196ce15f8ad5096",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 139,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 150,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g11-length-in-objstm-over-limit.pdf": {
+   "sha256": "00747a95f9800fbdf5c5e6e9be82fe4ef7491ae989835f8255682700c9c0efcc",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 126,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 133,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g12-length-in-objstm-under-limit.pdf": {
+   "sha256": "d53a50baa14e6e80c80f63173b9b5a87aa1337c729d075f3ff6aa0b8020db7bb",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 146,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 143,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g13-matching-length-endstream-comment.pdf": {
+   "sha256": "7df7413a628b999dc62ae4ecbccf46e0d11132ee2a87a446bc3c9bab31bc5b41",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g14-length-too-short.pdf": {
+   "sha256": "da7b3c12e3a76f1102f7ad5d223088564d8933cca04c81e6307d3797ff4877fa",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 13,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g15-length-too-long.pdf": {
+   "sha256": "17ea4e4d6fe49eb5f94944ca01259c11d29ee26271db119ff498164f3f32f175",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g16-length-missing.pdf": {
+   "sha256": "22cecf56a25e740daa83daf69b9115a51ccfa2b7bb69be7f977f4a352d28fd29",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g17-wrong-length-17mib-early-endstream.pdf": {
+   "sha256": "e8f9cd7218fdbd5e4ed3c12d9000607c313f2c6ab4a1b2b8a4c714ee1ab6adae",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 159,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 172,
+    "status": "unsupported",
+    "note": "The PDF has no text to read: its pages draw no text."
+   }
+  },
+  "g18-flate-bomb-wrong-length.pdf": {
+   "sha256": "ac7e5176090ef695c6389de2957c1238c370735330c936e6209f98eb590e18a2",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "g19-objstm-bomb-in-image-data.pdf": {
+   "sha256": "2b95a0e607cadbb2d4dbe313014d48102cf6fbcd13ad04bde7558892a8c5584e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "g20-objstm-raw-over-limit.pdf": {
+   "sha256": "7b4d522185268a25d877ff7644b4e528db37052b6784bd40c50976936cafa23d",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 150,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 147,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g21-rebuilt-xref-raw-over-limit.pdf": {
+   "sha256": "5f2d36a46695ca9d457b8888635f1dd56fca18f703e50c16f33af45b4c079307",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 149,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 146,
+    "status": "unsupported",
+    "note": "A stream's data is larger than this reader's limit of 16 MiB."
+   }
+  },
+  "g22-rebuilt-xref-flate-bomb.pdf": {
+   "sha256": "8681a71624de22e8b4d2444b8bb7f9297707c395ef3fb59f3b76d03530008a6f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "g23-rebuilt-xref-control.pdf": {
+   "sha256": "dba7f153eecd20e5978c73d87b3103abd75020b3d60d9418d1997f59c79ba5f3",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g24-unbroken-xref-control.pdf": {
+   "sha256": "87f11a40f9de177db2f2c368e10fe156fcc1eefa537c063b56682854ca584a93",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "g25-dictionary-read-as-stream.pdf": {
+   "sha256": "6e6584204ae7335156a1f20bc1096748dfadef923752c9e67b8c36e53c977a4b",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "g26-xref-stream-without-data.pdf": {
+   "sha256": "83f2df1bcb2d3ae94de53096fc4a959bed932355bdc1f93371072972a107e722",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "g27-objstm-without-data.pdf": {
+   "sha256": "57fd9d6388e7d6f912ed340cb8cf064474d591972db4f7737f4c1c0ae6dc3162",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "A stream expands beyond this reader's limit of 16 MiB."
+   }
+  },
+  "e01-libreoffice.pdf": {
+   "sha256": "b9aec91cdbb6884c0f577a9e691244e08ef7b70575a8bdc14a33a5ac38302977",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images, table structure, formula layout."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images, table structure, formula layout."
+   }
+  },
+  "e02-chromium.pdf": {
+   "sha256": "5ec70413c075c25dc4edb97eb43bd5966fc10a7f7b0b489ccfce207b23942710",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images, table structure, formula layout."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: images, table structure, formula layout."
+   }
+  },
+  "e03a-libreoffice-open-password.pdf": {
+   "sha256": "b756d9f606149f712068b70df9dbf36a732818812766b478d10a6338bbc52719",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   }
+  },
+  "e03b-libreoffice-permissions-only.pdf": {
+   "sha256": "2f629ad196344ae1dcedd0b2f792b29573212a96865d1c76bcbfccb5332f9dfa",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed."
+   }
+  },
+  "q01-no-unicode-only.pdf": {
+   "sha256": "c91f035978beff1fb1029efe45b8ed91fc7b91bc197512d1a1d0f4efa9eabddb",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF's characters have no Unicode mapping, so it has no reliable text."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF's characters have no Unicode mapping, so it has no reliable text."
+   }
+  },
+  "q02-ruled-table-long-cells.pdf": {
+   "sha256": "e30b22dbf72061632a58733aa200b706023d2d1f884ade63412826c3b23248e6",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   }
+  },
+  "q03-unruled-long-cells.pdf": {
+   "sha256": "070235daabce8e7605781e1319d16af6d4933f8e7bcb133892664a6a0a68e562",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "q04-label-block.pdf": {
+   "sha256": "707eb4133568b8655dd30c9dca48678fe0e55e5602ef78ca19c7f05b9fe3281d",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l01-single-column.pdf": {
+   "sha256": "0b49d4498b3fd1e80ea2f5b0373f540024a130065694a53314c00c90409e16d3",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l02-single-column-shuffled.pdf": {
+   "sha256": "51ecec27e9c1025ed19b01fe5f47adfb60cb82f0ba03b44cd9960cb6786730ac",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l03-two-columns-by-column.pdf": {
+   "sha256": "81a81aef60c0e7fdb60f24330586c1bd0bfdd286e0613509a5afbe6b98b6a961",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l04-two-columns-by-row.pdf": {
+   "sha256": "db6c7efdd68659d1f2830832af01b3b2470258f535165c8d050222a43e1b1b52",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l05-two-columns-reversed.pdf": {
+   "sha256": "9c70176d7a01283c9307972c6e9a25b5259a1c3cfd88c563a7201edf24344281",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l06-two-columns-word-order.pdf": {
+   "sha256": "3c67409066c23d7abd470715c92cb89cfb8bcbf6307fc2640968d6e80c651ac7",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l07-mixed-out-of-order.pdf": {
+   "sha256": "51e1e004f56c4fee2849d31376a7f7c456cd1050bab7a3f4bcfba16f5bef8822",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l08-mixed-in-order.pdf": {
+   "sha256": "e9e03f04024d512b6348b137dd57c2ff10429bd1b36bd545277dcbcceef0fec1",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l09-three-columns.pdf": {
+   "sha256": "c94c92a363c6da8964f4d4fa1f1f39544a129fdf71fea4e3aac9535d2e8b2ac4",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l10-unequal-columns-header-footer.pdf": {
+   "sha256": "4bb7af7276cb21b47972c7613c69e492b000b16716a0f6739b90dbac77162952",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l11-staggered-columns.pdf": {
+   "sha256": "fa6d382d66f1313866151942da1e5ad827b34477541fe8942aff625b18d30151",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l12-ruled-table-by-column.pdf": {
+   "sha256": "4e9d38fa6781e9c9229af85444f917e5e9377fc3af870b26828356b3e2c679b1",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   }
+  },
+  "l13-ruled-table-two-line-cell.pdf": {
+   "sha256": "69aab577f070ed5c7d12b86104c4f5862fcb1f5bf0cce33cd797f7b611ec7800",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   }
+  },
+  "l14-aligned-table.pdf": {
+   "sha256": "8cdcf15d8eb666c90304eb0f161223b637f6ab6e2afc9970aed7c39200a2a7d2",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l15-wide-gaps-single-column.pdf": {
+   "sha256": "c1c951e710fe1953c941bf6d748a75843e77ebe4e50c42194a6316d0c471c32f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l16-label-rows.pdf": {
+   "sha256": "b4ee4a5aedfb15ecdacc7b05466c7b2d9270aad2a93509a5e77ef7ffe9a7adb8",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l17-rotated-in-gutter.pdf": {
+   "sha256": "166c2ad669fa3f16941598a7d270062689dacf679b9d13a3c5a659fd5aae2e05",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l18-cjk-two-columns.pdf": {
+   "sha256": "5f4c57a01c70e415e1c2313a267bf105a3ff039641b227e347c452251a186fe7",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l19-short-columns.pdf": {
+   "sha256": "bd08f09f401a439136863a25ec24edf4a7fa9d0b5fd0c73e97fa1452eecb42b2",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l20-table-then-columns.pdf": {
+   "sha256": "4587eb9f2e3605ab93d173a4b1cb31bb657776176fde536d5ce866fa2127b959",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l21-narrow-gutter-justified.pdf": {
+   "sha256": "72c85ea98608ec436858333aa180b49bec3a4f4f243cf725fb2997cbe10ad24c",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l22-wrapped-list.pdf": {
+   "sha256": "f4f63e798438a70922041b910e46094d089d329bbd4a86a138145107cd2f1128",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l23-ruled-table-by-row.pdf": {
+   "sha256": "80360119e5021ea200b5bc7f608098cdf7e3546489531671875174c3f4297e00",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   }
+  },
+  "l24-justified-wide-gaps-per-line.pdf": {
+   "sha256": "d2354898aa7698393f0df94f8ca65d2ac2921cf3128faa7493438174795b1b4e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "l25-justified-wide-gaps-per-word.pdf": {
+   "sha256": "66dbb98ed85b4a58e6e8f0bc0eb7b95060089bf051e276eabaf301377946db52",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "x01-libreoffice-two-columns.pdf": {
+   "sha256": "b69410f6bfdceb7a1022e264c9635efa2f73175f78384e3b6f9395aeda93eb03",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   }
+  },
+  "x02-chromium-two-columns.pdf": {
+   "sha256": "f2ef5cf227c27cd6484aeea25c4f437c71da6a93559bebff88fce1a23ac745bd",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "partial",
+    "note": "Not all of this PDF is in the text. Left out: table structure."
+   }
+  },
+  "x03-libreoffice-three-columns.pdf": {
+   "sha256": "02874aaeef96454568165753cb3e67537632a4345238346ba4eae73d68c0a5bd",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-128KiB.pdf": {
+   "sha256": "366b7ebdd6d2f9167dde98d4fea9d84154ee1fa1b4dccc81a32e1a347f09b1da",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-1MiB.pdf": {
+   "sha256": "3e24e93eac3664716575dcb10ea79f9db4303b0143c1e90d8ec5dbd4860da165",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-256KiB.pdf": {
+   "sha256": "8e88cca1f9b09c956b42d03a0678c3d47c53691410d3596f61cc8a9c74b3472f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-2MiB.pdf": {
+   "sha256": "97f6cd42f117ebccab2ada021ba9f5b20857ef3e1a8a49b896f3b6845198e608",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 36,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 36,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-4MiB.pdf": {
+   "sha256": "8925699b15e17ac385b7694a02afecc9df08bde5feaa2779abe1a62a28aaed91",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 74,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 75,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-512KiB.pdf": {
+   "sha256": "07650475b455a3a6f34842202d3cff20a9ca559a9e62c276df5b938d039e2809",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-64KiB.pdf": {
+   "sha256": "d6e3987d0a487044aa63577bfb722a364058809480ebc8969645014a59fa856f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S1-big-string-8MiB.pdf": {
+   "sha256": "2b1e0dfda76ce07dac4c2a4efd69c85fd3efed5446f4ec1ae02333599625ccc5",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 125,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 124,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-128KiB.pdf": {
+   "sha256": "9ae0d10e82aa400ef3646209d484988ef983e752c0f143a5dba9b4d1ab9d12c8",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 10,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-1MiB.pdf": {
+   "sha256": "44f06d723376b7d9ce0d536220d258658e87195c5aa0c106b592de37d24416df",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 49,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 50,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-256KiB.pdf": {
+   "sha256": "932a700c2ecc00605e61d3b043f8d2d734bfd6dedcfaacd88b6956ce38df4f64",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 23,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-2MiB.pdf": {
+   "sha256": "79e5d4b342f2d95101e0af43cb468bff8086db467b49223a26fd0efc2432c025",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 97,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 87,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-4MiB.pdf": {
+   "sha256": "de0a7bfa17cd47a753f4d4aca257e440c242bd97c6382b7d17fd924e32575f07",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 183,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 184,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-512KiB.pdf": {
+   "sha256": "37e78cc3b45599c8b7b69644badf3787a78548dd8a7f8bbfb2c319f6ef7ae9ab",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 36,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-64KiB.pdf": {
+   "sha256": "a5364bbff1261d1012492349170d14dc4f3e660dbaf8964d9dace1f27db0ee80",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S2-comment-stress-8MiB.pdf": {
+   "sha256": "14f71a8a393f5137746575d0e5c966453c715f86bdb16ece892782dac7f3488a",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 374,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 374,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-128KiB.pdf": {
+   "sha256": "0a00c1c7a0b3708700a1ae2863f563bdeeb03f8e5c1fbcf284bb0e9793d88eef",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 36,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-1MiB.pdf": {
+   "sha256": "223fc0b8511c142cf14b71fcc736179c9256b9b5d1202685bad259b2f76a0d32",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 98,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 98,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-256KiB.pdf": {
+   "sha256": "26c3842452ec59a130210ca3b65b7fbed253506b184b495f527c611f1c625688",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 23,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-2MiB.pdf": {
+   "sha256": "4c2a7c57db9f7bdd4ad44bcde3b480df98437e65960a25c95f0898b4026fa2cc",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 184,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 179,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-4MiB.pdf": {
+   "sha256": "6dcb80e55c9f627887946f58372e4a7b8e573a7a90c9bb0f1a8b0c69a979a135",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 345,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 344,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-512KiB.pdf": {
+   "sha256": "29807228025ac7065ff91a3acf60541de036d7e35e8afa7a1eedcc755154db97",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 48,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 50,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-64KiB.pdf": {
+   "sha256": "54c4ecafbab4ec30029b276059d82a63db7a39804753fea29c7b3a2df2f11f3d",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S3-open-literal-8MiB.pdf": {
+   "sha256": "fd32a0eb36daa6e1248427ed8e950c4c7a7da908a442a4b4b001854e3bcd34cf",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 731,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 722,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-128KiB.pdf": {
+   "sha256": "0e393e95ec03577c24ead69347882776046c969292956e1fcbe2c79c3b111c1d",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-1MiB.pdf": {
+   "sha256": "8fb590ce490e10c31cf39ab67f3cd0ccc853b90674534a82b8ce06cb9abc379f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 73,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 75,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-256KiB.pdf": {
+   "sha256": "c414079df08187defe8b315ec7d6619b4f9f06f502ce16cdf8e00863f73cbd76",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 22,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-2MiB.pdf": {
+   "sha256": "0c6c5c51979ae2df820b15f4069e63f4eb04d9a0418dbfbd950f2944d4ac1859",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 136,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 133,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-4MiB.pdf": {
+   "sha256": "67e79b2dbfccc4f3492315b00cc180625bc246f7f3640d3712de6a676ab089c8",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 283,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 322,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-512KiB.pdf": {
+   "sha256": "38c8eed8b08638c28b3a493b0b43b538942b1d1d302173a8ea5d2788d7ffea94",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 45,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 48,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-64KiB.pdf": {
+   "sha256": "c27dd3a6f5328019e30c447a60dfd6c0de7bd769bdee1e7583cbf0763b37659f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S4-open-hex-8MiB.pdf": {
+   "sha256": "f5c26080f793fba355825cb600315676eac5e93f64c3b1418c903c45d2875b2b",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 642,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 634,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S5-no-endstream-128KiB.pdf": {
+   "sha256": "662ddaf59af8b5c070d08df3ce1d5302d93fb67f8855ec319e08060059262c99",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   }
+  },
+  "S5-no-endstream-1MiB.pdf": {
+   "sha256": "69ff23c831bb96b2f5ee73d556b4903c1c67f5f55953783ffdd4a9b776b14d08",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 24,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 36,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   }
+  },
+  "S5-no-endstream-256KiB.pdf": {
+   "sha256": "be560b1ee88661f107ac99f83c573996baf34ee29574f50bb4b966c371c1c367",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 11,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   }
+  },
+  "S5-no-endstream-2MiB.pdf": {
+   "sha256": "ee5daab4025d3ce303f8b06f310c66c0cd871012dd21daa222ae0118e035cb22",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 35,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 37,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   }
+  },
+  "S5-no-endstream-4MiB.pdf": {
+   "sha256": "24f637c36914d445de78cc466a5806e1e92c253a9dbfb04bfc733a4cc9f99765",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 61,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 60,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   }
+  },
+  "S5-no-endstream-512KiB.pdf": {
+   "sha256": "ee84d613b0b7eaf2126017dacd86384581e225197bea79b418febd96f65e8e4f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 24,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "unsupported",
+    "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB)."
+   }
+  },
+  "S5-no-endstream-64KiB.pdf": {
+   "sha256": "019954e75a682296b63d3e948cf55db9c158a1329a4101a91f9f399e8a187d3a",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S5-no-endstream-8MiB.pdf": {
+   "sha256": "e6f8f6f28984187f0fdc674b32509275fe5bfd147345b51ded5fae8969694bc1",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 113,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 111,
+    "status": "unsupported",
+    "note": "The PDF has more streams than this reader's limit (50000)."
+   }
+  },
+  "S6-comment-line-128KiB.pdf": {
+   "sha256": "261f4ab1ca378a8872e912848f19f23f3052ce92b8020f202f2856934c941023",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S6-comment-line-1MiB.pdf": {
+   "sha256": "8a3d2ff5ff06153bc68a2d64b66ee3ba0aaa8426c54d76fa940cdf5c29dcd376",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 37,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 37,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S6-comment-line-256KiB.pdf": {
+   "sha256": "cae602c7d1bf18d56b9f9293cfb079c93e99c09208497fd3f9bd450e6519cde7",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S6-comment-line-2MiB.pdf": {
+   "sha256": "2fec94a3d0c1022954952acacae3a7e57b375ab9c64d1e9f250735558d304f79",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 49,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 60,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S6-comment-line-4MiB.pdf": {
+   "sha256": "305929f1f1a3fb3acc6f04650beb41dd8a3b51c3f05e6248fab846ac15c3c618",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 97,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 100,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S6-comment-line-512KiB.pdf": {
+   "sha256": "b15c1ea7a64bab2bf374cab52cebf3990ecfa6fa7d49eb2504261daa782589a6",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 23,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 23,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S6-comment-line-64KiB.pdf": {
+   "sha256": "d6f8364644130486a37cd90c4fc86ba1da45812b01350e776c6773851ad6322f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 12,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S6-comment-line-8MiB.pdf": {
+   "sha256": "3306289adb4c15e21d5512babdcbff42b1c67875ecad91880496c664c5090266",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 194,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 205,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-128KiB.pdf": {
+   "sha256": "b8bb4c951e47896e2e4cf0218177feeedf41fb1dcf7f627f57c8b14b30e96e79",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 49,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 48,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-1MiB.pdf": {
+   "sha256": "56f540d4784014b039f4aad794c4de4203f98cca862615d0aab3b2e4c2307229",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 339,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 330,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-256KiB.pdf": {
+   "sha256": "a33e41fe9581d398cc385917dee2821f1b2f164abbcc23e14cb692503bf343f9",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 95,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 86,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-2MiB.pdf": {
+   "sha256": "b7854e5bf5172383dd7e15e97bfea3b03860055fb81dbaf1d9494c0e7485b86f",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 667,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 653,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-4MiB.pdf": {
+   "sha256": "2decf44ba81ac17e2bd5f92acf3199046b5eb38561516d1fa011b15d75c0af51",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 1314,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 1309,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-512KiB.pdf": {
+   "sha256": "46553b9b57ac5851d718264fc402a17adb153fbcbe21e08a4e230c955f5eacbe",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 173,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 169,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-64KiB.pdf": {
+   "sha256": "3fba652700d14cecb22afacecca4abdca0bbe0912077965a872e061c07fa505e",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 36,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 25,
+    "status": "complete",
+    "note": null
+   }
+  },
+  "S7-nested-dicts-8MiB.pdf": {
+   "sha256": "48dc24485a7edbfcf952b575a3d40741f04b61b5affa126f19e656ebb053d247",
+   "identical": true,
+   "old": {
+    "isolation": "finished",
+    "millis": 2639,
+    "status": "complete",
+    "note": null
+   },
+   "new": {
+    "isolation": "finished",
+    "millis": 2619,
+    "status": "complete",
+    "note": null
+   }
+  }
+ },
+ "totals": {
+  "files": 214,
+  "identical": 214,
+  "changed": 0
+ }
+}

@@ -1,0 +1,13 @@
+Diff in <HOME>/Developer/Traeva-F-xlsx-evidence-privacy/experiments/xlsx-reader/src/lib.rs:1:
+-pub use traeva_core::{MAX_MEMORY_TEXT_CHARS, SnapshotRef, TextExtraction, TextStatus,
+-    TextSummary, XLSX_MEMORY_READER, XLSX_PREVIEW_READER, escape_source_line,
+-    structure_name, structure_line, unescape_source_line, CellField, CellValueType,
+-    SheetVisibility, StructureLine};
++pub use traeva_core::{
++    CellField, CellValueType, MAX_MEMORY_TEXT_CHARS, SheetVisibility, SnapshotRef, StructureLine,
++    TextExtraction, TextStatus, TextSummary, XLSX_MEMORY_READER, XLSX_PREVIEW_READER,
++    escape_source_line, structure_line, structure_name, unescape_source_line,
++};
+ 
+ #[path = "../../../crates/traeva-core/src/xlsx.rs"]
+ pub mod xlsx;

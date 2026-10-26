@@ -1,0 +1,114 @@
+{
+  "generator": "fixtures/defects3/generate.py",
+  "note": "Synthetic reproductions of R4's third-round finding R4-PDF-08, from R4's description only. Adversarial or damaged on purpose: offline reader only, never a desktop viewer.",
+  "files": {
+    "g01-contents-raw-under-limit.pdf": {
+      "sha256": "d20b90fbcfd04871b19c3e8594bb3910f66ac52f1f58394cd9b3f3ab4f41f91b",
+      "bytes": 16777819
+    },
+    "g02-contents-raw-at-limit.pdf": {
+      "sha256": "de6fde9b5e62dde60bc990da435d88bd6466d14decef9325fc2700f92013380f",
+      "bytes": 16777820
+    },
+    "g03-contents-raw-over-limit.pdf": {
+      "sha256": "499fabd9a2d5d501725ea6042c6124cd510abba4e3a29e4999d054a9e650534b",
+      "bytes": 16777821
+    },
+    "g04-contents-raw-17mib-early-endstream.pdf": {
+      "sha256": "cf07dddc0498952fa4430748a1a1b62a106c5c3fc5a7a49f25886623d20e7b4e",
+      "bytes": 17826396
+    },
+    "g05-form-raw-under-limit.pdf": {
+      "sha256": "5c86594e332fe77e7bf0eb971f00102e3ee8824a82b47be131d0fb46c74c5830",
+      "bytes": 16778184
+    },
+    "g06-form-raw-at-limit.pdf": {
+      "sha256": "e202792f0be807590af07360c6495bcd3f9c71d6860d4f5edc954594a4d78ae1",
+      "bytes": 16778185
+    },
+    "g07-form-raw-over-limit.pdf": {
+      "sha256": "9bcbb2ea7d15bf06a20439d3e6518613be78f234e92b94f463060762f5e33b76",
+      "bytes": 16778186
+    },
+    "g08-form-raw-17mib-early-endstream.pdf": {
+      "sha256": "32d2cd54babfa55d4721cdc5875fa51ab54fc6a9e0c354f374e18c36e9173a4a",
+      "bytes": 17826761
+    },
+    "g09-indirect-length-over-limit.pdf": {
+      "sha256": "8dfbe750e0c20be0316128628b6da466d6d7f12d1cc4dc2ff932f8a53e00cc5c",
+      "bytes": 16777846
+    },
+    "g10-indirect-length-under-limit-early-endstream.pdf": {
+      "sha256": "d7cc41f1c7ac2f287031e568914d6f0b47318196e4326a493196ce15f8ad5096",
+      "bytes": 16777844
+    },
+    "g11-length-in-objstm-over-limit.pdf": {
+      "sha256": "00747a95f9800fbdf5c5e6e9be82fe4ef7491ae989835f8255682700c9c0efcc",
+      "bytes": 16777767
+    },
+    "g12-length-in-objstm-under-limit.pdf": {
+      "sha256": "d53a50baa14e6e80c80f63173b9b5a87aa1337c729d075f3ff6aa0b8020db7bb",
+      "bytes": 16777765
+    },
+    "g13-matching-length-endstream-comment.pdf": {
+      "sha256": "7df7413a628b999dc62ae4ecbccf46e0d11132ee2a87a446bc3c9bab31bc5b41",
+      "bytes": 659
+    },
+    "g14-length-too-short.pdf": {
+      "sha256": "da7b3c12e3a76f1102f7ad5d223088564d8933cca04c81e6307d3797ff4877fa",
+      "bytes": 641
+    },
+    "g15-length-too-long.pdf": {
+      "sha256": "17ea4e4d6fe49eb5f94944ca01259c11d29ee26271db119ff498164f3f32f175",
+      "bytes": 640
+    },
+    "g16-length-missing.pdf": {
+      "sha256": "22cecf56a25e740daa83daf69b9115a51ccfa2b7bb69be7f977f4a352d28fd29",
+      "bytes": 622
+    },
+    "g17-wrong-length-17mib-early-endstream.pdf": {
+      "sha256": "e8f9cd7218fdbd5e4ed3c12d9000607c313f2c6ab4a1b2b8a4c714ee1ab6adae",
+      "bytes": 17826389
+    },
+    "g18-flate-bomb-wrong-length.pdf": {
+      "sha256": "ac7e5176090ef695c6389de2957c1238c370735330c936e6209f98eb590e18a2",
+      "bytes": 18327
+    },
+    "g19-objstm-bomb-in-image-data.pdf": {
+      "sha256": "2b95a0e607cadbb2d4dbe313014d48102cf6fbcd13ad04bde7558892a8c5584e",
+      "bytes": 18344
+    },
+    "g20-objstm-raw-over-limit.pdf": {
+      "sha256": "7b4d522185268a25d877ff7644b4e528db37052b6784bd40c50976936cafa23d",
+      "bytes": 17826203
+    },
+    "g21-rebuilt-xref-raw-over-limit.pdf": {
+      "sha256": "5f2d36a46695ca9d457b8888635f1dd56fca18f703e50c16f33af45b4c079307",
+      "bytes": 17826396
+    },
+    "g22-rebuilt-xref-flate-bomb.pdf": {
+      "sha256": "8681a71624de22e8b4d2444b8bb7f9297707c395ef3fb59f3b76d03530008a6f",
+      "bytes": 18331
+    },
+    "g23-rebuilt-xref-control.pdf": {
+      "sha256": "dba7f153eecd20e5978c73d87b3103abd75020b3d60d9418d1997f59c79ba5f3",
+      "bytes": 640
+    },
+    "g24-unbroken-xref-control.pdf": {
+      "sha256": "87f11a40f9de177db2f2c368e10fe156fcc1eefa537c063b56682854ca584a93",
+      "bytes": 640
+    },
+    "g25-dictionary-read-as-stream.pdf": {
+      "sha256": "6e6584204ae7335156a1f20bc1096748dfadef923752c9e67b8c36e53c977a4b",
+      "bytes": 18470
+    },
+    "g26-xref-stream-without-data.pdf": {
+      "sha256": "83f2df1bcb2d3ae94de53096fc4a959bed932355bdc1f93371072972a107e722",
+      "bytes": 18094
+    },
+    "g27-objstm-without-data.pdf": {
+      "sha256": "57fd9d6388e7d6f912ed340cb8cf064474d591972db4f7737f4c1c0ae6dc3162",
+      "bytes": 17902
+    }
+  }
+}

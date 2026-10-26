@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "input_sha256": "3eae8696585570f5cf130be332196cdc79474a318aac8a57f6477660de8c92dc",
+  "expected": "reject known synthetic marker in archive-level comment",
+  "actual": "ValueError; derivative not returned",
+  "same_frozen_input_as_first_fail": true,
+  "prior_fail_retained": "archive-comment-first-fail.json",
+  "native_derivatives_unchanged": [
+    {
+      "stage": "baseline",
+      "sha256": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650",
+      "archive_comment_empty": true
+    },
+    {
+      "stage": "input_edit",
+      "sha256": "5eb4915a4f6622e22bf8890d7fa51725143f6311d63adbd18dea8192299cefc4",
+      "archive_comment_empty": true
+    },
+    {
+      "stage": "formula_edit",
+      "sha256": "2acf204755f8ba50625c8c96acc60c1fb4c3f3c3084f84f62a452b54941abed0",
+      "archive_comment_empty": true
+    }
+  ]
+}

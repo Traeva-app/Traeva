@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-pending-candidates"
+description = "Enables the get_pending_candidates command without any pre-configured scope."
+commands.allow = ["get_pending_candidates"]
+
+[[permission]]
+identifier = "deny-get-pending-candidates"
+description = "Denies the get_pending_candidates command without any pre-configured scope."
+commands.deny = ["get_pending_candidates"]

@@ -1,0 +1,6 @@
+- if price goes up 10% and quantity demanded falls 20%, PED = -2 -> elastic
+- inelastic goods: insulin, petrol in the short run, salt
+- elastic: restaurant meals, brands with many substitutes
+- total revenue rises when price rises only if demand is inelastic
+- cross elasticity: tea and coffee are substitutes (positive)
+- income elasticity: luxury goods > 1

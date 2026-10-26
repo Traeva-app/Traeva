@@ -1,0 +1,87 @@
+/* The automatic mode for dropped files (#168). */
+.autodrop-item {
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+
+.autodrop-item:first-child {
+  border-top: none;
+}
+
+.autodrop-item .card {
+  margin-top: 8px;
+}
+
+/* In Organize's groups (#37): the rows sit in Find's white box (find-rows),
+   a hairline between them; one that waits for the user has an amber edge. */
+.drop-rows > .autodrop-item {
+  padding: 10px 14px;
+}
+
+.autodrop-item.group-row-attention {
+  box-shadow: inset 3px 0 0 var(--attention);
+}
+
+.drop-rows > .autodrop-item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.drop-rows > .autodrop-item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.drop-name {
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* The actions that need a decision, under Needs you. */
+.decisions {
+  margin-top: 12px;
+}
+
+.decisions:first-child {
+  margin-top: 0;
+}
+
+.decisions-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.drop-stalled,
+.drop-cleared {
+  margin-top: 8px;
+}
+
+.autodrop-folders {
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+/* The core's notice, shown in full before the mode is turned on. */
+.autodrop-notice {
+  max-height: 280px;
+  overflow-y: auto;
+  margin: 6px 0 12px;
+  padding: 10px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.autodrop-editor h3 {
+  margin: 14px 0 4px;
+  font-size: 15px;
+}
+
+/* The amber badge for what waits for the user is in styles.css. */

@@ -1,0 +1,80 @@
+[package]
+name = "traeva-core"
+description = "Traeva's rules, storage and file operations. Has no Tauri dependency."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+# CRC-32 of DOCX package entries (#66 Limited DOCX Reader). Already in the
+# lock through flate2.
+crc32fast = "=1.5.2"
+# Deflate for DOCX, PPTX and XLSX package entries, pure Rust; no C zlib.
+# The backend is zlib-rs since the PDF reader came in: hayro turns on
+# flate2's `zlib-rs` feature, which features can't turn off (#186; it was
+# miniz_oxide before).
+flate2 = { version = "=1.1.10", default-features = false, features = ["rust_backend"] }
+# Unicode canonical decomposition (NFD), to compare places and new folder
+# names the way APFS compares names (#55, #58). The same version and features
+# Tauri already uses.
+icu_normalizer = { version = "2.3.0", default-features = false, features = ["compiled_data"] }
+# Unicode general categories, to refuse invisible format characters (Cf) in
+# folder names the model suggests (#15). Already in the lock through url.
+icu_properties = { version = "2.3.0", default-features = false, features = ["compiled_data"] }
+# Drawing scanned PDF pages into pixels for on-device text recognition
+# (#186, organize-spec 14.8; G-OCR's `pdf_ocr`), the same hayro release as
+# the reader below. Its rendering pulls in vello_cpu and image decoders.
+hayro = "=0.8.0"
+# PDF parsing and page interpretation for the PDF reader (#186), pure Rust.
+# hayro-interpret forbids unsafe code itself but turns on hayro-syntax's
+# `unsafe` feature (flate2 with zlib-rs, memchr, SIMD image decoders) and its
+# std and images features, whatever is asked for here, as in the experiment.
+# Default features: embed-fonts (stand-ins for non-embedded fonts, from
+# PDFium) and embed-cmaps (Adobe's predefined CMaps), both BSD-3-Clause:
+# docs/third-party-notices.md. Without embed-fonts, text in non-embedded
+# fonts is lost.
+hayro-interpret = "=0.8.0"
+hayro-syntax = { version = "=0.8.0", default-features = false }
+# Glyph positions and line shapes of the PDF reader, the version hayro uses.
+kurbo = "=0.13.1"
+libc = "0.2.189"
+# Byte search in the PDF reader's raw-byte check. Already in the lock.
+memchr = "2.8.3"
+# XML of DOCX parts (#66). 0.42.0 is above the fixes for RUSTSEC-2026-0194
+# and -0195; no default features (no encoding detection, no serde).
+quick-xml = { version = "=0.42.0", default-features = false }
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+rustix = { version = "1.1.5", features = ["fs"] }
+# The API key lives in the macOS Keychain (organize-spec.md §5).
+security-framework = "3.7.0"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+sha2 = "0.11.0"
+# HTTPS client for the one model provider; rustls with bundled root certificates.
+ureq = { version = "3.4.2", default-features = false, features = ["rustls"] }
+uuid = { version = "1.26.1", features = ["v4"] }
+# The ZIP container of DOCX files (#66), read from bytes in memory only:
+# nothing is extracted to disk (above the RUSTSEC-2025-0168 fix, whose
+# extraction API is never called).
+zip = { version = "=8.6.0", default-features = false, features = ["deflate-flate2"] }
+
+# Apple's Vision framework for on-device text recognition of scanned PDF
+# pages (#186, organize-spec 14.8; G-OCR's `pdf_ocr/vision.rs`), macOS only.
+# Default features; Vision also needs its Core Graphics and Image I/O types.
+# Image I/O: CGImageSource decodes an image (#37); CGImageDestination writes
+# a picture for the model as a JPEG (tier 2, pdf_ocr/model_image.rs).
+[target.'cfg(target_os = "macos")'.dependencies]
+objc2 = "=0.6.4"
+objc2-core-foundation = "=0.3.2"
+objc2-core-graphics = "=0.3.2"
+objc2-foundation = "=0.3.2"
+objc2-image-io = { version = "=0.3.2", default-features = false, features = ["std", "CGImageSource", "CGImageDestination", "objc2-core-graphics"] }
+objc2-vision = { version = "=0.3.2", features = ["objc2-core-graphics", "objc2-image-io"] }
+
+[dev-dependencies]
+tempfile = "3.27.0"
+xattr = "1.6.1"

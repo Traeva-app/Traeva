@@ -1,0 +1,31 @@
+{
+  "automatic_verified": "not implemented; experimental FAIL retained",
+  "browser": {
+    "jsVersion": "15.5.35.20",
+    "product": "Chrome/155.0.8059.39",
+    "protocolVersion": "1.3",
+    "revision": "@3ff7ac5a9224be9156d7f8703a06e22890aafd34",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+  },
+  "confirmed_state": "user_confirmed",
+  "desktop_webview": "not tested by this harness",
+  "download_id": "1",
+  "download_sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+  "duplicate_replay_retained_one_record": true,
+  "file_id": "716727a7-b947-4e6f-8065-5723f3a0fd63",
+  "first_state": "likely",
+  "import_time_retained": true,
+  "observed_file": {
+    "dev": 16777232,
+    "ino": 164349443,
+    "links": 1,
+    "size": 28672
+  },
+  "redirect_urls_distinct": true,
+  "restart_retained": true,
+  "result": "PASS",
+  "scope": "real Chrome to production receiver/core to mock Tauri IPC, then process restart",
+  "source_id": "775ed667-ff03-4e7b-bdfc-b3ad83daa69a",
+  "title_unknown": true,
+  "user_file_unchanged": true
+}

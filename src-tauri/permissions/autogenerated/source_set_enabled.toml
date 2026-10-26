@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-source-set-enabled"
+description = "Enables the source_set_enabled command without any pre-configured scope."
+commands.allow = ["source_set_enabled"]
+
+[[permission]]
+identifier = "deny-source-set-enabled"
+description = "Denies the source_set_enabled command without any pre-configured scope."
+commands.deny = ["source_set_enabled"]

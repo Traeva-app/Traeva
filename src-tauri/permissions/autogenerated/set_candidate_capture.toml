@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-candidate-capture"
+description = "Enables the set_candidate_capture command without any pre-configured scope."
+commands.allow = ["set_candidate_capture"]
+
+[[permission]]
+identifier = "deny-set-candidate-capture"
+description = "Denies the set_candidate_capture command without any pre-configured scope."
+commands.deny = ["set_candidate_capture"]

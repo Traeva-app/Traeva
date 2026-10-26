@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-authorize-drop-source"
+description = "Enables the authorize_drop_source command without any pre-configured scope."
+commands.allow = ["authorize_drop_source"]
+
+[[permission]]
+identifier = "deny-authorize-drop-source"
+description = "Denies the authorize_drop_source command without any pre-configured scope."
+commands.deny = ["authorize_drop_source"]

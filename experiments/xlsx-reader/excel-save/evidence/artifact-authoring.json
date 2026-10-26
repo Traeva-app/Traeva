@@ -1,0 +1,8 @@
+{
+  "writer": "@oai/artifact-tool",
+  "protocol_sha256": "bf3807767d1fb5740118be64a2e85410d960e17d3b3dc4767b576357075f1de0",
+  "seed_sha256": "3eeefa63737e2f9713361f77aa7fe9c9f7f79f2cb4df1f2953d757b9ba9b67f4",
+  "seed_bytes": 4937,
+  "seed_cache_calculation": "Artifact Tool, not Microsoft Excel or Reader",
+  "excel_save_close_reopen": "NOT_EXECUTED"
+}

@@ -1,0 +1,140 @@
+{
+  "normalization": "Two personal home path strings replaced by <HOME>; OCR contents, expectations and outcomes unchanged. Historical records retained.",
+  "files": [
+    {
+      "path": "20261013T072424216549Z.json",
+      "sha256": "41809ecfff40b00fa2a222ec5e67fb2c8b7af2b592723f04e57d214da723e283",
+      "bytes": 243760
+    },
+    {
+      "path": "20261013T080237189662Z.json",
+      "sha256": "0145f70fa979d5a7f6af84fa8a6d4aeacf581b81f81c0ed240b2958ae2183140",
+      "bytes": 252762
+    },
+    {
+      "path": "build-validation.json",
+      "sha256": "277510e902ab07e2c9b61e132090be2b4a4044d4f0f52fa0fd9482b27326d060",
+      "bytes": 901
+    },
+    {
+      "path": "bundle-factor-diagnostic-01.json",
+      "sha256": "68b51be52fb6d666232b1114daf7f04df3c6a9167b0bb20490abdb93202eccdd",
+      "bytes": 31505
+    },
+    {
+      "path": "cpu-diagnostic-build.json",
+      "sha256": "c0188094c3accab6da92d83d5a0ac8fdda46af56edf2d2aa17833755724adff8",
+      "bytes": 376
+    },
+    {
+      "path": "cpu-only.patch",
+      "sha256": "da342e1c1e1ee347ac4ced348699f5463070b5aa6874930684a43c1d4b5319c5",
+      "bytes": 561
+    },
+    {
+      "path": "cpu-same-id-diagnostic-01.json",
+      "sha256": "f20cdc635fa40db8640957dfc5de9cbda80e476f67e78feaffd34a7e7755fecd",
+      "bytes": 8387
+    },
+    {
+      "path": "dev-log.md",
+      "sha256": "d6e9cbf5af01abe9af9ad87ead9b13d8bbbdbf33380d579e81066437aeadccec",
+      "bytes": 3376
+    },
+    {
+      "path": "final-build-validation.json",
+      "sha256": "5eb86e3f326f5ac70d570fb9207be2f58d313289b55a9dbdbbf2663bfcb73888",
+      "bytes": 537
+    },
+    {
+      "path": "first-memory-test-failure.txt",
+      "sha256": "40366bb30d58fe3e45d44f2417a1367c35b42d99f3ac1feb93f04404bdd91cdf",
+      "bytes": 874
+    },
+    {
+      "path": "language-query-diagnostic-01.json",
+      "sha256": "dba675b856d5c8e61aa7843f53c0bf1841a4a510bfca8112ca3ae1f7dc27a599",
+      "bytes": 11890
+    },
+    {
+      "path": "lifecycle-extra-20261013T074059025557Z.json",
+      "sha256": "20dca72b2886c19028a41adc0f590a6848310b30f92002fae47bd7a000d2b066",
+      "bytes": 22316
+    },
+    {
+      "path": "lifecycle-extra-20261013T080456270812Z.json",
+      "sha256": "150c64be2bfd4e7f1115b97f4a1f49f1efb8b3a0010f5c9caaabee13d0a5e067",
+      "bytes": 19849
+    },
+    {
+      "path": "pixel-request-diagnostic-01.json",
+      "sha256": "496e5684970627ee0fbdacd379d7ed6701e0c7feec1abf475ff8455c8ae083ca",
+      "bytes": 13543
+    },
+    {
+      "path": "pixel-request-diagnostic-02.json",
+      "sha256": "4a530afdf3cdfc632d2754fe3108fc621d2651d080a704db2bac014e015a7a97",
+      "bytes": 26752
+    },
+    {
+      "path": "product-metadata-20261013T080758123061Z.json",
+      "sha256": "efa6652fcd58d6f91008c8cfe17cb35306fb52c18eedbabe4f80bcebd487bb3b",
+      "bytes": 35324
+    },
+    {
+      "path": "product-metadata-20261013T081252375848Z.json",
+      "sha256": "1251df0d17499273f42e25a29f610e3692af86d750298d23d52fcd7f976a5168",
+      "bytes": 35334
+    },
+    {
+      "path": "product-metadata-20261013T082053845902Z.json",
+      "sha256": "deb522b23c7c36c49e8843016f6fb0a8d1f030418f885b34ede6ecfbcf1eb19a",
+      "bytes": 35317
+    },
+    {
+      "path": "same-bundle-20261013T080000917414Z.json",
+      "sha256": "3fffb5d1ea8f9600034f2ae1c41faed9fcfe7724df1c5cabfb60ec91cf6b0c8f",
+      "bytes": 189289
+    },
+    {
+      "path": "same-bundle-20261013T080028700387Z.json",
+      "sha256": "a101de4059af17270c1b5c531ccb12bc3288abbd4fdda95c65867657818a674c",
+      "bytes": 197511
+    },
+    {
+      "path": "same-good-id-core-diagnostic-01.json",
+      "sha256": "fdd13ced49a18f3f7d084086d60a0ee825f5df4acacad8fa24adc48d9520652e",
+      "bytes": 10723
+    },
+    {
+      "path": "same-id-original-diagnostic-01.json",
+      "sha256": "c09eca510ff96f1aeef7d585b84fa6adf2d39e1269c651ce78cd535ffc9c4640",
+      "bytes": 6207
+    },
+    {
+      "path": "signed-core-repeat-diagnostic-01.json",
+      "sha256": "995f39ebee0514d2c3dbeda724e9f88818c25a879acff3c562e287b3a9d47241",
+      "bytes": 8390
+    },
+    {
+      "path": "signed-original-diagnostic-01.json",
+      "sha256": "31b0f7108d005bf1104122326cc6f9ec2b392c9dbf9ef1b662c4227454f05edc",
+      "bytes": 12623
+    },
+    {
+      "path": "trace-build.json",
+      "sha256": "8e07fa27143e3269e4a3729af0ef0e64d55c40f4c6079d229c1125e64fb7c4f8",
+      "bytes": 360
+    },
+    {
+      "path": "unsigned-diagnostic-01.json",
+      "sha256": "ed6c84bf6e1f6f0ec52d221ceb42d5b2aefc757752c0459fa2b0e3a886dff97d",
+      "bytes": 14785
+    },
+    {
+      "path": "vision-trace.patch",
+      "sha256": "9de50aff5340fb11afc37d37e1ae7cc17b7aed3e23973f33f25253519d5c5ce4",
+      "bytes": 1587
+    }
+  ]
+}

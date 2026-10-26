@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "scope": "测试准备脚本的前置假设；未启动 cargo 测试",
+  "reason": "误把当前 main 已跟踪的独立测试锁视为忽略锁",
+  "product_tests_run": 0,
+  "correction": "使用 main 既有锁，以 offline --locked 运行；不改锁文件",
+  "initial_failure_retained": true
+}

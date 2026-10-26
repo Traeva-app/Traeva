@@ -1,0 +1,50 @@
+{
+  "code": "ec81f8c5ad0e7ce0f042c362e9bc992f601c3c2d",
+  "base_integration": "6928276214d6805d6b393d615aaf3ef6a3ff311d",
+  "date": "2026-10-09",
+  "verification_kind": "developer validation in disposable copy with pending A migration proposal",
+  "module_sha256": {
+    "crates/traeva-core/src/source.rs": "0b6b9a350a980d11ab703d5311dff5d694775400d6fad4d55f0972bfe018a884",
+    "src-tauri/src/source_receiver.rs": "bb7b2c526380d7327fc3f2cbadc03e92ccdcbfe1df9677aae7c9c050494b5578",
+    "src-tauri/src/source_commands.rs": "6725f5bebe8fb49e39b0fb46283967ce83bfeaffc5841ce1e2de98a90b8948ed",
+    "extensions/chrome/collector.js": "448e5288a427fd8d401e103e74f1cfaaa47c2d371ed33661054136619f4ae6b2"
+  },
+  "migration_proposal_sha256": "2765497b15a1cc2b334bc5d83fa9da272d158236525da86dcf1fb23a8c86bd73",
+  "rust": {
+    "passed": 558,
+    "failed": 0,
+    "ignored": 7
+  },
+  "frontend_extension": {
+    "passed": 58,
+    "extension_subset": 29
+  },
+  "format": "PASS",
+  "clippy": "PASS",
+  "frontend_build": "PASS",
+  "macos_fragmented_request": "PASS",
+  "removed_receiver_fix": "FAIL (expected, BrokenPipe reproduces original bug)",
+  "desktop": {
+    "input": "synthetic HTTP event; NOT real Chrome",
+    "runtime": "packaged debug .app, actual WebView and native chooser",
+    "authorized_folder": "PASS",
+    "default_off_enable": "PASS",
+    "non_interrupting_candidate": "PASS",
+    "native_locate_cancel_and_select": "PASS",
+    "confirmation_cancel": "PASS",
+    "user_confirmed": "PASS",
+    "open_referrer_local_page": "PASS, verified browser URL",
+    "process_exit_restart": "PASS",
+    "repeated_event_one_record": "PASS",
+    "same_import_time_capture_window_object_bytes": "PASS",
+    "evidence_directory": "/private/tmp/traeva-c-source-desktop-gp1zqcj0/evidence"
+  },
+  "unverified": [
+    "pending migration not integrated into actual PR branch",
+    "real Chrome to actual desktop full end-to-end on this revision",
+    "R independent review of final integrated commit",
+    "non-development extension distribution"
+  ],
+  "automatic_verified": "DEFERRED; original Chrome FAIL retained",
+  "ui_slot": "RETURNED; Traeva/owned Chrome/server stopped; 1420 free"
+}

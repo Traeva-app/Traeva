@@ -1,0 +1,66 @@
+{
+  "review_time_UTC": "2026-10-10T20:21:14Z",
+  "role": "Independent incremental development review by D sub-agent; not Codex-R acceptance",
+  "worktree_head": "6f14e3a7dbdb9b60f2d7945054fc1d8556f8ccdf",
+  "candidate_is_uncommitted_overlay": true,
+  "scope": "Read-only rich actual Word fixture/golden test/scrubbing helper and evidence-boundary review. No product, fixture, report or Git writes. No Word GUI or new Snapshot capture performed by reviewer.",
+  "hashes": {
+    "docx.rs": "4ebddd23b43a2b3f14253a04f4f348b7a8105bc5c3c74ec694d012bfb2333626",
+    "docx_tests.rs": "e31383b3b378103e5e59f1f14032b4227b023f5cc896281f0e41592e00b20a2e",
+    "scrub_word_fixture.py": "205523889ea5f4886311ae144f51352c5faffcf99dc33c53887e8c5c2a3a11f3",
+    "Word_original": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+    "word-rich.docx": "ceb974889540ef944f7d0bdde76b215685ba4407ade87328a35f57ea4a7360d8",
+    "rich-source.docx": "2e8b5c8d5415c162b8cd89ffc8e821b900bfd8a22de085ed840d0ec671a2b417",
+    "rich-source.txt": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f"
+  },
+  "commands": [
+    {
+      "command": "cargo test --offline --locked --manifest-path crates/traeva-core/tests/docx_reader/Cargo.toml",
+      "exit_code": 0,
+      "reader_tests": 76,
+      "core_snapshot_tests": 3,
+      "passed": 79,
+      "failed": 0,
+      "ignored": 0
+    },
+    {
+      "command": "cargo clippy --offline --locked --manifest-path crates/traeva-core/tests/docx_reader/Cargo.toml --all-targets -- -D warnings",
+      "exit_code": 0
+    },
+    {
+      "command": "cargo fmt --manifest-path crates/traeva-core/tests/docx_reader/Cargo.toml --check",
+      "exit_code": 0
+    }
+  ],
+  "independent_byte_checks": {
+    "exit_code": 0,
+    "rich_bytes": 18335,
+    "differences_outside_declared_ranges": 0,
+    "other_17_entries_bytes_headers_extras_offsets_sizes_identical": true,
+    "core_properties_identical_except_author_fields": true,
+    "old_identity_values_absent_from_all_clean_XML_parts": true,
+    "retained_features": 8,
+    "SEQ_normalized_by_Word": "fldSimple"
+  },
+  "independent_helper_checks": {
+    "exit_code": 0,
+    "writes_only_in_memory": true,
+    "pycache_disabled": true,
+    "v1_v2_rich_outputs_byte_identical_to_existing_fixtures": true,
+    "v1_v2_compression": "single_deflate_stream",
+    "rich_compression": "intermediate_sync_flush",
+    "rich_sync_flush_split": 46,
+    "all_Deflate_streams_eof": true,
+    "all_unused_bytes": 0
+  },
+  "findings": [],
+  "conclusion": "PASS for this bounded incremental development-review scope",
+  "not_verified_by_this_reviewer": [
+    "Word GUI save",
+    "rich Snapshot capture/read",
+    "A updated wiring head/full workspace regression",
+    "full Word Semantic Change/Retrieval",
+    "Codex-R exact-commit acceptance",
+    "10/13 Go or student decisions"
+  ]
+}

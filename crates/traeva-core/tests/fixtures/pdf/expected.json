@@ -1,0 +1,57 @@
+{
+ "source": "pdf-experiment-9 (PR #148, 81ddd8036d60b14d2d631ad05ae57fa025945625), probe sha256 de47dbf3a945e929b097135e37f5e4833738555d9df05415ac0a3df9b635a60a; reader renamed pdf-1",
+ "files": {
+  "p02-multi-en.pdf": {
+   "sha256": "7e880a027cd946650fcb4518d42a7eccdbbfde237f632b855764e42a87e3f89e",
+   "summary": {
+    "reader": "pdf-1",
+    "chars": 150,
+    "covered": [
+     "the text layer of all 3 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+    ],
+    "left_out": [],
+    "note": null,
+    "status": "complete"
+   },
+   "text": "[Page 1]\nPage one heading\nBody text on page one.\n[Page 2]\nPage two heading\nBody text on page two.\n[Page 3]\nPage three heading\nBody text on page three."
+  },
+  "p03-cjk-reportlab.pdf": {
+   "sha256": "e2c6b9340a19e69072cd8fda8a12d100f41c63214ae974963ed67f123efe23eb",
+   "summary": {
+    "reader": "pdf-1",
+    "chars": 72,
+    "covered": [
+     "the text layer of all 2 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+    ],
+    "left_out": [],
+    "note": null,
+    "status": "complete"
+   },
+   "text": "[Page 1]\n版本记忆测试\n第二行：中文与English混排\n[Page 2]\n嵌入字体的中文段落\nMixed 中文 and English"
+  },
+  "p08-scanned-images.pdf": {
+   "sha256": "dd5f3ea5ecd9b106a1f43c8cd125c230f56b466c0615446b3d7bbfa7792e8e68",
+   "summary": {
+    "reader": "pdf-1",
+    "chars": 0,
+    "covered": [],
+    "left_out": [],
+    "note": "No page has a text layer that this reader can use. 2 of 2 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+    "status": "unsupported"
+   },
+   "text": ""
+  },
+  "e03a-libreoffice-open-password.pdf": {
+   "sha256": "b756d9f606149f712068b70df9dbf36a732818812766b478d10a6338bbc52719",
+   "summary": {
+    "reader": "pdf-1",
+    "chars": 0,
+    "covered": [],
+    "left_out": [],
+    "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+    "status": "unsupported"
+   },
+   "text": ""
+  }
+ }
+}

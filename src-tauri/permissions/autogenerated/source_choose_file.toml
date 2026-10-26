@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-source-choose-file"
+description = "Enables the source_choose_file command without any pre-configured scope."
+commands.allow = ["source_choose_file"]
+
+[[permission]]
+identifier = "deny-source-choose-file"
+description = "Denies the source_choose_file command without any pre-configured scope."
+commands.deny = ["source_choose_file"]

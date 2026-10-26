@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-source-state"
+description = "Enables the source_state command without any pre-configured scope."
+commands.allow = ["source_state"]
+
+[[permission]]
+identifier = "deny-source-state"
+description = "Denies the source_state command without any pre-configured scope."
+commands.deny = ["source_state"]

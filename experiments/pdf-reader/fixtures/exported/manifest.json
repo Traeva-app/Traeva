@@ -1,0 +1,38 @@
+{
+  "exporter": "fixtures/export.py",
+  "tools": {
+    "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+    "chromium": "Chromium 141.0.7390.37"
+  },
+  "note": "Synthetic sources only. Real-application exports, not byte-reproducible.",
+  "files": {
+    "e01-libreoffice.pdf": {
+      "sha256": "b9aec91cdbb6884c0f577a9e691244e08ef7b70575a8bdc14a33a5ac38302977",
+      "bytes": 40779
+    },
+    "e02-chromium.pdf": {
+      "sha256": "5ec70413c075c25dc4edb97eb43bd5966fc10a7f7b0b489ccfce207b23942710",
+      "bytes": 37931
+    },
+    "e03a-libreoffice-open-password.pdf": {
+      "sha256": "b756d9f606149f712068b70df9dbf36a732818812766b478d10a6338bbc52719",
+      "bytes": 9012
+    },
+    "e03b-libreoffice-permissions-only.pdf": {
+      "sha256": "2f629ad196344ae1dcedd0b2f792b29573212a96865d1c76bcbfccb5332f9dfa",
+      "bytes": 9012
+    },
+    "src/e01-libreoffice.fodt": {
+      "sha256": "7fde5a92f96c7b4bc36231dc2f071a98ba8f2a76256bb51cd4ba037e5218771e",
+      "bytes": 4786
+    },
+    "src/e02-chromium.html": {
+      "sha256": "487b407fc29a0bf2849b46bec43fcfaa0ed08c643797a36cf86e7345e03c6f2b",
+      "bytes": 1423
+    },
+    "src/e03-encrypted.fodt": {
+      "sha256": "92d8614e880125cb754d85cca64de4e4f87fcea20cb497ac020f4b524c7ee1f8",
+      "bytes": 383
+    }
+  }
+}

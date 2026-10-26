@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-relocate-memory-record"
+description = "Enables the relocate_memory_record command without any pre-configured scope."
+commands.allow = ["relocate_memory_record"]
+
+[[permission]]
+identifier = "deny-relocate-memory-record"
+description = "Denies the relocate_memory_record command without any pre-configured scope."
+commands.deny = ["relocate_memory_record"]

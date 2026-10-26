@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-memory-merge"
+description = "Enables the preview_memory_merge command without any pre-configured scope."
+commands.allow = ["preview_memory_merge"]
+
+[[permission]]
+identifier = "deny-preview-memory-merge"
+description = "Denies the preview_memory_merge command without any pre-configured scope."
+commands.deny = ["preview_memory_merge"]

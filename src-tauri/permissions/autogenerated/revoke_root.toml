@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-revoke-root"
+description = "Enables the revoke_root command without any pre-configured scope."
+commands.allow = ["revoke_root"]
+
+[[permission]]
+identifier = "deny-revoke-root"
+description = "Denies the revoke_root command without any pre-configured scope."
+commands.deny = ["revoke_root"]

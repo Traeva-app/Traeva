@@ -1,0 +1,4990 @@
+{
+  "source_sha": "9751706272151f4d8e86b4d8d190e5d2516a38f6",
+  "kind": "developer migration parity, not OCR accuracy acceptance",
+  "bundle_identifier": "dev.traeva.ocr.port.baseline.diag0729",
+  "plist_sha256": "07258e3258967844f4616b3f2773caee542b62299e0b0196e9c4be645ad4c076",
+  "old_binary_sha256": "526271233eeafffbe098858bd4e077531e30c4107f9e35e6233cc6e31a796166",
+  "new_binary_sha256": "71eae5d78c68d68fd2f7fde1885fc6405fb7920beb336ae3547b4318fe4b0ce9",
+  "driver_sha256": "b5eb5a6cfac9d1db436891092e79570599e602a271409dd8d5f27e663f2b3a8b",
+  "script_sha256": "0fc99fca9e1f1c00da567faa71c5c3228c057ce3c1937b6af2c88de758738f8e",
+  "cases": {
+    "s01-en-clear.pdf": {
+      "input_sha256": "9725702beeb42964e0a0bbd75029b6cc473358cd7d76f5a5dac87c315efa2a06",
+      "before": {
+        "bytes": 277068,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s01-en-clear.pdf",
+        "isolation": {
+          "acceptance_check_ms": 440.81100000000004,
+          "child_pid": 34857,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.300083,
+          "max_rss_bytes": 124764160,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 177980328,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 177980328,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 177980328,
+          "samples": 71,
+          "stderr_bytes": 0,
+          "stdout_bytes": 3598,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 440
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 415,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10677618941569328,
+                  0.892441860736267,
+                  0.4989732882996712,
+                  0.024709301794360483
+                ],
+                "confidence": 1.0,
+                "text": "Introduction to Linear Algebra"
+              },
+              {
+                "bbox": [
+                  0.10677619059638462,
+                  0.8473053891638721,
+                  0.3572895091563067,
+                  0.018973680925328473
+                ],
+                "confidence": 1.0,
+                "text": "Lecture 3: Matrix Multiplication"
+              },
+              {
+                "bbox": [
+                  0.10860387516932106,
+                  0.804323352852388,
+                  0.1339216128514208,
+                  0.01926027107075612
+                ],
+                "confidence": 1.0,
+                "text": "1. Definition"
+              },
+              {
+                "bbox": [
+                  0.10882956635914076,
+                  0.7659883726468854,
+                  0.4763860368094393,
+                  0.017587332974345005
+                ],
+                "confidence": 1.0,
+                "text": "The product of an m by n matrix A and an n by p matrix B"
+              },
+              {
+                "bbox": [
+                  0.10472278939262104,
+                  0.7441860465912875,
+                  0.4681724908129913,
+                  0.015988371941245805
+                ],
+                "confidence": 1.0,
+                "text": "is an m by p matrix C. Each entry of C is the dot product"
+              },
+              {
+                "bbox": [
+                  0.10677617650373011,
+                  0.7223837207084273,
+                  0.27515401229028114,
+                  0.014570941060297105
+                ],
+                "confidence": 1.0,
+                "text": "of a row of A and a column of B."
+              },
+              {
+                "bbox": [
+                  0.10651996032356964,
+                  0.6947142122726214,
+                  0.14212089640053469,
+                  0.01988295595089118
+                ],
+                "confidence": 1.0,
+                "text": "2. Properties"
+              },
+              {
+                "bbox": [
+                  0.10870754230215182,
+                  0.6564644367159389,
+                  0.4334660706525846,
+                  0.01883897055306938
+                ],
+                "confidence": 1.0,
+                "text": "Matrix multiplication is associative: (AB)C = A(BC)."
+              },
+              {
+                "bbox": [
+                  0.106776178926823,
+                  0.6351582548647361,
+                  0.5195071901923368,
+                  0.01455104769143012
+                ],
+                "confidence": 1.0,
+                "text": "In general it is not commutative: AB is not always equal to BA."
+              },
+              {
+                "bbox": [
+                  0.10677618912835088,
+                  0.6119186048869352,
+                  0.3531827361580827,
+                  0.015988371941245916
+                ],
+                "confidence": 1.0,
+                "text": "The identity matrix I satisfies AI = IA = A."
+              },
+              {
+                "bbox": [
+                  0.10647043299900832,
+                  0.5860655179454659,
+                  0.12376789429744182,
+                  0.017014573638106656
+                ],
+                "confidence": 1.0,
+                "text": "3. Example"
+              },
+              {
+                "bbox": [
+                  0.10882956446715789,
+                  0.5479041918474608,
+                  0.5605749570761223,
+                  0.014595808383233488
+                ],
+                "confidence": 1.0,
+                "text": "Multiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix."
+              },
+              {
+                "bbox": [
+                  0.1066162053988414,
+                  0.5241850589840957,
+                  0.361746145707376,
+                  0.017636017681085914
+                ],
+                "confidence": 1.0,
+                "text": "Homework: exercises 3.1 to 3.8 on page 42."
+              }
+            ],
+            "ocr_ms": 401,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 21,
+            "source": "ocr"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 32352760,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "9725702beeb42964e0a0bbd75029b6cc473358cd7d76f5a5dac87c315efa2a06",
+        "status": "ocr",
+        "text": "[Page 1]\nIntroduction to Linear Algebra\nLecture 3: Matrix Multiplication\n1. Definition\nThe product of an m by n matrix A and an n by p matrix B\nis an m by p matrix C. Each entry of C is the dot product\nof a row of A and a column of B.\n2. Properties\nMatrix multiplication is associative: (AB)C = A(BC).\nIn general it is not commutative: AB is not always equal to BA.\nThe identity matrix I satisfies AI = IA = A.\n3. Example\nMultiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix.\nHomework: exercises 3.1 to 3.8 on page 42.",
+        "timing": {
+          "ocr_ms": 401,
+          "reader_ms": 2,
+          "render_ms": 21,
+          "total_ms": 425
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 415,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10677618941569328,
+                    0.892441860736267,
+                    0.4989732882996712,
+                    0.024709301794360483
+                  ],
+                  "confidence": 1.0,
+                  "text": "Introduction to Linear Algebra"
+                },
+                {
+                  "bbox": [
+                    0.10677619059638462,
+                    0.8473053891638721,
+                    0.3572895091563067,
+                    0.018973680925328473
+                  ],
+                  "confidence": 1.0,
+                  "text": "Lecture 3: Matrix Multiplication"
+                },
+                {
+                  "bbox": [
+                    0.10860387516932106,
+                    0.804323352852388,
+                    0.1339216128514208,
+                    0.01926027107075612
+                  ],
+                  "confidence": 1.0,
+                  "text": "1. Definition"
+                },
+                {
+                  "bbox": [
+                    0.10882956635914076,
+                    0.7659883726468854,
+                    0.4763860368094393,
+                    0.017587332974345005
+                  ],
+                  "confidence": 1.0,
+                  "text": "The product of an m by n matrix A and an n by p matrix B"
+                },
+                {
+                  "bbox": [
+                    0.10472278939262104,
+                    0.7441860465912875,
+                    0.4681724908129913,
+                    0.015988371941245805
+                  ],
+                  "confidence": 1.0,
+                  "text": "is an m by p matrix C. Each entry of C is the dot product"
+                },
+                {
+                  "bbox": [
+                    0.10677617650373011,
+                    0.7223837207084273,
+                    0.27515401229028114,
+                    0.014570941060297105
+                  ],
+                  "confidence": 1.0,
+                  "text": "of a row of A and a column of B."
+                },
+                {
+                  "bbox": [
+                    0.10651996032356964,
+                    0.6947142122726214,
+                    0.14212089640053469,
+                    0.01988295595089118
+                  ],
+                  "confidence": 1.0,
+                  "text": "2. Properties"
+                },
+                {
+                  "bbox": [
+                    0.10870754230215182,
+                    0.6564644367159389,
+                    0.4334660706525846,
+                    0.01883897055306938
+                  ],
+                  "confidence": 1.0,
+                  "text": "Matrix multiplication is associative: (AB)C = A(BC)."
+                },
+                {
+                  "bbox": [
+                    0.106776178926823,
+                    0.6351582548647361,
+                    0.5195071901923368,
+                    0.01455104769143012
+                  ],
+                  "confidence": 1.0,
+                  "text": "In general it is not commutative: AB is not always equal to BA."
+                },
+                {
+                  "bbox": [
+                    0.10677618912835088,
+                    0.6119186048869352,
+                    0.3531827361580827,
+                    0.015988371941245916
+                  ],
+                  "confidence": 1.0,
+                  "text": "The identity matrix I satisfies AI = IA = A."
+                },
+                {
+                  "bbox": [
+                    0.10647043299900832,
+                    0.5860655179454659,
+                    0.12376789429744182,
+                    0.017014573638106656
+                  ],
+                  "confidence": 1.0,
+                  "text": "3. Example"
+                },
+                {
+                  "bbox": [
+                    0.10882956446715789,
+                    0.5479041918474608,
+                    0.5605749570761223,
+                    0.014595808383233488
+                  ],
+                  "confidence": 1.0,
+                  "text": "Multiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix."
+                },
+                {
+                  "bbox": [
+                    0.1066162053988414,
+                    0.5241850589840957,
+                    0.361746145707376,
+                    0.017636017681085914
+                  ],
+                  "confidence": 1.0,
+                  "text": "Homework: exercises 3.1 to 3.8 on page 42."
+                }
+              ],
+              "ocr_ms": 306,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 17,
+              "source": "ocr"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\nIntroduction to Linear Algebra\nLecture 3: Matrix Multiplication\n1. Definition\nThe product of an m by n matrix A and an n by p matrix B\nis an m by p matrix C. Each entry of C is the dot product\nof a row of A and a column of B.\n2. Properties\nMatrix multiplication is associative: (AB)C = A(BC).\nIn general it is not commutative: AB is not always equal to BA.\nThe identity matrix I satisfies AI = IA = A.\n3. Example\nMultiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix.\nHomework: exercises 3.1 to 3.8 on page 42.",
+          "timing": {
+            "ocr_ms": 306,
+            "reader_ms": 2,
+            "render_ms": 17,
+            "total_ms": 325
+          },
+          "usable_text": true
+        },
+        "child_pid": 34859,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 177587136,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.294499999999999,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 177587136,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\nIntroduction to Linear Algebra\\nLecture 3: Matrix Multiplication\\n1. Definition\\nThe product of an m by n matrix A and an n by p matrix B\\nis an m by p matrix C. Each entry of C is the dot product\\nof a row of A and a column of B.\\n2. Properties\\nMatrix multiplication is associative: (AB)C = A(BC).\\nIn general it is not commutative: AB is not always equal to BA.\\nThe identity matrix I satisfies AI = IA = A.\\n3. Example\\nMultiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix.\\nHomework: exercises 3.1 to 3.8 on page 42.\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":415,\"lines\":[{\"text\":\"Introduction to Linear Algebra\",\"confidence\":1.0,\"bbox\":[0.10677618941569327,0.892441860736267,0.4989732882996712,0.024709301794360483]},{\"text\":\"Lecture 3: Matrix Multiplication\",\"confidence\":1.0,\"bbox\":[0.10677619059638462,0.8473053891638721,0.3572895091563067,0.018973680925328473]},{\"text\":\"1. Definition\",\"confidence\":1.0,\"bbox\":[0.10860387516932106,0.804323352852388,0.1339216128514208,0.01926027107075612]},{\"text\":\"The product of an m by n matrix A and an n by p matrix B\",\"confidence\":1.0,\"bbox\":[0.10882956635914075,0.7659883726468854,0.47638603680943925,0.017587332974345005]},{\"text\":\"is an m by p matrix C. Each entry of C is the dot product\",\"confidence\":1.0,\"bbox\":[0.10472278939262104,0.7441860465912875,0.4681724908129913,0.015988371941245805]},{\"text\":\"of a row of A and a column of B.\",\"confidence\":1.0,\"bbox\":[0.10677617650373011,0.7223837207084273,0.27515401229028114,0.014570941060297105]},{\"text\":\"2. Properties\",\"confidence\":1.0,\"bbox\":[0.10651996032356964,0.6947142122726214,0.14212089640053469,0.01988295595089118]},{\"text\":\"Matrix multiplication is associative: (AB)C = A(BC).\",\"confidence\":1.0,\"bbox\":[0.10870754230215182,0.6564644367159389,0.4334660706525846,0.01883897055306938]},{\"text\":\"In general it is not commutative: AB is not always equal to BA.\",\"confidence\":1.0,\"bbox\":[0.10677617892682299,0.6351582548647361,0.5195071901923368,0.014551047691430119]},{\"text\":\"The identity matrix I satisfies AI = IA = A.\",\"confidence\":1.0,\"bbox\":[0.10677618912835088,0.6119186048869352,0.3531827361580827,0.015988371941245916]},{\"text\":\"3. Example\",\"confidence\":1.0,\"bbox\":[0.10647043299900831,0.5860655179454659,0.12376789429744182,0.017014573638106656]},{\"text\":\"Multiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix.\",\"confidence\":1.0,\"bbox\":[0.10882956446715787,0.5479041918474608,0.5605749570761223,0.014595808383233488]},{\"text\":\"Homework: exercises 3.1 to 3.8 on page 42.\",\"confidence\":1.0,\"bbox\":[0.10661620539884141,0.5241850589840957,0.361746145707376,0.017636017681085914]}],\"render_ms\":17,\"ocr_ms\":306,\"pixels\":[1654,2338],\"error\":null}],\"timing\":{\"reader_ms\":2,\"render_ms\":17,\"ocr_ms\":306,\"total_ms\":325},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 177472448,
+        "samples": 58,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 360.19154199999997
+      },
+      "verdict": "PASS"
+    },
+    "s02-zh-clear.pdf": {
+      "input_sha256": "2841752cebbcbf3b0e89413c312eb5d9d01878c59fc5995222bfe1e897291079",
+      "before": {
+        "bytes": 303108,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s02-zh-clear.pdf",
+        "isolation": {
+          "acceptance_check_ms": 590.632292,
+          "child_pid": 34862,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.314083,
+          "max_rss_bytes": 142016512,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 186713048,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 186713048,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 186696664,
+          "samples": 96,
+          "stderr_bytes": 0,
+          "stdout_bytes": 3249,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 590
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 168,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10882956411508898,
+                  0.8879384087156224,
+                  0.4168377914336457,
+                  0.027801539777587703
+                ],
+                "confidence": 1.0,
+                "text": "第三章 细胞的结构与功能"
+              },
+              {
+                "bbox": [
+                  0.108803107290645,
+                  0.844373465466389,
+                  0.15816380640327424,
+                  0.020555395056183645
+                ],
+                "confidence": 0.30000001192092896,
+                "text": "第一节 细胞膜"
+              },
+              {
+                "bbox": [
+                  0.10882956876401494,
+                  0.8052325580111652,
+                  0.4763860368094393,
+                  0.018976167494461293
+                ],
+                "confidence": 1.0,
+                "text": "细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。"
+              },
+              {
+                "bbox": [
+                  0.10882957207754972,
+                  0.7834302324319876,
+                  0.4373716564247657,
+                  0.018964977117559623
+                ],
+                "confidence": 1.0,
+                "text": "细胞膜具有选择透过性，能够控制物质进出细胞。"
+              },
+              {
+                "bbox": [
+                  0.10860845130982276,
+                  0.7549817593317355,
+                  0.1585531177082546,
+                  0.023466713924097937
+                ],
+                "confidence": 1.0,
+                "text": "第二节 细胞核"
+              },
+              {
+                "bbox": [
+                  0.10882956954899044,
+                  0.719418306115962,
+                  0.4784394233085512,
+                  0.01753635585970914
+                ],
+                "confidence": 1.0,
+                "text": "细胞核是遗传信息库，是细胞代谢和遗传的控制中心。"
+              },
+              {
+                "bbox": [
+                  0.10871211491438884,
+                  0.6961545819201589,
+                  0.3780687694249736,
+                  0.02032368564524134
+                ],
+                "confidence": 1.0,
+                "text": "染色质主要由脱氧核糖核酸和蛋白质组成。"
+              },
+              {
+                "bbox": [
+                  0.10874979345466668,
+                  0.6697435952506658,
+                  0.15827043341898428,
+                  0.020977925805580444
+                ],
+                "confidence": 0.5,
+                "text": "第三节 细胞器"
+              },
+              {
+                "bbox": [
+                  0.1088295646298532,
+                  0.6321642427941985,
+                  0.5133470306950008,
+                  0.016253207869974196
+                ],
+                "confidence": 1.0,
+                "text": "线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。"
+              },
+              {
+                "bbox": [
+                  0.10882956799943162,
+                  0.6103507268386678,
+                  0.4743326503103273,
+                  0.016253207869974307
+                ],
+                "confidence": 1.0,
+                "text": "课后思考：比较植物细胞与动物细胞在结构上的异同。"
+              }
+            ],
+            "ocr_ms": 545,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 17,
+            "source": "ocr"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 32378800,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "2841752cebbcbf3b0e89413c312eb5d9d01878c59fc5995222bfe1e897291079",
+        "status": "ocr",
+        "text": "[Page 1]\n第三章 细胞的结构与功能\n第一节 细胞膜\n细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。\n细胞膜具有选择透过性，能够控制物质进出细胞。\n第二节 细胞核\n细胞核是遗传信息库，是细胞代谢和遗传的控制中心。\n染色质主要由脱氧核糖核酸和蛋白质组成。\n第三节 细胞器\n线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。\n课后思考：比较植物细胞与动物细胞在结构上的异同。",
+        "timing": {
+          "ocr_ms": 545,
+          "reader_ms": 1,
+          "render_ms": 17,
+          "total_ms": 565
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 168,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10882956411508898,
+                    0.8879384087156224,
+                    0.4168377914336457,
+                    0.027801539777587703
+                  ],
+                  "confidence": 1.0,
+                  "text": "第三章 细胞的结构与功能"
+                },
+                {
+                  "bbox": [
+                    0.108803107290645,
+                    0.844373465466389,
+                    0.15816380640327424,
+                    0.020555395056183645
+                  ],
+                  "confidence": 0.3,
+                  "text": "第一节 细胞膜"
+                },
+                {
+                  "bbox": [
+                    0.10882956876401494,
+                    0.8052325580111652,
+                    0.4763860368094393,
+                    0.018976167494461293
+                  ],
+                  "confidence": 1.0,
+                  "text": "细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。"
+                },
+                {
+                  "bbox": [
+                    0.10882957207754972,
+                    0.7834302324319876,
+                    0.4373716564247657,
+                    0.018964977117559623
+                  ],
+                  "confidence": 1.0,
+                  "text": "细胞膜具有选择透过性，能够控制物质进出细胞。"
+                },
+                {
+                  "bbox": [
+                    0.10860845130982276,
+                    0.7549817593317355,
+                    0.1585531177082546,
+                    0.023466713924097937
+                  ],
+                  "confidence": 1.0,
+                  "text": "第二节 细胞核"
+                },
+                {
+                  "bbox": [
+                    0.10882956954899044,
+                    0.719418306115962,
+                    0.4784394233085512,
+                    0.01753635585970914
+                  ],
+                  "confidence": 1.0,
+                  "text": "细胞核是遗传信息库，是细胞代谢和遗传的控制中心。"
+                },
+                {
+                  "bbox": [
+                    0.10871211491438884,
+                    0.6961545819201589,
+                    0.3780687694249736,
+                    0.02032368564524134
+                  ],
+                  "confidence": 1.0,
+                  "text": "染色质主要由脱氧核糖核酸和蛋白质组成。"
+                },
+                {
+                  "bbox": [
+                    0.10874979345466668,
+                    0.6697435952506658,
+                    0.15827043341898428,
+                    0.020977925805580444
+                  ],
+                  "confidence": 0.5,
+                  "text": "第三节 细胞器"
+                },
+                {
+                  "bbox": [
+                    0.1088295646298532,
+                    0.6321642427941985,
+                    0.5133470306950008,
+                    0.016253207869974196
+                  ],
+                  "confidence": 1.0,
+                  "text": "线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。"
+                },
+                {
+                  "bbox": [
+                    0.10882956799943162,
+                    0.6103507268386678,
+                    0.4743326503103273,
+                    0.016253207869974307
+                  ],
+                  "confidence": 1.0,
+                  "text": "课后思考：比较植物细胞与动物细胞在结构上的异同。"
+                }
+              ],
+              "ocr_ms": 495,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 18,
+              "source": "ocr"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\n第三章 细胞的结构与功能\n第一节 细胞膜\n细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。\n细胞膜具有选择透过性，能够控制物质进出细胞。\n第二节 细胞核\n细胞核是遗传信息库，是细胞代谢和遗传的控制中心。\n染色质主要由脱氧核糖核酸和蛋白质组成。\n第三节 细胞器\n线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。\n课后思考：比较植物细胞与动物细胞在结构上的异同。",
+          "timing": {
+            "ocr_ms": 495,
+            "reader_ms": 1,
+            "render_ms": 18,
+            "total_ms": 515
+          },
+          "usable_text": true
+        },
+        "child_pid": 34872,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 187745192,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.886125,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 187745192,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\n第三章 细胞的结构与功能\\n第一节 细胞膜\\n细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。\\n细胞膜具有选择透过性，能够控制物质进出细胞。\\n第二节 细胞核\\n细胞核是遗传信息库，是细胞代谢和遗传的控制中心。\\n染色质主要由脱氧核糖核酸和蛋白质组成。\\n第三节 细胞器\\n线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。\\n课后思考：比较植物细胞与动物细胞在结构上的异同。\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":168,\"lines\":[{\"text\":\"第三章 细胞的结构与功能\",\"confidence\":1.0,\"bbox\":[0.10882956411508898,0.8879384087156224,0.4168377914336457,0.027801539777587703]},{\"text\":\"第一节 细胞膜\",\"confidence\":0.3,\"bbox\":[0.10880310729064499,0.844373465466389,0.15816380640327424,0.020555395056183645]},{\"text\":\"细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。\",\"confidence\":1.0,\"bbox\":[0.10882956876401494,0.8052325580111652,0.47638603680943925,0.018976167494461293]},{\"text\":\"细胞膜具有选择透过性，能够控制物质进出细胞。\",\"confidence\":1.0,\"bbox\":[0.10882957207754972,0.7834302324319876,0.4373716564247657,0.018964977117559623]},{\"text\":\"第二节 细胞核\",\"confidence\":1.0,\"bbox\":[0.10860845130982276,0.7549817593317355,0.1585531177082546,0.023466713924097937]},{\"text\":\"细胞核是遗传信息库，是细胞代谢和遗传的控制中心。\",\"confidence\":1.0,\"bbox\":[0.10882956954899045,0.719418306115962,0.47843942330855116,0.01753635585970914]},{\"text\":\"染色质主要由脱氧核糖核酸和蛋白质组成。\",\"confidence\":1.0,\"bbox\":[0.10871211491438883,0.6961545819201589,0.3780687694249736,0.02032368564524134]},{\"text\":\"第三节 细胞器\",\"confidence\":0.5,\"bbox\":[0.10874979345466668,0.6697435952506658,0.15827043341898428,0.020977925805580444]},{\"text\":\"线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。\",\"confidence\":1.0,\"bbox\":[0.10882956462985321,0.6321642427941985,0.5133470306950008,0.016253207869974196]},{\"text\":\"课后思考：比较植物细胞与动物细胞在结构上的异同。\",\"confidence\":1.0,\"bbox\":[0.10882956799943162,0.6103507268386678,0.4743326503103273,0.016253207869974307]}],\"render_ms\":18,\"ocr_ms\":495,\"pixels\":[1654,2338],\"error\":null}],\"timing\":{\"reader_ms\":1,\"render_ms\":18,\"ocr_ms\":495,\"total_ms\":515},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 187745192,
+        "samples": 88,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 539.5159170000001
+      },
+      "verdict": "PASS"
+    },
+    "s03-mixed-clear.pdf": {
+      "input_sha256": "5ce094b565ac7f192b4d867e3fa19b6389b52a1eb2382890e2324a17f634eb91",
+      "before": {
+        "bytes": 278618,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s03-mixed-clear.pdf",
+        "isolation": {
+          "acceptance_check_ms": 550.081625,
+          "child_pid": 34884,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.517834000000001,
+          "max_rss_bytes": 145833984,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 189318128,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 189318128,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 189285360,
+          "samples": 90,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2934,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 550
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 246,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10588235098562492,
+                  0.8874999994288789,
+                  0.6117647071847604,
+                  0.03764970125144518
+                ],
+                "confidence": 1.0,
+                "text": "计算机网络 Computer Networks"
+              },
+              {
+                "bbox": [
+                  0.1088295653896977,
+                  0.8488372094859542,
+                  0.27720739878939316,
+                  0.02034883686780309
+                ],
+                "confidence": 0.5,
+                "text": "第二讲：TCP/IP 协议栈"
+              },
+              {
+                "bbox": [
+                  0.10882956144949164,
+                  0.8066723699486109,
+                  0.5051334846985528,
+                  0.01753635585970903
+                ],
+                "confidence": 1.0,
+                "text": "Lecture 2: The TCP/IP Protocol Stack"
+              },
+              {
+                "bbox": [
+                  0.10882956781676896,
+                  0.7673224975425621,
+                  0.4845995828058872,
+                  0.017561223182645636
+                ],
+                "confidence": 0.5,
+                "text": "1.应用层 Application Layer: HTTP、DNS、SMTP"
+              },
+              {
+                "bbox": [
+                  0.10677618022131624,
+                  0.7441860468941421,
+                  0.6180698159528037,
+                  0.01757614341324676
+                ],
+                "confidence": 0.5,
+                "text": "2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达"
+              },
+              {
+                "bbox": [
+                  0.10677618001544992,
+                  0.7223837213159052,
+                  0.4271047239292057,
+                  0.017564953036345088
+                ],
+                "confidence": 0.5,
+                "text": "3. 网络层 Network Layer：IP 地址与路由选择"
+              },
+              {
+                "bbox": [
+                  0.10677617843710016,
+                  0.6991279073610871,
+                  0.4229979509309817,
+                  0.017441859706229246
+                ],
+                "confidence": 0.5,
+                "text": "4. 链路层 Link Layer：以太网帧与 MAC 地址"
+              },
+              {
+                "bbox": [
+                  0.10882957656991062,
+                  0.6757912741987149,
+                  0.5441478281816808,
+                  0.01753635585970903
+                ],
+                "confidence": 0.5,
+                "text": "三次握手 three-way handshake: SYN、SYN-ACK、 ACK"
+              },
+              {
+                "bbox": [
+                  0.10882957094845996,
+                  0.6539777590657769,
+                  0.3388090306642987,
+                  0.01753635585970914
+                ],
+                "confidence": 0.5,
+                "text": "阅读材料：教材第5章5.1 至5.3 节"
+              }
+            ],
+            "ocr_ms": 509,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 18,
+            "source": "ocr"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 32354310,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "5ce094b565ac7f192b4d867e3fa19b6389b52a1eb2382890e2324a17f634eb91",
+        "status": "ocr",
+        "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1.应用层 Application Layer: HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\n阅读材料：教材第5章5.1 至5.3 节",
+        "timing": {
+          "ocr_ms": 509,
+          "reader_ms": 1,
+          "render_ms": 18,
+          "total_ms": 528
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 246,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10588235098562492,
+                    0.8874999994288789,
+                    0.6117647071847604,
+                    0.03764970125144518
+                  ],
+                  "confidence": 1.0,
+                  "text": "计算机网络 Computer Networks"
+                },
+                {
+                  "bbox": [
+                    0.1088295653896977,
+                    0.8488372094859542,
+                    0.27720739878939316,
+                    0.02034883686780309
+                  ],
+                  "confidence": 0.5,
+                  "text": "第二讲：TCP/IP 协议栈"
+                },
+                {
+                  "bbox": [
+                    0.10882956144949164,
+                    0.8066723699486109,
+                    0.5051334846985528,
+                    0.01753635585970903
+                  ],
+                  "confidence": 1.0,
+                  "text": "Lecture 2: The TCP/IP Protocol Stack"
+                },
+                {
+                  "bbox": [
+                    0.10882956781676896,
+                    0.7673224975425621,
+                    0.4845995828058872,
+                    0.017561223182645636
+                  ],
+                  "confidence": 0.5,
+                  "text": "1.应用层 Application Layer: HTTP、DNS、SMTP"
+                },
+                {
+                  "bbox": [
+                    0.10677618022131624,
+                    0.7441860468941421,
+                    0.6180698159528037,
+                    0.01757614341324676
+                  ],
+                  "confidence": 0.5,
+                  "text": "2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达"
+                },
+                {
+                  "bbox": [
+                    0.10677618001544992,
+                    0.7223837213159052,
+                    0.4271047239292057,
+                    0.017564953036345088
+                  ],
+                  "confidence": 0.5,
+                  "text": "3. 网络层 Network Layer：IP 地址与路由选择"
+                },
+                {
+                  "bbox": [
+                    0.10677617843710016,
+                    0.6991279073610871,
+                    0.4229979509309817,
+                    0.017441859706229246
+                  ],
+                  "confidence": 0.5,
+                  "text": "4. 链路层 Link Layer：以太网帧与 MAC 地址"
+                },
+                {
+                  "bbox": [
+                    0.10882957656991062,
+                    0.6757912741987149,
+                    0.5441478281816808,
+                    0.01753635585970903
+                  ],
+                  "confidence": 0.5,
+                  "text": "三次握手 three-way handshake: SYN、SYN-ACK、 ACK"
+                },
+                {
+                  "bbox": [
+                    0.10882957094845996,
+                    0.6539777590657769,
+                    0.3388090306642987,
+                    0.01753635585970914
+                  ],
+                  "confidence": 0.5,
+                  "text": "阅读材料：教材第5章5.1 至5.3 节"
+                }
+              ],
+              "ocr_ms": 464,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 17,
+              "source": "ocr"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1.应用层 Application Layer: HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\n阅读材料：教材第5章5.1 至5.3 节",
+          "timing": {
+            "ocr_ms": 464,
+            "reader_ms": 1,
+            "render_ms": 17,
+            "total_ms": 484
+          },
+          "usable_text": true
+        },
+        "child_pid": 34892,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 189023192,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.357709,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 189023192,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\n计算机网络 Computer Networks\\n第二讲：TCP/IP 协议栈\\nLecture 2: The TCP/IP Protocol Stack\\n1.应用层 Application Layer: HTTP、DNS、SMTP\\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\\n3. 网络层 Network Layer：IP 地址与路由选择\\n4. 链路层 Link Layer：以太网帧与 MAC 地址\\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\\n阅读材料：教材第5章5.1 至5.3 节\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":246,\"lines\":[{\"text\":\"计算机网络 Computer Networks\",\"confidence\":1.0,\"bbox\":[0.10588235098562492,0.8874999994288789,0.6117647071847604,0.03764970125144518]},{\"text\":\"第二讲：TCP/IP 协议栈\",\"confidence\":0.5,\"bbox\":[0.1088295653896977,0.8488372094859542,0.27720739878939316,0.02034883686780309]},{\"text\":\"Lecture 2: The TCP/IP Protocol Stack\",\"confidence\":1.0,\"bbox\":[0.10882956144949163,0.8066723699486109,0.5051334846985528,0.01753635585970903]},{\"text\":\"1.应用层 Application Layer: HTTP、DNS、SMTP\",\"confidence\":0.5,\"bbox\":[0.10882956781676897,0.7673224975425621,0.4845995828058872,0.017561223182645636]},{\"text\":\"2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\",\"confidence\":0.5,\"bbox\":[0.10677618022131624,0.7441860468941421,0.6180698159528037,0.01757614341324676]},{\"text\":\"3. 网络层 Network Layer：IP 地址与路由选择\",\"confidence\":0.5,\"bbox\":[0.10677618001544993,0.7223837213159052,0.4271047239292057,0.017564953036345088]},{\"text\":\"4. 链路层 Link Layer：以太网帧与 MAC 地址\",\"confidence\":0.5,\"bbox\":[0.10677617843710016,0.6991279073610871,0.4229979509309817,0.017441859706229246]},{\"text\":\"三次握手 three-way handshake: SYN、SYN-ACK、 ACK\",\"confidence\":0.5,\"bbox\":[0.10882957656991062,0.6757912741987149,0.5441478281816808,0.01753635585970903]},{\"text\":\"阅读材料：教材第5章5.1 至5.3 节\",\"confidence\":0.5,\"bbox\":[0.10882957094845995,0.6539777590657769,0.3388090306642987,0.01753635585970914]}],\"render_ms\":17,\"ocr_ms\":464,\"pixels\":[1654,2338],\"error\":null}],\"timing\":{\"reader_ms\":1,\"render_ms\":17,\"ocr_ms\":464,\"total_ms\":484},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 189023192,
+        "samples": 85,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 523.58125
+      },
+      "verdict": "PASS"
+    },
+    "s04-mixed-skew-blur.pdf": {
+      "input_sha256": "0cf9f9efc0327d44d735084f5f35f2cddb8f5d3e436224a23ee1394c75bb6112",
+      "before": {
+        "bytes": 391800,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s04-mixed-skew-blur.pdf",
+        "isolation": {
+          "acceptance_check_ms": 435.42770800000005,
+          "child_pid": 34908,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.508082999999999,
+          "max_rss_bytes": 142557184,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 184779688,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 184779688,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 184714152,
+          "samples": 70,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2752,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 435
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 217,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.08305929540076672,
+                  0.8830300254814768,
+                  0.5381147576070322,
+                  0.04213125099984871
+                ],
+                "confidence": 0.5,
+                "text": "宏观经济学 Macroeconomics"
+              },
+              {
+                "bbox": [
+                  0.08535127004228453,
+                  0.8363281429943147,
+                  0.26467891817657946,
+                  0.028282889960870698
+                ],
+                "confidence": 0.5,
+                "text": "第四讲 通货膨胀与失业"
+              },
+              {
+                "bbox": [
+                  0.08951441274862212,
+                  0.7958324785164361,
+                  0.5335421764000151,
+                  0.03237639950115123
+                ],
+                "confidence": 1.0,
+                "text": "Lecture 4: Inflation and Unemployment"
+              },
+              {
+                "bbox": [
+                  0.0896458119846037,
+                  0.7564140132728412,
+                  0.33384916773730355,
+                  0.02625968662258704
+                ],
+                "confidence": 1.0,
+                "text": "通货膨胀率是物价总水平的年增长率。"
+              },
+              {
+                "bbox": [
+                  0.09160775795559876,
+                  0.7339562088117043,
+                  0.49608939561763155,
+                  0.031047217350316125
+                ],
+                "confidence": 1.0,
+                "text": "The Phillips curve describes a short-run trade-off."
+              },
+              {
+                "bbox": [
+                  0.09356410307079396,
+                  0.7107325626651302,
+                  0.4943221806038392,
+                  0.032811221146400005
+                ],
+                "confidence": 1.0,
+                "text": "菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。"
+              },
+              {
+                "bbox": [
+                  0.0956107039938712,
+                  0.6879944500051711,
+                  0.35471839397388905,
+                  0.028470064657584948
+                ],
+                "confidence": 1.0,
+                "text": "中央银行可以通过调整利率影响总需求。"
+              },
+              {
+                "bbox": [
+                  0.095742172613772,
+                  0.6638622377465102,
+                  0.5949766073722793,
+                  0.035429217858228945
+                ],
+                "confidence": 1.0,
+                "text": "Key terms: CPI, GDP deflator, natural rate of unemployment"
+              }
+            ],
+            "ocr_ms": 381,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 14,
+            "source": "ocr"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 32467492,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "0cf9f9efc0327d44d735084f5f35f2cddb8f5d3e436224a23ee1394c75bb6112",
+        "status": "ocr",
+        "text": "[Page 1]\n宏观经济学 Macroeconomics\n第四讲 通货膨胀与失业\nLecture 4: Inflation and Unemployment\n通货膨胀率是物价总水平的年增长率。\nThe Phillips curve describes a short-run trade-off.\n菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。\n中央银行可以通过调整利率影响总需求。\nKey terms: CPI, GDP deflator, natural rate of unemployment",
+        "timing": {
+          "ocr_ms": 381,
+          "reader_ms": 2,
+          "render_ms": 14,
+          "total_ms": 398
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 217,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.08305929540076672,
+                    0.8830300254814768,
+                    0.5381147576070322,
+                    0.04213125099984871
+                  ],
+                  "confidence": 0.5,
+                  "text": "宏观经济学 Macroeconomics"
+                },
+                {
+                  "bbox": [
+                    0.08535127004228453,
+                    0.8363281429943147,
+                    0.26467891817657946,
+                    0.028282889960870698
+                  ],
+                  "confidence": 0.5,
+                  "text": "第四讲 通货膨胀与失业"
+                },
+                {
+                  "bbox": [
+                    0.08951441274862212,
+                    0.7958324785164361,
+                    0.5335421764000151,
+                    0.03237639950115123
+                  ],
+                  "confidence": 1.0,
+                  "text": "Lecture 4: Inflation and Unemployment"
+                },
+                {
+                  "bbox": [
+                    0.0896458119846037,
+                    0.7564140132728412,
+                    0.33384916773730355,
+                    0.02625968662258704
+                  ],
+                  "confidence": 1.0,
+                  "text": "通货膨胀率是物价总水平的年增长率。"
+                },
+                {
+                  "bbox": [
+                    0.09160775795559876,
+                    0.7339562088117043,
+                    0.49608939561763155,
+                    0.031047217350316125
+                  ],
+                  "confidence": 1.0,
+                  "text": "The Phillips curve describes a short-run trade-off."
+                },
+                {
+                  "bbox": [
+                    0.09356410307079396,
+                    0.7107325626651302,
+                    0.4943221806038392,
+                    0.032811221146400005
+                  ],
+                  "confidence": 1.0,
+                  "text": "菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。"
+                },
+                {
+                  "bbox": [
+                    0.0956107039938712,
+                    0.6879944500051711,
+                    0.35471839397388905,
+                    0.028470064657584948
+                  ],
+                  "confidence": 1.0,
+                  "text": "中央银行可以通过调整利率影响总需求。"
+                },
+                {
+                  "bbox": [
+                    0.095742172613772,
+                    0.6638622377465102,
+                    0.5949766073722793,
+                    0.035429217858228945
+                  ],
+                  "confidence": 1.0,
+                  "text": "Key terms: CPI, GDP deflator, natural rate of unemployment"
+                }
+              ],
+              "ocr_ms": 396,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 14,
+              "source": "ocr"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\n宏观经济学 Macroeconomics\n第四讲 通货膨胀与失业\nLecture 4: Inflation and Unemployment\n通货膨胀率是物价总水平的年增长率。\nThe Phillips curve describes a short-run trade-off.\n菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。\n中央银行可以通过调整利率影响总需求。\nKey terms: CPI, GDP deflator, natural rate of unemployment",
+          "timing": {
+            "ocr_ms": 396,
+            "reader_ms": 2,
+            "render_ms": 14,
+            "total_ms": 413
+          },
+          "usable_text": true
+        },
+        "child_pid": 34912,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 185795520,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.336125,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 185795520,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\n宏观经济学 Macroeconomics\\n第四讲 通货膨胀与失业\\nLecture 4: Inflation and Unemployment\\n通货膨胀率是物价总水平的年增长率。\\nThe Phillips curve describes a short-run trade-off.\\n菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。\\n中央银行可以通过调整利率影响总需求。\\nKey terms: CPI, GDP deflator, natural rate of unemployment\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":217,\"lines\":[{\"text\":\"宏观经济学 Macroeconomics\",\"confidence\":0.5,\"bbox\":[0.08305929540076672,0.8830300254814768,0.5381147576070322,0.04213125099984871]},{\"text\":\"第四讲 通货膨胀与失业\",\"confidence\":0.5,\"bbox\":[0.08535127004228453,0.8363281429943147,0.26467891817657946,0.028282889960870694]},{\"text\":\"Lecture 4: Inflation and Unemployment\",\"confidence\":1.0,\"bbox\":[0.08951441274862212,0.7958324785164361,0.5335421764000151,0.03237639950115123]},{\"text\":\"通货膨胀率是物价总水平的年增长率。\",\"confidence\":1.0,\"bbox\":[0.0896458119846037,0.7564140132728412,0.33384916773730355,0.026259686622587042]},{\"text\":\"The Phillips curve describes a short-run trade-off.\",\"confidence\":1.0,\"bbox\":[0.09160775795559875,0.7339562088117043,0.49608939561763155,0.031047217350316125]},{\"text\":\"菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。\",\"confidence\":1.0,\"bbox\":[0.09356410307079395,0.7107325626651302,0.4943221806038392,0.032811221146400005]},{\"text\":\"中央银行可以通过调整利率影响总需求。\",\"confidence\":1.0,\"bbox\":[0.09561070399387121,0.6879944500051711,0.35471839397388905,0.028470064657584948]},{\"text\":\"Key terms: CPI, GDP deflator, natural rate of unemployment\",\"confidence\":1.0,\"bbox\":[0.095742172613772,0.6638622377465102,0.5949766073722793,0.035429217858228945]}],\"render_ms\":14,\"ocr_ms\":396,\"pixels\":[1654,2338],\"error\":null}],\"timing\":{\"reader_ms\":2,\"render_ms\":14,\"ocr_ms\":396,\"total_ms\":413},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 185762752,
+        "samples": 73,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 450.611125
+      },
+      "verdict": "PASS"
+    },
+    "s05-zh-lowres.pdf": {
+      "input_sha256": "2431a03701283b24b7905ff63461111f99f99814cb833f63272398b736e5ff67",
+      "before": {
+        "bytes": 74446,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s05-zh-lowres.pdf",
+        "isolation": {
+          "acceptance_check_ms": 425.994958,
+          "child_pid": 34914,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.336416,
+          "max_rss_bytes": 123699200,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 169214912,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 169214912,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 169165760,
+          "samples": 69,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2629,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 425
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 107,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10882957224717175,
+                  0.8879384087144422,
+                  0.39014373004364417,
+                  0.027801539777587703
+                ],
+                "confidence": 0.30000001192092896,
+                "text": "高等数学 第五章 定积分"
+              },
+              {
+                "bbox": [
+                  0.104722789870796,
+                  0.8443113774297553,
+                  0.2073922024672669,
+                  0.01924721984602218
+                ],
+                "confidence": 0.5,
+                "text": "一、定积分概念"
+              },
+              {
+                "bbox": [
+                  0.1088295717500143,
+                  0.8066723696474926,
+                  0.29363449078228915,
+                  0.01600204888728063
+                ],
+                "confidence": 0.5,
+                "text": "定积分可以表示曲边棉形的面积。"
+              },
+              {
+                "bbox": [
+                  0.10882956477351104,
+                  0.7805232556928121,
+                  0.22792608590915964,
+                  0.018895349102819647
+                ],
+                "confidence": 1.0,
+                "text": "二、微积分基本定理"
+              },
+              {
+                "bbox": [
+                  0.10873378896847338,
+                  0.7412188231880876,
+                  0.417070418776451,
+                  0.020265842728170114
+                ],
+                "confidence": 1.0,
+                "text": "牛顿莱布尼茨公式把定积分与原函数联系起来。"
+              },
+              {
+                "bbox": [
+                  0.10882957288959356,
+                  0.7164242940548331,
+                  0.20123202451915811,
+                  0.01924721984602229
+                ],
+                "confidence": 1.0,
+                "text": "三、定积分的应用"
+              },
+              {
+                "bbox": [
+                  0.1067761823954227,
+                  0.6773255812724885,
+                  0.4804928098076632,
+                  0.0189960608633285
+                ],
+                "confidence": 1.0,
+                "text": "利用定积分可以计算平面图形面积和旋转体的体积。"
+              },
+              {
+                "bbox": [
+                  0.10677617935970424,
+                  0.6555232562009804,
+                  0.2587269018466124,
+                  0.017441859706229246
+                ],
+                "confidence": 1.0,
+                "text": "练习：习题五第1题至第6题。"
+              }
+            ],
+            "ocr_ms": 373,
+            "page": 1,
+            "pixels": [
+              1653,
+              2338
+            ],
+            "render_ms": 9,
+            "source": "ocr"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 24979201,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "2431a03701283b24b7905ff63461111f99f99814cb833f63272398b736e5ff67",
+        "status": "ocr",
+        "text": "[Page 1]\n高等数学 第五章 定积分\n一、定积分概念\n定积分可以表示曲边棉形的面积。\n二、微积分基本定理\n牛顿莱布尼茨公式把定积分与原函数联系起来。\n三、定积分的应用\n利用定积分可以计算平面图形面积和旋转体的体积。\n练习：习题五第1题至第6题。",
+        "timing": {
+          "ocr_ms": 373,
+          "reader_ms": 0,
+          "render_ms": 9,
+          "total_ms": 383
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 107,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10882957224717175,
+                    0.8879384087144422,
+                    0.39014373004364417,
+                    0.027801539777587703
+                  ],
+                  "confidence": 0.3,
+                  "text": "高等数学 第五章 定积分"
+                },
+                {
+                  "bbox": [
+                    0.104722789870796,
+                    0.8443113774297553,
+                    0.2073922024672669,
+                    0.01924721984602218
+                  ],
+                  "confidence": 0.5,
+                  "text": "一、定积分概念"
+                },
+                {
+                  "bbox": [
+                    0.1088295717500143,
+                    0.8066723696474926,
+                    0.29363449078228915,
+                    0.01600204888728063
+                  ],
+                  "confidence": 0.5,
+                  "text": "定积分可以表示曲边棉形的面积。"
+                },
+                {
+                  "bbox": [
+                    0.10882956477351104,
+                    0.7805232556928121,
+                    0.22792608590915964,
+                    0.018895349102819647
+                  ],
+                  "confidence": 1.0,
+                  "text": "二、微积分基本定理"
+                },
+                {
+                  "bbox": [
+                    0.10873378896847338,
+                    0.7412188231880876,
+                    0.417070418776451,
+                    0.020265842728170114
+                  ],
+                  "confidence": 1.0,
+                  "text": "牛顿莱布尼茨公式把定积分与原函数联系起来。"
+                },
+                {
+                  "bbox": [
+                    0.10882957288959356,
+                    0.7164242940548331,
+                    0.20123202451915811,
+                    0.01924721984602229
+                  ],
+                  "confidence": 1.0,
+                  "text": "三、定积分的应用"
+                },
+                {
+                  "bbox": [
+                    0.1067761823954227,
+                    0.6773255812724885,
+                    0.4804928098076632,
+                    0.0189960608633285
+                  ],
+                  "confidence": 1.0,
+                  "text": "利用定积分可以计算平面图形面积和旋转体的体积。"
+                },
+                {
+                  "bbox": [
+                    0.10677617935970424,
+                    0.6555232562009804,
+                    0.2587269018466124,
+                    0.017441859706229246
+                  ],
+                  "confidence": 1.0,
+                  "text": "练习：习题五第1题至第6题。"
+                }
+              ],
+              "ocr_ms": 385,
+              "page": 1,
+              "pixels": [
+                1653,
+                2338
+              ],
+              "render_ms": 8,
+              "source": "ocr"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\n高等数学 第五章 定积分\n一、定积分概念\n定积分可以表示曲边棉形的面积。\n二、微积分基本定理\n牛顿莱布尼茨公式把定积分与原函数联系起来。\n三、定积分的应用\n利用定积分可以计算平面图形面积和旋转体的体积。\n练习：习题五第1题至第6题。",
+          "timing": {
+            "ocr_ms": 385,
+            "reader_ms": 0,
+            "render_ms": 8,
+            "total_ms": 394
+          },
+          "usable_text": true
+        },
+        "child_pid": 34918,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 169132968,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.5615,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 169132968,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\n高等数学 第五章 定积分\\n一、定积分概念\\n定积分可以表示曲边棉形的面积。\\n二、微积分基本定理\\n牛顿莱布尼茨公式把定积分与原函数联系起来。\\n三、定积分的应用\\n利用定积分可以计算平面图形面积和旋转体的体积。\\n练习：习题五第1题至第6题。\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":107,\"lines\":[{\"text\":\"高等数学 第五章 定积分\",\"confidence\":0.3,\"bbox\":[0.10882957224717175,0.8879384087144422,0.39014373004364417,0.027801539777587703]},{\"text\":\"一、定积分概念\",\"confidence\":0.5,\"bbox\":[0.10472278987079599,0.8443113774297553,0.20739220246726686,0.01924721984602218]},{\"text\":\"定积分可以表示曲边棉形的面积。\",\"confidence\":0.5,\"bbox\":[0.1088295717500143,0.8066723696474926,0.29363449078228915,0.01600204888728063]},{\"text\":\"二、微积分基本定理\",\"confidence\":1.0,\"bbox\":[0.10882956477351104,0.7805232556928121,0.22792608590915964,0.018895349102819647]},{\"text\":\"牛顿莱布尼茨公式把定积分与原函数联系起来。\",\"confidence\":1.0,\"bbox\":[0.10873378896847338,0.7412188231880876,0.417070418776451,0.020265842728170114]},{\"text\":\"三、定积分的应用\",\"confidence\":1.0,\"bbox\":[0.10882957288959356,0.7164242940548331,0.20123202451915811,0.01924721984602229]},{\"text\":\"利用定积分可以计算平面图形面积和旋转体的体积。\",\"confidence\":1.0,\"bbox\":[0.1067761823954227,0.6773255812724885,0.48049280980766323,0.0189960608633285]},{\"text\":\"练习：习题五第1题至第6题。\",\"confidence\":1.0,\"bbox\":[0.10677617935970425,0.6555232562009804,0.2587269018466124,0.017441859706229246]}],\"render_ms\":8,\"ocr_ms\":385,\"pixels\":[1653,2338],\"error\":null}],\"timing\":{\"reader_ms\":0,\"render_ms\":8,\"ocr_ms\":385,\"total_ms\":394},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 169067432,
+        "samples": 67,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 411.902333
+      },
+      "verdict": "PASS"
+    },
+    "s06-multipage-scan.pdf": {
+      "input_sha256": "5c2975a2042174758cf42e1cfd190e82efc3bc9843810f35f117ed1fa9982010",
+      "before": {
+        "bytes": 1200314,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s06-multipage-scan.pdf",
+        "isolation": {
+          "acceptance_check_ms": 669.457875,
+          "child_pid": 34925,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.381959,
+          "max_rss_bytes": 164970496,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 206865368,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 206865368,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 206865368,
+          "samples": 108,
+          "stderr_bytes": 0,
+          "stdout_bytes": 4149,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 669
+        },
+        "left_out": [
+          "page 4: a scanned page past the OCR page limit (3)"
+        ],
+        "note": null,
+        "pages": [
+          {
+            "chars": 190,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10864519924091846,
+                  0.8923201083459463,
+                  0.3720738550483676,
+                  0.02919109465221348
+                ],
+                "confidence": 1.0,
+                "text": "Organic Chemistry"
+              },
+              {
+                "bbox": [
+                  0.108829568194951,
+                  0.8473053889867282,
+                  0.26078028834572436,
+                  0.018973680925328473
+                ],
+                "confidence": 1.0,
+                "text": "Chapter 7: Alkenes"
+              },
+              {
+                "bbox": [
+                  0.1067761719567181,
+                  0.8095930233341179,
+                  0.6919918037239269,
+                  0.015988371941245805
+                ],
+                "confidence": 1.0,
+                "text": "Alkenes are hydrocarbons that contain a carbon-carbon double bond."
+              },
+              {
+                "bbox": [
+                  0.10882957264718608,
+                  0.7848588539921901,
+                  0.5338808956861207,
+                  0.01753635585970925
+                ],
+                "confidence": 1.0,
+                "text": "The simplest alkene is ethene, with the formula C2H4."
+              },
+              {
+                "bbox": [
+                  0.10677618975299924,
+                  0.7630453377277531,
+                  0.6427104539421479,
+                  0.01602442964108408
+                ],
+                "confidence": 1.0,
+                "text": "Alkenes undergo addition reactions with hydrogen and halogens."
+              }
+            ],
+            "ocr_ms": 294,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 13,
+            "source": "ocr"
+          },
+          {
+            "chars": 55,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10882957796681088,
+                  0.8952095809410646,
+                  0.35728950915630664,
+                  0.026302047220430724
+                ],
+                "confidence": 0.5,
+                "text": "有机化学 第七草 烯烃"
+              },
+              {
+                "bbox": [
+                  0.1084357080910563,
+                  0.8486147529827028,
+                  0.23494758283068504,
+                  0.02350406304091046
+                ],
+                "confidence": 1.0,
+                "text": "烯烃是含有碳碳双键的烃。"
+              },
+              {
+                "bbox": [
+                  0.10882957478827558,
+                  0.8270348841061111,
+                  0.34907596315985867,
+                  0.017441859706229357
+                ],
+                "confidence": 0.5,
+                "text": "乙烯是最简单的烯烃，可以使湨水褪色。"
+              },
+              {
+                "bbox": [
+                  0.10868585698827168,
+                  0.8051410846757199,
+                  0.3144960414974116,
+                  0.02024698706138228
+                ],
+                "confidence": 1.0,
+                "text": "烯烃能够发生加成反应和聚合反应。"
+              }
+            ],
+            "ocr_ms": 175,
+            "page": 2,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 12,
+            "source": "ocr"
+          },
+          {
+            "chars": 112,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10849706666087286,
+                  0.8922693734711781,
+                  0.41140451857948535,
+                  0.032014837012115493
+                ],
+                "confidence": 0.5,
+                "text": "实验室安全 Lab Safety"
+              },
+              {
+                "bbox": [
+                  0.1088295678825674,
+                  0.8502906980616487,
+                  0.4743326503103272,
+                  0.017545058851674344
+                ],
+                "confidence": 1.0,
+                "text": "1. 进入实验室必须佩戴护目镜 Wear safety goggles"
+              },
+              {
+                "bbox": [
+                  0.10662534998650616,
+                  0.8254175871587658,
+                  0.5136436084161503,
+                  0.02023106012923581
+                ],
+                "confidence": 0.5,
+                "text": "2. 有机溶剂远离明火 Keep solvents away from flames"
+              },
+              {
+                "bbox": [
+                  0.10882957367574876,
+                  0.8052325582195443,
+                  0.44147842942298976,
+                  0.015988371941245805
+                ],
+                "confidence": 0.5,
+                "text": "3. 废液倒入指定容器 Use the waste containers"
+              }
+            ],
+            "ocr_ms": 127,
+            "page": 3,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 12,
+            "source": "ocr"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 4,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 4,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 34859073,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "5c2975a2042174758cf42e1cfd190e82efc3bc9843810f35f117ed1fa9982010",
+        "status": "ocr",
+        "text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七草 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers\n[Page 4]",
+        "timing": {
+          "ocr_ms": 596,
+          "reader_ms": 6,
+          "render_ms": 37,
+          "total_ms": 643
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [
+            "page 4: a scanned page past the OCR page limit (3)"
+          ],
+          "note": null,
+          "pages": [
+            {
+              "chars": 190,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10864519924091846,
+                    0.8923201083459463,
+                    0.3720738550483676,
+                    0.02919109465221348
+                  ],
+                  "confidence": 1.0,
+                  "text": "Organic Chemistry"
+                },
+                {
+                  "bbox": [
+                    0.108829568194951,
+                    0.8473053889867282,
+                    0.26078028834572436,
+                    0.018973680925328473
+                  ],
+                  "confidence": 1.0,
+                  "text": "Chapter 7: Alkenes"
+                },
+                {
+                  "bbox": [
+                    0.1067761719567181,
+                    0.8095930233341179,
+                    0.6919918037239269,
+                    0.015988371941245805
+                  ],
+                  "confidence": 1.0,
+                  "text": "Alkenes are hydrocarbons that contain a carbon-carbon double bond."
+                },
+                {
+                  "bbox": [
+                    0.10882957264718608,
+                    0.7848588539921901,
+                    0.5338808956861207,
+                    0.01753635585970925
+                  ],
+                  "confidence": 1.0,
+                  "text": "The simplest alkene is ethene, with the formula C2H4."
+                },
+                {
+                  "bbox": [
+                    0.10677618975299924,
+                    0.7630453377277531,
+                    0.6427104539421479,
+                    0.01602442964108408
+                  ],
+                  "confidence": 1.0,
+                  "text": "Alkenes undergo addition reactions with hydrogen and halogens."
+                }
+              ],
+              "ocr_ms": 375,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 13,
+              "source": "ocr"
+            },
+            {
+              "chars": 55,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10882957796681088,
+                    0.8952095809410646,
+                    0.35728950915630664,
+                    0.026302047220430724
+                  ],
+                  "confidence": 0.5,
+                  "text": "有机化学 第七草 烯烃"
+                },
+                {
+                  "bbox": [
+                    0.1084357080910563,
+                    0.8486147529827028,
+                    0.23494758283068504,
+                    0.02350406304091046
+                  ],
+                  "confidence": 1.0,
+                  "text": "烯烃是含有碳碳双键的烃。"
+                },
+                {
+                  "bbox": [
+                    0.10882957478827558,
+                    0.8270348841061111,
+                    0.34907596315985867,
+                    0.017441859706229357
+                  ],
+                  "confidence": 0.5,
+                  "text": "乙烯是最简单的烯烃，可以使湨水褪色。"
+                },
+                {
+                  "bbox": [
+                    0.10868585698827168,
+                    0.8051410846757199,
+                    0.3144960414974116,
+                    0.02024698706138228
+                  ],
+                  "confidence": 1.0,
+                  "text": "烯烃能够发生加成反应和聚合反应。"
+                }
+              ],
+              "ocr_ms": 176,
+              "page": 2,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 12,
+              "source": "ocr"
+            },
+            {
+              "chars": 112,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10849706666087286,
+                    0.8922693734711781,
+                    0.41140451857948535,
+                    0.032014837012115493
+                  ],
+                  "confidence": 0.5,
+                  "text": "实验室安全 Lab Safety"
+                },
+                {
+                  "bbox": [
+                    0.1088295678825674,
+                    0.8502906980616487,
+                    0.4743326503103272,
+                    0.017545058851674344
+                  ],
+                  "confidence": 1.0,
+                  "text": "1. 进入实验室必须佩戴护目镜 Wear safety goggles"
+                },
+                {
+                  "bbox": [
+                    0.10662534998650616,
+                    0.8254175871587658,
+                    0.5136436084161503,
+                    0.02023106012923581
+                  ],
+                  "confidence": 0.5,
+                  "text": "2. 有机溶剂远离明火 Keep solvents away from flames"
+                },
+                {
+                  "bbox": [
+                    0.10882957367574876,
+                    0.8052325582195443,
+                    0.44147842942298976,
+                    0.015988371941245805
+                  ],
+                  "confidence": 0.5,
+                  "text": "3. 废液倒入指定容器 Use the waste containers"
+                }
+              ],
+              "ocr_ms": 125,
+              "page": 3,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 13,
+              "source": "ocr"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 4,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 4,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七草 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers\n[Page 4]",
+          "timing": {
+            "ocr_ms": 676,
+            "reader_ms": 6,
+            "render_ms": 38,
+            "total_ms": 724
+          },
+          "usable_text": true
+        },
+        "child_pid": 34928,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 211403736,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 8.005167,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 211403736,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\nOrganic Chemistry\\nChapter 7: Alkenes\\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\\nThe simplest alkene is ethene, with the formula C2H4.\\nAlkenes undergo addition reactions with hydrogen and halogens.\\n[Page 2]\\n有机化学 第七草 烯烃\\n烯烃是含有碳碳双键的烃。\\n乙烯是最简单的烯烃，可以使湨水褪色。\\n烯烃能够发生加成反应和聚合反应。\\n[Page 3]\\n实验室安全 Lab Safety\\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\\n2. 有机溶剂远离明火 Keep solvents away from flames\\n3. 废液倒入指定容器 Use the waste containers\\n[Page 4]\",\"note\":null,\"left_out\":[\"page 4: a scanned page past the OCR page limit (3)\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":4},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":190,\"lines\":[{\"text\":\"Organic Chemistry\",\"confidence\":1.0,\"bbox\":[0.10864519924091846,0.8923201083459463,0.3720738550483676,0.02919109465221348]},{\"text\":\"Chapter 7: Alkenes\",\"confidence\":1.0,\"bbox\":[0.108829568194951,0.8473053889867282,0.26078028834572436,0.018973680925328473]},{\"text\":\"Alkenes are hydrocarbons that contain a carbon-carbon double bond.\",\"confidence\":1.0,\"bbox\":[0.1067761719567181,0.8095930233341179,0.6919918037239269,0.015988371941245805]},{\"text\":\"The simplest alkene is ethene, with the formula C2H4.\",\"confidence\":1.0,\"bbox\":[0.10882957264718607,0.7848588539921901,0.5338808956861207,0.01753635585970925]},{\"text\":\"Alkenes undergo addition reactions with hydrogen and halogens.\",\"confidence\":1.0,\"bbox\":[0.10677618975299923,0.7630453377277531,0.6427104539421479,0.01602442964108408]}],\"render_ms\":13,\"ocr_ms\":375,\"pixels\":[1654,2338],\"error\":null},{\"page\":2,\"source\":\"ocr\",\"chars\":55,\"lines\":[{\"text\":\"有机化学 第七草 烯烃\",\"confidence\":0.5,\"bbox\":[0.10882957796681089,0.8952095809410646,0.35728950915630664,0.026302047220430724]},{\"text\":\"烯烃是含有碳碳双键的烃。\",\"confidence\":1.0,\"bbox\":[0.1084357080910563,0.8486147529827028,0.23494758283068506,0.02350406304091046]},{\"text\":\"乙烯是最简单的烯烃，可以使湨水褪色。\",\"confidence\":0.5,\"bbox\":[0.10882957478827558,0.8270348841061111,0.34907596315985867,0.017441859706229357]},{\"text\":\"烯烃能够发生加成反应和聚合反应。\",\"confidence\":1.0,\"bbox\":[0.10868585698827167,0.8051410846757199,0.3144960414974116,0.020246987061382282]}],\"render_ms\":12,\"ocr_ms\":176,\"pixels\":[1654,2338],\"error\":null},{\"page\":3,\"source\":\"ocr\",\"chars\":112,\"lines\":[{\"text\":\"实验室安全 Lab Safety\",\"confidence\":0.5,\"bbox\":[0.10849706666087286,0.8922693734711781,0.41140451857948535,0.032014837012115493]},{\"text\":\"1. 进入实验室必须佩戴护目镜 Wear safety goggles\",\"confidence\":1.0,\"bbox\":[0.1088295678825674,0.8502906980616487,0.47433265031032723,0.017545058851674344]},{\"text\":\"2. 有机溶剂远离明火 Keep solvents away from flames\",\"confidence\":0.5,\"bbox\":[0.10662534998650615,0.8254175871587658,0.5136436084161503,0.02023106012923581]},{\"text\":\"3. 废液倒入指定容器 Use the waste containers\",\"confidence\":0.5,\"bbox\":[0.10882957367574876,0.8052325582195443,0.44147842942298976,0.015988371941245805]}],\"render_ms\":13,\"ocr_ms\":125,\"pixels\":[1654,2338],\"error\":null},{\"page\":4,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":6,\"render_ms\":38,\"ocr_ms\":676,\"total_ms\":724},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 211403736,
+        "samples": 123,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 769.885167
+      },
+      "verdict": "PASS"
+    },
+    "s07-text-layer-control.pdf": {
+      "input_sha256": "4d544f5b459d4a74314ac2b0fa4e114e4c070b40792d6d636777d5fdef531e2d",
+      "before": {
+        "bytes": 2802,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s07-text-layer-control.pdf",
+        "isolation": {
+          "acceptance_check_ms": 25.4645,
+          "child_pid": 34931,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 7307888,
+          "max_observation_gap_ms": 6.291334,
+          "max_rss_bytes": 24133632,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 7340656,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 8241824,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 7307888,
+          "samples": 4,
+          "stderr_bytes": 0,
+          "stdout_bytes": 1324,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 25
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 246,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 1,
+            "pixels": null,
+            "render_ms": null,
+            "source": "text_layer"
+          }
+        ],
+        "reader": {
+          "note": null,
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "complete"
+        },
+        "rust_peak_heap_bytes": 1915936,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "4d544f5b459d4a74314ac2b0fa4e114e4c070b40792d6d636777d5fdef531e2d",
+        "status": "text_layer",
+        "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1. 应用层 Application Layer：HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake：SYN、SYN-ACK、ACK\n阅读材料：教材第 5 章 5.1 至 5.3 节",
+        "timing": {
+          "ocr_ms": 0,
+          "reader_ms": 5,
+          "render_ms": 0,
+          "total_ms": 5
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 246,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 1,
+              "pixels": null,
+              "render_ms": null,
+              "source": "text_layer"
+            }
+          ],
+          "reader": {
+            "note": null,
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "complete"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "text_layer",
+          "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1. 应用层 Application Layer：HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake：SYN、SYN-ACK、ACK\n阅读材料：教材第 5 章 5.1 至 5.3 节",
+          "timing": {
+            "ocr_ms": 0,
+            "reader_ms": 5,
+            "render_ms": 0,
+            "total_ms": 5
+          },
+          "usable_text": true
+        },
+        "child_pid": 34934,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 6029864,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.270124999999999,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 6029864,
+        "raw_stdout": "{\"status\":\"text_layer\",\"usable_text\":true,\"text\":\"[Page 1]\\n计算机网络 Computer Networks\\n第二讲：TCP/IP 协议栈\\nLecture 2: The TCP/IP Protocol Stack\\n1. 应用层 Application Layer：HTTP、DNS、SMTP\\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\\n3. 网络层 Network Layer：IP 地址与路由选择\\n4. 链路层 Link Layer：以太网帧与 MAC 地址\\n三次握手 three-way handshake：SYN、SYN-ACK、ACK\\n阅读材料：教材第 5 章 5.1 至 5.3 节\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"complete\",\"note\":null,\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"text_layer\",\"chars\":246,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":5,\"render_ms\":0,\"ocr_ms\":0,\"total_ms\":5},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 4031016,
+        "samples": 2,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 12.910291
+      },
+      "verdict": "PASS"
+    },
+    "s08-mixed-layer-scan.pdf": {
+      "input_sha256": "5ad8f401bec3c905fb1589f5dfef494dd8d54236a6cffe5bd77b93c33ed03cc8",
+      "before": {
+        "bytes": 292238,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s08-mixed-layer-scan.pdf",
+        "isolation": {
+          "acceptance_check_ms": 404.452042,
+          "child_pid": 34936,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.311583,
+          "max_rss_bytes": 141017088,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 184992728,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 184992728,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 184976344,
+          "samples": 65,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2148,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 404
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 85,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 1,
+            "pixels": null,
+            "render_ms": null,
+            "source": "text_layer"
+          },
+          {
+            "chars": 72,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10882956785378713,
+                  0.8952095805743593,
+                  0.25872690184661234,
+                  0.027801539777587703
+                ],
+                "confidence": 1.0,
+                "text": "记忆三个阶段"
+              },
+              {
+                "bbox": [
+                  0.10853939344934464,
+                  0.8490279758271658,
+                  0.1606920050882803,
+                  0.01885139687230586
+                ],
+                "confidence": 1.0,
+                "text": "编码、储存和提取"
+              },
+              {
+                "bbox": [
+                  0.10645594501258115,
+                  0.8253544518043483,
+                  0.29449754412834417,
+                  0.02347838644088085
+                ],
+                "confidence": 1.0,
+                "text": "短时记忆的容量大约是七个项目。"
+              },
+              {
+                "bbox": [
+                  0.10882956701136248,
+                  0.8052325582188399,
+                  0.5195071901923367,
+                  0.015988371941245916
+                ],
+                "confidence": 1.0,
+                "text": "Working memory holds information for a short time."
+              }
+            ],
+            "ocr_ms": 357,
+            "page": 2,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 12,
+            "source": "ocr"
+          },
+          {
+            "chars": 89,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 3,
+            "pixels": null,
+            "render_ms": null,
+            "source": "text_layer"
+          }
+        ],
+        "reader": {
+          "note": "Not all of this PDF is in the text. Left out: scanned or image-only pages.",
+          "pages": 3,
+          "reader": "pdf-1",
+          "status": "partial"
+        },
+        "rust_peak_heap_bytes": 32929162,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "5ad8f401bec3c905fb1589f5dfef494dd8d54236a6cffe5bd77b93c33ed03cc8",
+        "status": "mixed",
+        "text": "[Page 1]\nIntroduction to Psychology\nWeek 6: Memory\nSensory memory, short-term memory and long-term memory.\n[Page 2]\n记忆三个阶段\n编码、储存和提取\n短时记忆的容量大约是七个项目。\nWorking memory holds information for a short time.\n[Page 3]\nSummary\nRehearsal helps move information into long-term memory.\nNext week: Learning and Conditioning.",
+        "timing": {
+          "ocr_ms": 357,
+          "reader_ms": 6,
+          "render_ms": 12,
+          "total_ms": 376
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 85,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 1,
+              "pixels": null,
+              "render_ms": null,
+              "source": "text_layer"
+            },
+            {
+              "chars": 72,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10882956785378713,
+                    0.8952095805743593,
+                    0.25872690184661234,
+                    0.027801539777587703
+                  ],
+                  "confidence": 1.0,
+                  "text": "记忆三个阶段"
+                },
+                {
+                  "bbox": [
+                    0.10853939344934464,
+                    0.8490279758271658,
+                    0.1606920050882803,
+                    0.01885139687230586
+                  ],
+                  "confidence": 1.0,
+                  "text": "编码、储存和提取"
+                },
+                {
+                  "bbox": [
+                    0.10645594501258115,
+                    0.8253544518043483,
+                    0.29449754412834417,
+                    0.02347838644088085
+                  ],
+                  "confidence": 1.0,
+                  "text": "短时记忆的容量大约是七个项目。"
+                },
+                {
+                  "bbox": [
+                    0.10882956701136248,
+                    0.8052325582188399,
+                    0.5195071901923367,
+                    0.015988371941245916
+                  ],
+                  "confidence": 1.0,
+                  "text": "Working memory holds information for a short time."
+                }
+              ],
+              "ocr_ms": 388,
+              "page": 2,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 12,
+              "source": "ocr"
+            },
+            {
+              "chars": 89,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 3,
+              "pixels": null,
+              "render_ms": null,
+              "source": "text_layer"
+            }
+          ],
+          "reader": {
+            "note": "Not all of this PDF is in the text. Left out: scanned or image-only pages.",
+            "pages": 3,
+            "reader": "pdf-1",
+            "status": "partial"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "mixed",
+          "text": "[Page 1]\nIntroduction to Psychology\nWeek 6: Memory\nSensory memory, short-term memory and long-term memory.\n[Page 2]\n记忆三个阶段\n编码、储存和提取\n短时记忆的容量大约是七个项目。\nWorking memory holds information for a short time.\n[Page 3]\nSummary\nRehearsal helps move information into long-term memory.\nNext week: Learning and Conditioning.",
+          "timing": {
+            "ocr_ms": 388,
+            "reader_ms": 6,
+            "render_ms": 12,
+            "total_ms": 407
+          },
+          "usable_text": true
+        },
+        "child_pid": 34938,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 184861632,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.343708,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 184861632,
+        "raw_stdout": "{\"status\":\"mixed\",\"usable_text\":true,\"text\":\"[Page 1]\\nIntroduction to Psychology\\nWeek 6: Memory\\nSensory memory, short-term memory and long-term memory.\\n[Page 2]\\n记忆三个阶段\\n编码、储存和提取\\n短时记忆的容量大约是七个项目。\\nWorking memory holds information for a short time.\\n[Page 3]\\nSummary\\nRehearsal helps move information into long-term memory.\\nNext week: Learning and Conditioning.\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"partial\",\"note\":\"Not all of this PDF is in the text. Left out: scanned or image-only pages.\",\"pages\":3},\"pages\":[{\"page\":1,\"source\":\"text_layer\",\"chars\":85,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":2,\"source\":\"ocr\",\"chars\":72,\"lines\":[{\"text\":\"记忆三个阶段\",\"confidence\":1.0,\"bbox\":[0.10882956785378711,0.8952095805743593,0.25872690184661234,0.027801539777587703]},{\"text\":\"编码、储存和提取\",\"confidence\":1.0,\"bbox\":[0.10853939344934464,0.8490279758271658,0.1606920050882803,0.01885139687230586]},{\"text\":\"短时记忆的容量大约是七个项目。\",\"confidence\":1.0,\"bbox\":[0.10645594501258117,0.8253544518043483,0.29449754412834417,0.02347838644088085]},{\"text\":\"Working memory holds information for a short time.\",\"confidence\":1.0,\"bbox\":[0.10882956701136248,0.8052325582188399,0.5195071901923367,0.015988371941245916]}],\"render_ms\":12,\"ocr_ms\":388,\"pixels\":[1654,2338],\"error\":null},{\"page\":3,\"source\":\"text_layer\",\"chars\":89,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":6,\"render_ms\":12,\"ocr_ms\":388,\"total_ms\":407},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 184828864,
+        "samples": 73,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 452.74491700000004
+      },
+      "verdict": "PASS"
+    },
+    "s09-no-text-image.pdf": {
+      "input_sha256": "2e241b07c1f49a15bf766f7fb66dab1edc42434d7cdc5b9ba043b5c785adb776",
+      "before": {
+        "bytes": 266654,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s09-no-text-image.pdf",
+        "isolation": {
+          "acceptance_check_ms": 298.066875,
+          "child_pid": 34940,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.305625,
+          "max_rss_bytes": 105299968,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 162251664,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 162251664,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 162251664,
+          "samples": 48,
+          "stderr_bytes": 0,
+          "stdout_bytes": 1160,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 298
+        },
+        "left_out": [
+          "page 1: a scanned page where OCR recognized too little text"
+        ],
+        "note": "OCR recognized too little text on the scanned pages.",
+        "pages": [
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": 239,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 13,
+            "source": "ocr_too_little"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 32342346,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "2e241b07c1f49a15bf766f7fb66dab1edc42434d7cdc5b9ba043b5c785adb776",
+        "status": "no_usable_text",
+        "text": "[Page 1]",
+        "timing": {
+          "ocr_ms": 239,
+          "reader_ms": 1,
+          "render_ms": 13,
+          "total_ms": 254
+        },
+        "usable_text": false,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [
+            "page 1: a scanned page where OCR recognized too little text"
+          ],
+          "note": "OCR recognized too little text on the scanned pages.",
+          "pages": [
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": 273,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 13,
+              "source": "ocr_too_little"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "no_usable_text",
+          "text": "[Page 1]",
+          "timing": {
+            "ocr_ms": 273,
+            "reader_ms": 1,
+            "render_ms": 13,
+            "total_ms": 288
+          },
+          "usable_text": false
+        },
+        "child_pid": 34942,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 162153384,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.277917,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 162153384,
+        "raw_stdout": "{\"status\":\"no_usable_text\",\"usable_text\":false,\"text\":\"[Page 1]\",\"note\":\"OCR recognized too little text on the scanned pages.\",\"left_out\":[\"page 1: a scanned page where OCR recognized too little text\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr_too_little\",\"chars\":0,\"lines\":[],\"render_ms\":13,\"ocr_ms\":273,\"pixels\":[1654,2338],\"error\":null}],\"timing\":{\"reader_ms\":1,\"render_ms\":13,\"ocr_ms\":273,\"total_ms\":288},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 162153384,
+        "samples": 52,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 323.441375
+      },
+      "verdict": "PASS"
+    },
+    "s10-blank-scan.pdf": {
+      "input_sha256": "06c28f681c22c8f16080b815e10dd89c40baacbe61f0dad14db5a95ae3f8eb12",
+      "before": {
+        "bytes": 401948,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s10-blank-scan.pdf",
+        "isolation": {
+          "acceptance_check_ms": 270.652875,
+          "child_pid": 34944,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.286125,
+          "max_rss_bytes": 101351424,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 157631376,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 157631376,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 152191888,
+          "samples": 44,
+          "stderr_bytes": 0,
+          "stdout_bytes": 1160,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 270
+        },
+        "left_out": [
+          "page 1: a scanned page where OCR recognized too little text"
+        ],
+        "note": "OCR recognized too little text on the scanned pages.",
+        "pages": [
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": 228,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 14,
+            "source": "ocr_too_little"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 32477640,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "06c28f681c22c8f16080b815e10dd89c40baacbe61f0dad14db5a95ae3f8eb12",
+        "status": "no_usable_text",
+        "text": "[Page 1]",
+        "timing": {
+          "ocr_ms": 228,
+          "reader_ms": 2,
+          "render_ms": 14,
+          "total_ms": 245
+        },
+        "usable_text": false,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [
+            "page 1: a scanned page where OCR recognized too little text"
+          ],
+          "note": "OCR recognized too little text on the scanned pages.",
+          "pages": [
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": 224,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 14,
+              "source": "ocr_too_little"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "no_usable_text",
+          "text": "[Page 1]",
+          "timing": {
+            "ocr_ms": 224,
+            "reader_ms": 2,
+            "render_ms": 14,
+            "total_ms": 241
+          },
+          "usable_text": false
+        },
+        "child_pid": 34946,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 157664144,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.28625,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 157664144,
+        "raw_stdout": "{\"status\":\"no_usable_text\",\"usable_text\":false,\"text\":\"[Page 1]\",\"note\":\"OCR recognized too little text on the scanned pages.\",\"left_out\":[\"page 1: a scanned page where OCR recognized too little text\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr_too_little\",\"chars\":0,\"lines\":[],\"render_ms\":14,\"ocr_ms\":224,\"pixels\":[1654,2338],\"error\":null}],\"timing\":{\"reader_ms\":2,\"render_ms\":14,\"ocr_ms\":224,\"total_ms\":241},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 156025744,
+        "samples": 44,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 273.490292
+      },
+      "verdict": "PASS"
+    },
+    "s11-slide-scan.pdf": {
+      "input_sha256": "34783d680eb35c57ccb1d1985020de6bbffe855c00a62b4f48e80437e749e0d6",
+      "before": {
+        "bytes": 114979,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s11-slide-scan.pdf",
+        "isolation": {
+          "acceptance_check_ms": 421.517541,
+          "child_pid": 34948,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.299291,
+          "max_rss_bytes": 117571584,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 159990696,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 159990696,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 159892392,
+          "samples": 68,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2012,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 421
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 96,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.08996230501383667,
+                  0.7713320665354813,
+                  0.8244475708007812,
+                  0.07129659364744356
+                ],
+                "confidence": 0.5,
+                "text": "数据结构与算法 Data Structures and Algorithms"
+              },
+              {
+                "bbox": [
+                  0.0874999997933744,
+                  0.6740674953860647,
+                  0.5125,
+                  0.0666732449302877
+                ],
+                "confidence": 0.5,
+                "text": "第八讲 图旳遍历 Graph Traversal"
+              },
+              {
+                "bbox": [
+                  0.08749999469443867,
+                  0.5999999985505817,
+                  0.4333333435058594,
+                  0.059259262220474174
+                ],
+                "confidence": 0.5,
+                "text": "深度优先搜索 DFS：使用栈或递归"
+              },
+              {
+                "bbox": [
+                  0.09156977309305352,
+                  0.528350515998249,
+                  0.3706395263671875,
+                  0.051578435338835105
+                ],
+                "confidence": 0.5,
+                "text": "广度优先搜索 BFS：使用队列"
+              },
+              {
+                "bbox": [
+                  0.08968810152258379,
+                  0.43875300625026736,
+                  0.2683955383300781,
+                  0.06617315031495452
+                ],
+                "confidence": 0.30000001192092896,
+                "text": "时间复杂度 O（V +E）"
+              }
+            ],
+            "ocr_ms": 386,
+            "page": 1,
+            "pixels": [
+              1999,
+              1125
+            ],
+            "render_ms": 6,
+            "source": "ocr"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 14794431,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "34783d680eb35c57ccb1d1985020de6bbffe855c00a62b4f48e80437e749e0d6",
+        "status": "ocr",
+        "text": "[Page 1]\n数据结构与算法 Data Structures and Algorithms\n第八讲 图旳遍历 Graph Traversal\n深度优先搜索 DFS：使用栈或递归\n广度优先搜索 BFS：使用队列\n时间复杂度 O（V +E）",
+        "timing": {
+          "ocr_ms": 386,
+          "reader_ms": 0,
+          "render_ms": 6,
+          "total_ms": 393
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 96,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.08996230501383667,
+                    0.7713320665354813,
+                    0.8244475708007812,
+                    0.07129659364744356
+                  ],
+                  "confidence": 0.5,
+                  "text": "数据结构与算法 Data Structures and Algorithms"
+                },
+                {
+                  "bbox": [
+                    0.0874999997933744,
+                    0.6740674953860647,
+                    0.5125,
+                    0.0666732449302877
+                  ],
+                  "confidence": 0.5,
+                  "text": "第八讲 图旳遍历 Graph Traversal"
+                },
+                {
+                  "bbox": [
+                    0.08749999469443867,
+                    0.5999999985505817,
+                    0.4333333435058594,
+                    0.059259262220474174
+                  ],
+                  "confidence": 0.5,
+                  "text": "深度优先搜索 DFS：使用栈或递归"
+                },
+                {
+                  "bbox": [
+                    0.09156977309305352,
+                    0.528350515998249,
+                    0.3706395263671875,
+                    0.051578435338835105
+                  ],
+                  "confidence": 0.5,
+                  "text": "广度优先搜索 BFS：使用队列"
+                },
+                {
+                  "bbox": [
+                    0.08968810152258379,
+                    0.43875300625026736,
+                    0.2683955383300781,
+                    0.06617315031495452
+                  ],
+                  "confidence": 0.3,
+                  "text": "时间复杂度 O（V +E）"
+                }
+              ],
+              "ocr_ms": 381,
+              "page": 1,
+              "pixels": [
+                1999,
+                1125
+              ],
+              "render_ms": 5,
+              "source": "ocr"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\n数据结构与算法 Data Structures and Algorithms\n第八讲 图旳遍历 Graph Traversal\n深度优先搜索 DFS：使用栈或递归\n广度优先搜索 BFS：使用队列\n时间复杂度 O（V +E）",
+          "timing": {
+            "ocr_ms": 381,
+            "reader_ms": 0,
+            "render_ms": 5,
+            "total_ms": 388
+          },
+          "usable_text": true
+        },
+        "child_pid": 34950,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 159990696,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.345292,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 159990696,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\n数据结构与算法 Data Structures and Algorithms\\n第八讲 图旳遍历 Graph Traversal\\n深度优先搜索 DFS：使用栈或递归\\n广度优先搜索 BFS：使用队列\\n时间复杂度 O（V +E）\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":96,\"lines\":[{\"text\":\"数据结构与算法 Data Structures and Algorithms\",\"confidence\":0.5,\"bbox\":[0.08996230501383667,0.7713320665354813,0.8244475708007812,0.07129659364744356]},{\"text\":\"第八讲 图旳遍历 Graph Traversal\",\"confidence\":0.5,\"bbox\":[0.0874999997933744,0.6740674953860647,0.5125,0.0666732449302877]},{\"text\":\"深度优先搜索 DFS：使用栈或递归\",\"confidence\":0.5,\"bbox\":[0.08749999469443867,0.5999999985505817,0.4333333435058594,0.059259262220474174]},{\"text\":\"广度优先搜索 BFS：使用队列\",\"confidence\":0.5,\"bbox\":[0.09156977309305353,0.528350515998249,0.3706395263671875,0.051578435338835105]},{\"text\":\"时间复杂度 O（V +E）\",\"confidence\":0.3,\"bbox\":[0.08968810152258379,0.43875300625026736,0.2683955383300781,0.06617315031495452]}],\"render_ms\":5,\"ocr_ms\":381,\"pixels\":[1999,1125],\"error\":null}],\"timing\":{\"reader_ms\":0,\"render_ms\":5,\"ocr_ms\":381,\"total_ms\":388},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 159941544,
+        "samples": 66,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 406.424584
+      },
+      "verdict": "PASS"
+    },
+    "s12-two-column.pdf": {
+      "input_sha256": "4c4b518a8b700b0ccbc6bc6b28c9eb36cd8a1c445d9605a6a13d0cc80b31ec06",
+      "before": {
+        "bytes": 221842,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s12-two-column.pdf",
+        "isolation": {
+          "acceptance_check_ms": 315.123542,
+          "child_pid": 34954,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 6.295208,
+          "max_rss_bytes": 107888640,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 162104232,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 162104232,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 162071464,
+          "samples": 51,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2636,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 315
+        },
+        "left_out": [],
+        "note": null,
+        "pages": [
+          {
+            "chars": 188,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10882956695486164,
+                  0.9011627910892304,
+                  0.16221766258525733,
+                  0.017441859706229246
+                ],
+                "confidence": 1.0,
+                "text": "Photosynthesis"
+              },
+              {
+                "bbox": [
+                  0.1067761818569393,
+                  0.8763900773784166,
+                  0.21765913496282688,
+                  0.01459829495236642
+                ],
+                "confidence": 1.0,
+                "text": "Plants capture light energy"
+              },
+              {
+                "bbox": [
+                  0.10677618009203577,
+                  0.8531976746943479,
+                  0.1868583190253741,
+                  0.015988371941245916
+                ],
+                "confidence": 1.0,
+                "text": "and store it in glucose."
+              },
+              {
+                "bbox": [
+                  0.10677618257256365,
+                  0.8313953486411407,
+                  0.19507186502182208,
+                  0.014626892944805904
+                ],
+                "confidence": 1.0,
+                "text": "The process takes place"
+              },
+              {
+                "bbox": [
+                  0.10472278995609204,
+                  0.8079555171312858,
+                  0.16016427608614534,
+                  0.01471890171334922
+                ],
+                "confidence": 1.0,
+                "text": "in the chloroplasts."
+              },
+              {
+                "bbox": [
+                  0.5297741316838471,
+                  0.9011627910863956,
+                  0.22587268095927493,
+                  0.01757116945917736
+                ],
+                "confidence": 1.0,
+                "text": "Cellular Respiration"
+              },
+              {
+                "bbox": [
+                  0.5274928754978284,
+                  0.8761960561739719,
+                  0.16682609364372347,
+                  0.0156118639317
+                ],
+                "confidence": 1.0,
+                "text": "Cells release energy"
+              },
+              {
+                "bbox": [
+                  0.5215605720221809,
+                  0.8531976745944206,
+                  0.23203285890738368,
+                  0.015988371941245805
+                ],
+                "confidence": 1.0,
+                "text": "by breaking down glucose."
+              },
+              {
+                "bbox": [
+                  0.5273448883320598,
+                  0.8303890011527115,
+                  0.15682977863205672,
+                  0.0170720469961827
+                ],
+                "confidence": 1.0,
+                "text": "Most of it happens"
+              },
+              {
+                "bbox": [
+                  0.523354712811792,
+                  0.8094511381157252,
+                  0.17511331357575377,
+                  0.01541635988103318
+                ],
+                "confidence": 1.0,
+                "text": "in the mitochondria."
+              }
+            ],
+            "ocr_ms": 282,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 12,
+            "source": "ocr"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 1,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 32035390,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "4c4b518a8b700b0ccbc6bc6b28c9eb36cd8a1c445d9605a6a13d0cc80b31ec06",
+        "status": "ocr",
+        "text": "[Page 1]\nPhotosynthesis\nPlants capture light energy\nand store it in glucose.\nThe process takes place\nin the chloroplasts.\nCellular Respiration\nCells release energy\nby breaking down glucose.\nMost of it happens\nin the mitochondria.",
+        "timing": {
+          "ocr_ms": 282,
+          "reader_ms": 1,
+          "render_ms": 12,
+          "total_ms": 296
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": null,
+          "pages": [
+            {
+              "chars": 188,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10882956695486164,
+                    0.9011627910892304,
+                    0.16221766258525733,
+                    0.017441859706229246
+                  ],
+                  "confidence": 1.0,
+                  "text": "Photosynthesis"
+                },
+                {
+                  "bbox": [
+                    0.1067761818569393,
+                    0.8763900773784166,
+                    0.21765913496282688,
+                    0.01459829495236642
+                  ],
+                  "confidence": 1.0,
+                  "text": "Plants capture light energy"
+                },
+                {
+                  "bbox": [
+                    0.10677618009203577,
+                    0.8531976746943479,
+                    0.1868583190253741,
+                    0.015988371941245916
+                  ],
+                  "confidence": 1.0,
+                  "text": "and store it in glucose."
+                },
+                {
+                  "bbox": [
+                    0.10677618257256365,
+                    0.8313953486411407,
+                    0.19507186502182208,
+                    0.014626892944805904
+                  ],
+                  "confidence": 1.0,
+                  "text": "The process takes place"
+                },
+                {
+                  "bbox": [
+                    0.10472278995609204,
+                    0.8079555171312858,
+                    0.16016427608614534,
+                    0.01471890171334922
+                  ],
+                  "confidence": 1.0,
+                  "text": "in the chloroplasts."
+                },
+                {
+                  "bbox": [
+                    0.5297741316838471,
+                    0.9011627910863956,
+                    0.22587268095927493,
+                    0.01757116945917736
+                  ],
+                  "confidence": 1.0,
+                  "text": "Cellular Respiration"
+                },
+                {
+                  "bbox": [
+                    0.5274928754978284,
+                    0.8761960561739719,
+                    0.16682609364372347,
+                    0.0156118639317
+                  ],
+                  "confidence": 1.0,
+                  "text": "Cells release energy"
+                },
+                {
+                  "bbox": [
+                    0.5215605720221809,
+                    0.8531976745944206,
+                    0.23203285890738368,
+                    0.015988371941245805
+                  ],
+                  "confidence": 1.0,
+                  "text": "by breaking down glucose."
+                },
+                {
+                  "bbox": [
+                    0.5273448883320598,
+                    0.8303890011527115,
+                    0.15682977863205672,
+                    0.0170720469961827
+                  ],
+                  "confidence": 1.0,
+                  "text": "Most of it happens"
+                },
+                {
+                  "bbox": [
+                    0.523354712811792,
+                    0.8094511381157252,
+                    0.17511331357575377,
+                    0.01541635988103318
+                  ],
+                  "confidence": 1.0,
+                  "text": "in the mitochondria."
+                }
+              ],
+              "ocr_ms": 315,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 13,
+              "source": "ocr"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 1,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\nPhotosynthesis\nPlants capture light energy\nand store it in glucose.\nThe process takes place\nin the chloroplasts.\nCellular Respiration\nCells release energy\nby breaking down glucose.\nMost of it happens\nin the mitochondria.",
+          "timing": {
+            "ocr_ms": 315,
+            "reader_ms": 1,
+            "render_ms": 13,
+            "total_ms": 329
+          },
+          "usable_text": true
+        },
+        "child_pid": 34956,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 162382760,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.37725,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 162382760,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\nPhotosynthesis\\nPlants capture light energy\\nand store it in glucose.\\nThe process takes place\\nin the chloroplasts.\\nCellular Respiration\\nCells release energy\\nby breaking down glucose.\\nMost of it happens\\nin the mitochondria.\",\"note\":null,\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":1},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":188,\"lines\":[{\"text\":\"Photosynthesis\",\"confidence\":1.0,\"bbox\":[0.10882956695486164,0.9011627910892304,0.16221766258525733,0.017441859706229246]},{\"text\":\"Plants capture light energy\",\"confidence\":1.0,\"bbox\":[0.1067761818569393,0.8763900773784166,0.21765913496282688,0.01459829495236642]},{\"text\":\"and store it in glucose.\",\"confidence\":1.0,\"bbox\":[0.10677618009203575,0.8531976746943479,0.1868583190253741,0.015988371941245916]},{\"text\":\"The process takes place\",\"confidence\":1.0,\"bbox\":[0.10677618257256363,0.8313953486411407,0.19507186502182208,0.014626892944805903]},{\"text\":\"in the chloroplasts.\",\"confidence\":1.0,\"bbox\":[0.10472278995609205,0.8079555171312858,0.16016427608614534,0.01471890171334922]},{\"text\":\"Cellular Respiration\",\"confidence\":1.0,\"bbox\":[0.5297741316838471,0.9011627910863955,0.22587268095927493,0.01757116945917736]},{\"text\":\"Cells release energy\",\"confidence\":1.0,\"bbox\":[0.5274928754978284,0.8761960561739719,0.16682609364372347,0.015611863931699999]},{\"text\":\"by breaking down glucose.\",\"confidence\":1.0,\"bbox\":[0.5215605720221809,0.8531976745944206,0.23203285890738368,0.015988371941245805]},{\"text\":\"Most of it happens\",\"confidence\":1.0,\"bbox\":[0.5273448883320598,0.8303890011527115,0.15682977863205672,0.0170720469961827]},{\"text\":\"in the mitochondria.\",\"confidence\":1.0,\"bbox\":[0.523354712811792,0.8094511381157252,0.17511331357575377,0.015416359881033181]}],\"render_ms\":13,\"ocr_ms\":315,\"pixels\":[1654,2338],\"error\":null}],\"timing\":{\"reader_ms\":1,\"render_ms\":13,\"ocr_ms\":315,\"total_ms\":329},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 161547176,
+        "samples": 59,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 365.03108299999997
+      },
+      "verdict": "PASS"
+    },
+    "s13-long-scan.pdf": {
+      "input_sha256": "185f9763a9e29295fef8f3d3854eef185d12c3978990b005066349124674fe23",
+      "before": {
+        "bytes": 3597586,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s13-long-scan.pdf",
+        "isolation": {
+          "acceptance_check_ms": 774.609958,
+          "child_pid": 34958,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 0,
+          "max_observation_gap_ms": 8.477375,
+          "max_rss_bytes": 180240384,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 224363528,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 224363528,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 224363528,
+          "samples": 125,
+          "stderr_bytes": 0,
+          "stdout_bytes": 5632,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 774
+        },
+        "left_out": [
+          "page 4: a scanned page past the OCR page limit (3)",
+          "page 5: a scanned page past the OCR page limit (3)",
+          "page 6: a scanned page past the OCR page limit (3)",
+          "page 7: a scanned page past the OCR page limit (3)",
+          "page 8: a scanned page past the OCR page limit (3)",
+          "page 9: a scanned page past the OCR page limit (3)",
+          "page 10: a scanned page past the OCR page limit (3)",
+          "page 11: a scanned page past the OCR page limit (3)",
+          "page 12: a scanned page past the OCR page limit (3)"
+        ],
+        "note": null,
+        "pages": [
+          {
+            "chars": 190,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10864520092933846,
+                  0.8923100868787717,
+                  0.37409842144044736,
+                  0.029201115982669168
+                ],
+                "confidence": 1.0,
+                "text": "Organic Chemistry"
+              },
+              {
+                "bbox": [
+                  0.10882956819295282,
+                  0.8473053889868777,
+                  0.26078028834572436,
+                  0.018973680925328473
+                ],
+                "confidence": 1.0,
+                "text": "Chapter 7: Alkenes"
+              },
+              {
+                "bbox": [
+                  0.1067761719567181,
+                  0.8095930233341179,
+                  0.6919918037239269,
+                  0.015988371941245805
+                ],
+                "confidence": 1.0,
+                "text": "Alkenes are hydrocarbons that contain a carbon-carbon double bond."
+              },
+              {
+                "bbox": [
+                  0.1067761853530972,
+                  0.7848588539921901,
+                  0.5359342821852328,
+                  0.01753635585970925
+                ],
+                "confidence": 1.0,
+                "text": "The simplest alkene is ethene, with the formula C2H4."
+              },
+              {
+                "bbox": [
+                  0.10677618975299924,
+                  0.7630453377277531,
+                  0.6427104539421479,
+                  0.01602442964108408
+                ],
+                "confidence": 1.0,
+                "text": "Alkenes undergo addition reactions with hydrogen and halogens."
+              }
+            ],
+            "ocr_ms": 306,
+            "page": 1,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 13,
+            "source": "ocr"
+          },
+          {
+            "chars": 55,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.1088295782284575,
+                  0.8952095806181947,
+                  0.3552361226571947,
+                  0.02780153977758759
+                ],
+                "confidence": 0.5,
+                "text": "有机化学 第七章 烯烃"
+              },
+              {
+                "bbox": [
+                  0.1084357080910563,
+                  0.8486147529827028,
+                  0.23494758283068504,
+                  0.02350406304091046
+                ],
+                "confidence": 1.0,
+                "text": "烯烃是含有碳碳双键的烃。"
+              },
+              {
+                "bbox": [
+                  0.10882957558321862,
+                  0.8270348841061111,
+                  0.3511293496589707,
+                  0.017441859706229357
+                ],
+                "confidence": 1.0,
+                "text": "乙烯是最简单的烯烃，可以使湨水褪色。"
+              },
+              {
+                "bbox": [
+                  0.10868585698827168,
+                  0.8051410846757199,
+                  0.3144960414974116,
+                  0.02024698706138228
+                ],
+                "confidence": 1.0,
+                "text": "烯烃能够发生加成反应和聚合反应。"
+              }
+            ],
+            "ocr_ms": 214,
+            "page": 2,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 12,
+            "source": "ocr"
+          },
+          {
+            "chars": 112,
+            "error": null,
+            "lines": [
+              {
+                "bbox": [
+                  0.10849548787205372,
+                  0.8922684376349415,
+                  0.4114080980293984,
+                  0.03202293467786799
+                ],
+                "confidence": 0.5,
+                "text": "实验室安全 Lab Safety"
+              },
+              {
+                "bbox": [
+                  0.1088295678825674,
+                  0.8502906980616487,
+                  0.4743326503103272,
+                  0.017545058851674344
+                ],
+                "confidence": 1.0,
+                "text": "1. 进入实验室必须佩戴护目镜 Wear safety goggles"
+              },
+              {
+                "bbox": [
+                  0.1067761763865649,
+                  0.8284858856079363,
+                  0.5133470306950008,
+                  0.015990858510378847
+                ],
+                "confidence": 0.5,
+                "text": "2. 有机溶剂远离明火 Keep solvents away from flames"
+              },
+              {
+                "bbox": [
+                  0.10882957367574876,
+                  0.8052325582195443,
+                  0.44147842942298976,
+                  0.015988371941245805
+                ],
+                "confidence": 0.5,
+                "text": "3. 废液倒入指定容器 Use the waste containers"
+              }
+            ],
+            "ocr_ms": 148,
+            "page": 3,
+            "pixels": [
+              1654,
+              2338
+            ],
+            "render_ms": 14,
+            "source": "ocr"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 4,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 5,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 6,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 7,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 8,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 9,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 10,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 11,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          },
+          {
+            "chars": 0,
+            "error": null,
+            "lines": [],
+            "ocr_ms": null,
+            "page": 12,
+            "pixels": null,
+            "render_ms": null,
+            "source": "not_read_page_limit"
+          }
+        ],
+        "reader": {
+          "note": "No page has a text layer that this reader can use. 12 of 12 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "pages": 12,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 39377563,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "185f9763a9e29295fef8f3d3854eef185d12c3978990b005066349124674fe23",
+        "status": "ocr",
+        "text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七章 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers\n[Page 4]\n[Page 5]\n[Page 6]\n[Page 7]\n[Page 8]\n[Page 9]\n[Page 10]\n[Page 11]\n[Page 12]",
+        "timing": {
+          "ocr_ms": 668,
+          "reader_ms": 20,
+          "render_ms": 39,
+          "total_ms": 731
+        },
+        "usable_text": true,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [
+            "page 4: a scanned page past the OCR page limit (3)",
+            "page 5: a scanned page past the OCR page limit (3)",
+            "page 6: a scanned page past the OCR page limit (3)",
+            "page 7: a scanned page past the OCR page limit (3)",
+            "page 8: a scanned page past the OCR page limit (3)",
+            "page 9: a scanned page past the OCR page limit (3)",
+            "page 10: a scanned page past the OCR page limit (3)",
+            "page 11: a scanned page past the OCR page limit (3)",
+            "page 12: a scanned page past the OCR page limit (3)"
+          ],
+          "note": null,
+          "pages": [
+            {
+              "chars": 190,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10864520092933846,
+                    0.8923100868787717,
+                    0.37409842144044736,
+                    0.029201115982669168
+                  ],
+                  "confidence": 1.0,
+                  "text": "Organic Chemistry"
+                },
+                {
+                  "bbox": [
+                    0.10882956819295282,
+                    0.8473053889868777,
+                    0.26078028834572436,
+                    0.018973680925328473
+                  ],
+                  "confidence": 1.0,
+                  "text": "Chapter 7: Alkenes"
+                },
+                {
+                  "bbox": [
+                    0.1067761719567181,
+                    0.8095930233341179,
+                    0.6919918037239269,
+                    0.015988371941245805
+                  ],
+                  "confidence": 1.0,
+                  "text": "Alkenes are hydrocarbons that contain a carbon-carbon double bond."
+                },
+                {
+                  "bbox": [
+                    0.1067761853530972,
+                    0.7848588539921901,
+                    0.5359342821852328,
+                    0.01753635585970925
+                  ],
+                  "confidence": 1.0,
+                  "text": "The simplest alkene is ethene, with the formula C2H4."
+                },
+                {
+                  "bbox": [
+                    0.10677618975299924,
+                    0.7630453377277531,
+                    0.6427104539421479,
+                    0.01602442964108408
+                  ],
+                  "confidence": 1.0,
+                  "text": "Alkenes undergo addition reactions with hydrogen and halogens."
+                }
+              ],
+              "ocr_ms": 365,
+              "page": 1,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 15,
+              "source": "ocr"
+            },
+            {
+              "chars": 55,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.1088295782284575,
+                    0.8952095806181947,
+                    0.3552361226571947,
+                    0.02780153977758759
+                  ],
+                  "confidence": 0.5,
+                  "text": "有机化学 第七章 烯烃"
+                },
+                {
+                  "bbox": [
+                    0.1084357080910563,
+                    0.8486147529827028,
+                    0.23494758283068504,
+                    0.02350406304091046
+                  ],
+                  "confidence": 1.0,
+                  "text": "烯烃是含有碳碳双键的烃。"
+                },
+                {
+                  "bbox": [
+                    0.10882957558321862,
+                    0.8270348841061111,
+                    0.3511293496589707,
+                    0.017441859706229357
+                  ],
+                  "confidence": 1.0,
+                  "text": "乙烯是最简单的烯烃，可以使湨水褪色。"
+                },
+                {
+                  "bbox": [
+                    0.10868585698827168,
+                    0.8051410846757199,
+                    0.3144960414974116,
+                    0.02024698706138228
+                  ],
+                  "confidence": 1.0,
+                  "text": "烯烃能够发生加成反应和聚合反应。"
+                }
+              ],
+              "ocr_ms": 189,
+              "page": 2,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 16,
+              "source": "ocr"
+            },
+            {
+              "chars": 112,
+              "error": null,
+              "lines": [
+                {
+                  "bbox": [
+                    0.10849548787205372,
+                    0.8922684376349415,
+                    0.4114080980293984,
+                    0.03202293467786799
+                  ],
+                  "confidence": 0.5,
+                  "text": "实验室安全 Lab Safety"
+                },
+                {
+                  "bbox": [
+                    0.1088295678825674,
+                    0.8502906980616487,
+                    0.4743326503103272,
+                    0.017545058851674344
+                  ],
+                  "confidence": 1.0,
+                  "text": "1. 进入实验室必须佩戴护目镜 Wear safety goggles"
+                },
+                {
+                  "bbox": [
+                    0.1067761763865649,
+                    0.8284858856079363,
+                    0.5133470306950008,
+                    0.015990858510378847
+                  ],
+                  "confidence": 0.5,
+                  "text": "2. 有机溶剂远离明火 Keep solvents away from flames"
+                },
+                {
+                  "bbox": [
+                    0.10882957367574876,
+                    0.8052325582195443,
+                    0.44147842942298976,
+                    0.015988371941245805
+                  ],
+                  "confidence": 0.5,
+                  "text": "3. 废液倒入指定容器 Use the waste containers"
+                }
+              ],
+              "ocr_ms": 134,
+              "page": 3,
+              "pixels": [
+                1654,
+                2338
+              ],
+              "render_ms": 12,
+              "source": "ocr"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 4,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 5,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 6,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 7,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 8,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 9,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 10,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 11,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            },
+            {
+              "chars": 0,
+              "error": null,
+              "lines": [],
+              "ocr_ms": null,
+              "page": 12,
+              "pixels": null,
+              "render_ms": null,
+              "source": "not_read_page_limit"
+            }
+          ],
+          "reader": {
+            "note": "No page has a text layer that this reader can use. 12 of 12 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+            "pages": 12,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "ocr",
+          "text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七章 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers\n[Page 4]\n[Page 5]\n[Page 6]\n[Page 7]\n[Page 8]\n[Page 9]\n[Page 10]\n[Page 11]\n[Page 12]",
+          "timing": {
+            "ocr_ms": 688,
+            "reader_ms": 22,
+            "render_ms": 43,
+            "total_ms": 757
+          },
+          "usable_text": true
+        },
+        "child_pid": 34974,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 219251672,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 34.416042,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 219251672,
+        "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\nOrganic Chemistry\\nChapter 7: Alkenes\\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\\nThe simplest alkene is ethene, with the formula C2H4.\\nAlkenes undergo addition reactions with hydrogen and halogens.\\n[Page 2]\\n有机化学 第七章 烯烃\\n烯烃是含有碳碳双键的烃。\\n乙烯是最简单的烯烃，可以使湨水褪色。\\n烯烃能够发生加成反应和聚合反应。\\n[Page 3]\\n实验室安全 Lab Safety\\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\\n2. 有机溶剂远离明火 Keep solvents away from flames\\n3. 废液倒入指定容器 Use the waste containers\\n[Page 4]\\n[Page 5]\\n[Page 6]\\n[Page 7]\\n[Page 8]\\n[Page 9]\\n[Page 10]\\n[Page 11]\\n[Page 12]\",\"note\":null,\"left_out\":[\"page 4: a scanned page past the OCR page limit (3)\",\"page 5: a scanned page past the OCR page limit (3)\",\"page 6: a scanned page past the OCR page limit (3)\",\"page 7: a scanned page past the OCR page limit (3)\",\"page 8: a scanned page past the OCR page limit (3)\",\"page 9: a scanned page past the OCR page limit (3)\",\"page 10: a scanned page past the OCR page limit (3)\",\"page 11: a scanned page past the OCR page limit (3)\",\"page 12: a scanned page past the OCR page limit (3)\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 12 of 12 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":12},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":190,\"lines\":[{\"text\":\"Organic Chemistry\",\"confidence\":1.0,\"bbox\":[0.10864520092933846,0.8923100868787717,0.37409842144044736,0.029201115982669168]},{\"text\":\"Chapter 7: Alkenes\",\"confidence\":1.0,\"bbox\":[0.10882956819295282,0.8473053889868777,0.26078028834572436,0.018973680925328473]},{\"text\":\"Alkenes are hydrocarbons that contain a carbon-carbon double bond.\",\"confidence\":1.0,\"bbox\":[0.1067761719567181,0.8095930233341179,0.6919918037239269,0.015988371941245805]},{\"text\":\"The simplest alkene is ethene, with the formula C2H4.\",\"confidence\":1.0,\"bbox\":[0.1067761853530972,0.7848588539921901,0.5359342821852328,0.01753635585970925]},{\"text\":\"Alkenes undergo addition reactions with hydrogen and halogens.\",\"confidence\":1.0,\"bbox\":[0.10677618975299923,0.7630453377277531,0.6427104539421479,0.01602442964108408]}],\"render_ms\":15,\"ocr_ms\":365,\"pixels\":[1654,2338],\"error\":null},{\"page\":2,\"source\":\"ocr\",\"chars\":55,\"lines\":[{\"text\":\"有机化学 第七章 烯烃\",\"confidence\":0.5,\"bbox\":[0.1088295782284575,0.8952095806181947,0.3552361226571947,0.02780153977758759]},{\"text\":\"烯烃是含有碳碳双键的烃。\",\"confidence\":1.0,\"bbox\":[0.1084357080910563,0.8486147529827028,0.23494758283068506,0.02350406304091046]},{\"text\":\"乙烯是最简单的烯烃，可以使湨水褪色。\",\"confidence\":1.0,\"bbox\":[0.10882957558321862,0.8270348841061111,0.3511293496589707,0.017441859706229357]},{\"text\":\"烯烃能够发生加成反应和聚合反应。\",\"confidence\":1.0,\"bbox\":[0.10868585698827167,0.8051410846757199,0.3144960414974116,0.020246987061382282]}],\"render_ms\":16,\"ocr_ms\":189,\"pixels\":[1654,2338],\"error\":null},{\"page\":3,\"source\":\"ocr\",\"chars\":112,\"lines\":[{\"text\":\"实验室安全 Lab Safety\",\"confidence\":0.5,\"bbox\":[0.10849548787205372,0.8922684376349415,0.41140809802939843,0.03202293467786799]},{\"text\":\"1. 进入实验室必须佩戴护目镜 Wear safety goggles\",\"confidence\":1.0,\"bbox\":[0.1088295678825674,0.8502906980616487,0.47433265031032723,0.017545058851674344]},{\"text\":\"2. 有机溶剂远离明火 Keep solvents away from flames\",\"confidence\":0.5,\"bbox\":[0.1067761763865649,0.8284858856079363,0.5133470306950008,0.015990858510378847]},{\"text\":\"3. 废液倒入指定容器 Use the waste containers\",\"confidence\":0.5,\"bbox\":[0.10882957367574876,0.8052325582195443,0.44147842942298976,0.015988371941245805]}],\"render_ms\":12,\"ocr_ms\":134,\"pixels\":[1654,2338],\"error\":null},{\"page\":4,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":5,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":6,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":7,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":8,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":9,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":10,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":11,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null},{\"page\":12,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":22,\"render_ms\":43,\"ocr_ms\":688,\"total_ms\":757},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 219251672,
+        "samples": 126,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 810.556542
+      },
+      "verdict": "PASS"
+    },
+    "s14-damaged.pdf": {
+      "input_sha256": "d2af842c6a43c693552aaa18501ec5d9552e8c2e27917d27514d90934d59b1d3",
+      "before": {
+        "bytes": 138534,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s14-damaged.pdf",
+        "isolation": {
+          "acceptance_check_ms": 24.401959,
+          "child_pid": 34987,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 5096048,
+          "max_observation_gap_ms": 6.267208,
+          "max_rss_bytes": 20299776,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 5128816,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 6062752,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 5096048,
+          "samples": 4,
+          "stderr_bytes": 0,
+          "stdout_bytes": 900,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 24
+        },
+        "left_out": [],
+        "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+        "pages": [],
+        "reader": {
+          "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+          "pages": 0,
+          "reader": "pdf-1",
+          "status": "failed"
+        },
+        "rust_peak_heap_bytes": 453871,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "d2af842c6a43c693552aaa18501ec5d9552e8c2e27917d27514d90934d59b1d3",
+        "status": "reader_refused",
+        "text": "",
+        "timing": {
+          "ocr_ms": 0,
+          "reader_ms": 1,
+          "render_ms": 0,
+          "total_ms": 1
+        },
+        "usable_text": false,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+          "pages": [],
+          "reader": {
+            "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+            "pages": 0,
+            "reader": "pdf-1",
+            "status": "failed"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "reader_refused",
+          "text": "",
+          "timing": {
+            "ocr_ms": 0,
+            "reader_ms": 0,
+            "render_ms": 0,
+            "total_ms": 0
+          },
+          "usable_text": false
+        },
+        "child_pid": 34990,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 3162640,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 6.28875,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 3162640,
+        "raw_stdout": "{\"status\":\"reader_refused\",\"usable_text\":false,\"text\":\"\",\"note\":\"The file ends before its end-of-file marker; it is truncated or damaged.\",\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"failed\",\"note\":\"The file ends before its end-of-file marker; it is truncated or damaged.\",\"pages\":0},\"pages\":[],\"timing\":{\"reader_ms\":0,\"render_ms\":0,\"ocr_ms\":0,\"total_ms\":0},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 2327008,
+        "samples": 2,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 13.899333
+      },
+      "verdict": "PASS"
+    },
+    "s15-encrypted.pdf": {
+      "input_sha256": "ebb55b7e0d4784170550756df49fafb95671e1ad8cf51e7f993a6863a05cd641",
+      "before": {
+        "bytes": 303398,
+        "file": "<HOME>/Developer/Traeva-G-OCR/experiments/pdf-ocr/samples/s15-encrypted.pdf",
+        "isolation": {
+          "acceptance_check_ms": 24.437,
+          "child_pid": 34993,
+          "child_reaped": true,
+          "environment": "cleared",
+          "exit_status": 0,
+          "first_over_threshold_observed_ms": null,
+          "kill_errno": null,
+          "kill_to_exit_ms": null,
+          "last_polled_footprint_bytes": 5718664,
+          "max_observation_gap_ms": 6.2885,
+          "max_rss_bytes": 20692992,
+          "memory_cap_mib": 384,
+          "memory_policy": "soft_footprint_stop_threshold_not_hard_cap",
+          "observed_lifetime_peak_bytes": 5718664,
+          "outcome": "finished",
+          "over_512_mib_bytes": 0,
+          "over_threshold_bytes": 0,
+          "peak_footprint_bytes": 6406816,
+          "poll_ms": 5,
+          "polled_peak_footprint_bytes": 5718664,
+          "samples": 4,
+          "stderr_bytes": 0,
+          "stdout_bytes": 953,
+          "stop_action": null,
+          "stop_trigger_ms": null,
+          "timeout_s": 15.0,
+          "wall_ms": 24
+        },
+        "left_out": [],
+        "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+        "pages": [],
+        "reader": {
+          "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+          "pages": 0,
+          "reader": "pdf-1",
+          "status": "unsupported"
+        },
+        "rust_peak_heap_bytes": 927363,
+        "settings": {
+          "auto_language": true,
+          "dpi": 200.0,
+          "language_correction": true,
+          "languages": [
+            "zh-Hans",
+            "en-US"
+          ],
+          "max_ocr_pages": 3,
+          "max_pixels": 8000000,
+          "min_page_chars": 10
+        },
+        "sha256": "ebb55b7e0d4784170550756df49fafb95671e1ad8cf51e7f993a6863a05cd641",
+        "status": "reader_refused",
+        "text": "",
+        "timing": {
+          "ocr_ms": 0,
+          "reader_ms": 1,
+          "render_ms": 0,
+          "total_ms": 1
+        },
+        "usable_text": false,
+        "vision": {
+          "current_revision": 3,
+          "supported_languages_accurate": [
+            "en-US",
+            "fr-FR",
+            "it-IT",
+            "de-DE",
+            "es-ES",
+            "pt-BR",
+            "zh-Hans",
+            "zh-Hant",
+            "yue-Hans",
+            "yue-Hant",
+            "ko-KR",
+            "ja-JP",
+            "ru-RU",
+            "uk-UA",
+            "th-TH",
+            "vi-VT",
+            "ar-SA",
+            "ars-SA",
+            "tr-TR",
+            "id-ID",
+            "cs-CZ",
+            "da-DK",
+            "nl-NL",
+            "no-NO",
+            "nn-NO",
+            "nb-NO",
+            "ms-MY",
+            "pl-PL",
+            "ro-RO",
+            "sv-SE",
+            "fi-FI",
+            "hi-IN",
+            "mr-IN"
+          ]
+        }
+      },
+      "after": {
+        "answer": {
+          "left_out": [],
+          "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+          "pages": [],
+          "reader": {
+            "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+            "pages": 0,
+            "reader": "pdf-1",
+            "status": "unsupported"
+          },
+          "settings": {
+            "auto_language": true,
+            "dpi": 200.0,
+            "language_correction": true,
+            "languages": [
+              "zh-Hans",
+              "en-US"
+            ],
+            "max_ocr_pages": 3,
+            "max_pixels": 8000000,
+            "min_page_chars": 10
+          },
+          "status": "reader_refused",
+          "text": "",
+          "timing": {
+            "ocr_ms": 0,
+            "reader_ms": 1,
+            "render_ms": 0,
+            "total_ms": 1
+          },
+          "usable_text": false
+        },
+        "child_pid": 34995,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 3473960,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 5.3375,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 3473960,
+        "raw_stdout": "{\"status\":\"reader_refused\",\"usable_text\":false,\"text\":\"\",\"note\":\"The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.\",\"left_out\":[],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.\",\"pages\":0},\"pages\":[],\"timing\":{\"reader_ms\":1,\"render_ms\":0,\"ocr_ms\":0,\"total_ms\":1},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+        "sampled_peak_bytes": 2408928,
+        "samples": 2,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 12.642375000000001
+      },
+      "verdict": "PASS"
+    }
+  },
+  "complete": true
+}

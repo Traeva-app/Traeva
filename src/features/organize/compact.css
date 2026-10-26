@@ -1,0 +1,72 @@
+/* The small cards (#37): Organize's cards in their compact form (the pet's
+   popup) and the short question card (dropped files in the main window). */
+
+/* The small cards (OperationCard's compact form, the Move card): a place
+   cut to its last folders, the full path in the tooltip. */
+.compact-place {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin: 6px 0 0;
+}
+
+.compact-place .mono {
+  overflow-wrap: anywhere;
+}
+
+/* "new": the move makes this folder. */
+.compact-new {
+  padding: 0 7px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--accent-text);
+  background: var(--accent-soft);
+  border-radius: 9px;
+}
+
+.compact-places {
+  margin: 6px 0 10px;
+}
+
+/* What a small card folds away, one click from it. */
+.compact-details {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.compact-details > summary {
+  width: fit-content;
+  color: var(--muted);
+}
+
+.compact-details-body {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.compact-details-body > * {
+  margin: 0;
+}
+
+/* Details opens with a short fade, only when the system allows motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .compact-details[open] > .compact-details-body {
+    animation: compact-details-in 160ms ease-out;
+  }
+}
+
+@keyframes compact-details-in {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

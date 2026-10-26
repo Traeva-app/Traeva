@@ -1,0 +1,102 @@
+{
+  "generator": "fixtures/defects/generate.py",
+  "note": "Synthetic reproductions of R4's findings on 07ce381, from R4's descriptions only. Adversarial or damaged on purpose: offline reader only, never a desktop viewer.",
+  "files": {
+    "d01-nested-form-string-bomb.pdf": {
+      "sha256": "4f50f9aeb2071c06ecdd4609ed60672ff1453a7383f84e8d46944daa60096459",
+      "bytes": 18562
+    },
+    "d02-comment-before-stream-bomb.pdf": {
+      "sha256": "06248ad0a3e93a5b4eb0fe20a18dbce4419ff40c2aacd01d6885675e359597f1",
+      "bytes": 18386
+    },
+    "d03-nested-form-string-ok.pdf": {
+      "sha256": "8b2b91c54d8ca3315e70955650620cc1bc032bbd06786daa618746d4c86c9051",
+      "bytes": 1267
+    },
+    "d04-comment-before-content-stream.pdf": {
+      "sha256": "fd72e09674aaa6a7df7559f28bf9988708e2d9089fda9713de77e560689ff4d7",
+      "bytes": 687
+    },
+    "d05-strings-in-stream-dict.pdf": {
+      "sha256": "907ac313e89aa35dad6db1a158452ac5a73c88e9cfd2fb17bef56a1ba12c2f63",
+      "bytes": 729
+    },
+    "d06-encrypt-as-words.pdf": {
+      "sha256": "5bc3736750376917957f7f81ad08e93ae2efcb8cfd3bf973ce59469ff5827385",
+      "bytes": 780
+    },
+    "d07-size-as-words.pdf": {
+      "sha256": "f512627f529fd4bd98fb89db43ea9a8a603e6972c8ca08ce831dfb717748277a",
+      "bytes": 740
+    },
+    "d08-script-names-as-words.pdf": {
+      "sha256": "87e0a379f8c449f41c715f90800628cb72ec95ac01d149190a507c38fd86da8f",
+      "bytes": 814
+    },
+    "d09-escaped-javascript-action.pdf": {
+      "sha256": "c5fbd2543ff853c8dc350841914e1f907de764a10cf93c7bd29e6bfe49f105a5",
+      "bytes": 738
+    },
+    "d10-escaped-embedded-file.pdf": {
+      "sha256": "d9c546b9889d5a628cb12a692605f7a8b310168be4a86997fb3bd6bdafdcbf5d",
+      "bytes": 941
+    },
+    "d11-escaped-link-javascript.pdf": {
+      "sha256": "8e55c07c8506e29cd5ed9a5f15f02a3e83eb063a954f0ee6db1f2a5fa3c81d61",
+      "bytes": 806
+    },
+    "d12-escaped-attachment-annotation.pdf": {
+      "sha256": "33b7fc2288d08d5bc3a1a793b6adb543ab65b097c7ae0b890917894438b84ae9",
+      "bytes": 947
+    },
+    "d13-contents-missing-member.pdf": {
+      "sha256": "87fc0895eb15018c098995927eead4f16368f92bcf1fb92fb27d8ccad63c4520",
+      "bytes": 683
+    },
+    "d14-contents-string-member.pdf": {
+      "sha256": "c42dc0b124cafb7853f313aeb3a5c3a9fe3d7eab9815bff20b6560dea6fefdfc",
+      "bytes": 683
+    },
+    "d15-contents-dangling.pdf": {
+      "sha256": "924a553324431d9742781d6f779a2821e5d0651b5988f884accc4eeb57e82b6b",
+      "bytes": 675
+    },
+    "d16-contents-two-parts.pdf": {
+      "sha256": "09bfd4bd429aba4395d021bc7c863cc0d8e2def4b2e7d016c6bbd9309a075f21",
+      "bytes": 813
+    },
+    "d17-flate-wrong-adler.pdf": {
+      "sha256": "a97cef0deeed137910f9e7b419bead01b2e68b1d685790d7d9ce392a8fbecdcc",
+      "bytes": 672
+    },
+    "d18-flate-missing-adler.pdf": {
+      "sha256": "925530220896c605c69de5c2dd76c5c18223f1a423e85b3070647730ca817bbf",
+      "bytes": 670
+    },
+    "d19-flate-no-zlib-header.pdf": {
+      "sha256": "ce3abe9a00e9ab4a1fe0e3fb68b6233b5206ccfc79f851b7db51b9383fefb1bb",
+      "bytes": 670
+    },
+    "d20-form-wrong-adler.pdf": {
+      "sha256": "ffce40089e59c8eb6a430ba5113594c895185769fa0d58b17067b9ac42ac5ddb",
+      "bytes": 1040
+    },
+    "d21-image-wrong-adler.pdf": {
+      "sha256": "b547ed0988b73a06e117a668396d19a59cdaf914d5bfbc7273c892be0668e771",
+      "bytes": 1127
+    },
+    "d22-xref-stream.pdf": {
+      "sha256": "ef187023efd99640c06f99574245300de059587981fdcb872690fba24940f03e",
+      "bytes": 608
+    },
+    "d23-xref-stream-escaped-encrypt.pdf": {
+      "sha256": "b83931de48e8fb343f71f2177c53b5e5e513d11a884249892347cfab97d14e1e",
+      "bytes": 844
+    },
+    "d24-incremental-update.pdf": {
+      "sha256": "19d0d890ddf097fe84e8a3594a21b3a531a261614e7f658180c532d3a7267685",
+      "bytes": 908
+    }
+  }
+}

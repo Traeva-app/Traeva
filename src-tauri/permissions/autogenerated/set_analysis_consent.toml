@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-analysis-consent"
+description = "Enables the set_analysis_consent command without any pre-configured scope."
+commands.allow = ["set_analysis_consent"]
+
+[[permission]]
+identifier = "deny-set-analysis-consent"
+description = "Denies the set_analysis_consent command without any pre-configured scope."
+commands.deny = ["set_analysis_consent"]

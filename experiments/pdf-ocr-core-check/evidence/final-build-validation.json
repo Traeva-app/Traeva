@@ -1,0 +1,13 @@
+{
+  "record_type": "Structured transcription of observed tool outputs; not raw command logs",
+  "tested_code_sha": "caa5bc3cbbf44a97893a597b053d2ba359f13668",
+  "runtime_tests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "rustfmt": "PASS",
+  "clippy_all_targets_deny_warnings": "PASS",
+  "release_build": "PASS",
+  "binary_sha256": "9d73babacb503f2a78cdb062dd941ff63dabc267ed2c176de47952a63dbb8866",
+  "unchanged_coverage": "e09e764 lifecycle, render, memory and eligibility evidence retained at its own SHA; not rerun or relabelled."
+}

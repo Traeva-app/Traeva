@@ -1,0 +1,279 @@
+{
+  "as_of": "2026-10-10",
+  "reader_source_sha256": "4ebddd23b43a2b3f14253a04f4f348b7a8105bc5c3c74ec694d012bfb2333626",
+  "main_after_Reader_merge": "6f14e3a7dbdb9b60f2d7945054fc1d8556f8ccdf",
+  "Word_provenance": {
+    "Word_GUI_save": true,
+    "Word_version": "16.78",
+    "input_source": "generated synthetic OOXML; actual Word Save As converted compatibility format",
+    "features_retained": {
+      "table": true,
+      "list": true,
+      "SEQ_field": true,
+      "PAGE_header_field": true,
+      "footnote_text": true,
+      "comment_text": true,
+      "revision_insert": true,
+      "revision_delete": true
+    },
+    "ZIP_entries": 18,
+    "ZIP_comment_bytes": 0,
+    "source_unchanged": true,
+    "retention_check_failures": [
+      "Initial complex-instrText-only check missed Word normalization into fldSimple for SEQ",
+      "Adding uppercase comparison alone did not fix it; inspect both fldSimple and instrText to pass"
+    ],
+    "scrub_first_attempt": "Failed because Word rich save has lastModifiedBy only; helper previously required two author fields; generalized to existing creator/lastModifiedBy fields only",
+    "scrub_second_attempt": "Failed: ordinary raw Deflate search could not match original packed length 324 (candidate lengths 303..315); valid intermediate sync flush matched the length, decompression identity and changed-range assertions passed"
+  },
+  "Word_original_result": {
+    "expected_matches": true,
+    "input_bytes": 18335,
+    "input_sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+    "iterations": 1,
+    "mean_ms": 2.5689580000000003,
+    "summary": {
+      "chars": 108,
+      "covered": [
+        "main body paragraphs, runs, tabs and explicit line breaks"
+      ],
+      "left_out": [
+        "comments",
+        "fields and field instructions",
+        "footnotes and endnotes",
+        "headers and footers",
+        "tables",
+        "tracked changes (no revision acceptance policy applied)"
+      ],
+      "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+      "reader": "docx-2",
+      "status": "partial"
+    },
+    "text_sha256": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f",
+    "total_ms": 2.5689580000000003
+  },
+  "fixture_result": {
+    "expected_matches": true,
+    "input_bytes": 18335,
+    "input_sha256": "ceb974889540ef944f7d0bdde76b215685ba4407ade87328a35f57ea4a7360d8",
+    "iterations": 200,
+    "mean_ms": 1.596233125,
+    "summary": {
+      "chars": 108,
+      "covered": [
+        "main body paragraphs, runs, tabs and explicit line breaks"
+      ],
+      "left_out": [
+        "comments",
+        "fields and field instructions",
+        "footnotes and endnotes",
+        "headers and footers",
+        "tables",
+        "tracked changes (no revision acceptance policy applied)"
+      ],
+      "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+      "reader": "docx-2",
+      "status": "partial"
+    },
+    "text_sha256": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f",
+    "total_ms": 319.246625
+  },
+  "layout_proof": {
+    "source_sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+    "fixture_sha256": "ceb974889540ef944f7d0bdde76b215685ba4407ade87328a35f57ea4a7360d8",
+    "bytes": 18335,
+    "central_offset": 17155,
+    "allowed_changed_ranges": [
+      [
+        11588,
+        11912
+      ],
+      [
+        11291,
+        11295
+      ],
+      [
+        18008,
+        18012
+      ]
+    ],
+    "core_packed": 324,
+    "core_unpacked": 606,
+    "trial": 9999,
+    "author_fields_replaced": 1,
+    "other_entry_bytes_and_layout_identical": true,
+    "compression_mode": "intermediate_sync_flush",
+    "sync_flush_split": 46
+  },
+  "outside_allowed_ranges_differences": 0,
+  "actual_snapshot_capture": {
+    "reader": {
+      "expected_matches": null,
+      "input_bytes": 18335,
+      "input_sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "iterations": 1,
+      "mean_ms": 2.496208,
+      "summary": {
+        "chars": 108,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [
+          "comments",
+          "fields and field instructions",
+          "footnotes and endnotes",
+          "headers and footers",
+          "tables",
+          "tracked changes (no revision acceptance policy applied)"
+        ],
+        "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+        "reader": "docx-2",
+        "status": "partial"
+      },
+      "text_sha256": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f",
+      "total_ms": 2.496208
+    },
+    "snapshot": {
+      "byte_length": 18335,
+      "captured_at_ms": 1791663015728,
+      "file_id": "8753fe7b-a9ce-43e7-8658-b28ccb21e07b",
+      "file_revision": 1,
+      "relative_path": "word-rich-saved.docx",
+      "root_id": "921af927-4707-4b01-84e4-3f3302512875",
+      "sequence": 1,
+      "sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "snapshot_id": "5d31943a-207f-44c5-9125-bd847cde422e"
+    }
+  },
+  "actual_snapshot_after_source_rename_and_new_process": {
+    "reader": {
+      "expected_matches": true,
+      "input_bytes": 18335,
+      "input_sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "iterations": 1,
+      "mean_ms": 3.3610409999999997,
+      "summary": {
+        "chars": 108,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [
+          "comments",
+          "fields and field instructions",
+          "footnotes and endnotes",
+          "headers and footers",
+          "tables",
+          "tracked changes (no revision acceptance policy applied)"
+        ],
+        "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+        "reader": "docx-2",
+        "status": "partial"
+      },
+      "text_sha256": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f",
+      "total_ms": 3.3610409999999997
+    },
+    "snapshot": {
+      "byte_length": 18335,
+      "captured_at_ms": 1791663015728,
+      "file_id": "8753fe7b-a9ce-43e7-8658-b28ccb21e07b",
+      "file_revision": 1,
+      "relative_path": "word-rich-saved.docx",
+      "root_id": "921af927-4707-4b01-84e4-3f3302512875",
+      "sequence": 1,
+      "sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "snapshot_id": "5d31943a-207f-44c5-9125-bd847cde422e"
+    }
+  },
+  "A_449e95f_plus_D_dispatch_actual_snapshot": {
+    "reader": {
+      "expected_matches": true,
+      "input_bytes": 18335,
+      "input_sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "iterations": 1,
+      "mean_ms": 18.615667,
+      "summary": {
+        "chars": 108,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [
+          "comments",
+          "fields and field instructions",
+          "footnotes and endnotes",
+          "headers and footers",
+          "tables",
+          "tracked changes (no revision acceptance policy applied)"
+        ],
+        "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+        "reader": "docx-2",
+        "status": "partial"
+      },
+      "text_sha256": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f",
+      "total_ms": 18.615667
+    },
+    "snapshot": {
+      "byte_length": 18335,
+      "captured_at_ms": 1791663015728,
+      "file_id": "8753fe7b-a9ce-43e7-8658-b28ccb21e07b",
+      "file_revision": 1,
+      "relative_path": "word-rich-saved.docx",
+      "root_id": "921af927-4707-4b01-84e4-3f3302512875",
+      "sequence": 1,
+      "sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "snapshot_id": "5d31943a-207f-44c5-9125-bd847cde422e"
+    }
+  },
+  "UI_slot_claim": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6101504827",
+  "UI_return": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6101701197",
+  "UI_retention_correction": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6101713094",
+  "not_acceptance": [
+    "Codex-R native UI verification",
+    "full Word Semantic Change/Retrieval",
+    "10/13 Go",
+    "student choices and send scope"
+  ],
+  "validation_builds": {
+    "initial_Word_fixture_performance_and_snapshot": "frozen docx-2 on core 1c0ff381a0331e270e8f38c3e0e21a56c4ee478e; standalone validation lock",
+    "A_dispatch_snapshot": "A 449e95fca08498ad57585ee2b8d9f74b61ac8973 plus frozen D source and migration ac094e7; actual workspace lock",
+    "current_main_snapshot_and_79_tests": "core 6f14e3a7dbdb9b60f2d7945054fc1d8556f8ccdf with same frozen Reader, new rich golden test; standalone validation lock; not production wiring"
+  },
+  "current_main_snapshot_after_source_rename_and_new_process": {
+    "reader": {
+      "expected_matches": true,
+      "input_bytes": 18335,
+      "input_sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "iterations": 1,
+      "mean_ms": 1.879708,
+      "summary": {
+        "chars": 108,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [
+          "comments",
+          "fields and field instructions",
+          "footnotes and endnotes",
+          "headers and footers",
+          "tables",
+          "tracked changes (no revision acceptance policy applied)"
+        ],
+        "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+        "reader": "docx-2",
+        "status": "partial"
+      },
+      "text_sha256": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f",
+      "total_ms": 1.879708
+    },
+    "snapshot": {
+      "byte_length": 18335,
+      "captured_at_ms": 1791663015728,
+      "file_id": "8753fe7b-a9ce-43e7-8658-b28ccb21e07b",
+      "file_revision": 1,
+      "relative_path": "word-rich-saved.docx",
+      "root_id": "921af927-4707-4b01-84e4-3f3302512875",
+      "sequence": 1,
+      "sha256": "ec860ece520a095c0d5fa5ec7a1290eace5a7e857675243ae71d12941929ee02",
+      "snapshot_id": "5d31943a-207f-44c5-9125-bd847cde422e"
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "source": "F chat Computer Use calls, 2026-10-11",
+  "time_definition": "UTC journal insertion time, not necessarily the exact keypress time. Some observations were logged on the next call. Closed-package capture times are separately retained in roundtrip records.",
+  "privacy": "Only own workbook observations retained. Recent-file metadata and the About dialog device identifier omitted. Home paths redacted; historical observations concern original outputs. Only metadata-sanitized derivatives are retained in rewritten branch history.",
+  "bundle": "com.microsoft.Excel",
+  "workbook_directory": "<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011",
+  "display_authorization": "User in F chat: 那就主屏幕吧",
+  "events": [
+    {
+      "event": "fresh_start",
+      "at": "2026-10-11T23:05:03.503Z",
+      "before_isRunning": false,
+      "window": "Open new and recent files; no workbook opened"
+    },
+    {
+      "event": "open_working_seed",
+      "at": "2026-10-11T23:05:36.660Z",
+      "selected_file": "working-seed.xlsx",
+      "native_open_dialog_url_checked": true
+    },
+    {
+      "event": "working_seed_opened",
+      "at": "2026-10-11T23:05:58.938Z",
+      "ax_excerpt": "~130 standard window working-seed, Secondary Actions: Raise, URL: file://<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011/working-seed.xlsx",
+      "sheet_order": [
+        "F Data",
+        "F 中文"
+      ]
+    },
+    {
+      "event": "initial_formula",
+      "at": "2026-10-11T23:06:03.115Z",
+      "ax_excerpt": "~142 text entry area Description: Formula Bar. C,2 =B2*2, ID: XLFormulaEditor"
+    },
+    {
+      "event": "running_excel_version",
+      "at": "2026-10-11T23:06:24.600Z",
+      "version": "16.78",
+      "build": "23100802",
+      "source": "About Microsoft Excel dialog"
+    },
+    {
+      "event": "calculation_mode_observed",
+      "at": "2026-10-11T23:06:45.345Z",
+      "mode": "Automatic",
+      "ax_excerpt": "23 unknown Automatic, Value: ✓",
+      "settings_changed": false
+    },
+    {
+      "event": "baseline_save_requested",
+      "at": "2026-10-11T23:06:54.182Z",
+      "file": "baseline.xlsx",
+      "format": "Excel Workbook (.xlsx)"
+    },
+    {
+      "event": "baseline_saved",
+      "at": "2026-10-11T23:07:10.074Z",
+      "ax_excerpt": "~21 standard window baseline, Secondary Actions: Raise, URL: file://<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011/baseline.xlsx",
+      "formula": "=B2*2"
+    },
+    {
+      "event": "baseline_closed_first_time",
+      "at": "2026-10-11T23:07:44.664Z",
+      "note": "Logged on the next call; actual close preceded package capture at 23:07:32.964686Z.",
+      "observed": "baseline URL/title removed; no save prompt"
+    },
+    {
+      "event": "baseline_reopened",
+      "at": "2026-10-11T23:07:59.856Z",
+      "ax_excerpt": "~21 standard window baseline, Secondary Actions: Raise, URL: file://<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011/baseline.xlsx",
+      "formula": "=B2*2"
+    },
+    {
+      "event": "baseline_primary_sheet_visual_check",
+      "at": "2026-10-11T23:08:38.784Z",
+      "source": "Computer Use screenshot",
+      "observed": {
+        "B2": 5,
+        "C2": 10,
+        "B3": "Hello",
+        "B4": "你好 Excel",
+        "B5": true,
+        "merge": "A6:C6"
+      }
+    },
+    {
+      "event": "baseline_chinese_sheet_check",
+      "at": "2026-10-11T23:08:55.339Z",
+      "source": "Formula Bar plus screenshot",
+      "observed": {
+        "A1": "第二张工作表",
+        "B1": 12.5,
+        "B2": false
+      }
+    },
+    {
+      "event": "baseline_roundtrip_completed",
+      "at": "2026-10-11T23:09:24.720Z",
+      "closed_without_save_prompt": true
+    },
+    {
+      "event": "input_edit_before",
+      "at": "2026-10-11T23:09:47.134Z",
+      "ax_excerpt": "~128 text entry area Description: Formula Bar. B,2 5, ID: XLFormulaEditor"
+    },
+    {
+      "event": "input_edit_applied",
+      "at": "2026-10-11T23:10:00.085Z",
+      "observed_input": 7,
+      "formula": "=B2*2",
+      "observed_excel_result": 14,
+      "source": "Formula Bar plus screenshot",
+      "calculation_origin": "Excel Automatic arithmetic"
+    },
+    {
+      "event": "input_edit_save_requested",
+      "at": "2026-10-11T23:10:10.194Z",
+      "file": "input_edit.xlsx",
+      "format": "Excel Workbook (.xlsx)"
+    },
+    {
+      "event": "input_edit_saved",
+      "at": "2026-10-11T23:10:11.139Z",
+      "ax_excerpt": "~110 standard window input_edit, Secondary Actions: Raise, URL: file://<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011/input_edit.xlsx",
+      "formula": "=B2*2"
+    },
+    {
+      "event": "input_edit_closed_first_time",
+      "at": "2026-10-11T23:10:15.413Z",
+      "observed": "input_edit workbook removed; no save prompt"
+    },
+    {
+      "event": "open_dialog_navigation_note",
+      "at": "2026-10-11T23:11:04.716Z",
+      "note": "Cmd+Shift+G immediately after Cmd+O was not registered. Native open panel remained. Selected visible own input_edit.xlsx instead; no other file opened."
+    },
+    {
+      "event": "input_edit_reopened",
+      "at": "2026-10-11T23:11:14.188Z",
+      "ax_excerpt": "~110 standard window input_edit, Secondary Actions: Raise, URL: file://<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011/input_edit.xlsx",
+      "formula": "=B2*2"
+    },
+    {
+      "event": "input_edit_reopen_visual_check",
+      "at": "2026-10-11T23:11:38.269Z",
+      "source": "Computer Use screenshot",
+      "observed": {
+        "B2": 7,
+        "C2": 14,
+        "formula": "=B2*2"
+      }
+    },
+    {
+      "event": "input_edit_closed_after_reopen",
+      "at": "2026-10-11T23:11:39.101Z",
+      "observed": "workbook removed; no save prompt"
+    },
+    {
+      "event": "formula_edit_before",
+      "at": "2026-10-11T23:12:23.717Z",
+      "formula": "=B2*2",
+      "input": 7
+    },
+    {
+      "event": "formula_edit_applied",
+      "at": "2026-10-11T23:12:38.401Z",
+      "observed_input": 7,
+      "formula": "=B2*3",
+      "observed_excel_result": 21,
+      "source": "Formula Bar plus screenshot",
+      "calculation_origin": "Excel Automatic arithmetic"
+    },
+    {
+      "event": "formula_edit_save_requested",
+      "at": "2026-10-11T23:12:49.922Z",
+      "file": "formula_edit.xlsx",
+      "format": "Excel Workbook (.xlsx)"
+    },
+    {
+      "event": "formula_edit_saved",
+      "at": "2026-10-11T23:12:51.116Z",
+      "ax_excerpt": "~110 standard window formula_edit, Secondary Actions: Raise, URL: file://<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011/formula_edit.xlsx",
+      "formula": "=B2*3"
+    },
+    {
+      "event": "formula_edit_closed_first_time",
+      "at": "2026-10-11T23:12:59.866Z",
+      "observed": "workbook removed; no save prompt"
+    },
+    {
+      "event": "formula_edit_reopened",
+      "at": "2026-10-11T23:13:30.250Z",
+      "ax_excerpt": "~110 standard window formula_edit, Secondary Actions: Raise, URL: file://<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/office-user-20261011/formula_edit.xlsx",
+      "formula": "=B2*3"
+    },
+    {
+      "event": "formula_edit_reopen_visual_check",
+      "at": "2026-10-11T23:13:53.092Z",
+      "source": "Computer Use screenshot",
+      "observed": {
+        "B2": 7,
+        "C2": 21,
+        "formula": "=B2*3"
+      }
+    },
+    {
+      "event": "formula_edit_closed_after_reopen",
+      "at": "2026-10-11T23:13:54.049Z",
+      "observed": "workbook removed; no save prompt"
+    },
+    {
+      "event": "excel_normal_exit",
+      "at": "2026-10-11T23:14:16.510Z",
+      "excel_isRunning": false,
+      "post_quit_ax": "procNotFound; no retry"
+    }
+  ],
+  "unmeasured": [
+    "numeric Office PID",
+    "OS window ID",
+    "monitor/window geometry"
+  ],
+  "note": "AX element indices in excerpts are not OS window IDs. Screenshots were inspected in the Computer Use transcript and are not separately exported in this evidence directory."
+}

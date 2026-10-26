@@ -1,0 +1,180 @@
+{
+  "review_date": "2026-10-10",
+  "role": "Independent development code review; not Codex-R final acceptance",
+  "scope": "D bytes-only Reader and isolated validation harness; no product/shared file edits",
+  "source_sha256": {
+    "crates/traeva-core/src/docx.rs": "e0bd93f5d180bd23ca42e90cf23fa09f8980d6664515064b02222d912c1d057f",
+    "crates/traeva-core/src/docx_tests.rs": "e77d27e46cc7317cd8945d5c6df072414ba889cc6edfa652eb4cd6b30392cfaa",
+    "crates/traeva-core/tests/docx_reader/probe.rs": "7aeb9254863c125888e65a492cd16a53872fa92ccb5f82964476ea64d3366ef1",
+    "crates/traeva-core/tests/docx_reader/snapshot_tests.rs": "7d51535e31c86f7e89f65e673aaa00448f973105ed25e11b7d8f595a6dd28faf"
+  },
+  "tests": {
+    "reader": 57,
+    "real_core_snapshot_api": 3,
+    "total": 60,
+    "passed": 60,
+    "failed": 0
+  },
+  "fmt_check": "PASS",
+  "clippy_all_targets_deny_warnings": "PASS",
+  "cli_synthetic_inspect_hash_and_expected_text": "PASS",
+  "prior_actionable_counterexamples": "All resolved and independently reproduced with current library",
+  "zip_counterexamples": [
+    "raw deflate trailing bytes",
+    "truncated raw deflate",
+    "missing final-block termination",
+    "false declared size, actual output >8 MiB",
+    "aggregate expanded bytes >32 MiB with input <20 MiB and ratio <200",
+    "Info-ZIP Unicode Path alias overriding canonical part name"
+  ],
+  "xml_counterexamples": [
+    "QName and attribute namespace constraints",
+    "expanded attribute uniqueness",
+    "raw < in attributes and raw ]]> in character data",
+    "XML declaration attributes, order, placement",
+    "missing S separator between attributes/declaration attributes",
+    "non XML S outside root",
+    "numeric entity grammar and illegal characters",
+    "CR/CRLF normalization across events, runs and paragraph/break boundaries"
+  ],
+  "remaining_code_review_blockers": [],
+  "conclusion": "PASS for current limited Reader development scope",
+  "not_validated_by_this_reviewer": [
+    "Native Word UI save operation",
+    "A shared Reader dispatch integration",
+    "full Word -> Semantic Change -> Retrieval workflow",
+    "Codex-R production acceptance"
+  ],
+  "independent_counterexample_inputs": {
+    "adjacent_attributes": {
+      "status": "Failed",
+      "input_sha256": "62791014c867357f4b6b9e9a6268e39d5135025e4efdfa87c064c3879131b1e8"
+    },
+    "adjacent_decl_attrs": {
+      "status": "Failed",
+      "input_sha256": "c7cfe950664e2c22d39578bffe1a53caa3e4543e9edbb296fda73203ed429b62"
+    },
+    "nbsp_outside_root": {
+      "status": "Failed",
+      "input_sha256": "8843c3fa2ac4285a1933a412f66fc1037c64921d46d098788ddaf959be3240eb"
+    },
+    "nbsp_after_root": {
+      "status": "Failed",
+      "input_sha256": "7d6f045c9d348d10c9924941b02dcb4013226ac2edccae38eae15242b32bede8"
+    },
+    "raw_cdata_close": {
+      "status": "Failed",
+      "input_sha256": "d6fef44b625c3d71aff40267e4b8b07454de168d50b02f36d88fc4efe961832a"
+    },
+    "lt_in_attribute": {
+      "status": "Failed",
+      "input_sha256": "7a04fd2056f17c1ca41e36b87b5b175d98f7cd1e1971f207a8b1a0933960ac57"
+    },
+    "undeclared_attr": {
+      "status": "Failed",
+      "input_sha256": "7f5f0da7b7803a0bfcd6e6c7eb5424d292e1c7d8628a4753286994fc4df86c57"
+    },
+    "invalid_attr_name": {
+      "status": "Failed",
+      "input_sha256": "a54ba2627799d64e17a1501836695e53bbd205d9823b3c65c78bbe16774c2367"
+    },
+    "invalid_name": {
+      "status": "Failed",
+      "input_sha256": "8c9fb6a4d321266f4adc4d0322da680b37f67323bbe98f6f36d5460815a9853d"
+    },
+    "prefixed_attribute_alias": {
+      "status": "Failed",
+      "input_sha256": "9fbf625303de55548ad45b099bb161a1d4bdfc42e98578dc9b715000f6f73c93"
+    },
+    "duplicate_decl_attr": {
+      "status": "Failed",
+      "input_sha256": "017a5fc7b1c5a94b3f2e7137e63fcce9ce2d9b8bbb044b441d5fd351ee2f4eac"
+    },
+    "bad_decl_standalone": {
+      "status": "Failed",
+      "input_sha256": "ae2b711bf906f9141420932ce44d3986a2343ac30a43198da3372a6b9b72faec"
+    },
+    "leading_decl_comment": {
+      "status": "Failed",
+      "input_sha256": "54e3ee6089a7f664d52605404c77d1b6c94f731ec98a33c885e2e24f1141e634"
+    },
+    "leading_decl_whitespace": {
+      "status": "Failed",
+      "input_sha256": "3c93d40e4d42eecd07c0b746913341d560d579beed7f6ce7792eb71ac5f5d923"
+    },
+    "nested_contenttype": {
+      "status": "Failed",
+      "input_sha256": "ddd9259ea9826faafcf4887d23251888edd36a8c277d4912cd6a34be9c7ccacf"
+    },
+    "macro_default_type": {
+      "status": "Unsupported",
+      "input_sha256": "724c4e7895d21ff2c5a11d770075b618b8c842bcb0dd2bdd9ebc1243afed7088"
+    },
+    "unicode_path_override": {
+      "status": "Unsupported",
+      "input_sha256": "b90d1d31127cce006d7cad9e31c1025d49d9c56a83c077a409ef3cd7a61f6033"
+    },
+    "deflate_trailing": {
+      "status": "Failed",
+      "input_sha256": "7cd50991c14adb4cdc933664c0ac2f7a97aaf066966a82fd48f6c32ca42c2426"
+    },
+    "deflate_truncated": {
+      "status": "Failed",
+      "input_sha256": "878df2f08fcf8519725ccc90756218fcc0b7d90792cede2576757fbb1b464844"
+    },
+    "deflate_unterminated": {
+      "status": "Failed",
+      "input_sha256": "874916f113d71423742c4671d202a230aecb2dc85a44dec755eb6151d85ceae3"
+    },
+    "lying_size_actual_bomb": {
+      "status": "Unsupported",
+      "input_sha256": "127fd260f7fcfaa8d3a575a8dcfb2c757039f768c0aed5d88ed0e9dc00557b06"
+    },
+    "aggregate_real_limit": {
+      "status": "Unsupported",
+      "input_sha256": "6a4c79a2e17ec2419393591a5052baea415e7ef5acb441ce74b87b99f1aeaded"
+    },
+    "namespace257": {
+      "status": "Unsupported",
+      "input_sha256": "332a6c6d23262046ba938b80852ce6ef143bddd61df496319b77bbe9393f47ab"
+    },
+    "colon100000": {
+      "status": "Failed",
+      "input_sha256": "c8bcc256387effa7eabf3500e4bd474d05cbdbd0f022635dd89a5d59b958d9f9"
+    },
+    "char_ref_cr": {
+      "status": "Complete",
+      "input_sha256": "d8778ef1b15187da4606c951d5a9735ca30ec0200e1ced8513fafec4d135a4c3"
+    },
+    "cdata_cr": {
+      "status": "Complete",
+      "input_sha256": "18dc08a3dba7f52afbf1fb2bb75342a23441c4b6fa9b0969dee74ff9233ccf7e"
+    },
+    "cr_split_runs": {
+      "status": "Complete",
+      "input_sha256": "4623af57e4b027ca699574259219fe4859a693424e76ad4077c8701fecad68b5"
+    },
+    "cr_then_break": {
+      "status": "Complete",
+      "input_sha256": "4b3e33be9ce43fa989fb68c95687584e945ec47355d1a34ab2c0b353a56912c8"
+    }
+  },
+  "latest_incremental_review": {
+    "namespace_limit": "TooManyBindings maps to Unsupported; independently constructed 257 bindings returns Unsupported with zero text",
+    "qname": "No parts Vec; at most two parts inspected; independent 100000-colon name returns Failed with zero text",
+    "snapshot_dispatch": "Only none/Unsupported before shared wiring or docx-1 equal to pure Reader extraction is accepted; other reader is rejected by test",
+    "word_fixtures": "Metadata-scrubbed v1/v2 artifacts independently passed exact expected body regression; native UI save provenance not independently observed",
+    "fmt_check": "PASS",
+    "clippy_all_targets_deny_warnings": "PASS",
+    "remaining_blockers": []
+  },
+  "word_fixture_sha256": {
+    "word-basic-v2.docx": "6823687693995aa74d661b73461c68c49cb039c2dcf4a26d4799b20961f41cf3",
+    "word-basic-v2.txt": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+    "word-basic-v1.docx": "70d707dd8975806e8ca1ccaa960a48d79ae9e0f89b5256406f22d88298c16493",
+    "word-basic-v1.txt": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+  },
+  "usable_as_current_acceptance": false,
+  "superseded_after": "Claude-A review 6101165382 identified real nested-EOCD and AES metadata bypasses in docx-1",
+  "superseded_by": "r2-review.json"
+}

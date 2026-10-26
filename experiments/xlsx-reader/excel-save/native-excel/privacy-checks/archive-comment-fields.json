@@ -1,0 +1,29 @@
+{
+  "kind": "focused normal-package checks after metadata-tool fix",
+  "probe_sha256": "e882c4b6f45fc335992c8a2aabca397bdc3051177dc212cfd5ebf85149504fbb",
+  "results": [
+    {
+      "stage": "baseline",
+      "status": "FIELD_PASS",
+      "field_assertions": 41,
+      "reader_output_unchanged": true,
+      "package_sha256": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650"
+    },
+    {
+      "stage": "input_edit",
+      "status": "FIELD_PASS",
+      "field_assertions": 41,
+      "reader_output_unchanged": true,
+      "package_sha256": "5eb4915a4f6622e22bf8890d7fa51725143f6311d63adbd18dea8192299cefc4"
+    },
+    {
+      "stage": "formula_edit",
+      "status": "FIELD_PASS",
+      "field_assertions": 41,
+      "reader_output_unchanged": true,
+      "package_sha256": "2acf204755f8ba50625c8c96acc60c1fb4c3f3c3084f84f62a452b54941abed0"
+    }
+  ],
+  "cache_freshness": "unverified",
+  "reader_runtime_unchanged": true
+}

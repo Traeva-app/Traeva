@@ -1,0 +1,307 @@
+/* Find (#198): the search box on top; under it the home (what to pick up,
+ * recent files, recent folders) or a search's results, all in the same
+ * rows; key hints at the bottom of the window. */
+/* Doubled: styles.css comes later and sets .page's padding. */
+.page.find-page {
+  /* Page icons: the sheet's edge, and the folder's two tans. */
+  --icon-edge: #c3d4de;
+  --folder-back: #4f9cc0;
+  --folder-front: #8ccbe0;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page.find-page {
+    --icon-edge: #3d4f5a;
+    --folder-back: #3d7f9c;
+    --folder-front: #6aaecb;
+  }
+}
+
+.find-body {
+  flex: 1;
+  padding-bottom: 24px;
+}
+
+/* The search box: a magnifier, the field, the ⌘K hint; the accent edge when
+ * focused. */
+.find-search {
+  margin: 0 0 8px;
+}
+
+.find-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--control-border);
+  border-radius: 10px;
+  cursor: text;
+}
+
+.find-box:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.find-box svg {
+  flex: none;
+}
+
+.find-box input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 0;
+  font-size: 17px;
+  color: var(--text);
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+/* The box shows the focus, not the field. */
+.find-box input[type="text"]:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.find-box input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.find-kbd {
+  flex: none;
+  font: inherit;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* A small grey line: the model, Searching…, the words used. */
+.find-line {
+  margin: 6px 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* A quiet text button, e.g. Turn off next to the model line. */
+.find-quiet {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.find-quiet:where(:hover:not(:disabled)) {
+  background: none;
+  color: var(--text);
+}
+
+/* The core's notice, shown in full before the user agrees. */
+.find-notice {
+  margin: 6px 0 12px;
+  padding: 10px 12px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.find-section {
+  margin-top: 20px;
+}
+
+.find-section > h2 {
+  margin: 0 0 8px;
+  font-size: 15px;
+}
+
+/* A quiet line under a heading, before its rows. */
+.find-section > h2:has(+ .find-section-note) {
+  margin-bottom: 2px;
+}
+
+.find-section-note {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Rows in one white box, a hairline between them. The markup keeps
+   role="list": without bullets, WebKit's VoiceOver does not read it as a list. */
+.find-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.find-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 10px 14px;
+}
+
+/* A result with lines on why it matched: the icon and buttons at the top. */
+.find-row:has(.find-matches li) {
+  align-items: flex-start;
+}
+
+.find-row + .find-row {
+  border-top: 1px solid var(--border);
+}
+
+.find-row-text {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.find-row-name {
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.find-row-line {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.find-row-error {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--warn);
+}
+
+/* On the right; in a narrow window they wrap under the text, still on the right. */
+.find-row-actions {
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* Why a result matched, under its lines. */
+.find-matches {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.find-matches:empty {
+  display: none;
+}
+
+.find-summary {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.find-summary p {
+  margin: 4px 0;
+}
+
+/* File icons: a sheet with a coloured band and the kind's label. */
+.find-icon {
+  display: block;
+  flex: none;
+}
+
+.find-icon-page {
+  fill: var(--surface);
+  stroke: var(--icon-edge);
+  stroke-width: 1.2;
+}
+
+.find-icon-fold {
+  fill: none;
+  stroke: var(--icon-edge);
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+
+.find-icon-band {
+  fill: #7d8a92;
+}
+
+.find-icon-word .find-icon-band {
+  fill: #2b579a;
+}
+
+.find-icon-pdf .find-icon-band {
+  fill: #c4362c;
+}
+
+.find-icon-powerpoint .find-icon-band {
+  fill: #c75a1f;
+}
+
+.find-icon-excel .find-icon-band {
+  fill: #1f7246;
+}
+
+.find-icon-markdown .find-icon-band {
+  fill: #4f5d66;
+}
+
+.find-icon-text .find-icon-band {
+  fill: #6b7a83;
+}
+
+.find-icon-image .find-icon-band,
+.find-icon-picture-fill {
+  fill: #0f766e;
+}
+
+.find-icon-picture {
+  fill: none;
+  stroke: #0f766e;
+  stroke-width: 1;
+}
+
+.find-icon-label {
+  fill: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+.find-folder-back {
+  fill: var(--folder-back);
+}
+
+.find-folder-front {
+  fill: var(--folder-front);
+}
+
+/* Key hints, kept at the bottom of the window. */
+.find-footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 16px;
+  padding: 9px 0 11px;
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}

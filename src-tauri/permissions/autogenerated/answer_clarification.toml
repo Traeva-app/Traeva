@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-answer-clarification"
+description = "Enables the answer_clarification command without any pre-configured scope."
+commands.allow = ["answer_clarification"]
+
+[[permission]]
+identifier = "deny-answer-clarification"
+description = "Denies the answer_clarification command without any pre-configured scope."
+commands.deny = ["answer_clarification"]

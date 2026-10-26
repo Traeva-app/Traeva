@@ -1,0 +1,233 @@
+{
+  "answer": {
+    "left_out": [
+      "page 4: a scanned page past the OCR page limit (3)"
+    ],
+    "note": null,
+    "pages": [
+      {
+        "chars": 190,
+        "error": null,
+        "lines": [
+          {
+            "bbox": [
+              0.10864519924091846,
+              0.8923201083459463,
+              0.3720738550483676,
+              0.02919109465221348
+            ],
+            "confidence": 1.0,
+            "text": "Organic Chemistry"
+          },
+          {
+            "bbox": [
+              0.108829568194951,
+              0.8473053889867282,
+              0.26078028834572436,
+              0.018973680925328473
+            ],
+            "confidence": 1.0,
+            "text": "Chapter 7: Alkenes"
+          },
+          {
+            "bbox": [
+              0.1067761719567181,
+              0.8095930233341179,
+              0.6919918037239269,
+              0.015988371941245805
+            ],
+            "confidence": 1.0,
+            "text": "Alkenes are hydrocarbons that contain a carbon-carbon double bond."
+          },
+          {
+            "bbox": [
+              0.10882957264718608,
+              0.7848588539921901,
+              0.5338808956861207,
+              0.01753635585970925
+            ],
+            "confidence": 1.0,
+            "text": "The simplest alkene is ethene, with the formula C2H4."
+          },
+          {
+            "bbox": [
+              0.10677618975299924,
+              0.7630453377277531,
+              0.6427104539421479,
+              0.01602442964108408
+            ],
+            "confidence": 1.0,
+            "text": "Alkenes undergo addition reactions with hydrogen and halogens."
+          }
+        ],
+        "ocr_ms": 282,
+        "page": 1,
+        "pixels": [
+          1654,
+          2338
+        ],
+        "render_ms": 18,
+        "source": "ocr"
+      },
+      {
+        "chars": 55,
+        "error": null,
+        "lines": [
+          {
+            "bbox": [
+              0.10882957796681088,
+              0.8952095809410646,
+              0.35728950915630664,
+              0.026302047220430724
+            ],
+            "confidence": 0.5,
+            "text": "有机化学 第七草 烯烃"
+          },
+          {
+            "bbox": [
+              0.1084357080910563,
+              0.8486147529827028,
+              0.23494758283068504,
+              0.02350406304091046
+            ],
+            "confidence": 1.0,
+            "text": "烯烃是含有碳碳双键的烃。"
+          },
+          {
+            "bbox": [
+              0.10882957478827558,
+              0.8270348841061111,
+              0.34907596315985867,
+              0.017441859706229357
+            ],
+            "confidence": 0.5,
+            "text": "乙烯是最简单的烯烃，可以使湨水褪色。"
+          },
+          {
+            "bbox": [
+              0.10868585698827168,
+              0.8051410846757199,
+              0.3144960414974116,
+              0.02024698706138228
+            ],
+            "confidence": 1.0,
+            "text": "烯烃能够发生加成反应和聚合反应。"
+          }
+        ],
+        "ocr_ms": 234,
+        "page": 2,
+        "pixels": [
+          1654,
+          2338
+        ],
+        "render_ms": 10,
+        "source": "ocr"
+      },
+      {
+        "chars": 112,
+        "error": null,
+        "lines": [
+          {
+            "bbox": [
+              0.10849706666087286,
+              0.8922693734711781,
+              0.41140451857948535,
+              0.032014837012115493
+            ],
+            "confidence": 0.5,
+            "text": "实验室安全 Lab Safety"
+          },
+          {
+            "bbox": [
+              0.1088295678825674,
+              0.8502906980616487,
+              0.4743326503103272,
+              0.017545058851674344
+            ],
+            "confidence": 1.0,
+            "text": "1. 进入实验室必须佩戴护目镜 Wear safety goggles"
+          },
+          {
+            "bbox": [
+              0.10662534998650616,
+              0.8254175871587658,
+              0.5136436084161503,
+              0.02023106012923581
+            ],
+            "confidence": 0.5,
+            "text": "2. 有机溶剂远离明火 Keep solvents away from flames"
+          },
+          {
+            "bbox": [
+              0.10882957367574876,
+              0.8052325582195443,
+              0.44147842942298976,
+              0.015988371941245805
+            ],
+            "confidence": 0.5,
+            "text": "3. 废液倒入指定容器 Use the waste containers"
+          }
+        ],
+        "ocr_ms": 131,
+        "page": 3,
+        "pixels": [
+          1654,
+          2338
+        ],
+        "render_ms": 10,
+        "source": "ocr"
+      },
+      {
+        "chars": 0,
+        "error": null,
+        "lines": [],
+        "ocr_ms": null,
+        "page": 4,
+        "pixels": null,
+        "render_ms": null,
+        "source": "not_read_page_limit"
+      }
+    ],
+    "reader": {
+      "note": "No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+      "pages": 4,
+      "reader": "pdf-1",
+      "status": "unsupported"
+    },
+    "settings": {
+      "auto_language": true,
+      "dpi": 200.0,
+      "language_correction": true,
+      "languages": [
+        "zh-Hans",
+        "en-US"
+      ],
+      "max_ocr_pages": 3,
+      "max_pixels": 8000000,
+      "min_page_chars": 10
+    },
+    "status": "ocr",
+    "text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七草 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers\n[Page 4]",
+    "timing": {
+      "ocr_ms": 647,
+      "reader_ms": 12,
+      "render_ms": 38,
+      "total_ms": 701
+    },
+    "usable_text": true
+  },
+  "child_pid": 24235,
+  "child_reaped": true,
+  "exit_code": 0,
+  "final_kernel_lifetime_peak_bytes": 210174912,
+  "kill_to_exit_ms": null,
+  "max_observation_gap_ms": 8.219791,
+  "outcome": "finished",
+  "over_budget_bytes": 0,
+  "peak_footprint_bytes": 210174912,
+  "raw_stdout": "{\"status\":\"ocr\",\"usable_text\":true,\"text\":\"[Page 1]\\nOrganic Chemistry\\nChapter 7: Alkenes\\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\\nThe simplest alkene is ethene, with the formula C2H4.\\nAlkenes undergo addition reactions with hydrogen and halogens.\\n[Page 2]\\n有机化学 第七草 烯烃\\n烯烃是含有碳碳双键的烃。\\n乙烯是最简单的烯烃，可以使湨水褪色。\\n烯烃能够发生加成反应和聚合反应。\\n[Page 3]\\n实验室安全 Lab Safety\\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\\n2. 有机溶剂远离明火 Keep solvents away from flames\\n3. 废液倒入指定容器 Use the waste containers\\n[Page 4]\",\"note\":null,\"left_out\":[\"page 4: a scanned page past the OCR page limit (3)\"],\"reader\":{\"reader\":\"pdf-1\",\"status\":\"unsupported\",\"note\":\"No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\",\"pages\":4},\"pages\":[{\"page\":1,\"source\":\"ocr\",\"chars\":190,\"lines\":[{\"text\":\"Organic Chemistry\",\"confidence\":1.0,\"bbox\":[0.10864519924091846,0.8923201083459463,0.3720738550483676,0.02919109465221348]},{\"text\":\"Chapter 7: Alkenes\",\"confidence\":1.0,\"bbox\":[0.108829568194951,0.8473053889867282,0.26078028834572436,0.018973680925328473]},{\"text\":\"Alkenes are hydrocarbons that contain a carbon-carbon double bond.\",\"confidence\":1.0,\"bbox\":[0.1067761719567181,0.8095930233341179,0.6919918037239269,0.015988371941245805]},{\"text\":\"The simplest alkene is ethene, with the formula C2H4.\",\"confidence\":1.0,\"bbox\":[0.10882957264718607,0.7848588539921901,0.5338808956861207,0.01753635585970925]},{\"text\":\"Alkenes undergo addition reactions with hydrogen and halogens.\",\"confidence\":1.0,\"bbox\":[0.10677618975299923,0.7630453377277531,0.6427104539421479,0.01602442964108408]}],\"render_ms\":18,\"ocr_ms\":282,\"pixels\":[1654,2338],\"error\":null},{\"page\":2,\"source\":\"ocr\",\"chars\":55,\"lines\":[{\"text\":\"有机化学 第七草 烯烃\",\"confidence\":0.5,\"bbox\":[0.10882957796681089,0.8952095809410646,0.35728950915630664,0.026302047220430724]},{\"text\":\"烯烃是含有碳碳双键的烃。\",\"confidence\":1.0,\"bbox\":[0.1084357080910563,0.8486147529827028,0.23494758283068506,0.02350406304091046]},{\"text\":\"乙烯是最简单的烯烃，可以使湨水褪色。\",\"confidence\":0.5,\"bbox\":[0.10882957478827558,0.8270348841061111,0.34907596315985867,0.017441859706229357]},{\"text\":\"烯烃能够发生加成反应和聚合反应。\",\"confidence\":1.0,\"bbox\":[0.10868585698827167,0.8051410846757199,0.3144960414974116,0.020246987061382282]}],\"render_ms\":10,\"ocr_ms\":234,\"pixels\":[1654,2338],\"error\":null},{\"page\":3,\"source\":\"ocr\",\"chars\":112,\"lines\":[{\"text\":\"实验室安全 Lab Safety\",\"confidence\":0.5,\"bbox\":[0.10849706666087286,0.8922693734711781,0.41140451857948535,0.032014837012115493]},{\"text\":\"1. 进入实验室必须佩戴护目镜 Wear safety goggles\",\"confidence\":1.0,\"bbox\":[0.1088295678825674,0.8502906980616487,0.47433265031032723,0.017545058851674344]},{\"text\":\"2. 有机溶剂远离明火 Keep solvents away from flames\",\"confidence\":0.5,\"bbox\":[0.10662534998650615,0.8254175871587658,0.5136436084161503,0.02023106012923581]},{\"text\":\"3. 废液倒入指定容器 Use the waste containers\",\"confidence\":0.5,\"bbox\":[0.10882957367574876,0.8052325582195443,0.44147842942298976,0.015988371941245805]}],\"render_ms\":10,\"ocr_ms\":131,\"pixels\":[1654,2338],\"error\":null},{\"page\":4,\"source\":\"not_read_page_limit\",\"chars\":0,\"lines\":[],\"render_ms\":null,\"ocr_ms\":null,\"pixels\":null,\"error\":null}],\"timing\":{\"reader_ms\":12,\"render_ms\":38,\"ocr_ms\":647,\"total_ms\":701},\"settings\":{\"dpi\":200.0,\"max_pixels\":8000000,\"max_ocr_pages\":3,\"min_page_chars\":10,\"languages\":[\"zh-Hans\",\"en-US\"],\"language_correction\":true,\"auto_language\":true}}",
+  "sampled_peak_bytes": 210174912,
+  "samples": 126,
+  "stderr": "",
+  "wall_ms": 938.5378330000001
+}

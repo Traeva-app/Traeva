@@ -1,0 +1,467 @@
+{
+  "source_sha": "22c69b4e01f035ecbf0f888014c3d143dc3b4d00",
+  "kind": "developer lifecycle check; not R4",
+  "started_utc": "20261013T074059025557Z",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "binary_sha256": "b5eb5a6cfac9d1db436891092e79570599e602a271409dd8d5f27e663f2b3a8b",
+  "script_sha256": "c1d1a27928174682a0daaa3f23989d7160705da5b0e3355955d83ae3183ed0aa",
+  "protocol_sha256": "0ed75a247ff1ab3f390360b526bf39868dd43641b832fe498ef3f4720bef06e0",
+  "checks": [
+    {
+      "label": "prepare-cancel strict signature and hardened runtime",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-cancel discards and reaps",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-cancel kill-to-exit within 250ms",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-cancel retry is exact ready and reaped",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-cancel recovery read",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-timeout strict signature and hardened runtime",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-timeout discards and reaps",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-timeout kill-to-exit within 250ms",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-timeout retry is exact ready and reaped",
+      "verdict": "PASS"
+    },
+    {
+      "label": "prepare-timeout recovery read",
+      "verdict": "PASS"
+    },
+    {
+      "label": "parent-exit strict signature and hardened runtime",
+      "verdict": "PASS"
+    },
+    {
+      "label": "parent-exit live child confirmed",
+      "verdict": "PASS"
+    },
+    {
+      "label": "parent-exit parent killed and waited",
+      "verdict": "PASS"
+    },
+    {
+      "label": "parent-exit watchdog child absent within 2s",
+      "verdict": "PASS"
+    },
+    {
+      "label": "parent-exit retry is exact ready and reaped",
+      "verdict": "PASS"
+    },
+    {
+      "label": "parent-exit recovery read",
+      "verdict": "PASS"
+    }
+  ],
+  "signatures": [
+    {
+      "label": "prepare-cancel",
+      "bundle_id": "dev.traeva.ocr.port.lifecycle.prepare-cancel.20261013T074059025557Z",
+      "sign_returncode": 0,
+      "verify_returncode": 0,
+      "signature": "Executable=<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/prepare-cancel.app/Contents/MacOS/ocr-core-check\nIdentifier=dev.traeva.ocr.port.lifecycle.prepare-cancel.20261013T074059025557Z\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=14596 flags=0x10002(adhoc,runtime) hashes=448+3 location=embedded\nSignature=adhoc\nInfo.plist entries=6\nTeamIdentifier=not set\nRuntime Version=27.0.0\nSealed Resources version=2 rules=13 files=0\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n",
+      "sha256": "5a32a12f0999fd3f13141cb391995c89dcb556ff1f7929cbd51c137e43bf2086",
+      "sign_error": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/prepare-cancel.app: replacing existing signature\n",
+      "verify_error": ""
+    },
+    {
+      "label": "prepare-timeout",
+      "bundle_id": "dev.traeva.ocr.port.lifecycle.prepare-timeout.20261013T074059025557Z",
+      "sign_returncode": 0,
+      "verify_returncode": 0,
+      "signature": "Executable=<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/prepare-timeout.app/Contents/MacOS/ocr-core-check\nIdentifier=dev.traeva.ocr.port.lifecycle.prepare-timeout.20261013T074059025557Z\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=14597 flags=0x10002(adhoc,runtime) hashes=448+3 location=embedded\nSignature=adhoc\nInfo.plist entries=6\nTeamIdentifier=not set\nRuntime Version=27.0.0\nSealed Resources version=2 rules=13 files=0\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n",
+      "sha256": "3bf7994f52e681c789bab882b3d93d630628f8b755635e3fdf622e4a02c8e026",
+      "sign_error": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/prepare-timeout.app: replacing existing signature\n",
+      "verify_error": ""
+    },
+    {
+      "label": "parent-exit",
+      "bundle_id": "dev.traeva.ocr.port.lifecycle.parent-exit.20261013T074059025557Z",
+      "sign_returncode": 0,
+      "verify_returncode": 0,
+      "signature": "Executable=<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check\nIdentifier=dev.traeva.ocr.port.lifecycle.parent-exit.20261013T074059025557Z\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=14593 flags=0x10002(adhoc,runtime) hashes=448+3 location=embedded\nSignature=adhoc\nInfo.plist entries=6\nTeamIdentifier=not set\nRuntime Version=27.0.0\nSealed Resources version=2 rules=13 files=0\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n",
+      "sha256": "12e73e7418011fdbfa5c80422b2f4afc3fda68df606ef5817cc775f43e9f92e4",
+      "sign_error": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app: replacing existing signature\n",
+      "verify_error": ""
+    }
+  ],
+  "scenarios": {
+    "prepare-cancel": {
+      "first_preparation": {
+        "answer": null,
+        "child_pid": 25175,
+        "child_reaped": true,
+        "exit_code": null,
+        "final_kernel_lifetime_peak_bytes": 102712136,
+        "kill_to_exit_ms": 3.018084,
+        "max_observation_gap_ms": 7.574417,
+        "outcome": "cancelled",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 102712136,
+        "raw_stdout": "",
+        "sampled_peak_bytes": 102712136,
+        "samples": 138,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 1004.485375,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--prepare",
+        "budget_ms": 90000,
+        "cancel_ms": 1000,
+        "memory_mib": 384
+      },
+      "retry_preparation": {
+        "answer": {
+          "status": "ready"
+        },
+        "child_pid": 25181,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 112198496,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.555499999999999,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 112198496,
+        "raw_stdout": "{\"status\":\"ready\"}",
+        "sampled_peak_bytes": 112198496,
+        "samples": 4335,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 31645.344583,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--prepare",
+        "budget_ms": 90000,
+        "cancel_ms": null,
+        "memory_mib": 384
+      },
+      "recovery_read": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1.应用层 Application Layer: HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\n阅读材料：教材第5章5.1 至5.3 节"
+        },
+        "child_pid": 25269,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 195789760,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 8.0415,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 195789760,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n计算机网络 Computer Networks\\n第二讲：TCP/IP 协议栈\\nLecture 2: The TCP/IP Protocol Stack\\n1.应用层 Application Layer: HTTP、DNS、SMTP\\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\\n3. 网络层 Network Layer：IP 地址与路由选择\\n4. 链路层 Link Layer：以太网帧与 MAC 地址\\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\\n阅读材料：教材第5章5.1 至5.3 节\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 195756992,
+        "samples": 65,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 474.986916,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--recognize",
+        "budget_ms": 15000,
+        "cancel_ms": null,
+        "memory_mib": 384
+      }
+    },
+    "prepare-timeout": {
+      "first_preparation": {
+        "answer": null,
+        "child_pid": 25275,
+        "child_reaped": true,
+        "exit_code": null,
+        "final_kernel_lifetime_peak_bytes": 102777720,
+        "kill_to_exit_ms": 3.0244590000000002,
+        "max_observation_gap_ms": 7.562625,
+        "outcome": "time_limit",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 102777720,
+        "raw_stdout": "",
+        "sampled_peak_bytes": 102777720,
+        "samples": 137,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 1005.7270840000001,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--prepare",
+        "budget_ms": 1000,
+        "cancel_ms": null,
+        "memory_mib": 384
+      },
+      "retry_preparation": {
+        "answer": {
+          "status": "ready"
+        },
+        "child_pid": 25278,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 112231264,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.547083,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 112231264,
+        "raw_stdout": "{\"status\":\"ready\"}",
+        "sampled_peak_bytes": 112231264,
+        "samples": 4357,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 31990.225416,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--prepare",
+        "budget_ms": 90000,
+        "cancel_ms": null,
+        "memory_mib": 384
+      },
+      "recovery_read": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1.应用层 Application Layer: HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\n阅读材料：教材第5章5.1 至5.3 节"
+        },
+        "child_pid": 25298,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 187204568,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.539916,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 187204568,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n计算机网络 Computer Networks\\n第二讲：TCP/IP 协议栈\\nLecture 2: The TCP/IP Protocol Stack\\n1.应用层 Application Layer: HTTP、DNS、SMTP\\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\\n3. 网络层 Network Layer：IP 地址与路由选择\\n4. 链路层 Link Layer：以太网帧与 MAC 地址\\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\\n阅读材料：教材第5章5.1 至5.3 节\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 187204568,
+        "samples": 51,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 375.9595,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--recognize",
+        "budget_ms": 15000,
+        "cancel_ms": null,
+        "memory_mib": 384
+      }
+    },
+    "parent-exit": {
+      "monitor_pid": 25305,
+      "child_before_parent_exit": {
+        "pid": 25307,
+        "exists": true,
+        "parent_pid": 25305,
+        "state": "S",
+        "started": "Tue Oct 13 00:42:05 2026",
+        "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+        "zombie": false
+      },
+      "monitor_returncode": -9,
+      "observations": [
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 4.7607089999957
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 20.10787500000788
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 38.63612499999647
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 54.6520839999971
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 73.633834000006
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 92.55679199999634
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 108.98950000000696
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 129.0012089999948
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 149.13845899999956
+        },
+        {
+          "pid": 25307,
+          "exists": true,
+          "parent_pid": 1,
+          "state": "S",
+          "started": "Tue Oct 13 00:42:05 2026",
+          "command": "<worktree>/experiments/pdf-ocr-core-check/target/bundles/lifecycle-extra-20261013T074059025557Z/parent-exit.app/Contents/MacOS/ocr-core-check",
+          "zombie": false,
+          "after_parent_kill_ms": 167.1608340000006
+        },
+        {
+          "pid": 25307,
+          "exists": false,
+          "after_parent_kill_ms": 186.96691700000656
+        }
+      ],
+      "child_gone_ms": 188.55050000000517,
+      "monitor_stdout": "",
+      "monitor_stderr": "",
+      "retry_preparation": {
+        "answer": {
+          "status": "ready"
+        },
+        "child_pid": 25323,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 112231288,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.77025,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 112231288,
+        "raw_stdout": "{\"status\":\"ready\"}",
+        "sampled_peak_bytes": 112231288,
+        "samples": 4405,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 32118.175541,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--prepare",
+        "budget_ms": 90000,
+        "cancel_ms": null,
+        "memory_mib": 384
+      },
+      "recovery_read": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1.应用层 Application Layer: HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\n阅读材料：教材第5章5.1 至5.3 节"
+        },
+        "child_pid": 25404,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 187433920,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.533083,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 187433920,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n计算机网络 Computer Networks\\n第二讲：TCP/IP 协议栈\\nLecture 2: The TCP/IP Protocol Stack\\n1.应用层 Application Layer: HTTP、DNS、SMTP\\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\\n3. 网络层 Network Layer：IP 地址与路由选择\\n4. 链路层 Link Layer：以太网帧与 MAC 地址\\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\\n阅读材料：教材第5章5.1 至5.3 节\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 187401152,
+        "samples": 52,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 382.330166,
+        "monitor_returncode": 0,
+        "monitor_stderr": "",
+        "mode": "--recognize",
+        "budget_ms": 15000,
+        "cancel_ms": null,
+        "memory_mib": 384
+      }
+    }
+  },
+  "sample_sha256": "5ce094b565ac7f192b4d867e3fa19b6389b52a1eb2382890e2324a17f634eb91",
+  "complete": true,
+  "source_files": {
+    "crates/traeva-core/src/pdf_ocr/memory.rs": "18e6b89dd13e2123537a0ef053f6d377df3c7dc89a765ee8e4fe02ead9e1bf3a",
+    "crates/traeva-core/src/pdf_ocr/mod.rs": "d978af4542272ef8e2092b91045878160253571546d363c1408fb6c4cb62514d",
+    "crates/traeva-core/src/pdf_ocr/render.rs": "b2b88bb4f696d79df1b21dd655b0b91db3ecdcb749fb15c3e39836062a3005ef",
+    "crates/traeva-core/src/pdf_ocr/runtime.rs": "d50ce68eaa392a8f42162a2b2cb3d086aa2daacc3753531ec351aa8406dfc521",
+    "crates/traeva-core/src/pdf_ocr/vision.rs": "c767031bf3b6453eff6f12063e9a527705b7df1ec1c589b056a14ab60fa4c7b8",
+    "crates/traeva-core/src/pdf_ocr/without_ocr.rs": "e4ebf7d23f9b8dbd3a3cf8888c7a710b6808938d95eb83268ea2706db185bc79"
+  },
+  "limitation": "New bundle IDs on this existing Mac are not fresh-device evidence.",
+  "last_saved_utc": "2026-10-13T07:42:38.596103+00:00"
+}

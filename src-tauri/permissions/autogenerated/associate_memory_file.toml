@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-associate-memory-file"
+description = "Enables the associate_memory_file command without any pre-configured scope."
+commands.allow = ["associate_memory_file"]
+
+[[permission]]
+identifier = "deny-associate-memory-file"
+description = "Denies the associate_memory_file command without any pre-configured scope."
+commands.deny = ["associate_memory_file"]

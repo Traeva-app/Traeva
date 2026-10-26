@@ -1,0 +1,45 @@
+{
+  "main_R2_baseline": "c6a711d7f3155aee0f30b82eb44aa27cc267e523",
+  "dependency_A151_sha": "3d1a4a98b3afaa51e66ea1a276aa83f3778f385c",
+  "actual_helper_reader_sha256": "e0eb50657197eee4b343d38d55c13294a2c89635d8d8575df3dd12bef9bdca55",
+  "parser_reviewed_sha": "6de78846225a65321089ec5794254407f35d632d",
+  "distinct_final_test_count": 22,
+  "registry_versions_match_baseline_root": true,
+  "hashes": {
+    "Cargo.toml": "5d982544c2525dde09aba5a7eaccccd36a0fa023b8a9b927c4bc4a55af5da6d4",
+    "Cargo.lock": "23ac1697bf57ca2d4b4cec3b514783bde069dde2205fc16643e6e5eb51df6f9b",
+    "src/lib.rs": "a9ae884ca26665ef40bfd11072ad87b9d84bb7cc61ea1bec69447861e1284fd8",
+    "tests/projection.rs": "3df0cbdbb032a0c6a54afb53e89042c6b87cf4ebb9398f0fa9da2b22ca2859d8",
+    "tests/shared_helper.rs": "f42319392b2fcf52119f642d0eb6f0fc39ba6f19e7dcc15167efccc12f10818d",
+    "PROTOCOL.md": "9f1c800152564537045c76dffbe44c8e78e7aec514f90aeb0502a50d23a954a2",
+    "PROTOCOL-V23.md": "55bdb0623757692214eec6f17f1f7ad9d3af01cb5506b27416578adc2ed6ecc3",
+    "PROTOCOL-ALIGNED.md": "8a126bddc0d2e2da3819ab7b5cc9c9d74d9f04ba6931c113f1a5cbfb6998775c",
+    "GRAMMAR.md": "cd2ec233599f9f70773da3dd115480c2af80e3e53ca46204feefe409df6267db"
+  },
+  "retained_failures": {
+    "first-build-FAIL.txt": "74a4e6f706692b8b50b8ff2d7e7d6f6d8a450f740036bc94eaeda948de1e1af1",
+    "first-A151-compat-FAIL.txt": "d2b4789726ef6d0d2bc1c6a4738c55090e68f571a94fec0c83d55c8be4bdc500",
+    "v23-compat-FAIL.txt": "a0e8a8968547306b50b920f6dceb5322b95b40dd57b719dce49ce35e7bdf30ef"
+  },
+  "tested_adapter_source_commit": "72673954ea7d6c8b4dcfdad383d1213f5e4926f8",
+  "home_path_redaction": {
+    "note": "原证据因含本机路径而改写；当前字段指向脱敏版本，原 hash 保留如下。历史 FAIL/PASS 和原测试结论未变。",
+    "original_hash_references": [
+      {
+        "field": "retained_failures.first-build-FAIL.txt",
+        "original_sha256": "08770cc181a854cc62720e351bf82f4e1becd9deea952743ee021161bcd141e5",
+        "redacted_sha256": "74a4e6f706692b8b50b8ff2d7e7d6f6d8a450f740036bc94eaeda948de1e1af1"
+      },
+      {
+        "field": "retained_failures.first-A151-compat-FAIL.txt",
+        "original_sha256": "6f5b3627bce6929272c538ccba880f9fa4d939d61f06b1dfc85bceddbc3ba2a3",
+        "redacted_sha256": "d2b4789726ef6d0d2bc1c6a4738c55090e68f571a94fec0c83d55c8be4bdc500"
+      },
+      {
+        "field": "retained_failures.v23-compat-FAIL.txt",
+        "original_sha256": "710c936fbd64094428abddaf0543358ee89f92594be1e2380f69fb8f66feb318",
+        "redacted_sha256": "a0e8a8968547306b50b920f6dceb5322b95b40dd57b719dce49ce35e7bdf30ef"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-take-page-request"
+description = "Enables the take_page_request command without any pre-configured scope."
+commands.allow = ["take_page_request"]
+
+[[permission]]
+identifier = "deny-take-page-request"
+description = "Denies the take_page_request command without any pre-configured scope."
+commands.deny = ["take_page_request"]

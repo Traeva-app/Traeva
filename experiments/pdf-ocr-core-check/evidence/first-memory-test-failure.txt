@@ -1,0 +1,16 @@
+2026-10-13, macOS arm64, developer self-test. Original experimental lock restored.
+Command: cargo test --offline --locked --manifest-path experiments/pdf-ocr-core-check/Cargo.toml pdf_ocr::
+Exit: 101
+
+running 14 tests
+test pdf_ocr::memory::tests::current_process_has_a_real_footprint_sample ... FAILED
+
+---- pdf_ocr::memory::tests::current_process_has_a_real_footprint_sample stdout ----
+
+thread 'pdf_ocr::memory::tests::current_process_has_a_real_footprint_sample' (19195664) panicked at src/../../../crates/traeva-core/src/pdf_ocr/memory.rs:94:9:
+assertion failed: usage.lifetime_peak_bytes >= usage.footprint_bytes
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.11s
+
+The first assertion did not log numeric values; no values are inferred here.

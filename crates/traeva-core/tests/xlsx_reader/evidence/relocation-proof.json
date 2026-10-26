@@ -1,0 +1,7 @@
+{
+  "reviewed_baseline": "8f274c186a24cfaa4902fced09e8b4edb818969f",
+  "parser_body_exact": true,
+  "package_xml_only_use_crate_to_super": true,
+  "projection_only_import_namespace_and_rustfmt_order": true,
+  "initial_checker_failure": "Expected namespace changes but did not normalize rustfmt import order; body unchanged, diff retained in local notes"
+}

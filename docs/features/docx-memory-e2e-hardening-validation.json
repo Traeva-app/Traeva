@@ -1,0 +1,2743 @@
+{
+  "scope": "Core-only synthetic replay, not a new Word GUI run",
+  "base_revision": "dd8702338cb12f7c82a1506fb105dbb23d02b388",
+  "tested_tree": {
+    "head_revision": "67e17a579ca26be714c2f438398c2654cb4e0686",
+    "worktree_dirty": false,
+    "source_sha256": {
+      "tests/docx_reader/memory_e2e.rs": "f6c6341ec62d84d1be3462226aecf91501feb00c81e63577e33df6d2aff547a6",
+      "tests/docx_reader/probe.rs": "b163439c580f703804329883be500f4dc2e16b7d122ef7f37fdd48081602db38",
+      "tests/docx_reader/run_memory_e2e.py": "bf5619304499b051b409d390a6d150a5b5617e15eb29667b0692b7bb1aadc74b",
+      "tests/docx_reader/test_memory_e2e_oracles.py": "a69b824d4cb20f69a36f62c8abeb993f446f36098b8bbe715a1f3a85d5e7bc49",
+      "src/docx.rs": "f90b898e97df8f7bc80c370340217c062a5cab7e1dfc25bf09fa1acb09f4ae0f",
+      "src/docx_cached.rs": "930510eda376a6f5dba212602aba32ce573639f21575c532847898d77fc84b97",
+      "src/docx_preview.rs": "cf19746a97cddf1d8ef55a24aeee18ba24cd495b906da2b1f313774be4efb0c1"
+    }
+  },
+  "environment": {
+    "os": "Darwin",
+    "os_version": "27.0.1",
+    "python": "3.9.6"
+  },
+  "binary_sha256": "087a6c36f8af60cb1fecab17c5454d7ff68dfd9325fe98f010728ea5b99478f5",
+  "expected_text_sha256_by_package": {
+    "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+    "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+    "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+  },
+  "rows": [
+    {
+      "case": "initial actual immutable Snapshot",
+      "expected": {
+        "snapshots": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          }
+        ],
+        "packages": [
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        ],
+        "text_hashes": {
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+        }
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "owner-only app-data under inherited umask",
+      "expected": "no group or other access",
+      "actual": "0o700",
+      "status": "PASS"
+    },
+    {
+      "case": "physical replacement",
+      "expected": "different inode",
+      "actual": {
+        "before": 171556637,
+        "after": 171556668
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "replacement without candidate permission",
+      "expected": "no automatic continuation/capture",
+      "actual": {
+        "candidate_capture": "off",
+        "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+        "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+        "fork_points": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          }
+        ],
+        "items": [],
+        "page_token_sha256": "e1349746bb3c96af2b49fc97a4a6e1d0203449d0dc659941761b72b50791e942",
+        "pending": {
+          "limit": 20,
+          "objects": 0,
+          "snapshots": 0
+        },
+        "place": {
+          "display_path": "<synthetic-root>/lifecycle.docx",
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+        },
+        "place_holds": "unread_object",
+        "place_problem": null,
+        "root_active": true,
+        "state": "active",
+        "tail": {
+          "byte_length": 12229,
+          "captured_at_ms": 1791750636199,
+          "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+          "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+        },
+        "unread_occupant": {
+          "continue_from": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "continue_needs": null,
+          "continue_skips": 0,
+          "detected_at_ms": 1791750636259,
+          "occupant": {
+            "byte_length": 12265,
+            "modified_at_ms": 1791750636257,
+            "occupant_token_sha256": "94439fc5a142dd55cb9b3dfc5beb47599a91c70f625ed625f8bb64fca9a21c98"
+          }
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "old Snapshot before confirmation",
+      "expected": {
+        "snapshots": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          }
+        ],
+        "packages": [
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        ],
+        "text_hashes": {
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+        }
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "candidate is not a confirmed version",
+      "expected": "one pending candidate, no pair",
+      "actual": {
+        "candidate_capture": "on",
+        "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+        "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+        "fork_points": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          }
+        ],
+        "items": [
+          {
+            "at_place": true,
+            "candidate_id": "a0f4872b-2c63-4fcd-90b9-6286543c05b0",
+            "continue_from": {
+              "byte_length": 12229,
+              "captured_at_ms": 1791750636199,
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+              "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+            },
+            "continue_needs": null,
+            "continue_skips": 0,
+            "deferred": false,
+            "display_path": "<synthetic-root>/lifecycle.docx",
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "found_after": {
+              "byte_length": 12229,
+              "captured_at_ms": 1791750636199,
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+              "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+            },
+            "found_at_ms": 1791750636665,
+            "present": true,
+            "reason": "present_when_enabled",
+            "seq": 1,
+            "snapshots": [
+              {
+                "byte_length": 12265,
+                "captured_at_ms": 1791750636665,
+                "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+                "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+              }
+            ]
+          }
+        ],
+        "page_token_sha256": "7dd6a2b26f396ebf7ce5cecbb2b97022f70dca246b67fa7b97a21b5932bfda5e",
+        "pending": {
+          "limit": 20,
+          "objects": 1,
+          "snapshots": 1
+        },
+        "place": {
+          "display_path": "<synthetic-root>/lifecycle.docx",
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+        },
+        "place_holds": "pending_candidate",
+        "place_problem": null,
+        "root_active": true,
+        "state": "active",
+        "tail": {
+          "byte_length": 12265,
+          "captured_at_ms": 1791750636665,
+          "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+        },
+        "unread_occupant": null
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "explicit Core continuation",
+      "expected": "watch moved; history count 2",
+      "actual": {
+        "basis": "explicit_synthetic_test_author_choice",
+        "decision": {
+          "batch_id": "96aab404-e1ae-4b51-9cc8-3d8b80fc1b1e",
+          "continued_watch": {
+            "checked_at_ms": null,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "latest": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "problem": null,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "started_at_ms": 1791750636761,
+            "status": "active",
+            "stopped_at_ms": null,
+            "versions": 1,
+            "watch_id": "6fd72921-57cd-4cb3-8ccc-627750b77780"
+          },
+          "history_only": false,
+          "page": {
+            "candidate_capture": "on",
+            "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+            "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+            "fork_points": [
+              {
+                "byte_length": 12229,
+                "captured_at_ms": 1791750636199,
+                "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+                "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+              },
+              {
+                "byte_length": 12265,
+                "captured_at_ms": 1791750636665,
+                "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+                "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+              }
+            ],
+            "items": [],
+            "page_token_sha256": "ecf636a8b7bf143c770571a74f4078c485f3d680c49befbb93d357711226a1bc",
+            "pending": {
+              "limit": 20,
+              "objects": 0,
+              "snapshots": 0
+            },
+            "place": {
+              "display_path": "<synthetic-root>/lifecycle.docx",
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+            },
+            "place_holds": "recorded_file",
+            "place_problem": null,
+            "root_active": true,
+            "state": "active",
+            "tail": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "unread_occupant": null
+          },
+          "record": {
+            "candidate_capture": "on",
+            "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+            "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+            "hold": null,
+            "line_versions": 2,
+            "open_gaps": [],
+            "origin_file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "pending": {
+              "limit": 20,
+              "objects": 0,
+              "snapshots": 0
+            },
+            "permission_file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "place": {
+              "display_path": "<synthetic-root>/lifecycle.docx",
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+            },
+            "root_active": true,
+            "same_content": [],
+            "state": "active",
+            "waiting_for_relocation": false,
+            "watch": {
+              "checked_at_ms": null,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "latest": {
+                "byte_length": 12265,
+                "captured_at_ms": 1791750636665,
+                "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+                "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+              },
+              "problem": null,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "started_at_ms": 1791750636761,
+              "status": "active",
+              "stopped_at_ms": null,
+              "versions": 1,
+              "watch_id": "6fd72921-57cd-4cb3-8ccc-627750b77780"
+            }
+          }
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "two confirmed versions",
+      "expected": {
+        "snapshots": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          }
+        ],
+        "packages": [
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332"
+        ],
+        "text_hashes": {
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+        }
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 72,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f"
+          },
+          "snapshot": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "verified_bytes_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "continuation evidence",
+      "expected": "user, with replacement gap",
+      "actual": [
+        {
+          "after": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "replaced_uncaptured"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "confirmed pair names exact captured versions",
+      "expected": {
+        "before": {
+          "byte_length": 12229,
+          "captured_at_ms": 1791750636199,
+          "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+          "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+        },
+        "after": {
+          "byte_length": 12265,
+          "captured_at_ms": 1791750636665,
+          "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+        }
+      },
+      "actual": [
+        {
+          "after": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "replaced_uncaptured"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "physical replacement",
+      "expected": "different inode",
+      "actual": {
+        "before": 171556668,
+        "after": 171556675
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "physical replacement",
+      "expected": "different inode",
+      "actual": {
+        "before": 171556675,
+        "after": 171556676
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "pending capture after process restart",
+      "expected": "one final candidate; missed version absent",
+      "actual": {
+        "candidate_capture": "on",
+        "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+        "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+        "fork_points": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          }
+        ],
+        "items": [
+          {
+            "at_place": true,
+            "candidate_id": "b676913b-d89a-4419-9cca-32b169d29f9c",
+            "continue_from": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "continue_needs": null,
+            "continue_skips": 0,
+            "deferred": false,
+            "display_path": "<synthetic-root>/lifecycle.docx",
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "found_after": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "found_at_ms": 1791750637211,
+            "present": true,
+            "reason": "replaced",
+            "seq": 2,
+            "snapshots": [
+              {
+                "byte_length": 1263,
+                "captured_at_ms": 1791750637211,
+                "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+              }
+            ]
+          }
+        ],
+        "page_token_sha256": "1154155f3b105e5695a5e16d9f44654c6d24dd622717b8d29e3a0b8e4df19741",
+        "pending": {
+          "limit": 20,
+          "objects": 1,
+          "snapshots": 1
+        },
+        "place": {
+          "display_path": "<synthetic-root>/lifecycle.docx",
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+        },
+        "place_holds": "pending_candidate",
+        "place_problem": null,
+        "root_active": true,
+        "state": "active",
+        "tail": {
+          "byte_length": 1263,
+          "captured_at_ms": 1791750637211,
+          "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+          "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+        },
+        "unread_occupant": null
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "exact pending identity across restart",
+      "expected": {
+        "candidate_id": "b676913b-d89a-4419-9cca-32b169d29f9c",
+        "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+        "snapshots": [
+          {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          }
+        ],
+        "continue_from": {
+          "byte_length": 12265,
+          "captured_at_ms": 1791750636665,
+          "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+        }
+      },
+      "actual": {
+        "candidate_capture": "on",
+        "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+        "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+        "fork_points": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          }
+        ],
+        "items": [
+          {
+            "at_place": true,
+            "candidate_id": "b676913b-d89a-4419-9cca-32b169d29f9c",
+            "continue_from": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "continue_needs": null,
+            "continue_skips": 0,
+            "deferred": false,
+            "display_path": "<synthetic-root>/lifecycle.docx",
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "found_after": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "found_at_ms": 1791750637211,
+            "present": true,
+            "reason": "replaced",
+            "seq": 2,
+            "snapshots": [
+              {
+                "byte_length": 1263,
+                "captured_at_ms": 1791750637211,
+                "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+              }
+            ]
+          }
+        ],
+        "page_token_sha256": "1154155f3b105e5695a5e16d9f44654c6d24dd622717b8d29e3a0b8e4df19741",
+        "pending": {
+          "limit": 20,
+          "objects": 1,
+          "snapshots": 1
+        },
+        "place": {
+          "display_path": "<synthetic-root>/lifecycle.docx",
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+        },
+        "place_holds": "pending_candidate",
+        "place_problem": null,
+        "root_active": true,
+        "state": "active",
+        "tail": {
+          "byte_length": 1263,
+          "captured_at_ms": 1791750637211,
+          "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+          "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+        },
+        "unread_occupant": null
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "existing confirmed pairs survive pending restart",
+      "expected": {
+        "pairs": [
+          {
+            "after": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "basis": "continuation",
+            "before": {
+              "byte_length": 12229,
+              "captured_at_ms": 1791750636199,
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+              "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+            },
+            "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+            "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+            "evidence": "user",
+            "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+            "gap": true,
+            "gap_kinds": [
+              "replaced_uncaptured"
+            ],
+            "permission_file_ids": [
+              "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+            ],
+            "unplaced": false
+          }
+        ],
+        "permitted_gap_addition": "watcher_stopped"
+      },
+      "actual": [
+        {
+          "after": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "replaced_uncaptured",
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "pending decision survives another restart",
+      "expected": {
+        "snapshots": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          }
+        ],
+        "packages": [
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        ],
+        "text_hashes": {
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+        }
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 72,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f"
+          },
+          "snapshot": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "verified_bytes_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332"
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 74,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+          },
+          "snapshot": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "verified_bytes_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "new pair names exact captured parent and child",
+      "expected": {
+        "before": {
+          "byte_length": 12265,
+          "captured_at_ms": 1791750636665,
+          "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+        },
+        "after": {
+          "byte_length": 1263,
+          "captured_at_ms": 1791750637211,
+          "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+          "file_revision": 1,
+          "relative_path": "lifecycle.docx",
+          "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+          "sequence": 1,
+          "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+          "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+        }
+      },
+      "actual": [
+        {
+          "after": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "replaced_uncaptured",
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        },
+        {
+          "after": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "2d0c2d39-e3c4-45b2-8799-0c46e43985e0",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "historical gap kept",
+      "expected": "watcher_stopped; no invented intermediate version",
+      "actual": [
+        {
+          "after": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "replaced_uncaptured",
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        },
+        {
+          "after": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "2d0c2d39-e3c4-45b2-8799-0c46e43985e0",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "source deletion retains all history",
+      "expected": {
+        "snapshots": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          }
+        ],
+        "packages": [
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        ],
+        "text_hashes": {
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+        }
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 72,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f"
+          },
+          "snapshot": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "verified_bytes_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332"
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 74,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+          },
+          "snapshot": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "verified_bytes_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "exact pairs after source deletion",
+      "expected": [
+        {
+          "after": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "replaced_uncaptured",
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        },
+        {
+          "after": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "2d0c2d39-e3c4-45b2-8799-0c46e43985e0",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        }
+      ],
+      "actual": [
+        {
+          "after": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "replaced_uncaptured",
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        },
+        {
+          "after": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "basis": "continuation",
+          "before": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "edge_id": "2d0c2d39-e3c4-45b2-8799-0c46e43985e0",
+          "evidence": "user",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gap": true,
+          "gap_kinds": [
+            "watcher_stopped"
+          ],
+          "permission_file_ids": [
+            "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+          ],
+          "unplaced": false
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "source loss gap",
+      "expected": "open capture_failed gap",
+      "actual": [
+        {
+          "after": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "end_reason": null,
+          "ended_at_ms": null,
+          "gap_id": "ad88279e-a99d-4f78-97d0-bd0058dd6edd",
+          "kind": "capture_failed",
+          "problem": "file_not_found",
+          "started_at_ms": 1791750637410
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "deleted-source restart recovery",
+      "expected": {
+        "snapshots": [
+          {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          }
+        ],
+        "packages": [
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        ],
+        "text_hashes": {
+          "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+          "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+          "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+        }
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 72,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f"
+          },
+          "snapshot": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          },
+          "verified_bytes_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332"
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 74,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+          },
+          "snapshot": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "verified_bytes_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "exact chain family pairs and previews after recovery",
+      "expected": {
+        "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+        "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+        "pairs": [
+          {
+            "after": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "basis": "continuation",
+            "before": {
+              "byte_length": 12229,
+              "captured_at_ms": 1791750636199,
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+              "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+            },
+            "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+            "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+            "evidence": "user",
+            "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+            "gap": true,
+            "gap_kinds": [
+              "replaced_uncaptured",
+              "watcher_stopped"
+            ],
+            "permission_file_ids": [
+              "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+            ],
+            "unplaced": false
+          },
+          {
+            "after": {
+              "byte_length": 1263,
+              "captured_at_ms": 1791750637211,
+              "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+              "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+            },
+            "basis": "continuation",
+            "before": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+            "edge_id": "2d0c2d39-e3c4-45b2-8799-0c46e43985e0",
+            "evidence": "user",
+            "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+            "gap": true,
+            "gap_kinds": [
+              "watcher_stopped"
+            ],
+            "permission_file_ids": [
+              "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+            ],
+            "unplaced": false
+          }
+        ],
+        "previews": [
+          {
+            "preview": {
+              "summary": {
+                "chars": 64,
+                "covered": [
+                  "main body paragraphs, runs, tabs and explicit line breaks"
+                ],
+                "left_out": [],
+                "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+                "reader": "docx-cache-local-1",
+                "status": "complete"
+              },
+              "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+            },
+            "snapshot": {
+              "byte_length": 12229,
+              "captured_at_ms": 1791750636199,
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+              "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+            },
+            "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+          },
+          {
+            "preview": {
+              "summary": {
+                "chars": 72,
+                "covered": [
+                  "main body paragraphs, runs, tabs and explicit line breaks"
+                ],
+                "left_out": [],
+                "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+                "reader": "docx-cache-local-1",
+                "status": "complete"
+              },
+              "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f"
+            },
+            "snapshot": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "verified_bytes_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332"
+          },
+          {
+            "preview": {
+              "summary": {
+                "chars": 74,
+                "covered": [
+                  "main body paragraphs, runs, tabs and explicit line breaks"
+                ],
+                "left_out": [],
+                "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+                "reader": "docx-cache-local-1",
+                "status": "complete"
+              },
+              "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+            },
+            "snapshot": {
+              "byte_length": 1263,
+              "captured_at_ms": 1791750637211,
+              "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+              "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+            },
+            "verified_bytes_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+          }
+        ]
+      },
+      "actual": {
+        "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+        "family": {
+          "boundaries": [],
+          "created_at_ms": 1791750635803,
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "gaps": [
+            {
+              "after": {
+                "byte_length": 12229,
+                "captured_at_ms": 1791750636199,
+                "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+                "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+              },
+              "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+              "end_reason": "captured",
+              "ended_at_ms": 1791750636665,
+              "gap_id": "8577f959-4e01-4046-8c88-cf987d4e37d9",
+              "kind": "replaced_uncaptured",
+              "problem": null,
+              "started_at_ms": 1791750636259
+            },
+            {
+              "after": {
+                "byte_length": 1263,
+                "captured_at_ms": 1791750637211,
+                "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+              },
+              "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+              "end_reason": null,
+              "ended_at_ms": null,
+              "gap_id": "ad88279e-a99d-4f78-97d0-bd0058dd6edd",
+              "kind": "capture_failed",
+              "problem": "file_not_found",
+              "started_at_ms": 1791750637410
+            }
+          ],
+          "members": [
+            {
+              "basis": "memory_on",
+              "decided_at_ms": null,
+              "display_path": "<synthetic-root>/lifecycle.docx",
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "merged_from": null,
+              "placed": true,
+              "present": false,
+              "snapshots": [
+                {
+                  "byte_length": 12229,
+                  "captured_at_ms": 1791750636199,
+                  "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+                  "file_revision": 1,
+                  "relative_path": "lifecycle.docx",
+                  "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                  "sequence": 1,
+                  "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+                  "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+                }
+              ],
+              "status": "confirmed_system"
+            },
+            {
+              "basis": "candidate_capture",
+              "decided_at_ms": 1791750636761,
+              "display_path": "<synthetic-root>/lifecycle.docx",
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "merged_from": null,
+              "placed": true,
+              "present": false,
+              "snapshots": [
+                {
+                  "byte_length": 12265,
+                  "captured_at_ms": 1791750636665,
+                  "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+                  "file_revision": 1,
+                  "relative_path": "lifecycle.docx",
+                  "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                  "sequence": 1,
+                  "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+                  "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+                }
+              ],
+              "status": "confirmed_user"
+            },
+            {
+              "basis": "candidate_capture",
+              "decided_at_ms": 1791750637357,
+              "display_path": "<synthetic-root>/lifecycle.docx",
+              "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+              "merged_from": null,
+              "placed": true,
+              "present": true,
+              "snapshots": [
+                {
+                  "byte_length": 1263,
+                  "captured_at_ms": 1791750637211,
+                  "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                  "file_revision": 1,
+                  "relative_path": "lifecycle.docx",
+                  "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                  "sequence": 1,
+                  "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                  "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+                }
+              ],
+              "status": "confirmed_user"
+            }
+          ],
+          "merged_family_ids": [],
+          "records": [
+            {
+              "candidate_capture": "on",
+              "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+              "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+              "hold": null,
+              "line_versions": 3,
+              "open_gaps": [
+                {
+                  "after": {
+                    "byte_length": 1263,
+                    "captured_at_ms": 1791750637211,
+                    "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                    "file_revision": 1,
+                    "relative_path": "lifecycle.docx",
+                    "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                    "sequence": 1,
+                    "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                    "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+                  },
+                  "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+                  "end_reason": null,
+                  "ended_at_ms": null,
+                  "gap_id": "ad88279e-a99d-4f78-97d0-bd0058dd6edd",
+                  "kind": "capture_failed",
+                  "problem": "file_not_found",
+                  "started_at_ms": 1791750637410
+                }
+              ],
+              "origin_file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "pending": {
+                "limit": 20,
+                "objects": 0,
+                "snapshots": 0
+              },
+              "permission_file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "place": {
+                "display_path": "<synthetic-root>/lifecycle.docx",
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+              },
+              "root_active": true,
+              "same_content": [],
+              "state": "active",
+              "waiting_for_relocation": true,
+              "watch": {
+                "checked_at_ms": null,
+                "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                "latest": {
+                  "byte_length": 1263,
+                  "captured_at_ms": 1791750637211,
+                  "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                  "file_revision": 1,
+                  "relative_path": "lifecycle.docx",
+                  "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                  "sequence": 1,
+                  "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                  "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+                },
+                "problem": null,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "started_at_ms": 1791750637357,
+                "status": "active",
+                "stopped_at_ms": null,
+                "versions": 1,
+                "watch_id": "696f9f4b-4fb8-413e-b54c-ff4ca15d44c7"
+              }
+            }
+          ],
+          "relations": [
+            {
+              "child": {
+                "byte_length": 12265,
+                "captured_at_ms": 1791750636665,
+                "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+                "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+              },
+              "crosses_works": false,
+              "decided_at_ms": 1791750636761,
+              "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+              "kind": "continuation",
+              "parent": {
+                "byte_length": 12229,
+                "captured_at_ms": 1791750636199,
+                "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+                "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+              },
+              "skipped_items": 0,
+              "status": "confirmed_user"
+            },
+            {
+              "child": {
+                "byte_length": 1263,
+                "captured_at_ms": 1791750637211,
+                "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+              },
+              "crosses_works": false,
+              "decided_at_ms": 1791750637357,
+              "edge_id": "2d0c2d39-e3c4-45b2-8799-0c46e43985e0",
+              "kind": "continuation",
+              "parent": {
+                "byte_length": 12265,
+                "captured_at_ms": 1791750636665,
+                "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+                "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+              },
+              "skipped_items": 0,
+              "status": "confirmed_user"
+            }
+          ]
+        },
+        "pairs": [
+          {
+            "after": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "basis": "continuation",
+            "before": {
+              "byte_length": 12229,
+              "captured_at_ms": 1791750636199,
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+              "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+            },
+            "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+            "edge_id": "8629875e-ff3a-4d1e-8dda-afa78c012dd3",
+            "evidence": "user",
+            "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+            "gap": true,
+            "gap_kinds": [
+              "replaced_uncaptured",
+              "watcher_stopped"
+            ],
+            "permission_file_ids": [
+              "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+            ],
+            "unplaced": false
+          },
+          {
+            "after": {
+              "byte_length": 1263,
+              "captured_at_ms": 1791750637211,
+              "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+              "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+            },
+            "basis": "continuation",
+            "before": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+            "edge_id": "2d0c2d39-e3c4-45b2-8799-0c46e43985e0",
+            "evidence": "user",
+            "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+            "gap": true,
+            "gap_kinds": [
+              "watcher_stopped"
+            ],
+            "permission_file_ids": [
+              "bd8e9b51-19a9-40c0-8c01-4e347945d487"
+            ],
+            "unplaced": false
+          }
+        ],
+        "previews": [
+          {
+            "preview": {
+              "summary": {
+                "chars": 64,
+                "covered": [
+                  "main body paragraphs, runs, tabs and explicit line breaks"
+                ],
+                "left_out": [],
+                "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+                "reader": "docx-cache-local-1",
+                "status": "complete"
+              },
+              "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+            },
+            "snapshot": {
+              "byte_length": 12229,
+              "captured_at_ms": 1791750636199,
+              "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+              "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+            },
+            "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+          },
+          {
+            "preview": {
+              "summary": {
+                "chars": 72,
+                "covered": [
+                  "main body paragraphs, runs, tabs and explicit line breaks"
+                ],
+                "left_out": [],
+                "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+                "reader": "docx-cache-local-1",
+                "status": "complete"
+              },
+              "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f"
+            },
+            "snapshot": {
+              "byte_length": 12265,
+              "captured_at_ms": 1791750636665,
+              "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+              "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+            },
+            "verified_bytes_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332"
+          },
+          {
+            "preview": {
+              "summary": {
+                "chars": 74,
+                "covered": [
+                  "main body paragraphs, runs, tabs and explicit line breaks"
+                ],
+                "left_out": [],
+                "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+                "reader": "docx-cache-local-1",
+                "status": "complete"
+              },
+              "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+            },
+            "snapshot": {
+              "byte_length": 1263,
+              "captured_at_ms": 1791750637211,
+              "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+              "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+            },
+            "verified_bytes_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+          }
+        ],
+        "record": {
+          "candidate_capture": "on",
+          "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+          "family_id": "b3d3185f-1088-4052-b436-91755ba17396",
+          "hold": null,
+          "line_versions": 3,
+          "open_gaps": [
+            {
+              "after": {
+                "byte_length": 1263,
+                "captured_at_ms": 1791750637211,
+                "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+                "file_revision": 1,
+                "relative_path": "lifecycle.docx",
+                "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+                "sequence": 1,
+                "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+                "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+              },
+              "chain_id": "98ef62a0-1ad9-45f1-980e-36a48998d09d",
+              "end_reason": null,
+              "ended_at_ms": null,
+              "gap_id": "ad88279e-a99d-4f78-97d0-bd0058dd6edd",
+              "kind": "capture_failed",
+              "problem": "file_not_found",
+              "started_at_ms": 1791750637410
+            }
+          ],
+          "origin_file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+          "pending": {
+            "limit": 20,
+            "objects": 0,
+            "snapshots": 0
+          },
+          "permission_file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+          "place": {
+            "display_path": "<synthetic-root>/lifecycle.docx",
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395"
+          },
+          "root_active": true,
+          "same_content": [],
+          "state": "active",
+          "waiting_for_relocation": true,
+          "watch": {
+            "checked_at_ms": null,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "latest": {
+              "byte_length": 1263,
+              "captured_at_ms": 1791750637211,
+              "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+              "file_revision": 1,
+              "relative_path": "lifecycle.docx",
+              "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+              "sequence": 1,
+              "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+              "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+            },
+            "problem": null,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "started_at_ms": 1791750637357,
+            "status": "active",
+            "stopped_at_ms": null,
+            "versions": 1,
+            "watch_id": "696f9f4b-4fb8-413e-b54c-ff4ca15d44c7"
+          }
+        },
+        "scope": "core_only_local_test",
+        "source": {
+          "error": "No such file or directory (os error 2)",
+          "missing": true
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "case": "one corrupt historical blob",
+      "expected": {
+        "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe",
+        "code": "snapshot_corrupt",
+        "others": "identical full previews"
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        },
+        {
+          "error": {
+            "action_id": null,
+            "allowed_next": [],
+            "code": "snapshot_corrupt",
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "message": "The saved copy of this version no longer matches its SHA-256. Traeva does not use it or repair it.",
+            "plan_id": null,
+            "retryable": false,
+            "stage": "memory"
+          },
+          "snapshot": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          }
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 74,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+          },
+          "snapshot": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "verified_bytes_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "case": "one missing historical blob",
+      "expected": {
+        "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe",
+        "code": "snapshot_unavailable",
+        "others": "identical full previews"
+      },
+      "actual": [
+        {
+          "preview": {
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce"
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791750636199,
+            "file_id": "bd8e9b51-19a9-40c0-8c01-4e347945d487",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "9f4d298c-ecdc-44c8-9cd4-83572b58bc85"
+          },
+          "verified_bytes_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41"
+        },
+        {
+          "error": {
+            "action_id": null,
+            "allowed_next": [],
+            "code": "snapshot_unavailable",
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "message": "The saved copy of this version is missing or cannot be read (No such file or directory (os error 2)). Traeva does not replace it with the file as it is now.",
+            "plan_id": null,
+            "retryable": false,
+            "stage": "memory"
+          },
+          "snapshot": {
+            "byte_length": 12265,
+            "captured_at_ms": 1791750636665,
+            "file_id": "5000ed41-9dd4-4b22-8a0a-9d2e0c5cba0d",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+            "snapshot_id": "8941e4f9-43e3-4659-b7a1-6f2a8f1a2bfe"
+          }
+        },
+        {
+          "preview": {
+            "summary": {
+              "chars": 74,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+              "reader": "docx-cache-local-1",
+              "status": "complete"
+            },
+            "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+          },
+          "snapshot": {
+            "byte_length": 1263,
+            "captured_at_ms": 1791750637211,
+            "file_id": "56dd5338-9f34-4637-ab43-88bd9e73b351",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "751a8087-28ff-48f0-b64e-92ac50c90395",
+            "sequence": 1,
+            "sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+            "snapshot_id": "c299737a-9c87-494b-883e-5e19bc9d67b3"
+          },
+          "verified_bytes_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48"
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "app_flow": "BLOCKED: default dispatch/IPC/Memory entry are not connected on this main",
+  "cloud_calls": 0,
+  "historical_word_opens": 0,
+  "protocol_sha256": "aaa027bcf94d019e65298bf6a3581d33b5d875fc350e62b18840bb1fc2e6ce4a",
+  "status": "PASS",
+  "raw_log_sha256": "211dbe1441b9cd45224af86516f64fbb9695ebb899913b87e6909d6d7f5e5ded",
+  "review_followup": {
+    "original_pr": 133,
+    "original_review_url": "https://github.com/P30g53/Traeva/pull/133#pullrequestreview-5484417617",
+    "original_status": "LIMITED PASS on 553778b; three non-blocking recommendations",
+    "new_scope": "test identities, private app-data and evidence metadata only",
+    "new_independent_review": "PENDING_R1"
+  },
+  "checks": {
+    "core_replay_assertions": 25,
+    "rust_driver_tests": 3,
+    "python_oracle_tests": 5,
+    "reader_tests_filtered": 127,
+    "standalone_build_clippy": "PASS",
+    "workspace_and_standalone_fmt": "PASS",
+    "python_syntax_and_diff": "PASS",
+    "inherited_test_umask": "000 in task child shell",
+    "public_tmp_app_data_regression": "0700",
+    "word_gui": "NOT_RUN_THIS_INCREMENT",
+    "app_flow": "BLOCKED; no formal IPC/Memory entry on this baseline",
+    "model_requests": 0
+  },
+  "retained_failures": [
+    {
+      "case": "permission regression before fix",
+      "status": "FAIL",
+      "expected_mode": "0700",
+      "actual_mode": "0755",
+      "raw_log_sha256": "d3bc255829a5bf1aa3395ea9e582bf6b402c4c873e9c899c754a3cf0c95df914",
+      "resolution": "explicit atomic DirBuilder mode 0700; public temporary parent regression PASS"
+    },
+    {
+      "case": "existing confirmed pairs survive pending restart",
+      "status": "FAIL",
+      "report_sha256": "5813e4f43c2d810f0dfaf1dfb013dacd2529591b7ec12525f5749acde04216e6",
+      "transcript_sha256": "f436f2a8aa834261c641a10a849a2677a5cf3403701c68b5ede537cc8d6579d3",
+      "difference": {
+        "before_gap_kinds": [
+          "replaced_uncaptured"
+        ],
+        "after_gap_kinds": [
+          "replaced_uncaptured",
+          "watcher_stopped"
+        ]
+      },
+      "resolution": "Core conservative heartbeat downtime may add only watcher_stopped after interruption; exact pair identity/metadata and old gaps still required; no Core change"
+    }
+  ],
+  "local_log_sha256": {
+    "rust_tests": "46103e94de64d42dc334a5d2edf829c6638d5b86676d80769843b15887c69a16",
+    "python_tests": "8945af8d15ce75389efc227b0d29a5e04e272867e2c768ed8ada5a2d950a5324"
+  }
+}

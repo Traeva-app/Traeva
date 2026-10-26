@@ -1,0 +1,126 @@
+{
+  "code": "1a40f874ac3d784f87f2c334025e8ba7a5161c6d",
+  "date": "2026-10-09",
+  "verification_kind": "C developer validation on actual integrated PR branch; not R independent acceptance",
+  "schema_version": 6,
+  "contract": "v8 section 4.5 including capture interval",
+  "module_sha256": {
+    "crates/traeva-core/src/source.rs": "0b6b9a350a980d11ab703d5311dff5d694775400d6fad4d55f0972bfe018a884",
+    "crates/traeva-core/migrations/0006_source_capture_window.sql": "f9322a632d8a0a398f069ac786ad59ab35eebac072cffa0ba5dcc0df84af3ecd",
+    "src-tauri/src/source_receiver.rs": "bb7b2c526380d7327fc3f2cbadc03e92ccdcbfe1df9677aae7c9c050494b5578",
+    "src-tauri/src/source_commands.rs": "6725f5bebe8fb49e39b0fb46283967ce83bfeaffc5841ce1e2de98a90b8948ed",
+    "extensions/chrome/collector.js": "448e5288a427fd8d401e103e74f1cfaaa47c2d371ed33661054136619f4ae6b2",
+    "extensions/chrome/test/browser-core.cjs": "f8a7f675fe8b8f7fe32eb02878d569e65eb844524870c12ce57b671a65035a8a"
+  },
+  "checks": {
+    "rust": {
+      "passed": 558,
+      "failed": 0,
+      "ignored": 7
+    },
+    "frontend_extension": {
+      "passed": 58,
+      "extension_subset": 29
+    },
+    "format": "PASS",
+    "workspace_clippy": "PASS",
+    "frontend_build": "PASS",
+    "debug_app_bundle": "PASS"
+  },
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "chrome": "Chrome/155.0.8059.39",
+    "playwright": "1.62.1",
+    "rust": "1.98.1",
+    "node": "24.20.0"
+  },
+  "isolation": {
+    "app_data": "/private/tmp/traeva-c-source-final-c50jpxp3/app-data",
+    "root": "/private/tmp/traeva-c-source-final-c50jpxp3/downloads",
+    "evidence_directory": "/private/tmp/traeva-c-source-final-c50jpxp3/evidence",
+    "chrome_profile": "/var/folders/k4/49bq6l5d3n35jw0736yl52lh0000gn/T/traeva-source-core-chrome-36Ez4e",
+    "chrome_profile_removed": true,
+    "capture_profile": "independent temporary Profile",
+    "open_link_browser": "system default browser; only synthetic localhost test tab opened and closed",
+    "model_keychain": "not used"
+  },
+  "desktop": {
+    "kind": "actual packaged debug app, actual WebView and native choosers; real Chrome extension input; no mock IPC",
+    "default_off_then_explicit_enable": "PASS",
+    "native_authorize_root": "PASS",
+    "real_redirect_download_and_durable_ack": "PASS",
+    "non_interrupting_candidate_without_binding": "PASS",
+    "independent_fields_and_unknown_title_page": "PASS",
+    "cancel_confirmation_no_association_history": "PASS",
+    "webview_user_confirmed": "PASS",
+    "open_referrer_actual_local_page": "PASS; actual browser URL and HTTP GET observed",
+    "process_exit_then_successful_restart": "PASS",
+    "duplicate_delivery_one_record_one_association": "PASS",
+    "first_import_and_enablement_time_unchanged": "PASS",
+    "decision_history_unchanged_on_replay": "PASS",
+    "native_open_file_embedded_source": "PASS; same User Confirmed association",
+    "user_tree_bytes_identity_times_xattrs_unchanged": "PASS from post-download baseline; exactly one root file",
+    "first_restart": "BLOCKED as expected by app-data isolation: reused adapter reports/config were inside app-data; moved only test artifacts out, retained database, restart then passed"
+  },
+  "download": {
+    "profile_id": "70783f07-f5bd-490b-b615-058a8effcfe9",
+    "download_id": "1",
+    "source_id": "66c1332d-6631-4238-a865-8a1628734c41",
+    "file_id": "6bcb1be4-155e-47dd-b565-92d364e6402c",
+    "filename": "/private/tmp/traeva-c-source-final-c50jpxp3/downloads/source-047739e3.txt",
+    "started_at_ms": 1791570267863,
+    "completed_at_ms": 1791570268462,
+    "imported_at_ms": 1791570267939,
+    "initial_url": "http://127.0.0.1:54489/download",
+    "final_url": "http://127.0.0.1:54489/final-download",
+    "referrer": "http://127.0.0.1:54489/",
+    "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+    "bytes": 28672,
+    "object_evidence": {
+      "dev": 16777232,
+      "ino": 165088930,
+      "birthtime_ns": 1791570267864148097,
+      "mtime_ns": 1791570268461405006,
+      "ctime_ns": 1791570274798956423,
+      "link_count": 1
+    },
+    "basis": "User Confirmed; never VERIFIED"
+  },
+  "evidence_files": [
+    "captured.json",
+    "confirmation-cancel.json",
+    "confirmed.json",
+    "restarted.json",
+    "duplicate-response.json",
+    "replayed.json",
+    "file-details.json",
+    "first-restart-blocked.json",
+    "chrome-delivery.json",
+    "chrome-adapter/environment.json",
+    "chrome-adapter/outcome.json",
+    "chrome-adapter/extension-storage-redacted.json",
+    "open-link-requests.jsonl"
+  ],
+  "logs": [
+    "/private/tmp/traeva-c-1a40-workspace.log",
+    "/private/tmp/traeva-c-1a40-clippy.log",
+    "/private/tmp/traeva-c-1a40-frontend.log",
+    "/private/tmp/traeva-c-1a40-build.log",
+    "/private/tmp/traeva-c-1a40-package.log",
+    "/private/tmp/traeva-c-1a40-real-desktop-chrome.log"
+  ],
+  "automatic_verified": "DEFERRED, not implemented; original real Chrome FAIL retained",
+  "unverified": [
+    "R independent review on final PR commit",
+    "student final acceptance",
+    "extension distribution beyond development mode",
+    "new real Chrome runs for cloud placeholders and cross-volume refusal"
+  ],
+  "cleanup": {
+    "desktop_process": "exited",
+    "isolated_chrome": "closed by adapter",
+    "local_referrer_server": "stopped",
+    "ui_slot": "returned; no traeva-app and no 1420 listener"
+  }
+}

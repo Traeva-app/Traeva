@@ -1,0 +1,27 @@
+{
+  "baseline": "c6a711d7f3155aee0f30b82eb44aa27cc267e523",
+  "parser_reviewed_sha": "6de78846225a65321089ec5794254407f35d632d",
+  "test_count": 14,
+  "registry_versions_match_baseline_root": true,
+  "hashes": {
+    "Cargo.toml": "5d982544c2525dde09aba5a7eaccccd36a0fa023b8a9b927c4bc4a55af5da6d4",
+    "Cargo.lock": "23ac1697bf57ca2d4b4cec3b514783bde069dde2205fc16643e6e5eb51df6f9b",
+    "src/lib.rs": "a85ae6103d187da9527cb50e620549485daf623f89aab83ee35a5b38f7ca5a29",
+    "tests/projection.rs": "38687fc13a2f86476874ded9da85debf3ff1f50c75beda9ba95e105278b3c77b",
+    "PROTOCOL.md": "9f1c800152564537045c76dffbe44c8e78e7aec514f90aeb0502a50d23a954a2",
+    "GRAMMAR.md": "5a4d22d585aa70066ae09bf6d241f7f3ca6734328382a595cdabd54b5119c666"
+  },
+  "retained_first_build_failure_sha256": "74a4e6f706692b8b50b8ff2d7e7d6f6d8a450f740036bc94eaeda948de1e1af1",
+  "retained_first_fmt_failure_local_sha256": "8553410226504ff5aca467f6e448ed9e6586aa92086c7d12260fcce40fdd7229",
+  "initial_resolved_lock_local_sha256": "96e7fc4bafdd57771f9b6a6dbe807de586578783e123e3e7c2c34a8fc5411b1c",
+  "home_path_redaction": {
+    "note": "原证据因含本机路径而改写；当前字段指向脱敏版本，原 hash 保留如下。历史 FAIL/PASS 和原测试结论未变。",
+    "original_hash_references": [
+      {
+        "field": "retained_first_build_failure_sha256",
+        "original_sha256": "08770cc181a854cc62720e351bf82f4e1becd9deea952743ee021161bcd141e5",
+        "redacted_sha256": "74a4e6f706692b8b50b8ff2d7e7d6f6d8a450f740036bc94eaeda948de1e1af1"
+      }
+    ]
+  }
+}

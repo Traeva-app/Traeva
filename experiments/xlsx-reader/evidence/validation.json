@@ -1,0 +1,737 @@
+{
+  "recorded_at_utc": "2026-10-11T20:32:36.137137+00:00",
+  "scope": "author-run standalone experiment; not independent acceptance or production integration",
+  "base_commit": "069208aa37f07ba6a1539b188c94b67ab975ba60",
+  "environment": {
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "3.12.14",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "source_sha256": {
+    ".gitignore": "647e429f626b26c092b12a0a957bcf2c41f6a9b562cb2f490ddf61220f0491e4",
+    "Cargo.toml": "db7915996391d9a4c1fb68f17c1f482435691f14bda51d1a07ab6f1875da0745",
+    "README.md": "e2c8f843ed5f2184af9e768c04e3d2f587a4cf162e35d83dc1bea3a578bc6476",
+    "RESEARCH.md": "256abaca251f02fb00a5355f560671587e6427f7987843adc24fe871e5c2dfda",
+    "audit_dependencies.py": "3c53065f005267e86367378a32fb2376abddef339d80a662834f4df3973477eb",
+    "fixtures/generate.py": "dd97219d894a21c2fb10f5366b1f498bd2b39e12c434009df8834f497618392b",
+    "src/lib.rs": "9a283cf003555591601ede3f50b9c3d622e26c1cd9a88ac8d0969fbba6254026",
+    "src/main.rs": "8df6d2eb8a1dfaa3409dc7ba99bfbc8897933cc4dbf2d8c804dbf957a4972288",
+    "src/package.rs": "b74a46c06294c03025b34d315ed54eb161ddd87d0ee368b4caa0252b1006c7a3",
+    "src/xml.rs": "a229a41a8a86dc36d0d9c31692d82e157699cb86c856d2272e76cf2232930777",
+    "tests/reader.rs": "ad6152bc02718d0eefbdae1355b503d65887f45f50d3795681d984906d6509d7",
+    "validate.py": "2cbccf2b264c912faf3997391b818315ef61f2f3bfa817f7096694a77d2dbc28",
+    "verify_review_fixtures.py": "56ee8f0c385f183ad51d43634e4d43441c3e11f285dc152f8b7776168cde9ace"
+  },
+  "checks": [
+    {
+      "name": "fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--check"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "cargo",
+        "test",
+        "--offline"
+      ],
+      "status": "PASS",
+      "test_summary": [
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 54 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s",
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "name": "build",
+      "command": [
+        "cargo",
+        "build",
+        "--offline",
+        "--bin",
+        "xlsx-probe"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "fixtures": [
+    {
+      "file": "before.xlsx",
+      "sha256": "04803fb065251f3c7e2bc26b59256d342fbdf26df845c02b8cedd7f627809874",
+      "bytes": 3635,
+      "expected": "complete_within_profile",
+      "note": "Budget labels, raw decimal, formula/cache, uncached formula, hidden empty sheet",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "after.xlsx",
+      "sha256": "558a14395d505c7da5e83611e911604f60d510ff5bc247f86e9ebe07d14bbbb7",
+      "bytes": 3635,
+      "expected": "complete_within_profile",
+      "note": "B2 literal change and C2 unverified saved cache change",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "cache-only.xlsx",
+      "sha256": "392b2852ee630e0843dab15c0d3f776d5815fe606b7ebf38539b25f968c7bcc5",
+      "bytes": 3636,
+      "expected": "complete_within_profile",
+      "note": "C2 cache changes without formula/literal edits",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "formula-only.xlsx",
+      "sha256": "bafff22b1f6e1e22a69c148451805cb6f051b54b51a3d3ef052ad87e747d75a3",
+      "bytes": 3635,
+      "expected": "complete_within_profile",
+      "note": "C2 formula changes while saved cache stays 40",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "deflated.xlsx",
+      "sha256": "c325edfd39042cc4f815e47dac28403678164d9e1ffad5e5dac30aba2278e33a",
+      "bytes": 2135,
+      "expected": "complete_within_profile",
+      "note": "Same synthetic workbook using Deflate",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "stored-signed-descriptor.xlsx",
+      "sha256": "c34fef4f04b78121cec90a43f48262eb6a478bca4ddd2509b3988c4590cb5800",
+      "bytes": 3747,
+      "expected": "complete_within_profile",
+      "note": "Valid 32-bit ZIP data descriptor; offline read only",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "stored-unsigned-descriptor.xlsx",
+      "sha256": "c0e0d114b3a832fa3151bee63d42967818a645511352d52987295f2435a4166b",
+      "bytes": 3719,
+      "expected": "complete_within_profile",
+      "note": "Valid 32-bit ZIP data descriptor; offline read only",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "deflate-signed-descriptor.xlsx",
+      "sha256": "92b21cb2bca8db9c81c5b1cc841bdf9f55cefc5f55b7cca7c858fe4474cc425f",
+      "bytes": 2247,
+      "expected": "complete_within_profile",
+      "note": "Valid 32-bit ZIP data descriptor; offline read only",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "deflate-unsigned-descriptor.xlsx",
+      "sha256": "be09435284808738bd5352d5de103bdd51158d95b3d8e563a372de70484ddec3",
+      "bytes": 2219,
+      "expected": "complete_within_profile",
+      "note": "Valid 32-bit ZIP data descriptor; offline read only",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "plain-comment.xlsx",
+      "sha256": "1531e0f0841a350b488e95d63cc763bc5b0499cbcb16fd05c58e28d384a5562c",
+      "bytes": 3660,
+      "expected": "complete_within_profile",
+      "note": "Plain archive comment accepted without rescanning a second directory",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "nested-directory-comment.xlsx",
+      "sha256": "f63a0bbc45c708d63853ad23bb1c6d3c9da12e9874e3290778f48dfe0b0cbade",
+      "bytes": 6056,
+      "expected": "unsupported",
+      "note": "Conflicting EOCD in comment and absolute inner offsets; no alternate directory may bypass ratio preflight",
+      "actual": "unsupported",
+      "status": "PASS"
+    },
+    {
+      "file": "adjacent-attributes.xlsx",
+      "sha256": "a470da391ebbc8758a2d45241dd52d4f1e7114fed46c19856954007e7a39dad5",
+      "bytes": 3634,
+      "expected": "failed",
+      "note": "XML attribute values require separating XML whitespace",
+      "actual": "failed",
+      "status": "PASS"
+    },
+    {
+      "file": "missing-descriptor.xlsx",
+      "sha256": "fa7c19a6424a1e787aca1550023d7fece588c37cee4998ace30ce285d2280d38",
+      "bytes": 2135,
+      "expected": "failed",
+      "note": "Bit 3 and zero local CRC/sizes require a descriptor immediately after compressed data",
+      "actual": "failed",
+      "status": "PASS"
+    },
+    {
+      "file": "deflate-tail.xlsx",
+      "sha256": "9a69fe0f93136369a59c70314ce71c7b1d40d434c6df87b9d08601115f9019e2",
+      "bytes": 2240,
+      "expected": "failed",
+      "note": "Declared compressed payload must end exactly at Deflate StreamEnd",
+      "actual": "failed",
+      "status": "PASS"
+    },
+    {
+      "file": "attribute-digit-name.xlsx",
+      "sha256": "dbe5453576ec2fc336af17ab0c360e38271a938625b41bc131c587d1eaefcd3e",
+      "bytes": 3652,
+      "expected": "failed",
+      "note": "Malformed XML lexical syntax; valid ZIP framing/CRC; no workbook may escape",
+      "xml_syntax_invalid_part": "xl/workbook.xml",
+      "actual": "failed",
+      "status": "PASS",
+      "xml_syntax_cross_check": "REJECTED_BY_ELEMENTTREE"
+    },
+    {
+      "file": "attribute-invalid-symbol.xlsx",
+      "sha256": "7ffffef69a3ce48ecfb4be0f655f48c883971d67d5c4f11976cb01ad1b4f01bf",
+      "bytes": 3656,
+      "expected": "failed",
+      "note": "Malformed XML lexical syntax; valid ZIP framing/CRC; no workbook may escape",
+      "xml_syntax_invalid_part": "xl/workbook.xml",
+      "actual": "failed",
+      "status": "PASS",
+      "xml_syntax_cross_check": "REJECTED_BY_ELEMENTTREE"
+    },
+    {
+      "file": "element-digit-name.xlsx",
+      "sha256": "68bacac9fcca5007e8c3dd330465590b08347460d305715a36808651a266fc5d",
+      "bytes": 3642,
+      "expected": "failed",
+      "note": "Malformed XML lexical syntax; valid ZIP framing/CRC; no workbook may escape",
+      "xml_syntax_invalid_part": "xl/worksheets/budget.xml",
+      "actual": "failed",
+      "status": "PASS",
+      "xml_syntax_cross_check": "REJECTED_BY_ELEMENTTREE"
+    },
+    {
+      "file": "comment-double-hyphen.xlsx",
+      "sha256": "fa5f9bd2ebbc7c91662519d2b6fb4f52f6ba8e3a26b70ffb9df684aeeff61ac0",
+      "bytes": 3664,
+      "expected": "failed",
+      "note": "Malformed XML lexical syntax; valid ZIP framing/CRC; no workbook may escape",
+      "xml_syntax_invalid_part": "xl/workbook.xml",
+      "actual": "failed",
+      "status": "PASS",
+      "xml_syntax_cross_check": "REJECTED_BY_ELEMENTTREE"
+    },
+    {
+      "file": "text-cdata-close.xlsx",
+      "sha256": "659815ced586ea34ec3d79ec8a0352463407f92380ae382592c9cadd3c125bb6",
+      "bytes": 3647,
+      "expected": "failed",
+      "note": "Malformed XML lexical syntax; valid ZIP framing/CRC; no workbook may escape",
+      "xml_syntax_invalid_part": "xl/worksheets/budget.xml",
+      "actual": "failed",
+      "status": "PASS",
+      "xml_syntax_cross_check": "REJECTED_BY_ELEMENTTREE"
+    },
+    {
+      "file": "legal-unicode-name.xlsx",
+      "sha256": "35b4a2fde9f5f427b81ae16fc91f553ecc01ffd28a83cffc3f2e2a9dd24ac184",
+      "bytes": 3682,
+      "expected": "complete_within_profile",
+      "note": "Legal Unicode prefix and attribute local name",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "legal-comment.xlsx",
+      "sha256": "72db6c1a94cc3769c6b9ed5b6ab0351bc4ded5855e8f4b75b74421bf33382cec",
+      "bytes": 3675,
+      "expected": "complete_within_profile",
+      "note": "Comment may contain markup characters and CDATA closer but no double hyphen",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "escaped-cdata-close.xlsx",
+      "sha256": "c7461d3d68e246ef37f8a4f20d660baddf3e00935650ed01b596ac52de9213d6",
+      "bytes": 3635,
+      "expected": "complete_within_profile",
+      "note": "Escaped CharData decodes to CDATA closer as literal text; no post-decode rejection",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "formula-regions.xlsx",
+      "sha256": "068a8f23a0d21d125559596e4b22c38a01fd09455af66b14a3e69ea0cd0e8a1d",
+      "bytes": 3426,
+      "expected": "partial",
+      "note": "Shared follower and array member retain unresolved formula context",
+      "actual": "partial",
+      "status": "PASS"
+    },
+    {
+      "file": "unsupported-features.xlsx",
+      "sha256": "7a3172d42cf8f09f3f8f442bdaea3877925fdadb27304c1bd1ea872f65869a75",
+      "bytes": 4816,
+      "expected": "partial",
+      "note": "Inert feature stubs test reporting, not Excel compatibility of those features",
+      "actual": "partial",
+      "status": "PASS"
+    },
+    {
+      "file": "sparse-extreme.xlsx",
+      "sha256": "d605bcabecc85973ec167099634261fc1ae944bc9e750c086cf3b0aeeaaaaf77",
+      "bytes": 3326,
+      "expected": "complete_within_profile",
+      "note": "Two cells across maximal dimensions; no rectangular allocation",
+      "actual": "complete_within_profile",
+      "status": "PASS"
+    },
+    {
+      "file": "truncated.xlsx",
+      "sha256": "47f895cdc36f2c264fd8ac33b85b29d02b9a2dc9dfe5d82ff9a15631d876c25e",
+      "bytes": 3623,
+      "expected": "failed",
+      "note": "Truncated ZIP end",
+      "actual": "failed",
+      "status": "PASS"
+    },
+    {
+      "file": "doctype.xlsx",
+      "sha256": "302d08f8cc118c61ba10ce49223596a903110f03be89017215ddecadc1a690a4",
+      "bytes": 3697,
+      "expected": "unsupported",
+      "note": "DTD prohibited",
+      "actual": "unsupported",
+      "status": "PASS"
+    },
+    {
+      "file": "external-sheet.xlsx",
+      "sha256": "9a97b340c3f79e0207b21f661b1ab39836fab4f2c0b35e0668224fa78b477f81",
+      "bytes": 3667,
+      "expected": "unsupported",
+      "note": "Required sheet cannot be external",
+      "actual": "unsupported",
+      "status": "PASS"
+    },
+    {
+      "file": "compression-bomb.xlsx",
+      "sha256": "339e82d3a5a3c1197338405db84e2fd278e0f0a4d61c0d8067c72ee1bcc32786",
+      "bytes": 2733,
+      "expected": "resource_limit",
+      "note": "Compression ratio cap reached before decompression",
+      "actual": "resource_limit",
+      "status": "PASS"
+    },
+    {
+      "file": "hostile-cfb.xlsx",
+      "sha256": "cebd54f169414247e4899e442844c2ab58d7a80d8bf8f8d7cbd0be3ad4c827a1",
+      "bytes": 512,
+      "expected": "unsupported",
+      "note": "CFB never enters an Office parser",
+      "actual": "unsupported",
+      "status": "PASS"
+    }
+  ],
+  "coordinate_comparisons": [
+    {
+      "before": "before.xlsx",
+      "after": "after.xlsx",
+      "status": "PASS",
+      "changes": [
+        {
+          "address": "B2",
+          "after": {
+            "address": "B2",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "number",
+              "value": "25"
+            },
+            "row": 2,
+            "style_index": null
+          },
+          "before": {
+            "address": "B2",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "number",
+              "value": "20"
+            },
+            "row": 2,
+            "style_index": null
+          },
+          "cache_changed": false,
+          "change": "changed",
+          "formula_changed": false,
+          "literal_changed": true,
+          "part": "xl/worksheets/budget.xml",
+          "sheet_id": "1",
+          "sheet_name": "Budget",
+          "style_changed": false
+        },
+        {
+          "address": "C2",
+          "after": {
+            "address": "C2",
+            "cached_result": {
+              "freshness": "unverified",
+              "value": {
+                "type": "number",
+                "value": "50"
+              }
+            },
+            "column": 3,
+            "formula": {
+              "attributes": {},
+              "interpretation": "literal_formula_text",
+              "text": "B2*2"
+            },
+            "literal": null,
+            "row": 2,
+            "style_index": null
+          },
+          "before": {
+            "address": "C2",
+            "cached_result": {
+              "freshness": "unverified",
+              "value": {
+                "type": "number",
+                "value": "40"
+              }
+            },
+            "column": 3,
+            "formula": {
+              "attributes": {},
+              "interpretation": "literal_formula_text",
+              "text": "B2*2"
+            },
+            "literal": null,
+            "row": 2,
+            "style_index": null
+          },
+          "cache_changed": true,
+          "change": "changed",
+          "formula_changed": false,
+          "literal_changed": false,
+          "part": "xl/worksheets/budget.xml",
+          "sheet_id": "1",
+          "sheet_name": "Budget",
+          "style_changed": false
+        }
+      ]
+    },
+    {
+      "before": "before.xlsx",
+      "after": "cache-only.xlsx",
+      "status": "PASS",
+      "changes": [
+        {
+          "address": "C2",
+          "after": {
+            "address": "C2",
+            "cached_result": {
+              "freshness": "unverified",
+              "value": {
+                "type": "number",
+                "value": "999"
+              }
+            },
+            "column": 3,
+            "formula": {
+              "attributes": {},
+              "interpretation": "literal_formula_text",
+              "text": "B2*2"
+            },
+            "literal": null,
+            "row": 2,
+            "style_index": null
+          },
+          "before": {
+            "address": "C2",
+            "cached_result": {
+              "freshness": "unverified",
+              "value": {
+                "type": "number",
+                "value": "40"
+              }
+            },
+            "column": 3,
+            "formula": {
+              "attributes": {},
+              "interpretation": "literal_formula_text",
+              "text": "B2*2"
+            },
+            "literal": null,
+            "row": 2,
+            "style_index": null
+          },
+          "cache_changed": true,
+          "change": "changed",
+          "formula_changed": false,
+          "literal_changed": false,
+          "part": "xl/worksheets/budget.xml",
+          "sheet_id": "1",
+          "sheet_name": "Budget",
+          "style_changed": false
+        }
+      ]
+    },
+    {
+      "before": "before.xlsx",
+      "after": "formula-only.xlsx",
+      "status": "PASS",
+      "changes": [
+        {
+          "address": "C2",
+          "after": {
+            "address": "C2",
+            "cached_result": {
+              "freshness": "unverified",
+              "value": {
+                "type": "number",
+                "value": "40"
+              }
+            },
+            "column": 3,
+            "formula": {
+              "attributes": {},
+              "interpretation": "literal_formula_text",
+              "text": "B2*3"
+            },
+            "literal": null,
+            "row": 2,
+            "style_index": null
+          },
+          "before": {
+            "address": "C2",
+            "cached_result": {
+              "freshness": "unverified",
+              "value": {
+                "type": "number",
+                "value": "40"
+              }
+            },
+            "column": 3,
+            "formula": {
+              "attributes": {},
+              "interpretation": "literal_formula_text",
+              "text": "B2*2"
+            },
+            "literal": null,
+            "row": 2,
+            "style_index": null
+          },
+          "cache_changed": false,
+          "change": "changed",
+          "formula_changed": true,
+          "literal_changed": false,
+          "part": "xl/worksheets/budget.xml",
+          "sheet_id": "1",
+          "sheet_name": "Budget",
+          "style_changed": false
+        }
+      ]
+    }
+  ],
+  "cross_reader": {
+    "status": "PASS",
+    "library": "openpyxl",
+    "version": "3.1.5",
+    "scope": "read-only comparison of synthetic before.xlsx; not real Excel save verification"
+  },
+  "dependency_licenses": [
+    {
+      "name": "adler2",
+      "version": "2.0.1",
+      "license": "0BSD OR MIT OR Apache-2.0"
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.12.1",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "const-oid",
+      "version": "0.10.2",
+      "license": "Apache-2.0 OR MIT"
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.3.1",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "crc32fast",
+      "version": "1.5.2",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.2.2",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "digest",
+      "version": "0.11.3",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.2",
+      "license": "Apache-2.0 OR MIT"
+    },
+    {
+      "name": "flate2",
+      "version": "1.1.10",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "hybrid-array",
+      "version": "0.4.15",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "indexmap",
+      "version": "2.14.2",
+      "license": "Apache-2.0 OR MIT"
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "libc",
+      "version": "0.2.190",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "license": "Unlicense OR MIT"
+    },
+    {
+      "name": "miniz_oxide",
+      "version": "0.9.1",
+      "license": "MIT OR Zlib OR Apache-2.0"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "quick-xml",
+      "version": "0.42.0",
+      "license": "MIT"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.151",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "sha2",
+      "version": "0.11.0",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "simd-adler32",
+      "version": "0.3.10",
+      "license": "MIT"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.7",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "typed-path",
+      "version": "0.12.3",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "typenum",
+      "version": "1.20.1",
+      "license": "MIT OR Apache-2.0"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.26",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0"
+    },
+    {
+      "name": "zip",
+      "version": "8.6.0",
+      "license": "MIT"
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23",
+      "license": "MIT"
+    }
+  ],
+  "unrun": [
+    "real Excel GUI/save roundtrip",
+    "OS-enforced worker memory/time isolation",
+    "coverage-guided fuzzing",
+    "independent reviewer acceptance",
+    "Memory/Organize/DTO/Tauri integration"
+  ]
+}

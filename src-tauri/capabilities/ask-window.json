@@ -1,0 +1,32 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "ask-window",
+  "description": "The pet's popup (10/14): for one dropped file that waits for the user, it may read the app state, the drop queue, an operation, folders, a plan and an action; answer the question, choose a folder, build, cancel and apply a plan, go on with or cancel the drop; for a file the automatic mode just moved (the moved note, 10/17), take that drop's ID and undo the move after a preview of where it goes back (organize-spec §8); change its own size, hide itself, be dragged by its top line, and show the main window. Nothing else: no agreeing to send, no authorizing a source folder, no pickers, no settings, no Memory, Source or Find, no event listening, no plugin.",
+  "windows": [
+    "ask"
+  ],
+  "permissions": [
+    "allow-get-app-state",
+    "allow-get-drop-queue",
+    "allow-get-operation",
+    "allow-start-analysis",
+    "allow-answer-clarification",
+    "allow-choose-manual-location",
+    "allow-continue-drops",
+    "allow-start-drop-operation",
+    "allow-cancel-drop",
+    "allow-cancel-operation",
+    "allow-list-folders",
+    "allow-build-plan",
+    "allow-get-plan",
+    "allow-cancel-plan",
+    "allow-apply-plan",
+    "allow-get-action",
+    "allow-show-main-window",
+    "allow-resize-drop-popup",
+    "allow-hide-drop-popup",
+    "allow-preview-undo",
+    "allow-take-moved-note",
+    "core:window:allow-start-dragging"
+  ]
+}

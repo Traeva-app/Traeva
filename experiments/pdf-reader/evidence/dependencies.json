@@ -1,0 +1,580 @@
+{
+ "checked_utc": "2026-10-12T00:14:51Z",
+ "scope": "packages used at run or build time by the library and pdf-probe (Cargo.lock)",
+ "packages": [
+  {
+   "name": "adler2",
+   "version": "2.0.1",
+   "license": "0BSD OR MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/oyvindln/adler2",
+   "build_script": false
+  },
+  {
+   "name": "alloc-no-stdlib",
+   "version": "2.0.4",
+   "license": "BSD-3-Clause",
+   "all_permissive": true,
+   "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
+   "build_script": false
+  },
+  {
+   "name": "alloc-stdlib",
+   "version": "0.2.4",
+   "license": "BSD-3-Clause",
+   "all_permissive": true,
+   "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
+   "build_script": false
+  },
+  {
+   "name": "arrayvec",
+   "version": "0.7.8",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/bluss/arrayvec",
+   "build_script": false
+  },
+  {
+   "name": "autocfg",
+   "version": "1.5.1",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/cuviper/autocfg",
+   "build_script": false
+  },
+  {
+   "name": "bitflags",
+   "version": "2.13.2",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/bitflags/bitflags",
+   "build_script": false
+  },
+  {
+   "name": "block-buffer",
+   "version": "0.12.1",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/RustCrypto/utils",
+   "build_script": false
+  },
+  {
+   "name": "brotli",
+   "version": "8.0.4",
+   "license": "BSD-3-Clause AND MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/dropbox/rust-brotli",
+   "build_script": false
+  },
+  {
+   "name": "brotli-decompressor",
+   "version": "5.0.3",
+   "license": "BSD-3-Clause/MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/dropbox/rust-brotli-decompressor",
+   "build_script": false
+  },
+  {
+   "name": "bytemuck",
+   "version": "1.25.2",
+   "license": "Zlib OR Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/Lokathor/bytemuck",
+   "build_script": false
+  },
+  {
+   "name": "bytemuck_derive",
+   "version": "1.12.1",
+   "license": "Zlib OR Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/Lokathor/bytemuck",
+   "build_script": false
+  },
+  {
+   "name": "cfg-if",
+   "version": "1.0.5",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-lang/cfg-if",
+   "build_script": false
+  },
+  {
+   "name": "const-oid",
+   "version": "0.10.2",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/RustCrypto/formats",
+   "build_script": false
+  },
+  {
+   "name": "cpufeatures",
+   "version": "0.3.1",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/RustCrypto/utils",
+   "build_script": false
+  },
+  {
+   "name": "crc32fast",
+   "version": "1.5.2",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/srijs/rust-crc32fast",
+   "build_script": true
+  },
+  {
+   "name": "crypto-common",
+   "version": "0.2.2",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/RustCrypto/traits",
+   "build_script": false
+  },
+  {
+   "name": "digest",
+   "version": "0.11.3",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/RustCrypto/traits",
+   "build_script": false
+  },
+  {
+   "name": "euclid",
+   "version": "0.22.14",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/servo/euclid",
+   "build_script": false
+  },
+  {
+   "name": "fastrand",
+   "version": "2.5.0",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/smol-rs/fastrand",
+   "build_script": false
+  },
+  {
+   "name": "fearless_simd",
+   "version": "1.1.0",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/linebender/fearless_simd",
+   "build_script": false
+  },
+  {
+   "name": "flate2",
+   "version": "1.1.10",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-lang/flate2-rs",
+   "build_script": false
+  },
+  {
+   "name": "font-types",
+   "version": "0.12.6",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/googlefonts/fontations",
+   "build_script": false
+  },
+  {
+   "name": "hayro-ccitt",
+   "version": "0.4.0",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/LaurenzV/hayro",
+   "build_script": false
+  },
+  {
+   "name": "hayro-cmap",
+   "version": "0.1.0",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/LaurenzV/hayro",
+   "build_script": false
+  },
+  {
+   "name": "hayro-interpret",
+   "version": "0.8.0",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/LaurenzV/hayro",
+   "build_script": false
+  },
+  {
+   "name": "hayro-jbig2",
+   "version": "0.3.1",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/LaurenzV/hayro",
+   "build_script": false
+  },
+  {
+   "name": "hayro-jpeg2000",
+   "version": "0.4.1",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/LaurenzV/hayro",
+   "build_script": false
+  },
+  {
+   "name": "hayro-postscript",
+   "version": "0.1.0",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/LaurenzV/hayro",
+   "build_script": false
+  },
+  {
+   "name": "hayro-syntax",
+   "version": "0.8.0",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/LaurenzV/hayro",
+   "build_script": false
+  },
+  {
+   "name": "hybrid-array",
+   "version": "0.4.15",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/RustCrypto/hybrid-array",
+   "build_script": false
+  },
+  {
+   "name": "itoa",
+   "version": "1.0.18",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/dtolnay/itoa",
+   "build_script": false
+  },
+  {
+   "name": "kurbo",
+   "version": "0.13.1",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/linebender/kurbo",
+   "build_script": false
+  },
+  {
+   "name": "libc",
+   "version": "0.2.190",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-lang/libc",
+   "build_script": true
+  },
+  {
+   "name": "memchr",
+   "version": "2.8.3",
+   "license": "Unlicense OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/BurntSushi/memchr",
+   "build_script": false
+  },
+  {
+   "name": "miniz_oxide",
+   "version": "0.9.1",
+   "license": "MIT OR Zlib OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/Frommi/miniz_oxide/tree/master/miniz_oxide",
+   "build_script": false
+  },
+  {
+   "name": "moxcms",
+   "version": "0.8.1",
+   "license": "BSD-3-Clause OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/awxkee/moxcms.git",
+   "build_script": false
+  },
+  {
+   "name": "num-traits",
+   "version": "0.2.19",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-num/num-traits",
+   "build_script": true
+  },
+  {
+   "name": "once_cell",
+   "version": "1.21.4",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/matklad/once_cell",
+   "build_script": false
+  },
+  {
+   "name": "phf",
+   "version": "0.13.1",
+   "license": "MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-phf/rust-phf",
+   "build_script": false
+  },
+  {
+   "name": "phf_generator",
+   "version": "0.13.1",
+   "license": "MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-phf/rust-phf",
+   "build_script": false
+  },
+  {
+   "name": "phf_macros",
+   "version": "0.13.1",
+   "license": "MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-phf/rust-phf",
+   "build_script": false
+  },
+  {
+   "name": "phf_shared",
+   "version": "0.13.1",
+   "license": "MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-phf/rust-phf",
+   "build_script": false
+  },
+  {
+   "name": "polycool",
+   "version": "0.4.0",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/linebender/kurbo",
+   "build_script": false
+  },
+  {
+   "name": "proc-macro2",
+   "version": "1.0.107",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/dtolnay/proc-macro2",
+   "build_script": true
+  },
+  {
+   "name": "pxfm",
+   "version": "0.1.30",
+   "license": "BSD-3-Clause OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/awxkee/pxfm",
+   "build_script": false
+  },
+  {
+   "name": "quote",
+   "version": "1.0.47",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/dtolnay/quote",
+   "build_script": true
+  },
+  {
+   "name": "read-fonts",
+   "version": "0.43.3",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/googlefonts/fontations",
+   "build_script": false
+  },
+  {
+   "name": "rustc-hash",
+   "version": "2.1.3",
+   "license": "Apache-2.0 OR MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/rust-lang/rustc-hash",
+   "build_script": false
+  },
+  {
+   "name": "serde",
+   "version": "1.0.229",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/serde-rs/serde",
+   "build_script": true
+  },
+  {
+   "name": "serde_core",
+   "version": "1.0.229",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/serde-rs/serde",
+   "build_script": true
+  },
+  {
+   "name": "serde_derive",
+   "version": "1.0.229",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/serde-rs/serde",
+   "build_script": false
+  },
+  {
+   "name": "serde_json",
+   "version": "1.0.151",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/serde-rs/json",
+   "build_script": true
+  },
+  {
+   "name": "sha2",
+   "version": "0.11.0",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/RustCrypto/hashes",
+   "build_script": false
+  },
+  {
+   "name": "simd-adler32",
+   "version": "0.3.10",
+   "license": "MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/mcountryman/simd-adler32",
+   "build_script": false
+  },
+  {
+   "name": "siphasher",
+   "version": "1.0.4",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/jedisct1/rust-siphash",
+   "build_script": false
+  },
+  {
+   "name": "skrifa",
+   "version": "0.46.2",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/googlefonts/fontations",
+   "build_script": false
+  },
+  {
+   "name": "smallvec",
+   "version": "1.16.3",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/servo/rust-smallvec",
+   "build_script": false
+  },
+  {
+   "name": "stable_deref_trait",
+   "version": "1.2.1",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/storyyeller/stable_deref_trait",
+   "build_script": false
+  },
+  {
+   "name": "syn",
+   "version": "2.0.119",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/dtolnay/syn",
+   "build_script": false
+  },
+  {
+   "name": "syn",
+   "version": "3.0.8",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/dtolnay/syn",
+   "build_script": false
+  },
+  {
+   "name": "synstructure",
+   "version": "0.14.0",
+   "license": "MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/mystor/synstructure",
+   "build_script": false
+  },
+  {
+   "name": "typenum",
+   "version": "1.20.1",
+   "license": "MIT OR Apache-2.0",
+   "all_permissive": true,
+   "repository": "https://github.com/paholg/typenum",
+   "build_script": false
+  },
+  {
+   "name": "unicode-ident",
+   "version": "1.0.26",
+   "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+   "all_permissive": true,
+   "repository": "https://github.com/dtolnay/unicode-ident",
+   "build_script": false
+  },
+  {
+   "name": "yoke",
+   "version": "0.8.3",
+   "license": "Unicode-3.0",
+   "all_permissive": true,
+   "repository": "https://github.com/unicode-org/icu4x",
+   "build_script": false
+  },
+  {
+   "name": "yoke-derive",
+   "version": "0.8.4",
+   "license": "Unicode-3.0",
+   "all_permissive": true,
+   "repository": "https://github.com/unicode-org/icu4x",
+   "build_script": false
+  },
+  {
+   "name": "zerofrom",
+   "version": "0.1.8",
+   "license": "Unicode-3.0",
+   "all_permissive": true,
+   "repository": "https://github.com/unicode-org/icu4x",
+   "build_script": false
+  },
+  {
+   "name": "zerofrom-derive",
+   "version": "0.1.8",
+   "license": "Unicode-3.0",
+   "all_permissive": true,
+   "repository": "https://github.com/unicode-org/icu4x",
+   "build_script": false
+  },
+  {
+   "name": "zlib-rs",
+   "version": "0.6.8",
+   "license": "Zlib",
+   "all_permissive": true,
+   "repository": "https://github.com/trifectatechfoundation/zlib-rs",
+   "build_script": false
+  },
+  {
+   "name": "zmij",
+   "version": "1.0.23",
+   "license": "MIT",
+   "all_permissive": true,
+   "repository": "https://github.com/dtolnay/zmij",
+   "build_script": true
+  },
+  {
+   "name": "zune-core",
+   "version": "0.5.3",
+   "license": "MIT OR Apache-2.0 OR Zlib",
+   "all_permissive": true,
+   "repository": "https://github.com/etemesi254/zune-image",
+   "build_script": false
+  },
+  {
+   "name": "zune-jpeg",
+   "version": "0.5.15",
+   "license": "MIT OR Apache-2.0 OR Zlib",
+   "all_permissive": true,
+   "repository": "https://github.com/etemesi254/zune-image/tree/dev/crates/zune-jpeg",
+   "build_script": false
+  }
+ ],
+ "not_permissive": [],
+ "rustsec": {
+  "advisory_db": "7eebec69c352c7191b1f13eb95dd510eeca5d1de 2026-10-09T10:12:02+02:00",
+  "affecting": {},
+  "informational": {}
+ }
+}

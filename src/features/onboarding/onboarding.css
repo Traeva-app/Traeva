@@ -1,0 +1,91 @@
+/* The first-start guide (#248): one narrow column on the Find page. The
+ * step line and Skip setup are quiet; the only accent is the step's one
+ * primary button. */
+.onboarding {
+  max-width: 560px;
+  margin: 24px auto 0;
+}
+
+.onboarding-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.onboarding-progress {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* A quiet text button. */
+.onboarding-skip {
+  padding: 0;
+  font-size: 13px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.onboarding-skip:where(:hover:not(:disabled)) {
+  color: var(--text);
+  background: none;
+}
+
+.onboarding-title {
+  margin: 4px 0 0;
+  font-size: 22px;
+}
+
+/* Focused by the page when the step changes: the ring only for the keyboard. */
+.onboarding-title:focus {
+  outline: none;
+}
+
+.onboarding-title:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.onboarding-lead {
+  margin: 8px 0 0;
+}
+
+.onboarding-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Under Continue: what it does not do. */
+.onboarding-note {
+  margin: 8px 0 0;
+}
+
+.onboarding-summary {
+  margin: 0 0 12px;
+}
+
+.onboarding-summary dd {
+  font-weight: 600;
+}
+
+/* A short fade as a new step comes in; none when motion is reduced. */
+@media (prefers-reduced-motion: no-preference) {
+  .onboarding-step {
+    animation: onboarding-in 180ms ease-out;
+  }
+}
+
+@keyframes onboarding-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}

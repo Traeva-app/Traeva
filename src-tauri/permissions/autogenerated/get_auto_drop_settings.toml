@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-auto-drop-settings"
+description = "Enables the get_auto_drop_settings command without any pre-configured scope."
+commands.allow = ["get_auto_drop_settings"]
+
+[[permission]]
+identifier = "deny-get-auto-drop-settings"
+description = "Denies the get_auto_drop_settings command without any pre-configured scope."
+commands.deny = ["get_auto_drop_settings"]

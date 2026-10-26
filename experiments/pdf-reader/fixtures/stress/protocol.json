@@ -1,0 +1,413 @@
+{
+ "frozen": "Written before any measurement; changes must state their basis and keep earlier runs.",
+ "mode": "pdf-probe direct (no --isolated), one run per input, killed at the cut-off",
+ "cutoff_seconds": 5,
+ "criteria": [
+  "every input returns before the cut-off",
+  "every reading is as expected (status, note, text)",
+  "per family: millis(8 MiB) <= 16 * millis(1 MiB)"
+ ],
+ "ratio": {
+  "small": "1MiB",
+  "large": "8MiB",
+  "max": 16
+ },
+ "recorded_without_threshold": [
+  "peak resident memory of the child",
+  "scan work, when reported"
+ ],
+ "inputs": {
+  "S1-big-string-64KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 65536,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S1-big-string-128KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 131072,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S1-big-string-256KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 262144,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S1-big-string-512KiB.pdf": {
+   "family": "S1-big-string",
+   "size": 524288,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S1-big-string-1MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 1048576,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S1-big-string-2MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 2097152,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S1-big-string-4MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 4194304,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S1-big-string-8MiB.pdf": {
+   "family": "S1-big-string",
+   "size": 8388608,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-64KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 65536,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-128KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 131072,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-256KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 262144,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-512KiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 524288,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-1MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 1048576,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-2MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 2097152,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-4MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 4194304,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S2-comment-stress-8MiB.pdf": {
+   "family": "S2-comment-stress",
+   "size": 8388608,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-64KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 65536,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-128KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 131072,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-256KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 262144,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-512KiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 524288,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-1MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 1048576,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-2MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 2097152,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-4MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 4194304,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S3-open-literal-8MiB.pdf": {
+   "family": "S3-open-literal",
+   "size": 8388608,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-64KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 65536,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-128KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 131072,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-256KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 262144,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-512KiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 524288,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-1MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 1048576,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-2MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 2097152,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-4MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 4194304,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S4-open-hex-8MiB.pdf": {
+   "family": "S4-open-hex",
+   "size": 8388608,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S5-no-endstream-64KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 65536,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S5-no-endstream-128KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 131072,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "text": ""
+  },
+  "S5-no-endstream-256KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 262144,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "text": ""
+  },
+  "S5-no-endstream-512KiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 524288,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "text": ""
+  },
+  "S5-no-endstream-1MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 1048576,
+   "status": "unsupported",
+   "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+   "text": ""
+  },
+  "S5-no-endstream-2MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 2097152,
+   "status": "unsupported",
+   "note": "The PDF has more streams than this reader's limit (50000).",
+   "text": ""
+  },
+  "S5-no-endstream-4MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 4194304,
+   "status": "unsupported",
+   "note": "The PDF has more streams than this reader's limit (50000).",
+   "text": ""
+  },
+  "S5-no-endstream-8MiB.pdf": {
+   "family": "S5-no-endstream",
+   "size": 8388608,
+   "status": "unsupported",
+   "note": "The PDF has more streams than this reader's limit (50000).",
+   "text": ""
+  },
+  "S6-comment-line-64KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 65536,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S6-comment-line-128KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 131072,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S6-comment-line-256KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 262144,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S6-comment-line-512KiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 524288,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S6-comment-line-1MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 1048576,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S6-comment-line-2MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 2097152,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S6-comment-line-4MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 4194304,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S6-comment-line-8MiB.pdf": {
+   "family": "S6-comment-line",
+   "size": 8388608,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-64KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 65536,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-128KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 131072,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-256KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 262144,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-512KiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 524288,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-1MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 1048576,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-2MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 2097152,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-4MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 4194304,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  },
+  "S7-nested-dicts-8MiB.pdf": {
+   "family": "S7-nested-dicts",
+   "size": 8388608,
+   "status": "complete",
+   "note": null,
+   "text": "[Page 1]\nStress control text"
+  }
+ }
+}

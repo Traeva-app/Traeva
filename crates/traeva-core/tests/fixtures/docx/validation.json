@@ -1,0 +1,301 @@
+{
+  "as_of": "2026-10-10",
+  "baseline": "6f14e3a7dbdb9b60f2d7945054fc1d8556f8ccdf",
+  "main_contract": "v12",
+  "reader_version": "docx-2",
+  "reader_source_sha256": "4ebddd23b43a2b3f14253a04f4f348b7a8105bc5c3c74ec694d012bfb2333626",
+  "tests_source_sha256": "e31383b3b378103e5e59f1f14032b4227b023f5cc896281f0e41592e00b20a2e",
+  "environment": {
+    "platform": "macOS 27.0.1 arm64",
+    "rust": "1.98.1",
+    "word": "16.78"
+  },
+  "developer_tests": {
+    "reader": 76,
+    "core_snapshot_api": 3,
+    "total": 79,
+    "passed": 79,
+    "failed": 0,
+    "core_baseline": "6f14e3a7dbdb9b60f2d7945054fc1d8556f8ccdf",
+    "lock": "standalone validation crate; migration to actual workspace lock belongs to A #103",
+    "fmt_check": "PASS",
+    "clippy_all_targets": "PASS"
+  },
+  "independent_development_review": "r2-review.json: historical frozen Reader hash and earlier 78-test suite, 28 counterexamples; rich-review.json: current rich fixture/test/helper increment",
+  "word_layout_tests": {
+    "v1": {
+      "expected_matches": true,
+      "input_bytes": 12229,
+      "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+      "iterations": 200,
+      "mean_ms": 1.0157800000000001,
+      "summary": {
+        "chars": 64,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-2",
+        "status": "complete"
+      },
+      "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+      "total_ms": 203.156
+    },
+    "v2": {
+      "expected_matches": true,
+      "input_bytes": 12265,
+      "input_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+      "iterations": 200,
+      "mean_ms": 0.9885479149999999,
+      "summary": {
+        "chars": 72,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-2",
+        "status": "complete"
+      },
+      "text_sha256": "3320c95ccc7415f34c74b79cd338ece75e78a26621edb3eec03468816e485c4f",
+      "total_ms": 197.70958299999998
+    }
+  },
+  "layout_proof": {
+    "v1": {
+      "source_sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+      "fixture_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+      "bytes": 12229,
+      "central_offset": 11502,
+      "allowed_changed_ranges": [
+        [
+          6341,
+          6721
+        ],
+        [
+          6044,
+          6048
+        ],
+        [
+          11907,
+          11911
+        ]
+      ],
+      "core_packed": 380,
+      "core_unpacked": 747,
+      "trial": 1,
+      "other_entry_bytes_and_layout_identical": true
+    },
+    "v2": {
+      "source_sha256": "d2c09b9b149be16ef4a22a75f91a18a06401d7717c8aa35bf6e01cb1484e3793",
+      "fixture_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+      "bytes": 12265,
+      "central_offset": 11538,
+      "allowed_changed_ranges": [
+        [
+          6377,
+          6759
+        ],
+        [
+          6080,
+          6084
+        ],
+        [
+          11943,
+          11947
+        ]
+      ],
+      "core_packed": 382,
+      "core_unpacked": 747,
+      "trial": 0,
+      "other_entry_bytes_and_layout_identical": true
+    }
+  },
+  "benchmark": {
+    "expected_matches": true,
+    "input_bytes": 433762,
+    "input_sha256": "44051739b1e2b6bd03d0979c8b9a37d761379693f722af3efeff22807b1555bd",
+    "iterations": 10,
+    "mean_ms": 12.07565,
+    "summary": {
+      "chars": 888889,
+      "covered": [
+        "main body paragraphs, runs, tabs and explicit line breaks"
+      ],
+      "left_out": [],
+      "note": null,
+      "reader": "docx-2",
+      "status": "complete"
+    },
+    "text_sha256": "814ea8ec850f64a54f62742785243cfaba3c31dcb71bf0c88f56ff9ed797ad10",
+    "total_ms": 120.7565
+  },
+  "benchmark_resources": "        0.14 real         0.12 user         0.00 sys\n            14303232  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n                1029  page reclaims\n                  43  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   0  messages sent\n                   0  messages received\n                   0  signals received\n                   3  voluntary context switches\n                  47  involuntary context switches\n          2198899592  instructions retired\n           467751517  cycles elapsed\n             9961952  peak memory footprint\n",
+  "old_real_word_snapshot": {
+    "reader": {
+      "expected_matches": true,
+      "input_bytes": 12229,
+      "input_sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+      "iterations": 1,
+      "mean_ms": 1.888125,
+      "summary": {
+        "chars": 64,
+        "covered": [
+          "main body paragraphs, runs, tabs and explicit line breaks"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-2",
+        "status": "complete"
+      },
+      "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+      "total_ms": 1.888125
+    },
+    "snapshot": {
+      "byte_length": 12229,
+      "captured_at_ms": 1791615532212,
+      "file_id": "60f7bfd8-6e74-435a-804e-a44df03177b9",
+      "file_revision": 1,
+      "relative_path": "word-v1.docx",
+      "root_id": "9158e5da-a1c6-4228-95f2-485390b683bb",
+      "sequence": 1,
+      "sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+      "snapshot_id": "9224e65c-2ee4-423c-829d-c9cbca435957"
+    }
+  },
+  "adversarial_regressions": {
+    "nested-eocd": {
+      "expected_matches": null,
+      "input_bytes": 1521,
+      "input_sha256": "a1e4be5158c547d9c41908aa2fc8a24391834d0da70f30b218ce48371891be0c",
+      "iterations": 1,
+      "mean_ms": 0.0022919999999999998,
+      "summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "ZIP archive comments are unsupported.",
+        "reader": "docx-2",
+        "status": "unsupported"
+      },
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "total_ms": 0.0022919999999999998
+    },
+    "aes-method-override": {
+      "expected_matches": null,
+      "input_bytes": 956,
+      "input_sha256": "c6110ba2f8de3d2fc4d107f9c34704ed8918d2bdecdd5beb4d4d1a0f3ec3506e",
+      "iterations": 1,
+      "mean_ms": 0.013083,
+      "summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "AES ZIP metadata is unsupported.",
+        "reader": "docx-2",
+        "status": "unsupported"
+      },
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "total_ms": 0.013083
+    }
+  },
+  "isolated_integration": {
+    "A_wiring_head": "449e95fca08498ad57585ee2b8d9f74b61ac8973",
+    "contract": "v13 in Draft only",
+    "D_overlay": "Historical Reader source hash 4ebddd23b43a2b3f14253a04f4f348b7a8105bc5c3c74ec694d012bfb2333626 / earlier tests hash f6cd179f1cb82a74cbc79d37d8e5691cc3c6fa91467a551da21b40e8ba6c0483; fixtures, tests/docx_snapshot.rs and examples/docx_probe.rs migration; standalone crate removed in validation tree. Does not include rich golden test or later main Source/R2 changes.",
+    "shared_file_bytes_identical_to_A": true,
+    "workspace_regression": {
+      "passed": 829,
+      "failed": 0,
+      "ignored": 10
+    },
+    "clippy_all_targets": "PASS",
+    "fmt_check": "PASS",
+    "real_model_or_UI_started": false
+  },
+  "rich_word": {
+    "status": "PASS for bounded stored-text/omission and immutable Snapshot checks",
+    "evidence": "word-rich-validation.json",
+    "Word_original_bytes": 18335,
+    "expected_scalars": 108,
+    "expected_matches": true,
+    "actual_status": "partial",
+    "left_out": [
+      "comments",
+      "fields and field instructions",
+      "footnotes and endnotes",
+      "headers and footers",
+      "tables",
+      "tracked changes (no revision acceptance policy applied)"
+    ],
+    "retained_feature_checks": 8,
+    "current_main_snapshot_expected_matches": true,
+    "not_full_lifecycle_or_Memory_acceptance": true
+  },
+  "student_decisions_pending": [
+    "No-readable-text with omissions: Unsupported or Partial",
+    "retain 200:1 ratio",
+    "merge/wiring order vs 10/13 Go",
+    "whether previous DOCX Memory consent requires renewal"
+  ],
+  "not_accepted": [
+    "10/13 formal Go/No-Go",
+    "Codex-R exact-commit acceptance",
+    "Word -> Semantic Change -> Retrieval and cloud consent scope",
+    "production/shared wiring remains unmerged Draft #103",
+    "full Word lifecycle/capture race matrix"
+  ],
+  "superseded_docx1": "validation-docx1.json; A real security findings invalidate previous blanket PASS",
+  "earlier_measurement_core_baseline": "1c0ff381a0331e270e8f38c3e0e21a56c4ee478e",
+  "Reader_PR": {
+    "number": 100,
+    "head": "3c15e7ace906a5e4bd22147e28a7ee4515e5dc43",
+    "merged_by": "P30g53",
+    "merged_at_UTC": "2026-10-10T19:43:45Z",
+    "merge_commit": "7b4062dffc2f16969f946e020374541d491a5523",
+    "D_issued_merge_action": false
+  },
+  "current_main_regression": {
+    "core_baseline": "6f14e3a7dbdb9b60f2d7945054fc1d8556f8ccdf",
+    "workspace_clippy_all_targets": "PASS",
+    "workspace_fmt_check": "PASS",
+    "frontend_build": "PASS",
+    "frontend_tests": {
+      "passed": 89,
+      "failed": 0
+    },
+    "initial_sandbox_core_run": {
+      "passed": 551,
+      "failed": 82,
+      "ignored": 4,
+      "exit_code": 101,
+      "all_82_failure_locations": "model_tests.rs:90:57 TcpListener::bind(127.0.0.1:0)",
+      "all_82_failure_reason": "Operation not permitted, sandbox loopback bind blocked",
+      "raw_log": "/private/tmp/traeva-docx-word-66/rich-core-tests.log",
+      "raw_log_sha256": "420530c642be9f46ffd0ad892c3725209fa2f308732a3b8c360e3a9cb60dd0e3"
+    },
+    "core_tests_with_local_loopback": {
+      "command": "cargo test -p traeva-core --offline --locked",
+      "exit_code": 0,
+      "passed": 728,
+      "failed": 0,
+      "ignored": 9,
+      "real_provider_enabled": false,
+      "raw_log": "/private/tmp/traeva-docx-word-66/rich-core-tests-loopback.log",
+      "raw_log_sha256": "dab6042169b902f535ee7bf84b0bb5f6cad6a9e114581ae6440bf4cca6ce5480",
+      "sandbox_override_reason": "Existing tests use loopback mock HTTP; all initial failures at TcpListener::bind were sandbox permission denials"
+    }
+  },
+  "earlier_frontend_regression": {
+    "build": "PASS",
+    "tests_passed": 87,
+    "failed": 0,
+    "core_baseline": "1c0ff381a0331e270e8f38c3e0e21a56c4ee478e"
+  },
+  "diff_whitespace_check": {
+    "initial_check": "flags rich-source.txt:6 trailing whitespace",
+    "reason": "Intentional golden stored-text space after Revision anchor, no final LF; preserve exact extraction expectation",
+    "other_files_check": "PASS: git diff 6f14e3a..HEAD --check -- . :(exclude)crates/traeva-core/tests/fixtures/docx/rich-source.txt"
+  }
+}

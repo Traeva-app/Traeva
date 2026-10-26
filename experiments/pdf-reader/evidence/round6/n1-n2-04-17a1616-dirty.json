@@ -1,0 +1,88 @@
+{
+ "commit": "17a16165fd9c9057c4864a3e8974187ea7b40a46",
+ "worktree_dirty": true,
+ "probe_sha256": "e25a7ec4f53461ae34a0603e1b752dd4964c924906d942f8cb97d28999f92730",
+ "environment": {
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.9.6"
+ },
+ "kind": "developer self-test (Claude-G); not an independent Codex-R4 result",
+ "limits": {
+  "timeout_seconds": 60,
+  "memory_mib": 1024,
+  "mode": "pdf-probe --isolated"
+ },
+ "runs": {
+  "n1-predictor-abort.pdf": {
+   "status": "unsupported",
+   "note": "A stream's decoding parameters ask for a row larger than this reader's limit of 16 MiB.",
+   "chars": 0,
+   "isolation": {
+    "memory_mib": 1024,
+    "millis": 12,
+    "outcome": "finished",
+    "timeout_seconds": 60
+   },
+   "peak_heap_bytes": 21049,
+   "sha256": "72c5bfb7c8b2f82860f8dc75410971f7bf249c2479c0ca688ce8e64994bfc71c",
+   "bytes": 737
+  },
+  "objstm-1000.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 20,
+   "isolation": {
+    "memory_mib": 1024,
+    "millis": 47,
+    "outcome": "finished",
+    "timeout_seconds": 60
+   },
+   "peak_heap_bytes": 197196,
+   "sha256": "b94d9b8ff55c4792cd52ec24a47edd2f94049446b876542172d079610dc2cab9",
+   "bytes": 29596
+  },
+  "objstm-16000.pdf": {
+   "status": "unsupported",
+   "note": "An object stream's offset table is larger than this reader's limit (64 KiB).",
+   "chars": 0,
+   "isolation": {
+    "memory_mib": 1024,
+    "millis": 12,
+    "outcome": "finished",
+    "timeout_seconds": 60
+   },
+   "peak_heap_bytes": 1900980,
+   "sha256": "75e93729c7b5c3b6cadc19ff11a8fa97373885bb9348179515af9b9eac1d3293",
+   "bytes": 530389
+  },
+  "objstm-4000.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 20,
+   "isolation": {
+    "memory_mib": 1024,
+    "millis": 625,
+    "outcome": "finished",
+    "timeout_seconds": 60
+   },
+   "peak_heap_bytes": 764102,
+   "sha256": "cab33028e838b498b6798d58d7eb7a900d014b9a4259848d4fd6e18516ab2c01",
+   "bytes": 125598
+  },
+  "objstm-64000.pdf": {
+   "status": "unsupported",
+   "note": "An object stream's offset table is larger than this reader's limit (64 KiB).",
+   "chars": 0,
+   "isolation": {
+    "memory_mib": 1024,
+    "millis": 25,
+    "outcome": "finished",
+    "timeout_seconds": 60
+   },
+   "peak_heap_bytes": 7251174,
+   "sha256": "4a7c1fa5148c9784f06684546f442558bde2e359f463673dbab33e9773b4d137",
+   "bytes": 2210391
+  }
+ }
+}

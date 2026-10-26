@@ -1,0 +1,7 @@
+Economics worksheet 5: Measuring GDP
+
+1. GDP = C + I + G + (X - M). Name each part.
+2. A country has consumption 600, investment 150, government spending 200, exports 120 and imports 90 (billions). Calculate GDP.
+3. Why is nominal GDP not a good way to compare output between 2015 and 2025?
+4. Real GDP grew from 1,000 to 1,030. What was the growth rate?
+5. Give one thing GDP does not measure well.

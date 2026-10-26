@@ -1,0 +1,2 @@
+    Checking traeva-xlsx-experiment v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-core/experiments/xlsx-reader)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.78s

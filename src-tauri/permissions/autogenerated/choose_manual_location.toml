@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-choose-manual-location"
+description = "Enables the choose_manual_location command without any pre-configured scope."
+commands.allow = ["choose_manual_location"]
+
+[[permission]]
+identifier = "deny-choose-manual-location"
+description = "Denies the choose_manual_location command without any pre-configured scope."
+commands.deny = ["choose_manual_location"]

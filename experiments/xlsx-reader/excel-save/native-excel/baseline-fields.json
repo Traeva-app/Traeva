@@ -1,0 +1,290 @@
+{
+  "status": "FIELD_PASS",
+  "stage": "baseline",
+  "protocol_sha256": "bf3807767d1fb5740118be64a2e85410d960e17d3b3dc4767b576357075f1de0",
+  "input_sha256": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650",
+  "input_sha256_after": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650",
+  "reader_output_sha256": "1b644466926bf08aa5ba48a7a0a7cd1a5acac1ff7a5a750555721d8a2eb38ed7",
+  "probe_sha256": "e882c4b6f45fc335992c8a2aabca397bdc3051177dc212cfd5ebf85149504fbb",
+  "exit_code": 0,
+  "input_unchanged": true,
+  "checks": [
+    {
+      "field": "sheet_order",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data:visibility",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data:merged_ranges",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A2:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A2:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A3:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A3:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B3:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B3:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A4:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A4:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B4:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B4:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A5:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A5:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B5:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B5:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A6:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A6:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B2:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B2:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C2:formula_text",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C2:formula_literal_separate",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C2:cache_token",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C2:cache_freshness",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文:visibility",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文:merged_ranges",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A2:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A2:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B2:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B2:no_formula_cache",
+      "status": "PASS"
+    }
+  ],
+  "excel_provenance": "UNVERIFIED_BY_THIS_CHECKER",
+  "cache_freshness": "unverified",
+  "scope": "Frozen field comparisons only. GUI save/close/reopen evidence must be reviewed separately.",
+  "reader_error": null,
+  "reader_status": "partial",
+  "omissions": [
+    {
+      "code": "unsupported_content",
+      "detail": "part not interpreted by this profile",
+      "part": "docProps/app.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "part not interpreted by this profile",
+      "part": "docProps/core.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain",
+      "part": "xl/_rels/workbook.xml.rels"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
+      "part": "xl/_rels/workbook.xml.rels"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "application/vnd.openxmlformats-officedocument.spreadsheetml.calcChain+xml",
+      "part": "xl/calcChain.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "part not interpreted by this profile",
+      "part": "xl/calcChain.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "part not interpreted by this profile",
+      "part": "xl/styles.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "application/vnd.openxmlformats-officedocument.theme+xml",
+      "part": "xl/theme/theme1.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "part not interpreted by this profile",
+      "part": "xl/theme/theme1.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "workbook element AlternateContent not interpreted",
+      "part": "xl/workbook.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "workbook element bookViews not interpreted",
+      "part": "xl/workbook.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "workbook element extLst not interpreted",
+      "part": "xl/workbook.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "workbook element fileVersion not interpreted",
+      "part": "xl/workbook.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "workbook element revisionPtr not interpreted",
+      "part": "xl/workbook.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "worksheet element pageMargins not interpreted",
+      "part": "xl/worksheets/sheet1.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "worksheet element sheetFormatPr not interpreted",
+      "part": "xl/worksheets/sheet1.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "worksheet element sheetViews not interpreted",
+      "part": "xl/worksheets/sheet1.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "worksheet element pageMargins not interpreted",
+      "part": "xl/worksheets/sheet2.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "worksheet element sheetFormatPr not interpreted",
+      "part": "xl/worksheets/sheet2.xml"
+    },
+    {
+      "code": "unsupported_content",
+      "detail": "worksheet element sheetViews not interpreted",
+      "part": "xl/worksheets/sheet2.xml"
+    }
+  ],
+  "limitations": [
+    "Formulas are never executed. All cached results have unverified freshness.",
+    "Formatting, number formats, date serial conversion and visual layout are not interpreted.",
+    "Charts, pivots, macros, external data, objects and extensions are not interpreted or refreshed.",
+    "Sheet/address context is positional; row alignment, lineage and semantic meaning are not inferred."
+  ]
+}

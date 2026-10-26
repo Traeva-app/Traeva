@@ -1,0 +1,253 @@
+/* The pet's popup (#37, the student's request 10/14): opaque, 440 pt wide
+   and as tall as what it shows (the core keeps it between 200 and 600 and
+   the page scrolls past that). Scoped to html.ask-window (set in main.tsx)
+   and .ask classes. */
+
+html.ask-window,
+html.ask-window body {
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* The window itself is transparent: this is its background, with round
+   corners (styles.css --window-radius). Long content scrolls inside. */
+html.ask-window #root {
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto;
+  border-radius: var(--window-radius);
+  background: var(--bg);
+  box-shadow: inset 0 0 0 0.5px var(--window-edge);
+}
+
+.ask {
+  display: grid;
+  /* One column no wider than the window: a long folder path in a select
+     (two authorized folders) must not widen the card past the window and
+     push the close button and the links out of it (R1, RC9). */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+/* Long paths are cut at the window's edge in the closed select; its menu
+   still shows them in full. */
+.ask .card,
+.ask .field {
+  min-width: 0;
+}
+
+.ask select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  text-overflow: ellipsis;
+}
+
+.ask-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  /* It moves the window (DropPopup's dragWindow). */
+  cursor: grab;
+  user-select: none;
+}
+
+.ask-header .ask-close {
+  cursor: default;
+}
+
+.ask-file {
+  display: grid;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ask-name {
+  font-size: 15px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ask-close {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+}
+
+/* Organize's cards, a little tighter in the small window. */
+.ask .card {
+  margin: 0;
+  padding: 12px 14px;
+}
+
+.ask-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 10px;
+}
+
+/* A quiet link, not a second button. */
+.ask-link {
+  margin-left: auto;
+  padding: 2px 0;
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: underline;
+  background: transparent;
+  border: none;
+}
+
+.ask-links {
+  display: inline-flex;
+  gap: 14px;
+  margin-left: auto;
+}
+
+.ask-links .ask-link {
+  margin-left: 0;
+}
+
+.ask-link:disabled {
+  opacity: 0.5;
+}
+
+.ask .card h2 {
+  margin-top: 0;
+}
+
+/* The "Moved to" note (MovedNote, #37 10/17): the window stays clear and
+   the page draws a small speech bubble in it, its tail toward the pet. The
+   box leaves room around the bubble for its shadow and tail. */
+html.ask-window.ask-note #root {
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.ask.ask-note-box {
+  display: block;
+  padding: 8px 14px 10px;
+}
+
+.note {
+  position: relative;
+  padding: 10px 30px 10px 12px;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 0.5px var(--window-edge),
+    0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* The tail: a small square turned on its side, toward the pet (only when
+   the note's side is sure, popup.ts noteTail). */
+.note-tail-right::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  bottom: 14px;
+  width: 10px;
+  height: 10px;
+  background: var(--surface);
+  box-shadow: 0.5px 0.5px 0 0 var(--window-edge);
+  transform: rotate(-45deg);
+}
+
+.note-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.note-text {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.note-label {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.note-place {
+  font-size: 13px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.note-said {
+  padding: 4px 0;
+  color: var(--text);
+}
+
+.note-confirm {
+  display: grid;
+  gap: 6px;
+}
+
+.note-confirm > .note-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.note-back {
+  margin: 0;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.note-confirm .row {
+  margin-top: 4px;
+}
+
+.note-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+}
+
+.note-icon {
+  flex: none;
+}
+
+.note-icon-folder {
+  fill: var(--accent);
+}
+
+.note-icon-badge {
+  fill: var(--ok);
+  stroke: var(--surface);
+  stroke-width: 1.5;
+}
+
+.note-icon-mark {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

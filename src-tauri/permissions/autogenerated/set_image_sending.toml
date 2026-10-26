@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-image-sending"
+description = "Enables the set_image_sending command without any pre-configured scope."
+commands.allow = ["set_image_sending"]
+
+[[permission]]
+identifier = "deny-set-image-sending"
+description = "Denies the set_image_sending command without any pre-configured scope."
+commands.deny = ["set_image_sending"]

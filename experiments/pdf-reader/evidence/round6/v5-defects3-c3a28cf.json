@@ -1,0 +1,663 @@
+{
+ "kind": "developer self-test (Claude-G), NOT an independent Codex-R4 result",
+ "reader_binary": "pdf-experiment-5 built from c3a28cf (developer binary)",
+ "probe_sha256": "2d72f356e5c89fa704ac0626e3ea1a060f9a38885c12f5a467e9c15b661dd471",
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "python": "3.13.16"
+ },
+ "note": "Unfixed v5 run over fixtures/defects3 (PDF-08 + the N3-class g25-g27). Expectations in expected.json were frozen BEFORE this run; see HANDOFF-round6.md for where g14-g17 (and g25-g27) diverge from this ground truth.",
+ "runs": {
+  "g01-contents-raw-under-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 33,
+   "text": "[Page 1]\nContents under the limit",
+   "pages": [
+    {
+     "end": 33,
+     "glyphs": 21,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "e6c6e8343852cb923b38ba41d1d290fb3d0b88cd00a45d788046630cb9f8df3d",
+   "input_sha256": "d20b90fbcfd04871b19c3e8594bb3910f66ac52f1f58394cd9b3f3ab4f41f91b",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g02-contents-raw-at-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 30,
+   "text": "[Page 1]\nContents at the limit",
+   "pages": [
+    {
+     "end": 30,
+     "glyphs": 18,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "53055d372365d16d0196ae5bee4a540dba877f66651394f30cd702c6fd2a5b3f",
+   "input_sha256": "de6fde9b5e62dde60bc990da435d88bd6466d14decef9325fc2700f92013380f",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g03-contents-raw-over-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 32,
+   "text": "[Page 1]\nContents over the limit",
+   "pages": [
+    {
+     "end": 32,
+     "glyphs": 20,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "efd8caea7ca381a19103d10a1a69e6fcbff30780ca790c340212079830fc3b6e",
+   "input_sha256": "499fabd9a2d5d501725ea6042c6124cd510abba4e3a29e4999d054a9e650534b",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g04-contents-raw-17mib-early-endstream.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 41,
+   "text": "[Page 1]\nContents with an early endstream",
+   "pages": [
+    {
+     "end": 41,
+     "glyphs": 28,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "4f4436152c3e169c564539d05f9241b3928c3a48f68697df6397b23f4f13a962",
+   "input_sha256": "cf07dddc0498952fa4430748a1a1b62a106c5c3fc5a7a49f25886623d20e7b4e",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g05-form-raw-under-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 39,
+   "text": "[Page 1]\nPage text\nForm under the limit",
+   "pages": [
+    {
+     "end": 39,
+     "glyphs": 25,
+     "invisible_chars": 0,
+     "lines": 2,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "d448a9ce5ba537866f03f68c434950b56575817758d8ad37d51d090aa66445f5",
+   "input_sha256": "5c86594e332fe77e7bf0eb971f00102e3ee8824a82b47be131d0fb46c74c5830",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g06-form-raw-at-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 36,
+   "text": "[Page 1]\nPage text\nForm at the limit",
+   "pages": [
+    {
+     "end": 36,
+     "glyphs": 22,
+     "invisible_chars": 0,
+     "lines": 2,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "59c9ae6068048c2a128c1e7e437f83eae25a471756eeb3912dba4bdc0aa23873",
+   "input_sha256": "e202792f0be807590af07360c6495bcd3f9c71d6860d4f5edc954594a4d78ae1",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g07-form-raw-over-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 38,
+   "text": "[Page 1]\nPage text\nForm over the limit",
+   "pages": [
+    {
+     "end": 38,
+     "glyphs": 24,
+     "invisible_chars": 0,
+     "lines": 2,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "444085ce16bbfe75f462d003b4dcd3ead331412499e68667f0a368a21c44e279",
+   "input_sha256": "9bcbb2ea7d15bf06a20439d3e6518613be78f234e92b94f463060762f5e33b76",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g08-form-raw-17mib-early-endstream.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 47,
+   "text": "[Page 1]\nPage text\nForm with an early endstream",
+   "pages": [
+    {
+     "end": 47,
+     "glyphs": 32,
+     "invisible_chars": 0,
+     "lines": 2,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "130d6566799824be3a3c9f8cd3b5a01cc137d02dc7d5ee79a23fa285457058ab",
+   "input_sha256": "32d2cd54babfa55d4721cdc5875fa51ab54fc6a9e0c354f374e18c36e9173a4a",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g09-indirect-length-over-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 39,
+   "text": "[Page 1]\nIndirect length over the limit",
+   "pages": [
+    {
+     "end": 39,
+     "glyphs": 26,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "7650173116746789445ef0c04d0684fca3563f82ca3e2840aa4c7a9549f8ed67",
+   "input_sha256": "8dfbe750e0c20be0316128628b6da466d6d7f12d1cc4dc2ff932f8a53e00cc5c",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g10-indirect-length-under-limit-early-endstream.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 40,
+   "text": "[Page 1]\nIndirect length under the limit",
+   "pages": [
+    {
+     "end": 40,
+     "glyphs": 27,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "192deb1014a37fa86f646a8fb885ce9271b3d8497e789754cebe58de15af17c9",
+   "input_sha256": "d7cc41f1c7ac2f287031e568914d6f0b47318196e4326a493196ce15f8ad5096",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g11-length-in-objstm-over-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 50,
+   "text": "[Page 1]\nLength in an object stream over the limit",
+   "pages": [
+    {
+     "end": 50,
+     "glyphs": 34,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "c44fc29c824a2ce3afd9cdee0ce49c9ea2a3bab4392c323aa12637d68519d9e9",
+   "input_sha256": "00747a95f9800fbdf5c5e6e9be82fe4ef7491ae989835f8255682700c9c0efcc",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g12-length-in-objstm-under-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 51,
+   "text": "[Page 1]\nLength in an object stream under the limit",
+   "pages": [
+    {
+     "end": 51,
+     "glyphs": 35,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "4fe0f4f8c048eb0caec093963b3b4808877bebcb2dc378d0155157260fe2e149",
+   "input_sha256": "d53a50baa14e6e80c80f63173b9b5a87aa1337c729d075f3ff6aa0b8020db7bb",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g13-matching-length-endstream-comment.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 24,
+   "text": "[Page 1]\nMatching length",
+   "pages": [
+    {
+     "end": 24,
+     "glyphs": 14,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "1348469e1938965299622204b346ba9948011f6130c8400c9a70f7807315cae3",
+   "input_sha256": "7df7413a628b999dc62ae4ecbccf46e0d11132ee2a87a446bc3c9bab31bc5b41",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g14-length-too-short.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 25,
+   "text": "[Page 1]\nLength too short",
+   "pages": [
+    {
+     "end": 25,
+     "glyphs": 14,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "3611c60cf202671c14e33845e306648464bc24afcc167d7843f01cff872e1791",
+   "input_sha256": "da7b3c12e3a76f1102f7ad5d223088564d8933cca04c81e6307d3797ff4877fa",
+   "frozen_role": "rule",
+   "frozen_status": "failed",
+   "frozen_note": "A stream's /Length is missing or does not match where its data ends.",
+   "matches_frozen_expectation": false
+  },
+  "g15-length-too-long.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 24,
+   "text": "[Page 1]\nLength too long",
+   "pages": [
+    {
+     "end": 24,
+     "glyphs": 13,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "e8759a35f84260930489c099fce400b8cf740ffd8f1c676d587709b88d6bea83",
+   "input_sha256": "17ea4e4d6fe49eb5f94944ca01259c11d29ee26271db119ff498164f3f32f175",
+   "frozen_role": "rule",
+   "frozen_status": "failed",
+   "frozen_note": "A stream's /Length is missing or does not match where its data ends.",
+   "matches_frozen_expectation": false
+  },
+  "g16-length-missing.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 18,
+   "text": "[Page 1]\nNo length",
+   "pages": [
+    {
+     "end": 18,
+     "glyphs": 8,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "2e5a8c229bf6cc1881429573a5d6923fafbf878e1bcb0fd8142e54c9fef8d1d2",
+   "input_sha256": "22cecf56a25e740daa83daf69b9115a51ccfa2b7bb69be7f977f4a352d28fd29",
+   "frozen_role": "rule",
+   "frozen_status": "failed",
+   "frozen_note": "A stream's /Length is missing or does not match where its data ends.",
+   "matches_frozen_expectation": false
+  },
+  "g17-wrong-length-17mib-early-endstream.pdf": {
+   "status": "unsupported",
+   "note": "The PDF has no text to read: its pages draw no text.",
+   "chars": 0,
+   "text": "",
+   "pages": [
+    {
+     "end": 0,
+     "glyphs": 0,
+     "invisible_chars": 0,
+     "lines": 0,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 0,
+     "state": "no_text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "input_sha256": "e8f9cd7218fdbd5e4ed3c12d9000607c313f2c6ab4a1b2b8a4c714ee1ab6adae",
+   "frozen_role": "rule",
+   "frozen_status": "failed",
+   "frozen_note": "A stream's /Length is missing or does not match where its data ends.",
+   "matches_frozen_expectation": false
+  },
+  "g18-flate-bomb-wrong-length.pdf": {
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "chars": 0,
+   "text": "",
+   "pages": [],
+   "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "input_sha256": "ac7e5176090ef695c6389de2957c1238c370735330c936e6209f98eb590e18a2",
+   "frozen_role": "control",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": true
+  },
+  "g19-objstm-bomb-in-image-data.pdf": {
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "chars": 0,
+   "text": "",
+   "pages": [],
+   "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "input_sha256": "2b95a0e607cadbb2d4dbe313014d48102cf6fbcd13ad04bde7558892a8c5584e",
+   "frozen_role": "control",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": true
+  },
+  "g20-objstm-raw-over-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 26,
+   "text": "[Page 1]\nBig object stream",
+   "pages": [
+    {
+     "end": 26,
+     "glyphs": 15,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "e98ab41d72076c87c79408fafd703059ee8b7e281299c4d1a1183b61bee29721",
+   "input_sha256": "7b4d522185268a25d877ff7644b4e528db37052b6784bd40c50976936cafa23d",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g21-rebuilt-xref-raw-over-limit.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 35,
+   "text": "[Page 1]\nRebuilt and over the limit",
+   "pages": [
+    {
+     "end": 35,
+     "glyphs": 22,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "c1a91b67ea4ebbce7db94e56ecf29becd737fee8a188d8d6bb7cd60aaa56277a",
+   "input_sha256": "5f2d36a46695ca9d457b8888635f1dd56fca18f703e50c16f33af45b4c079307",
+   "frozen_role": "defect",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream's data is larger than this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g22-rebuilt-xref-flate-bomb.pdf": {
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "chars": 0,
+   "text": "",
+   "pages": [],
+   "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "input_sha256": "8681a71624de22e8b4d2444b8bb7f9297707c395ef3fb59f3b76d03530008a6f",
+   "frozen_role": "control",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": true
+  },
+  "g23-rebuilt-xref-control.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 24,
+   "text": "[Page 1]\nRebuilt control",
+   "pages": [
+    {
+     "end": 24,
+     "glyphs": 14,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "f97627be79129fb611471a7fe78156e98fc6559e460eb1c3753c69e601156146",
+   "input_sha256": "dba7f153eecd20e5978c73d87b3103abd75020b3d60d9418d1997f59c79ba5f3",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g24-unbroken-xref-control.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 24,
+   "text": "[Page 1]\nRebuilt control",
+   "pages": [
+    {
+     "end": 24,
+     "glyphs": 14,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "f97627be79129fb611471a7fe78156e98fc6559e460eb1c3753c69e601156146",
+   "input_sha256": "87f11a40f9de177db2f2c368e10fe156fcc1eefa537c063b56682854ca584a93",
+   "frozen_role": "control",
+   "frozen_status": "complete",
+   "frozen_note": null,
+   "matches_frozen_expectation": true
+  },
+  "g25-dictionary-read-as-stream.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 18,
+   "text": "[Page 1]\nPage text",
+   "pages": [
+    {
+     "end": 18,
+     "glyphs": 8,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "081b9294d6e79529c92219c7cce279c6e1e094d0b666b5e6097bbb101796da2b",
+   "input_sha256": "6e6584204ae7335156a1f20bc1096748dfadef923752c9e67b8c36e53c977a4b",
+   "frozen_role": "related",
+   "frozen_status": "unsupported",
+   "frozen_note": "A dictionary in the PDF names stream filters but has no stream data.",
+   "matches_frozen_expectation": false
+  },
+  "g26-xref-stream-without-data.pdf": {
+   "status": "complete",
+   "note": null,
+   "chars": 44,
+   "text": "[Page 1]\nCross-reference stream without data",
+   "pages": [
+    {
+     "end": 44,
+     "glyphs": 32,
+     "invisible_chars": 0,
+     "lines": 1,
+     "omissions": [],
+     "page": 1,
+     "rotated_lines": 0,
+     "start": 9,
+     "state": "text",
+     "wide_gaps": 0
+    }
+   ],
+   "text_sha256": "d1e558f10584a2d94008d14cdcd8586ebf2c030e700fa2680cb6d6cca2df3cb3",
+   "input_sha256": "83f2df1bcb2d3ae94de53096fc4a959bed932355bdc1f93371072972a107e722",
+   "frozen_role": "related",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  },
+  "g27-objstm-without-data.pdf": {
+   "status": "failed",
+   "note": "The PDF's structure could not be read.",
+   "chars": 0,
+   "text": "",
+   "pages": [],
+   "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "input_sha256": "57fd9d6388e7d6f912ed340cb8cf064474d591972db4f7737f4c1c0ae6dc3162",
+   "frozen_role": "related",
+   "frozen_status": "unsupported",
+   "frozen_note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "matches_frozen_expectation": false
+  }
+ }
+}

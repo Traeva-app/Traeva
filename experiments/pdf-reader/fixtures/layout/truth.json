@@ -1,0 +1,444 @@
+{
+ "rules": "LAYOUT.md",
+ "note": "Lines each page should read as, from each fixture's own layout.",
+ "same_page": [
+  [
+   "l01-single-column.pdf",
+   "l02-single-column-shuffled.pdf"
+  ],
+  [
+   "l03-two-columns-by-column.pdf",
+   "l04-two-columns-by-row.pdf",
+   "l05-two-columns-reversed.pdf",
+   "l06-two-columns-word-order.pdf"
+  ],
+  [
+   "l07-mixed-out-of-order.pdf",
+   "l08-mixed-in-order.pdf"
+  ],
+  [
+   "l12-ruled-table-by-column.pdf",
+   "l23-ruled-table-by-row.pdf"
+  ],
+  [
+   "l24-justified-wide-gaps-per-line.pdf",
+   "l25-justified-wide-gaps-per-word.pdf"
+  ]
+ ],
+ "pages": {
+  "l01-single-column.pdf": [
+   [
+    "Single column layout",
+    "B01 memory keeps every saved version of a local file and shows what changed between two snapshots",
+    "B02 every saved version of a local file and shows what changed between two snapshots so a reader",
+    "B03 version of a local file and shows what changed between two snapshots so a reader can follow the",
+    "B04 a local file and shows what changed between two snapshots so a reader can follow the history in",
+    "B05 file and shows what changed between two snapshots so a reader can follow the history in order",
+    "B06 shows what changed between two snapshots so a reader can follow the history in order memory",
+    "B07 changed between two snapshots so a reader can follow the history in order memory keeps every",
+    "B08 two snapshots so a reader can follow the history in order memory keeps every saved version of a",
+    "B09 so a reader can follow the history in order memory keeps every saved version of a local file and",
+    "B10 reader can follow the history in order memory keeps every saved version of a local file and shows"
+   ]
+  ],
+  "l02-single-column-shuffled.pdf": [
+   [
+    "Single column layout",
+    "B01 memory keeps every saved version of a local file and shows what changed between two snapshots",
+    "B02 every saved version of a local file and shows what changed between two snapshots so a reader",
+    "B03 version of a local file and shows what changed between two snapshots so a reader can follow the",
+    "B04 a local file and shows what changed between two snapshots so a reader can follow the history in",
+    "B05 file and shows what changed between two snapshots so a reader can follow the history in order",
+    "B06 shows what changed between two snapshots so a reader can follow the history in order memory",
+    "B07 changed between two snapshots so a reader can follow the history in order memory keeps every",
+    "B08 two snapshots so a reader can follow the history in order memory keeps every saved version of a",
+    "B09 so a reader can follow the history in order memory keeps every saved version of a local file and",
+    "B10 reader can follow the history in order memory keeps every saved version of a local file and shows"
+   ]
+  ],
+  "l03-two-columns-by-column.pdf": [
+   [
+    "Two column layout",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "L07 reader can follow the history in order",
+    "L08 the history in order memory keeps every",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "R07 in order memory keeps every saved",
+    "R08 keeps every saved version of a local file"
+   ]
+  ],
+  "l04-two-columns-by-row.pdf": [
+   [
+    "Two column layout",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "L07 reader can follow the history in order",
+    "L08 the history in order memory keeps every",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "R07 in order memory keeps every saved",
+    "R08 keeps every saved version of a local file"
+   ]
+  ],
+  "l05-two-columns-reversed.pdf": [
+   [
+    "Two column layout",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "L07 reader can follow the history in order",
+    "L08 the history in order memory keeps every",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "R07 in order memory keeps every saved",
+    "R08 keeps every saved version of a local file"
+   ]
+  ],
+  "l06-two-columns-word-order.pdf": [
+   [
+    "Two column layout",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "L07 reader can follow the history in order",
+    "L08 the history in order memory keeps every",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "R07 in order memory keeps every saved",
+    "R08 keeps every saved version of a local file"
+   ]
+  ],
+  "l07-mixed-out-of-order.pdf": [
+   [
+    "Mixed layout report",
+    "Intro01 memory keeps every saved version of a local file and shows what changed between two",
+    "Intro02 local file and shows what changed between two snapshots so a reader can follow the history in",
+    "Intro03 ends the introduction.",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "Close01 saved version of a local file and shows what changed between two snapshots so a reader can",
+    "Close02 and shows what changed between two snapshots so a reader can follow the history in order"
+   ]
+  ],
+  "l08-mixed-in-order.pdf": [
+   [
+    "Mixed layout report",
+    "Intro01 memory keeps every saved version of a local file and shows what changed between two",
+    "Intro02 local file and shows what changed between two snapshots so a reader can follow the history in",
+    "Intro03 ends the introduction.",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "Close01 saved version of a local file and shows what changed between two snapshots so a reader can",
+    "Close02 and shows what changed between two snapshots so a reader can follow the history in order"
+   ]
+  ],
+  "l09-three-columns.pdf": [
+   [
+    "Three column layout",
+    "C1-01 memory keeps every",
+    "C1-02 every saved version",
+    "C1-03 version of a local file",
+    "C1-04 a local file and shows",
+    "C1-05 file and shows what",
+    "C1-06 shows what changed",
+    "C2-01 local file and shows",
+    "C2-02 and shows what",
+    "C2-03 what changed",
+    "C2-04 between two",
+    "C2-05 snapshots so a reader",
+    "C2-06 a reader can follow",
+    "C3-01 two snapshots so a",
+    "C3-02 so a reader can follow",
+    "C3-03 reader can follow the",
+    "C3-04 follow the history in",
+    "C3-05 history in order",
+    "C3-06 order memory keeps"
+   ]
+  ],
+  "l10-unequal-columns-header-footer.pdf": [
+   [
+    "Layout report header\tPage 7",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "L07 reader can follow the history in order",
+    "L08 the history in order memory keeps every",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "Footer text for the layout report"
+   ]
+  ],
+  "l11-staggered-columns.pdf": [
+   [
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "L07 reader can follow the history in order",
+    "L08 the history in order memory keeps every",
+    "Right column heading",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps"
+   ]
+  ],
+  "l12-ruled-table-by-column.pdf": [
+   [
+    "Above01 every saved version of a local file and shows what changed between two snapshots so a",
+    "Name\tVersion\tSize",
+    "alpha\tv1.0\t10 KB",
+    "beta\tv2.0\t12 KB",
+    "gamma\tv3.0\t14 KB",
+    "Below01 of a local file and shows what changed between two snapshots so a reader can follow the"
+   ]
+  ],
+  "l13-ruled-table-two-line-cell.pdf": [
+   [
+    "Above01 version of a local file and shows what changed between two snapshots so a reader can follow",
+    "Item\tNote\tSize",
+    "alpha\tShort note\t10 KB",
+    "beta\tLong note that wraps in the cell\t12 KB",
+    "gamma\tLast note\t14 KB"
+   ]
+  ],
+  "l14-aligned-table.pdf": [
+   [
+    "Above01 a local file and shows what changed between two snapshots so a reader can follow the history",
+    "Item\tCount\tStatus",
+    "apples\t12\tready",
+    "pears\t7\twaiting",
+    "plums\t30\tready",
+    "grapes\t5\tlate",
+    "Below01 file and shows what changed between two snapshots so a reader can follow the history in"
+   ]
+  ],
+  "l15-wide-gaps-single-column.pdf": [
+   [
+    "Name:\tTraeva",
+    "P01 version of a local file and shows what changed between two snapshots so a reader can follow the",
+    "P02 file and shows what changed between two snapshots so a reader can follow the history in order",
+    "P03 changed between two snapshots so a reader can follow the history in order memory keeps every",
+    "Total\t42",
+    "P04 so a reader can follow the history in order memory keeps every saved version of a local file and",
+    "Tab\tstop"
+   ]
+  ],
+  "l16-label-rows.pdf": [
+   [
+    "Above01 keeps every saved version of a local file and shows what changed between two snapshots so",
+    "Project name:",
+    "Release date:",
+    "Traeva layout experiment",
+    "2026-10-12",
+    "Below01 saved version of a local file and shows what changed between two snapshots so a reader can"
+   ],
+   [
+    "Above01 keeps every saved version of a local file and shows what changed between two snapshots so",
+    "Name:\tTraeva",
+    "Date:\t2026-10-12",
+    "Below01 saved version of a local file and shows what changed between two snapshots so a reader can"
+   ]
+  ],
+  "l17-rotated-in-gutter.pdf": [
+   [
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "Margin note text",
+    "Gutter label"
+   ]
+  ],
+  "l18-cjk-two-columns.pdf": [
+   [
+    "左栏第一行版本记忆会保存每一次真实的快",
+    "左栏第二行照然后再异步分析两次之间的变",
+    "左栏第三行化并且记录来源与时间以便之后",
+    "左栏第四行检索历史内容和比较不同版本之",
+    "左栏第五行间的差异以及每个文件现在所在",
+    "右栏第一行的位置和它曾经用过的名字版本",
+    "右栏第二行记忆会保存每一次真实的快照然",
+    "右栏第三行后再异步分析两次之间的变化并",
+    "右栏第四行且记录来源与时间以便之后检索",
+    "右栏第五行历史内容和比较不同版本之间的"
+   ]
+  ],
+  "l19-short-columns.pdf": [
+   [
+    "Short column section",
+    "L01 memory keeps every saved version of a\tR01 of a local file and shows what changed",
+    "L02 saved version of a local file and shows\tR02 file and shows what changed between two",
+    "Below01 every saved version of a local file and shows what changed between two snapshots so a"
+   ]
+  ],
+  "l20-table-then-columns.pdf": [
+   [
+    "Item\tCount\tStatus",
+    "apples\t12\tready",
+    "pears\t7\twaiting",
+    "plums\t30\tready",
+    "L01 memory keeps every saved version of a",
+    "L02 saved version of a local file and shows",
+    "L03 a local file and shows what changed",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a",
+    "L06 snapshots so a reader can follow the",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps"
+   ]
+  ],
+  "l21-narrow-gutter-justified.pdf": [
+   [
+    "L01 memory keeps every saved version of a local",
+    "L02 saved version of a local file and shows what",
+    "L03 a local file and shows what changed between",
+    "L04 and shows what changed between two",
+    "L05 changed between two snapshots so a reader",
+    "L06 snapshots so a reader can follow the history",
+    "L07 reader can follow the history in order memory",
+    "L08 the history in order memory keeps every",
+    "R01 of a local file and shows what changed",
+    "R02 file and shows what changed between two",
+    "R03 what changed between two snapshots so a",
+    "R04 two snapshots so a reader can follow the",
+    "R05 a reader can follow the history in order",
+    "R06 follow the history in order memory keeps",
+    "R07 in order memory keeps every saved version",
+    "R08 keeps every saved version of a local file and"
+   ]
+  ],
+  "l22-wrapped-list.pdf": [
+   [
+    "Above01 local file and shows what changed between two snapshots so a reader can follow the history",
+    "1. First item text",
+    "2. Second item that is",
+    "longer and wraps",
+    "3. Third item"
+   ]
+  ],
+  "l23-ruled-table-by-row.pdf": [
+   [
+    "Above01 every saved version of a local file and shows what changed between two snapshots so a",
+    "Name\tVersion\tSize",
+    "alpha\tv1.0\t10 KB",
+    "beta\tv2.0\t12 KB",
+    "gamma\tv3.0\t14 KB",
+    "Below01 of a local file and shows what changed between two snapshots so a reader can follow the"
+   ]
+  ],
+  "l24-justified-wide-gaps-per-line.pdf": [
+   [
+    "L01w1 L01w2 L01w3 L01w4 L01w5",
+    "L02w1 L02w2 L02w3 L02w4 L02w5",
+    "L03w1 L03w2 L03w3 L03w4 L03w5",
+    "L04w1 L04w2 L04w3 L04w4 L04w5",
+    "L05w1 L05w2 L05w3 L05w4 L05w5",
+    "L06w1 L06w2 L06w3 L06w4 L06w5",
+    "L07w1 L07w2 L07w3 L07w4 L07w5",
+    "L08w1 L08w2 L08w3 L08w4 L08w5",
+    "R01w1 R01w2 R01w3 R01w4 R01w5",
+    "R02w1 R02w2 R02w3 R02w4 R02w5",
+    "R03w1 R03w2 R03w3 R03w4 R03w5",
+    "R04w1 R04w2 R04w3 R04w4 R04w5",
+    "R05w1 R05w2 R05w3 R05w4 R05w5",
+    "R06w1 R06w2 R06w3 R06w4 R06w5",
+    "R07w1 R07w2 R07w3 R07w4 R07w5",
+    "R08w1 R08w2 R08w3 R08w4 R08w5"
+   ]
+  ],
+  "l25-justified-wide-gaps-per-word.pdf": [
+   [
+    "L01w1 L01w2 L01w3 L01w4 L01w5",
+    "L02w1 L02w2 L02w3 L02w4 L02w5",
+    "L03w1 L03w2 L03w3 L03w4 L03w5",
+    "L04w1 L04w2 L04w3 L04w4 L04w5",
+    "L05w1 L05w2 L05w3 L05w4 L05w5",
+    "L06w1 L06w2 L06w3 L06w4 L06w5",
+    "L07w1 L07w2 L07w3 L07w4 L07w5",
+    "L08w1 L08w2 L08w3 L08w4 L08w5",
+    "R01w1 R01w2 R01w3 R01w4 R01w5",
+    "R02w1 R02w2 R02w3 R02w4 R02w5",
+    "R03w1 R03w2 R03w3 R03w4 R03w5",
+    "R04w1 R04w2 R04w3 R04w4 R04w5",
+    "R05w1 R05w2 R05w3 R05w4 R05w5",
+    "R06w1 R06w2 R06w3 R06w4 R06w5",
+    "R07w1 R07w2 R07w3 R07w4 R07w5",
+    "R08w1 R08w2 R08w3 R08w4 R08w5"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,7 @@
+⟦sheet 1 · id 1 · name "Data"⟧
+⟦cell B2 · literal · number⟧
+7
+⟦cell C2 · formula⟧
+B2*2
+⟦cell C2 · cache · number · not verified⟧
+14

@@ -1,0 +1,106 @@
+{
+  "generator": "fixtures/layout/generate.py",
+  "note": "Synthetic files only; second round (reading order and simple tables).",
+  "files": {
+    "l01-single-column.pdf": {
+      "sha256": "0b49d4498b3fd1e80ea2f5b0373f540024a130065694a53314c00c90409e16d3",
+      "bytes": 882
+    },
+    "l02-single-column-shuffled.pdf": {
+      "sha256": "51ecec27e9c1025ed19b01fe5f47adfb60cb82f0ba03b44cd9960cb6786730ac",
+      "bytes": 910
+    },
+    "l03-two-columns-by-column.pdf": {
+      "sha256": "81a81aef60c0e7fdb60f24330586c1bd0bfdd286e0613509a5afbe6b98b6a961",
+      "bytes": 944
+    },
+    "l04-two-columns-by-row.pdf": {
+      "sha256": "db6c7efdd68659d1f2830832af01b3b2470258f535165c8d050222a43e1b1b52",
+      "bytes": 942
+    },
+    "l05-two-columns-reversed.pdf": {
+      "sha256": "9c70176d7a01283c9307972c6e9a25b5259a1c3cfd88c563a7201edf24344281",
+      "bytes": 936
+    },
+    "l06-two-columns-word-order.pdf": {
+      "sha256": "3c67409066c23d7abd470715c92cb89cfb8bcbf6307fc2640968d6e80c651ac7",
+      "bytes": 1671
+    },
+    "l07-mixed-out-of-order.pdf": {
+      "sha256": "51e1e004f56c4fee2849d31376a7f7c456cd1050bab7a3f4bcfba16f5bef8822",
+      "bytes": 975
+    },
+    "l08-mixed-in-order.pdf": {
+      "sha256": "e9e03f04024d512b6348b137dd57c2ff10429bd1b36bd545277dcbcceef0fec1",
+      "bytes": 974
+    },
+    "l09-three-columns.pdf": {
+      "sha256": "c94c92a363c6da8964f4d4fa1f1f39544a129fdf71fea4e3aac9535d2e8b2ac4",
+      "bytes": 951
+    },
+    "l10-unequal-columns-header-footer.pdf": {
+      "sha256": "4bb7af7276cb21b47972c7613c69e492b000b16716a0f6739b90dbac77162952",
+      "bytes": 929
+    },
+    "l11-staggered-columns.pdf": {
+      "sha256": "fa6d382d66f1313866151942da1e5ad827b34477541fe8942aff625b18d30151",
+      "bytes": 916
+    },
+    "l12-ruled-table-by-column.pdf": {
+      "sha256": "4e9d38fa6781e9c9229af85444f917e5e9377fc3af870b26828356b3e2c679b1",
+      "bytes": 915
+    },
+    "l13-ruled-table-two-line-cell.pdf": {
+      "sha256": "69aab577f070ed5c7d12b86104c4f5862fcb1f5bf0cce33cd797f7b611ec7800",
+      "bytes": 915
+    },
+    "l14-aligned-table.pdf": {
+      "sha256": "8cdcf15d8eb666c90304eb0f161223b637f6ab6e2afc9970aed7c39200a2a7d2",
+      "bytes": 868
+    },
+    "l15-wide-gaps-single-column.pdf": {
+      "sha256": "c1c951e710fe1953c941bf6d748a75843e77ebe4e50c42194a6316d0c471c32f",
+      "bytes": 875
+    },
+    "l16-label-rows.pdf": {
+      "sha256": "b4ee4a5aedfb15ecdacc7b05466c7b2d9270aad2a93509a5e77ef7ffe9a7adb8",
+      "bytes": 1272
+    },
+    "l17-rotated-in-gutter.pdf": {
+      "sha256": "166c2ad669fa3f16941598a7d270062689dacf679b9d13a3c5a659fd5aae2e05",
+      "bytes": 920
+    },
+    "l18-cjk-two-columns.pdf": {
+      "sha256": "5f4c57a01c70e415e1c2313a267bf105a3ff039641b227e347c452251a186fe7",
+      "bytes": 2165
+    },
+    "l19-short-columns.pdf": {
+      "sha256": "bd08f09f401a439136863a25ec24edf4a7fa9d0b5fd0c73e97fa1452eecb42b2",
+      "bytes": 822
+    },
+    "l20-table-then-columns.pdf": {
+      "sha256": "4587eb9f2e3605ab93d173a4b1cb31bb657776176fde536d5ce866fa2127b959",
+      "bytes": 961
+    },
+    "l21-narrow-gutter-justified.pdf": {
+      "sha256": "72c85ea98608ec436858333aa180b49bec3a4f4f243cf725fb2997cbe10ad24c",
+      "bytes": 998
+    },
+    "l22-wrapped-list.pdf": {
+      "sha256": "f4f63e798438a70922041b910e46094d089d329bbd4a86a138145107cd2f1128",
+      "bytes": 818
+    },
+    "l23-ruled-table-by-row.pdf": {
+      "sha256": "80360119e5021ea200b5bc7f608098cdf7e3546489531671875174c3f4297e00",
+      "bytes": 916
+    },
+    "l24-justified-wide-gaps-per-line.pdf": {
+      "sha256": "d2354898aa7698393f0df94f8ca65d2ac2921cf3128faa7493438174795b1b4e",
+      "bytes": 893
+    },
+    "l25-justified-wide-gaps-per-word.pdf": {
+      "sha256": "66dbb98ed85b4a58e6e8f0bc0eb7b95060089bf051e276eabaf301377946db52",
+      "bytes": 1003
+    }
+  }
+}

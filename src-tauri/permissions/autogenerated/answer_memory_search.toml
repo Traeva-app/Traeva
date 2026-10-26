@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-answer-memory-search"
+description = "Enables the answer_memory_search command without any pre-configured scope."
+commands.allow = ["answer_memory_search"]
+
+[[permission]]
+identifier = "deny-answer-memory-search"
+description = "Denies the answer_memory_search command without any pre-configured scope."
+commands.deny = ["answer_memory_search"]

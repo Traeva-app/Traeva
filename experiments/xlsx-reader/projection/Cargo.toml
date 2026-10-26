@@ -1,0 +1,17 @@
+[package]
+name = "traeva-xlsx-projection-candidate"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+publish = false
+
+[workspace]
+
+[dependencies]
+traeva-xlsx-experiment = { path = ".." }
+traeva-core = { path = "../../../crates/traeva-core" }
+serde_json = "=1.0.151"
+sha2 = "=0.11.0"
+
+[dev-dependencies]
+zip = { version = "=8.6.0", default-features = false, features = ["deflate-flate2"] }

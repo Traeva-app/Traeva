@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-auto-memory"
+description = "Enables the get_auto_memory command without any pre-configured scope."
+commands.allow = ["get_auto_memory"]
+
+[[permission]]
+identifier = "deny-get-auto-memory"
+description = "Denies the get_auto_memory command without any pre-configured scope."
+commands.deny = ["get_auto_memory"]

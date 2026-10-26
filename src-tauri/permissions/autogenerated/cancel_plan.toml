@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-cancel-plan"
+description = "Enables the cancel_plan command without any pre-configured scope."
+commands.allow = ["cancel_plan"]
+
+[[permission]]
+identifier = "deny-cancel-plan"
+description = "Denies the cancel_plan command without any pre-configured scope."
+commands.deny = ["cancel_plan"]

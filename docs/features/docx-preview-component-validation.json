@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "issue": 66,
+  "kind": "developer component validation; independent R1 review pending",
+  "recorded_at_utc": "2026-10-11T06:51:36.950534+00:00",
+  "base_commit": "65df8c9b80f6624e486a16d22b0905a2315ef373",
+  "implementation_commit": "7558f3b01ba6ad317383a9251cab66329a42dda0",
+  "tested_tree_commit": "3c3ac44134174e8b6d8edc33077f5a182d847102",
+  "source_sha256": {
+    "src/features/docx/DocxSnapshotPreview.browser.test.ts": "3001e241946d8a98f4f2937e93406bb687f5e1fbb6653e9fda078c1948da90b2",
+    "src/features/docx/DocxSnapshotPreview.css": "053dae36b7e4b58b07408a605fe23b259f6cf3725676ec1b9534d4b7a2b76288",
+    "src/features/docx/DocxSnapshotPreview.tsx": "f675c5c1e5a07672596307d29e58e70a1d2891e3929d0cd71391769b12a75c4f",
+    "src/features/docx/preview.test.ts": "f2d8bd35a13bfdff01e6a5d80e74d65388f103f1cac55aad098b4d679b514c24",
+    "src/features/docx/preview.ts": "c0616ed85d44c1229e3d3eeca559b6c1ef09dd1023b52754b92a53fe76ea37ba"
+  },
+  "environment": {
+    "macos": "27.0.1",
+    "arch": "arm64",
+    "node": "24.20.0",
+    "npm": "11.19.0",
+    "rustc": "1.98.1",
+    "chrome": "155.0.8059.39"
+  },
+  "inputs": {
+    "kind": "synthetic component-facing SnapshotRef and text only; no DOCX bytes or real Word input",
+    "metadata_hashes": "a and b repeated 64 times are explicit stub metadata, not verified document hashes",
+    "generator_sha256": "3001e241946d8a98f4f2937e93406bb687f5e1fbb6653e9fda078c1948da90b2"
+  },
+  "checks": {
+    "core": {
+      "passed": 791,
+      "failed": 0,
+      "ignored": 10,
+      "result": "PASS",
+      "log": "core-final.log"
+    },
+    "frontend": {
+      "passed": 114,
+      "failed": 0,
+      "skipped": 1,
+      "skip_reason": "opt-in browser suite run separately",
+      "result": "PASS",
+      "log": "frontend.log"
+    },
+    "browser": {
+      "scenarios": 11,
+      "node_test_passed_including_parent": 12,
+      "failed": 0,
+      "skipped": 0,
+      "result": "PASS",
+      "log": "browser-strict-final.log",
+      "injected_api": true
+    },
+    "fmt": {
+      "result": "PASS",
+      "log": "fmt.log"
+    },
+    "clippy": {
+      "result": "PASS",
+      "log": "clippy.log"
+    },
+    "build": {
+      "result": "PASS",
+      "log": "build.log"
+    },
+    "page_external_requests": 0,
+    "console_or_page_errors": 0,
+    "document_popups_or_dialogs": 0,
+    "keyboard": "PASS: details Enter, retry Enter/click, Tab to body and visible focus",
+    "themes_and_widths": "PASS: light/dark at 320/960 px; no horizontal overflow; text contrast >=4.5",
+    "observed_million_scalar_delivery_and_render_ms": 324,
+    "performance_guarantee": false
+  },
+  "failures_retained": [
+    {
+      "kind": "environment",
+      "result": "FAIL then permitted isolated browser launch PASS",
+      "detail": "sandbox blocked headless Chrome launch; Chromium sandbox remains enabled; no macOS protection changed"
+    },
+    {
+      "kind": "environment",
+      "result": "FAIL",
+      "log": "core.log",
+      "passed": 606,
+      "failed": 82,
+      "ignored": 4,
+      "detail": "all 82 failure blocks contain PermissionDenied at loopback TestServer bind; no product code change; core-final.log passes"
+    },
+    {
+      "kind": "product",
+      "result": "FAIL then fixed PASS",
+      "log": "browser-api-replay-before-fix.log",
+      "node_passed": 9,
+      "node_failed_including_parent": 2,
+      "detail": "API A -> B -> A revived old result while loading; remount by API generation fixes it; first FAIL was uncommitted development state"
+    }
+  ],
+  "scope": {
+    "shared_files_modified": [],
+    "default_reader_changed": false,
+    "ipc_registered": false,
+    "memory_entry_added": false,
+    "real_word_launched": false,
+    "real_model_calls": 0,
+    "docx_word_open_whitelist_changed": false,
+    "full_desktop_ui_slot_used": false,
+    "default_app_data_exists_at_end": false
+  },
+  "deferred": [
+    "A shared DTO/Core export/bounded local IPC/permissions",
+    "B Memory page entry and stable adapter",
+    "R1 exact-head independent component review",
+    "real immutable Snapshot -> IPC -> component integration",
+    "packaged desktop UI",
+    "10/13 student Go/No-Go"
+  ],
+  "conclusions": {
+    "component": "conditional Go for integration and independent review",
+    "formal_historical_word_open": "No-Go retained",
+    "word_memory_or_cloud_enabled": false
+  },
+  "raw_log_sha256": {
+    "browser-api-replay-before-fix.log": "367f64245e885f433c8416fb55250f4c1bd2315c7667877acafa6aa462caeb7c",
+    "browser-final.log": "0cfbd3790656fec1cdcc93ed9eaa3245ab71de2cbc4d0622af8c14f5e4e78e44",
+    "browser-initial.log": "9c10712eb640650e431a2062870ecf6060548fc1063ed3023f034b946480a603",
+    "browser-strict-final.log": "43bc162e394534e5dd1325cf38729ae782687ff3b3453ff426cfe54d8bd10f8a",
+    "build.log": "ba3903310c0c92e41730f85a555c10a0a218106084b7d4033d5ab75c5b834298",
+    "clippy.log": "31636a9cd82b5f48dae7ccccfc26092b681b356a393f85ade36eb4611bed3ae0",
+    "core-final.log": "08b6235bceb5d36c225d77fe7d0377c9cbc9660dd0160b954c6a3ba80f68833f",
+    "core.log": "4b062d1cf37e836fb563916cde5a42bdad4388deacb7bf2915aa06c4ae9867f0",
+    "fmt.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "frontend.log": "2c840fd8497a296a73248dec24a3f42b940f0d1b2f1bd90b40f21007ff413c08"
+  },
+  "screenshot_sha256": {
+    "dark-320.png": "c066f414a1794cf24cb448438adde32c9fd3e7c838f822a4d0bd40bb930bd6db",
+    "dark-960.png": "44e8cdab0603d4ce21106830d29efc07b931c7482b91aba0e07e9523b843ec93",
+    "light-320.png": "018e2b118362162a2c20d7c2f24cb7fad2f5d7697a06da68e669d05d82236f60",
+    "light-960.png": "e2f27ba0e56cf97b52486ee4e2adc8129a6ddfc5763de3e7532519d0d10c036a"
+  }
+}

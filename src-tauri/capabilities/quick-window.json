@@ -1,0 +1,19 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "quick-window",
+  "description": "Quick search (#208): the small search window the pet opens may use Find (setup, start, read, cancel, show in Finder, open), change its own height, hide itself and show the main window on Find. Nothing else: no agreeing to send (that stays in the main window), no other Traeva command, no event listening, no plugin.",
+  "windows": [
+    "quick"
+  ],
+  "permissions": [
+    "allow-get-find-setup",
+    "allow-start-find",
+    "allow-get-find",
+    "allow-cancel-find",
+    "allow-reveal-find-result",
+    "allow-open-find-result",
+    "allow-resize-quick-search",
+    "allow-hide-quick-search",
+    "allow-show-main-window"
+  ]
+}

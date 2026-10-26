@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-choose-memory-export"
+description = "Enables the choose_memory_export command without any pre-configured scope."
+commands.allow = ["choose_memory_export"]
+
+[[permission]]
+identifier = "deny-choose-memory-export"
+description = "Denies the choose_memory_export command without any pre-configured scope."
+commands.deny = ["choose_memory_export"]

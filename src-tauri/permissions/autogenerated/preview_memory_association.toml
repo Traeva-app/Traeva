@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-memory-association"
+description = "Enables the preview_memory_association command without any pre-configured scope."
+commands.allow = ["preview_memory_association"]
+
+[[permission]]
+identifier = "deny-preview-memory-association"
+description = "Denies the preview_memory_association command without any pre-configured scope."
+commands.deny = ["preview_memory_association"]

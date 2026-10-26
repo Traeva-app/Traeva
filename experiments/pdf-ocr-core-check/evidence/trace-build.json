@@ -1,0 +1,6 @@
+{
+  "source_head": "670644a768e6abb04574ba468839ce75e4f9626f",
+  "variant_source_sha256": "02a398535924f1a5486048dcfa2421e71fb7e501cb5ade3aeeecaebed913597a",
+  "binary_sha256": "c142db2d0dfaf69395aa84c49dffcc92d6e5e9ac5a8a44d010b2d2201ea4663b",
+  "note": "Uncommitted strict interface changes included; diagnostic only; formal vision and manifest restored."
+}

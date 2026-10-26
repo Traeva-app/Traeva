@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-get-action"
+description = "Enables the get_action command without any pre-configured scope."
+commands.allow = ["get_action"]
+
+[[permission]]
+identifier = "deny-get-action"
+description = "Denies the get_action command without any pre-configured scope."
+commands.deny = ["get_action"]

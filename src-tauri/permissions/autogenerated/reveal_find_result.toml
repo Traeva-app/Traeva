@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-reveal-find-result"
+description = "Enables the reveal_find_result command without any pre-configured scope."
+commands.allow = ["reveal_find_result"]
+
+[[permission]]
+identifier = "deny-reveal-find-result"
+description = "Denies the reveal_find_result command without any pre-configured scope."
+commands.deny = ["reveal_find_result"]

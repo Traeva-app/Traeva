@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+ xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+ xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+ xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
+ xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"
+ xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"
+ office:version="1.3" office:mimetype="application/vnd.oasis.opendocument.text">
+ <office:font-face-decls>
+  <style:font-face style:name="Liberation Serif" svg:font-family="'Liberation Serif'"/>
+  <style:font-face style:name="WenQuanYi Zen Hei" svg:font-family="'WenQuanYi Zen Hei'"/>
+  <style:font-face style:name="DejaVu Sans" svg:font-family="'DejaVu Sans'"/>
+ </office:font-face-decls>
+ <office:styles>
+  <style:default-style style:family="paragraph">
+   <style:text-properties style:font-name="Liberation Serif" fo:font-size="12pt"
+    style:font-name-asian="WenQuanYi Zen Hei" style:font-size-asian="12pt"/>
+  </style:default-style>
+ </office:styles>
+ <office:automatic-styles>
+  <style:style style:name="Title" style:family="paragraph"><style:text-properties fo:font-size="18pt" fo:font-weight="bold"/></style:style>
+  <style:style style:name="Math" style:family="paragraph"><style:text-properties style:font-name="DejaVu Sans"/></style:style>
+  <style:style style:name="PageBreak" style:family="paragraph"><style:paragraph-properties fo:break-before="page"/></style:style>
+  <style:style style:name="ColumnBreak" style:family="paragraph"><style:paragraph-properties fo:break-before="column"/></style:style>
+  <style:style style:name="Rotated" style:family="text"><style:text-properties style:text-rotation-angle="90"/></style:style>
+  <style:style style:name="Columns" style:family="section"><style:section-properties><style:columns fo:column-count="2" fo:column-gap="0.5in"/></style:section-properties></style:style>
+  <style:style style:name="Table" style:family="table"><style:table-properties style:width="6in" table:align="left"/></style:style>
+  <style:style style:name="Cell" style:family="table-cell"><style:table-cell-properties fo:border="0.5pt solid #000000" fo:padding="0.05in"/></style:style>
+ </office:automatic-styles>
+ <office:body><office:text>
+  <text:p text:style-name="Title">Traeva export test</text:p>
+  <text:p>English paragraph for the reader.</text:p>
+  <text:p>这是中文段落，用于版本记忆测试。</text:p>
+  <text:p>Mixed 中文 and English text.</text:p>
+  <table:table table:name="Versions" table:style-name="Table">
+   <table:table-column table:number-columns-repeated="3"/>
+   <table:table-row><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>Name</text:p></table:table-cell><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>Version</text:p></table:table-cell><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>Size</text:p></table:table-cell></table:table-row><table:table-row><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>alpha</text:p></table:table-cell><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>v1.0</text:p></table:table-cell><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>10 KB</text:p></table:table-cell></table:table-row><table:table-row><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>beta</text:p></table:table-cell><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>v2.0</text:p></table:table-cell><table:table-cell table:style-name="Cell" office:value-type="string"><text:p>12 KB</text:p></table:table-cell></table:table-row>
+  </table:table>
+  <text:p><draw:frame draw:name="Picture" text:anchor-type="as-char" svg:width="2in" svg:height="1.25in"><draw:image><office:binary-data>iVBORw0KGgoAAAANSUhEUgAAAKAAAABkCAAAAAAk3WRTAAAAKklEQVR4nO3BAQ0AAAgDIPX9O1vDOaArtw0AAAAAAAAAAAAAAAAAAABfLMOBfmVqUOj8AAAAAElFTkSuQmCC</office:binary-data></draw:image></draw:frame></text:p>
+  <text:p text:style-name="Math">Sum ∑ x ≤ ∞ and √2</text:p>
+  <text:p text:style-name="PageBreak">Second page heading</text:p>
+  <text:section text:style-name="Columns" text:name="Columns">
+   <text:p>Column one first line.</text:p>
+   <text:p>Column one second line.</text:p>
+   <text:p text:style-name="ColumnBreak">Column two first line.</text:p>
+   <text:p>Column two second line.</text:p>
+  </text:section>
+  <text:p>Before <text:span text:style-name="Rotated">Rotated label</text:span> after</text:p>
+ </office:text></office:body>
+</office:document>

@@ -1,0 +1,99 @@
+{
+  "found": 16,
+  "leaf_files": 618,
+  "unchanged_leaf_files": 607,
+  "changed_members": [
+    {
+      "member": "review-fixes-evidence.zip!chrome/run_chrome.cjs",
+      "found": 1,
+      "original_sha256": "6d8663aba01e81ff08c9fb742e413736249a5d06aaec3f4fbb2b5e820db72955",
+      "rewritten_sha256": "aaade667b3c882685e576b40c61202d140b72d5ae928ae40d582c949a3ba32d7"
+    },
+    {
+      "member": "review-fixes-evidence.zip!source/run_chrome.cjs",
+      "found": 1,
+      "original_sha256": "6d8663aba01e81ff08c9fb742e413736249a5d06aaec3f4fbb2b5e820db72955",
+      "rewritten_sha256": "aaade667b3c882685e576b40c61202d140b72d5ae928ae40d582c949a3ba32d7"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/chrome-final/evidence/run_chrome.cjs",
+      "found": 1,
+      "original_sha256": "d737ecc6723b913b39d357d601b0a2ab1dcb77f7b8473ccc7e559651380ae90d",
+      "rewritten_sha256": "2cde893248c8ab915b88a14a20e200347fe92b564efb33f675ff736efdec3390"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/first-chrome-setup-error.json",
+      "found": 1,
+      "original_sha256": "a0d170bea20bd4d3f288b6befce05e2f893d084dda7fde44d92fa30b626ad2c8",
+      "rewritten_sha256": "5112f66000ee9026544b6dd658c1bd296c009c6bddbc7cbcf2a5ffd3b642e07b"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip!evidence/chrome-final-MhuZly/run.cjs",
+      "found": 1,
+      "original_sha256": "07c6925a5c08f0c0261a6bc70b0ae0d4aebd9d25dc6c14a14a8259ed7ea9d855",
+      "rewritten_sha256": "11c5b631440c2fa397308b5b83ffdea4cd6f77262907024ff86ebc515807b954"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip!evidence/direct-adversarial/environment.json",
+      "found": 3,
+      "original_sha256": "42ee0bbdc9003cec6f1ccafb6162cd5b80a401e82bf293c9e7d51c78a6c8a6c5",
+      "rewritten_sha256": "9e0635174de07e69bf3230064652025e39cc671762357cb69386b5c3f53bb6d6"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip!evidence/direct-adversarial/results.json",
+      "found": 3,
+      "original_sha256": "3ce220d729b32638051d15eac2dd09cd160c7a347ba6a7997a907023a83d40da",
+      "rewritten_sha256": "c63acd94a4ec3b96a72e4c190abf566edff75029890130c8a9d56f9666ffeb8c"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip!evidence/reviews/chrome-receiver-fault-injection-results.json",
+      "found": 1,
+      "original_sha256": "c7e5f23e9d3e771a348b5c38bd5317fcbe5508ed7f4ee2b9b0270431e7f31af7",
+      "rewritten_sha256": "8fb4e799418e776775af38acf98690a18f948f24b701c20eb6eb244a26adb35e"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip!evidence/reviews/chrome-traeva-c-extension-fetch-K8EXie-review.json",
+      "found": 2,
+      "original_sha256": "a9de674e3190160715310225ed4d8a66427764a99cc8b63388c2a79e15944fd7",
+      "rewritten_sha256": "31d9fcbdfce060e369c5d7b326b5969e7d932c4e845762edce55d82b31f4cb7b"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip!evidence/reviews/direct-adversarial-20261010-readback.json",
+      "found": 1,
+      "original_sha256": "e1124e6cb6a881e40e69bda7db12726c3edfb1e5268aee2aaaeb562b04c357e9",
+      "rewritten_sha256": "d0c0dc9a0b5d6abfdd10e714e9a15f04d2d2c20a8ee9886d0fc53348671f80d0"
+    },
+    {
+      "member": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip!evidence/reviews/direct-run-d-independent-review.json",
+      "found": 1,
+      "original_sha256": "bb9bcbac8dea9da4c6aef13320fb31616be25acafe7a0aefd4f689d7e974d502",
+      "rewritten_sha256": "244ff90886b25435771c4e36f1fd436a1e413e86f1b6fc4a2beb612a5ea84f1b"
+    }
+  ],
+  "archives": [
+    {
+      "archive": "review-fixes-evidence.zip!r-original-evidence.zip",
+      "original_sha256": "d1ff9c355755859bf35f404caa1fbd6bab337e3a6639a469d2a6d9d19b915ca3",
+      "rewritten_sha256": "d1ff9c355755859bf35f404caa1fbd6bab337e3a6639a469d2a6d9d19b915ca3"
+    },
+    {
+      "archive": "review-fixes-evidence.zip",
+      "original_sha256": "9a15451e9734ebe52540dd0f33556329a50ece5c05370132535bde2e619990ff",
+      "rewritten_sha256": "66c47f168b50c9cca23fba7565e2a58c4dc30d05e5835f424f326574d829a3c8"
+    },
+    {
+      "archive": "source-verified-evidence.zip!evidence/legacy-comparison-evidence.zip",
+      "original_sha256": "b44db618a174f7c07c11be32a22c5b2702dae5111e539f394cd2bb8a84d555fd",
+      "rewritten_sha256": "13363fbdaeb4b6cdc81603e3bcffb7be86f288f771ff7dc3092311da6bba42d9"
+    },
+    {
+      "archive": "source-verified-evidence.zip",
+      "original_sha256": "043334e6dfd6fa944c1c72d30eae5c7fa259eaec3f71cdfbf42f9f67acd0c2d0",
+      "rewritten_sha256": "76faabc7cbbf0629beff3dea44603b290f18847996425dce6a4c77b7a96a9210"
+    }
+  ],
+  "baseline_commit": "2e90cf82e2be3b8bd14e50b9f2e1fe968e47bbf7",
+  "remaining": 0,
+  "reason": "因含本机路径而改写",
+  "evidence_statuses": "历史状态原样保留；未重新运行实验"
+}

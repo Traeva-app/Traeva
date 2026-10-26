@@ -1,0 +1,7 @@
+⟦sheet 1 · id 1 · part "xl/worksheets/sheet1.xml" · name "Data"⟧
+⟦B2 · literal · number⟧
+7
+⟦C2 · formula⟧
+B2*2
+⟦C2 · cache · saved by the file, not verified · number⟧
+14

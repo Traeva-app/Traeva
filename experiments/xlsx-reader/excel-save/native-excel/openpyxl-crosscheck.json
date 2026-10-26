@@ -1,0 +1,62 @@
+{
+  "tool": "openpyxl 3.1.5",
+  "mode": "read-only use, no save or formula evaluation",
+  "source": "metadata-sanitized derivatives; read-only supplementary check, no Office execution",
+  "at_utc": "2026-10-12T05:47:28.839634+00:00",
+  "records": [
+    {
+      "stage": "baseline",
+      "sheet_order": [
+        "F Data",
+        "F 中文"
+      ],
+      "input": 5,
+      "formula": "=B2*2",
+      "cache": 10,
+      "boolean_true": true,
+      "boolean_false": false,
+      "chinese": "你好 Excel",
+      "merged_ranges": [
+        "A6:C6"
+      ],
+      "sha256_before": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650",
+      "sha256_after": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650"
+    },
+    {
+      "stage": "input_edit",
+      "sheet_order": [
+        "F Data",
+        "F 中文"
+      ],
+      "input": 7,
+      "formula": "=B2*2",
+      "cache": 14,
+      "boolean_true": true,
+      "boolean_false": false,
+      "chinese": "你好 Excel",
+      "merged_ranges": [
+        "A6:C6"
+      ],
+      "sha256_before": "5eb4915a4f6622e22bf8890d7fa51725143f6311d63adbd18dea8192299cefc4",
+      "sha256_after": "5eb4915a4f6622e22bf8890d7fa51725143f6311d63adbd18dea8192299cefc4"
+    },
+    {
+      "stage": "formula_edit",
+      "sheet_order": [
+        "F Data",
+        "F 中文"
+      ],
+      "input": 7,
+      "formula": "=B2*3",
+      "cache": 21,
+      "boolean_true": true,
+      "boolean_false": false,
+      "chinese": "你好 Excel",
+      "merged_ranges": [
+        "A6:C6"
+      ],
+      "sha256_before": "2acf204755f8ba50625c8c96acc60c1fb4c3f3c3084f84f62a452b54941abed0",
+      "sha256_after": "2acf204755f8ba50625c8c96acc60c1fb4c3f3c3084f84f62a452b54941abed0"
+    }
+  ]
+}

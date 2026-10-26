@@ -1,0 +1,48 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 16 tests
+test formula_followers_are_not_expanded_and_actual_metadata_is_reported ... ok
+test labels_cannot_be_forged_by_multiline_source_and_names_are_json ... ok
+test missing_blank_and_typed_caches_remain_distinct ... ok
+test literal_formula_and_cache_have_exact_separate_lines ... ok
+test omissions_are_actual_and_do_not_copy_source_into_notes ... ok
+test all_hidden_is_not_an_empty_partial_or_fake_source ... ok
+test number_text_boolean_and_empty_literal_are_typed ... ok
+test saved_cache_is_not_recomputed_from_the_formula ... ok
+test corrupt_unsupported_and_over_limit_have_no_body ... ok
+test declaration_ordinals_survive_filtering_and_name_edits_are_observable ... ok
+test cache_only_change_does_not_change_formula_source ... ok
+test verified_snapshot_binding_retains_nine_fields_and_rejects_mismatches ... ok
+test only_structure_never_becomes_a_successful_body ... ok
+test reordered_sheets_and_moved_addresses_are_observable_without_row_identity ... ok
+test hidden_contents_are_filtered_before_memory_projection ... ok
+test scalar_ceiling_counts_labels_and_reports_the_remainder ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+
+
+running 5 tests
+test escaped_source_is_preserved_and_never_becomes_known_or_unknown_structure ... ok
+test four_reader_gate_never_reclassifies_txt_md_or_docx ... ok
+test candidate_sheet_label_is_recognized_by_the_real_helper ... ok
+test preview_visibility_and_cache_qualifier_have_actual_typed_recognition ... ok
+test actual_name_helper_roundtrips_every_delimiter_and_non_bmp ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Compiling traeva-xlsx-experiment v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-evidence-privacy/experiments/xlsx-reader)
+   Compiling traeva-xlsx-projection-candidate v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-evidence-privacy/experiments/xlsx-reader/projection)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.23s
+     Running unittests src/lib.rs (/private/tmp/f-xlsx-home-path-redaction-build/debug/deps/traeva_xlsx_projection_candidate-394044248092d266)
+     Running tests/projection.rs (/private/tmp/f-xlsx-home-path-redaction-build/debug/deps/projection-87921be5bfbb0652)
+     Running tests/shared_helper.rs (/private/tmp/f-xlsx-home-path-redaction-build/debug/deps/shared_helper-36afa6f5bd4b06ac)
+   Doc-tests traeva_xlsx_projection_candidate

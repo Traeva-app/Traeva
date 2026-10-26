@@ -1,0 +1,181 @@
+/* The app shell (App.tsx, Sidebar.tsx): the sidebar, the line that resizes
+ * it, and the page beside it. The page scrolls with the window; the sidebar
+ * and the line stay in place. */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-sidebar {
+  position: sticky;
+  top: 0;
+  flex: none;
+  align-self: flex-start;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--sidebar);
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px 8px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.app-brand img {
+  display: block;
+  flex: none;
+}
+
+.app-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 34px;
+  padding: 6px 10px;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+  color: var(--text);
+  background: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.app-nav-item:hover {
+  background: var(--sidebar-hover);
+}
+
+.app-nav-item[aria-current="page"] {
+  font-weight: 600;
+  color: var(--accent-text);
+  background: var(--accent-soft);
+}
+
+.app-nav-icon {
+  position: relative;
+  display: flex;
+  flex: none;
+}
+
+.app-nav-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* How many things in Organize wait for the user: an amber pill, as the
+   "Needs you" groups and the pet's bubble (#37). */
+.app-nav-count {
+  min-width: 18px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--on-attention);
+  background: var(--attention);
+  border-radius: 9px;
+}
+
+/* Settings and the desktop pet's switch, at the bottom of the sidebar. */
+.app-nav-settings {
+  margin-top: auto;
+}
+
+.app-pet-state {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.app-pet-switch[aria-checked="false"] .app-nav-icon,
+.app-pet-switch[aria-checked="false"] .app-nav-label {
+  opacity: 0.6;
+}
+
+/* The rail: the pet on top, icons with small labels under them. */
+.app-sidebar-rail {
+  padding: 14px 6px;
+}
+
+.app-sidebar-rail .app-brand {
+  justify-content: center;
+  padding: 2px 0 16px;
+}
+
+.app-sidebar-rail .app-nav-item {
+  flex-direction: column;
+  gap: 3px;
+  padding: 7px 0 6px;
+  text-align: center;
+}
+
+.app-sidebar-rail .app-nav-label {
+  flex: none;
+  max-width: 100%;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+/* Something waits for the user (rail only; the full sidebar shows a count). */
+.app-nav-dot {
+  position: absolute;
+  top: -1px;
+  right: -3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--attention);
+  box-shadow: 0 0 0 2px var(--sidebar);
+}
+
+/* The line between the sidebar and the page. It is 1 px wide; the area
+ * that takes the drag is 9 px. */
+.app-splitter {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  flex: none;
+  align-self: flex-start;
+  width: 1px;
+  height: 100vh;
+  background: var(--border);
+  cursor: col-resize;
+  touch-action: none;
+}
+
+.app-splitter::before {
+  content: "";
+  position: absolute;
+  inset: 0 -4px;
+}
+
+.app-splitter:hover,
+.app-splitter-dragging {
+  background: var(--control-border);
+  box-shadow: 0 0 0 1px var(--control-border);
+}
+
+.app-splitter:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 0;
+}

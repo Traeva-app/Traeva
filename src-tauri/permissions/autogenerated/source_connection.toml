@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-source-connection"
+description = "Enables the source_connection command without any pre-configured scope."
+commands.allow = ["source_connection"]
+
+[[permission]]
+identifier = "deny-source-connection"
+description = "Denies the source_connection command without any pre-configured scope."
+commands.deny = ["source_connection"]

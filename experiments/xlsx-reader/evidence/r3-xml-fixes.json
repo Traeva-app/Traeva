@@ -1,0 +1,465 @@
+{
+  "recorded_at_utc": "2026-10-11T20:33:16.933684+00:00",
+  "scope": "F author reproduction and validation; R3 independent new-head acceptance pending",
+  "review_url": "https://github.com/P30g53/Traeva/pull/134#issuecomment-6113387377",
+  "before_head": "3b1ac061ac3bc9e277ab4c7da6faf6dc90b747c1",
+  "before_binary_sha256": "1d97ca6189dded50cffdc2648d58a27a530e2b0c092cf5ab434b2259bfa50cb4",
+  "after_binary_sha256": "9590a2be69b3a5bbc176d2ffd6271fec8f3c5508b2b44423447ca4a701073241",
+  "tested_source_sha256": {
+    ".gitignore": "647e429f626b26c092b12a0a957bcf2c41f6a9b562cb2f490ddf61220f0491e4",
+    "Cargo.toml": "db7915996391d9a4c1fb68f17c1f482435691f14bda51d1a07ab6f1875da0745",
+    "README.md": "e2c8f843ed5f2184af9e768c04e3d2f587a4cf162e35d83dc1bea3a578bc6476",
+    "RESEARCH.md": "256abaca251f02fb00a5355f560671587e6427f7987843adc24fe871e5c2dfda",
+    "audit_dependencies.py": "3c53065f005267e86367378a32fb2376abddef339d80a662834f4df3973477eb",
+    "fixtures/generate.py": "dd97219d894a21c2fb10f5366b1f498bd2b39e12c434009df8834f497618392b",
+    "src/lib.rs": "9a283cf003555591601ede3f50b9c3d622e26c1cd9a88ac8d0969fbba6254026",
+    "src/main.rs": "8df6d2eb8a1dfaa3409dc7ba99bfbc8897933cc4dbf2d8c804dbf957a4972288",
+    "src/package.rs": "b74a46c06294c03025b34d315ed54eb161ddd87d0ee368b4caa0252b1006c7a3",
+    "src/xml.rs": "a229a41a8a86dc36d0d9c31692d82e157699cb86c856d2272e76cf2232930777",
+    "tests/reader.rs": "ad6152bc02718d0eefbdae1355b503d65887f45f50d3795681d984906d6509d7",
+    "validate.py": "2cbccf2b264c912faf3997391b818315ef61f2f3bfa817f7096694a77d2dbc28",
+    "verify_review_fixtures.py": "56ee8f0c385f183ad51d43634e4d43441c3e11f285dc152f8b7776168cde9ace"
+  },
+  "original_five_failures_preserved": true,
+  "cases": [
+    {
+      "fixture": "attribute-digit-name.xlsx",
+      "sha256": "f46d1f3ed42cfee7a6097824cba9300ddef68840d7b7a938497fc7674223e3ac",
+      "before": {
+        "fixture": "attribute-digit-name.xlsx",
+        "sha256": "f46d1f3ed42cfee7a6097824cba9300ddef68840d7b7a938497fc7674223e3ac",
+        "expected": "reject_without_workbook",
+        "returncode": 0,
+        "status": "complete_within_profile",
+        "has_workbook": true,
+        "result": "FAIL",
+        "output_sha256": "41b958465fc27fa102e8fe2f6c94b6071ac744aaf64649ee59a6361d56b46152"
+      },
+      "after": {
+        "fixture": "attribute-digit-name.xlsx",
+        "sha256": "f46d1f3ed42cfee7a6097824cba9300ddef68840d7b7a938497fc7674223e3ac",
+        "returncode": 1,
+        "error": {
+          "code": "invalid_xml_name",
+          "kind": "failed"
+        },
+        "has_workbook": false,
+        "input_unchanged": true,
+        "result": "PASS"
+      }
+    },
+    {
+      "fixture": "attribute-invalid-symbol.xlsx",
+      "sha256": "b1fc98fa9ba064cf84bf808304cad9fa50f08327dab3b21c05e0dcfdbfc0496f",
+      "before": {
+        "fixture": "attribute-invalid-symbol.xlsx",
+        "sha256": "b1fc98fa9ba064cf84bf808304cad9fa50f08327dab3b21c05e0dcfdbfc0496f",
+        "expected": "reject_without_workbook",
+        "returncode": 0,
+        "status": "complete_within_profile",
+        "has_workbook": true,
+        "result": "FAIL",
+        "output_sha256": "e8666f8b0a2ca77bdd5709be2b9163bcdd22d3c5839d8412c523b8a6c838ad58"
+      },
+      "after": {
+        "fixture": "attribute-invalid-symbol.xlsx",
+        "sha256": "b1fc98fa9ba064cf84bf808304cad9fa50f08327dab3b21c05e0dcfdbfc0496f",
+        "returncode": 1,
+        "error": {
+          "code": "invalid_xml_name",
+          "kind": "failed"
+        },
+        "has_workbook": false,
+        "input_unchanged": true,
+        "result": "PASS"
+      }
+    },
+    {
+      "fixture": "element-digit-name.xlsx",
+      "sha256": "1ced698cff9f396f3e9bc014d5080cb2c92ec68ceacff20fb4754b5ec9aa5f60",
+      "before": {
+        "fixture": "element-digit-name.xlsx",
+        "sha256": "1ced698cff9f396f3e9bc014d5080cb2c92ec68ceacff20fb4754b5ec9aa5f60",
+        "expected": "reject_without_workbook",
+        "returncode": 0,
+        "status": "partial",
+        "has_workbook": true,
+        "result": "FAIL",
+        "output_sha256": "609de31506f6955bb14fe793e926a4334e7a98ddcc8cbc381c3c8d89fd1ae41a"
+      },
+      "after": {
+        "fixture": "element-digit-name.xlsx",
+        "sha256": "1ced698cff9f396f3e9bc014d5080cb2c92ec68ceacff20fb4754b5ec9aa5f60",
+        "returncode": 1,
+        "error": {
+          "code": "invalid_xml_name",
+          "kind": "failed"
+        },
+        "has_workbook": false,
+        "input_unchanged": true,
+        "result": "PASS"
+      }
+    },
+    {
+      "fixture": "comment-double-hyphen.xlsx",
+      "sha256": "2ad347f9f190abe91ce72a58f26849b3fce63111b7f592ca763d5ca58ce650e3",
+      "before": {
+        "fixture": "comment-double-hyphen.xlsx",
+        "sha256": "2ad347f9f190abe91ce72a58f26849b3fce63111b7f592ca763d5ca58ce650e3",
+        "expected": "reject_without_workbook",
+        "returncode": 0,
+        "status": "complete_within_profile",
+        "has_workbook": true,
+        "result": "FAIL",
+        "output_sha256": "52ea7e371cc026e5d764cce343ee34572876f067bc17763b62c148fdae61757e"
+      },
+      "after": {
+        "fixture": "comment-double-hyphen.xlsx",
+        "sha256": "2ad347f9f190abe91ce72a58f26849b3fce63111b7f592ca763d5ca58ce650e3",
+        "returncode": 1,
+        "error": {
+          "code": "malformed_xml",
+          "kind": "failed"
+        },
+        "has_workbook": false,
+        "input_unchanged": true,
+        "result": "PASS"
+      }
+    },
+    {
+      "fixture": "text-cdata-close.xlsx",
+      "sha256": "b1365930a75927e820afe443f7e3e674684a35e0811dd95d050e9fa2c44931a6",
+      "before": {
+        "fixture": "text-cdata-close.xlsx",
+        "sha256": "b1365930a75927e820afe443f7e3e674684a35e0811dd95d050e9fa2c44931a6",
+        "expected": "reject_without_workbook",
+        "returncode": 0,
+        "status": "complete_within_profile",
+        "has_workbook": true,
+        "result": "FAIL",
+        "output_sha256": "230dbe81ed2ad596c8f5dcc221930fcfcd03507fa6ad92ee35b91932acb2e0e2"
+      },
+      "after": {
+        "fixture": "text-cdata-close.xlsx",
+        "sha256": "b1365930a75927e820afe443f7e3e674684a35e0811dd95d050e9fa2c44931a6",
+        "returncode": 1,
+        "error": {
+          "code": "invalid_xml_character_data",
+          "kind": "failed"
+        },
+        "has_workbook": false,
+        "input_unchanged": true,
+        "result": "PASS"
+      }
+    }
+  ],
+  "supplemental_author_outcome_replay": {
+    "scope": "22 R3 attempt2 fix-boundary acceptance/rejection outcomes only; no full semantic assertions or independent acceptance",
+    "results": [
+      {
+        "fixture": "attribute-digit-name.xlsx",
+        "sha256": "f46d1f3ed42cfee7a6097824cba9300ddef68840d7b7a938497fc7674223e3ac",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "invalid_xml_name",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "attribute-invalid-symbol.xlsx",
+        "sha256": "b1fc98fa9ba064cf84bf808304cad9fa50f08327dab3b21c05e0dcfdbfc0496f",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "invalid_xml_name",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "element-digit-name.xlsx",
+        "sha256": "1ced698cff9f396f3e9bc014d5080cb2c92ec68ceacff20fb4754b5ec9aa5f60",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "invalid_xml_name",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "comment-double-hyphen.xlsx",
+        "sha256": "2ad347f9f190abe91ce72a58f26849b3fce63111b7f592ca763d5ca58ce650e3",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "malformed_xml",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "text-cdata-close.xlsx",
+        "sha256": "b1365930a75927e820afe443f7e3e674684a35e0811dd95d050e9fa2c44931a6",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "invalid_xml_character_data",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "legal-unicode-attribute.xlsx",
+        "sha256": "01a5c8a50dd05eb64010b5e4f538637dbc2fb5264d72df3ea2bb1e8ee89b8617",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "legal-tab-newline-attributes.xlsx",
+        "sha256": "d9c8136de1d6c7f0a93e8badea809946516583fb1d5ad115d119f76b8fcc8806",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "legal-xml-declaration.xlsx",
+        "sha256": "a76a73c8b84b62b84d484f8384c0dd243d852517ba5e6d18f70795e8c38059f4",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "valid-descriptor-0-signed.xlsx",
+        "sha256": "7fc625a6a9df54d8b87e03caf8bf681aa57fb4b98848007cb8fee20039016f38",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "valid-descriptor-0-unsigned.xlsx",
+        "sha256": "576f881192b519e303fb5d4088a4a1b436f3ec14a847627ce0668a7553b5de71",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "valid-descriptor-8-signed.xlsx",
+        "sha256": "9e2439e367e2fc913e3496bdcc2cc8bb7f00e83c5c8dfeac2560aeb97ce280c8",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "valid-descriptor-8-unsigned.xlsx",
+        "sha256": "a79a20b483aa0061a54fd95c09b49f5f03c149889219ebe013f90099506dff50",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "bad-signed-descriptor.xlsx",
+        "sha256": "c81b1672f6cb1e9626dfb3b35e0856e50c2b4ce4405c1bbe5acb93ad86dbd73e",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "missing_or_invalid_zip_descriptor",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "bad-unsigned-descriptor.xlsx",
+        "sha256": "68d782f6120cc0e35dfadff8b3f0f5d34ee91957580a86e298bf233350fd27ff",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "missing_or_invalid_zip_descriptor",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "record-gap.xlsx",
+        "sha256": "ab27c2ce84d1cafcc2343b2da30619e714af3eb1368548def1c77a8da0d867ee",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "zip_overlap_prefix_or_unclaimed_bytes",
+          "kind": "unsupported"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "ordinary-comment.xlsx",
+        "sha256": "f9d5fe19ca44f19b07cd0e1db3d7bd41be556c58ed25310b3e2b14462448e69c",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "signature-in-comment.xlsx",
+        "sha256": "df2062e0ddf5adb45ce90a8ab7241f085c18c7e64cdafdf3d34c41fbd5cdde0c",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "ambiguous_zip_end_in_comment",
+          "kind": "unsupported"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "second-deflate-stream.xlsx",
+        "sha256": "4dff33b04fa844147adc7233f98edc00b0c0c28f1c757c80f8fc66e7cd4914e4",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "zip_deflate_trailing_bytes",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "underdeclared-expanded.xlsx",
+        "sha256": "ddb987459e1ab9cfd73d9c97a51db6b2aded913c864b70a5e4562340118f0f89",
+        "expected": "reject",
+        "returncode": 1,
+        "has_workbook": false,
+        "error": {
+          "code": "zip_declared_size_mismatch",
+          "kind": "failed"
+        },
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "multi-buffer-deflate.xlsx",
+        "sha256": "f1d2cc3de2f8736f273aa1a3e57600a5a0f08e27eab15d01b7a9e84a88b41aad",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "empty-member-0.xlsx",
+        "sha256": "dc9544d6c110575321118a6744f5f0fe7eba58e17c04a7fbda47ac350670f5ef",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      },
+      {
+        "fixture": "empty-member-8.xlsx",
+        "sha256": "8953cf60ff84c7bef0b79cce58c5154c8f7f500a969dc0896469d642be0a1361",
+        "expected": "accept",
+        "returncode": 0,
+        "has_workbook": true,
+        "error": null,
+        "input_unchanged": true,
+        "result": "PASS"
+      }
+    ]
+  },
+  "first_round_four_original_failures_rechecked": [
+    {
+      "fixture": "nested-eocd-absolute.xlsx",
+      "sha256": "a4cdec0c4881ee7e9fa2f55ff76c3ad42eeaea50f006b06d72f7d6f57f7adee5",
+      "returncode": 1,
+      "error": {
+        "code": "ambiguous_zip_end_in_comment",
+        "kind": "unsupported"
+      },
+      "has_workbook": false,
+      "input_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "fixture": "adjacent-attributes.xlsx",
+      "sha256": "efe4395fe3c6922e551c0ff98c4bd1ba186150e403cd1bd4c468a2e2866966e1",
+      "returncode": 1,
+      "error": {
+        "code": "missing_xml_attribute_separator",
+        "kind": "failed"
+      },
+      "has_workbook": false,
+      "input_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "fixture": "missing-descriptor.xlsx",
+      "sha256": "65c0309d67474e775c8a8e19f2ad59e5adb966b6bdb7cc40782564ef9d2da490",
+      "returncode": 1,
+      "error": {
+        "code": "missing_or_invalid_zip_descriptor",
+        "kind": "failed"
+      },
+      "has_workbook": false,
+      "input_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "fixture": "deflate-tail.xlsx",
+      "sha256": "abaf58c9579dee0288fd384f6f7efe4fd475b6896c9d3b2adf4bf1a7019d471c",
+      "returncode": 1,
+      "error": {
+        "code": "zip_deflate_trailing_bytes",
+        "kind": "failed"
+      },
+      "has_workbook": false,
+      "input_unchanged": true,
+      "result": "PASS"
+    }
+  ],
+  "test_windows": "none; all headless; future test windows must use secondary display"
+}

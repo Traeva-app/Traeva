@@ -1,0 +1,287 @@
+{
+ "frozen": "Written before the diagnostics existed; changes must state their basis.",
+ "reading_order": "drawing_order_unverified",
+ "left_out_codes": [
+  [
+   "^pages? [0-9, -]+: no text layer",
+   "image_page"
+  ],
+  [
+   "^images on ",
+   "images"
+  ],
+  [
+   "characters with no Unicode mapping on ",
+   "unmapped_characters"
+  ],
+  [
+   "^text in fonts this reader could not decode on ",
+   "undecoded_fonts"
+  ],
+  [
+   "^ruled lines forming a table or chart grid on ",
+   "table_grid"
+  ],
+  [
+   "^vector drawings ",
+   "drawings"
+  ],
+  [
+   "^mathematical notation on ",
+   "math_layout"
+  ],
+  [
+   "^annotations on ",
+   "annotations"
+  ],
+  [
+   "^form fields on ",
+   "form_fields"
+  ],
+  [
+   "^a form with \\d+ fields",
+   "form_fields"
+  ],
+  [
+   "^an XFA form",
+   "xfa_form"
+  ],
+  [
+   "^JavaScript",
+   "javascript"
+  ],
+  [
+   "^embedded files",
+   "embedded_files"
+  ],
+  [
+   "^content in optional layers",
+   "hidden_layers"
+  ],
+  [
+   "^content stored in external files",
+   "external_content"
+  ],
+  [
+   "characters drawn outside the visible page area on ",
+   "outside_page"
+  ],
+  [
+   "^the last \\d+ characters of the text",
+   "truncated_text"
+  ]
+ ],
+ "stop_codes": {
+  "p07-blank.pdf": "no_text",
+  "p08-scanned-images.pdf": "no_text_layer",
+  "p17-glyph-budget.pdf": "resource_limit",
+  "p18-draw-budget.pdf": "resource_limit",
+  "a01-flate-bomb.pdf": "resource_limit",
+  "a02-nested-flate.pdf": "resource_limit",
+  "a03-image-label-bomb.pdf": "resource_limit",
+  "a04-decoded-total.pdf": "resource_limit",
+  "a05-too-many-pages.pdf": "resource_limit",
+  "a06-declared-objects.pdf": "resource_limit",
+  "a07a-deep-stream-dict.pdf": "unsupported_structure",
+  "a07b-deep-page-dict.pdf": "damaged",
+  "a09-form-fanout.pdf": "resource_limit",
+  "a10-lzw.pdf": "unsupported_feature",
+  "a11-codec-on-content.pdf": "unsupported_feature",
+  "a12-indirect-filter.pdf": "unsupported_feature",
+  "a13-unknown-filter.pdf": "unsupported_feature",
+  "a14-run-length-bomb.pdf": "resource_limit",
+  "a15-stream-count.pdf": "resource_limit",
+  "a16-big-input.pdf": "resource_limit",
+  "a17-fake-endstream.pdf": "resource_limit",
+  "a18-encrypted-owner-only.pdf": "encrypted",
+  "a19-encrypted-user-password.pdf": "encrypted",
+  "a20-escaped-encrypt.pdf": "encrypted",
+  "c01-truncated-half.pdf": "truncated",
+  "c02-truncated-tail.pdf": "truncated",
+  "c03-wrong-startxref.pdf": "damaged",
+  "c04-damaged-flate.pdf": "damaged",
+  "c05-not-a-pdf.pdf": "not_a_pdf",
+  "c06-garbage.pdf": "truncated",
+  "c07-page-count.pdf": "damaged",
+  "c08-empty.pdf": "not_a_pdf",
+  "e03a-libreoffice-open-password.pdf": "encrypted",
+  "e03b-libreoffice-permissions-only.pdf": "encrypted",
+  "d01-nested-form-string-bomb.pdf": "resource_limit",
+  "d02-comment-before-stream-bomb.pdf": "resource_limit",
+  "d13-contents-missing-member.pdf": "damaged",
+  "d14-contents-string-member.pdf": "damaged",
+  "d15-contents-dangling.pdf": "damaged",
+  "d17-flate-wrong-adler.pdf": "damaged",
+  "d18-flate-missing-adler.pdf": "damaged",
+  "d19-flate-no-zlib-header.pdf": "damaged",
+  "d20-form-wrong-adler.pdf": "damaged",
+  "d23-xref-stream-escaped-encrypt.pdf": "encrypted",
+  "f10-objstm-lzw-listing-in-text.pdf": "unsupported_feature",
+  "f11-listing-and-real-bomb.pdf": "resource_limit",
+  "f12-damaged-part-and-listing.pdf": "damaged",
+  "f13-real-unknown-filter.pdf": "unsupported_feature",
+  "f14-bomb-listing-in-image-data.pdf": "resource_limit",
+  "f15-contents-direct-null.pdf": "no_text",
+  "f16-contents-indirect-null.pdf": "no_text",
+  "f18-text-and-missing-reference-page.pdf": "damaged",
+  "f19-contents-number.pdf": "damaged",
+  "f20-contents-dictionary.pdf": "damaged",
+  "f21-contents-array-null-member.pdf": "damaged",
+  "f22-contents-null-in-object-stream.pdf": "no_text",
+  "g03-contents-raw-over-limit.pdf": "resource_limit",
+  "g04-contents-raw-17mib-early-endstream.pdf": "resource_limit",
+  "g07-form-raw-over-limit.pdf": "resource_limit",
+  "g08-form-raw-17mib-early-endstream.pdf": "resource_limit",
+  "g09-indirect-length-over-limit.pdf": "resource_limit",
+  "g11-length-in-objstm-over-limit.pdf": "resource_limit",
+  "g17-wrong-length-17mib-early-endstream.pdf": "no_text",
+  "g18-flate-bomb-wrong-length.pdf": "resource_limit",
+  "g19-objstm-bomb-in-image-data.pdf": "resource_limit",
+  "g20-objstm-raw-over-limit.pdf": "resource_limit",
+  "g21-rebuilt-xref-raw-over-limit.pdf": "resource_limit",
+  "g22-rebuilt-xref-flate-bomb.pdf": "resource_limit",
+  "q01-no-unicode-only.pdf": "no_unicode"
+ },
+ "risks": {
+  "p05-two-column.pdf": {
+   "interleaved_columns": [
+    2
+   ]
+  },
+  "l04-two-columns-by-row.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l07-mixed-out-of-order.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l09-three-columns.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l10-unequal-columns-header-footer.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l11-staggered-columns.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l17-rotated-in-gutter.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l18-cjk-two-columns.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l20-table-then-columns.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l21-narrow-gutter-justified.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "l24-justified-wide-gaps-per-line.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "q03-unruled-long-cells.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "q04-label-block.pdf": {
+   "interleaved_columns": [
+    1
+   ]
+  },
+  "p13-invisible-ocr-layer.pdf": {
+   "invisible_text": [
+    1
+   ]
+  }
+ },
+ "notes": {
+  "l05-two-columns-reversed.pdf": "known miss: both columns drawn bottom-up, one after the other; no row is split, so nothing shows the order is wrong",
+  "l06-two-columns-word-order.pdf": "known miss: every word drawn as its own object, last word first; no long piece sits on either side of the gutter",
+  "l19-short-columns.pdf": "known miss: two rows only, under the three-row threshold",
+  "l25-justified-wide-gaps-per-word.pdf": "known miss: every word is its own text operation, so the pieces next to the gutter are single words",
+  "l02-single-column-shuffled.pdf": "out of scope: one column drawn out of order is not a column risk",
+  "l14-aligned-table.pdf": "known miss: an unruled table drawn column by column; its rows are not recovered and nothing warns about it",
+  "l16-label-rows.pdf": "known miss on page 1: label pairs drawn column by column read as two lists",
+  "q03-unruled-long-cells.pdf": "known false positive: an unruled table of long cells, read row by row (correctly), looks like two columns drawn across",
+  "q04-label-block.pdf": "known false positive: a form-like block of label pairs, read row by row (correctly), looks like two columns drawn across",
+  "q02-ruled-table-long-cells.pdf": "the same rows inside a ruled grid: the gap holds a vertical line, so it is a cell border, not a gutter, and there is no column warning"
+ },
+ "fixtures": {
+  "q01-no-unicode-only.pdf": {
+   "path": "quality/generated/q01-no-unicode-only.pdf",
+   "kind": "quality",
+   "status": "unsupported",
+   "text": "",
+   "chars": 0,
+   "left_out": [],
+   "note": "The PDF's characters have no Unicode mapping, so it has no reliable text."
+  },
+  "q02-ruled-table-long-cells.pdf": {
+   "path": "quality/generated/q02-ruled-table-long-cells.pdf",
+   "kind": "quality",
+   "status": "partial",
+   "text": "[Page 1]\nVersion history keeps every save\tso a reader can compare any two\nEach snapshot records the file\twith its size and its hash value\nChanges are listed per version\tand shown next to the old text\nReaders can follow the history\tin the order the files changed",
+   "chars": 261,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 261
+    }
+   },
+   "left_out": [
+    "ruled lines forming a table or chart grid on page 1: its text is kept in drawing order, its rows and columns are not"
+   ],
+   "note": "Not all of this PDF is in the text. Left out: table structure."
+  },
+  "q03-unruled-long-cells.pdf": {
+   "path": "quality/generated/q03-unruled-long-cells.pdf",
+   "kind": "quality",
+   "status": "complete",
+   "text": "[Page 1]\nVersion history keeps every save\tso a reader can compare any two\nEach snapshot records the file\twith its size and its hash value\nChanges are listed per version\tand shown next to the old text\nReaders can follow the history\tin the order the files changed",
+   "chars": 261,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 261
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "q04-label-block.pdf": {
+   "path": "quality/generated/q04-label-block.pdf",
+   "kind": "quality",
+   "status": "complete",
+   "text": "[Page 1]\nPrepared by: Alice Example\tDate: 2026-10-12 morning\nReviewed by: Bob Example\tVersion: 3 of the release\nApproved by: Carol Example\tStatus: ready for archive\nThe release notes below describe what changed in this version.",
+   "chars": 227,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 227
+    }
+   },
+   "left_out": [],
+   "note": null
+  }
+ }
+}

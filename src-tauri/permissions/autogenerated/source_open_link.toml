@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-source-open-link"
+description = "Enables the source_open_link command without any pre-configured scope."
+commands.allow = ["source_open_link"]
+
+[[permission]]
+identifier = "deny-source-open-link"
+description = "Denies the source_open_link command without any pre-configured scope."
+commands.deny = ["source_open_link"]

@@ -1,0 +1,50 @@
+{
+  "v1": {
+    "source_sha256": "72b9389ed6fce66bba60facc002b31fab9d0713d35758d6049517e2419f2aed6",
+    "fixture_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+    "bytes": 12229,
+    "central_offset": 11502,
+    "allowed_changed_ranges": [
+      [
+        6341,
+        6721
+      ],
+      [
+        6044,
+        6048
+      ],
+      [
+        11907,
+        11911
+      ]
+    ],
+    "core_packed": 380,
+    "core_unpacked": 747,
+    "trial": 1,
+    "other_entry_bytes_and_layout_identical": true
+  },
+  "v2": {
+    "source_sha256": "d2c09b9b149be16ef4a22a75f91a18a06401d7717c8aa35bf6e01cb1484e3793",
+    "fixture_sha256": "4b426ed368a80fe18094e0f5dc120521e838121b3184ee91da3132d9e8472332",
+    "bytes": 12265,
+    "central_offset": 11538,
+    "allowed_changed_ranges": [
+      [
+        6377,
+        6759
+      ],
+      [
+        6080,
+        6084
+      ],
+      [
+        11943,
+        11947
+      ]
+    ],
+    "core_packed": 382,
+    "core_unpacked": 747,
+    "trial": 0,
+    "other_entry_bytes_and_layout_identical": true
+  }
+}

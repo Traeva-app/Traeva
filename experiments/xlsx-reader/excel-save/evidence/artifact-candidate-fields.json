@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "stage": "seed",
+  "protocol_sha256": "bf3807767d1fb5740118be64a2e85410d960e17d3b3dc4767b576357075f1de0",
+  "input_sha256": "3eeefa63737e2f9713361f77aa7fe9c9f7f79f2cb4df1f2953d757b9ba9b67f4",
+  "input_sha256_after": "3eeefa63737e2f9713361f77aa7fe9c9f7f79f2cb4df1f2953d757b9ba9b67f4",
+  "reader_output_sha256": "a4f4f0e5ec7a1ea16156785f105f491727bbab6a7fb1bd0fcce8eb906d2b2af2",
+  "probe_sha256": "e882c4b6f45fc335992c8a2aabca397bdc3051177dc212cfd5ebf85149504fbb",
+  "exit_code": 1,
+  "input_unchanged": true,
+  "checks": [],
+  "excel_provenance": "UNVERIFIED_BY_THIS_CHECKER",
+  "cache_freshness": "unverified",
+  "scope": "Frozen field comparisons only. GUI save/close/reopen evidence must be reviewed separately.",
+  "reader_error": {
+    "code": "not_plain_xlsx_workbook_content_type",
+    "kind": "unsupported"
+  },
+  "reader_status": null,
+  "omissions": null,
+  "limitations": null
+}

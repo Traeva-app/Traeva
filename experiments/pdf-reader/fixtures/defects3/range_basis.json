@@ -1,0 +1,75 @@
+{
+ "basis": "hayro-syntax 0.8.0 src/object/stream.rs parse_proper/parse_fallback, re-implemented here; pypdf 6.20.1 (strict=False)",
+ "fixtures": {
+  "g14-length-too-short.pdf": {
+   "sha256": "da7b3c12e3a76f1102f7ad5d223088564d8933cca04c81e6307d3797ff4877fa",
+   "streams": {
+    "4": {
+     "hayro_rule": "fallback",
+     "hayro_data_start": 251,
+     "hayro_data_length": 47,
+     "hayro_data_sha256": "79a21b9492eaf2d03248aa22ca7f2e6918924a84aaa57b37e2f32671c382d147",
+     "pypdf_data_length": 48,
+     "pypdf_data_sha256": "0cc8d2942aff8a1e4fa71363471bc9869d9a10bbf0d0e2b8fe3f1abd2dd3f7fa"
+    }
+   },
+   "pypdf_page_text": [
+    "Length too short"
+   ],
+   "pypdf_messages": []
+  },
+  "g15-length-too-long.pdf": {
+   "sha256": "17ea4e4d6fe49eb5f94944ca01259c11d29ee26271db119ff498164f3f32f175",
+   "streams": {
+    "4": {
+     "hayro_rule": "fallback",
+     "hayro_data_start": 251,
+     "hayro_data_length": 46,
+     "hayro_data_sha256": "80e7cf404661c635c1bba17bf058ed91fe92181d5a11e7723041dd3c41332074",
+     "pypdf_data_length": 47,
+     "pypdf_data_sha256": "be24514294a6b79dfdec00022e481a06654a8f60957901ed63e37ab66031d7b7"
+    }
+   },
+   "pypdf_page_text": [
+    "Length too long"
+   ],
+   "pypdf_messages": []
+  },
+  "g16-length-missing.pdf": {
+   "sha256": "22cecf56a25e740daa83daf69b9115a51ccfa2b7bb69be7f977f4a352d28fd29",
+   "streams": {
+    "4": {
+     "hayro_rule": "fallback",
+     "hayro_data_start": 239,
+     "hayro_data_length": 40,
+     "hayro_data_sha256": "05f0ff8b3a83838283826c57ef820945937e20e8e44b5199ae09a2c2dcb94d17",
+     "pypdf_data_length": 42,
+     "pypdf_data_sha256": "8d129709e678799421a79443d1c712b27c260f5290ad199ce24642e338861526"
+    }
+   },
+   "pypdf_page_text": [
+    "No length"
+   ],
+   "pypdf_messages": [
+    "Stream length not defined @pos=239"
+   ]
+  },
+  "g17-wrong-length-17mib-early-endstream.pdf": {
+   "sha256": "e8f9cd7218fdbd5e4ed3c12d9000607c313f2c6ab4a1b2b8a4c714ee1ab6adae",
+   "streams": {
+    "4": {
+     "hayro_rule": "fallback",
+     "hayro_data_start": 250,
+     "hayro_data_length": 1,
+     "hayro_data_sha256": "bbf3f11cb5b43e700273a78d12de55e4a7eab741ed2abf13787a4d2dc832b8ec",
+     "pypdf_data_length": 1,
+     "pypdf_data_sha256": "bbf3f11cb5b43e700273a78d12de55e4a7eab741ed2abf13787a4d2dc832b8ec"
+    }
+   },
+   "pypdf_page_text": [
+    ""
+   ],
+   "pypdf_messages": []
+  }
+ }
+}

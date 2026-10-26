@@ -1,0 +1,283 @@
+{
+  "source_implementation_commit": "93ae6701482e81f036e14039ace56603c765b3ea",
+  "main_base": "65df8c9b80f6624e486a16d22b0905a2315ef373",
+  "desktop_test_commit": "a129d93f75457cc4bb997d1d26ec0cd9d13b99c7",
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "real_chrome": "Chrome/155.0.8059.39",
+    "real_chrome_mode": "headless",
+    "desktop": "original packaged Tauri App, native GUI on Dell display",
+    "profiles_and_inputs": "fresh isolated profiles and synthetic TXT only"
+  },
+  "source_file_sha256": {
+    "extensions/chrome/README.md": "493fe874a24fb40693ef496830e59acf55665f39c9056d75cf606ef287e2220f",
+    "extensions/chrome/collector.js": "c1f816f26660d1612503f310143966d12c0c5cc8c4d4da88b2a86588c3b44779",
+    "extensions/chrome/collector.test.js": "0e781e547aa4490ac78271e50fbf93b601b98d9d185d08648674f0963af95cfa",
+    "extensions/chrome/diagnostics.js": "0ee3d5da468d155fdf191f1457127e6f4a104d6c6f5f0a1252db0ad2abda3279",
+    "extensions/chrome/diagnostics.test.js": "98f13cf77f036a818464699a20353d575137a314f94900bfe46939b7abc3a931",
+    "extensions/chrome/options.css": "03accb9434a85c46cc7c3476de3594180f4b6656554209f8d61ff8cfc1726cc3",
+    "extensions/chrome/options.html": "c4911f99c9596a7a533dd6bdf17bb1da725f0d13b556d543a19df9fc225e67af",
+    "extensions/chrome/options.js": "0206d49a62aea5fbf6cd48d3a72a71625eaa890128e64959cd8450ee5f6945cf",
+    "extensions/chrome/test/browser-core.cjs": "3a67171dad196fc6d2c0cd348e85fbfbde878feab1fe3c6da64c68e8c86acf55",
+    "extensions/chrome/test/browser-recovery.cjs": "70b343ff88bae67f3c1b7a05165cbe61d9d0f51f6c2b64dc6db657cc32db8375",
+    "extensions/chrome/test/browser-smoke.cjs": "9c18ee301e156dcad53a485813700a902ebfa22f0c07bf24db7d8c1e18f5b5ee",
+    "extensions/chrome/worker.js": "55554203e5b60b090d85bf0c49240d38d861c825e5a0da82ffa24fa563d042df",
+    "src-tauri/tests/source_chrome.rs": "61a7d792782544da52010cd8c7ea2fdb6f2592990ad85a10df3686b1009c7bc7",
+    "src/features/source/SourcePage.tsx": "ba951fdfe42e976bec512f555ba43592e6b3c0f6c5cb6f5bd526349ef10f257e",
+    "src/features/source/source.css": "93368cea7ccde5c9e65e0f63eda26f340c0f897e00748c269aa5fe2463c5f1fe"
+  },
+  "checks": {
+    "extension_unit": {
+      "passed": 39,
+      "failed": 0
+    },
+    "frontend_and_extension": {
+      "passed": 118,
+      "failed": 0
+    },
+    "core": {
+      "passed": 791,
+      "ignored_opt_in": 10,
+      "failed": 0
+    },
+    "fmt": "PASS",
+    "workspace_clippy": "PASS",
+    "frontend_build": "PASS",
+    "packaged_app_build": "PASS",
+    "production_receiver_recovery": [
+      {
+        "name": "first setup defaults off; wrong valid-format token is not connected or saved",
+        "result": "PASS"
+      },
+      {
+        "name": "correct pairing and normal download: acknowledged source, candidate, explicit User Confirmed",
+        "result": "PASS"
+      },
+      {
+        "name": "unavailable authorized root is not reported ready; access restoration can be rechecked",
+        "result": "PASS"
+      },
+      {
+        "name": "receiver process and Chrome restart retain saved sources, waiting IDs, profile identity and first import time; retry delivers once",
+        "result": "PASS"
+      },
+      {
+        "name": "pairing change warns before clearing waiting IDs; explicit recent import recovers missed source without duplicate records",
+        "result": "PASS"
+      },
+      {
+        "name": "downloads while app collection is off require explicit history import; no interval bypass",
+        "result": "PASS"
+      },
+      {
+        "name": "no sensitive download metadata persisted in extension; desktop/mobile page has no exceptions or overflow",
+        "result": "PASS"
+      }
+    ],
+    "packaged_app": [
+      {
+        "name": "Fresh App collection off and expanded installation/folder/pairing/check guide",
+        "result": "PASS"
+      },
+      {
+        "name": "Native folder picker authorizes only synthetic download root",
+        "result": "PASS"
+      },
+      {
+        "name": "Enable app opens local receiver details with masked token and explicit not-yet-paired boundary",
+        "result": "PASS"
+      },
+      {
+        "name": "Fresh real Chrome downloads redirected TXT into actual App; candidate has no automatic verification",
+        "result": "PASS"
+      },
+      {
+        "name": "Explicit GUI confirmation produces User Confirmed with accurate note and preserved unknown title",
+        "result": "PASS"
+      },
+      {
+        "name": "Normal App Command-Q and same-library restart; records/import time/evidence/pairing/file bytes unchanged",
+        "result": "PASS"
+      }
+    ],
+    "normal_restart_storage_and_fixture_comparison": "IDENTICAL",
+    "redirect_chrome_core_regression": "PASS",
+    "automatic_alarm_ui_recovery_synthetic_receiver": "PASS"
+  },
+  "source_record": {
+    "source_id": "45d56b17-51c9-4845-81a3-ab98d152b9d7",
+    "download_id": "1",
+    "imported_at_ms": 1791740403975,
+    "associated_file_id": "f01d74dc-276f-4c63-bf77-100b1039316d",
+    "basis": "User Confirmed, explicit GUI action",
+    "fixture_sha256": {
+      "setup-fixture.txt": "4c07387ab84751f29fec7f80c79ed9ee03ff6b685ce2e10247a0bcdd1bd2e913",
+      "source-dde1584b.txt": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95"
+    }
+  },
+  "automatic_verified": "NOT_IMPLEMENTED",
+  "privacy": "No tokens, URLs, response bodies or absolute machine paths in this summary. Full synthetic evidence retained locally.",
+  "original_failures": "Retained with separate later PASS. Previous desktop lock-screen BLOCKED retained.",
+  "limits": [
+    "App-closed vs collection-off cannot be distinguished from connection refusal by the existing HTTP protocol",
+    "Manual Chrome installation dialogs not tested",
+    "Minimum Chrome 120 not tested",
+    "OS crash or power loss not tested",
+    "Real-browser queue-capacity behavior and busy receiver port not tested",
+    "Not independent R1 review or #26/#37 final acceptance"
+  ],
+  "initial_evidence_scope": "Existing top-level implementation hashes/checks/native GUI evidence belong to the initial implementation and desktop test commits; subsequent review fixes are separately recorded below.",
+  "review_fix": {
+    "reviewed_head": "aee437d0c72a761abc407556a33bc2956793c570",
+    "review_result": "BLOCKED on R130-01 and R130-02; original #27 CAC acceptance unchanged",
+    "findings": [
+      {
+        "id": "R130-01",
+        "priority": "P2",
+        "verdict": "REAL",
+        "fix": "Action generation advances before Save/Check/Retry/Import; poll success and failure update only while idle with the same generation."
+      },
+      {
+        "id": "R130-02",
+        "priority": "P2",
+        "verdict": "REAL",
+        "fix": "App receiver shutdown is explicitly separate from Extension Options queue clearing; disabled-interval downloads require explicit import."
+      }
+    ],
+    "source_file_sha256": {
+      "extensions/chrome/options.js": "c93a99119d613e46b448b488854bd8313b35a2010aaa943d976afb1dd2fc7f6f",
+      "extensions/chrome/test/options-order.cjs": "8b7131b90a4341f21db52d4373c2580a71ab851f6248fbea8e6b75b45bfe2a09",
+      "src/features/source/SourcePage.tsx": "6c5de1da77ad2a66d3bd8f44c444fbf335905c991e622bc9639dedc8dfdcd737"
+    },
+    "options_order": {
+      "kind": "Actual Options HTML/modules in installed headless Chrome with controlled synthetic Chrome messages; no real extension transport or natural reordering claim",
+      "environment": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "browser": "155.0.8059.39"
+      },
+      "before_options_sha256": "0206d49a62aea5fbf6cd48d3a72a71625eaa890128e64959cd8450ee5f6945cf",
+      "before": {
+        "result": "FAIL",
+        "passed": 2,
+        "failed": 12,
+        "total": 14
+      },
+      "after": {
+        "result": "PASS",
+        "passed": 14,
+        "failed": 0,
+        "total": 14
+      },
+      "cases": [
+        {
+          "name": "save: old connected poll arrives after new pairing_rejected result",
+          "result": "PASS"
+        },
+        {
+          "name": "save: old pairing_rejected poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "save: old failure poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "check: old connected poll arrives after new pairing_rejected result",
+          "result": "PASS"
+        },
+        {
+          "name": "check: old pairing_rejected poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "check: old failure poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "retry: old connected poll arrives after new pairing_rejected result",
+          "result": "PASS"
+        },
+        {
+          "name": "retry: old pairing_rejected poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "retry: old failure poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "history: old connected poll arrives after new pairing_rejected result",
+          "result": "PASS"
+        },
+        {
+          "name": "history: old pairing_rejected poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "history: old failure poll arrives after new connected result",
+          "result": "PASS"
+        },
+        {
+          "name": "check: old poll arrives while connected action is pending",
+          "result": "PASS"
+        },
+        {
+          "name": "check: old poll arrives while pairing_rejected action is pending",
+          "result": "PASS"
+        }
+      ],
+      "current_generation_refresh": "PASS in each of the 14 cases"
+    },
+    "production_receiver_recovery": [
+      {
+        "name": "first setup defaults off; wrong valid-format token is not connected or saved",
+        "result": "PASS"
+      },
+      {
+        "name": "correct pairing and normal download: acknowledged source, candidate, explicit User Confirmed",
+        "result": "PASS"
+      },
+      {
+        "name": "unavailable authorized root is not reported ready; access restoration can be rechecked",
+        "result": "PASS"
+      },
+      {
+        "name": "receiver process and Chrome restart retain saved sources, waiting IDs, profile identity and first import time; retry delivers once",
+        "result": "PASS"
+      },
+      {
+        "name": "pairing change warns before clearing waiting IDs; explicit recent import recovers missed source without duplicate records",
+        "result": "PASS"
+      },
+      {
+        "name": "downloads while app collection is off require explicit history import; no interval bypass",
+        "result": "PASS"
+      },
+      {
+        "name": "no sensitive download metadata persisted in extension; desktop/mobile page has no exceptions or overflow",
+        "result": "PASS"
+      }
+    ],
+    "checks": {
+      "frontend_and_extension": {
+        "passed": 118,
+        "failed": 0
+      },
+      "core": {
+        "passed": 791,
+        "ignored_opt_in": 10,
+        "failed": 0
+      },
+      "fmt": "PASS",
+      "workspace_clippy": "PASS",
+      "frontend_build": "PASS"
+    },
+    "original_failures": "Before-fix 12 FAIL retained locally alongside after-fix 14 PASS; original R1 FAIL remains independent evidence",
+    "native_gui": "NOT_RERUN for review fixes; initial desktop evidence remains bound to a129d93",
+    "independent_review": "PENDING targeted recheck of the repair commit",
+    "automatic_verified": "NOT_IMPLEMENTED",
+    "scope": "No shared/core/schema/permissions/protocol changes; no #26/#37 acceptance"
+  }
+}

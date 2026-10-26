@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-correct-memory-relation"
+description = "Enables the correct_memory_relation command without any pre-configured scope."
+commands.allow = ["correct_memory_relation"]
+
+[[permission]]
+identifier = "deny-correct-memory-relation"
+description = "Denies the correct_memory_relation command without any pre-configured scope."
+commands.deny = ["correct_memory_relation"]

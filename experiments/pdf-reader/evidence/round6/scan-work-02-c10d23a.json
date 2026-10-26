@@ -1,0 +1,1544 @@
+{
+ "commit": "c10d23a9f7ab28e1372071578f51329fd4972442",
+ "probe_sha256": "ae5ccd8eb885f47e291a678a4042ee1b522275d86ef17ab5f46721869aacb245",
+ "environment": {
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64"
+ },
+ "kind": "developer self-test (Claude-G); not an independent Codex-R4 result",
+ "files": {
+  "a01-flate-bomb.pdf": {
+   "bytes": 20998,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a02-nested-flate.pdf": {
+   "bytes": 770,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a03-image-label-bomb.pdf": {
+   "bytes": 82395,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a04-decoded-total.pdf": {
+   "bytes": 144478,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a05-too-many-pages.pdf": {
+   "bytes": 137448,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 4008,
+    "elements": 22571
+   },
+   "elements_per_byte": 0.1642,
+   "decode_bytes_per_byte": 0.0292
+  },
+  "a06-declared-objects.pdf": {
+   "bytes": 672,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a07a-deep-stream-dict.pdf": {
+   "bytes": 817,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a07b-deep-page-dict.pdf": {
+   "bytes": 2671,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 90,
+    "elements": 192
+   },
+   "elements_per_byte": 0.0719,
+   "decode_bytes_per_byte": 0.0337
+  },
+  "a08-form-recursion.pdf": {
+   "bytes": 895,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 116,
+    "elements": 114
+   },
+   "elements_per_byte": 0.1274,
+   "decode_bytes_per_byte": 0.1296
+  },
+  "a09-form-fanout.pdf": {
+   "bytes": 1400,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 1042,
+    "elements": 217
+   },
+   "elements_per_byte": 0.155,
+   "decode_bytes_per_byte": 0.7443
+  },
+  "a10-lzw.pdf": {
+   "bytes": 604,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a11-codec-on-content.pdf": {
+   "bytes": 599,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a12-indirect-filter.pdf": {
+   "bytes": 592,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a13-unknown-filter.pdf": {
+   "bytes": 596,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a14-run-length-bomb.pdf": {
+   "bytes": 320610,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a15-stream-count.pdf": {
+   "bytes": 3739652,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a16-big-input.pdf": {
+   "bytes": 34603628,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a17-fake-endstream.pdf": {
+   "bytes": 21013,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a18-encrypted-owner-only.pdf": {
+   "bytes": 1144,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a19-encrypted-user-password.pdf": {
+   "bytes": 1511,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "a20-escaped-encrypt.pdf": {
+   "bytes": 921,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "c01-truncated-half.pdf": {
+   "bytes": 686,
+   "status": "failed",
+   "scan_work": null
+  },
+  "c02-truncated-tail.pdf": {
+   "bytes": 1363,
+   "status": "failed",
+   "scan_work": null
+  },
+  "c03-wrong-startxref.pdf": {
+   "bytes": 749,
+   "status": "failed",
+   "scan_work": null
+  },
+  "c04-damaged-flate.pdf": {
+   "bytes": 632,
+   "status": "failed",
+   "scan_work": null
+  },
+  "c05-not-a-pdf.pdf": {
+   "bytes": 38,
+   "status": "failed",
+   "scan_work": null
+  },
+  "c06-garbage.pdf": {
+   "bytes": 4112,
+   "status": "failed",
+   "scan_work": null
+  },
+  "c07-page-count.pdf": {
+   "bytes": 965,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 168,
+    "elements": 114
+   },
+   "elements_per_byte": 0.1181,
+   "decode_bytes_per_byte": 0.1741
+  },
+  "c08-empty.pdf": {
+   "bytes": 0,
+   "status": "failed",
+   "scan_work": null
+  },
+  "p01-single-en.pdf": {
+   "bytes": 749,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 319,
+    "elements": 68
+   },
+   "elements_per_byte": 0.0908,
+   "decode_bytes_per_byte": 0.4259
+  },
+  "p02-multi-en.pdf": {
+   "bytes": 1373,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 548,
+    "elements": 161
+   },
+   "elements_per_byte": 0.1173,
+   "decode_bytes_per_byte": 0.3991
+  },
+  "p03-cjk-reportlab.pdf": {
+   "bytes": 14458,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 26899,
+    "elements": 607
+   },
+   "elements_per_byte": 0.042,
+   "decode_bytes_per_byte": 1.8605
+  },
+  "p04-rotated.pdf": {
+   "bytes": 1091,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 503,
+    "elements": 117
+   },
+   "elements_per_byte": 0.1072,
+   "decode_bytes_per_byte": 0.461
+  },
+  "p05-two-column.pdf": {
+   "bytes": 1167,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 1250,
+    "elements": 116
+   },
+   "elements_per_byte": 0.0994,
+   "decode_bytes_per_byte": 1.0711
+  },
+  "p06-font-mapping.pdf": {
+   "bytes": 2642,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 1204,
+    "elements": 272
+   },
+   "elements_per_byte": 0.103,
+   "decode_bytes_per_byte": 0.4557
+  },
+  "p07-blank.pdf": {
+   "bytes": 621,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 8,
+    "elements": 66
+   },
+   "elements_per_byte": 0.1063,
+   "decode_bytes_per_byte": 0.0129
+  },
+  "p08-scanned-images.pdf": {
+   "bytes": 2494,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 53469,
+    "elements": 153
+   },
+   "elements_per_byte": 0.0613,
+   "decode_bytes_per_byte": 21.4391
+  },
+  "p09-mixed-pages.pdf": {
+   "bytes": 2906,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 53765,
+    "elements": 202
+   },
+   "elements_per_byte": 0.0695,
+   "decode_bytes_per_byte": 18.5014
+  },
+  "p10-ruled-table.pdf": {
+   "bytes": 811,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 751,
+    "elements": 68
+   },
+   "elements_per_byte": 0.0838,
+   "decode_bytes_per_byte": 0.926
+  },
+  "p11-formula.pdf": {
+   "bytes": 802,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 204,
+    "elements": 75
+   },
+   "elements_per_byte": 0.0935,
+   "decode_bytes_per_byte": 0.2544
+  },
+  "p12-annotations-form.pdf": {
+   "bytes": 1572,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 165,
+    "elements": 196
+   },
+   "elements_per_byte": 0.1247,
+   "decode_bytes_per_byte": 0.105
+  },
+  "p13-invisible-ocr-layer.pdf": {
+   "bytes": 2252,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 53528,
+    "elements": 104
+   },
+   "elements_per_byte": 0.0462,
+   "decode_bytes_per_byte": 23.7691
+  },
+  "p14-outside-and-duplicates.pdf": {
+   "bytes": 738,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 355,
+    "elements": 68
+   },
+   "elements_per_byte": 0.0921,
+   "decode_bytes_per_byte": 0.481
+  },
+  "p15-positioned-words.pdf": {
+   "bytes": 748,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 358,
+    "elements": 68
+   },
+   "elements_per_byte": 0.0909,
+   "decode_bytes_per_byte": 0.4786
+  },
+  "p16-text-cap.pdf": {
+   "bytes": 98920,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 1480921,
+    "elements": 5666
+   },
+   "elements_per_byte": 0.0573,
+   "decode_bytes_per_byte": 14.9709
+  },
+  "p17-glyph-budget.pdf": {
+   "bytes": 5710,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 2168093,
+    "elements": 69
+   },
+   "elements_per_byte": 0.0121,
+   "decode_bytes_per_byte": 379.7011
+  },
+  "p18-draw-budget.pdf": {
+   "bytes": 28410,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 14327791,
+    "elements": 70
+   },
+   "elements_per_byte": 0.0025,
+   "decode_bytes_per_byte": 504.3221
+  },
+  "d01-nested-form-string-bomb.pdf": {
+   "bytes": 18562,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "d02-comment-before-stream-bomb.pdf": {
+   "bytes": 18386,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "d03-nested-form-string-ok.pdf": {
+   "bytes": 1267,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 232,
+    "elements": 177
+   },
+   "elements_per_byte": 0.1397,
+   "decode_bytes_per_byte": 0.1831
+  },
+  "d04-comment-before-content-stream.pdf": {
+   "bytes": 687,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 114,
+    "elements": 67
+   },
+   "elements_per_byte": 0.0975,
+   "decode_bytes_per_byte": 0.1659
+  },
+  "d05-strings-in-stream-dict.pdf": {
+   "bytes": 729,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 132,
+    "elements": 73
+   },
+   "elements_per_byte": 0.1001,
+   "decode_bytes_per_byte": 0.1811
+  },
+  "d06-encrypt-as-words.pdf": {
+   "bytes": 780,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 55,
+    "elements": 57
+   },
+   "elements_per_byte": 0.0731,
+   "decode_bytes_per_byte": 0.0705
+  },
+  "d07-size-as-words.pdf": {
+   "bytes": 740,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 57,
+    "elements": 55
+   },
+   "elements_per_byte": 0.0743,
+   "decode_bytes_per_byte": 0.077
+  },
+  "d08-script-names-as-words.pdf": {
+   "bytes": 814,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 165,
+    "elements": 70
+   },
+   "elements_per_byte": 0.086,
+   "decode_bytes_per_byte": 0.2027
+  },
+  "d09-escaped-javascript-action.pdf": {
+   "bytes": 738,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 122,
+    "elements": 73
+   },
+   "elements_per_byte": 0.0989,
+   "decode_bytes_per_byte": 0.1653
+  },
+  "d10-escaped-embedded-file.pdf": {
+   "bytes": 941,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 131,
+    "elements": 94
+   },
+   "elements_per_byte": 0.0999,
+   "decode_bytes_per_byte": 0.1392
+  },
+  "d11-escaped-link-javascript.pdf": {
+   "bytes": 806,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 110,
+    "elements": 87
+   },
+   "elements_per_byte": 0.1079,
+   "decode_bytes_per_byte": 0.1365
+  },
+  "d12-escaped-attachment-annotation.pdf": {
+   "bytes": 947,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 137,
+    "elements": 100
+   },
+   "elements_per_byte": 0.1056,
+   "decode_bytes_per_byte": 0.1447
+  },
+  "d13-contents-missing-member.pdf": {
+   "bytes": 683,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 112,
+    "elements": 71
+   },
+   "elements_per_byte": 0.104,
+   "decode_bytes_per_byte": 0.164
+  },
+  "d14-contents-string-member.pdf": {
+   "bytes": 683,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 112,
+    "elements": 71
+   },
+   "elements_per_byte": 0.104,
+   "decode_bytes_per_byte": 0.164
+  },
+  "d15-contents-dangling.pdf": {
+   "bytes": 675,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 112,
+    "elements": 67
+   },
+   "elements_per_byte": 0.0993,
+   "decode_bytes_per_byte": 0.1659
+  },
+  "d16-contents-two-parts.pdf": {
+   "bytes": 813,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 184,
+    "elements": 92
+   },
+   "elements_per_byte": 0.1132,
+   "decode_bytes_per_byte": 0.2263
+  },
+  "d17-flate-wrong-adler.pdf": {
+   "bytes": 672,
+   "status": "failed",
+   "scan_work": null
+  },
+  "d18-flate-missing-adler.pdf": {
+   "bytes": 670,
+   "status": "failed",
+   "scan_work": null
+  },
+  "d19-flate-no-zlib-header.pdf": {
+   "bytes": 670,
+   "status": "failed",
+   "scan_work": null
+  },
+  "d20-form-wrong-adler.pdf": {
+   "bytes": 1040,
+   "status": "failed",
+   "scan_work": null
+  },
+  "d21-image-wrong-adler.pdf": {
+   "bytes": 1127,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 810,
+    "elements": 109
+   },
+   "elements_per_byte": 0.0967,
+   "decode_bytes_per_byte": 0.7187
+  },
+  "d22-xref-stream.pdf": {
+   "bytes": 608,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 681,
+    "elements": 95
+   },
+   "elements_per_byte": 0.1562,
+   "decode_bytes_per_byte": 1.1201
+  },
+  "d23-xref-stream-escaped-encrypt.pdf": {
+   "bytes": 844,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "d24-incremental-update.pdf": {
+   "bytes": 908,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 194,
+    "elements": 91
+   },
+   "elements_per_byte": 0.1002,
+   "decode_bytes_per_byte": 0.2137
+  },
+  "f01-listing-in-text.pdf": {
+   "bytes": 704,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 110,
+    "elements": 65
+   },
+   "elements_per_byte": 0.0923,
+   "decode_bytes_per_byte": 0.1562
+  },
+  "f02-listing-in-file-comment.pdf": {
+   "bytes": 736,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 102,
+    "elements": 77
+   },
+   "elements_per_byte": 0.1046,
+   "decode_bytes_per_byte": 0.1386
+  },
+  "f03-flate-listing-in-text.pdf": {
+   "bytes": 705,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 116,
+    "elements": 69
+   },
+   "elements_per_byte": 0.0979,
+   "decode_bytes_per_byte": 0.1645
+  },
+  "f04-listing-in-content-comment.pdf": {
+   "bytes": 731,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 137,
+    "elements": 65
+   },
+   "elements_per_byte": 0.0889,
+   "decode_bytes_per_byte": 0.1874
+  },
+  "f05-listing-in-strings.pdf": {
+   "bytes": 986,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 105,
+    "elements": 88
+   },
+   "elements_per_byte": 0.0892,
+   "decode_bytes_per_byte": 0.1065
+  },
+  "f06-lzw-listing-in-image-data.pdf": {
+   "bytes": 1210,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 503,
+    "elements": 108
+   },
+   "elements_per_byte": 0.0893,
+   "decode_bytes_per_byte": 0.4157
+  },
+  "f07-endstream-in-text.pdf": {
+   "bytes": 701,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 107,
+    "elements": 65
+   },
+   "elements_per_byte": 0.0927,
+   "decode_bytes_per_byte": 0.1526
+  },
+  "f08-endstream-in-text-indirect-length.pdf": {
+   "bytes": 726,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 107,
+    "elements": 61
+   },
+   "elements_per_byte": 0.084,
+   "decode_bytes_per_byte": 0.1474
+  },
+  "f09-objstm-listing-in-text.pdf": {
+   "bytes": 721,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 127,
+    "elements": 69
+   },
+   "elements_per_byte": 0.0957,
+   "decode_bytes_per_byte": 0.1761
+  },
+  "f10-objstm-lzw-listing-in-text.pdf": {
+   "bytes": 723,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "f11-listing-and-real-bomb.pdf": {
+   "bytes": 18372,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "f12-damaged-part-and-listing.pdf": {
+   "bytes": 853,
+   "status": "failed",
+   "scan_work": null
+  },
+  "f13-real-unknown-filter.pdf": {
+   "bytes": 614,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "f14-bomb-listing-in-image-data.pdf": {
+   "bytes": 18306,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "f15-contents-direct-null.pdf": {
+   "bytes": 521,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 0,
+    "elements": 46
+   },
+   "elements_per_byte": 0.0883,
+   "decode_bytes_per_byte": 0.0
+  },
+  "f16-contents-indirect-null.pdf": {
+   "bytes": 562,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 0,
+    "elements": 46
+   },
+   "elements_per_byte": 0.0819,
+   "decode_bytes_per_byte": 0.0
+  },
+  "f17-text-and-indirect-null-page.pdf": {
+   "bytes": 846,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 102,
+    "elements": 89
+   },
+   "elements_per_byte": 0.1052,
+   "decode_bytes_per_byte": 0.1206
+  },
+  "f18-text-and-missing-reference-page.pdf": {
+   "bytes": 807,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 102,
+    "elements": 89
+   },
+   "elements_per_byte": 0.1103,
+   "decode_bytes_per_byte": 0.1264
+  },
+  "f19-contents-number.pdf": {
+   "bytes": 560,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 0,
+    "elements": 46
+   },
+   "elements_per_byte": 0.0821,
+   "decode_bytes_per_byte": 0.0
+  },
+  "f20-contents-dictionary.pdf": {
+   "bytes": 584,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 0,
+    "elements": 48
+   },
+   "elements_per_byte": 0.0822,
+   "decode_bytes_per_byte": 0.0
+  },
+  "f21-contents-array-null-member.pdf": {
+   "bytes": 712,
+   "status": "failed",
+   "scan_work": {
+    "decode_bytes": 92,
+    "elements": 71
+   },
+   "elements_per_byte": 0.0997,
+   "decode_bytes_per_byte": 0.1292
+  },
+  "f22-contents-null-in-object-stream.pdf": {
+   "bytes": 486,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 592,
+    "elements": 72
+   },
+   "elements_per_byte": 0.1481,
+   "decode_bytes_per_byte": 1.2181
+  },
+  "f23-text-and-direct-null-page.pdf": {
+   "bytes": 805,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 102,
+    "elements": 89
+   },
+   "elements_per_byte": 0.1106,
+   "decode_bytes_per_byte": 0.1267
+  },
+  "f24-header-with-comment.pdf": {
+   "bytes": 659,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 114,
+    "elements": 65
+   },
+   "elements_per_byte": 0.0986,
+   "decode_bytes_per_byte": 0.173
+  },
+  "g01-contents-raw-under-limit.pdf": {
+   "bytes": 16777819,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 16777215,
+    "elements": 58
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 1.0
+  },
+  "g02-contents-raw-at-limit.pdf": {
+   "bytes": 16777820,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 16777216,
+    "elements": 58
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 1.0
+  },
+  "g03-contents-raw-over-limit.pdf": {
+   "bytes": 16777821,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g04-contents-raw-17mib-early-endstream.pdf": {
+   "bytes": 17826396,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g05-form-raw-under-limit.pdf": {
+   "bytes": 16778184,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 16777321,
+    "elements": 110
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.9999
+  },
+  "g06-form-raw-at-limit.pdf": {
+   "bytes": 16778185,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 16777322,
+    "elements": 110
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.9999
+  },
+  "g07-form-raw-over-limit.pdf": {
+   "bytes": 16778186,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g08-form-raw-17mib-early-endstream.pdf": {
+   "bytes": 17826761,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g09-indirect-length-over-limit.pdf": {
+   "bytes": 16777846,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g10-indirect-length-under-limit-early-endstream.pdf": {
+   "bytes": 16777844,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 16777215,
+    "elements": 49
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 1.0
+  },
+  "g11-length-in-objstm-over-limit.pdf": {
+   "bytes": 16777767,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g12-length-in-objstm-under-limit.pdf": {
+   "bytes": 16777765,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 16777824,
+    "elements": 79
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 1.0
+  },
+  "g13-matching-length-endstream-comment.pdf": {
+   "bytes": 659,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 66,
+    "elements": 52
+   },
+   "elements_per_byte": 0.0789,
+   "decode_bytes_per_byte": 0.1002
+  },
+  "g14-length-too-short.pdf": {
+   "bytes": 641,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 47,
+    "elements": 52
+   },
+   "elements_per_byte": 0.0811,
+   "decode_bytes_per_byte": 0.0733
+  },
+  "g15-length-too-long.pdf": {
+   "bytes": 640,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 46,
+    "elements": 52
+   },
+   "elements_per_byte": 0.0813,
+   "decode_bytes_per_byte": 0.0719
+  },
+  "g16-length-missing.pdf": {
+   "bytes": 622,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 40,
+    "elements": 46
+   },
+   "elements_per_byte": 0.074,
+   "decode_bytes_per_byte": 0.0643
+  },
+  "g17-wrong-length-17mib-early-endstream.pdf": {
+   "bytes": 17826389,
+   "status": "unsupported",
+   "scan_work": {
+    "decode_bytes": 1,
+    "elements": 51
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "g18-flate-bomb-wrong-length.pdf": {
+   "bytes": 18327,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g19-objstm-bomb-in-image-data.pdf": {
+   "bytes": 18344,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g20-objstm-raw-over-limit.pdf": {
+   "bytes": 17826203,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g21-rebuilt-xref-raw-over-limit.pdf": {
+   "bytes": 17826396,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g22-rebuilt-xref-flate-bomb.pdf": {
+   "bytes": 18331,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g23-rebuilt-xref-control.pdf": {
+   "bytes": 640,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 47,
+    "elements": 52
+   },
+   "elements_per_byte": 0.0813,
+   "decode_bytes_per_byte": 0.0734
+  },
+  "g24-unbroken-xref-control.pdf": {
+   "bytes": 640,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 47,
+    "elements": 52
+   },
+   "elements_per_byte": 0.0813,
+   "decode_bytes_per_byte": 0.0734
+  },
+  "g25-dictionary-read-as-stream.pdf": {
+   "bytes": 18470,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g26-xref-stream-without-data.pdf": {
+   "bytes": 18094,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "g27-objstm-without-data.pdf": {
+   "bytes": 17902,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "e01-libreoffice.pdf": {
+   "bytes": 40779,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 105102,
+    "elements": 1527
+   },
+   "elements_per_byte": 0.0374,
+   "decode_bytes_per_byte": 2.5774
+  },
+  "e02-chromium.pdf": {
+   "bytes": 37931,
+   "status": "partial",
+   "scan_work": {
+    "decode_bytes": 564958,
+    "elements": 1510
+   },
+   "elements_per_byte": 0.0398,
+   "decode_bytes_per_byte": 14.8944
+  },
+  "e03a-libreoffice-open-password.pdf": {
+   "bytes": 9012,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "e03b-libreoffice-permissions-only.pdf": {
+   "bytes": 9012,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S1-big-string-128KiB.pdf": {
+   "bytes": 131748,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0004,
+   "decode_bytes_per_byte": 0.0004
+  },
+  "S1-big-string-1MiB.pdf": {
+   "bytes": 1049251,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0001,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S1-big-string-256KiB.pdf": {
+   "bytes": 262828,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0002,
+   "decode_bytes_per_byte": 0.0002
+  },
+  "S1-big-string-2MiB.pdf": {
+   "bytes": 2097833,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S1-big-string-4MiB.pdf": {
+   "bytes": 4194997,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S1-big-string-512KiB.pdf": {
+   "bytes": 524959,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0001,
+   "decode_bytes_per_byte": 0.0001
+  },
+  "S1-big-string-64KiB.pdf": {
+   "bytes": 66207,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0008,
+   "decode_bytes_per_byte": 0.0008
+  },
+  "S1-big-string-8MiB.pdf": {
+   "bytes": 8389296,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S2-comment-stress-128KiB.pdf": {
+   "bytes": 131694,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 131109,
+    "elements": 7335
+   },
+   "elements_per_byte": 0.0557,
+   "decode_bytes_per_byte": 0.9956
+  },
+  "S2-comment-stress-1MiB.pdf": {
+   "bytes": 1049210,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 1048623,
+    "elements": 58309
+   },
+   "elements_per_byte": 0.0556,
+   "decode_bytes_per_byte": 0.9994
+  },
+  "S2-comment-stress-256KiB.pdf": {
+   "bytes": 262770,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 262185,
+    "elements": 14617
+   },
+   "elements_per_byte": 0.0556,
+   "decode_bytes_per_byte": 0.9978
+  },
+  "S2-comment-stress-2MiB.pdf": {
+   "bytes": 2097782,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 2097195,
+    "elements": 116563
+   },
+   "elements_per_byte": 0.0556,
+   "decode_bytes_per_byte": 0.9997
+  },
+  "S2-comment-stress-4MiB.pdf": {
+   "bytes": 4194926,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 4194339,
+    "elements": 233071
+   },
+   "elements_per_byte": 0.0556,
+   "decode_bytes_per_byte": 0.9999
+  },
+  "S2-comment-stress-512KiB.pdf": {
+   "bytes": 524922,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 524337,
+    "elements": 29181
+   },
+   "elements_per_byte": 0.0556,
+   "decode_bytes_per_byte": 0.9989
+  },
+  "S2-comment-stress-64KiB.pdf": {
+   "bytes": 66154,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 65571,
+    "elements": 3693
+   },
+   "elements_per_byte": 0.0558,
+   "decode_bytes_per_byte": 0.9912
+  },
+  "S2-comment-stress-8MiB.pdf": {
+   "bytes": 8389232,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 8388645,
+    "elements": 466088
+   },
+   "elements_per_byte": 0.0556,
+   "decode_bytes_per_byte": 0.9999
+  },
+  "S3-open-literal-128KiB.pdf": {
+   "bytes": 131704,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 16434
+   },
+   "elements_per_byte": 0.1248,
+   "decode_bytes_per_byte": 0.0004
+  },
+  "S3-open-literal-1MiB.pdf": {
+   "bytes": 1049209,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 131122
+   },
+   "elements_per_byte": 0.125,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S3-open-literal-256KiB.pdf": {
+   "bytes": 262776,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 32818
+   },
+   "elements_per_byte": 0.1249,
+   "decode_bytes_per_byte": 0.0002
+  },
+  "S3-open-literal-2MiB.pdf": {
+   "bytes": 2097785,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 262194
+   },
+   "elements_per_byte": 0.125,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S3-open-literal-4MiB.pdf": {
+   "bytes": 4194937,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 524338
+   },
+   "elements_per_byte": 0.125,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S3-open-literal-512KiB.pdf": {
+   "bytes": 524920,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 65586
+   },
+   "elements_per_byte": 0.1249,
+   "decode_bytes_per_byte": 0.0001
+  },
+  "S3-open-literal-64KiB.pdf": {
+   "bytes": 66167,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 8242
+   },
+   "elements_per_byte": 0.1246,
+   "decode_bytes_per_byte": 0.0008
+  },
+  "S3-open-literal-8MiB.pdf": {
+   "bytes": 8389241,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 1048626
+   },
+   "elements_per_byte": 0.125,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S4-open-hex-128KiB.pdf": {
+   "bytes": 131704,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 32818
+   },
+   "elements_per_byte": 0.2492,
+   "decode_bytes_per_byte": 0.0004
+  },
+  "S4-open-hex-1MiB.pdf": {
+   "bytes": 1049209,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 262194
+   },
+   "elements_per_byte": 0.2499,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S4-open-hex-256KiB.pdf": {
+   "bytes": 262776,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 65586
+   },
+   "elements_per_byte": 0.2496,
+   "decode_bytes_per_byte": 0.0002
+  },
+  "S4-open-hex-2MiB.pdf": {
+   "bytes": 2097785,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 524338
+   },
+   "elements_per_byte": 0.2499,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S4-open-hex-4MiB.pdf": {
+   "bytes": 4194937,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 1048626
+   },
+   "elements_per_byte": 0.25,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S4-open-hex-512KiB.pdf": {
+   "bytes": 524920,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 131122
+   },
+   "elements_per_byte": 0.2498,
+   "decode_bytes_per_byte": 0.0001
+  },
+  "S4-open-hex-64KiB.pdf": {
+   "bytes": 66167,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 16434
+   },
+   "elements_per_byte": 0.2484,
+   "decode_bytes_per_byte": 0.0008
+  },
+  "S4-open-hex-8MiB.pdf": {
+   "bytes": 8389241,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 2097202
+   },
+   "elements_per_byte": 0.25,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S5-no-endstream-128KiB.pdf": {
+   "bytes": 131693,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S5-no-endstream-1MiB.pdf": {
+   "bytes": 1049205,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S5-no-endstream-256KiB.pdf": {
+   "bytes": 262775,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S5-no-endstream-2MiB.pdf": {
+   "bytes": 2097777,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S5-no-endstream-4MiB.pdf": {
+   "bytes": 4194921,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S5-no-endstream-512KiB.pdf": {
+   "bytes": 524918,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S5-no-endstream-64KiB.pdf": {
+   "bytes": 66151,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 103070811,
+    "elements": 38
+   },
+   "elements_per_byte": 0.0006,
+   "decode_bytes_per_byte": 1558.1142
+  },
+  "S5-no-endstream-8MiB.pdf": {
+   "bytes": 8389230,
+   "status": "unsupported",
+   "scan_work": null
+  },
+  "S6-comment-line-128KiB.pdf": {
+   "bytes": 131706,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0004,
+   "decode_bytes_per_byte": 0.0004
+  },
+  "S6-comment-line-1MiB.pdf": {
+   "bytes": 1049211,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S6-comment-line-256KiB.pdf": {
+   "bytes": 262778,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0002,
+   "decode_bytes_per_byte": 0.0002
+  },
+  "S6-comment-line-2MiB.pdf": {
+   "bytes": 2097787,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S6-comment-line-4MiB.pdf": {
+   "bytes": 4194939,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S6-comment-line-512KiB.pdf": {
+   "bytes": 524922,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0001,
+   "decode_bytes_per_byte": 0.0001
+  },
+  "S6-comment-line-64KiB.pdf": {
+   "bytes": 66169,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0008,
+   "decode_bytes_per_byte": 0.0008
+  },
+  "S6-comment-line-8MiB.pdf": {
+   "bytes": 8389243,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 50
+   },
+   "elements_per_byte": 0.0,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S7-nested-dicts-128KiB.pdf": {
+   "bytes": 132343,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 53737
+   },
+   "elements_per_byte": 0.406,
+   "decode_bytes_per_byte": 0.0004
+  },
+  "S7-nested-dicts-1MiB.pdf": {
+   "bytes": 1049849,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 420739
+   },
+   "elements_per_byte": 0.4008,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S7-nested-dicts-256KiB.pdf": {
+   "bytes": 263413,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 106165
+   },
+   "elements_per_byte": 0.403,
+   "decode_bytes_per_byte": 0.0002
+  },
+  "S7-nested-dicts-2MiB.pdf": {
+   "bytes": 2098424,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 840169
+   },
+   "elements_per_byte": 0.4004,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S7-nested-dicts-4MiB.pdf": {
+   "bytes": 4195574,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 1679029
+   },
+   "elements_per_byte": 0.4002,
+   "decode_bytes_per_byte": 0.0
+  },
+  "S7-nested-dicts-512KiB.pdf": {
+   "bytes": 525558,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 211023
+   },
+   "elements_per_byte": 0.4015,
+   "decode_bytes_per_byte": 0.0001
+  },
+  "S7-nested-dicts-64KiB.pdf": {
+   "bytes": 66807,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 27523
+   },
+   "elements_per_byte": 0.412,
+   "decode_bytes_per_byte": 0.0008
+  },
+  "S7-nested-dicts-8MiB.pdf": {
+   "bytes": 8389879,
+   "status": "complete",
+   "scan_work": {
+    "decode_bytes": 51,
+    "elements": 3356751
+   },
+   "elements_per_byte": 0.4001,
+   "decode_bytes_per_byte": 0.0
+  }
+ },
+ "totals": {
+  "files": 182,
+  "check_passed": 123,
+  "max_elements_per_byte": 0.412,
+  "max_elements": 3356751,
+  "max_decode_bytes_per_byte": 1558.1142,
+  "max_decode_bytes": 103070811
+ }
+}

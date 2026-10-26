@@ -1,0 +1,6 @@
+Sat 10-12  Mia, Leo     table + cash box
+Sat 12-2   Ava, Noah    lemon bars, brownies
+Sat 2-4    Ella, Sam    pack up, count
+Price: cookies 1.50, brownies 2.00, lemon bars 2.00
+Float: 50 in coins
+Goal: 600 for the robotics competition entry fee

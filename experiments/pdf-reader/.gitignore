@@ -1,0 +1,10 @@
+/target/
+/fixtures/generated/
+/evidence/local/
+__pycache__/
+/fixtures/defects/generated/
+/fixtures/layout/generated/
+/fixtures/quality/generated/
+/fixtures/defects2/generated/
+/fixtures/defects3/generated/
+/fixtures/stress/generated/

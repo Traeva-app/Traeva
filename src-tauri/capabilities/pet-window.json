@@ -1,0 +1,17 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "pet-window",
+  "description": "The desktop pet (#208) may read its pathless view of the drop queue (get_pet_state) to show its mood, and its quick signal (get_pet_signal: whether a file is dragged over it, and how many drops it caught; no path), ask to show the main window, the quick search window, its popup for a dropped file that waits, or the moved note for a dropped file the automatic mode moved (by the drop's ID, never a path), and be dragged to another place. Nothing else: not the full drop queue (which holds paths), no other Traeva command, no event listening (so it never sees a dropped file's path), no plugin.",
+  "windows": [
+    "pet"
+  ],
+  "permissions": [
+    "allow-get-pet-state",
+    "allow-get-pet-signal",
+    "allow-show-main-window",
+    "allow-show-quick-search",
+    "allow-show-drop-popup",
+    "allow-show-moved-note",
+    "core:window:allow-start-dragging"
+  ]
+}

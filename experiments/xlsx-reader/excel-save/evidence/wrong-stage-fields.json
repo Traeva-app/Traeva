@@ -1,0 +1,189 @@
+{
+  "status": "FAIL",
+  "stage": "input_edit",
+  "protocol_sha256": "bf3807767d1fb5740118be64a2e85410d960e17d3b3dc4767b576357075f1de0",
+  "input_sha256": "0eaf948b7fc0a4755383e91e91c26ca476fd4209508bd4d399744bede97d0d60",
+  "input_sha256_after": "0eaf948b7fc0a4755383e91e91c26ca476fd4209508bd4d399744bede97d0d60",
+  "reader_output_sha256": "2dde91bc2c91a2e20195a2f8f82b44156ea42620adaa4ee1ec3c75bcaf019fa6",
+  "probe_sha256": "e882c4b6f45fc335992c8a2aabca397bdc3051177dc212cfd5ebf85149504fbb",
+  "exit_code": 0,
+  "input_unchanged": true,
+  "checks": [
+    {
+      "field": "sheet_order",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data:visibility",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data:merged_ranges",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A2:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A2:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A3:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A3:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B3:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B3:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A4:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A4:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B4:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B4:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A5:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A5:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B5:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B5:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A6:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!A6:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!B2:literal",
+      "status": "FAIL"
+    },
+    {
+      "field": "F Data!B2:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C2:formula_text",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C2:formula_literal_separate",
+      "status": "PASS"
+    },
+    {
+      "field": "F Data!C2:cache_token",
+      "status": "FAIL"
+    },
+    {
+      "field": "F Data!C2:cache_freshness",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文:visibility",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文:merged_ranges",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B1:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B1:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A2:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!A2:no_formula_cache",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B2:literal",
+      "status": "PASS"
+    },
+    {
+      "field": "F 中文!B2:no_formula_cache",
+      "status": "PASS"
+    }
+  ],
+  "excel_provenance": "UNVERIFIED_BY_THIS_CHECKER",
+  "cache_freshness": "unverified",
+  "scope": "Frozen field comparisons only. GUI save/close/reopen evidence must be reviewed separately.",
+  "reader_error": null,
+  "reader_status": "complete_within_profile",
+  "omissions": [],
+  "limitations": [
+    "Formulas are never executed. All cached results have unverified freshness.",
+    "Formatting, number formats, date serial conversion and visual layout are not interpreted.",
+    "Charts, pivots, macros, external data, objects and extensions are not interpreted or refreshed.",
+    "Sheet/address context is positional; row alignment, lineage and semantic meaning are not inferred."
+  ]
+}

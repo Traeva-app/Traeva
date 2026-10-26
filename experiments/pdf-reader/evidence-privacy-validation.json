@@ -1,0 +1,87 @@
+{
+  "baseline_ref": "6dd58482de2e22fffb92960770efdd4c166a14bd",
+  "tokens": {
+    "home": "<HOME>",
+    "account_name": "<user>"
+  },
+  "note": "The committed reports are sanitized copies; every other byte is unchanged.",
+  "reports": [
+    {
+      "path": "experiments/pdf-reader/evidence/runs/run-15-368aa5e.json",
+      "original_sha256": "e919acc55957d922f1bbd454af6464d5d93553b0f4275f8025a514daf7bed9e3",
+      "sanitized_sha256": "c74e06c4939cc00a53492aea923c55b83fa3a2d77395cb38e70933b38655056e",
+      "original_git_blob": "43b11bd7d98ba2f3e24f4614f552202035fb49df",
+      "sanitized_git_blob": "6f36086d80cdc9dee387587ef264c89260a46b0f",
+      "home_paths_replaced": 3,
+      "names_replaced_outside_home_paths": 10,
+      "account_name_found": 13,
+      "account_name_remaining": 0
+    },
+    {
+      "path": "experiments/pdf-reader/evidence/runs/run-16-dba679a.json",
+      "original_sha256": "d3438e8abf05cfd43da2cec8c97edc43c95307a967d90ba9b3f3ada3ddcc4053",
+      "sanitized_sha256": "771665640105efd72c9f644880a0fabdbca1e03acafda119acfcdd425992ca32",
+      "original_git_blob": "43b0e6bd2bad6a6573cd5a0303f76baec2032c97",
+      "sanitized_git_blob": "5442fce36cc7d8483cb2d8220ff57b78b481f578",
+      "home_paths_replaced": 4,
+      "names_replaced_outside_home_paths": 10,
+      "account_name_found": 14,
+      "account_name_remaining": 0
+    },
+    {
+      "path": "experiments/pdf-reader/evidence/runs/run-17-dd70a72.json",
+      "original_sha256": "bebd122e2aa8ed4c84771e6cc08f1a21871fe662d2bc680c4b95beff4262fd62",
+      "sanitized_sha256": "9fc6b181b25270d5fc7a1f4c4e757ade8cf66fa0d346cadb413e091231403128",
+      "original_git_blob": "253b9ed35ec77a9952d4d126877337d3dc08c160",
+      "sanitized_git_blob": "bcd114a67d889cd29003c5373a7220d2a306705c",
+      "home_paths_replaced": 1,
+      "names_replaced_outside_home_paths": 10,
+      "account_name_found": 11,
+      "account_name_remaining": 0
+    },
+    {
+      "path": "experiments/pdf-reader/evidence/runs/run-18-c10d23a.json",
+      "original_sha256": "15e8bfd7d1beedb6c31a29c2316fb75e0b3e805108f85e39f1fdae08b8311ec1",
+      "sanitized_sha256": "945f91b1e018360c286ff3841d1932271ea884fdf9be3fbf16b21fcb419c9726",
+      "original_git_blob": "1d1b2e6d60936561952f8e88bcc6aa6acff02458",
+      "sanitized_git_blob": "08045aa9ccc50b2f24e5679f48f4ac36bcd87252",
+      "home_paths_replaced": 1,
+      "names_replaced_outside_home_paths": 10,
+      "account_name_found": 11,
+      "account_name_remaining": 0
+    },
+    {
+      "path": "experiments/pdf-reader/evidence/runs/run-19-17a1616.json",
+      "original_sha256": "75e6a32d7e2f061ec1a384dc96842e1be62db76d37ccea83024b4a537b8ef51e",
+      "sanitized_sha256": "72e4471bbd7454a5b29514b36edf13beaf11381acdd36480057395702cc8cf9a",
+      "original_git_blob": "de3294c730128feb1d4d86af9d0e83dc5415e1e6",
+      "sanitized_git_blob": "581c9e4fdd112cb124c389307faea92d45f8cc0c",
+      "home_paths_replaced": 2,
+      "names_replaced_outside_home_paths": 12,
+      "account_name_found": 14,
+      "account_name_remaining": 0
+    },
+    {
+      "path": "experiments/pdf-reader/evidence/runs/run-20-0c72d05.json",
+      "original_sha256": "5c366e824c9eb1fd2d501b0ccdab0054a63425da3b249264174a6270d6eaf53c",
+      "sanitized_sha256": "fc33ef405143cfcb082c186eae80e6d444a706c9153c63037ad964ac7920847e",
+      "original_git_blob": "c1e5c1574a9718b1927c2ccbe09f6e2fb7da4daa",
+      "sanitized_git_blob": "5b375aba268aaceaeb045fe2c18f2e123d6b519f",
+      "home_paths_replaced": 3,
+      "names_replaced_outside_home_paths": 10,
+      "account_name_found": 13,
+      "account_name_remaining": 0
+    },
+    {
+      "path": "experiments/pdf-reader/evidence/runs/run-21-4b3d28f.json",
+      "original_sha256": "7d30a1a3272a19b413b7b3058d5a970441cd95de414ba470bb82be4d754df4c0",
+      "sanitized_sha256": "1042f2789d10c61525517e9a58867f4fc9ef981aa6a89ed02e6ca4c1dadb7ad3",
+      "original_git_blob": "419e6b076674ca3ade3f6292f66c44ef0b573e79",
+      "sanitized_git_blob": "f3dadc26e0285b15e73f90829d29358d00fe9f33",
+      "home_paths_replaced": 2,
+      "names_replaced_outside_home_paths": 12,
+      "account_name_found": 14,
+      "account_name_remaining": 0
+    }
+  ]
+}

@@ -1,0 +1,1558 @@
+{
+ "kind": "developer self-test (Claude-G); not an independent Codex-R4 result",
+ "old_probe_sha256": "e25a7ec4f53461ae34a0603e1b752dd4964c924906d942f8cb97d28999f92730",
+ "new_probe_sha256": "249079ca9042c1ccc6f250e89b8a19c1bbe1aaf7f7df74920918fda1de62e3bc",
+ "files": {
+  "a01-flate-bomb.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a02-nested-flate.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a03-image-label-bomb.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a04-decoded-total.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a05-too-many-pages.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a06-declared-objects.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a07a-deep-stream-dict.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unsupported_structure"
+   ],
+   "new_codes": [
+    "unsupported_structure"
+   ]
+  },
+  "a07b-deep-page-dict.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "a08-form-recursion.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "a09-form-fanout.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a10-lzw.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unsupported_feature"
+   ],
+   "new_codes": [
+    "unsupported_feature"
+   ]
+  },
+  "a11-codec-on-content.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unsupported_feature"
+   ],
+   "new_codes": [
+    "unsupported_feature"
+   ]
+  },
+  "a12-indirect-filter.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unsupported_feature"
+   ],
+   "new_codes": [
+    "unsupported_feature"
+   ]
+  },
+  "a13-unknown-filter.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unsupported_feature"
+   ],
+   "new_codes": [
+    "unsupported_feature"
+   ]
+  },
+  "a14-run-length-bomb.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a15-stream-count.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a16-big-input.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a17-fake-endstream.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "a18-encrypted-owner-only.pdf": {
+   "identical": true,
+   "old_codes": [
+    "encrypted"
+   ],
+   "new_codes": [
+    "encrypted"
+   ]
+  },
+  "a19-encrypted-user-password.pdf": {
+   "identical": true,
+   "old_codes": [
+    "encrypted"
+   ],
+   "new_codes": [
+    "encrypted"
+   ]
+  },
+  "a20-escaped-encrypt.pdf": {
+   "identical": true,
+   "old_codes": [
+    "encrypted"
+   ],
+   "new_codes": [
+    "encrypted"
+   ]
+  },
+  "c01-truncated-half.pdf": {
+   "identical": true,
+   "old_codes": [
+    "truncated"
+   ],
+   "new_codes": [
+    "truncated"
+   ]
+  },
+  "c02-truncated-tail.pdf": {
+   "identical": true,
+   "old_codes": [
+    "truncated"
+   ],
+   "new_codes": [
+    "truncated"
+   ]
+  },
+  "c03-wrong-startxref.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "c04-damaged-flate.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "c05-not-a-pdf.pdf": {
+   "identical": true,
+   "old_codes": [
+    "not_a_pdf"
+   ],
+   "new_codes": [
+    "not_a_pdf"
+   ]
+  },
+  "c06-garbage.pdf": {
+   "identical": true,
+   "old_codes": [
+    "truncated"
+   ],
+   "new_codes": [
+    "truncated"
+   ]
+  },
+  "c07-page-count.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "c08-empty.pdf": {
+   "identical": true,
+   "old_codes": [
+    "not_a_pdf"
+   ],
+   "new_codes": [
+    "not_a_pdf"
+   ]
+  },
+  "p01-single-en.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "p02-multi-en.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "p03-cjk-reportlab.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "p04-rotated.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "p05-two-column.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "p06-font-mapping.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unmapped_characters"
+   ],
+   "new_codes": [
+    "unmapped_characters"
+   ]
+  },
+  "p07-blank.pdf": {
+   "identical": true,
+   "old_codes": [
+    "no_text"
+   ],
+   "new_codes": [
+    "no_text"
+   ]
+  },
+  "p08-scanned-images.pdf": {
+   "identical": true,
+   "old_codes": [
+    "no_text_layer"
+   ],
+   "new_codes": [
+    "no_text_layer"
+   ]
+  },
+  "p09-mixed-pages.pdf": {
+   "identical": true,
+   "old_codes": [
+    "image_page",
+    "images"
+   ],
+   "new_codes": [
+    "image_page",
+    "images"
+   ]
+  },
+  "p10-ruled-table.pdf": {
+   "identical": true,
+   "old_codes": [
+    "table_grid"
+   ],
+   "new_codes": [
+    "table_grid"
+   ]
+  },
+  "p11-formula.pdf": {
+   "identical": true,
+   "old_codes": [
+    "math_layout"
+   ],
+   "new_codes": [
+    "math_layout"
+   ]
+  },
+  "p12-annotations-form.pdf": {
+   "identical": true,
+   "old_codes": [
+    "annotations",
+    "embedded_files",
+    "form_fields",
+    "javascript"
+   ],
+   "new_codes": [
+    "annotations",
+    "embedded_files",
+    "form_fields",
+    "javascript"
+   ]
+  },
+  "p13-invisible-ocr-layer.pdf": {
+   "identical": true,
+   "old_codes": [
+    "images",
+    "invisible_text"
+   ],
+   "new_codes": [
+    "images",
+    "invisible_text"
+   ]
+  },
+  "p14-outside-and-duplicates.pdf": {
+   "identical": true,
+   "old_codes": [
+    "outside_page"
+   ],
+   "new_codes": [
+    "outside_page"
+   ]
+  },
+  "p15-positioned-words.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "p16-text-cap.pdf": {
+   "identical": true,
+   "old_codes": [
+    "truncated_text"
+   ],
+   "new_codes": [
+    "truncated_text"
+   ]
+  },
+  "p17-glyph-budget.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "p18-draw-budget.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "d01-nested-form-string-bomb.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "d02-comment-before-stream-bomb.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "d03-nested-form-string-ok.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d04-comment-before-content-stream.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d05-strings-in-stream-dict.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d06-encrypt-as-words.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d07-size-as-words.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d08-script-names-as-words.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d09-escaped-javascript-action.pdf": {
+   "identical": true,
+   "old_codes": [
+    "javascript"
+   ],
+   "new_codes": [
+    "javascript"
+   ]
+  },
+  "d10-escaped-embedded-file.pdf": {
+   "identical": true,
+   "old_codes": [
+    "embedded_files"
+   ],
+   "new_codes": [
+    "embedded_files"
+   ]
+  },
+  "d11-escaped-link-javascript.pdf": {
+   "identical": true,
+   "old_codes": [
+    "javascript"
+   ],
+   "new_codes": [
+    "javascript"
+   ]
+  },
+  "d12-escaped-attachment-annotation.pdf": {
+   "identical": true,
+   "old_codes": [
+    "annotations",
+    "embedded_files"
+   ],
+   "new_codes": [
+    "annotations",
+    "embedded_files"
+   ]
+  },
+  "d13-contents-missing-member.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "d14-contents-string-member.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "d15-contents-dangling.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "d16-contents-two-parts.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d17-flate-wrong-adler.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "d18-flate-missing-adler.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "d19-flate-no-zlib-header.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "d20-form-wrong-adler.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "d21-image-wrong-adler.pdf": {
+   "identical": true,
+   "old_codes": [
+    "images"
+   ],
+   "new_codes": [
+    "images"
+   ]
+  },
+  "d22-xref-stream.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "d23-xref-stream-escaped-encrypt.pdf": {
+   "identical": true,
+   "old_codes": [
+    "encrypted"
+   ],
+   "new_codes": [
+    "encrypted"
+   ]
+  },
+  "d24-incremental-update.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f01-listing-in-text.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f02-listing-in-file-comment.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f03-flate-listing-in-text.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f04-listing-in-content-comment.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f05-listing-in-strings.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f06-lzw-listing-in-image-data.pdf": {
+   "identical": true,
+   "old_codes": [
+    "images"
+   ],
+   "new_codes": [
+    "images"
+   ]
+  },
+  "f07-endstream-in-text.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f08-endstream-in-text-indirect-length.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f09-objstm-listing-in-text.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f10-objstm-lzw-listing-in-text.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unsupported_feature"
+   ],
+   "new_codes": [
+    "unsupported_feature"
+   ]
+  },
+  "f11-listing-and-real-bomb.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "f12-damaged-part-and-listing.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "f13-real-unknown-filter.pdf": {
+   "identical": true,
+   "old_codes": [
+    "unsupported_feature"
+   ],
+   "new_codes": [
+    "unsupported_feature"
+   ]
+  },
+  "f14-bomb-listing-in-image-data.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "f15-contents-direct-null.pdf": {
+   "identical": true,
+   "old_codes": [
+    "no_text"
+   ],
+   "new_codes": [
+    "no_text"
+   ]
+  },
+  "f16-contents-indirect-null.pdf": {
+   "identical": true,
+   "old_codes": [
+    "no_text"
+   ],
+   "new_codes": [
+    "no_text"
+   ]
+  },
+  "f17-text-and-indirect-null-page.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f18-text-and-missing-reference-page.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "f19-contents-number.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "f20-contents-dictionary.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "f21-contents-array-null-member.pdf": {
+   "identical": true,
+   "old_codes": [
+    "damaged"
+   ],
+   "new_codes": [
+    "damaged"
+   ]
+  },
+  "f22-contents-null-in-object-stream.pdf": {
+   "identical": true,
+   "old_codes": [
+    "no_text"
+   ],
+   "new_codes": [
+    "no_text"
+   ]
+  },
+  "f23-text-and-direct-null-page.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "f24-header-with-comment.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g01-contents-raw-under-limit.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g02-contents-raw-at-limit.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g03-contents-raw-over-limit.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g04-contents-raw-17mib-early-endstream.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g05-form-raw-under-limit.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g06-form-raw-at-limit.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g07-form-raw-over-limit.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g08-form-raw-17mib-early-endstream.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g09-indirect-length-over-limit.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g10-indirect-length-under-limit-early-endstream.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g11-length-in-objstm-over-limit.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g12-length-in-objstm-under-limit.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g13-matching-length-endstream-comment.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g14-length-too-short.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g15-length-too-long.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g16-length-missing.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g17-wrong-length-17mib-early-endstream.pdf": {
+   "identical": true,
+   "old_codes": [
+    "no_text"
+   ],
+   "new_codes": [
+    "no_text"
+   ]
+  },
+  "g18-flate-bomb-wrong-length.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g19-objstm-bomb-in-image-data.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g20-objstm-raw-over-limit.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g21-rebuilt-xref-raw-over-limit.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g22-rebuilt-xref-flate-bomb.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g23-rebuilt-xref-control.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g24-unbroken-xref-control.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "g25-dictionary-read-as-stream.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g26-xref-stream-without-data.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "g27-objstm-without-data.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "e01-libreoffice.pdf": {
+   "identical": true,
+   "old_codes": [
+    "images",
+    "math_layout",
+    "table_grid"
+   ],
+   "new_codes": [
+    "images",
+    "math_layout",
+    "table_grid"
+   ]
+  },
+  "e02-chromium.pdf": {
+   "identical": true,
+   "old_codes": [
+    "images",
+    "math_layout",
+    "table_grid"
+   ],
+   "new_codes": [
+    "images",
+    "math_layout",
+    "table_grid"
+   ]
+  },
+  "e03a-libreoffice-open-password.pdf": {
+   "identical": true,
+   "old_codes": [
+    "encrypted"
+   ],
+   "new_codes": [
+    "encrypted"
+   ]
+  },
+  "e03b-libreoffice-permissions-only.pdf": {
+   "identical": true,
+   "old_codes": [
+    "encrypted"
+   ],
+   "new_codes": [
+    "encrypted"
+   ]
+  },
+  "q01-no-unicode-only.pdf": {
+   "identical": true,
+   "old_codes": [
+    "no_unicode"
+   ],
+   "new_codes": [
+    "no_unicode"
+   ]
+  },
+  "q02-ruled-table-long-cells.pdf": {
+   "identical": true,
+   "old_codes": [
+    "table_grid"
+   ],
+   "new_codes": [
+    "table_grid"
+   ]
+  },
+  "q03-unruled-long-cells.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "q04-label-block.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l01-single-column.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l02-single-column-shuffled.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l03-two-columns-by-column.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l04-two-columns-by-row.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l05-two-columns-reversed.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l06-two-columns-word-order.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l07-mixed-out-of-order.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l08-mixed-in-order.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l09-three-columns.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l10-unequal-columns-header-footer.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l11-staggered-columns.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l12-ruled-table-by-column.pdf": {
+   "identical": true,
+   "old_codes": [
+    "table_grid"
+   ],
+   "new_codes": [
+    "table_grid"
+   ]
+  },
+  "l13-ruled-table-two-line-cell.pdf": {
+   "identical": true,
+   "old_codes": [
+    "table_grid"
+   ],
+   "new_codes": [
+    "table_grid"
+   ]
+  },
+  "l14-aligned-table.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l15-wide-gaps-single-column.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l16-label-rows.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l17-rotated-in-gutter.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l18-cjk-two-columns.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l19-short-columns.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l20-table-then-columns.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l21-narrow-gutter-justified.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l22-wrapped-list.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "l23-ruled-table-by-row.pdf": {
+   "identical": true,
+   "old_codes": [
+    "table_grid"
+   ],
+   "new_codes": [
+    "table_grid"
+   ]
+  },
+  "l24-justified-wide-gaps-per-line.pdf": {
+   "identical": true,
+   "old_codes": [
+    "interleaved_columns"
+   ],
+   "new_codes": [
+    "interleaved_columns"
+   ]
+  },
+  "l25-justified-wide-gaps-per-word.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "x01-libreoffice-two-columns.pdf": {
+   "identical": true,
+   "old_codes": [
+    "table_grid"
+   ],
+   "new_codes": [
+    "table_grid"
+   ]
+  },
+  "x02-chromium-two-columns.pdf": {
+   "identical": true,
+   "old_codes": [
+    "table_grid"
+   ],
+   "new_codes": [
+    "table_grid"
+   ]
+  },
+  "x03-libreoffice-three-columns.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-128KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-1MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-256KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-2MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-4MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-512KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-64KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S1-big-string-8MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-128KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-1MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-256KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-2MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-4MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-512KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-64KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S2-comment-stress-8MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-128KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-1MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-256KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-2MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-4MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-512KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-64KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S3-open-literal-8MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-128KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-1MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-256KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-2MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-4MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-512KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-64KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S4-open-hex-8MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S5-no-endstream-128KiB.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "S5-no-endstream-1MiB.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "S5-no-endstream-256KiB.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "S5-no-endstream-2MiB.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "S5-no-endstream-4MiB.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "S5-no-endstream-512KiB.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "S5-no-endstream-64KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S5-no-endstream-8MiB.pdf": {
+   "identical": true,
+   "old_codes": [
+    "resource_limit"
+   ],
+   "new_codes": [
+    "resource_limit"
+   ]
+  },
+  "S6-comment-line-128KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S6-comment-line-1MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S6-comment-line-256KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S6-comment-line-2MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S6-comment-line-4MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S6-comment-line-512KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S6-comment-line-64KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S6-comment-line-8MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-128KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-1MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-256KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-2MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-4MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-512KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-64KiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  },
+  "S7-nested-dicts-8MiB.pdf": {
+   "identical": true,
+   "old_codes": [],
+   "new_codes": []
+  }
+ },
+ "totals": {
+  "files": 214,
+  "identical": 214,
+  "changed": 0
+ }
+}

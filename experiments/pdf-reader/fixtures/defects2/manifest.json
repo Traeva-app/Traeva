@@ -1,0 +1,102 @@
+{
+  "generator": "fixtures/defects2/generate.py",
+  "note": "Synthetic reproductions of R4's second-round findings (R4-PDF-06, R4-PDF-07), from R4's descriptions only. Offline reader only, never a desktop viewer.",
+  "files": {
+    "f01-listing-in-text.pdf": {
+      "sha256": "e57795b87e0570e66593f3796d5406f57334b36c7b93ca68c47b5544fb5c874d",
+      "bytes": 704
+    },
+    "f02-listing-in-file-comment.pdf": {
+      "sha256": "39221f2824ad183aa4e2d41eea290a3c32d8a0dc3c863667c8c647f8fc88a14c",
+      "bytes": 736
+    },
+    "f03-flate-listing-in-text.pdf": {
+      "sha256": "43cd8f683687d449691459e8593ce45caff3df1fe9024e646b314a61ba32cafe",
+      "bytes": 705
+    },
+    "f04-listing-in-content-comment.pdf": {
+      "sha256": "b653d4d05e85e06c6c6297c5da9360eb6a1b4e5f45313374f058756e5edb35aa",
+      "bytes": 731
+    },
+    "f05-listing-in-strings.pdf": {
+      "sha256": "5707c71d63c68367a7e46504beb898f16c01f3176a8067c43248736180aeda04",
+      "bytes": 986
+    },
+    "f06-lzw-listing-in-image-data.pdf": {
+      "sha256": "f6d9391e1d9a43d46a9328743b8775f24b9e1d63f48347001b8d016dbffa6e96",
+      "bytes": 1210
+    },
+    "f07-endstream-in-text.pdf": {
+      "sha256": "29994da89bf8d26972622ae305cba758ead1fae28b28134e64c6ad5cc62cb3cf",
+      "bytes": 701
+    },
+    "f08-endstream-in-text-indirect-length.pdf": {
+      "sha256": "d46326169dcd994c1f6e3f4cfa735b1b4406a8996c6a1a44c6a9ed7b22808e6c",
+      "bytes": 726
+    },
+    "f09-objstm-listing-in-text.pdf": {
+      "sha256": "f266b76c1fac59bf9f6c78ee274124268bcbe9f2066296711f7b514f6a57bd16",
+      "bytes": 721
+    },
+    "f10-objstm-lzw-listing-in-text.pdf": {
+      "sha256": "194510f198e29a3e88d1a32f9d9c00e1facd8a809173e47569c1cf75f687fbb4",
+      "bytes": 723
+    },
+    "f11-listing-and-real-bomb.pdf": {
+      "sha256": "06ea9a606387d779457b81a0473e069dee393cc4bd545508add4e18462a34dc1",
+      "bytes": 18372
+    },
+    "f12-damaged-part-and-listing.pdf": {
+      "sha256": "2684c349ca2f12c90dadc01cd683e7014a2b4d3206aab3ea040752d2814dc717",
+      "bytes": 853
+    },
+    "f13-real-unknown-filter.pdf": {
+      "sha256": "1e12f9f4e166b2709fc7027d2afa20b93ac5e05fb4d0057863d066c0a1c97e29",
+      "bytes": 614
+    },
+    "f14-bomb-listing-in-image-data.pdf": {
+      "sha256": "2b24159b15a63a79dd01de9d260ec33628a5506226b2532a21eaf307a5641f5e",
+      "bytes": 18306
+    },
+    "f15-contents-direct-null.pdf": {
+      "sha256": "87a923453370336ffef9339419d7dc3da18d587815c3778ef6ac417b7ff36c9d",
+      "bytes": 521
+    },
+    "f16-contents-indirect-null.pdf": {
+      "sha256": "4851bacd47cf54c06c04a71006167d86e139a356b6247a7e5119ce7cfbc24174",
+      "bytes": 562
+    },
+    "f17-text-and-indirect-null-page.pdf": {
+      "sha256": "9d4018a40ad585bac3b5120c1fd1cc96ad74d4d6b584cd7ac72acd3554355e96",
+      "bytes": 846
+    },
+    "f18-text-and-missing-reference-page.pdf": {
+      "sha256": "cbe2e1a62f82cb900fdbb4665d6d270c916066527cf9dc0691fb21ed5d11993b",
+      "bytes": 807
+    },
+    "f19-contents-number.pdf": {
+      "sha256": "8a5bb712434a2daa2d7f023795b907de85dc5c9f2c86fc451298c0bfb4aca732",
+      "bytes": 560
+    },
+    "f20-contents-dictionary.pdf": {
+      "sha256": "8cd0ce22fc1809438bf03040a932a7f2c8dab05946621e2d4511cd89d0174461",
+      "bytes": 584
+    },
+    "f21-contents-array-null-member.pdf": {
+      "sha256": "6e1f598f9804f764d63b6c672b26d0b53b5554bdd50ec30db360dd2d5161fe98",
+      "bytes": 712
+    },
+    "f22-contents-null-in-object-stream.pdf": {
+      "sha256": "3caaaca27cd84e55da5c6e352ee40d57d3afdc2b2ea9e50406bb3c714630dea8",
+      "bytes": 486
+    },
+    "f23-text-and-direct-null-page.pdf": {
+      "sha256": "57cf912a4468c1b13255dc3f80e4d06b1c586243c14ad9caa81392ea05660a44",
+      "bytes": 805
+    },
+    "f24-header-with-comment.pdf": {
+      "sha256": "5f18b26ec499d8953c0c225f62d231e86fba477f5cd392eeb7a33d3e62e109df",
+      "bytes": 659
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "kind": "F metadata cleanup evidence; R3 new-head review pending",
+  "stages": [
+    {
+      "kind": "metadata-sanitized derivative; not a byte-identical native Excel output",
+      "original_output_sha256": "c78ea807b695b297027463160b7a9e86e9d579ef035b5ffa67c6df55d6eabcf2",
+      "original_output_bytes": 11471,
+      "sanitized_sha256": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650",
+      "sanitized_bytes": 8710,
+      "changed_parts": [
+        "xl/workbook.xml",
+        "docProps/core.xml"
+      ],
+      "unchanged_parts": 10,
+      "field_counts": {
+        "existing_identity_fields": 1,
+        "added_identity_fields": 1,
+        "company_manager_fields": 0,
+        "absolute_path_elements": 1
+      },
+      "entry_order_preserved": true,
+      "compression_methods_preserved": true,
+      "crc_and_sizes_valid": true,
+      "remaining_private_locations": 0,
+      "formula_evaluation": false,
+      "unchanged_part_payloads_verified": true,
+      "stage": "baseline",
+      "field_checks": 41,
+      "field_result": "FIELD_PASS",
+      "worksheet_context_literal_formula_cache_unchanged": true,
+      "limitations_unchanged": true,
+      "reader_status": "partial",
+      "reader_output_sha256": "1b644466926bf08aa5ba48a7a0a7cd1a5acac1ff7a5a750555721d8a2eb38ed7"
+    },
+    {
+      "kind": "metadata-sanitized derivative; not a byte-identical native Excel output",
+      "original_output_sha256": "26fde6cd9cf76febafccdb8155cebce7bc54e56419705b23b5af86cf9e3b5d04",
+      "original_output_bytes": 11480,
+      "sanitized_sha256": "5eb4915a4f6622e22bf8890d7fa51725143f6311d63adbd18dea8192299cefc4",
+      "sanitized_bytes": 8717,
+      "changed_parts": [
+        "xl/workbook.xml",
+        "docProps/core.xml"
+      ],
+      "unchanged_parts": 10,
+      "field_counts": {
+        "existing_identity_fields": 1,
+        "added_identity_fields": 1,
+        "company_manager_fields": 0,
+        "absolute_path_elements": 1
+      },
+      "entry_order_preserved": true,
+      "compression_methods_preserved": true,
+      "crc_and_sizes_valid": true,
+      "remaining_private_locations": 0,
+      "formula_evaluation": false,
+      "unchanged_part_payloads_verified": true,
+      "stage": "input_edit",
+      "field_checks": 41,
+      "field_result": "FIELD_PASS",
+      "worksheet_context_literal_formula_cache_unchanged": true,
+      "limitations_unchanged": true,
+      "reader_status": "partial",
+      "reader_output_sha256": "531c7019b509f49a89ed785f5664d184fdf117583c0493ab406ff5c1724ce5af"
+    },
+    {
+      "kind": "metadata-sanitized derivative; not a byte-identical native Excel output",
+      "original_output_sha256": "eeddbfd45da9e52493457fdbf795f1cb49d0d1c7caef6a3491708596faa366cd",
+      "original_output_bytes": 11476,
+      "sanitized_sha256": "2acf204755f8ba50625c8c96acc60c1fb4c3f3c3084f84f62a452b54941abed0",
+      "sanitized_bytes": 8716,
+      "changed_parts": [
+        "xl/workbook.xml",
+        "docProps/core.xml"
+      ],
+      "unchanged_parts": 10,
+      "field_counts": {
+        "existing_identity_fields": 1,
+        "added_identity_fields": 1,
+        "company_manager_fields": 0,
+        "absolute_path_elements": 1
+      },
+      "entry_order_preserved": true,
+      "compression_methods_preserved": true,
+      "crc_and_sizes_valid": true,
+      "remaining_private_locations": 0,
+      "formula_evaluation": false,
+      "unchanged_part_payloads_verified": true,
+      "stage": "formula_edit",
+      "field_checks": 41,
+      "field_result": "FIELD_PASS",
+      "worksheet_context_literal_formula_cache_unchanged": true,
+      "limitations_unchanged": true,
+      "reader_status": "partial",
+      "reader_output_sha256": "cb023292440927ea5bdc8f8e40c0bf093c30e1183b52e6fee82acf55a23deeec"
+    }
+  ],
+  "original_outputs_retained_in_rewritten_history": false,
+  "original_output_hashes_are_historical_provenance_only": true,
+  "text_files_sanitized": 2,
+  "private_parts_before": 6,
+  "private_locations_remaining": 0,
+  "cache_freshness": "unverified",
+  "checks": {
+    "captured_utc": "2026-10-12T05:45:13.102298+00:00",
+    "results": [
+      {
+        "check": "fmt",
+        "command": "cargo fmt --manifest-path experiments/xlsx-reader/Cargo.toml --all --check",
+        "exit_code": 0,
+        "status": "PASS",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "check": "clippy",
+        "command": "cargo clippy --offline --locked --manifest-path experiments/xlsx-reader/Cargo.toml --all-targets -- -D warnings",
+        "exit_code": 0,
+        "status": "PASS",
+        "log_sha256": "b435b3830aa73e1a763f4419aa16b2d34ea4ff69c385e9b8cf78b0c10eb29535"
+      },
+      {
+        "check": "tests",
+        "command": "cargo test --offline --locked --manifest-path experiments/xlsx-reader/Cargo.toml",
+        "exit_code": 0,
+        "status": "PASS",
+        "log_sha256": "cf19642a3040875d222187565fe77429dbec5a1457eda16fa6f085138377f52f"
+      },
+      {
+        "check": "build",
+        "command": "cargo build --offline --locked --manifest-path experiments/xlsx-reader/Cargo.toml --bin xlsx-probe",
+        "exit_code": 0,
+        "status": "PASS",
+        "log_sha256": "a13905646e2aed93ec6ea9ed6ac91490a4e01f91af0215c3965279a910612149"
+      },
+      {
+        "check": "metadata-tests",
+        "command": "python3 experiments/xlsx-reader/excel-save/test-sanitize-metadata.py",
+        "exit_code": 0,
+        "status": "PASS",
+        "log_sha256": "edb4e2159c923ea45a32656078835cdf531c3d7b414c670dd786978875cb0678"
+      }
+    ]
+  },
+  "probe_sha256": "e882c4b6f45fc335992c8a2aabca397bdc3051177dc212cfd5ebf85149504fbb",
+  "reviewed_reader_commit": "6de78846225a65321089ec5794254407f35d632d",
+  "revalidation_utc": "2026-10-12T05:47:28.474980+00:00",
+  "frozen_protocol_sha256": "bf3807767d1fb5740118be64a2e85410d960e17d3b3dc4767b576357075f1de0",
+  "coordinate_comparisons_unchanged": true,
+  "read_only_openpyxl_crosscheck": "PASS_UNCHANGED_FIELDS_NO_SAVE",
+  "first_supplemental_harness_result": "FAIL: wrong selected cell addresses; original result retained in privacy-checks/first-crosscheck-fail.json; corrected to frozen protocol without changing expectations",
+  "runtime_source_unchanged": true,
+  "text_home_path_replacements": 10,
+  "archive_comment_followup": {
+    "r3_first_fail": "https://github.com/P30g53/Traeva/pull/137#issuecomment-6118794567",
+    "r3_formal_report": "https://github.com/P30g53/Traeva/pull/137#issuecomment-6118875317",
+    "reviewed_prior_head": "5446144eaa88a71ff02326abba28e27ce769f4bf",
+    "fix": "Include archive-level ZIP comment in the existing known-identity/home residual scan; refuse returning derivative when present",
+    "first_local_result": "privacy-checks/archive-comment-first-fail.json",
+    "same_frozen_input_retest": "privacy-checks/archive-comment-regression.json",
+    "metadata_tests": 4,
+    "metadata_tests_status": "PASS",
+    "native_packages_and_reader_outputs": "BYTE_IDENTICAL",
+    "native_stage_assertions_each": 41,
+    "reader_runtime_unchanged": true,
+    "independent_r3_fix_revalidation": "PENDING",
+    "independent_r3_office": "COMPLETED_SEPARATELY_IN_PR161_LIMITED_SCOPE",
+    "office_reports": [
+      "https://github.com/P30g53/Traeva/pull/161#issuecomment-6117727421",
+      "https://github.com/P30g53/Traeva/pull/161#issuecomment-6117918871"
+    ],
+    "real_gui_operations_this_followup": 0,
+    "r3_failure_history_preserved": true,
+    "privacy_scan": {
+      "introduced_files": 51,
+      "xlsx_parts": 52,
+      "remaining_known_private_locations": 0
+    }
+  },
+  "initial_scan_at_5446144": {
+    "introduced_files_scanned": 46,
+    "xlsx_parts_scanned": 52,
+    "remaining_known_private_identity_home_tokens": 0,
+    "remaining_absolute_home_paths_in_package_parts": 0,
+    "hash_inventories": "PASS",
+    "diff_whitespace": "PASS"
+  }
+}

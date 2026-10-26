@@ -1,0 +1,173 @@
+{
+  "date_utc": "2026-10-12",
+  "baseline_commit": "c6a711d7f3155aee0f30b82eb44aa27cc267e523",
+  "legacy_reviewed_head": "5e693a54021194a769b350c75cd89838e0875861",
+  "legacy_merge_commit": "eef1192b32927ed1ec5b569b6174cbc00c79d698",
+  "reader_versions": [
+    "pptx-experiment-1",
+    "pptx-1",
+    "pptx-preview-1"
+  ],
+  "environment": {
+    "os": "macOS 27.0.1 arm64",
+    "rust": "1.98.1",
+    "new_office_gui_run": false,
+    "real_model_calls": 0
+  },
+  "contract": {
+    "pr": 150,
+    "reviewed_head": "f19c31b6c7ad6f5095668a07e76a9ca0a290e10e",
+    "state": "merged documentation v23",
+    "e_clarifications_confirmed": "https://github.com/P30g53/Traeva/pull/150#issuecomment-6116720334"
+  },
+  "actual_helper": {
+    "pr": 151,
+    "head": "3d1a4a98b3afaa51e66ea1a276aa83f3778f385c",
+    "state": "Draft at verification",
+    "reader_sha256": "e0eb50657197eee4b343d38d55c13294a2c89635d8d8575df3dd12bef9bdca55",
+    "clean_checkout": true,
+    "method": "direct path dependency on real A core, E source via #[path]; no copied recognizer",
+    "tests_passed": 5,
+    "strict_clippy": "PASS",
+    "prior_helper_head": "68d4e58f7a0bf297d9fa06ed1e1d41a3536fa9a8",
+    "prior_helper_tests_passed": 5
+  },
+  "source_sha256": {
+    "src/pptx.rs": "a625133ae25c551d98c0c058b534e244eb69cf686c9ea9b539d484239f78bced",
+    "src/pptx_projection.rs": "398aefaab5ed2c389ed963247f0a4d152ade7cac4145ae83cd8b00b8cf5035ee",
+    "src/pptx_package.rs": "259f7a1c4f07d8112f2ef39a75315a502df87ad7940b0cf8fe057357b026de23",
+    "src/pptx_tests.rs": "7c516419205bb35d02bf204a86b301b2267672cf2c3a042ea711975d6597fb86",
+    "src/pptx_projection_tests.rs": "d414901021349d514812194a96fa073f10cbf466a34489775b67a9f71a1695d6",
+    "tests/pptx_reader/lib.rs": "2d5fcd58669801886f3ab8e797aebd509cf69872174e9605d849c003a0c72a71",
+    "tests/pptx_reader/probe.rs": "b3f18edad7de0bb044ebabc9149ff41c53a064856141e94fa99f5eb40f0e2bb4",
+    "tests/pptx_reader/snapshot_tests.rs": "abeb93a175cfa048a316cca1aac970aedc46ced9b971de1a9f73e2cfe7961787",
+    "tests/pptx_reader/a151_compat.rs": "90c94f9ccf50c6d685cb2eb484e296db802f8bed852e6428b1f04868beda0517",
+    "tests/pptx_reader/check_a151.py": "c4e4c6ca07df32a762a61b4fce8f7ffab3dc8f2cceb169ac8241aca52740b0ee",
+    "tests/pptx_reader/Cargo.toml": "30ae5f1ba506b31bb0285fe916f955041b1e611a120b3cda24caa56b2156c62f",
+    "tests/pptx_reader/Cargo.lock": "2d8caa5bca2f36c5a9abdf8b1ad6f86847c24f89b5a93134202e896a37be97f4"
+  },
+  "fixed_expectations_sha256": {
+    "protocol-frozen.json": "94bb352cc82bd9d28046bcdd8aa8b0ccc1eafe66f4ba102e51cdb78a67df8a76",
+    "protocol-addendum-before-boundary-test.json": "5b0316aa1a1a30c6d83e9493ac25f81fecb4d40eedadcdc452ef16999f4e7181"
+  },
+  "checks": {
+    "standalone_reader": {
+      "command": "cargo test --manifest-path crates/traeva-core/tests/pptx_reader/Cargo.toml --offline --locked",
+      "passed": 76,
+      "failed": 0,
+      "old_reader_tests": 56,
+      "new_projection_tests": 17,
+      "snapshot_tests": 3
+    },
+    "standalone_clippy": {
+      "command": "cargo clippy --manifest-path crates/traeva-core/tests/pptx_reader/Cargo.toml --all-targets --offline --locked -- -D warnings",
+      "status": "PASS"
+    },
+    "root_clippy": {
+      "command": "cargo clippy --workspace --all-targets --offline --locked -- -D warnings",
+      "status": "PASS"
+    },
+    "root_core": {
+      "command": "cargo test -p traeva-core --offline --locked",
+      "passed": 877,
+      "failed": 0,
+      "ignored": 10,
+      "method": "approved offline rerun allowing local loopback mocks; first sandbox FAIL retained"
+    },
+    "format": {
+      "commands": [
+        "cargo fmt --all --check",
+        "cargo fmt --manifest-path crates/traeva-core/tests/pptx_reader/Cargo.toml -- --check",
+        "rustfmt --edition 2024 --check crates/traeva-core/tests/pptx_reader/a151_compat.rs"
+      ],
+      "status": "PASS"
+    },
+    "frontend_build": {
+      "command": "npm run build",
+      "preparation": "npm ci --offline --ignore-scripts",
+      "status": "PASS"
+    }
+  },
+  "first_results_retained": [
+    {
+      "log": "attempt1.log",
+      "status": "FAIL",
+      "reason": "nested validation lock was missing four existing traeva-core dependency edges"
+    },
+    {
+      "log": "attempt2.log",
+      "status": "FAIL",
+      "reason": "E test helper lifetime compilation error"
+    },
+    {
+      "log": "attempt3.log",
+      "status": "PASS",
+      "passed": 74,
+      "scope": "before added boundary checks"
+    },
+    {
+      "log": "attempt4-boundary.log",
+      "status": "FAIL",
+      "reason": "extra page separator became a source blank line on last-page move"
+    },
+    {
+      "log": "root-test-attempt1.log",
+      "status": "FAIL",
+      "passed": 692,
+      "failed": 82,
+      "ignored": 4,
+      "reason": "sandbox blocked loopback mocks; follow-up same-command run passed without product changes"
+    }
+  ],
+  "evidence_logs_sha256": {
+    "attempt1.log": "20760cc074cde2589ac28ea615a75888f1af0f697eaac38adb57ceea3a22b191",
+    "attempt2.log": "e2ee4715bfae1fa026d408cf521e0627e769a462ce7f85cf3d214373ac3e4582",
+    "attempt3.log": "829fe2de348a9f096a9258523059dcad021cf3f39f61f0991cd2c16a01e19806",
+    "attempt4-boundary.log": "46a7c0129cfda54f69b30774522bdc1c29bcae7673901582f60f1bd1b04ff563",
+    "attempt5.log": "77ef33ab16da2046a4d31f6fb78179ac10c6a9d636f3692eac01b95ba875816a",
+    "clippy-attempt1.log": "8a56f7e723fcbbe7f31f01b5430df958b5c6dbbc17ede688c09afb88ea512ef1",
+    "root-clippy-attempt1.log": "5375a6f291215dce4d3b055a3dc715976f7a240797ef3421d28873e355b7547b",
+    "root-test-attempt1.log": "a11659c0cd5964777c2b0c3e329aaaff6c289785eb33d864003dce10d151f577",
+    "root-loopback-diagnostic.log": "7b0bb6880bdab019cf1098c77bca0ce82a63166b29e17a3002b662398d791dff",
+    "root-test-attempt2.log": "7222ea4f2d068d3a71a2cf042f22599ba6df2517e201ca0f326f22e9b7ffdef3",
+    "npm-ci-attempt1.log": "0c0e17a70f3e5c7905f34939a3231bdece942360d59f37cb7ce12cc18d46bb57",
+    "npm-build-attempt1.log": "c0e0243f0a69b3ff066a5377410c63d1c00235b8166e5fd96e1243398939ab1d",
+    "a151-attempt1/test.log": "3692b3614ea0973e664168223b142e22f04c96551be1a86102dd627c89e3e5ad",
+    "a151-attempt2/test.log": "e161ce8f0822c8773e02bb4e72225c834d5050e088c2569fbb45d085f2e050d8",
+    "a151-clippy-attempt1.log": "3e838d09f310f61149a00f7a3052daa0f8977dca3c82fba5f71577c78eb6e8bf"
+  },
+  "unchanged": {
+    "root_cargo_lock_sha256": "2f90164e207d562846bbb0cbef6d249cad5d4fa339178370d51152ce049e125f",
+    "root_cargo_lock_matches_baseline": true,
+    "package_helper_and_limits": "unchanged",
+    "old_validation_sha256": "078e880e01616ccfce3b6003a9d48225353c9f59fde8fab3979485bd549d69f2",
+    "four_old_office_fixtures": "unchanged; no native re-save"
+  },
+  "independent_review": {
+    "new_projections": "NOT RUN by R3",
+    "legacy_offline": "59-input LIMITED PASS; old reviewed head only",
+    "legacy_powerpoint": "22-judgment LIMITED PASS; retained old native save/reopen/reorder/Notes subset only",
+    "legacy_links": [
+      "https://github.com/P30g53/Traeva/pull/135#issuecomment-6113016434",
+      "https://github.com/P30g53/Traeva/pull/135#issuecomment-6115260527"
+    ]
+  },
+  "not_verified": [
+    "production PPTX registration",
+    "Memory comparison/analysis/retrieval integration",
+    "renewed sending permission notice v4 and revocation",
+    "Tauri IPC/history UI",
+    "new projection independent review",
+    "new native GUI on this increment"
+  ],
+  "home_path_redaction": {
+    "note": "原证据因含本机路径而改写；当前字段指向脱敏版本，原 hash 保留如下。历史 FAIL/PASS 和原测试结论未变。",
+    "original_hash_references": [
+      {
+        "field": "unchanged.old_validation_sha256",
+        "original_sha256": "da9335cfec5ac341d09a85255f26ff936776c1978f7046f4d567104b801161bf",
+        "redacted_sha256": "078e880e01616ccfce3b6003a9d48225353c9f59fde8fab3979485bd549d69f2"
+      }
+    ]
+  }
+}

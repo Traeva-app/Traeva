@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-start-memory-search"
+description = "Enables the start_memory_search command without any pre-configured scope."
+commands.allow = ["start_memory_search"]
+
+[[permission]]
+identifier = "deny-start-memory-search"
+description = "Denies the start_memory_search command without any pre-configured scope."
+commands.deny = ["start_memory_search"]

@@ -1,0 +1,31 @@
+[package]
+name = "traeva-pdf-experiment"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+publish = false
+description = "TRAEVA #28 PDF Reader experiment (Claude-G). Not part of the root workspace."
+
+# Own workspace and lock: this experiment is not a member of the root
+# workspace and adds nothing to traeva-core.
+[workspace]
+
+[dependencies]
+# PDF parsing and page interpretation, pure Rust, forbids unsafe code.
+# Default features: embed-fonts (stand-ins for non-embedded fonts, from
+# PDFium, BSD-3-Clause) and embed-cmaps (Adobe's predefined CMaps,
+# BSD-3-Clause). Without embed-fonts, text in non-embedded fonts is lost.
+hayro-interpret = "=0.8.0"
+hayro-syntax = { version = "=0.8.0", default-features = false }
+kurbo = "=0.13.1"
+# Capped decoding in the raw-byte check.
+flate2 = { version = "=1.1.10", default-features = false, features = ["rust_backend"] }
+memchr = "=2.8.3"
+serde = { version = "=1.0.229", features = ["derive"] }
+# pdf-probe output only.
+serde_json = "=1.0.151"
+sha2 = "=0.11.0"
+
+[[bin]]
+name = "pdf-probe"
+path = "src/main.rs"

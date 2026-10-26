@@ -1,0 +1,1044 @@
+{
+  "baseline_commit": "6cc3a60742c54cac6e3e056eb422cf2af36d2bd2",
+  "reader": "docx-2",
+  "source_hashes": {
+    "crates/traeva-core/src/docx.rs": "765946eb65cf3e48f0daf90367b7a3ea37d339503a4b7d65efeaf45c49371fc2",
+    "crates/traeva-core/src/docx_tests.rs": "6062aad762985254e3cb3c6fdf892634ae16638ea573e6f88a04f1df8fd3e5a5",
+    "crates/traeva-core/tests/docx_reader/probe.rs": "6c117b77f77b27dc8fc03e322fbaf8422b4e12d998be8cef5a4a1cfb9700fa2b",
+    "crates/traeva-core/tests/docx_reader/snapshot_tests.rs": "3bf14c0fb8b5e106cb7c58297efa0194fe714c9f95226c90546418a9b33a15b9"
+  },
+  "environment": {
+    "baseline": "6cc3a60742c54cac6e3e056eb422cf2af36d2bd2",
+    "system": "macOS-27.0.1-arm64-arm-64bit",
+    "rust": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "word_version": "16.78",
+    "initial_fixture_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+    "root": "/private/tmp/traeva-d-word-lifecycle-20261010/root",
+    "data_isolation": "/private/tmp/traeva-d-word-lifecycle-20261010",
+    "cloud_requests": 0
+  },
+  "cloud_requests": 0,
+  "new_word_packages_published": false,
+  "checks": {
+    "reader_snapshot": {
+      "passed": 84,
+      "failed": 0,
+      "ignored": 0
+    },
+    "core_approved_local_mock": {
+      "passed": 769,
+      "failed": 0,
+      "ignored": 9
+    },
+    "frontend": {
+      "passed": 95,
+      "failed": 0
+    },
+    "workspace_clippy": "PASS",
+    "workspace_fmt": "PASS",
+    "standalone_clippy": "PASS",
+    "standalone_fmt": "PASS",
+    "frontend_build": "PASS"
+  },
+  "retained_failures": [
+    {
+      "phase": "first_reader_run",
+      "passed": 79,
+      "failed": 2,
+      "cause": "New assertions abbreviated an existing omission category; corrected to fields and field instructions."
+    },
+    {
+      "phase": "second_reader_compile",
+      "cause": "Test referenced nonexistent FileBusy; corrected to public FileChanging."
+    },
+    {
+      "phase": "first_core_run",
+      "passed": 588,
+      "failed": 82,
+      "ignored": 4,
+      "cause": "Sandbox denied loopback binding for local mocks. Full approved offline rerun passed; no real provider enabled."
+    }
+  ],
+  "logs": {
+    "traeva-d-lifecycle-npm-install.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-npm-install.log",
+      "sha256": "8fd40df9a8845dd2ba99be3416346386390a0fb8f5364830c98568eb04c40e11",
+      "bytes": 448
+    },
+    "traeva-d-lifecycle-workspace-fmt.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-workspace-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "traeva-d-lifecycle-frontend-build.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-frontend-build.log",
+      "sha256": "15392f0d972c8321d76060fdd4d2f5f9425b4059d52966e4c3f81bd80b073789",
+      "bytes": 391
+    },
+    "traeva-d-lifecycle-reader-tests-final.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-reader-tests-final.log",
+      "sha256": "52b5c1f93e53e02e74fee661a392744939c3a6b6e0839c2790af3af8ec559d2e",
+      "bytes": 6567
+    },
+    "traeva-d-lifecycle-reader-tests-compile-failure.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-reader-tests-compile-failure.log",
+      "sha256": "4efdbabedd8c804a794e78fbd9f889cc90cc3deedb0d4913983ee38e5982fc42",
+      "bytes": 724
+    },
+    "traeva-d-lifecycle-loopback-diagnostic.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-loopback-diagnostic.log",
+      "sha256": "d8a6bf0f5ea46d9a905d42b447c25faf5ac7470c7b7b92d64bd0a178c721c10a",
+      "bytes": 604
+    },
+    "traeva-d-lifecycle-workspace-clippy.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-workspace-clippy.log",
+      "sha256": "d69edbc69070adc5a7f7c03c45adc4e95aeb7c5ed666592891bebd82c82bc8c5",
+      "bytes": 8259
+    },
+    "traeva-d-lifecycle-build.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-build.log",
+      "sha256": "972c508a7123d4a7a0460f0eb1628f071f8bbe223b77cd0636e59d71b829ae1a",
+      "bytes": 647
+    },
+    "traeva-d-lifecycle-frontend-tests.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-frontend-tests.log",
+      "sha256": "3a60362d9d9010959ce08fc9cb2b3601717b39204c56f8742cd6d69c11e78a12",
+      "bytes": 8299
+    },
+    "traeva-d-lifecycle-reader-tests-first-failure.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-reader-tests-first-failure.log",
+      "sha256": "b440ccedd6eee78afbcb3b2174dfd60632f3bdc42863c991331977bc6d94ffb7",
+      "bytes": 10223
+    },
+    "traeva-d-lifecycle-build-final.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-build-final.log",
+      "sha256": "179e18d06b8af84f72cedf89cb70361866f40cf7643a1f107533d485f2a629b5",
+      "bytes": 255
+    },
+    "traeva-d-lifecycle-core-tests-approved.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-core-tests-approved.log",
+      "sha256": "59057419e861977c02d4ba4cd1aac6c6e9c7e4360a77656b7b54c90b4eb55867"
+    },
+    "traeva-d-lifecycle-reader-clippy.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-reader-clippy.log",
+      "sha256": "81bab2065a29df8714073dc66940168e5b01cf67da08ffe28090a282c9be51bb",
+      "bytes": 1812
+    },
+    "traeva-d-lifecycle-reader-fmt.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-reader-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "traeva-d-lifecycle-reader-tests.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-reader-tests.log",
+      "sha256": "c133fd15c7b6694c14cb5c4a72ec947168e4d20ab8c62ae42b8a2870741c18d6",
+      "bytes": 6512
+    },
+    "traeva-d-lifecycle-core-tests.log": {
+      "local_path": "/private/tmp/traeva-d-lifecycle-core-tests.log",
+      "sha256": "efabaf6e433681e57995bf3bb1de618e4873116b415b5afbe146cf008fa44e8c",
+      "bytes": 93403
+    }
+  },
+  "crash_preflight": {
+    "case": "O18-C-after-durable-snapshot",
+    "writer": "previous actual Word save, copied synthetic fixture; no current GUI action",
+    "process_exit": -9,
+    "signal": "SIGKILL",
+    "before": {
+      "at_ms": 1791671234434,
+      "event": "start",
+      "snapshots": [
+        {
+          "reader": {
+            "expected_matches": null,
+            "input_bytes": 12229,
+            "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "iterations": 1,
+            "mean_ms": 16.221125,
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+            "total_ms": 16.221125
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791671234266,
+            "file_id": "a268b192-ceb5-41c2-bec7-e1a5bad43cc9",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "436e6b1b-10de-4a40-8e02-8cd82cb6084e",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "fa3af5a1-840d-489b-9ebf-51a293013a1c"
+          }
+        }
+      ],
+      "source": {
+        "bytes": 12229,
+        "ctime_nsec": 734177705,
+        "ctime_sec": 1791670821,
+        "dev": 16777232,
+        "ino": 169555696,
+        "mtime_nsec": 734079496,
+        "mtime_sec": 1791670821
+      }
+    },
+    "after_fresh_process": {
+      "reader": {
+        "expected_matches": true,
+        "input_bytes": 12229,
+        "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+        "iterations": 1,
+        "mean_ms": 22.797625,
+        "summary": {
+          "chars": 64,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+        "total_ms": 22.797625
+      },
+      "snapshot": {
+        "byte_length": 12229,
+        "captured_at_ms": 1791671234266,
+        "file_id": "a268b192-ceb5-41c2-bec7-e1a5bad43cc9",
+        "file_revision": 1,
+        "relative_path": "lifecycle.docx",
+        "root_id": "436e6b1b-10de-4a40-8e02-8cd82cb6084e",
+        "sequence": 1,
+        "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+        "snapshot_id": "fa3af5a1-840d-489b-9ebf-51a293013a1c"
+      }
+    },
+    "boundary": "Crash after completed durable capture, not a crash during commit or whole-machine power loss",
+    "binary_sha256": "ea510d20297dc621f6f70454c1b22d8e23efbd8bfaf662564049cb2cd6e2df5e"
+  },
+  "current_word_gui": "COMPLETED with explicit capture gap at replacement; not production Word Memory acceptance",
+  "go_no_go": "PENDING October 13",
+  "r1_acceptance": "PENDING exact PR commit review",
+  "actual_word": {
+    "ui_slot_claim": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6102899503",
+    "ui_slot_return": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6102920320",
+    "word_version": "16.78",
+    "ui_actions": [
+      {
+        "action": "save_v1",
+        "at_ms": 1791671674236
+      },
+      {
+        "action": "save_without_edit",
+        "at_ms": 1791671687952
+      },
+      {
+        "action": "save_v2_while_polling",
+        "at_ms": 1791671702010
+      },
+      {
+        "action": "save_v3",
+        "at_ms": 1791671724027
+      },
+      {
+        "action": "save_v4",
+        "at_ms": 1791671724780
+      },
+      {
+        "action": "reopen_verified_then_closed",
+        "at_ms": 1791671769854
+      }
+    ],
+    "burst_save_command_interval_ms": 753,
+    "watchers": {
+      "opening": {
+        "initial_snapshot": {
+          "reader": {
+            "expected_matches": null,
+            "input_bytes": 12229,
+            "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "iterations": 1,
+            "mean_ms": 13.535458,
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+            "total_ms": 13.535458
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791671256612,
+            "file_id": "4e938832-b3ac-4ab3-a3e4-10afed9d4c06",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d4df22e-9c4e-4a4c-8be0-2588d05c6dcc",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "61c92158-bbda-46e9-b095-107b3a4223f9"
+          }
+        },
+        "outcomes": {
+          "problem:file_changed": 1
+        },
+        "observed_inode_transitions": [
+          169555696,
+          169718612
+        ],
+        "source_changed_during_check_calls": 0,
+        "poll_first_ms": null,
+        "poll_last_ms": null,
+        "snapshot_count": 1,
+        "stopped": true,
+        "log_path": "/private/tmp/traeva-d-word-lifecycle-20261010/evidence/opening-watch.ndjson",
+        "log_sha256": "02f0932f0a77f9f59dc7cc28ddb7a8ce551d64054b0c4005009846f95c6e1c87"
+      },
+      "v1": {
+        "initial_snapshot": {
+          "reader": {
+            "expected_matches": null,
+            "input_bytes": 12246,
+            "input_sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "iterations": 1,
+            "mean_ms": 12.948209,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "40f5ecf2b01fb960895665029a6192469993dd3392e9290253b64b0c5accd1c8",
+            "total_ms": 12.948209
+          },
+          "snapshot": {
+            "byte_length": 12246,
+            "captured_at_ms": 1791671684125,
+            "file_id": "4eed6fe8-90c2-4e77-a0fa-97e1e05400ab",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d434f92-22a2-42e4-bc32-d6265e21b22a",
+            "sequence": 1,
+            "sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "snapshot_id": "a828d37b-6eb2-4b8a-8c25-8ab208decd35"
+          }
+        },
+        "outcomes": {
+          "unchanged": 60,
+          "problem:file_changed": 217
+        },
+        "observed_inode_transitions": [
+          169718612,
+          169721742,
+          169723009
+        ],
+        "source_changed_during_check_calls": 1,
+        "poll_first_ms": 1791671694887,
+        "poll_last_ms": 1791671724828,
+        "snapshot_count": 1,
+        "stopped": true,
+        "log_path": "/private/tmp/traeva-d-word-lifecycle-20261010/evidence/v1-watch.ndjson",
+        "log_sha256": "391a3d43825afe78427e9cadaf943582a2ea6523ecd93fcc0939e62f80725500"
+      },
+      "v2": {
+        "initial_snapshot": {
+          "reader": {
+            "expected_matches": null,
+            "input_bytes": 12254,
+            "input_sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "iterations": 1,
+            "mean_ms": 22.070834,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "21ac4e52cdd94becb68ebad3919362d4d84d0a25fe46afa9efcc565ce02d6311",
+            "total_ms": 22.070834
+          },
+          "snapshot": {
+            "byte_length": 12254,
+            "captured_at_ms": 1791671712879,
+            "file_id": "1fa5fc94-f8b6-4cd3-852d-941140fce8b0",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "8e3c0d2c-9f29-4952-bf7c-2f4cb773aa24",
+            "sequence": 1,
+            "sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "snapshot_id": "dde6ca44-b270-4fa3-81b0-de3729038b02"
+          }
+        },
+        "outcomes": {
+          "unchanged": 50,
+          "problem:file_changed": 225
+        },
+        "observed_inode_transitions": [
+          169721742,
+          169723009,
+          169723289
+        ],
+        "source_changed_during_check_calls": 0,
+        "poll_first_ms": 1791671719173,
+        "poll_last_ms": 1791671749147,
+        "snapshot_count": 1,
+        "stopped": true,
+        "log_path": "/private/tmp/traeva-d-word-lifecycle-20261010/evidence/v2-watch.ndjson",
+        "log_sha256": "219b38a89feaccfe14a71716a2ff6d10dfc6edbb4e580bf799f7ae986fff5a87"
+      }
+    },
+    "source_observations": {
+      "v1": {
+        "at_ms": 1791671683130,
+        "ino": 169718612,
+        "dev": 16777232,
+        "size": 12246,
+        "sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+        "mtime_ns": 1791671673930898574,
+        "ctime_ns": 1791671674054520453
+      },
+      "nochange": {
+        "at_ms": 1791671696051,
+        "ino": 169718612,
+        "dev": 16777232,
+        "size": 12246,
+        "mtime_ns": 1791671673930898574,
+        "ctime_ns": 1791671674054520453,
+        "sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df"
+      },
+      "v2": {
+        "at_ms": 1791671711897,
+        "ino": 169721742,
+        "dev": 16777232,
+        "size": 12254,
+        "mtime_ns": 1791671701323026194,
+        "ctime_ns": 1791671701538588443,
+        "sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e"
+      },
+      "v4": {
+        "at_ms": 1791671732822,
+        "ino": 169723289,
+        "dev": 16777232,
+        "size": 12270,
+        "mtime_ns": 1791671725064610366,
+        "ctime_ns": 1791671725206353972,
+        "sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b"
+      }
+    },
+    "exact_text_checks": {
+      "v1": {
+        "expected_matches": true,
+        "input_bytes": 12246,
+        "input_sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+        "iterations": 1,
+        "mean_ms": 11.351917,
+        "summary": {
+          "chars": 62,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "40f5ecf2b01fb960895665029a6192469993dd3392e9290253b64b0c5accd1c8",
+        "total_ms": 11.351917
+      },
+      "v2": {
+        "expected_matches": true,
+        "input_bytes": 12254,
+        "input_sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+        "iterations": 1,
+        "mean_ms": 11.516584,
+        "summary": {
+          "chars": 62,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "21ac4e52cdd94becb68ebad3919362d4d84d0a25fe46afa9efcc565ce02d6311",
+        "total_ms": 11.516584
+      },
+      "v4": {
+        "expected_matches": true,
+        "input_bytes": 12270,
+        "input_sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+        "iterations": 1,
+        "mean_ms": 11.729125,
+        "summary": {
+          "chars": 62,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "4ef41ef25dd188ff7175b384662ca81941c14a632fbbca566a22259763d9f4e1",
+        "total_ms": 11.729125
+      }
+    },
+    "fresh_process_snapshot_checks": [
+      {
+        "stage": "word_closed_fresh_process",
+        "version": "opening",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12229,
+            "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "iterations": 1,
+            "mean_ms": 12.252875,
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+            "total_ms": 12.252875
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791671256612,
+            "file_id": "4e938832-b3ac-4ab3-a3e4-10afed9d4c06",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d4df22e-9c4e-4a4c-8be0-2588d05c6dcc",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "61c92158-bbda-46e9-b095-107b3a4223f9"
+          }
+        }
+      },
+      {
+        "stage": "word_closed_fresh_process",
+        "version": "v1",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12246,
+            "input_sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "iterations": 1,
+            "mean_ms": 11.049042,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "40f5ecf2b01fb960895665029a6192469993dd3392e9290253b64b0c5accd1c8",
+            "total_ms": 11.049042
+          },
+          "snapshot": {
+            "byte_length": 12246,
+            "captured_at_ms": 1791671684125,
+            "file_id": "4eed6fe8-90c2-4e77-a0fa-97e1e05400ab",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d434f92-22a2-42e4-bc32-d6265e21b22a",
+            "sequence": 1,
+            "sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "snapshot_id": "a828d37b-6eb2-4b8a-8c25-8ab208decd35"
+          }
+        }
+      },
+      {
+        "stage": "word_closed_fresh_process",
+        "version": "v2",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12254,
+            "input_sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "iterations": 1,
+            "mean_ms": 11.39775,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "21ac4e52cdd94becb68ebad3919362d4d84d0a25fe46afa9efcc565ce02d6311",
+            "total_ms": 11.39775
+          },
+          "snapshot": {
+            "byte_length": 12254,
+            "captured_at_ms": 1791671712879,
+            "file_id": "1fa5fc94-f8b6-4cd3-852d-941140fce8b0",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "8e3c0d2c-9f29-4952-bf7c-2f4cb773aa24",
+            "sequence": 1,
+            "sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "snapshot_id": "dde6ca44-b270-4fa3-81b0-de3729038b02"
+          }
+        }
+      },
+      {
+        "stage": "word_closed_fresh_process",
+        "version": "v4",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12270,
+            "input_sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "iterations": 1,
+            "mean_ms": 11.335042,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "4ef41ef25dd188ff7175b384662ca81941c14a632fbbca566a22259763d9f4e1",
+            "total_ms": 11.335042
+          },
+          "snapshot": {
+            "byte_length": 12270,
+            "captured_at_ms": 1791671735739,
+            "file_id": "1c9107de-f9b8-43d3-a20b-b4a3fcc85ca7",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "d8cef191-1ed9-4525-b2e8-ba43e3a8c9e8",
+            "sequence": 1,
+            "sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "snapshot_id": "17442c95-a59a-41de-9d9e-1191f183a8a2"
+          }
+        }
+      },
+      {
+        "stage": "renamed_fresh_process",
+        "version": "opening",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12229,
+            "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "iterations": 1,
+            "mean_ms": 11.188584,
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+            "total_ms": 11.188584
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791671256612,
+            "file_id": "4e938832-b3ac-4ab3-a3e4-10afed9d4c06",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d4df22e-9c4e-4a4c-8be0-2588d05c6dcc",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "61c92158-bbda-46e9-b095-107b3a4223f9"
+          }
+        }
+      },
+      {
+        "stage": "renamed_fresh_process",
+        "version": "v1",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12246,
+            "input_sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "iterations": 1,
+            "mean_ms": 11.242500000000001,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "40f5ecf2b01fb960895665029a6192469993dd3392e9290253b64b0c5accd1c8",
+            "total_ms": 11.242500000000001
+          },
+          "snapshot": {
+            "byte_length": 12246,
+            "captured_at_ms": 1791671684125,
+            "file_id": "4eed6fe8-90c2-4e77-a0fa-97e1e05400ab",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d434f92-22a2-42e4-bc32-d6265e21b22a",
+            "sequence": 1,
+            "sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "snapshot_id": "a828d37b-6eb2-4b8a-8c25-8ab208decd35"
+          }
+        }
+      },
+      {
+        "stage": "renamed_fresh_process",
+        "version": "v2",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12254,
+            "input_sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "iterations": 1,
+            "mean_ms": 11.159333,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "21ac4e52cdd94becb68ebad3919362d4d84d0a25fe46afa9efcc565ce02d6311",
+            "total_ms": 11.159333
+          },
+          "snapshot": {
+            "byte_length": 12254,
+            "captured_at_ms": 1791671712879,
+            "file_id": "1fa5fc94-f8b6-4cd3-852d-941140fce8b0",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "8e3c0d2c-9f29-4952-bf7c-2f4cb773aa24",
+            "sequence": 1,
+            "sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "snapshot_id": "dde6ca44-b270-4fa3-81b0-de3729038b02"
+          }
+        }
+      },
+      {
+        "stage": "renamed_fresh_process",
+        "version": "v4",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12270,
+            "input_sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "iterations": 1,
+            "mean_ms": 11.112416999999999,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "4ef41ef25dd188ff7175b384662ca81941c14a632fbbca566a22259763d9f4e1",
+            "total_ms": 11.112416999999999
+          },
+          "snapshot": {
+            "byte_length": 12270,
+            "captured_at_ms": 1791671735739,
+            "file_id": "1c9107de-f9b8-43d3-a20b-b4a3fcc85ca7",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "d8cef191-1ed9-4525-b2e8-ba43e3a8c9e8",
+            "sequence": 1,
+            "sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "snapshot_id": "17442c95-a59a-41de-9d9e-1191f183a8a2"
+          }
+        }
+      },
+      {
+        "stage": "moved_out_of_authorized_root_fresh_process",
+        "version": "opening",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12229,
+            "input_sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "iterations": 1,
+            "mean_ms": 10.772542,
+            "summary": {
+              "chars": 64,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "08015ea2bce5ec947834c7efd967d8bb83819ddd056d803ee12ff95d3b2b78ce",
+            "total_ms": 10.772542
+          },
+          "snapshot": {
+            "byte_length": 12229,
+            "captured_at_ms": 1791671256612,
+            "file_id": "4e938832-b3ac-4ab3-a3e4-10afed9d4c06",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d4df22e-9c4e-4a4c-8be0-2588d05c6dcc",
+            "sequence": 1,
+            "sha256": "27195e89f2cb810d28374b5d8f9183caef7dfbe6e584a5d5fa9a94d3c3480c41",
+            "snapshot_id": "61c92158-bbda-46e9-b095-107b3a4223f9"
+          }
+        }
+      },
+      {
+        "stage": "moved_out_of_authorized_root_fresh_process",
+        "version": "v1",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12246,
+            "input_sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "iterations": 1,
+            "mean_ms": 11.039583,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "40f5ecf2b01fb960895665029a6192469993dd3392e9290253b64b0c5accd1c8",
+            "total_ms": 11.039583
+          },
+          "snapshot": {
+            "byte_length": 12246,
+            "captured_at_ms": 1791671684125,
+            "file_id": "4eed6fe8-90c2-4e77-a0fa-97e1e05400ab",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0d434f92-22a2-42e4-bc32-d6265e21b22a",
+            "sequence": 1,
+            "sha256": "9eaf643a19f1966187bbc43651ea4c55db566a88a53414b01c9395bb4e1692df",
+            "snapshot_id": "a828d37b-6eb2-4b8a-8c25-8ab208decd35"
+          }
+        }
+      },
+      {
+        "stage": "moved_out_of_authorized_root_fresh_process",
+        "version": "v2",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12254,
+            "input_sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "iterations": 1,
+            "mean_ms": 11.25775,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "21ac4e52cdd94becb68ebad3919362d4d84d0a25fe46afa9efcc565ce02d6311",
+            "total_ms": 11.25775
+          },
+          "snapshot": {
+            "byte_length": 12254,
+            "captured_at_ms": 1791671712879,
+            "file_id": "1fa5fc94-f8b6-4cd3-852d-941140fce8b0",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "8e3c0d2c-9f29-4952-bf7c-2f4cb773aa24",
+            "sequence": 1,
+            "sha256": "686aef076b07ed43ed407ecc2950a408cf16373d170054584d402c04d444131e",
+            "snapshot_id": "dde6ca44-b270-4fa3-81b0-de3729038b02"
+          }
+        }
+      },
+      {
+        "stage": "moved_out_of_authorized_root_fresh_process",
+        "version": "v4",
+        "result": {
+          "reader": {
+            "expected_matches": true,
+            "input_bytes": 12270,
+            "input_sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "iterations": 1,
+            "mean_ms": 11.009458,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "4ef41ef25dd188ff7175b384662ca81941c14a632fbbca566a22259763d9f4e1",
+            "total_ms": 11.009458
+          },
+          "snapshot": {
+            "byte_length": 12270,
+            "captured_at_ms": 1791671735739,
+            "file_id": "1c9107de-f9b8-43d3-a20b-b4a3fcc85ca7",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "d8cef191-1ed9-4525-b2e8-ba43e3a8c9e8",
+            "sequence": 1,
+            "sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "snapshot_id": "17442c95-a59a-41de-9d9e-1191f183a8a2"
+          }
+        }
+      }
+    ],
+    "source_final_path": "/private/tmp/traeva-d-word-lifecycle-20261010/moved-source/lifecycle.docx",
+    "source_final_sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+    "not_captured": [
+      "v3: observed new inode during successive Word saves, but initial-object watch refuses replacement; no v3 snapshot or final bytes retained"
+    ],
+    "capture_boundary": "Actual Word saves occurred during active test polling. No proof of a Word write inside the 350ms stable-read window; a separate headless stress replay covers concurrent byte writes.",
+    "lineage_inferred": false,
+    "production_word_memory_enabled": false,
+    "traeva_model_requests": 0
+  },
+  "ui_raw_log_hashes": {
+    "v1-watch.ndjson": "391a3d43825afe78427e9cadaf943582a2ea6523ecd93fcc0939e62f80725500",
+    "opening-watch.ndjson": "02f0932f0a77f9f59dc7cc28ddb7a8ce551d64054b0c4005009846f95c6e1c87",
+    "v2-watch.ndjson": "219b38a89feaccfe14a71716a2ff6d10dfc6edbb4e580bf799f7ae986fff5a87"
+  },
+  "actual_word_crash": {
+    "case": "actual Word v4 durable capture then SIGKILL",
+    "process_exit": -9,
+    "before": {
+      "at_ms": 1791671860555,
+      "event": "start",
+      "snapshots": [
+        {
+          "reader": {
+            "expected_matches": null,
+            "input_bytes": 12270,
+            "input_sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "iterations": 1,
+            "mean_ms": 15.821708000000001,
+            "summary": {
+              "chars": 62,
+              "covered": [
+                "main body paragraphs, runs, tabs and explicit line breaks"
+              ],
+              "left_out": [],
+              "note": null,
+              "reader": "docx-2",
+              "status": "complete"
+            },
+            "text_sha256": "4ef41ef25dd188ff7175b384662ca81941c14a632fbbca566a22259763d9f4e1",
+            "total_ms": 15.821708000000001
+          },
+          "snapshot": {
+            "byte_length": 12270,
+            "captured_at_ms": 1791671860502,
+            "file_id": "eb9edabd-9534-4a4c-9e69-9414b83377dd",
+            "file_revision": 1,
+            "relative_path": "lifecycle.docx",
+            "root_id": "0a3d3897-e65e-4bf2-9619-c600b9e19c0f",
+            "sequence": 1,
+            "sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+            "snapshot_id": "fa2c0ef3-318f-45b1-9204-d9fbd4226d0e"
+          }
+        }
+      ],
+      "source": {
+        "bytes": 12270,
+        "ctime_nsec": 419352793,
+        "ctime_sec": 1791671830,
+        "dev": 16777232,
+        "ino": 169723289,
+        "mtime_nsec": 64610366,
+        "mtime_sec": 1791671725
+      }
+    },
+    "after_fresh_process": {
+      "reader": {
+        "expected_matches": true,
+        "input_bytes": 12270,
+        "input_sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+        "iterations": 1,
+        "mean_ms": 12.545584,
+        "summary": {
+          "chars": 62,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-2",
+          "status": "complete"
+        },
+        "text_sha256": "4ef41ef25dd188ff7175b384662ca81941c14a632fbbca566a22259763d9f4e1",
+        "total_ms": 12.545584
+      },
+      "snapshot": {
+        "byte_length": 12270,
+        "captured_at_ms": 1791671860502,
+        "file_id": "eb9edabd-9534-4a4c-9e69-9414b83377dd",
+        "file_revision": 1,
+        "relative_path": "lifecycle.docx",
+        "root_id": "0a3d3897-e65e-4bf2-9619-c600b9e19c0f",
+        "sequence": 1,
+        "sha256": "d73b5d709216e2c0e8811cc9e43d3defee76433c97bc8de9110f1a921cb5f12b",
+        "snapshot_id": "fa2c0ef3-318f-45b1-9204-d9fbd4226d0e"
+      }
+    },
+    "scope": "After durable capture; not during transaction commit and not whole-machine power loss"
+  }
+}

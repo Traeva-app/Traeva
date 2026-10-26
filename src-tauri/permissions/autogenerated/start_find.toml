@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-start-find"
+description = "Enables the start_find command without any pre-configured scope."
+commands.allow = ["start_find"]
+
+[[permission]]
+identifier = "deny-start-find"
+description = "Denies the start_find command without any pre-configured scope."
+commands.deny = ["start_find"]

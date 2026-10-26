@@ -1,0 +1,7 @@
+{
+  "kind": "single-variable CPU-only diagnostic, not release configuration",
+  "original_vision_sha256": "c767031bf3b6453eff6f12063e9a527705b7df1ec1c589b056a14ab60fa4c7b8",
+  "variant_vision_sha256": "5bb7b225eacbae6ce459b53c174cbff06827ecbf490b72ddd352ba1adaee4f90",
+  "build_exit": 0,
+  "binary_sha256": "022d524600dd4aca91bafce022b7399f4013343f26e00b09484fae090d94d233"
+}

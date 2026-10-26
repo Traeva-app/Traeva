@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-set-find-consent"
+description = "Enables the set_find_consent command without any pre-configured scope."
+commands.allow = ["set_find_consent"]
+
+[[permission]]
+identifier = "deny-set-find-consent"
+description = "Denies the set_find_consent command without any pre-configured scope."
+commands.deny = ["set_find_consent"]

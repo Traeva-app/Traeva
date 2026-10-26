@@ -1,0 +1,23 @@
+[workspace]
+resolver = "3"
+members = ["crates/traeva-core", "src-tauri"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+publish = false
+
+[workspace.lints.clippy]
+# AppError carries every field the spec asks for (code, message, stage, IDs, next steps),
+# so it is bigger than Clippy's default limit. Errors are rare; returning it unboxed
+# keeps the code simple.
+result_large_err = "allow"
+# Same reasoning for results like BuildOutcome (a full plan, or just "already
+# in place"): each is made once per request, so boxing would only add noise.
+large_enum_variant = "allow"
+# The student writes Java/C++-style code (decision 10/16): Clippy's style and
+# complexity suggestions are off; lints that point at bugs (correctness,
+# suspicious) and waste (perf) stay errors.
+style = { level = "allow", priority = -1 }
+complexity = { level = "allow", priority = -1 }

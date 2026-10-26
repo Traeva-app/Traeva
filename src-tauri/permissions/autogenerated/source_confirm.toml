@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-source-confirm"
+description = "Enables the source_confirm command without any pre-configured scope."
+commands.allow = ["source_confirm"]
+
+[[permission]]
+identifier = "deny-source-confirm"
+description = "Denies the source_confirm command without any pre-configured scope."
+commands.deny = ["source_confirm"]

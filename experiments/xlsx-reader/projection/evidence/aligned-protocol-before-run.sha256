@@ -1,0 +1,3 @@
+a89c848d83e000d8cceb382356a9f9b6c58a973c166b608b3ffff61c02b44a26  experiments/xlsx-reader/projection/PROTOCOL-ALIGNED.md
+f62d8adc340d70b6195cbcf16d141b33f3a5dc2515f753b6b44b25cce091af2a  experiments/xlsx-reader/projection/tests/projection.rs
+f42319392b2fcf52119f642d0eb6f0fc39ba6f19e7dcc15167efccc12f10818d  experiments/xlsx-reader/projection/tests/shared_helper.rs

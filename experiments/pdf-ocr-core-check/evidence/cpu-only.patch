@@ -1,0 +1,13 @@
+--- formal/vision.rs
++++ diagnostic/vision.rs
+@@ -158,6 +158,10 @@
+         let request = VNRecognizeTextRequest::new();
+         require_supported_revision(unsafe { request.revision() })?;
+         request.setRecognitionLevel(VNRequestTextRecognitionLevel::Accurate);
++        #[allow(deprecated)]
++        unsafe {
++            request.setUsesCPUOnly(true);
++        }
+         request.setUsesLanguageCorrection(settings.language_correction);
+         request.setAutomaticallyDetectsLanguage(settings.auto_language);
+         let languages: Vec<_> = settings

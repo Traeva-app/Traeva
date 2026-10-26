@@ -1,0 +1,840 @@
+{
+  "issue": 66,
+  "kind": "developer research evidence; not independent acceptance",
+  "local_date": "2026-10-10",
+  "baseline_commit": "0314ae62d86daff056d76ed0c96a350138b493d9",
+  "environment": {
+    "macos": "27.0.1",
+    "build": "26A434",
+    "architecture": "arm64",
+    "rust": "1.98.1",
+    "word": "16.78"
+  },
+  "reader_source_sha256": "765946eb65cf3e48f0daf90367b7a3ea37d339503a4b7d65efeaf45c49371fc2",
+  "research_code_sha256": {
+    "build.rs": "03a4965c99c3f6de2f996eff8d38949fa355cbcc8a9f24c69d3183b2c3642664",
+    "cached_body.rs": "32f9da175d80541df4d776e6bb5cec015526f8adb02fb02aa993e1a2b9a3bc98",
+    "lib.rs": "effa2b5658d5614c9dc8ae61447e8fe864bdb94ce7e705276a2a3828ea845aa4",
+    "probe.rs": "0bfe170aeba6473b4ed11a6d0c93df0cdffdf5221189fc3d01da0a6a5070cc01",
+    "tests.rs": "bc18e4099f6b2a7461d2753b6ef7b626cf410659cd3f665c479d0d09b357cbbd",
+    "history_tests.rs": "5373ae674845c8586411fa10427841257cfb0ca1618b4e68f808d55d6eb90b7e",
+    "make_seeds.py": "b278766f845030cd92ad769938263c51921b21aa3421207e077953a563cbcf0a",
+    "Cargo.toml": "9297885c41337d12d4d7e94e9e32a80bd72bddea30a9ae437639733cc538b1d3",
+    "Cargo.lock": "aeca34d037ffd73e430d44d8e7aa76e891f56107c80e0ab2d6c6e1a16384a8d6"
+  },
+  "decisions": {
+    "cached_complex_fields": "conditional Go for well-formed stored display text only",
+    "formal_historical_word_open": "No-Go"
+  },
+  "guard_reuse": "build.rs compiles production prefix before body_text verbatim apart from output labels; only research body visitor replaced",
+  "seed_manifest": [
+    {
+      "name": "ordinary",
+      "input_sha256": "cf81e8b4dde94d294f6adfd219c9a53856f9f3d8b581b0c2bb3cc785a9ea6d5c",
+      "expected_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f"
+    },
+    {
+      "name": "nested",
+      "input_sha256": "939c311b5794ef6357adf22eb09bbeece721814b12eaf305cd262de5f3806e41",
+      "expected_sha256": "b89d3c4a6beb0ddd8bdebe0da5fae7ec966a8201153c81997e26bcc697373d1f"
+    },
+    {
+      "name": "missing-stale",
+      "input_sha256": "42a365df0cdb7d2035ffd3d4b30dca100db8b409c670117eee91ae3bbe3d3f2d",
+      "expected_sha256": "1ae9c11f352c6bd03348398981d2030ae153bba3f61b71e6e68ab5765040894c"
+    },
+    {
+      "name": "revisions",
+      "input_sha256": "663c64952b04ac4235c71e263c5cd5c3e04f38d112285ff4e7c150fad7c2d37c",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "malformed",
+      "input_sha256": "638c623cbdc407322262512cc33530b736d223f3a086bd7c1f9d68d3f2d62b76",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "plain-history",
+      "input_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+      "expected_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+    }
+  ],
+  "seed_hashes_still_match": true,
+  "generator_reproduced_all_original_hashes": true,
+  "word_matrix": [
+    {
+      "expected_matches": true,
+      "input_bytes": 2121,
+      "input_sha256": "cf81e8b4dde94d294f6adfd219c9a53856f9f3d8b581b0c2bb3cc785a9ea6d5c",
+      "opening_reasons": [
+        "fields may evaluate or access content in Word"
+      ],
+      "summary": {
+        "chars": 53,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f",
+      "name": "ordinary",
+      "kind": "synthetic seed",
+      "structure": {
+        "begin": 3,
+        "separate": 3,
+        "end": 3,
+        "instrText": 3,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": null
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 12121,
+      "input_sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+      "opening_reasons": [
+        "fields may evaluate or access content in Word"
+      ],
+      "summary": {
+        "chars": 53,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f",
+      "name": "ordinary-word",
+      "kind": "real Word save",
+      "structure": {
+        "begin": 3,
+        "separate": 3,
+        "end": 3,
+        "instrText": 3,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": {
+        "Application": "Microsoft Office Word",
+        "AppVersion": "16.0000"
+      }
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 1911,
+      "input_sha256": "939c311b5794ef6357adf22eb09bbeece721814b12eaf305cd262de5f3806e41",
+      "opening_reasons": [
+        "fields may evaluate or access content in Word"
+      ],
+      "summary": {
+        "chars": 20,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata",
+          "fields without retained cached display text"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "b89d3c4a6beb0ddd8bdebe0da5fae7ec966a8201153c81997e26bcc697373d1f",
+      "name": "nested",
+      "kind": "synthetic seed",
+      "structure": {
+        "begin": 3,
+        "separate": 3,
+        "end": 3,
+        "instrText": 3,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": null
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 12035,
+      "input_sha256": "3cbe39abbe4921c9fe391050fe947a6210eb73f56d2d8909680dc6d57dbecc70",
+      "opening_reasons": [
+        "fields may evaluate or access content in Word"
+      ],
+      "summary": {
+        "chars": 20,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata",
+          "fields without retained cached display text"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "b89d3c4a6beb0ddd8bdebe0da5fae7ec966a8201153c81997e26bcc697373d1f",
+      "name": "nested-word",
+      "kind": "real Word save",
+      "structure": {
+        "begin": 3,
+        "separate": 3,
+        "end": 3,
+        "instrText": 4,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": {
+        "Application": "Microsoft Office Word",
+        "AppVersion": "16.0000"
+      }
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 1628,
+      "input_sha256": "42a365df0cdb7d2035ffd3d4b30dca100db8b409c670117eee91ae3bbe3d3f2d",
+      "opening_reasons": [
+        "fields may evaluate or access content in Word"
+      ],
+      "summary": {
+        "chars": 29,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field cache marked dirty (may be stale)",
+          "field codes and citation-manager internal metadata",
+          "fields without retained cached display text"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "1ae9c11f352c6bd03348398981d2030ae153bba3f61b71e6e68ab5765040894c",
+      "name": "missing-stale",
+      "kind": "synthetic seed",
+      "structure": {
+        "begin": 2,
+        "separate": 1,
+        "end": 2,
+        "instrText": 2,
+        "dirtyTrue": 1,
+        "insertions": 0
+      },
+      "producer": null
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 12027,
+      "input_sha256": "caf459092fbfb07a284ee5850e2b6f98fddace91e3257ac005132000b0df4fc8",
+      "opening_reasons": [
+        "fields may evaluate or access content in Word"
+      ],
+      "summary": {
+        "chars": 29,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata",
+          "fields without retained cached display text"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "1ae9c11f352c6bd03348398981d2030ae153bba3f61b71e6e68ab5765040894c",
+      "name": "missing-stale-word",
+      "kind": "real Word save",
+      "structure": {
+        "begin": 2,
+        "separate": 1,
+        "end": 2,
+        "instrText": 2,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": {
+        "Application": "Microsoft Office Word",
+        "AppVersion": "16.0000"
+      }
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 1554,
+      "input_sha256": "663c64952b04ac4235c71e263c5cd5c3e04f38d112285ff4e7c150fad7c2d37c",
+      "opening_reasons": [
+        "package validation refused"
+      ],
+      "summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "Field boundaries in omitted or revised content are unsupported.",
+        "reader": "docx-cache-research-1",
+        "status": "unsupported"
+      },
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "revisions",
+      "kind": "synthetic seed",
+      "structure": {
+        "begin": 1,
+        "separate": 1,
+        "end": 1,
+        "instrText": 1,
+        "dirtyTrue": 0,
+        "insertions": 1
+      },
+      "producer": null
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 12079,
+      "input_sha256": "12bbb3e54637e27d1c7d11b453cbf0146237b0ea205e7e5fafcf4c67ffb9ceac",
+      "opening_reasons": [
+        "package validation refused"
+      ],
+      "summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "Field boundaries in omitted or revised content are unsupported.",
+        "reader": "docx-cache-research-1",
+        "status": "unsupported"
+      },
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "revisions-word",
+      "kind": "real Word save",
+      "structure": {
+        "begin": 1,
+        "separate": 1,
+        "end": 1,
+        "instrText": 1,
+        "dirtyTrue": 0,
+        "insertions": 1
+      },
+      "producer": {
+        "Application": "Microsoft Office Word",
+        "AppVersion": "16.0000"
+      }
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 1366,
+      "input_sha256": "638c623cbdc407322262512cc33530b736d223f3a086bd7c1f9d68d3f2d62b76",
+      "opening_reasons": [
+        "package validation refused"
+      ],
+      "summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "The DOCX package or XML is damaged or inconsistent.",
+        "reader": "docx-cache-research-1",
+        "status": "failed"
+      },
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "malformed",
+      "kind": "synthetic seed",
+      "structure": {
+        "begin": 1,
+        "separate": 1,
+        "end": 0,
+        "instrText": 1,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": null
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 11993,
+      "input_sha256": "f58bcddbe421cfb3a9508f48cf4e5141f9a27f40dcb391079adc18a3568d4586",
+      "opening_reasons": [
+        "package validation refused"
+      ],
+      "summary": {
+        "chars": 0,
+        "covered": [],
+        "left_out": [],
+        "note": "Citation-manager field-code markers occur in display text; the document is conservatively refused.",
+        "reader": "docx-cache-research-1",
+        "status": "unsupported"
+      },
+      "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "malformed-word",
+      "kind": "real Word save",
+      "structure": {
+        "begin": 0,
+        "separate": 0,
+        "end": 0,
+        "instrText": 0,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": {
+        "Application": "Microsoft Office Word",
+        "AppVersion": "16.0000"
+      }
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 1263,
+      "input_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+      "opening_reasons": [],
+      "summary": {
+        "chars": 74,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-cache-research-1",
+        "status": "complete"
+      },
+      "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa",
+      "name": "plain-history",
+      "kind": "synthetic seed",
+      "structure": {
+        "begin": 0,
+        "separate": 0,
+        "end": 0,
+        "instrText": 0,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": null
+    },
+    {
+      "expected_matches": true,
+      "input_bytes": 11954,
+      "input_sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+      "opening_reasons": [],
+      "summary": {
+        "chars": 74,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-cache-research-1",
+        "status": "complete"
+      },
+      "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa",
+      "name": "plain-history-word",
+      "kind": "real Word save",
+      "structure": {
+        "begin": 0,
+        "separate": 0,
+        "end": 0,
+        "instrText": 0,
+        "dirtyTrue": 0,
+        "insertions": 0
+      },
+      "producer": {
+        "Application": "Microsoft Office Word",
+        "AppVersion": "16.0000"
+      }
+    }
+  ],
+  "performance": [
+    {
+      "build": "debug",
+      "input_bytes": 12121,
+      "input_sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+      "max": 11529,
+      "p50": 11018,
+      "p95": 11375,
+      "repeats": 100,
+      "summary": {
+        "chars": 53,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f",
+      "unit": "microseconds",
+      "name": "ordinary-word"
+    },
+    {
+      "build": "debug",
+      "input_bytes": 12035,
+      "input_sha256": "3cbe39abbe4921c9fe391050fe947a6210eb73f56d2d8909680dc6d57dbecc70",
+      "max": 13843,
+      "p50": 11031,
+      "p95": 11593,
+      "repeats": 100,
+      "summary": {
+        "chars": 20,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata",
+          "fields without retained cached display text"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "b89d3c4a6beb0ddd8bdebe0da5fae7ec966a8201153c81997e26bcc697373d1f",
+      "unit": "microseconds",
+      "name": "nested-word"
+    },
+    {
+      "build": "debug",
+      "input_bytes": 12027,
+      "input_sha256": "caf459092fbfb07a284ee5850e2b6f98fddace91e3257ac005132000b0df4fc8",
+      "max": 14652,
+      "p50": 10970,
+      "p95": 11404,
+      "repeats": 100,
+      "summary": {
+        "chars": 29,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [
+          "field cache freshness (unknown; no evaluation or refresh)",
+          "field codes and citation-manager internal metadata",
+          "fields without retained cached display text"
+        ],
+        "note": "Stored field display text may be missing or stale. No field or citation database was evaluated or refreshed. Field codes and internal metadata were excluded; see left_out.",
+        "reader": "docx-cache-research-1",
+        "status": "partial"
+      },
+      "text_sha256": "1ae9c11f352c6bd03348398981d2030ae153bba3f61b71e6e68ab5765040894c",
+      "unit": "microseconds",
+      "name": "missing-stale-word"
+    },
+    {
+      "build": "debug",
+      "input_bytes": 11954,
+      "input_sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+      "max": 11873,
+      "p50": 10967,
+      "p95": 11617,
+      "repeats": 100,
+      "summary": {
+        "chars": 74,
+        "covered": [
+          "supported main-body text and stored complex-field display text"
+        ],
+        "left_out": [],
+        "note": null,
+        "reader": "docx-cache-research-1",
+        "status": "complete"
+      },
+      "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa",
+      "unit": "microseconds",
+      "name": "plain-history-word"
+    }
+  ],
+  "history": {
+    "before_word": {
+      "snapshot": {
+        "byte_length": 11954,
+        "captured_at_ms": 1791692863943,
+        "file_id": "6f60698a-29cd-4dab-a0ee-5899c3f55db9",
+        "file_revision": 1,
+        "relative_path": "plain-history-word.docx",
+        "root_id": "a262129d-bcfd-4bc4-b2fb-767076244d9d",
+        "sequence": 1,
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "snapshot_id": "782f5312-e640-46a4-bf01-ebb47fd60e6e"
+      },
+      "source": {
+        "path": "plain-history-word.docx",
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "inode": 170690006,
+        "mode": 420,
+        "nlink": 1,
+        "quarantine": "0083;6acb103e;TraevaWordResearch;"
+      },
+      "copy": {
+        "path": "version-1.docx",
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "inode": 170690242,
+        "mode": 292,
+        "nlink": 1,
+        "quarantine": "0083;6acb103e;TraevaWordResearch;"
+      },
+      "copy_quarantine_before_staging": null,
+      "quarantine_applied_before_readonly_seal": true,
+      "opened": false
+    },
+    "after_word": {
+      "snapshot": {
+        "byte_length": 11954,
+        "captured_at_ms": 1791692863943,
+        "file_id": "6f60698a-29cd-4dab-a0ee-5899c3f55db9",
+        "file_revision": 1,
+        "relative_path": "plain-history-word.docx",
+        "root_id": "a262129d-bcfd-4bc4-b2fb-767076244d9d",
+        "sequence": 1,
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "snapshot_id": "782f5312-e640-46a4-bf01-ebb47fd60e6e"
+      },
+      "source": {
+        "path": "plain-history-word.docx",
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "inode": 170690006,
+        "mode": 420,
+        "nlink": 1,
+        "quarantine": "0083;6acb103e;TraevaWordResearch;"
+      },
+      "copy": {
+        "path": "version-1.docx",
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "inode": 170690242,
+        "mode": 292,
+        "nlink": 1,
+        "quarantine": "0083;6acb103e;TraevaWordResearch;"
+      },
+      "word_read_only_banner": true,
+      "word_save_control_disabled": true,
+      "save_shortcut_result": "selection locked",
+      "protected_view_observed": false,
+      "external_update_prompt_observed": false,
+      "duplicate_clicked": false,
+      "closed_without_save": true,
+      "display": "Dell AW3418DW"
+    },
+    "fresh_process_snapshot_read": {
+      "reader": {
+        "expected_matches": true,
+        "input_bytes": 11954,
+        "input_sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "opening_reasons": [],
+        "summary": {
+          "chars": 74,
+          "covered": [
+            "supported main-body text and stored complex-field display text"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-cache-research-1",
+          "status": "complete"
+        },
+        "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+      },
+      "snapshot": {
+        "byte_length": 11954,
+        "captured_at_ms": 1791692863943,
+        "file_id": "6f60698a-29cd-4dab-a0ee-5899c3f55db9",
+        "file_revision": 1,
+        "relative_path": "plain-history-word.docx",
+        "root_id": "a262129d-bcfd-4bc4-b2fb-767076244d9d",
+        "sequence": 1,
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "snapshot_id": "782f5312-e640-46a4-bf01-ebb47fd60e6e"
+      }
+    },
+    "production_can_open": false,
+    "initial_gui_copy_method": "rename extensionless lab copy; no system-open call",
+    "final_cli_copy_method": "create-new extra file, retain core copy; not re-run in GUI",
+    "word_quarantine_attr_initially_missing_on_core_copy": true,
+    "unknown_snapshot_quarantine_provenance": "not persisted by current SnapshotRef",
+    "final_cli_copy_headless_check": {
+      "ino": 170746615,
+      "mode": 292,
+      "nlink": 1,
+      "opened": false,
+      "production_can_open": false,
+      "quarantine_required_before_word": true,
+      "research_path": "version-1.docx",
+      "snapshot": {
+        "byte_length": 11954,
+        "captured_at_ms": 1791692863943,
+        "file_id": "6f60698a-29cd-4dab-a0ee-5899c3f55db9",
+        "file_revision": 1,
+        "relative_path": "plain-history-word.docx",
+        "root_id": "a262129d-bcfd-4bc4-b2fb-767076244d9d",
+        "sequence": 1,
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "snapshot_id": "782f5312-e640-46a4-bf01-ebb47fd60e6e"
+      },
+      "core_copy_retained": true,
+      "distinct_inode_from_core_copy": true,
+      "quarantine_present": false,
+      "word_gui_run": false
+    }
+  },
+  "checks": {
+    "prototype": {
+      "passed": 111,
+      "failed": 0,
+      "ignored": 0,
+      "baseline_reader_tests": 78,
+      "prototype_tests": 30,
+      "snapshot_copy_tests": 3
+    },
+    "workspace_core": {
+      "passed": 791,
+      "failed": 0,
+      "ignored": 10
+    },
+    "workspace_fmt": "PASS",
+    "workspace_clippy": "PASS",
+    "prototype_fmt": "PASS",
+    "prototype_clippy": "PASS",
+    "frontend_build": "PASS",
+    "frontend_tests": {
+      "passed": 106,
+      "failed": 0
+    },
+    "real_model_calls": 0,
+    "keychain_requests": 0
+  },
+  "initial_failures": [
+    {
+      "kind": "compile",
+      "reason": "Sha256 GenericArray has no LowerHex formatting implementation",
+      "evidence": "original tool output; corrected by formatting digest bytes"
+    },
+    {
+      "kind": "compile",
+      "reason": "test named SnapshotMissing; actual contract uses SnapshotUnavailable",
+      "log": "prototype-tests-third.log"
+    },
+    {
+      "kind": "test",
+      "passed": 107,
+      "failed": 4,
+      "reason": "3 hidden-temp-root refusals plus 1 truncation-summary assertion mismatch",
+      "log": "prototype-tests-fourth.log",
+      "fix": "non-hidden isolated /private/tmp fixtures; assert existing truncation summary"
+    },
+    {
+      "kind": "clippy",
+      "reason": "useless format in a test literal",
+      "log": "prototype-clippy.log"
+    },
+    {
+      "kind": "real Word behavioral FAIL",
+      "case": "malformed-word",
+      "before_fix": {
+        "expected_matches": false,
+        "input_bytes": 11993,
+        "input_sha256": "f58bcddbe421cfb3a9508f48cf4e5141f9a27f40dcb391079adc18a3568d4586",
+        "opening_reasons": [],
+        "summary": {
+          "chars": 56,
+          "covered": [
+            "supported main-body text and stored complex-field display text"
+          ],
+          "left_out": [],
+          "note": null,
+          "reader": "docx-cache-research-1",
+          "status": "complete"
+        },
+        "text_sha256": "62d55d1a2a6bc636619fbd85334aa34156e8bad06730e925035e7da777f653db"
+      },
+      "fix": "known manager code markers in flattened display text conservatively refuse document",
+      "final": {
+        "expected_matches": true,
+        "input_bytes": 11993,
+        "input_sha256": "f58bcddbe421cfb3a9508f48cf4e5141f9a27f40dcb391079adc18a3568d4586",
+        "opening_reasons": [
+          "package validation refused"
+        ],
+        "summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "Citation-manager field-code markers occur in display text; the document is conservatively refused.",
+          "reader": "docx-cache-research-1",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "name": "malformed-word",
+        "kind": "real Word save",
+        "structure": {
+          "begin": 0,
+          "separate": 0,
+          "end": 0,
+          "instrText": 0,
+          "dirtyTrue": 0,
+          "insertions": 0
+        },
+        "producer": {
+          "Application": "Microsoft Office Word",
+          "AppVersion": "16.0000"
+        }
+      }
+    },
+    {
+      "kind": "xattr tooling",
+      "reason": "Python os.setxattr not available; used macOS xattr tool",
+      "evidence": "original tool output"
+    },
+    {
+      "kind": "quarantine staging",
+      "reason": "xattr write to sealed 0444 copy denied",
+      "fix": "write exact source quarantine on own not-yet-opened staging copy before readonly seal",
+      "evidence": "original tool output; readback in history"
+    }
+  ],
+  "untested": [
+    "real citation-manager plugins and library refresh",
+    "other Word/macOS versions",
+    "malicious/externally linked documents handed to Word",
+    "Word process network telemetry and isolation",
+    "Protected View",
+    "release performance and peak RSS",
+    "formal DOCX open whitelist",
+    "production consent and model sending",
+    "new research head independent Codex-R review",
+    "complete Word Semantic Change Retrieval flow"
+  ],
+  "ui_slot": {
+    "claim_comment": 6105348746,
+    "return_comment": 6105472883,
+    "test_windows_closed": true,
+    "traeva_desktop_started": false,
+    "port1420_listener": false,
+    "secondary_display": "Dell AW3418DW"
+  },
+  "local_raw_evidence_directory": "/private/tmp/traeva-d-word-research-20261010/evidence",
+  "local_log_sha256": {
+    "core-tests.log": "b3502da08dd01399df14164142aa9ac021355afa27e40bc983e5ef194a75cca0",
+    "frontend-build.log": "8a972e6275de2f77b487c2a44bb31b34fa39dc0ed5a590eef732049fb68b0127",
+    "frontend-tests.log": "08ff1c942fb1e04d18192528198891a7b9f016d90722ea0e2f2979aadd966062",
+    "npm-ci.log": "380021294ab9ac0d2810342b0a424c42fd6f2ae4a8b27e1567773dc467a3254e",
+    "prototype-build-final.log": "0025094ab1f719e15bc8394e47b7f62fa75ecc227982f71509a923c91c557639",
+    "prototype-build.log": "f88e721bef4f87a51518dc5216dc3fc729037c3cfb167b49fa6c37d07d6c4e46",
+    "prototype-clippy-final.log": "7cfe568941e20c2915e0243da2891ba9bf6f57dcbd40bbcd815394feb684d3b4",
+    "prototype-clippy.log": "da32f19d40300a8d879f5ec1a1de394446eb649d4f34584db287fba4ebae6ea5",
+    "prototype-tests-exact-final.log": "baea51c641bc46e8accbdb988aea6702623b40ab9bb6cffad42dc006e607297c",
+    "prototype-tests-final.log": "1e8d05b559ecb7e1c27e62d204292da072f462d506c7df2426855a0c4dfa4132",
+    "prototype-tests-first.log": "df5d322696e5fbe95298ee395d52d6e1e0fa3f6e5cdf519688950d2f35a8fbcf",
+    "prototype-tests-fourth.log": "e8de823a98287cfe37ae67e1e75de9c8d40f1c6c01d0f16e87606bf31f84be25",
+    "prototype-tests-second.log": "0571a943c5c44320008dd5a2da83316c2301a60e06ed612ea83b81c56284f786",
+    "prototype-tests-third.log": "9043859a1ed7bf458607d476c2f57cb01553d6e8477523cb93a3b4d9dcfdb5ca",
+    "workspace-clippy.log": "9415704a0e2545386b51b89bab14930868eb874fbc3d76a1ed916ac763130603",
+    "workspace-fmt.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

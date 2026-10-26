@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-source-unlink"
+description = "Enables the source_unlink command without any pre-configured scope."
+commands.allow = ["source_unlink"]
+
+[[permission]]
+identifier = "deny-source-unlink"
+description = "Denies the source_unlink command without any pre-configured scope."
+commands.deny = ["source_unlink"]

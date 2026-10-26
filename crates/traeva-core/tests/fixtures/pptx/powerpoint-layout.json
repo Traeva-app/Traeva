@@ -1,0 +1,113 @@
+{
+  "powerpoint-basic-v1.pptx": {
+    "source_sha256": "f5aacb66de7ab10f78fa4be0e868f524fcf38370554cf15932d0efd3f84c64b3",
+    "fixture_sha256": "48653ca0d6b90f269192361096ff4c166aba86ab15fdab3aed8d645a3f75422f",
+    "bytes": 38727,
+    "central_offset": 35102,
+    "allowed_changed_ranges": [
+      [
+        34653,
+        35102
+      ],
+      [
+        34356,
+        34360
+      ],
+      [
+        38658,
+        38662
+      ]
+    ],
+    "core_packed": 449,
+    "core_unpacked": 848,
+    "trial": 10,
+    "author_fields_replaced": 2,
+    "compression_mode": "single_deflate_stream",
+    "sync_flush_split": null,
+    "other_entry_bytes_and_layout_identical": true,
+    "independent_zip_metadata_and_other_entry_comparison": "PASS"
+  },
+  "powerpoint-basic-v2.pptx": {
+    "source_sha256": "5774b0714efa7d27d16926eaa4949a52217321aed02f93a8170935402c6caff8",
+    "fixture_sha256": "5bb794f72f1cee8b9403027741e9a27b3c44bbf4cd75660ecff9c3093d3f3995",
+    "bytes": 38758,
+    "central_offset": 35133,
+    "allowed_changed_ranges": [
+      [
+        34683,
+        35133
+      ],
+      [
+        34386,
+        34390
+      ],
+      [
+        38689,
+        38693
+      ]
+    ],
+    "core_packed": 450,
+    "core_unpacked": 848,
+    "trial": 10,
+    "author_fields_replaced": 2,
+    "compression_mode": "single_deflate_stream",
+    "sync_flush_split": null,
+    "other_entry_bytes_and_layout_identical": true,
+    "independent_zip_metadata_and_other_entry_comparison": "PASS"
+  },
+  "powerpoint-rich.pptx": {
+    "source_sha256": "51b4b4b26e627da6d19c1c6e9129316be9a47a506315401aa9df241888ce9a52",
+    "fixture_sha256": "3b9137de3baf07381573ff69c08624abd5ac0896d0b9d76bcb0f89fd6a399134",
+    "bytes": 50879,
+    "central_offset": 46952,
+    "allowed_changed_ranges": [
+      [
+        45620,
+        46070
+      ],
+      [
+        45323,
+        45327
+      ],
+      [
+        50748,
+        50752
+      ]
+    ],
+    "core_packed": 450,
+    "core_unpacked": 848,
+    "trial": 10,
+    "author_fields_replaced": 2,
+    "compression_mode": "single_deflate_stream",
+    "sync_flush_split": null,
+    "other_entry_bytes_and_layout_identical": true,
+    "independent_zip_metadata_and_other_entry_comparison": "PASS"
+  },
+  "powerpoint-rich-clean.pptx": {
+    "source_sha256": "b90a263f832f828133dab698e9fe8d21368206b42fbbad3c85ee2665db98f18d",
+    "fixture_sha256": "6f4c887074200a2ea9c28f31c751b5addc08e5b958ad212e603dd2056f20b672",
+    "bytes": 47034,
+    "central_offset": 43107,
+    "allowed_changed_ranges": [
+      [
+        41777,
+        42225
+      ],
+      [
+        41480,
+        41484
+      ],
+      [
+        46903,
+        46907
+      ]
+    ],
+    "core_packed": 448,
+    "core_unpacked": 848,
+    "trial": 10,
+    "author_fields_replaced": 2,
+    "compression_mode": "single_deflate_stream",
+    "sync_flush_split": null,
+    "other_entry_bytes_and_layout_identical": true
+  }
+}

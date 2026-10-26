@@ -1,0 +1,288 @@
+{
+  "generator": "fixtures/generate.py",
+  "note": "Synthetic files only. a-/c- files are adversarial: offline reader only, never a desktop viewer.",
+  "files": {
+    "a01-flate-bomb.pdf": {
+      "sha256": "9fb3801f6198819c2a80a6bf21bc7299f6b8bd4b532c47dd8bda5d19f01e6332",
+      "bytes": 20998,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a02-nested-flate.pdf": {
+      "sha256": "68c803b08d6d134ea919b0f3e6c67d330a441aa9e6a867031cdd9cc35f5a354f",
+      "bytes": 770,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a03-image-label-bomb.pdf": {
+      "sha256": "0c43c257cad36ef00ee6d92b7fe95f0e2d442140b1025ec4d44be2929d9c78d8",
+      "bytes": 82395,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a04-decoded-total.pdf": {
+      "sha256": "d61d2006d3712a2b8a3d0a15ef7f7d8586c208318a577ba0c280bcd23ef06cc9",
+      "bytes": 144478,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a05-too-many-pages.pdf": {
+      "sha256": "80b65cd4ed3a4fbc50d24ccc53d429dc99ad846976622d4bf1be9e1285271081",
+      "bytes": 137448,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a06-declared-objects.pdf": {
+      "sha256": "a581b949de07bf3bf5ff96a76983c67c8b8af828b0cfd84c5d999dad26a22678",
+      "bytes": 672,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a07a-deep-stream-dict.pdf": {
+      "sha256": "d63394bbed188ae6a3bb2e6e61e95afaf541ba43587d418edd3945a793cb6894",
+      "bytes": 817,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a07b-deep-page-dict.pdf": {
+      "sha256": "43113ab8ae8d44c6f6302fa9fbc3113e7f702887b871985a65a7efad408738dc",
+      "bytes": 2671,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a08-form-recursion.pdf": {
+      "sha256": "b3fcc48cdd5b2dd142e28f1636d90ac9759e55278ae7fda6621b74f6071fcca5",
+      "bytes": 895,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a09-form-fanout.pdf": {
+      "sha256": "b782e8e1b3ded008c504a376c347e2fcfc40b1ceb9ea2e10701e75d8b470be63",
+      "bytes": 1400,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a10-lzw.pdf": {
+      "sha256": "57eb6344d58164dc6047ce9920b85b7b1078bfb876557155edf6d8c3c0615243",
+      "bytes": 604,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a11-codec-on-content.pdf": {
+      "sha256": "a6359b08d6b8b23cfafd3d83778b7fe943854902a2e0be146deac933539fa442",
+      "bytes": 599,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a12-indirect-filter.pdf": {
+      "sha256": "dc16d598403997a87c52963180b4bed52c9f80c6d1bc1358a456d4ca7f2f08dd",
+      "bytes": 592,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a13-unknown-filter.pdf": {
+      "sha256": "e717c3bb5aee617957f2ed74d619d4213e237def33ee80ad3249fd9c5e134448",
+      "bytes": 596,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a14-run-length-bomb.pdf": {
+      "sha256": "101f32c8ac7d6dfdd51305bf92f243ce1ed62cd741a149a14f4dc1ad295be1fb",
+      "bytes": 320610,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a15-stream-count.pdf": {
+      "sha256": "0ddc80fd2bc9433e00fce24cdab228eda752ebb514df90057f341fc739708144",
+      "bytes": 3739652,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a16-big-input.pdf": {
+      "sha256": "da3f12fa23d557118162917c4f2a1288278cdd41ba7c0882758712bac3feae1f",
+      "bytes": 34603628,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a17-fake-endstream.pdf": {
+      "sha256": "d7d06b8e1c126eb0633b8481647ec6f95589d4e22e1219e86e3df423b3b7f4b3",
+      "bytes": 21013,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "a18-encrypted-owner-only.pdf": {
+      "sha256": "7ce351b13a871dc4d70231a1b7781d06b117d2cd6973937f906f962302d6b6ba",
+      "bytes": 1144,
+      "origin": "pypdf",
+      "deterministic": false
+    },
+    "a19-encrypted-user-password.pdf": {
+      "sha256": "707a47a8b2257d29f26e2f835cefdec632024f51dd360ef731cfd5aeaef809f9",
+      "bytes": 1511,
+      "origin": "pypdf",
+      "deterministic": false
+    },
+    "a20-escaped-encrypt.pdf": {
+      "sha256": "9a45307dd9e7b9899c4eb88e8153342d6609c1335f8add623032cbcac32c22c9",
+      "bytes": 921,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c01-truncated-half.pdf": {
+      "sha256": "f63b545276485d60d4827094835211abd919970d6b31c33712c84ae98fcdce22",
+      "bytes": 686,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c02-truncated-tail.pdf": {
+      "sha256": "a469df01766a19e5cd3f38862c420cbbd498b439af9a3108ad7be04e0a35c495",
+      "bytes": 1363,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c03-wrong-startxref.pdf": {
+      "sha256": "6ed6fb3c062d2033f2e63c741ee77d46d3a8bfdd1a61b449a8622ad4c40a1961",
+      "bytes": 749,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c04-damaged-flate.pdf": {
+      "sha256": "2afede156d914baab2fad425c549408896206558aa91fb69493fb45b36e6c859",
+      "bytes": 632,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c05-not-a-pdf.pdf": {
+      "sha256": "88917e70d33dc5fd8f493a1923b4f37e2a45d9aa20bc30f484fe8ab82a6cae80",
+      "bytes": 38,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c06-garbage.pdf": {
+      "sha256": "2d1d7654e9a7d520bdf666c91c25959b2d8b4e7077884d0029b714af83701df3",
+      "bytes": 4112,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c07-page-count.pdf": {
+      "sha256": "7760200ea2080e1553edc9db00020456ba425240254ed994b9c467fc8a74f708",
+      "bytes": 965,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "c08-empty.pdf": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p01-single-en.pdf": {
+      "sha256": "0bdca643ab48658bc7837ded68a8404ce51c2b4d7c0aef77cf9ebb5bb38b02a2",
+      "bytes": 749,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p02-multi-en.pdf": {
+      "sha256": "7e880a027cd946650fcb4518d42a7eccdbbfde237f632b855764e42a87e3f89e",
+      "bytes": 1373,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p03-cjk-reportlab.pdf": {
+      "sha256": "e2c6b9340a19e69072cd8fda8a12d100f41c63214ae974963ed67f123efe23eb",
+      "bytes": 14458,
+      "origin": "reportlab",
+      "deterministic": true
+    },
+    "p04-rotated.pdf": {
+      "sha256": "6a466e97671ac11063138e832b731c227caa4531e70b1a0781c785c93b773d51",
+      "bytes": 1091,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p05-two-column.pdf": {
+      "sha256": "e59fe3cdd7c0047124c0b4c1beb8e5f66e8c7b7199f06f7ff8297343a8549513",
+      "bytes": 1167,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p06-font-mapping.pdf": {
+      "sha256": "2d217aed9399b3c1b3b52d29ddb8ca7fd7a62c90d0fa0902790debb3ee08c24f",
+      "bytes": 2642,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p07-blank.pdf": {
+      "sha256": "2ca3d073196f4cf64fc176a0c28b95598e04474eef2b635efb8cd905825928ab",
+      "bytes": 621,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p08-scanned-images.pdf": {
+      "sha256": "dd5f3ea5ecd9b106a1f43c8cd125c230f56b466c0615446b3d7bbfa7792e8e68",
+      "bytes": 2494,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p09-mixed-pages.pdf": {
+      "sha256": "c6b20ed4a2ec5ad485b682e0a18cc33479758e82386c4dbd197bb260d8563aab",
+      "bytes": 2906,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p10-ruled-table.pdf": {
+      "sha256": "8ab96a84ef0c789f81b446ead9852f6ea2b30abfb35ba5ded71fc5d736cc66ed",
+      "bytes": 811,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p11-formula.pdf": {
+      "sha256": "07641bfe012187dc1b686789cbac020949c7267056a2b7a57f13582349f84e64",
+      "bytes": 802,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p12-annotations-form.pdf": {
+      "sha256": "3ecc350cf64f3896be29c8b49020211b95c0ecf30a881da6eeeb51a56a1d9882",
+      "bytes": 1572,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p13-invisible-ocr-layer.pdf": {
+      "sha256": "8a2cd245266b7aba8fa54e2e6aa6100d980cdbd46e7bbc394276cae4602ab1e9",
+      "bytes": 2252,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p14-outside-and-duplicates.pdf": {
+      "sha256": "706c2ba2ffcebf2ac6625d09db4a9b1284401e8cb2117d8539c61bfee92129cf",
+      "bytes": 738,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p15-positioned-words.pdf": {
+      "sha256": "fbb319f049fa518c15961d937986bc7414ab432d43b027c0273911c357430d41",
+      "bytes": 748,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p16-text-cap.pdf": {
+      "sha256": "7b26b99aaf1515bc3c15fed92ebcd078b6fd2e3b2a07d78971af1b253208b201",
+      "bytes": 98920,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p17-glyph-budget.pdf": {
+      "sha256": "cea65f0c92fa31c6648849a0a2b3bf4109a0053e8669c0849758943bf774d6da",
+      "bytes": 5710,
+      "origin": "raw-writer",
+      "deterministic": true
+    },
+    "p18-draw-budget.pdf": {
+      "sha256": "d41ebf229302b92d205468d74a758df8a3d209f6838b28a66f2fe80ee554f69c",
+      "bytes": 28410,
+      "origin": "raw-writer",
+      "deterministic": true
+    }
+  }
+}

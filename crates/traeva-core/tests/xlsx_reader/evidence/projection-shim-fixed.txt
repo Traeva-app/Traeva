@@ -1,0 +1,2 @@
+    Checking traeva-xlsx-projection-candidate v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-core/experiments/xlsx-reader/projection)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.48s

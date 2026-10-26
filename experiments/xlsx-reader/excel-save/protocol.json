@@ -1,0 +1,50 @@
+{
+  "protocol": "f-excel-save-v1",
+  "frozen_at_utc": "2026-10-11T21:32:23Z",
+  "main_baseline": "eb98835e712d371dff1a3c52d8ea7e67664e1e58",
+  "reviewed_reader_commit": "6de78846225a65321089ec5794254407f35d632d",
+  "sheet_order": ["F Data", "F 中文"],
+  "visibility": "visible",
+  "merged_ranges": {"F Data": ["A6:C6"], "F 中文": []},
+  "fixed_literals": {
+    "F Data": {
+      "A1": {"type": "text", "value": "Field"},
+      "B1": {"type": "text", "value": "Value"},
+      "C1": {"type": "text", "value": "Formula result"},
+      "A2": {"type": "text", "value": "Input"},
+      "A3": {"type": "text", "value": "English"},
+      "B3": {"type": "text", "value": "Hello"},
+      "A4": {"type": "text", "value": "Chinese"},
+      "B4": {"type": "text", "value": "你好 Excel"},
+      "A5": {"type": "text", "value": "Boolean"},
+      "B5": {"type": "boolean", "value": true},
+      "A6": {"type": "text", "value": "Merged context"}
+    },
+    "F 中文": {
+      "A1": {"type": "text", "value": "第二张工作表"},
+      "B1": {"type": "number", "value": "12.5"},
+      "A2": {"type": "text", "value": "False boolean"},
+      "B2": {"type": "boolean", "value": false}
+    }
+  },
+  "input_cell": {"sheet": "F Data", "address": "B2"},
+  "formula_cell": {"sheet": "F Data", "address": "C2"},
+  "stages": {
+    "baseline": {"input": "5", "formula": "B2*2", "expected_saved_cache": "10"},
+    "input_edit": {"input": "7", "formula": "B2*2", "expected_saved_cache": "14"},
+    "formula_edit": {"input": "7", "formula": "B2*3", "expected_saved_cache": "21"}
+  },
+  "expected_coordinate_flags": {
+    "baseline_to_input_edit": {
+      "B2": {"literal_changed": true, "formula_changed": false, "cache_changed": false},
+      "C2": {"literal_changed": false, "formula_changed": false, "cache_changed": true}
+    },
+    "input_edit_to_formula_edit": {
+      "C2": {"literal_changed": false, "formula_changed": true, "cache_changed": true}
+    }
+  },
+  "cache_freshness": "unverified",
+  "numeric_check": "Compare decimal tokens to frozen expected numbers; retain exact tokens. Do not evaluate formulas.",
+  "excel_provenance": "Actual save, close and reopen, verified PID/workbook window/Dell display and #65 slot required separately for each stage.",
+  "selected_profile_feature": "merged range; hidden sheets are not part of this run"
+}

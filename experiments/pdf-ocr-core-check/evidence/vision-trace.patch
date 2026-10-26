@@ -1,0 +1,40 @@
+--- formal/vision.rs
++++ diagnostic/vision.rs
+@@ -16,6 +16,7 @@
+     VNImageRequestHandler, VNRecognizeTextRequest, VNRequest, VNRequestTextRecognitionLevel,
+ };
+ use serde::Serialize;
++use sha2::{Digest, Sha256};
+ 
+ use super::render::Gray;
+ use super::{Preparation, Settings};
+@@ -175,6 +176,29 @@
+             )
+         };
+         let as_request: &VNRequest = &request;
++        let actual_languages: Vec<String> = unsafe { request.recognitionLanguages() }
++            .iter()
++            .map(|language| language.to_string())
++            .collect();
++        let pixels_sha256 = Sha256::digest(&gray.pixels)
++            .iter()
++            .map(|byte| format!("{byte:02x}"))
++            .collect::<String>();
++        eprintln!(
++            "{}",
++            serde_json::json!({
++                "diagnostic": "vision_request_before_perform",
++                "pixels_sha256": pixels_sha256,
++                "width": gray.width,
++                "height": gray.height,
++                "revision": unsafe { request.revision() },
++                "minimumTextHeight": request.minimumTextHeight(),
++                "recognitionLanguages": actual_languages,
++                "automaticallyDetectsLanguage": request.automaticallyDetectsLanguage(),
++                "usesLanguageCorrection": request.usesLanguageCorrection(),
++                "recognitionLevel": request.recognitionLevel().0,
++            })
++        );
+         handler
+             .performRequests_error(&NSArray::from_slice(&[as_request]))
+             .map_err(|e| e.localizedDescription().to_string())?;

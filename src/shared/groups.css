@@ -1,0 +1,185 @@
+/* Groups of rows, Now and the filter (#37, the student's choice B, 10/14).
+   Rows are Find's (find.css); this adds the group's title line, the amber
+   edge of a row that waits for the user, and the status line. */
+
+.group {
+  margin-top: 20px;
+  /* Find's icon colours, for FileIconSvg in rows on any page. */
+  --icon-edge: #c3d4de;
+}
+
+@media (prefers-color-scheme: dark) {
+  .group {
+    --icon-edge: #3d4f5a;
+  }
+}
+
+.group-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-bottom: 8px;
+}
+
+.group-title {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* The title of a group that can close: a plain button, the whole title. */
+.group-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 6px 2px 2px;
+  margin-left: -2px;
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+}
+
+.group-toggle:hover {
+  background: var(--hover);
+}
+
+.group-chevron {
+  width: 0;
+  height: 0;
+  border-top: 4.5px solid transparent;
+  border-bottom: 4.5px solid transparent;
+  border-left: 6px solid var(--muted);
+  transition: transform 150ms ease-out;
+}
+
+.group-toggle[aria-expanded="true"] .group-chevron {
+  transform: rotate(90deg);
+}
+
+.group-count {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  background: var(--pressed);
+  border-radius: 9px;
+}
+
+/* Waits for the user: amber, as the sidebar's count and the pet's bubble. */
+.group-count-attention {
+  color: var(--on-attention);
+  background: var(--attention);
+}
+
+.group-summary {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.group-action {
+  margin-left: auto;
+}
+
+.group-note {
+  margin: -2px 0 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* A row that waits for the user: a thin amber edge on its left. */
+.find-row.group-row-attention {
+  box-shadow: inset 3px 0 0 var(--attention);
+}
+
+.find-rows > .find-row.group-row-attention:first-child {
+  border-top-left-radius: 10px;
+}
+
+.find-rows > .find-row.group-row-attention:last-child {
+  border-bottom-left-radius: 10px;
+}
+
+/* A row's status: the badge, when, and a short note. */
+.status-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 12px;
+  margin-top: 2px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* Now: the one thing being done on the page, above its groups. */
+.now {
+  margin-top: 16px;
+}
+
+.now-label {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.now > .card {
+  margin-top: 0;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* The filter: a segmented control in the page's quiet colours. */
+.filter {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 2px;
+  background: var(--pressed);
+  border-radius: 8px;
+}
+
+.filter-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  font-size: 13px;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+}
+
+.filter-chosen {
+  color: var(--text);
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filter-count {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.filter-count-attention {
+  color: var(--attention);
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group-chevron {
+    transition: none;
+  }
+}

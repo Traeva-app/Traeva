@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-memory-relocation"
+description = "Enables the preview_memory_relocation command without any pre-configured scope."
+commands.allow = ["preview_memory_relocation"]
+
+[[permission]]
+identifier = "deny-preview-memory-relocation"
+description = "Denies the preview_memory_relocation command without any pre-configured scope."
+commands.deny = ["preview_memory_relocation"]

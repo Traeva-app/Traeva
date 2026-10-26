@@ -1,0 +1,28 @@
+{
+  "expected_matches": true,
+  "input_bytes": 3086,
+  "input_sha256": "2e8b5c8d5415c162b8cd89ffc8e821b900bfd8a22de085ed840d0ec671a2b417",
+  "iterations": 1,
+  "mean_ms": 2.896708,
+  "summary": {
+    "chars": 108,
+    "covered": [
+      "main body paragraphs, runs, tabs and explicit line breaks"
+    ],
+    "left_out": [
+      "comments",
+      "fields and field instructions",
+      "footnotes and endnotes",
+      "headers and footers",
+      "tables",
+      "tracked changes (no revision acceptance policy applied)"
+    ],
+    "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+    "reader": "docx-2",
+    "status": "partial"
+  },
+  "text_sha256": "67f43d9d81ab14887e4ef7bc2472133f25b7c930992dd3534b9056bb9d5bae5f",
+  "total_ms": 2.896708,
+  "provenance": "Generated synthetic OOXML input, not a Word GUI save",
+  "real_word_save_status": "PASS: actual Word Save As and feature retention recorded separately in word-rich-validation.json; this file only records the generated input run"
+}

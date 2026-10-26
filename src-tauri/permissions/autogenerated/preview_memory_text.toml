@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-preview-memory-text"
+description = "Enables the preview_memory_text command without any pre-configured scope."
+commands.allow = ["preview_memory_text"]
+
+[[permission]]
+identifier = "deny-preview-memory-text"
+description = "Denies the preview_memory_text command without any pre-configured scope."
+commands.deny = ["preview_memory_text"]

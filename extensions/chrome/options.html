@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Traeva Source settings</title>
+    <link rel="stylesheet" href="options.css">
+    <script type="module" src="options.js"></script>
+  </head>
+  <body>
+    <main>
+      <header><p class="brand">Traeva</p><h1>Chrome download sources</h1></header>
+      <p>Keep download sources in your local Traeva library. Review suggested file matches in Traeva when it suits you. Downloads never open a confirmation popup.</p>
+      <section aria-labelledby="setup-title">
+        <details id="setup" open>
+        <summary id="setup-title">Connect for the first time</summary>
+        <ol>
+          <li>Open Traeva. In <strong>Settings</strong>, authorize the folder where Chrome saves your downloads.</li>
+          <li>In <strong>Source Memory</strong>, enable Chrome collection and open <strong>Connect Chrome extension</strong>.</li>
+          <li>Copy that app's address and pairing token below. Select <strong>Collect new downloads</strong> and save settings.</li>
+          <li>Check the connection. Download a small TXT file into a listed folder, then find it in Source Memory. A saved record and a confirmed file association are separate steps.</li>
+        </ol>
+        </details>
+      </section>
+      <form id="settings">
+        <fieldset class="settings-fields" disabled>
+          <legend>Pair this Chrome profile</legend>
+          <label for="endpoint">Local receiver address</label>
+          <input id="endpoint" name="endpoint" type="url" placeholder="http://127.0.0.1:43127" autocomplete="off" spellcheck="false" aria-describedby="pair-help">
+          <label for="token">Pairing token</label>
+          <input id="token" name="token" type="password" autocomplete="off" spellcheck="false" aria-describedby="pair-help">
+          <p id="pair-help" class="hint">Use the address and token from your own Traeva instance. Only a receiver on this computer is supported.</p>
+          <p class="hint">Connection checks use saved settings. Edits take effect after Save settings.</p>
+        </fieldset>
+        <fieldset class="settings-fields" disabled>
+          <legend>Collection</legend>
+          <label class="choice"><input id="enabled" type="checkbox"> Collect new downloads</label>
+          <p class="hint">Off by default. Traeva must also have source collection enabled. Only downloads inside its authorized folders are sent. Incognito downloads are excluded.</p>
+          <label class="choice"><input id="recoverRecent" type="checkbox"> Recover missed downloads after restarting Chrome</label>
+          <p class="hint">Optional. Looks back at most 24 hours, and only as far back as when collection was enabled. Pending deliveries always retry while collection is enabled.</p>
+        </fieldset>
+        <div id="discard-warning" hidden>
+          <p>Changing the address or token, or turning collection off, clears this profile's waiting deliveries. Sources already saved in Traeva remain there. After reconnecting, you may explicitly import the last 24 hours; older or erased Chrome records cannot be recovered by this extension.</p>
+          <label class="choice"><input id="discard" type="checkbox"> Clear the waiting deliveries with this settings change</label>
+        </div>
+        <button id="save" type="submit" disabled>Save settings</button>
+      </form>
+      <section aria-labelledby="connection-title">
+        <h2 id="connection-title">Connection and delivery</h2>
+        <p id="message" role="status" aria-live="polite">Loading settings…</p>
+        <p id="connection" role="status" aria-live="polite"></p>
+        <p id="checked" class="hint"></p>
+        <p id="delivery"></p>
+        <ul id="roots" aria-label="Authorized folders"></ul>
+        <p id="folders-help" class="hint"></p>
+        <div class="actions"><button id="check" type="button" disabled>Check connection</button><button id="retry" type="button" disabled>Retry pending downloads</button></div>
+        <h3>Waiting for delivery</h3>
+        <p id="pending-help" class="hint"></p>
+        <ul id="pending"></ul>
+        <h3>Recent results</h3>
+        <p class="hint">The latest 20 record results for this pairing, retained across Chrome restarts. This is a delivery receipt list, not your full library. A retry can update the same result.</p>
+        <ul id="recent"></ul>
+      </section>
+      <section aria-labelledby="history-title">
+        <h2 id="history-title">Earlier downloads</h2>
+        <p>Earlier download records are not imported automatically. You can import up to 200 downloads from the last 24 hours, limited to currently authorized folders. Their download times stay separate from their first import times.</p>
+        <p>App or Chrome restart: saved sources stay in Traeva; waiting IDs resume while collection is on. Use Retry pending downloads after reconnecting. Downloads missed while collection was off, skipped for unavailable folders, or rejected need your manual import. It cannot recover records erased from Chrome.</p>
+        <button id="history" type="button" disabled>Import the last 24 hours</button>
+      </section>
+      <footer>Source links stay in local Traeva app-data. This extension stores pairing settings and pending Chrome record IDs, without copying source URLs into its storage or logs. File associations require your confirmation; this release does not automatically verify them.</footer>
+    </main>
+  </body>
+</html>

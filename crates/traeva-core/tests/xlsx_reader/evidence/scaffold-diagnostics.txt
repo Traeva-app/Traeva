@@ -1,0 +1,3 @@
+First fmt diagnostic: file crates/traeva-core/tests/xlsx_reader/probe.rs does not exist; probe added before final fmt.
+First source-equality checker: AssertionError because rustfmt reordered the allowed namespace imports; import diff retained in tool transcript and normalized equality then passed.
+Initial raw shim check emitted unused XLSX_PREVIEW_READER warning; public canonical xlsx module export corrected the bridge scope, with subsequent Clippy -D warnings PASS.

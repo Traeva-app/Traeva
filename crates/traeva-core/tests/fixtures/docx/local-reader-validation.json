@@ -1,0 +1,591 @@
+{
+  "date_local": "2026-10-10",
+  "zone": "America/Los_Angeles",
+  "kind": "D_IMPLEMENTATION_EVIDENCE_NOT_INDEPENDENT_ACCEPTANCE",
+  "implementation_commit": "705d17df1f9db3e1d2eb201d4916e2635e4247a9",
+  "base": "61b0afc85aa25de09103a6a46aafcafde62dfc71",
+  "environment": {
+    "macOS": "27.0.1 (26A434)",
+    "architecture": "arm64",
+    "Rust": "1.98.1",
+    "Word_samples_saved_with": "16.78",
+    "new_word_gui_used": false
+  },
+  "changed_code_hashes": {
+    "crates/traeva-core/src/docx.rs": "f90b898e97df8f7bc80c370340217c062a5cab7e1dfc25bf09fa1acb09f4ae0f",
+    "crates/traeva-core/src/docx_cached.rs": "930510eda376a6f5dba212602aba32ce573639f21575c532847898d77fc84b97",
+    "crates/traeva-core/src/docx_preview.rs": "cf19746a97cddf1d8ef55a24aeee18ba24cd495b906da2b1f313774be4efb0c1",
+    "crates/traeva-core/tests/docx_reader/cached_tests.rs": "9f276beb5a0ca79f377ffed35649e5a8c08673ded78e72ee53d3e4229ea769db",
+    "crates/traeva-core/tests/docx_reader/lib.rs": "bb64d9ad96de5663988930b8a9d95f2e6bef14cbbc85fa394af76a3faa6161a2",
+    "crates/traeva-core/tests/docx_reader/preview_tests.rs": "3779079cdb277caba83ba8a8f07a3248e39b8e2bed5423c106995813e9712e3d",
+    "crates/traeva-core/tests/docx_reader/probe.rs": "dd8609ca086437c8ee95b3521dc35d583c32d89ff45059129e1a11ab1e3cde89",
+    "crates/traeva-core/tests/word_research/build.rs": "f4cdcd0127c7b39ad648c9147aaee980e256067b411dff86cd0149badc80f0bc",
+    "crates/traeva-core/tests/word_research/lib.rs": "4b30b0e434bbdf6a63221ee0bcb951b8c20eeba91434661605c32b87a896b8b6"
+  },
+  "checks": {
+    "feature_tests": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-final127-fixed-tests.log",
+      "sha256": "9686da611468a3c1399b866262f5723d3a1ba3357212f1d7dbe0ac229ee0e369",
+      "passed": 127,
+      "ignored": 0
+    },
+    "feature_clippy": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-final127-fixed-clippy.log",
+      "sha256": "992a29dc5407183727291c9d3f4759a00524bab724ad093441f36d1bb4339452"
+    },
+    "legacy_tests": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-legacy-fixed-tests.log",
+      "sha256": "aeef686302a07d61cd919c3cbc9dc973b49905f0d3f71bdfa2f21f714fe32080",
+      "passed": 112,
+      "ignored": 0
+    },
+    "legacy_clippy": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-legacy-fixed-clippy.log",
+      "sha256": "9adf29022437486aac62e3331336f9351a50c4ed0a507ffbe64960c561adf27f"
+    },
+    "core": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-core.log",
+      "sha256": "f448df16acb9c04de822e2571e9e009bf7c5b812666b4741c8bb920abc0a4620",
+      "passed": 791,
+      "ignored": 10
+    },
+    "frontend": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-frontend.log",
+      "sha256": "1906ee51738e3f5ea3a5b19c7aa0308f02c3085619ef2a890faa72a83b6b653c",
+      "passed": 108
+    },
+    "build": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-build.log",
+      "sha256": "cbb1463bde4dc22fe3334d03d3019a64cfdd723b39696684873739be59a847b7"
+    },
+    "workspace_clippy": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-workspace-clippy.log",
+      "sha256": "7463a919920d461e35706437ec9ef571a1d459c2dd220a91c9f3c8af9eefef3b"
+    },
+    "workspace_fmt": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "feature_fmt": {
+      "result": "PASS",
+      "log": "/private/tmp/traeva-d-docx-local-feature-fmt.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "word_matrix": [
+    {
+      "case": "ordinary",
+      "input_bytes": 2121,
+      "input_sha256": "cf81e8b4dde94d294f6adfd219c9a53856f9f3d8b581b0c2bb3cc785a9ea6d5c",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 53,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f"
+      }
+    },
+    {
+      "case": "ordinary-word",
+      "input_bytes": 12121,
+      "input_sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 53,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f"
+      }
+    },
+    {
+      "case": "nested",
+      "input_bytes": 1911,
+      "input_sha256": "939c311b5794ef6357adf22eb09bbeece721814b12eaf305cd262de5f3806e41",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 20,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "fields without retained cached display text",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "b89d3c4a6beb0ddd8bdebe0da5fae7ec966a8201153c81997e26bcc697373d1f"
+      }
+    },
+    {
+      "case": "nested-word",
+      "input_bytes": 12035,
+      "input_sha256": "3cbe39abbe4921c9fe391050fe947a6210eb73f56d2d8909680dc6d57dbecc70",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 20,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "fields without retained cached display text",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "b89d3c4a6beb0ddd8bdebe0da5fae7ec966a8201153c81997e26bcc697373d1f"
+      }
+    },
+    {
+      "case": "missing-stale",
+      "input_bytes": 1628,
+      "input_sha256": "42a365df0cdb7d2035ffd3d4b30dca100db8b409c670117eee91ae3bbe3d3f2d",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 29,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "field cache marked dirty (may be stale)",
+            "fields without retained cached display text",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "1ae9c11f352c6bd03348398981d2030ae153bba3f61b71e6e68ab5765040894c"
+      }
+    },
+    {
+      "case": "missing-stale-word",
+      "input_bytes": 12027,
+      "input_sha256": "caf459092fbfb07a284ee5850e2b6f98fddace91e3257ac005132000b0df4fc8",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 29,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "fields without retained cached display text",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "1ae9c11f352c6bd03348398981d2030ae153bba3f61b71e6e68ab5765040894c"
+      }
+    },
+    {
+      "case": "revisions",
+      "input_bytes": 1554,
+      "input_sha256": "663c64952b04ac4235c71e263c5cd5c3e04f38d112285ff4e7c150fad7c2d37c",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "Field boundaries in omitted or revised content are unsupported.",
+          "reader": "docx-cache-local-1",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "case": "revisions-word",
+      "input_bytes": 12079,
+      "input_sha256": "12bbb3e54637e27d1c7d11b453cbf0146237b0ea205e7e5fafcf4c67ffb9ceac",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "Field boundaries in omitted or revised content are unsupported.",
+          "reader": "docx-cache-local-1",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "case": "malformed",
+      "input_bytes": 1366,
+      "input_sha256": "638c623cbdc407322262512cc33530b736d223f3a086bd7c1f9d68d3f2d62b76",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "The DOCX package or XML is damaged or inconsistent.",
+          "reader": "docx-cache-local-1",
+          "status": "failed"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "case": "malformed-word",
+      "input_bytes": 11993,
+      "input_sha256": "f58bcddbe421cfb3a9508f48cf4e5141f9a27f40dcb391079adc18a3568d4586",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 0,
+          "covered": [],
+          "left_out": [],
+          "note": "Citation-manager field-code markers occur in display text; the document is conservatively refused.",
+          "reader": "docx-cache-local-1",
+          "status": "unsupported"
+        },
+        "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "case": "plain-history",
+      "input_bytes": 1263,
+      "input_sha256": "87a386297bc83a72b4ce297ba578f7f6d4970bf574b9b6dce84e47c292ec1c48",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 74,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+          "reader": "docx-cache-local-1",
+          "status": "complete"
+        },
+        "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+      }
+    },
+    {
+      "case": "plain-history-word",
+      "input_bytes": 11954,
+      "input_sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+      "reader": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 74,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+          "reader": "docx-cache-local-1",
+          "status": "complete"
+        },
+        "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+      }
+    }
+  ],
+  "performance": {
+    "word": {
+      "build": "debug",
+      "input_bytes": 12121,
+      "input_sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+      "max_us": 18912,
+      "p50_us": 11324,
+      "p95_us": 12451,
+      "reader": {
+        "expected_matches": null,
+        "local_only": true,
+        "summary": {
+          "chars": 53,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f"
+      },
+      "repeats": 100
+    },
+    "synthetic_limit": {
+      "build": "debug",
+      "input_bytes": 1001297,
+      "input_sha256": "bad521fe7514fb03144b94f270ab898f391d1272b24ec787516f4ce7c9854d8a",
+      "max_us": 65702,
+      "p50_us": 62961,
+      "p95_us": 65702,
+      "reader": {
+        "expected_matches": null,
+        "local_only": true,
+        "summary": {
+          "chars": 1000000,
+          "covered": [
+            "the first 1000000 characters of supported main-body text"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "structurally marked field codes and field metadata",
+            "the last 1 characters of supported main-body text"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed. The supported main-body text has 1000001 characters; Traeva keeps at most 1000000.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "1b977e9f84f1b26b6ed7f68b0498faee2385ea4125bd29adce4a7d9106ba3134"
+      },
+      "repeats": 10
+    }
+  },
+  "snapshots": {
+    "retained": {
+      "preview": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 74,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably.",
+          "reader": "docx-cache-local-1",
+          "status": "complete"
+        },
+        "text_sha256": "d7be274ea7bd997dcad7dc60b647121d8f821407f8c3aa1368ebee899f525cfa"
+      },
+      "snapshot": {
+        "byte_length": 11954,
+        "captured_at_ms": 1791692863943,
+        "file_id": "6f60698a-29cd-4dab-a0ee-5899c3f55db9",
+        "file_revision": 1,
+        "relative_path": "plain-history-word.docx",
+        "root_id": "a262129d-bcfd-4bc4-b2fb-767076244d9d",
+        "sequence": 1,
+        "sha256": "3a8e3017ef4fe2408b9b7530043fa09583d6d20ec0d6db9d910e2466411facfc",
+        "snapshot_id": "782f5312-e640-46a4-bf01-ebb47fd60e6e"
+      }
+    },
+    "fresh_source_deleted": {
+      "preview": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 53,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f"
+      },
+      "snapshot": {
+        "byte_length": 12121,
+        "captured_at_ms": 1791697527449,
+        "file_id": "6a44214d-7cb1-4a28-8781-8a3626e749c4",
+        "file_revision": 1,
+        "relative_path": "history.docx",
+        "root_id": "d63bcca0-b497-48a4-8ff9-7f8a5dea40cd",
+        "sequence": 1,
+        "sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+        "snapshot_id": "d60ab7d6-3a09-4e7d-94aa-047efbf2ad7d"
+      }
+    }
+  },
+  "fresh_capture": {
+    "capture": {
+      "reader": {
+        "expected_matches": null,
+        "input_bytes": 12121,
+        "input_sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+        "iterations": 1,
+        "mean_ms": 11.51,
+        "summary": {
+          "chars": 16,
+          "covered": [
+            "main body paragraphs, runs, tabs and explicit line breaks"
+          ],
+          "left_out": [
+            "fields and field instructions"
+          ],
+          "note": "Only supported main-body text was retained; see left_out. Formatting and layout are not interpreted.",
+          "reader": "docx-2",
+          "status": "partial"
+        },
+        "text_sha256": "d9b982e1d92d7f488206bb01639319e66610e1c12af2b2fb6720f202fdbc24c3",
+        "total_ms": 11.51
+      },
+      "snapshot": {
+        "byte_length": 12121,
+        "captured_at_ms": 1791697527449,
+        "file_id": "6a44214d-7cb1-4a28-8781-8a3626e749c4",
+        "file_revision": 1,
+        "relative_path": "history.docx",
+        "root_id": "d63bcca0-b497-48a4-8ff9-7f8a5dea40cd",
+        "sequence": 1,
+        "sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+        "snapshot_id": "d60ab7d6-3a09-4e7d-94aa-047efbf2ad7d"
+      }
+    },
+    "preview": {
+      "preview": {
+        "expected_matches": true,
+        "local_only": true,
+        "summary": {
+          "chars": 53,
+          "covered": [
+            "supported main-body text, including stored complex-field display text"
+          ],
+          "left_out": [
+            "field cache freshness (unknown; no evaluation or refresh)",
+            "structurally marked field codes and field metadata"
+          ],
+          "note": "Local text extraction only. Structurally marked field codes are omitted; unmarked flattened text cannot be identified reliably. Stored field display text may be missing or stale; no field or citation database was evaluated or refreshed.",
+          "reader": "docx-cache-local-1",
+          "status": "partial"
+        },
+        "text_sha256": "af731443c1871287f40459f066b4036c6e5e4b98c59d2c3e479ce761a609af2f"
+      },
+      "snapshot": {
+        "byte_length": 12121,
+        "captured_at_ms": 1791697527449,
+        "file_id": "6a44214d-7cb1-4a28-8781-8a3626e749c4",
+        "file_revision": 1,
+        "relative_path": "history.docx",
+        "root_id": "d63bcca0-b497-48a4-8ff9-7f8a5dea40cd",
+        "sequence": 1,
+        "sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+        "snapshot_id": "d60ab7d6-3a09-4e7d-94aa-047efbf2ad7d"
+      }
+    },
+    "source_before": {
+      "sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+      "ino": 170850288,
+      "mode": 33188,
+      "size": 12121,
+      "mtime_ns": 1791697524913056196,
+      "ctime_ns": 1791697524915320219
+    },
+    "source_after": {
+      "sha256": "9e7e6b0a11a26a9589d607ad477bd980929a0de9fdf406788288d1be0ab44ace",
+      "ino": 170850288,
+      "mode": 33188,
+      "size": 12121,
+      "mtime_ns": 1791697524913056196,
+      "ctime_ns": 1791697524915320219
+    },
+    "after_source_move_delete_and_restarts_match": true,
+    "opened_directory_created": false,
+    "word_launched": false,
+    "cloud_requests": 0
+  },
+  "initial_failures": [
+    {
+      "result": "INITIAL_FAIL_RETAINED",
+      "category": "shared_error_size_lint",
+      "log": "/private/tmp/traeva-d-docx-local-clippy.log",
+      "sha256": "123fe5225aefaf3ae4328075d3a8f2ea513a70a851711a2da9ef4ed936c8376f",
+      "resolved": true
+    },
+    {
+      "result": "INITIAL_FAIL_RETAINED",
+      "category": "legacy_harness_missing_reexports",
+      "log": "/private/tmp/traeva-d-docx-local-legacy-tests.log",
+      "sha256": "35eeb0b665006a88e6693790b6297c329613771e3422079268089b308ecfb1ae",
+      "resolved": true
+    },
+    {
+      "result": "INITIAL_FAIL_RETAINED",
+      "category": "hidden_file_fixture_refused_before_capture",
+      "log": "/private/tmp/traeva-d-docx-local-final127-tests.log",
+      "sha256": "26d57229b2c48be370c806f34b1b0ecdc401aa232bd3f724d8950780fa533bf0",
+      "resolved": true
+    }
+  ],
+  "boundaries": {
+    "R126_01_fix_commit": "e344eab2b29b8f41584fef6a6a1cad2d1b5f55d2",
+    "R126_02": "Unmarked flattened ordinary w:t cannot reliably be recognized as field code or internal metadata. Known prefixes are only a conservative heuristic.",
+    "reader_call": "read_docx_cached(bytes), explicit opt-in",
+    "preview_call": "preview_docx_snapshot(service,id), in-memory TextExtraction",
+    "default_reader_and_dispatch_changed": false,
+    "shared_files_changed": false,
+    "cloud_requests": 0,
+    "word_opening": "NO_GO; whitelist unchanged",
+    "ui_integration": "NOT_IMPLEMENTED; A/B",
+    "new_independent_R1_review": "PENDING"
+  },
+  "development_self_review": {
+    "kind": "IMPLEMENTER_SELF_REVIEW",
+    "zip_xml_guards": "Shared extract_with pipeline; no new archive decoder",
+    "field_visibility": "Text only if every open field is in result state; instrText and delInstrText always omitted",
+    "failure_atomicity": "Unsupported/Failed discard all text and prefix",
+    "snapshot_boundary": "Only read_snapshot; verified hash/length; no source fallback, copying or viewer launch",
+    "coverage": "Plain body does not claim actual cache presence; stale/truncated results remain disclosed",
+    "routing": "No registration, default dispatch, model calls or persisted preview text",
+    "remaining": "Independent R1 review and separately scoped A/B local UI integration"
+  }
+}

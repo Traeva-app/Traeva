@@ -1,0 +1,253 @@
+{
+  "workbook": {
+    "calculation_properties": {},
+    "date_1904": false,
+    "input_sha256": "0eaf948b7fc0a4755383e91e91c26ca476fd4209508bd4d399744bede97d0d60",
+    "limitations": [
+      "Formulas are never executed. All cached results have unverified freshness.",
+      "Formatting, number formats, date serial conversion and visual layout are not interpreted.",
+      "Charts, pivots, macros, external data, objects and extensions are not interpreted or refreshed.",
+      "Sheet/address context is positional; row alignment, lineage and semantic meaning are not inferred."
+    ],
+    "omissions": [],
+    "profile": "traeva-xlsx-experiment-v1",
+    "sheets": [
+      {
+        "cells": [
+          {
+            "address": "A1",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Field"
+            },
+            "row": 1,
+            "style_index": null
+          },
+          {
+            "address": "B1",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Value"
+            },
+            "row": 1,
+            "style_index": null
+          },
+          {
+            "address": "C1",
+            "cached_result": null,
+            "column": 3,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Formula result"
+            },
+            "row": 1,
+            "style_index": null
+          },
+          {
+            "address": "A2",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Input"
+            },
+            "row": 2,
+            "style_index": null
+          },
+          {
+            "address": "B2",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "number",
+              "value": "5"
+            },
+            "row": 2,
+            "style_index": null
+          },
+          {
+            "address": "C2",
+            "cached_result": {
+              "freshness": "unverified",
+              "value": {
+                "type": "number",
+                "value": "10"
+              }
+            },
+            "column": 3,
+            "formula": {
+              "attributes": {},
+              "interpretation": "literal_formula_text",
+              "text": "B2*2"
+            },
+            "literal": null,
+            "row": 2,
+            "style_index": null
+          },
+          {
+            "address": "A3",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "English"
+            },
+            "row": 3,
+            "style_index": null
+          },
+          {
+            "address": "B3",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Hello"
+            },
+            "row": 3,
+            "style_index": null
+          },
+          {
+            "address": "A4",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Chinese"
+            },
+            "row": 4,
+            "style_index": null
+          },
+          {
+            "address": "B4",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "你好 Excel"
+            },
+            "row": 4,
+            "style_index": null
+          },
+          {
+            "address": "A5",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Boolean"
+            },
+            "row": 5,
+            "style_index": null
+          },
+          {
+            "address": "B5",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "boolean",
+              "value": true
+            },
+            "row": 5,
+            "style_index": null
+          },
+          {
+            "address": "A6",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "Merged context"
+            },
+            "row": 6,
+            "style_index": null
+          }
+        ],
+        "declared_dimension": null,
+        "kind": "worksheet",
+        "merged_ranges": [
+          "A6:C6"
+        ],
+        "name": "F Data",
+        "part": "xl/worksheets/sheet1.xml",
+        "sheet_id": "1",
+        "visibility": "visible"
+      },
+      {
+        "cells": [
+          {
+            "address": "A1",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "第二张工作表"
+            },
+            "row": 1,
+            "style_index": null
+          },
+          {
+            "address": "B1",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "number",
+              "value": "12.5"
+            },
+            "row": 1,
+            "style_index": null
+          },
+          {
+            "address": "A2",
+            "cached_result": null,
+            "column": 1,
+            "formula": null,
+            "literal": {
+              "type": "text",
+              "value": "False boolean"
+            },
+            "row": 2,
+            "style_index": null
+          },
+          {
+            "address": "B2",
+            "cached_result": null,
+            "column": 2,
+            "formula": null,
+            "literal": {
+              "type": "boolean",
+              "value": false
+            },
+            "row": 2,
+            "style_index": null
+          }
+        ],
+        "declared_dimension": null,
+        "kind": "worksheet",
+        "merged_ranges": [],
+        "name": "F 中文",
+        "part": "xl/worksheets/sheet2.xml",
+        "sheet_id": "2",
+        "visibility": "visible"
+      }
+    ],
+    "status": "complete_within_profile"
+  }
+}

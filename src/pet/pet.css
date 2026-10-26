@@ -1,0 +1,325 @@
+/* The desktop pet (#208, #248). Everything here is scoped to the pet window
+   (html.pet-window, set in main.tsx) or to .pet classes; the main window's
+   look does not change. Motion stays slow and small, and stops entirely
+   when the system asks for reduced motion. */
+
+html.pet-window,
+html.pet-window body,
+html.pet-window #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+  /* A dark scheme would paint an opaque canvas behind a transparent page. */
+  color-scheme: normal;
+}
+
+html.pet-window #root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pet {
+  /* 64 px like a desktop folder; the window's margin leaves room for the
+     shadow, the motion and the bubble. */
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  outline: none;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  touch-action: none;
+}
+
+.pet:focus-visible {
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.6);
+}
+
+/* The faces take no pointer events: a press lands on .pet itself. */
+.pet-stage {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  /* Reads on light and dark desktops, like Finder's icons. One shadow for
+     the faces together, so it does not darken while two faces cross. */
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.28));
+  transform-origin: 50% 90%;
+  transition: transform 180ms ease-out;
+}
+
+/* A file is dragged over the pet: the folder grows a little, ready to
+   catch it (the student, 10/14), and settles back when the file leaves or
+   drops. */
+.pet-with-drop .pet-stage {
+  transform: scale(1.06);
+}
+
+/* A new face fades in and settles over the old one (260 ms). The old one
+   plays the same motion backwards from wherever it is (PetApp's Face): it
+   stays almost whole while the new one comes, then goes, so the folder
+   never blinks or jumps, also when the mood changes again halfway. `both`
+   keeps a face at its end (in) or its start (gone), so the browser can
+   still play it backwards. The old face keeps its own motion while it
+   goes. .pet-leave only marks an old face; it must not change the
+   animation, or the browser would start it over. */
+.pet-layer {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 90%;
+  animation: pet-face-in 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.pet-face {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  transform-origin: 50% 90%;
+}
+
+.pet-thinking {
+  animation: pet-pulse 2800ms ease-in-out infinite;
+}
+
+.pet-wink {
+  animation: pet-bounce 700ms ease-out 200ms 1;
+}
+
+.pet-sad {
+  animation: pet-droop 600ms ease-out 1 forwards;
+}
+
+.pet-question {
+  animation: pet-tilt 800ms ease-in-out 200ms 1;
+}
+
+/* The needs-you bubble (#248): how many files wait for the user, on the
+   folder's top-right corner, inside the window. Amber like the app's other
+   "needs you" dots; a thin light ring and a soft shadow keep it readable on
+   light, dark and busy desktops. It takes no pointer events, so a click or
+   a drag on it goes to the pet as before. */
+.pet-bubble {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  pointer-events: none;
+  animation: pet-bubble-in 220ms cubic-bezier(0.3, 1.3, 0.5, 1);
+}
+
+.pet-bubble-dot {
+  display: block;
+  box-sizing: border-box;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--on-attention);
+  background: var(--attention);
+  box-shadow:
+    0 0 0 1.5px rgba(255, 255, 255, 0.92),
+    0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* Part of the bubble sticks out past the pet's rounded corner. This empty
+   box over it belongs to the pet, so a click or a drag anywhere on the
+   bubble lands on the pet and works as on the folder. It covers "9+" and
+   the 1.5 px ring, and draws nothing. */
+.pet-with-bubble::after {
+  content: "";
+  position: absolute;
+  top: -4.5px;
+  right: -6.5px;
+  width: 28px;
+  height: 21px;
+  border-radius: 10.5px;
+}
+
+/* More files wait than before: one short grow. */
+.pet-bump {
+  animation: pet-bubble-bump 320ms ease-out;
+}
+
+/* The speech bubble (#37, 10/14): three dots while the core works, or
+   "Needs you" for a moment when a file comes to wait, at the folder's
+   top-right like the count, inside the 96 pt window. It takes no pointer
+   events; the empty box after it (below) belongs to the pet, so a click or
+   a drag on it works as on the folder. */
+.pet-speech {
+  position: absolute;
+  top: -12px;
+  right: -13px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 18px;
+  border-radius: 9px;
+  pointer-events: none;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+  animation: pet-bubble-in 220ms cubic-bezier(0.3, 1.3, 0.5, 1);
+}
+
+/* Always light, like the count's white ring: it reads on light, dark and
+   busy desktops alike. */
+.pet-speech-dots {
+  gap: 3px;
+  padding: 0 7px;
+  background: #ffffff;
+}
+
+/* A small tail toward the folder. */
+.pet-speech-dots::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: -3px;
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+.pet-speech-dots i {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2b7a9e;
+  animation: pet-dot 1100ms ease-in-out infinite;
+}
+
+.pet-speech-dots i:nth-child(2) {
+  animation-delay: 140ms;
+}
+
+.pet-speech-dots i:nth-child(3) {
+  animation-delay: 280ms;
+}
+
+.pet-speech-needs {
+  padding: 0 7px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--on-attention);
+  background: var(--attention);
+}
+
+.pet-speech-drop {
+  padding: 0 7px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #2b7a9e;
+  background: #ffffff;
+}
+
+.pet-with-working::after,
+.pet-with-needs::after,
+.pet-with-drop::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: -13px;
+  height: 18px;
+  border-radius: 9px;
+}
+
+.pet-with-working::after {
+  width: 36px;
+}
+
+.pet-with-needs::after {
+  width: 70px;
+}
+
+.pet-with-drop::after {
+  width: 80px;
+}
+
+@keyframes pet-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.55; }
+  30% { transform: translateY(-3px); opacity: 1; }
+}
+
+@keyframes pet-face-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pet-bubble-in {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pet-bubble-bump {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.2); }
+}
+
+@keyframes pet-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes pet-bounce {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+  70% { transform: translateY(0); }
+  85% { transform: translateY(-2px); }
+}
+
+@keyframes pet-droop {
+  from { transform: translateY(0) scaleY(1); }
+  to { transform: translateY(2px) scaleY(0.96); }
+}
+
+@keyframes pet-tilt {
+  0%, 100% { transform: rotate(0); }
+  35% { transform: rotate(-6deg); }
+  70% { transform: rotate(3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pet .pet-layer,
+  .pet .pet-face,
+  .pet .pet-bubble,
+  .pet .pet-bubble-dot,
+  .pet .pet-speech,
+  .pet .pet-speech-dots i {
+    animation: none;
+  }
+
+  /* Still dots: the bubble says "working" without moving. */
+  .pet .pet-speech-dots i {
+    opacity: 0.8;
+  }
+
+  /* The new face shows at once; the old one goes at once. */
+  .pet .pet-leave {
+    display: none;
+  }
+
+  /* No growing under a dragged file. */
+  .pet .pet-stage {
+    transition: none;
+  }
+
+  .pet.pet-with-drop .pet-stage {
+    transform: none;
+  }
+}

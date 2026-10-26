@@ -1,0 +1,359 @@
+{
+ "frozen": "Written before any fix; changes must state their basis.",
+ "source": "Codex-R4's second-round descriptions of R4-PDF-06 and R4-PDF-07 (its inputs were not seen)",
+ "roles": {
+  "defect": "fails as R4 describes before the fix",
+  "control": "the rule that must hold before and after the fix",
+  "limit-control": "a size limit that still holds for bytes that only look like a stream",
+  "known-limitation": "still refused after the fix, on purpose (see the module docstring)",
+  "related": "the same gap seen from the other side: a real header written in a legal way that the raw-byte check does not find"
+ },
+ "fixtures": {
+  "f01-listing-in-text.pdf": {
+   "path": "defects2/generated/f01-listing-in-text.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nListing 8 0 obj << /Length 0 /Filter /Missing >> stream sample endstream endobj",
+   "chars": 88,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 88
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f02-listing-in-file-comment.pdf": {
+   "path": "defects2/generated/f02-listing-in-file-comment.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nComment control",
+   "chars": 24,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 24
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f03-flate-listing-in-text.pdf": {
+   "path": "defects2/generated/f03-flate-listing-in-text.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nListing 8 0 obj << /Length 3 /Filter /FlateDecode >> stream abc endstream endobj",
+   "chars": 89,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 89
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f04-listing-in-content-comment.pdf": {
+   "path": "defects2/generated/f04-listing-in-content-comment.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nContent comment control",
+   "chars": 32,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 32
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f05-listing-in-strings.pdf": {
+   "path": "defects2/generated/f05-listing-in-strings.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nString control",
+   "chars": 23,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 23
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f06-lzw-listing-in-image-data.pdf": {
+   "path": "defects2/generated/f06-lzw-listing-in-image-data.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "partial",
+   "text": "[Page 1]\nImage payload control",
+   "chars": 30,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 30
+    }
+   },
+   "left_out": [
+    "images on page 1 (1 in all; images are not read, no OCR)"
+   ],
+   "note": "Not all of this PDF is in the text. Left out: images."
+  },
+  "f07-endstream-in-text.pdf": {
+   "path": "defects2/generated/f07-endstream-in-text.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nendstream endobj 9 0 obj << /Length 1 /Filter /Missing >> stream x endstream",
+   "chars": 85,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 85
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f08-endstream-in-text-indirect-length.pdf": {
+   "path": "defects2/generated/f08-endstream-in-text-indirect-length.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nendstream endobj 9 0 obj << /Length 1 /Filter /Missing >> stream x endstream",
+   "chars": 85,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 85
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f09-objstm-listing-in-text.pdf": {
+   "path": "defects2/generated/f09-objstm-listing-in-text.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nListing 5 0 obj << /Type /ObjStm /N 1 /First 4 /Filter /Missing >> stream 1 0 x endstream endobj",
+   "chars": 105,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 105
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f10-objstm-lzw-listing-in-text.pdf": {
+   "path": "defects2/generated/f10-objstm-lzw-listing-in-text.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "known-limitation",
+   "status": "unsupported",
+   "note": "The PDF uses legacy LZW compression, which this experiment does not read.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f11-listing-and-real-bomb.pdf": {
+   "path": "defects2/generated/f11-listing-and-real-bomb.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "control",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f12-damaged-part-and-listing.pdf": {
+   "path": "defects2/generated/f12-damaged-part-and-listing.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "control",
+   "status": "failed",
+   "note": "A compressed stream in the PDF is damaged.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f13-real-unknown-filter.pdf": {
+   "path": "defects2/generated/f13-real-unknown-filter.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "control",
+   "status": "unsupported",
+   "note": "A stream uses a filter this reader does not know.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f14-bomb-listing-in-image-data.pdf": {
+   "path": "defects2/generated/f14-bomb-listing-in-image-data.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "limit-control",
+   "status": "unsupported",
+   "note": "A stream expands beyond this reader's limit of 16 MiB.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f15-contents-direct-null.pdf": {
+   "path": "defects2/generated/f15-contents-direct-null.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "control",
+   "status": "unsupported",
+   "note": "The PDF has no text to read: its pages draw no text.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f16-contents-indirect-null.pdf": {
+   "path": "defects2/generated/f16-contents-indirect-null.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "The PDF has no text to read: its pages draw no text.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f17-text-and-indirect-null-page.pdf": {
+   "path": "defects2/generated/f17-text-and-indirect-null-page.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "defect",
+   "status": "complete",
+   "text": "[Page 1]\nFirst page text\n[Page 2]",
+   "chars": 33,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 24
+    },
+    "2": {
+     "start": 33,
+     "end": 33
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f18-text-and-missing-reference-page.pdf": {
+   "path": "defects2/generated/f18-text-and-missing-reference-page.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "control",
+   "status": "failed",
+   "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f19-contents-number.pdf": {
+   "path": "defects2/generated/f19-contents-number.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "control",
+   "status": "failed",
+   "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f20-contents-dictionary.pdf": {
+   "path": "defects2/generated/f20-contents-dictionary.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "control",
+   "status": "failed",
+   "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f21-contents-array-null-member.pdf": {
+   "path": "defects2/generated/f21-contents-array-null-member.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "control",
+   "status": "failed",
+   "note": "A page's content list is damaged: it refers to an object that is missing or is not a content stream.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f22-contents-null-in-object-stream.pdf": {
+   "path": "defects2/generated/f22-contents-null-in-object-stream.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "defect",
+   "status": "unsupported",
+   "note": "The PDF has no text to read: its pages draw no text.",
+   "text": "",
+   "chars": 0,
+   "left_out": []
+  },
+  "f23-text-and-direct-null-page.pdf": {
+   "path": "defects2/generated/f23-text-and-direct-null-page.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-07",
+   "role": "control",
+   "status": "complete",
+   "text": "[Page 1]\nFirst page text\n[Page 2]",
+   "chars": 33,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 24
+    },
+    "2": {
+     "start": 33,
+     "end": 33
+    }
+   },
+   "left_out": [],
+   "note": null
+  },
+  "f24-header-with-comment.pdf": {
+   "path": "defects2/generated/f24-header-with-comment.pdf",
+   "kind": "defect-reproduction",
+   "r4_finding": "R4-PDF-06",
+   "role": "related",
+   "status": "complete",
+   "text": "[Page 1]\nHeader comment control",
+   "chars": 31,
+   "pages": {
+    "1": {
+     "start": 9,
+     "end": 31
+    }
+   },
+   "left_out": [],
+   "note": null
+  }
+ }
+}

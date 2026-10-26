@@ -1,0 +1,52 @@
+   Compiling traeva-xlsx-projection-candidate v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-projection/experiments/xlsx-reader/projection)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.28s
+     Running unittests src/lib.rs (experiments/xlsx-reader/projection/target/debug/deps/traeva_xlsx_projection_candidate-cb7207ac55c6995e)
+
+running 1 test
+test tests::truncation_never_cuts_a_label_or_exposes_a_source_label ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/projection.rs (experiments/xlsx-reader/projection/target/debug/deps/projection-88d5067e481cfb16)
+
+running 13 tests
+test literal_formula_and_cache_have_exact_separate_lines ... ok
+test corrupt_unsupported_and_over_limit_have_no_body ... ok
+test all_hidden_is_not_an_empty_partial_or_fake_source ... ok
+test missing_blank_and_typed_caches_remain_distinct ... ok
+test omissions_are_actual_and_do_not_copy_source_into_notes ... ok
+test labels_cannot_be_forged_by_multiline_source_and_names_are_json ... ok
+test formula_followers_are_not_expanded_and_actual_metadata_is_reported ... ok
+test number_text_boolean_and_empty_literal_are_typed ... ok
+test cache_only_change_does_not_change_formula_source ... ok
+test verified_snapshot_binding_retains_nine_fields_and_rejects_mismatches ... ok
+test hidden_contents_are_filtered_before_memory_projection ... ok
+test reordered_sheets_and_moved_addresses_are_observable_without_row_identity ... ok
+test scalar_ceiling_counts_labels_and_reports_the_remainder ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+     Running tests/shared_helper.rs (experiments/xlsx-reader/projection/target/debug/deps/shared_helper-c95168cfefdb228c)
+
+running 5 tests
+test escaped_source_is_preserved_and_never_becomes_known_or_unknown_structure ... ok
+test four_reader_gate_never_reclassifies_txt_md_or_docx ... ok
+test actual_name_helper_roundtrips_every_delimiter_and_non_bmp ... ok
+test preview_visibility_and_cache_qualifier_have_actual_typed_recognition ... ok
+test proposed_part_label_is_recognized_by_the_real_helper ... FAILED
+
+failures:
+
+---- proposed_part_label_is_recognized_by_the_real_helper stdout ----
+
+thread 'proposed_part_label_is_recognized_by_the_real_helper' (16113964) panicked at tests/shared_helper.rs:109:5:
+assertion failed: matches!(structure_line(XLSX_READER, line), Some(StructureLine::Sheet { .. }))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    proposed_part_label_is_recognized_by_the_real_helper
+
+test result: FAILED. 4 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--test shared_helper`

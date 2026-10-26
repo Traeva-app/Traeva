@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-take-moved-note"
+description = "Enables the take_moved_note command without any pre-configured scope."
+commands.allow = ["take_moved_note"]
+
+[[permission]]
+identifier = "deny-take-moved-note"
+description = "Denies the take_moved_note command without any pre-configured scope."
+commands.deny = ["take_moved_note"]

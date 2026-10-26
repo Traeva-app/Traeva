@@ -1,0 +1,45 @@
+{
+ "kind": "developer self-test (Claude-G); NOT an independent Codex-R4 result",
+ "reader_binary": "pdf-experiment-5 built from c3a28cf (developer binary)",
+ "probe_sha256": "2d72f356e5c89fa704ac0626e3ea1a060f9a38885c12f5a467e9c15b661dd471",
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "machine": "x86_64"
+ },
+ "n1_predictor_abort": {
+  "input_bytes": 737,
+  "abort_line": "memory allocation of 34359738368 bytes failed",
+  "reached_via": "page content stream -> hayro apply_predictor",
+  "exit": 134,
+  "note": "SIGABRT, not catchable by catch_unwind; in-process read_pdf aborts the whole process."
+ },
+ "n2_objstm_quadratic": {
+  "objstm-1000": {
+   "members": 1000,
+   "seconds": 0.09,
+   "exit": 0
+  },
+  "objstm-4000": {
+   "members": 4000,
+   "seconds": 1.57,
+   "exit": 0
+  },
+  "objstm-16000": {
+   "members": 16000,
+   "seconds": 24.49,
+   "exit": 0
+  },
+  "objstm-64000": {
+   "members": 64000,
+   "seconds": ">120 (timeout)",
+   "exit": null
+  },
+  "_shape": "~16x time per 4x members => O(n^2); reached through the probe (object_facts runs pdf.objects() twice)"
+ },
+ "n2_repair_scan": {
+  "status": "NOT reproduced through the reader",
+  "measured_in_hayro_only_harness": "direct Pdf::new on a 1 MiB broken-startxref input ~57 s (quadratic)",
+  "why_not_via_reader": "preflight check_end (preflight.rs:104-120) refuses a broken/zero startxref before hayro runs; a preflight-passing construction that still reaches the repair scan was not built",
+  "boundary": "ObjStm member O(n^2) is reachable via the reader; the repair-scan literal-string quadratic is a hayro-internal path not shown reachable through the current reader"
+ }
+}

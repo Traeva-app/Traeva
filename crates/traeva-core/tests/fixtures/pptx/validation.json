@@ -1,0 +1,344 @@
+{
+  "fixture_metadata_cleanup": {
+    "baseline_commit": "e0d85d8ab325cecf3a30d67d9fb4f146d1e319ec",
+    "record": "metadata-cleanup.json",
+    "原始证据": "历史保存及 UI 记录不改写；当前包在保存后清理元数据，原哈希见独立清理记录。"
+  },
+  "baseline_commit": "069208aa37f07ba6a1539b188c94b67ab975ba60",
+  "reader": "pptx-experiment-1",
+  "date": "2026-10-11",
+  "environment": {
+    "os": "macOS 27.0.1 arm64",
+    "rust": "1.98.1",
+    "powerpoint": "16.78"
+  },
+  "source_sha256": {
+    "crates/traeva-core/src/pptx.rs": "e15f23e3b8419a039b59039e49eb491ab89132333042fec69c4d9888a34150b6",
+    "crates/traeva-core/src/pptx_package.rs": "259f7a1c4f07d8112f2ef39a75315a502df87ad7940b0cf8fe057357b026de23",
+    "crates/traeva-core/src/pptx_tests.rs": "03304f663a8b6a89facf240937a00e0cd53c52bf9ec96bf5bcbefbd6818627bc",
+    "crates/traeva-core/tests/pptx_reader/lib.rs": "2d5fcd58669801886f3ab8e797aebd509cf69872174e9605d849c003a0c72a71",
+    "crates/traeva-core/tests/pptx_reader/probe.rs": "9954206d7c64d7769fe8cfaef00186e0543e718476f179c925b2c8f8c96e8b0d",
+    "crates/traeva-core/tests/pptx_reader/snapshot_tests.rs": "b7dcb3002323db6855902149fb0e059c96a3f985e15631ffbaf747a85a1d0fe0",
+    "crates/traeva-core/tests/pptx_reader/make_fixture.py": "19474c9e510d25e38d14cf01c196d5637321f23dc6f89d9c80330e95df0d8dbf",
+    "crates/traeva-core/tests/pptx_reader/Cargo.toml": "30ae5f1ba506b31bb0285fe916f955041b1e611a120b3cda24caa56b2156c62f",
+    "crates/traeva-core/tests/pptx_reader/Cargo.lock": "27c6acd2d7edce1b7cf1a30b1e2c44a7876d2e64425a3192db0956fc93e922ae"
+  },
+  "docx_reuse_source_sha256": "f90b898e97df8f7bc80c370340217c062a5cab7e1dfc25bf09fa1acb09f4ae0f",
+  "fixtures": {
+    "basic-source.pptx": {
+      "bytes": 34830,
+      "sha256": "5a3f32e9ee4032565ccfbb2209cc2fb0966192dd72f31ea477dc17e936870255",
+      "summary": {
+        "chars": 189,
+        "covered": [
+          "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+        ],
+        "left_out": [
+          "dynamic fields"
+        ],
+        "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+        "reader": "pptx-experiment-1",
+        "status": "partial"
+      },
+      "text_matches": true,
+      "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c"
+    },
+    "powerpoint-basic-v1.pptx": {
+      "bytes": 36234,
+      "sha256": "80425694b1690ab1a6db67926edd394a510b407ad2c67bde205a443059c1448d",
+      "summary": {
+        "chars": 189,
+        "covered": [
+          "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+        ],
+        "left_out": [
+          "dynamic fields"
+        ],
+        "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+        "reader": "pptx-experiment-1",
+        "status": "partial"
+      },
+      "text_matches": true,
+      "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c",
+      "original_input": {
+        "bytes": 38727,
+        "sha256": "f5aacb66de7ab10f78fa4be0e868f524fcf38370554cf15932d0efd3f84c64b3",
+        "summary": {
+          "chars": 189,
+          "covered": [
+            "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+          ],
+          "left_out": [
+            "dynamic fields"
+          ],
+          "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+          "reader": "pptx-experiment-1",
+          "status": "partial"
+        },
+        "text_matches": true,
+        "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c"
+      },
+      "layout_and_all_other_entry_bytes_comparison": "PASS"
+    },
+    "powerpoint-basic-v2.pptx": {
+      "bytes": 36263,
+      "sha256": "23d956719cfa8b4b369f0eb4fb766db1262d40bffc1b0f23aa472317f0fef659",
+      "summary": {
+        "chars": 200,
+        "covered": [
+          "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+        ],
+        "left_out": [
+          "dynamic fields"
+        ],
+        "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+        "reader": "pptx-experiment-1",
+        "status": "partial"
+      },
+      "text_matches": true,
+      "text_sha256": "1e9af82d9f331d945b1500b4b6e7ae6a7fe869ce50780745a59518114438c37a",
+      "original_input": {
+        "bytes": 38758,
+        "sha256": "5774b0714efa7d27d16926eaa4949a52217321aed02f93a8170935402c6caff8",
+        "summary": {
+          "chars": 200,
+          "covered": [
+            "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+          ],
+          "left_out": [
+            "dynamic fields"
+          ],
+          "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+          "reader": "pptx-experiment-1",
+          "status": "partial"
+        },
+        "text_matches": true,
+        "text_sha256": "1e9af82d9f331d945b1500b4b6e7ae6a7fe869ce50780745a59518114438c37a"
+      },
+      "layout_and_all_other_entry_bytes_comparison": "PASS"
+    },
+    "powerpoint-rich-clean.pptx": {
+      "bytes": 44482,
+      "sha256": "96218caa4a16fa2c3785dc78de229f5f31d9ba980065b281ce07f72c3e9655f9",
+      "summary": {
+        "chars": 189,
+        "covered": [
+          "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+        ],
+        "left_out": [
+          "animations/timing",
+          "charts",
+          "dynamic fields",
+          "images (including alternative text)",
+          "slide transitions",
+          "tables"
+        ],
+        "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+        "reader": "pptx-experiment-1",
+        "status": "partial"
+      },
+      "text_matches": true,
+      "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c",
+      "original_input": {
+        "bytes": 47034,
+        "sha256": "b90a263f832f828133dab698e9fe8d21368206b42fbbad3c85ee2665db98f18d",
+        "summary": {
+          "chars": 189,
+          "covered": [
+            "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+          ],
+          "left_out": [
+            "animations/timing",
+            "charts",
+            "dynamic fields",
+            "images (including alternative text)",
+            "slide transitions",
+            "tables"
+          ],
+          "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+          "reader": "pptx-experiment-1",
+          "status": "partial"
+        },
+        "text_matches": true,
+        "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c"
+      },
+      "layout_and_all_other_entry_bytes_comparison": "PASS",
+      "saved_features": {
+        "images": 1,
+        "charts": 1,
+        "tables": 1,
+        "animations": 1,
+        "transitions": 1
+      }
+    },
+    "powerpoint-rich.pptx": {
+      "bytes": 48330,
+      "sha256": "8c832f2c48ae3e2d1c19f3d53a6f0b4f8bf14e2e42e44313af1edf36b92827cf",
+      "summary": {
+        "chars": 189,
+        "covered": [
+          "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+        ],
+        "left_out": [
+          "animations/timing",
+          "charts",
+          "dynamic fields",
+          "images (including alternative text)",
+          "slide transitions",
+          "tables"
+        ],
+        "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+        "reader": "pptx-experiment-1",
+        "status": "partial"
+      },
+      "text_matches": true,
+      "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c",
+      "original_input": {
+        "bytes": 50879,
+        "sha256": "51b4b4b26e627da6d19c1c6e9129316be9a47a506315401aa9df241888ce9a52",
+        "summary": {
+          "chars": 189,
+          "covered": [
+            "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+          ],
+          "left_out": [
+            "animations/timing",
+            "charts",
+            "dynamic fields",
+            "images (including alternative text)",
+            "slide transitions",
+            "tables"
+          ],
+          "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+          "reader": "pptx-experiment-1",
+          "status": "partial"
+        },
+        "text_matches": true,
+        "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c"
+      },
+      "layout_and_all_other_entry_bytes_comparison": "PASS",
+      "saved_features": {
+        "images": 1,
+        "charts": 1,
+        "tables": 1,
+        "animations": 1,
+        "transitions": 1
+      }
+    },
+    "rich-source.pptx": {
+      "bytes": 42019,
+      "sha256": "30a7b4a5a9363fd51790d14d4bd64311346fff12a3bb2bf83c2686343f2fcc85",
+      "summary": {
+        "chars": 189,
+        "covered": [
+          "presentation slide order (including hidden slides); generated slide/role labels; stored shape text in XML order; explicit or layout-inherited title placeholders; speaker notes"
+        ],
+        "left_out": [
+          "animations/timing",
+          "charts",
+          "dynamic fields",
+          "images (including alternative text)",
+          "slide transitions",
+          "tables"
+        ],
+        "note": "Only the stated stored-text subset was read; see left_out. Visual order, formatting, layout, bullet numbering and slideshow behavior are not interpreted.",
+        "reader": "pptx-experiment-1",
+        "status": "partial"
+      },
+      "text_matches": true,
+      "text_sha256": "134f0f290e27684d38bc378eed82b4ed544c54b190293441110a126a3e11756c"
+    }
+  },
+  "checks": {
+    "reader-tests": {
+      "status": "PASS",
+      "passed": 58,
+      "failed": 0,
+      "ignored": 0
+    },
+    "core-tests": {
+      "status": "PASS",
+      "passed": 792,
+      "failed": 0,
+      "ignored": 10
+    },
+    "reader-clippy": {
+      "status": "PASS",
+      "log_sha256": "0a9ca162391eb44adac2a1998826a7b0a7beccad42b8708ba2038d279f96fa1c"
+    },
+    "reader-fmt": {
+      "status": "PASS",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "workspace-clippy": {
+      "status": "PASS",
+      "log_sha256": "e7d7b4f631c72e3aec87a4c455b4e73646bf7906c335c512216fe277e3d85039"
+    },
+    "frontend-build": {
+      "status": "PASS",
+      "log_sha256": "9dc4d171bd166d326acdbfa635234c7f380d8d82ca403975c2cfbfd729fb39a9"
+    },
+    "workspace-fmt": {
+      "status": "PASS"
+    }
+  },
+  "initial_failures": [
+    {
+      "status": "FAIL",
+      "kind": "compile",
+      "reason": "BTreeMap type inference and sha2 digest LowerHex formatting; corrected before final checks"
+    },
+    {
+      "status": "FAIL",
+      "kind": "reader-tests",
+      "passed": 42,
+      "failed": 2,
+      "reason": "namespace-alias fixture changed http prefix; generated-label tail expectation off by one"
+    },
+    {
+      "status": "FAIL",
+      "kind": "core-sandbox",
+      "passed": 607,
+      "failed": 82,
+      "reason": "sandbox refused local mock loopback binds; approved offline rerun passed"
+    },
+    {
+      "status": "FAIL",
+      "kind": "powerpoint-open",
+      "input_sha256": "404281f6267222ef53261ffb3ae756e94b9f80fde4eeac2bcd27d9213ba9d3bd",
+      "reason": "synthetic empty timing child required repair; source corrected with own actual PowerPoint timing subtree"
+    },
+    {
+      "status": "FAIL",
+      "kind": "retention-check",
+      "reason": "checked pre-save slide1 part after PowerPoint renumbered rich slide to slide2; fixed to inspect actual saved members"
+    },
+    {
+      "status": "FAIL",
+      "kind": "reader-tests",
+      "passed": 57,
+      "failed": 1,
+      "reason": "animation property strings redundantly reported as unknown body text; report only animations/timing for that subtree"
+    }
+  ],
+  "ui_validation": {
+    "secondary_display": "Dell AW3418DW",
+    "position_verified_by": "Window menu offers Move to Built-in Retina Display",
+    "basic_v1": "actual GUI Save As",
+    "basic_v2": "separate Save As then note edit and Save",
+    "rich": "repair path followed by actual Fade ribbon action and Save As",
+    "rich_clean": "corrected source opened, saved, closed and reopened without repair prompt",
+    "left_open_on_secondary": "local original powerpoint-rich-clean.pptx"
+  },
+  "scope": {
+    "production_dispatch": "none (asserted by test)",
+    "shared_files_changed": [],
+    "formal_memory_organize_ipc_ai": "NOT_INTEGRATED",
+    "independent_codex_r_acceptance": "NOT_RUN",
+    "student_acceptance": "PENDING",
+    "merge": "NOT_REQUESTED",
+    "full_ooxml_xsd_rendering_ocr_other_platforms": "DEFERRED",
+    "concurrency_and_worst_case_performance": "NOT_MEASURED"
+  },
+  "local_log_directory": "<HOME>/Developer/Traeva-E-pptx-evidence/logs"
+}

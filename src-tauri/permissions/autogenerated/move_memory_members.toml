@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-move-memory-members"
+description = "Enables the move_memory_members command without any pre-configured scope."
+commands.allow = ["move_memory_members"]
+
+[[permission]]
+identifier = "deny-move-memory-members"
+description = "Denies the move_memory_members command without any pre-configured scope."
+commands.deny = ["move_memory_members"]

@@ -1,0 +1,22 @@
+{
+  "record_type": "Structured transcription of observed tool outputs; not raw command logs",
+  "tested_code_sha": "e09e764df408bfbb72dd98f65a6f5acb64a7a7aa",
+  "rustfmt": "PASS",
+  "core_tests": {
+    "passed": 19,
+    "failed": 0,
+    "filtered_pdf_fixture_tests": 3
+  },
+  "driver_tests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "clippy_all_targets_deny_warnings": "PASS after replacing chunks_exact(2) with as_chunks::<2>()",
+  "release_build": "PASS",
+  "binary_sha256": "3df58e7ec7a5a68e376df860de7605810bfbfc82f0b5763143ca63c82b6ea3f1",
+  "baseline_for_final_94_check_matrix": {
+    "code_sha": "98be7d0747a9060d2d063e0ddc08b839778aea69",
+    "binary_sha256": "5a4fea9275c077a02aced6d98e0b0b757d7b3aeaf12f2c96269a60fdccd312c5",
+    "note": "Only supervisor terminal-exit fix; original recognition algorithm unchanged; first 79-check matrix and paired contexts retain pre-fix baseline."
+  }
+}

@@ -1,0 +1,122 @@
+     Locking 128 packages to latest Rust 1.98 compatible versions
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling libc v0.2.190
+   Compiling cfg-if v1.0.5
+   Compiling find-msvc-tools v0.1.14
+   Compiling shlex v2.0.1
+   Compiling stable_deref_trait v1.2.1
+   Compiling typenum v1.20.1
+   Compiling itoa v1.0.18
+   Compiling crc32fast v1.5.2
+   Compiling serde_core v1.0.229
+   Compiling zeroize v1.9.1
+   Compiling foldhash v0.2.0
+   Compiling cc v1.7.0
+   Compiling hashbrown v0.17.1
+   Compiling writeable v0.6.4
+   Compiling rustls-pki-types v1.15.1
+   Compiling litemap v0.8.3
+   Compiling adler2 v2.0.1
+   Compiling zmij v1.0.23
+   Compiling pkg-config v0.3.34
+   Compiling vcpkg v0.2.15
+   Compiling untrusted v0.9.0
+   Compiling httparse v1.10.1
+   Compiling memchr v2.8.3
+   Compiling simd-adler32 v0.3.10
+   Compiling hybrid-array v0.4.15
+   Compiling miniz_oxide v0.9.1
+   Compiling utf8_iter v1.0.4
+   Compiling bitflags v2.13.2
+   Compiling icu_normalizer_data v2.3.0
+   Compiling serde_json v1.0.151
+   Compiling icu_properties_data v2.3.0
+   Compiling bytes v1.12.1
+   Compiling serde v1.0.229
+   Compiling log v0.4.34
+   Compiling rustls v0.23.45
+   Compiling block-buffer v0.12.1
+   Compiling crypto-common v0.2.2
+   Compiling syn v3.0.7
+   Compiling core-foundation-sys v0.8.7
+   Compiling getrandom v0.4.3
+   Compiling const-oid v0.10.2
+   Compiling flate2 v1.1.10
+   Compiling getrandom v0.2.17
+   Compiling cpufeatures v0.3.1
+   Compiling http v1.5.0
+   Compiling rustix v1.1.5
+   Compiling subtle v2.6.1
+   Compiling once_cell v1.21.4
+   Compiling smallvec v1.16.3
+   Compiling base64 v0.23.1
+   Compiling equivalent v1.0.2
+   Compiling indexmap v2.14.2
+   Compiling errno v0.3.14
+   Compiling digest v0.11.3
+   Compiling core-foundation v0.10.1
+   Compiling security-framework-sys v2.17.0
+   Compiling sha2 v0.11.0
+   Compiling quick-xml v0.42.0
+   Compiling hashlink v0.12.2
+   Compiling webpki-roots v1.0.9
+   Compiling ring v0.17.14
+   Compiling libsqlite3-sys v0.38.2
+   Compiling ureq-proto v0.6.4
+   Compiling fallible-iterator v0.3.0
+   Compiling typed-path v0.12.3
+   Compiling fallible-streaming-iterator v0.1.9
+   Compiling utf8-zero v0.8.1
+   Compiling percent-encoding v2.3.2
+   Compiling security-framework v3.7.0
+   Compiling uuid v1.28.0
+   Compiling synstructure v0.14.0
+   Compiling zip v8.6.0
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling serde_derive v1.0.229
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.3
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.3.0
+   Compiling icu_locale_core v2.3.0
+   Compiling traeva-xlsx-experiment v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-projection/experiments/xlsx-reader)
+   Compiling icu_provider v2.3.1
+   Compiling rustls-webpki v0.103.15
+   Compiling rusqlite v0.40.2
+   Compiling icu_normalizer v2.3.0
+   Compiling icu_properties v2.3.0
+   Compiling ureq v3.4.2
+   Compiling traeva-core v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-projection/crates/traeva-core)
+   Compiling traeva-xlsx-projection-candidate v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-projection/experiments/xlsx-reader/projection)
+error[E0277]: the trait bound `Array<u8, UInt<UInt<UInt<UInt<..., ...>, ...>, ...>, ...>>: LowerHex` is not satisfied
+  --> src/lib.rs:43:32
+   |
+43 |     let hash = format!("{:x}", Sha256::digest(bytes));
+   |                         ----   ^^^^^^^^^^^^^^^^^^^^^ the trait `LowerHex` is not implemented for `Array<u8, UInt<UInt<UInt<UInt<UInt<..., ...>, ...>, ...>, ...>, ...>>`
+   |                         |
+   |                         required by this formatting parameter
+   |
+   = help: the following other types implement trait `LowerHex`:
+             &T
+             &mut T
+             Saturating<T>
+             Wrapping<T>
+             bytes::bytes::Bytes
+             bytes::bytes_mut::BytesMut
+             compiler_builtins::math::libm_math::support::big::i256
+             compiler_builtins::math::libm_math::support::big::u256
+           and 61 others
+   = note: the full name for the type has been written to '<HOME>/Developer/Traeva-F-xlsx-projection/experiments/xlsx-reader/projection/target/debug/deps/traeva_xlsx_projection_candidate-065251a3a79c3e1c.long-type-4041734110547109519.txt'
+   = note: consider using `--verbose` to print the full type name to the console
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `traeva-xlsx-projection-candidate` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

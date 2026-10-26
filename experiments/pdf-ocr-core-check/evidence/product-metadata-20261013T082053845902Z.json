@@ -1,0 +1,527 @@
+{
+  "source_sha": "caa5bc3cbbf44a97893a597b053d2ba359f13668",
+  "kind": "developer metadata reproduction; not product app acceptance",
+  "metadata": {
+    "CFBundleDevelopmentRegion": "English",
+    "CFBundleDisplayName": "Traeva",
+    "CFBundleExecutable": "traeva-app",
+    "CFBundleIdentifier": "io.github.p30g53.traeva",
+    "CFBundleInfoDictionaryVersion": "6.0",
+    "CFBundleName": "Traeva",
+    "CFBundlePackageType": "APPL",
+    "CFBundleShortVersionString": "0.1.0",
+    "CFBundleVersion": "0.1.0",
+    "CSResourcesFileMapped": true,
+    "LSMinimumSystemVersion": "10.13",
+    "CFBundleDocumentTypes": [
+      {
+        "CFBundleTypeExtensions": [
+          "txt",
+          "md",
+          "markdown",
+          "pdf"
+        ],
+        "LSItemContentTypes": [
+          "public.plain-text",
+          "public.data",
+          "com.adobe.pdf"
+        ],
+        "CFBundleTypeName": "Document",
+        "CFBundleTypeRole": "Viewer",
+        "LSHandlerRank": "None"
+      }
+    ],
+    "CFBundleIconFile": "icon.icns",
+    "LSRequiresCarbon": true,
+    "NSHighResolutionCapable": true
+  },
+  "plist_sha256": "f8480e64073d4fb12062ea593a96cfc66147fdc1476297c77b342fbd107c67fd",
+  "binary_sha256": "0730730104cc173c35701913dfafc35e650cd35504194c40a112c77d8ab3c9e4",
+  "driver_sha256": "9d73babacb503f2a78cdb062dd941ff63dabc267ed2c176de47952a63dbb8866",
+  "script_sha256": "9cbdd7a78edcb3b790481505f65256bd8bf73fa7f3c5138a57390fc077928d43",
+  "signature": "Executable=<worktree>/experiments/pdf-ocr-core-check/target/bundles/ProductMetadata-20261013T082053845902Z.app/Contents/MacOS/traeva-app\nIdentifier=io.github.p30g53.traeva\nFormat=app bundle with Mach-O thin (arm64)\nCodeDirectory v=20500 size=14552 flags=0x10002(adhoc,runtime) hashes=448+3 location=embedded\nSignature=adhoc\nInfo.plist entries=15\nTeamIdentifier=not set\nRuntime Version=27.0.0\nSealed Resources version=2 rules=13 files=0\nInternal requirements count=0 size=12\nTotal signatures=1\nChosen signature=1\n",
+  "cases": {
+    "s01-en-clear.pdf": {
+      "input_sha256": "9725702beeb42964e0a0bbd75029b6cc473358cd7d76f5a5dac87c315efa2a06",
+      "result": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\nIntroduction to Linear Algebra\nLecture 3: Matrix Multiplication\n1. Definition\nThe product of an m by n matrix A and an n by p matrix B\nis an m by p matrix C. Each entry of C is the dot product\nof a row of A and a column of B.\n2. Properties\nMatrix multiplication is associative: (AB)C = A(BC).\nIn general it is not commutative: AB is not always equal to BA.\nThe identity matrix I satisfies AI = IA = A.\n3. Example\nMultiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix.\nHomework: exercises 3.1 to 3.8 on page 42."
+        },
+        "child_pid": 45295,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 177652672,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.527,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 177652672,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\nIntroduction to Linear Algebra\\nLecture 3: Matrix Multiplication\\n1. Definition\\nThe product of an m by n matrix A and an n by p matrix B\\nis an m by p matrix C. Each entry of C is the dot product\\nof a row of A and a column of B.\\n2. Properties\\nMatrix multiplication is associative: (AB)C = A(BC).\\nIn general it is not commutative: AB is not always equal to BA.\\nThe identity matrix I satisfies AI = IA = A.\\n3. Example\\nMultiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix.\\nHomework: exercises 3.1 to 3.8 on page 42.\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 177505216,
+        "samples": 34,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 252.877042
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\nIntroduction to Linear Algebra\nLecture 3: Matrix Multiplication\n1. Definition\nThe product of an m by n matrix A and an n by p matrix B\nis an m by p matrix C. Each entry of C is the dot product\nof a row of A and a column of B.\n2. Properties\nMatrix multiplication is associative: (AB)C = A(BC).\nIn general it is not commutative: AB is not always equal to BA.\nThe identity matrix I satisfies AI = IA = A.\n3. Example\nMultiplying a 2 by 3 matrix by a 3 by 2 matrix gives a 2 by 2 matrix.\nHomework: exercises 3.1 to 3.8 on page 42."
+    },
+    "s02-zh-clear.pdf": {
+      "input_sha256": "2841752cebbcbf3b0e89413c312eb5d9d01878c59fc5995222bfe1e897291079",
+      "result": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n第三章 细胞的结构与功能\n第一节 细胞膜\n细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。\n细胞膜具有选择透过性，能够控制物质进出细胞。\n第二节 细胞核\n细胞核是遗传信息库，是细胞代谢和遗传的控制中心。\n染色质主要由脱氧核糖核酸和蛋白质组成。\n第三节 细胞器\n线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。\n课后思考：比较植物细胞与动物细胞在结构上的异同。"
+        },
+        "child_pid": 45298,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 186745768,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.535458,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 186745768,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n第三章 细胞的结构与功能\\n第一节 细胞膜\\n细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。\\n细胞膜具有选择透过性，能够控制物质进出细胞。\\n第二节 细胞核\\n细胞核是遗传信息库，是细胞代谢和遗传的控制中心。\\n染色质主要由脱氧核糖核酸和蛋白质组成。\\n第三节 细胞器\\n线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。\\n课后思考：比较植物细胞与动物细胞在结构上的异同。\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 186729384,
+        "samples": 51,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 383.073084
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\n第三章 细胞的结构与功能\n第一节 细胞膜\n细胞膜主要由脂质和蛋白质组成，还含有少量的糖类。\n细胞膜具有选择透过性，能够控制物质进出细胞。\n第二节 细胞核\n细胞核是遗传信息库，是细胞代谢和遗传的控制中心。\n染色质主要由脱氧核糖核酸和蛋白质组成。\n第三节 细胞器\n线粒体是有氧呼吸的主要场所，叶绿体是光合作用的场所。\n课后思考：比较植物细胞与动物细胞在结构上的异同。"
+    },
+    "s03-mixed-clear.pdf": {
+      "input_sha256": "5ce094b565ac7f192b4d867e3fa19b6389b52a1eb2382890e2324a17f634eb91",
+      "result": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1.应用层 Application Layer: HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\n阅读材料：教材第5章5.1 至5.3 节"
+        },
+        "child_pid": 45301,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 187843544,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.532959,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 187843544,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n计算机网络 Computer Networks\\n第二讲：TCP/IP 协议栈\\nLecture 2: The TCP/IP Protocol Stack\\n1.应用层 Application Layer: HTTP、DNS、SMTP\\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\\n3. 网络层 Network Layer：IP 地址与路由选择\\n4. 链路层 Link Layer：以太网帧与 MAC 地址\\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\\n阅读材料：教材第5章5.1 至5.3 节\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 187827160,
+        "samples": 44,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 332.057834
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\n计算机网络 Computer Networks\n第二讲：TCP/IP 协议栈\nLecture 2: The TCP/IP Protocol Stack\n1.应用层 Application Layer: HTTP、DNS、SMTP\n2. 传输层 Transport Layer：TCP 提供可靠传输，UDP 不保证送达\n3. 网络层 Network Layer：IP 地址与路由选择\n4. 链路层 Link Layer：以太网帧与 MAC 地址\n三次握手 three-way handshake: SYN、SYN-ACK、 ACK\n阅读材料：教材第5章5.1 至5.3 节"
+    },
+    "s04-mixed-skew-blur.pdf": {
+      "input_sha256": "0cf9f9efc0327d44d735084f5f35f2cddb8f5d3e436224a23ee1394c75bb6112",
+      "result": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n宏观经济学 Macroeconomics\n第四讲 通货膨胀与失业\nLecture 4: Inflation and Unemployment\n通货膨胀率是物价总水平的年增长率。\nThe Phillips curve describes a short-run trade-off.\n菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。\n中央银行可以通过调整利率影响总需求。\nKey terms: CPI, GDP deflator, natural rate of unemployment"
+        },
+        "child_pid": 45303,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 184681408,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.533207999999999,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 184681408,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n宏观经济学 Macroeconomics\\n第四讲 通货膨胀与失业\\nLecture 4: Inflation and Unemployment\\n通货膨胀率是物价总水平的年增长率。\\nThe Phillips curve describes a short-run trade-off.\\n菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。\\n中央银行可以通过调整利率影响总需求。\\nKey terms: CPI, GDP deflator, natural rate of unemployment\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 184648640,
+        "samples": 40,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 297.389875
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\n宏观经济学 Macroeconomics\n第四讲 通货膨胀与失业\nLecture 4: Inflation and Unemployment\n通货膨胀率是物价总水平的年增长率。\nThe Phillips curve describes a short-run trade-off.\n菲利普斯曲线描述了短期内通货膨胀与失业之间的关系。\n中央银行可以通过调整利率影响总需求。\nKey terms: CPI, GDP deflator, natural rate of unemployment"
+    },
+    "s05-zh-lowres.pdf": {
+      "input_sha256": "2431a03701283b24b7905ff63461111f99f99814cb833f63272398b736e5ff67",
+      "result": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n高等数学 第五章 定积分\n一、定积分概念\n定积分可以表示曲边棉形的面积。\n二、微积分基本定理\n牛顿莱布尼茨公式把定积分与原函数联系起来。\n三、定积分的应用\n利用定积分可以计算平面图形面积和旋转体的体积。\n练习：习题五第1题至第6题。"
+        },
+        "child_pid": 45305,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 169116584,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.5305,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 169116584,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n高等数学 第五章 定积分\\n一、定积分概念\\n定积分可以表示曲边棉形的面积。\\n二、微积分基本定理\\n牛顿莱布尼茨公式把定积分与原函数联系起来。\\n三、定积分的应用\\n利用定积分可以计算平面图形面积和旋转体的体积。\\n练习：习题五第1题至第6题。\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 169051048,
+        "samples": 37,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 276.231209
+      },
+      "verdict": "FAIL",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\n高等数学 第五章 定积分\n一、定积分概念\n定积分可以表示曲边棉形的面积。\n二、微积分基本定理\n牛顿莱布尼茨公式把定积分与原函数联系起来。\n三、定积分的应用\n利用定积分可以计算平面图形的面积和旋转体的体积。\n练习：习题五第1题至第6题。"
+    },
+    "s06-multipage-scan.pdf": {
+      "input_sha256": "5c2975a2042174758cf42e1cfd190e82efc3bc9843810f35f117ed1fa9982010",
+      "result": {
+        "answer": {
+          "note": "OCR read 3 scanned pages; may contain errors. 1 pages omitted. Other reader omissions, if any, remain. Omitted pages: 4. Reader before OCR: No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七草 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers"
+        },
+        "child_pid": 45308,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 210895856,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.538,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 210895856,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\nOrganic Chemistry\\nChapter 7: Alkenes\\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\\nThe simplest alkene is ethene, with the formula C2H4.\\nAlkenes undergo addition reactions with hydrogen and halogens.\\n[Page 2]\\n有机化学 第七草 烯烃\\n烯烃是含有碳碳双键的烃。\\n乙烯是最简单的烯烃，可以使湨水褪色。\\n烯烃能够发生加成反应和聚合反应。\\n[Page 3]\\n实验室安全 Lab Safety\\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\\n2. 有机溶剂远离明火 Keep solvents away from flames\\n3. 废液倒入指定容器 Use the waste containers\",\"note\":\"OCR read 3 scanned pages; may contain errors. 1 pages omitted. Other reader omissions, if any, remain. Omitted pages: 4. Reader before OCR: No page has a text layer that this reader can use. 4 of 4 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 210895856,
+        "samples": 70,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 520.631916
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七草 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers"
+    },
+    "s07-text-layer-control.pdf": {
+      "input_sha256": "4d544f5b459d4a74314ac2b0fa4e114e4c070b40792d6d636777d5fdef531e2d",
+      "result": {
+        "answer": {
+          "note": "OCR fallback requires a document with no usable text-layer pages.",
+          "status": "unsupported",
+          "text": ""
+        },
+        "child_pid": 45310,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 5554728,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.523292,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 5554728,
+        "raw_stdout": "{\"status\":\"unsupported\",\"text\":\"\",\"note\":\"OCR fallback requires a document with no usable text-layer pages.\"}",
+        "sampled_peak_bytes": 5145128,
+        "samples": 2,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 15.353292
+      },
+      "verdict": "PASS",
+      "expected_status": "unsupported",
+      "expected_text": ""
+    },
+    "s08-mixed-layer-scan.pdf": {
+      "input_sha256": "5ad8f401bec3c905fb1589f5dfef494dd8d54236a6cffe5bd77b93c33ed03cc8",
+      "result": {
+        "answer": {
+          "note": "OCR fallback requires a document with no usable text-layer pages.",
+          "status": "unsupported",
+          "text": ""
+        },
+        "child_pid": 45312,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 7176744,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.523459,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 7176744,
+        "raw_stdout": "{\"status\":\"unsupported\",\"text\":\"\",\"note\":\"OCR fallback requires a document with no usable text-layer pages.\"}",
+        "sampled_peak_bytes": 5407272,
+        "samples": 2,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 16.982416
+      },
+      "verdict": "PASS",
+      "expected_status": "unsupported",
+      "expected_text": ""
+    },
+    "s09-no-text-image.pdf": {
+      "input_sha256": "2e241b07c1f49a15bf766f7fb66dab1edc42434d7cdc5b9ba043b5c785adb776",
+      "result": {
+        "answer": {
+          "note": "No scanned page produced usable OCR text. Text-layer reading uses the ordinary PDF reader.",
+          "status": "unsupported",
+          "text": ""
+        },
+        "child_pid": 45314,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 162513832,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.524459,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 162513832,
+        "raw_stdout": "{\"status\":\"unsupported\",\"text\":\"\",\"note\":\"No scanned page produced usable OCR text. Text-layer reading uses the ordinary PDF reader.\"}",
+        "sampled_peak_bytes": 162513832,
+        "samples": 20,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 152.089
+      },
+      "verdict": "PASS",
+      "expected_status": "unsupported",
+      "expected_text": ""
+    },
+    "s10-blank-scan.pdf": {
+      "input_sha256": "06c28f681c22c8f16080b815e10dd89c40baacbe61f0dad14db5a95ae3f8eb12",
+      "result": {
+        "answer": {
+          "note": "No scanned page produced usable OCR text. Text-layer reading uses the ordinary PDF reader.",
+          "status": "unsupported",
+          "text": ""
+        },
+        "child_pid": 45316,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 157959056,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.531792,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 157959056,
+        "raw_stdout": "{\"status\":\"unsupported\",\"text\":\"\",\"note\":\"No scanned page produced usable OCR text. Text-layer reading uses the ordinary PDF reader.\"}",
+        "sampled_peak_bytes": 151798648,
+        "samples": 15,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 115.45504199999999
+      },
+      "verdict": "PASS",
+      "expected_status": "unsupported",
+      "expected_text": ""
+    },
+    "s11-slide-scan.pdf": {
+      "input_sha256": "34783d680eb35c57ccb1d1985020de6bbffe855c00a62b4f48e80437e749e0d6",
+      "result": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\n数据结构与算法 Data Structures and Algorithms\n第八讲 图旳遍历 Graph Traversal\n深度优先搜索 DFS：使用栈或递归\n广度优先搜索 BFS：使用队列\n时间复杂度 O（V +E）"
+        },
+        "child_pid": 45318,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 160138152,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.53675,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 160138152,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\n数据结构与算法 Data Structures and Algorithms\\n第八讲 图旳遍历 Graph Traversal\\n深度优先搜索 DFS：使用栈或递归\\n广度优先搜索 BFS：使用队列\\n时间复杂度 O（V +E）\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 160072616,
+        "samples": 37,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 270.44849999999997
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\n数据结构与算法 Data Structures and Algorithms\n第八讲 图旳遍历 Graph Traversal\n深度优先搜索 DFS：使用栈或递归\n广度优先搜索 BFS：使用队列\n时间复杂度 O（V +E）"
+    },
+    "s12-two-column.pdf": {
+      "input_sha256": "4c4b518a8b700b0ccbc6bc6b28c9eb36cd8a1c445d9605a6a13d0cc80b31ec06",
+      "result": {
+        "answer": {
+          "note": "OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\nPhotosynthesis\nPlants capture light energy\nand store it in glucose.\nThe process takes place\nin the chloroplasts.\nCellular Respiration\nCells release energy\nby breaking down glucose.\nMost of it happens\nin the mitochondria."
+        },
+        "child_pid": 45320,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 162562984,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.522333,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 162562984,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\nPhotosynthesis\\nPlants capture light energy\\nand store it in glucose.\\nThe process takes place\\nin the chloroplasts.\\nCellular Respiration\\nCells release energy\\nby breaking down glucose.\\nMost of it happens\\nin the mitochondria.\",\"note\":\"OCR read 1 scanned pages; may contain errors. 0 pages omitted. Other reader omissions, if any, remain. Reader before OCR: No page has a text layer that this reader can use. 1 of 1 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 162448296,
+        "samples": 24,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 181.0455
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\nPhotosynthesis\nPlants capture light energy\nand store it in glucose.\nThe process takes place\nin the chloroplasts.\nCellular Respiration\nCells release energy\nby breaking down glucose.\nMost of it happens\nin the mitochondria."
+    },
+    "s13-long-scan.pdf": {
+      "input_sha256": "185f9763a9e29295fef8f3d3854eef185d12c3978990b005066349124674fe23",
+      "result": {
+        "answer": {
+          "note": "OCR read 3 scanned pages; may contain errors. 9 pages omitted. Other reader omissions, if any, remain. Omitted pages: 4-12. Reader before OCR: No page has a text layer that this reader can use. 12 of 12 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+          "status": "partial",
+          "text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七章 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers"
+        },
+        "child_pid": 45322,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 216105968,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 21.657292,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 216105968,
+        "raw_stdout": "{\"status\":\"partial\",\"text\":\"[Page 1]\\nOrganic Chemistry\\nChapter 7: Alkenes\\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\\nThe simplest alkene is ethene, with the formula C2H4.\\nAlkenes undergo addition reactions with hydrogen and halogens.\\n[Page 2]\\n有机化学 第七章 烯烃\\n烯烃是含有碳碳双键的烃。\\n乙烯是最简单的烯烃，可以使湨水褪色。\\n烯烃能够发生加成反应和聚合反应。\\n[Page 3]\\n实验室安全 Lab Safety\\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\\n2. 有机溶剂远离明火 Keep solvents away from flames\\n3. 废液倒入指定容器 Use the waste containers\",\"note\":\"OCR read 3 scanned pages; may contain errors. 9 pages omitted. Other reader omissions, if any, remain. Omitted pages: 4-12. Reader before OCR: No page has a text layer that this reader can use. 12 of 12 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.\"}",
+        "sampled_peak_bytes": 216105968,
+        "samples": 75,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 572.490458
+      },
+      "verdict": "PASS",
+      "expected_status": "partial",
+      "expected_text": "[Page 1]\nOrganic Chemistry\nChapter 7: Alkenes\nAlkenes are hydrocarbons that contain a carbon-carbon double bond.\nThe simplest alkene is ethene, with the formula C2H4.\nAlkenes undergo addition reactions with hydrogen and halogens.\n[Page 2]\n有机化学 第七章 烯烃\n烯烃是含有碳碳双键的烃。\n乙烯是最简单的烯烃，可以使湨水褪色。\n烯烃能够发生加成反应和聚合反应。\n[Page 3]\n实验室安全 Lab Safety\n1. 进入实验室必须佩戴护目镜 Wear safety goggles\n2. 有机溶剂远离明火 Keep solvents away from flames\n3. 废液倒入指定容器 Use the waste containers"
+    },
+    "s14-damaged.pdf": {
+      "input_sha256": "d2af842c6a43c693552aaa18501ec5d9552e8c2e27917d27514d90934d59b1d3",
+      "result": {
+        "answer": {
+          "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+          "status": "failed",
+          "text": ""
+        },
+        "child_pid": 45324,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 3195408,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.5291250000000005,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 3195408,
+        "raw_stdout": "{\"status\":\"failed\",\"text\":\"\",\"note\":\"The file ends before its end-of-file marker; it is truncated or damaged.\"}",
+        "sampled_peak_bytes": 81992,
+        "samples": 1,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 8.610916999999999
+      },
+      "verdict": "PASS",
+      "expected_status": "failed",
+      "expected_text": ""
+    },
+    "s15-encrypted.pdf": {
+      "input_sha256": "ebb55b7e0d4784170550756df49fafb95671e1ad8cf51e7f993a6863a05cd641",
+      "result": {
+        "answer": {
+          "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+          "status": "unsupported",
+          "text": ""
+        },
+        "child_pid": 45326,
+        "child_reaped": true,
+        "exit_code": 0,
+        "final_kernel_lifetime_peak_bytes": 3572264,
+        "kill_to_exit_ms": null,
+        "max_observation_gap_ms": 7.527959,
+        "outcome": "finished",
+        "over_budget_bytes": 0,
+        "peak_footprint_bytes": 3572264,
+        "raw_stdout": "{\"status\":\"unsupported\",\"text\":\"\",\"note\":\"The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.\"}",
+        "sampled_peak_bytes": 81992,
+        "samples": 1,
+        "stderr": "",
+        "stderr_io_error": false,
+        "stdout_io_error": false,
+        "wall_ms": 9.567167
+      },
+      "verdict": "PASS",
+      "expected_status": "unsupported",
+      "expected_text": ""
+    }
+  },
+  "preparation": [
+    {
+      "answer": {
+        "status": "ready"
+      },
+      "child_pid": 45286,
+      "child_reaped": true,
+      "exit_code": 0,
+      "final_kernel_lifetime_peak_bytes": 101483408,
+      "kill_to_exit_ms": null,
+      "max_observation_gap_ms": 34.084292000000005,
+      "outcome": "finished",
+      "over_budget_bytes": 0,
+      "peak_footprint_bytes": 101483408,
+      "raw_stdout": "{\"status\":\"ready\"}",
+      "sampled_peak_bytes": 101270416,
+      "samples": 87,
+      "stderr": "",
+      "stderr_io_error": false,
+      "stdout_io_error": false,
+      "wall_ms": 648.0833339999999,
+      "verdict": "PASS"
+    },
+    {
+      "answer": {
+        "status": "ready"
+      },
+      "child_pid": 45328,
+      "child_reaped": true,
+      "exit_code": 0,
+      "final_kernel_lifetime_peak_bytes": 101385080,
+      "kill_to_exit_ms": null,
+      "max_observation_gap_ms": 7.526541,
+      "outcome": "finished",
+      "over_budget_bytes": 0,
+      "peak_footprint_bytes": 101385080,
+      "raw_stdout": "{\"status\":\"ready\"}",
+      "sampled_peak_bytes": 101139320,
+      "samples": 18,
+      "stderr": "",
+      "stderr_io_error": false,
+      "stdout_io_error": false,
+      "wall_ms": 135.550708,
+      "verdict": "PASS"
+    }
+  ],
+  "complete": true
+}

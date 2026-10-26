@@ -1,0 +1,131 @@
+{
+  "kind": "F developer compatibility preparation; not independent acceptance",
+  "result": "BLOCKED_NATIVE_EXCEL",
+  "protocol_sha256": "bf3807767d1fb5740118be64a2e85410d960e17d3b3dc4767b576357075f1de0",
+  "worktree": "<HOME>/Developer/Traeva-F-xlsx-excel",
+  "build_directory": "<HOME>/Developer/Traeva-F-xlsx-excel/experiments/xlsx-reader/excel-save/local/build",
+  "baseline_commit": "eb98835e712d371dff1a3c52d8ea7e67664e1e58",
+  "reviewed_reader_commit": "6de78846225a65321089ec5794254407f35d632d",
+  "reviewed_commit_is_ancestor": true,
+  "reader_manifest_diff_from_reviewed": "",
+  "source_sha256": {
+    "experiments/xlsx-reader/Cargo.toml": "db7915996391d9a4c1fb68f17c1f482435691f14bda51d1a07ab6f1875da0745",
+    "experiments/xlsx-reader/src/lib.rs": "9a283cf003555591601ede3f50b9c3d622e26c1cd9a88ac8d0969fbba6254026",
+    "experiments/xlsx-reader/src/main.rs": "8df6d2eb8a1dfaa3409dc7ba99bfbc8897933cc4dbf2d8c804dbf957a4972288",
+    "experiments/xlsx-reader/src/package.rs": "b74a46c06294c03025b34d315ed54eb161ddd87d0ee368b4caa0252b1006c7a3",
+    "experiments/xlsx-reader/src/xml.rs": "a229a41a8a86dc36d0d9c31692d82e157699cb86c856d2272e76cf2232930777"
+  },
+  "rust_version": "rustc 1.98.1 (48a229cea 2026-09-01)",
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434",
+  "build": {
+    "command": "CARGO_TARGET_DIR=excel-save/local/build cargo build --offline --bin xlsx-probe",
+    "exit_code": 0,
+    "probe_sha256": "e882c4b6f45fc335992c8a2aabca397bdc3051177dc212cfd5ebf85149504fbb",
+    "ignored_experiment_lock_sha256": "ea45e7b5eedd69032bc640d4e17dcd3c166b760298614f03c468d294f4dbe966",
+    "dependency_record": "resolved-dependencies.json"
+  },
+  "r3_reused": {
+    "report_url": "https://github.com/P30g53/Traeva/pull/134#issuecomment-6113535039",
+    "result": "LIMITED_PASS",
+    "independent_inputs": 122,
+    "all_nine_original_failures_rejected": true,
+    "report_sha256": "ddc13f0457f11a85d758860f9568e1479421391b49dd28af2b0d4edccf1371ef",
+    "original_failures_retest_sha256": "6b40fb53bf715f9c12145f14fa075426c0fd9c4fb1cde88353d5e0b71685d409",
+    "new_retest_by_F": false
+  },
+  "office": {
+    "installed_version": "16.78",
+    "installed_build": "16.78.23100802",
+    "running_version": null,
+    "process_query": {
+      "command": "ps -axo pid,ppid,comm",
+      "result": "operation not permitted: ps"
+    },
+    "ui_inventory": {
+      "api": "cua.getState",
+      "excel_isRunning": false,
+      "word_isRunning": true,
+      "powerpoint_isRunning": true,
+      "note": "inventory only; no PID, exact workbook ID/path or Dell bounds verified"
+    },
+    "gui_attempts": 0,
+    "native_excel_saved_packages": 0,
+    "slot_claimed": false,
+    "coordination_url": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6114010664",
+    "blocked_reasons": [
+      "Process lookup unavailable",
+      "Office PID/workbook window ownership unverified",
+      "Dell display/window geometry unverified",
+      "D and C claim records precede F"
+    ]
+  },
+  "excel_stages": {
+    "baseline": {
+      "status": "BLOCKED",
+      "output_sha256": null,
+      "running_excel_version": null,
+      "save_close_reopen": null,
+      "actual_input_hash": null
+    },
+    "input_edit": {
+      "status": "BLOCKED",
+      "output_sha256": null,
+      "running_excel_version": null,
+      "save_close_reopen": null,
+      "actual_input_hash": null
+    },
+    "formula_edit": {
+      "status": "BLOCKED",
+      "output_sha256": null,
+      "running_excel_version": null,
+      "save_close_reopen": null,
+      "actual_input_hash": null
+    }
+  },
+  "excel_coordinate_comparisons": {
+    "baseline_to_input_edit": "BLOCKED",
+    "input_edit_to_formula_edit": "BLOCKED"
+  },
+  "seed": {
+    "writer": "experiment synthetic fixture archive helper",
+    "bytes": 3708,
+    "sha256": "0eaf948b7fc0a4755383e91e91c26ca476fd4209508bd4d399744bede97d0d60",
+    "cache_origin": "frozen synthetic token, no formula evaluation",
+    "field_checks": 41,
+    "field_result": "FIELD_PASS",
+    "native_excel_opening": "UNTESTED"
+  },
+  "artifact_candidate": {
+    "bytes": 4937,
+    "sha256": "3eeefa63737e2f9713361f77aa7fe9c9f7f79f2cb4df1f2953d757b9ba9b67f4",
+    "result": "UNSUPPORTED",
+    "reader_error": "not_plain_xlsx_workbook_content_type",
+    "original_preserved": true,
+    "formula_cache_origin": "Artifact Tool calculation",
+    "native_excel_opening": "UNTESTED",
+    "export_help": "one bounded SpreadsheetFile.exportXlsx lookup; no matching entries"
+  },
+  "headless_preview_review": {
+    "source": "Artifact Tool candidate",
+    "all_sheets": true,
+    "native_window_opened": false,
+    "data_png_sha256": "4a0076e31e592bdc481ff8a62e87998608c4901ea41f680a1d9dc2cae465e276",
+    "chinese_png_sha256": "fe50ec9b7a3c4d8a1dc26fed03b4feeab0dfd97fc981c6f3d6a038a5763ded25",
+    "observation": "all frozen labels and values visible without clipping"
+  },
+  "changes_scope": "experiment preparation/evidence/README only; runtime/profile/security unchanged",
+  "real_model_requests": 0,
+  "formal_memory_integration": "UNTESTED_NOT_AUTHORIZED",
+  "native_excel_save_compatibility": "BLOCKED_NOT_PASS",
+  "evidence_sha256": {
+    "artifact-authoring.json": "c932fd6eee002da6de0e81625ecee8b4ebb69fdcb42aff005ce155160867f3b7",
+    "artifact-candidate-fields.json": "85d6601a170e880b876d7eca8e67e4ad1f9558b424ec27b85920dc7d63af3a4e",
+    "artifact-candidate-reader.json": "a4f4f0e5ec7a1ea16156785f105f491727bbab6a7fb1bd0fcce8eb906d2b2af2",
+    "openpyxl-crosscheck.json": "7430324e5d7581f4c2304293ec4ac2787234ddb7fa272992c126676f893338a8",
+    "resolved-dependencies.json": "c7af4b609a3dd0575c944422722a23c01827f55f3711ad546828dbf65df70fb4",
+    "seed-fields.json": "382c23047a75ff2f86dc531f00668220272c565cb0eae26fcaa03c169ac29a26",
+    "seed-reader.json": "2dde91bc2c91a2e20195a2f8f82b44156ea42620adaa4ee1ec3c75bcaf019fa6",
+    "wrong-stage-fields.json": "b62968e10e7d99942443964229670dde53d06d287836851231cf56a6f7edd2eb"
+  },
+  "privacy_note": "Historical preparation record with home placeholders; affected evidence hashes refreshed. Status/first FAILs preserved."
+}

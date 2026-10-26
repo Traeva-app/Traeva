@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "scope": "F owned synthetic regression before fix",
+  "input_sha256": "3eae8696585570f5cf130be332196cdc79474a318aac8a57f6477660de8c92dc",
+  "output_sha256": "e31cc182e0aed0edd824a293c7761f789b2f78211f568833eb2a280e7c60c158",
+  "tool_reported_remaining": 0,
+  "independently_observed_remaining": 1,
+  "r3_original_fail_reference": "https://github.com/P30g53/Traeva/pull/137#issuecomment-6118794567",
+  "r3_original_input_sha256": "f8d51c7b6142bb05188e11ba70398bfa4322d3bbe879f0db960cfebe7409b3d8",
+  "r3_input_not_reused": true
+}

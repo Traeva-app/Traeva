@@ -1,0 +1,30 @@
+:root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #26352c; background: #f5f5ef; font-size: 15px; line-height: 1.55; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(100% - 40px, 650px); margin: 40px auto; }
+.brand { color: #496748; font-weight: 650; margin-bottom: 6px; }
+h1 { font-size: 1.85rem; line-height: 1.2; margin: 0 0 20px; }
+h2, legend { font-size: 1.12rem; font-weight: 650; }
+summary { font-size: 1.12rem; font-weight: 650; cursor: pointer; }
+fieldset { border: 0; padding: 0; margin: 28px 0; min-width: 0; }
+legend { margin-bottom: 14px; }
+label { display: block; margin-bottom: 6px; }
+input[type="url"], input[type="password"] { display: block; width: 100%; padding: 10px; margin-bottom: 16px; color: inherit; border: 1px solid #81897f; background: white; border-radius: 4px; font: inherit; }
+.choice { display: flex; align-items: flex-start; gap: 9px; }
+input[type="checkbox"] { width: 18px; height: 18px; margin: 3px 0 0; flex: 0 0 auto; accent-color: #355c3c; }
+.hint, footer { color: #536051; font-size: .9rem; }
+.hint { margin: 6px 0 18px; }
+button { border: 1px solid #6e7a6e; border-radius: 4px; padding: 10px 14px; font: inherit; background: #fff; color: #26352c; cursor: pointer; }
+button[type="submit"] { background: #355c3c; border-color: #355c3c; color: white; }
+button:hover { filter: brightness(.96); }
+button:disabled { opacity: .55; cursor: default; }
+:focus-visible { outline: 3px solid #456baa; outline-offset: 3px; }
+section { margin-top: 34px; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+#message[data-error="true"] { color: #9b2828; }
+#roots { overflow-wrap: anywhere; padding-left: 22px; }
+#pending, #recent { padding-left: 22px; overflow-wrap: anywhere; }
+#pending li, #recent li, ol li { margin-bottom: 10px; }
+#discard-warning { border-left: 3px solid #9b2828; padding-left: 12px; margin-bottom: 16px; }
+footer { margin-top: 40px; }
+@media (max-width: 440px) { main { margin-top: 24px; } h1 { font-size: 1.5rem; } .actions button { width: 100%; } }

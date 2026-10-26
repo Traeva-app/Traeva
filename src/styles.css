@@ -1,0 +1,628 @@
+/* Calm colours: light blue, like the desktop pet (student's choice, 10/14;
+ * warm and amber before). One accent, blue, only for the one primary button
+ * of a screen, a focused text field and the selected sidebar row. What
+ * waits for the user keeps its own warm colour (--attention): the small
+ * "needs you" dots and the pet's bubble, so it stands out from the blue. */
+:root {
+  --bg: #f5f9fb;
+  --surface: #ffffff;
+  --sidebar: #eaf2f6;
+  --sidebar-hover: rgba(64, 144, 176, 0.12);
+  --text: #13232c;
+  --muted: #56697a;
+  --border: #dbe6ed;
+  --control-border: #c3d4de;
+  --hover: #eef5f9;
+  --pressed: #e2edf3;
+  --accent: #2b7a9e;
+  --accent-hover: #21657f;
+  --on-accent: #ffffff;
+  /* Blue text on the blue-tinted selected row. */
+  --accent-text: #21668a;
+  --accent-soft: rgba(43, 122, 158, 0.12);
+  /* Waits for the user: warm, apart from the blue. */
+  --attention: #b45309;
+  --on-attention: #ffffff;
+  --ok: #2f7a4f;
+  --error: #b42318;
+  --warn: #9a5b00;
+
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #11191e;
+    --surface: #19242b;
+    --sidebar: #141e24;
+    --sidebar-hover: rgba(140, 203, 224, 0.08);
+    --text: #e7f0f4;
+    --muted: #93a8b3;
+    --border: #28363f;
+    --control-border: #384954;
+    --hover: #213039;
+    --pressed: #293a44;
+    --accent: #70b8d0;
+    --accent-hover: #8ccbe0;
+    --on-accent: #0f1a20;
+    --accent-text: #8ccbe0;
+    --accent-soft: rgba(112, 184, 208, 0.16);
+    --attention: #f59e0b;
+    --on-attention: #1c1917;
+    --ok: #5cc48f;
+    --error: #ff7b6e;
+    --warn: #f0b048;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 28px 32px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/* Buttons: white with a thin grey-blue border; `primary` is the one filled
+ * accent button of a screen. */
+button {
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 14px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--control-border);
+  border-radius: 8px;
+}
+
+button:where(:hover:not(:disabled)) {
+  background: var(--hover);
+}
+
+button:where(:active:not(:disabled)) {
+  background: var(--pressed);
+}
+
+button:disabled {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+button:focus-visible,
+summary:focus-visible,
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+button.primary {
+  font-weight: 600;
+  color: var(--on-accent);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+button.primary:where(:hover:not(:disabled)) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.card {
+  margin-top: 16px;
+  /* Room above it when it is brought into view. */
+  scroll-margin-top: 16px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+/* A line above the organize flow's card, e.g. why an Undo did not start. */
+.flow-note {
+  margin: 16px 0 0;
+  scroll-margin-top: 16px;
+}
+
+/* A title or note the focus is moved to from code (tabIndex -1), after a
+   button on another page brought it into view: no ring, it is not a
+   control. */
+.focus-target:focus {
+  outline: none;
+}
+
+/* Before any folder (Find on the first start, Organize): the pet beside what
+   a folder is for and the Add a folder button. */
+.first-folder {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.first-folder img {
+  flex: none;
+}
+
+.first-folder h2 {
+  margin-top: 4px;
+}
+
+/* The organize flow's steps above its card: done steps in text colour with
+   a tick, the current one bold, the next ones grey. No accent colour. */
+.flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px 0 0;
+  scroll-margin-top: 16px;
+  padding: 0;
+  font-size: 13px;
+  color: var(--muted);
+  list-style: none;
+}
+
+.flow-steps li {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.flow-steps li + li::before {
+  content: "›";
+  color: var(--muted);
+}
+
+.flow-step-done {
+  color: var(--text);
+}
+
+.flow-step-done::after {
+  content: "✓";
+}
+
+.flow-step-now {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.flow-steps + .card {
+  margin-top: 8px;
+}
+
+/* A move drawn as a route (Organize's suggestion and preview): the file's
+   name, where it is, an arrow, where it goes, the folders to be made. */
+.move-route {
+  margin: 4px 0 14px;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.move-route-name {
+  margin-bottom: 6px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.move-route-row {
+  display: grid;
+  grid-template-columns: 6.5em 1fr;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 13px;
+}
+
+.move-route-row .mono {
+  overflow-wrap: anywhere;
+}
+
+.move-route-row ul {
+  margin: 0;
+}
+
+.move-route-to .mono {
+  font-weight: 600;
+}
+
+.move-route-arrow {
+  padding: 2px 0 2px 6.5em;
+  margin-left: 8px;
+  line-height: 1;
+  color: var(--muted);
+}
+
+/* A thin coloured edge for a result or an error, inside the rounded card. */
+.card.card-ok {
+  box-shadow: inset 3px 0 0 var(--ok);
+}
+
+.card-ok h2 {
+  color: var(--ok);
+}
+
+.card.card-error {
+  box-shadow: inset 3px 0 0 var(--error);
+}
+
+.card-error h2 {
+  color: var(--error);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 16px;
+  margin: 8px 0 0;
+}
+
+dt {
+  color: var(--muted);
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.mono {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 13px;
+}
+
+/* Spaces shown as typed, not collapsed (#93); a long name without spaces
+   still wraps. */
+.exact {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 13px;
+}
+
+.warn {
+  color: var(--warn);
+}
+
+.list {
+  list-style: none;
+  margin: 8px 0 12px;
+  padding: 0;
+}
+
+.list > li {
+  padding: 6px 0;
+  border-top: 1px solid var(--border);
+}
+
+.plain {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* A card's buttons keep some room from the lines above them (#37). Not the
+   first row: some cards open with a title row. */
+.card > .row:not(:first-child) {
+  margin-top: 12px;
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 10px 0;
+  border: none;
+  padding: 0;
+}
+
+.field legend {
+  margin-bottom: 4px;
+}
+
+/* Selects keep the native macOS look (WebKit drops the arrows once styled). */
+select {
+  font: inherit;
+  max-width: 100%;
+}
+
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="password"],
+input:not([type]) {
+  font: inherit;
+  padding: 5px 8px;
+  max-width: 100%;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--control-border);
+  border-radius: 8px;
+}
+
+/* A focused text field: an accent edge, no glow. */
+textarea:focus,
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input:not([type]):focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--text);
+}
+
+summary {
+  cursor: pointer;
+}
+
+/* A status: a small dot in the status colour and its words, not a pill. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.badge::before {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badge.card-ok {
+  color: var(--ok);
+}
+
+.badge.card-error {
+  color: var(--error);
+}
+
+/* Waits for the user: amber, never red (shared/status.ts). */
+.badge.badge-warn {
+  color: var(--warn);
+  border-color: var(--warn);
+}
+
+/* Read by screen readers only. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Choosing a folder by hand (Organize): a few likely folders, then one
+   level at a time. Rows are plain buttons; the chosen one is marked with a
+   check and a darker border, never the accent (the accent button is
+   Preview). */
+.folder-picker {
+  margin: 4px 0 12px;
+}
+
+.folder-picker-title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.folder-options {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.folder-options-other {
+  margin-top: 8px;
+}
+
+.folder-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.folder-option-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.folder-option-mark {
+  flex: none;
+  color: var(--muted);
+}
+
+.folder-option-chosen {
+  font-weight: 600;
+  border-color: var(--text);
+}
+
+/* A protected folder: shown with its reason, reachable with Tab, never used. */
+.folder-option[aria-disabled="true"] {
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.folder-option[aria-disabled="true"]:hover {
+  background: var(--surface);
+}
+
+.folder-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.folder-trail-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* A long name without spaces wraps instead of widening the card. */
+.folder-trail button,
+.folder-trail-step > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.folder-trail button {
+  padding: 1px 8px;
+  font-size: 13px;
+}
+
+/* Before Suggest a folder for an image (organize-spec §14.10): the question
+   whether to send a smaller copy, set off from the card's other lines. */
+.image-ask {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 8px;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.image-ask p {
+  margin: 0;
+}
+
+/* Show more / Show less under a long list (src/shared/ShowMore.tsx). */
+.show-more {
+  margin-top: 8px;
+}
+
+/* Organize's start: one line, the title and its hint, the folders, and
+   Choose file… (#37, the student's choice B). It wraps in a narrow window. */
+.start-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+/* The title and hint take the first line; the folders and the button the next. */
+.start-bar-text {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+.start-bar-text h2 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.start-bar-text p {
+  margin: 2px 0 0;
+}
+
+.start-bar-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.start-bar-field select {
+  max-width: 220px;
+}
+
+/* Settings' automatic mode card, brought into view from the pet's popup:
+   it takes the focus without a ring around the whole card. */
+.settings-anchor:focus {
+  outline: none;
+}
+
+/* The pet's popup and quick search are transparent windows: their page
+   paints an opaque background with round corners and a hairline edge, like
+   a macOS window (the student, 10/15). */
+:root {
+  --window-radius: 18px;
+  --window-edge: rgba(0, 0, 0, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --window-edge: rgba(255, 255, 255, 0.14);
+  }
+}

@@ -1,0 +1,29 @@
+[package]
+name = "traeva-app"
+description = "Traeva desktop shell: window, thin commands, native pickers."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[lib]
+name = "traeva_app"
+
+[build-dependencies]
+tauri-build = { version = "2.7.1", features = [] }
+
+[dependencies]
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+tauri = { version = "2.12.1", features = ["macos-private-api"] }
+tauri-plugin-dialog = "2.8.1"
+traeva-core = { path = "../crates/traeva-core" }
+
+[dev-dependencies]
+serde_json = "1.0.151"
+tempfile = "3.27.0"
+# The mock runtime for the IPC tests, with the app's real config and capability.
+tauri = { version = "2.12.1", features = ["test", "macos-private-api"] }

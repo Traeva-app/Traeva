@@ -1,0 +1,34 @@
+{
+  "exporter": "fixtures/layout/export.py",
+  "tools": {
+    "libreoffice": "LibreOffice 24.2.7.2 420(Build:2)",
+    "chromium": "Chromium 141.0.7390.37"
+  },
+  "note": "Synthetic token text only. Real-application exports, not byte-reproducible.",
+  "files": {
+    "x01-libreoffice-two-columns.pdf": {
+      "sha256": "b69410f6bfdceb7a1022e264c9635efa2f73175f78384e3b6f9395aeda93eb03",
+      "bytes": 26335
+    },
+    "x02-chromium-two-columns.pdf": {
+      "sha256": "f2ef5cf227c27cd6484aeea25c4f437c71da6a93559bebff88fce1a23ac745bd",
+      "bytes": 25134
+    },
+    "x03-libreoffice-three-columns.pdf": {
+      "sha256": "02874aaeef96454568165753cb3e67537632a4345238346ba4eae73d68c0a5bd",
+      "bytes": 19952
+    },
+    "src/x01-libreoffice-two-columns.fodt": {
+      "sha256": "e971019cae97565d7cb73572c6af2a4e8553b83a495612a11256be61b269fdc7",
+      "bytes": 6029
+    },
+    "src/x02-chromium-two-columns.html": {
+      "sha256": "b53d038bbf0632c1db2a72273195a171fc98e64b71ec28c364b795ab9b55c469",
+      "bytes": 2547
+    },
+    "src/x03-libreoffice-three-columns.fodt": {
+      "sha256": "05ca7eecf80fc268c9c9e417acc6b24bdbd9c49f08e600ec917d6c1acad6fa20",
+      "bytes": 4264
+    }
+  }
+}

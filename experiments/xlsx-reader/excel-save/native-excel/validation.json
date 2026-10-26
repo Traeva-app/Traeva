@@ -1,0 +1,233 @@
+{
+  "kind": "F developer native Excel save evidence; not R3 independent PASS",
+  "captured_utc": "2026-10-11T23:16:57.548093+00:00",
+  "reviewed_reader_commit": "6de78846225a65321089ec5794254407f35d632d",
+  "runtime_diff_from_reviewed": "",
+  "probe_sha256": "e882c4b6f45fc335992c8a2aabca397bdc3051177dc212cfd5ebf85149504fbb",
+  "protocol_sha256": "bf3807767d1fb5740118be64a2e85410d960e17d3b3dc4767b576357075f1de0",
+  "working_seed_sha256": "0eaf948b7fc0a4755383e91e91c26ca476fd4209508bd4d399744bede97d0d60",
+  "original_seed_sha256": "0eaf948b7fc0a4755383e91e91c26ca476fd4209508bd4d399744bede97d0d60",
+  "running_excel_version": "16.78",
+  "running_excel_build": "23100802",
+  "running_version_source": "Computer Use About Excel dialog",
+  "calculation_mode": "Automatic (observed; unchanged)",
+  "display_authorization": {
+    "source": "User in F chat: 那就主屏幕吧",
+    "scope": "this F Computer Use run; primary display permitted"
+  },
+  "identity_evidence": [
+    "Excel not running before launch",
+    "Bound official com.microsoft.Excel with Computer Use",
+    "Opened exact own file through native Open dialog",
+    "Workbook AX titles and file URLs checked before/after Save As",
+    "Excel not running after normal Command-Q"
+  ],
+  "unmeasured": [
+    "Numeric Office PID",
+    "OS-level window ID",
+    "Physical monitor/window bounds"
+  ],
+  "claim_url": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6114895205",
+  "release_url": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6114986273",
+  "stages": [
+    {
+      "stage": "baseline",
+      "bytes": 8710,
+      "sha256": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650",
+      "field_result": "FIELD_PASS",
+      "field_checks": 41,
+      "reader_status": "partial",
+      "roundtrip": {
+        "stage": "baseline",
+        "capture_utc": "2026-10-11T23:09:04.141405+00:00",
+        "sha256_first_closed": "c78ea807b695b297027463160b7a9e86e9d579ef035b5ffa67c6df55d6eabcf2",
+        "sha256_after_reopen_closed": "c78ea807b695b297027463160b7a9e86e9d579ef035b5ffa67c6df55d6eabcf2",
+        "unchanged": true,
+        "bytes": 11471,
+        "source": "historical original Excel output; not a reopened sanitized derivative",
+        "original_output_not_retained_in_rewritten_history": true
+      },
+      "entries": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "xl/_rels/workbook.xml.rels",
+        "xl/workbook.xml",
+        "xl/styles.xml",
+        "xl/theme/theme1.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/sharedStrings.xml",
+        "xl/worksheets/sheet2.xml",
+        "docProps/app.xml",
+        "xl/calcChain.xml",
+        "docProps/core.xml"
+      ],
+      "external_relationship": false,
+      "macro_part": false,
+      "original_output_bytes": 11471,
+      "original_output_sha256": "c78ea807b695b297027463160b7a9e86e9d579ef035b5ffa67c6df55d6eabcf2",
+      "package_kind": "metadata-sanitized derivative; original native output not retained in rewritten history"
+    },
+    {
+      "stage": "input_edit",
+      "bytes": 8717,
+      "sha256": "5eb4915a4f6622e22bf8890d7fa51725143f6311d63adbd18dea8192299cefc4",
+      "field_result": "FIELD_PASS",
+      "field_checks": 41,
+      "reader_status": "partial",
+      "roundtrip": {
+        "stage": "input_edit",
+        "capture_utc": "2026-10-11T23:11:44.834427+00:00",
+        "sha256_first_closed": "26fde6cd9cf76febafccdb8155cebce7bc54e56419705b23b5af86cf9e3b5d04",
+        "sha256_after_reopen_closed": "26fde6cd9cf76febafccdb8155cebce7bc54e56419705b23b5af86cf9e3b5d04",
+        "unchanged": true,
+        "bytes": 11480,
+        "source": "historical original Excel output; not a reopened sanitized derivative",
+        "original_output_not_retained_in_rewritten_history": true
+      },
+      "entries": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "xl/_rels/workbook.xml.rels",
+        "xl/workbook.xml",
+        "xl/styles.xml",
+        "xl/theme/theme1.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/sharedStrings.xml",
+        "xl/worksheets/sheet2.xml",
+        "docProps/app.xml",
+        "xl/calcChain.xml",
+        "docProps/core.xml"
+      ],
+      "external_relationship": false,
+      "macro_part": false,
+      "original_output_bytes": 11480,
+      "original_output_sha256": "26fde6cd9cf76febafccdb8155cebce7bc54e56419705b23b5af86cf9e3b5d04",
+      "package_kind": "metadata-sanitized derivative; original native output not retained in rewritten history"
+    },
+    {
+      "stage": "formula_edit",
+      "bytes": 8716,
+      "sha256": "2acf204755f8ba50625c8c96acc60c1fb4c3f3c3084f84f62a452b54941abed0",
+      "field_result": "FIELD_PASS",
+      "field_checks": 41,
+      "reader_status": "partial",
+      "roundtrip": {
+        "stage": "formula_edit",
+        "capture_utc": "2026-10-11T23:14:00.339657+00:00",
+        "sha256_first_closed": "eeddbfd45da9e52493457fdbf795f1cb49d0d1c7caef6a3491708596faa366cd",
+        "sha256_after_reopen_closed": "eeddbfd45da9e52493457fdbf795f1cb49d0d1c7caef6a3491708596faa366cd",
+        "unchanged": true,
+        "bytes": 11476,
+        "source": "historical original Excel output; not a reopened sanitized derivative",
+        "original_output_not_retained_in_rewritten_history": true
+      },
+      "entries": [
+        "[Content_Types].xml",
+        "_rels/.rels",
+        "xl/_rels/workbook.xml.rels",
+        "xl/workbook.xml",
+        "xl/styles.xml",
+        "xl/theme/theme1.xml",
+        "xl/worksheets/sheet1.xml",
+        "xl/sharedStrings.xml",
+        "xl/worksheets/sheet2.xml",
+        "docProps/app.xml",
+        "xl/calcChain.xml",
+        "docProps/core.xml"
+      ],
+      "external_relationship": false,
+      "macro_part": false,
+      "original_output_bytes": 11476,
+      "original_output_sha256": "eeddbfd45da9e52493457fdbf795f1cb49d0d1c7caef6a3491708596faa366cd",
+      "package_kind": "metadata-sanitized derivative; original native output not retained in rewritten history"
+    }
+  ],
+  "coordinate_comparisons": [
+    {
+      "comparison": "baseline_to_input_edit",
+      "status": "PASS",
+      "changes": [
+        {
+          "address": "B2",
+          "literal_changed": true,
+          "formula_changed": false,
+          "cache_changed": false,
+          "style_changed": false
+        },
+        {
+          "address": "C2",
+          "literal_changed": false,
+          "formula_changed": false,
+          "cache_changed": true,
+          "style_changed": false
+        }
+      ],
+      "output_sha256": "02b3ccedff92fde2664f14ed3ffe720754d05193fb261dacbfc9117a1074df09"
+    },
+    {
+      "comparison": "input_edit_to_formula_edit",
+      "status": "PASS",
+      "changes": [
+        {
+          "address": "C2",
+          "literal_changed": false,
+          "formula_changed": true,
+          "cache_changed": true,
+          "style_changed": false
+        }
+      ],
+      "output_sha256": "763fc2eed42d38d15faa99379fd9654d32611e782e488cad8fd8549e49258115"
+    }
+  ],
+  "cache_freshness": "unverified",
+  "formula_calculation_origin": "Normal Excel Automatic arithmetic; Reader/probe never evaluate or refresh",
+  "original_122_and_nine_failures": "Reused R3 reviewed evidence, not rerun; runtime unchanged",
+  "native_compatibility": "PASS for frozen cell/merge/order/formula/cache stages observed by F; within reported limitations",
+  "independent_r3_native_office_result": "COMPLETED_SEPARATELY_IN_PR161_LIMITED_SCOPE; not a new PR137 GUI or privacy-tool acceptance",
+  "real_model_requests": 0,
+  "office_settings_changed": false,
+  "file_sha256": {
+    "REPORT.md": "5e077bf687c8ac3ffb8d3b0ae5cc65dba652a10546fd0df2bd5ac9c0c243383c",
+    "baseline-fields.json": "a24267ee9d924e78b3ec002cf2b0de3130387ee34bb6b297b6128122b0edc665",
+    "baseline-reader.json": "1b644466926bf08aa5ba48a7a0a7cd1a5acac1ff7a5a750555721d8a2eb38ed7",
+    "baseline-roundtrip.json": "ef5df2da30a5875d2fbe67915c0798e1d16020d77933c107bff278360e9806ae",
+    "baseline-to-input.json": "02b3ccedff92fde2664f14ed3ffe720754d05193fb261dacbfc9117a1074df09",
+    "baseline.xlsx": "5ea94d7eda871ce73231a1ab775d6e660a0c27a1b80f83e267d4740dbf88b650",
+    "formula_edit-fields.json": "ab7b849de73e0d5526295693e431165e08b01ae7429c1e4b3842b536fce672c0",
+    "formula_edit-reader.json": "cb023292440927ea5bdc8f8e40c0bf093c30e1183b52e6fee82acf55a23deeec",
+    "formula_edit-roundtrip.json": "35dbd077a8f45d9e06586c4f28382da4f51da8ddab5fd4f9cbf1443d552eddbb",
+    "formula_edit.xlsx": "2acf204755f8ba50625c8c96acc60c1fb4c3f3c3084f84f62a452b54941abed0",
+    "gui-observations.json": "f6362e0ac4f7366d9edba0d6bd1a738a9d5c7f7d489fabdccd0cd40d4dd649b7",
+    "input-to-formula.json": "763fc2eed42d38d15faa99379fd9654d32611e782e488cad8fd8549e49258115",
+    "input_edit-fields.json": "1e318dc838d1e02acc4604fb7e67473732a576bdf461062071a2a0280b590676",
+    "input_edit-reader.json": "531c7019b509f49a89ed785f5664d184fdf117583c0493ab406ff5c1724ce5af",
+    "input_edit-roundtrip.json": "70739204dd0a2cbe1f8c4b430714ac0cf2ed675106aae01decd0dc2889069090",
+    "input_edit.xlsx": "5eb4915a4f6622e22bf8890d7fa51725143f6311d63adbd18dea8192299cefc4",
+    "openpyxl-crosscheck.json": "e65e5b9b20fd62e7bebc244cce84f0c6a134e660b5a554bda9c0b41362278a4a",
+    "privacy-checks/archive-comment-fields.json": "94767e31a639263d0bc70bc773897923b451943107424282ec2f2882125672c3",
+    "privacy-checks/archive-comment-first-fail.json": "ce8e5917499df4b97bfe3c9c0763a71d552a7b7f113ad88b244fb27f6de4846a",
+    "privacy-checks/archive-comment-first-fail.log": "86c907fa365d1d0c5757dbe475c61d5e8a85e141db0d488e023eadb1111121c1",
+    "privacy-checks/archive-comment-regression.json": "541e00dd15741b0e8970a29e58631c46ea9415656ee6f187f061ac44eba638b5",
+    "privacy-checks/archive-comment-tests.log": "120fcf1e1b1ef6883b716f1b33b4fbea79c7089f1d1ff950e98c9608d82abb42",
+    "privacy-checks/build.log": "a13905646e2aed93ec6ea9ed6ac91490a4e01f91af0215c3965279a910612149",
+    "privacy-checks/clippy.log": "b435b3830aa73e1a763f4419aa16b2d34ea4ff69c385e9b8cf78b0c10eb29535",
+    "privacy-checks/first-crosscheck-fail.json": "de6383b7d7e1e5104a69c7980af63196c2e5b16b46bf8ebf47a95eaca57d5441",
+    "privacy-checks/fmt.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "privacy-checks/metadata-tests.log": "edb4e2159c923ea45a32656078835cdf531c3d7b414c670dd786978875cb0678",
+    "privacy-checks/tests.log": "cf19642a3040875d222187565fe77429dbec5a1457eda16fa6f085138377f52f",
+    "privacy-cleanup.json": "be4487d1d7e14b38c9c12172102e8683ba0b4b4628d234f425c2df228de0efd0"
+  },
+  "gui_observations": "gui-observations.json",
+  "gui_time_note": "Journal times, not precise OS command timestamps; delayed baseline-close observation explicitly retained.",
+  "strict_prior_gui_instrumentation": "Numeric PID/OS window IDs/bounds remain unmeasured; fresh app and exact AX URLs used; primary display authorized by user.",
+  "package_storage": "Only metadata-sanitized derivatives are retained in the rewritten branch. Original-output hashes describe historical F Excel observations.",
+  "historical_preparation_head": "b4bdf988d6cd0792f11f265b7c95fa828ffb5e38",
+  "prior_r3_review": "Historical reports only; no acceptance carried forward to sanitized packages/new head",
+  "sanitized_revalidation": "FIELD_PASS: three frozen stages and unchanged coordinate/context evidence; R3 pending",
+  "privacy_cleanup": "privacy-cleanup.json",
+  "independent_r3_native_office_reports": [
+    "https://github.com/P30g53/Traeva/pull/161#issuecomment-6117727421",
+    "https://github.com/P30g53/Traeva/pull/161#issuecomment-6117918871"
+  ],
+  "r3_privacy_tool_result": "FAIL at 5446144 retained; focused fix awaits independent new-head revalidation"
+}

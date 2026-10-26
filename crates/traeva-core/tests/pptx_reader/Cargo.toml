@@ -1,0 +1,26 @@
+[package]
+name = "traeva-pptx-validation"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace]
+
+[lib]
+path = "lib.rs"
+
+[[bin]]
+name = "pptx-probe"
+path = "probe.rs"
+
+[dependencies]
+traeva-core = { path = "../.." }
+quick-xml = { version = "=0.42.0", default-features = false }
+zip = { version = "=8.6.0", default-features = false, features = ["deflate-flate2"] }
+flate2 = { version = "=1.1.10", default-features = false, features = ["rust_backend"] }
+crc32fast = "=1.5.2"
+serde_json = "1.0.151"
+sha2 = "0.11.0"
+
+[dev-dependencies]
+tempfile = "3.27.0"

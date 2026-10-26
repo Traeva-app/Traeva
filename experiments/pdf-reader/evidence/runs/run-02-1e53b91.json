@@ -1,0 +1,2063 @@
+{
+ "commit": "1e53b91841d3f0a23b0b6d9f6cc00adb2a90b9c7",
+ "worktree_dirty": false,
+ "started_utc": "2026-10-12T00:11:32Z",
+ "environment": {
+  "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "python": "3.13.16",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)"
+ },
+ "kind": "developer self-test (Claude-G); not an independent Codex-R4 result",
+ "fixtures_generated": {
+  "command": "/usr/bin/python3 -I fixtures/generate.py --check",
+  "exit": 0,
+  "seconds": 2.39,
+  "tail": [
+   "{",
+   "  \"changed\": [],",
+   "  \"missing_or_new\": []",
+   "}"
+  ]
+ },
+ "fixtures_exported": {
+  "e01-libreoffice.pdf": true,
+  "e02-chromium.pdf": true,
+  "e03a-libreoffice-open-password.pdf": true,
+  "e03b-libreoffice-permissions-only.pdf": true,
+  "src/e01-libreoffice.fodt": true,
+  "src/e02-chromium.html": true,
+  "src/e03-encrypted.fodt": true
+ },
+ "checks": [
+  {
+   "command": "cargo fmt --check",
+   "exit": 0,
+   "seconds": 0.2,
+   "tail": []
+  },
+  {
+   "command": "cargo clippy --all-targets --locked -- -D warnings",
+   "exit": 0,
+   "seconds": 0.98,
+   "tail": [
+    "Checking traeva-pdf-experiment v0.1.0 (/home/user/Traeva/experiments/pdf-reader)",
+    "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.85s"
+   ]
+  },
+  {
+   "command": "cargo test --locked",
+   "exit": 0,
+   "seconds": 20.65,
+   "tail": [
+    "",
+    "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 17.86s",
+    "",
+    "",
+    "running 0 tests",
+    "",
+    "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "",
+    "   Compiling traeva-pdf-experiment v0.1.0 (/home/user/Traeva/experiments/pdf-reader)",
+    "    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.53s",
+    "     Running unittests src/lib.rs (target/debug/deps/traeva_pdf_experiment-56344d6cb2fe1479)",
+    "     Running unittests src/main.rs (target/debug/deps/pdf_probe-e27727885e66730f)",
+    "     Running tests/contract.rs (target/debug/deps/contract-f80763b88c42e8b0)",
+    "     Running tests/robustness.rs (target/debug/deps/robustness-f0d1118fd85e0ad9)",
+    "   Doc-tests traeva_pdf_experiment"
+   ]
+  },
+  {
+   "command": "cargo build --release --locked",
+   "exit": 0,
+   "seconds": 3.63,
+   "tail": [
+    "Compiling traeva-pdf-experiment v0.1.0 (/home/user/Traeva/experiments/pdf-reader)",
+    "    Finished `release` profile [optimized] target(s) in 3.56s"
+   ]
+  }
+ ],
+ "fixtures": {
+  "p01-single-en.pdf": {
+   "kind": "generated",
+   "sha256": "0bdca643ab48658bc7837ded68a8404ce51c2b4d7c0aef77cf9ebb5bb38b02a2",
+   "manifest_sha256": "0bdca643ab48658bc7837ded68a8404ce51c2b4d7c0aef77cf9ebb5bb38b02a2",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 100,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [],
+     "note": null,
+     "reader": "pdf-experiment-1",
+     "status": "complete"
+    },
+    "text_sha256": "c330cd0d571d95556aa218758909c39ff1c83507360027e8273f014d87004d99",
+    "text": "[Page 1]\nTraeva PDF reader test\nThe quick brown fox jumps over the lazy dog.\nVersion 1, single page.",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 100,
+      "lines": 3,
+      "glyphs": 75,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123480,
+    "millis": 10
+   }
+  },
+  "p02-multi-en.pdf": {
+   "kind": "generated",
+   "sha256": "7e880a027cd946650fcb4518d42a7eccdbbfde237f632b855764e42a87e3f89e",
+   "manifest_sha256": "7e880a027cd946650fcb4518d42a7eccdbbfde237f632b855764e42a87e3f89e",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 150,
+     "covered": [
+      "the text layer of all 3 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [],
+     "note": null,
+     "reader": "pdf-experiment-1",
+     "status": "complete"
+    },
+    "text_sha256": "4aaf49893ded6e3ace0ae3517c57a7aae9a3d2406d489b30b41402eaed9e243a",
+    "text": "[Page 1]\nPage one heading\nBody text on page one.\n[Page 2]\nPage two heading\nBody text on page two.\n[Page 3]\nPage three heading\nBody text on page three.",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 48,
+      "lines": 2,
+      "glyphs": 32,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 2,
+      "state": "text",
+      "start": 58,
+      "end": 97,
+      "lines": 2,
+      "glyphs": 32,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 3,
+      "state": "text",
+      "start": 107,
+      "end": 150,
+      "lines": 2,
+      "glyphs": 36,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 3,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 124577,
+    "millis": 10
+   }
+  },
+  "p03-cjk-reportlab.pdf": {
+   "kind": "generated",
+   "sha256": "e2c6b9340a19e69072cd8fda8a12d100f41c63214ae974963ed67f123efe23eb",
+   "manifest_sha256": "e2c6b9340a19e69072cd8fda8a12d100f41c63214ae974963ed67f123efe23eb",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 72,
+     "covered": [
+      "the text layer of all 2 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [],
+     "note": null,
+     "reader": "pdf-experiment-1",
+     "status": "complete"
+    },
+    "text_sha256": "fb8f0ee2e8a862c8d7a3780b1a935ec3bfc4608437864716a88792df4e4f78c6",
+    "text": "[Page 1]\n版本记忆测试\n第二行：中文与English混排\n[Page 2]\n嵌入字体的中文段落\nMixed 中文 and English",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 32,
+      "lines": 2,
+      "glyphs": 22,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 2,
+      "state": "text",
+      "start": 42,
+      "end": 72,
+      "lines": 2,
+      "glyphs": 26,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 2,
+    "millis": 8
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 1939003,
+    "millis": 20
+   }
+  },
+  "p04-rotated.pdf": {
+   "kind": "generated",
+   "sha256": "6a466e97671ac11063138e832b731c227caa4531e70b1a0781c785c93b773d51",
+   "manifest_sha256": "6a466e97671ac11063138e832b731c227caa4531e70b1a0781c785c93b773d51",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 109,
+     "covered": [
+      "the text layer of all 2 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line",
+      "rotated text on page 1, each rotated line kept as its own line"
+     ],
+     "left_out": [],
+     "note": null,
+     "reader": "pdf-experiment-1",
+     "status": "complete"
+    },
+    "text_sha256": "ae5f648c93e439f4f4d094d50cfc168de9531d47ffbd70d2b8fd495f903c4392",
+    "text": "[Page 1]\nUpright heading\nRotated ninety degrees\nTilted forty-five\nUpright footer\n[Page 2]\nLandscape page text",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 80,
+      "lines": 4,
+      "glyphs": 63,
+      "rotated_lines": 2,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 2,
+      "state": "text",
+      "start": 90,
+      "end": 109,
+      "lines": 1,
+      "glyphs": 17,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 2,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 124595,
+    "millis": 10
+   }
+  },
+  "p05-two-column.pdf": {
+   "kind": "generated",
+   "sha256": "e59fe3cdd7c0047124c0b4c1beb8e5f66e8c7b7199f06f7ff8297343a8549513",
+   "manifest_sha256": "e59fe3cdd7c0047124c0b4c1beb8e5f66e8c7b7199f06f7ff8297343a8549513",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 409,
+     "covered": [
+      "the text layer of all 2 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [],
+     "note": null,
+     "reader": "pdf-experiment-1",
+     "status": "complete"
+    },
+    "text_sha256": "fab5791940344af76691a1abc2e1d334683544f380044c9627b6237682dee7a6",
+    "text": "[Page 1]\nTwo column report\nLeft column line one\nLeft column line two\nLeft column line three\nLeft column line four\nRight column line one\nRight column line two\nRight column line three\nRight column line four\n[Page 2]\nTwo column report\nLeft column line one\tRight column line one\nLeft column line two\tRight column line two\nLeft column line three\tRight column line three\nLeft column line four\tRight column line four",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 204,
+      "lines": 9,
+      "glyphs": 161,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 2,
+      "state": "text",
+      "start": 214,
+      "end": 409,
+      "lines": 5,
+      "glyphs": 161,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 4,
+      "omissions": []
+     }
+    ],
+    "page_count": 2,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 124914,
+    "millis": 10
+   }
+  },
+  "p06-font-mapping.pdf": {
+   "kind": "generated",
+   "sha256": "2d217aed9399b3c1b3b52d29ddb8ca7fd7a62c90d0fa0902790debb3ee08c24f",
+   "manifest_sha256": "2d217aed9399b3c1b3b52d29ddb8ca7fd7a62c90d0fa0902790debb3ee08c24f",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 36,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [
+      "3 characters with no Unicode mapping on page 1"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: characters without Unicode.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "20613b4c07ad03dd3e0f3466d02305a14b77cfb259ca3db6c135b11fbc503f03",
+    "text": "[Page 1]\nZebra\nTōkyō 東京 fine\n中文\nfile",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 36,
+      "lines": 4,
+      "glyphs": 20,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "unmapped"
+      ]
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 127163,
+    "millis": 10
+   }
+  },
+  "p07-blank.pdf": {
+   "kind": "generated",
+   "sha256": "2ca3d073196f4cf64fc176a0c28b95598e04474eef2b635efb8cd905825928ab",
+   "manifest_sha256": "2ca3d073196f4cf64fc176a0c28b95598e04474eef2b635efb8cd905825928ab",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF has no text to read: its pages draw no text.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [
+     {
+      "page": 1,
+      "state": "no_text",
+      "start": 0,
+      "end": 0,
+      "lines": 0,
+      "glyphs": 0,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123295,
+    "millis": 10
+   }
+  },
+  "p08-scanned-images.pdf": {
+   "kind": "generated",
+   "sha256": "dd5f3ea5ecd9b106a1f43c8cd125c230f56b466c0615446b3d7bbfa7792e8e68",
+   "manifest_sha256": "dd5f3ea5ecd9b106a1f43c8cd125c230f56b466c0615446b3d7bbfa7792e8e68",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "No page has a text layer that this reader can use. 2 of 2 pages are mostly images (likely scans); reading them needs OCR, which this reader does not do.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [
+     {
+      "page": 1,
+      "state": "no_text",
+      "start": 0,
+      "end": 0,
+      "lines": 0,
+      "glyphs": 0,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "image_page"
+      ]
+     },
+     {
+      "page": 2,
+      "state": "no_text",
+      "start": 0,
+      "end": 0,
+      "lines": 0,
+      "glyphs": 0,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "image_page"
+      ]
+     }
+    ],
+    "page_count": 2,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 178447,
+    "millis": 10
+   }
+  },
+  "p09-mixed-pages.pdf": {
+   "kind": "generated",
+   "sha256": "c6b20ed4a2ec5ad485b682e0a18cc33479758e82386c4dbd197bb260d8563aab",
+   "manifest_sha256": "c6b20ed4a2ec5ad485b682e0a18cc33479758e82386c4dbd197bb260d8563aab",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 89,
+     "covered": [
+      "the text layer of pages 1, 3 (2 of 3 pages) in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [
+      "page 2: no text layer; mostly an image (likely a scan) that would need OCR, which this reader does not do",
+      "images on page 1 (1 in all; images are not read, no OCR)"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: scanned or image-only pages, images.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "8dde917addd2fcda505e7092a48ec7917e895094e86dd1046d6a641f7a8c1e51",
+    "text": "[Page 1]\nMixed page heading\nCaption below the picture.\n[Page 2]\n[Page 3]\nFinal text page.",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 54,
+      "lines": 2,
+      "glyphs": 39,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "images"
+      ]
+     },
+     {
+      "page": 2,
+      "state": "no_text",
+      "start": 63,
+      "end": 63,
+      "lines": 0,
+      "glyphs": 0,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "image_page"
+      ]
+     },
+     {
+      "page": 3,
+      "state": "text",
+      "start": 73,
+      "end": 89,
+      "lines": 1,
+      "glyphs": 14,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 3,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 178487,
+    "millis": 10
+   }
+  },
+  "p10-ruled-table.pdf": {
+   "kind": "generated",
+   "sha256": "8ab96a84ef0c789f81b446ead9852f6ea2b30abfb35ba5ded71fc5d736cc66ed",
+   "manifest_sha256": "8ab96a84ef0c789f81b446ead9852f6ea2b30abfb35ba5ded71fc5d736cc66ed",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 71,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [
+      "ruled lines forming a table or chart grid on page 1: its text is kept in drawing order, its rows and columns are not"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: table structure.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "e744914267c03bc79ac714cb946a83a7eadc54e4db97a4e3387b3ee673c7b3f6",
+    "text": "[Page 1]\nTable of versions\nName\tVersion\tSize\nalpha\t1\t10 KB\nbeta\t2\t12 KB",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 71,
+      "lines": 4,
+      "glyphs": 49,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 6,
+      "omissions": [
+       "grid"
+      ]
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123850,
+    "millis": 10
+   }
+  },
+  "p11-formula.pdf": {
+   "kind": "generated",
+   "sha256": "07641bfe012187dc1b686789cbac020949c7267056a2b7a57f13582349f84e64",
+   "manifest_sha256": "07641bfe012187dc1b686789cbac020949c7267056a2b7a57f13582349f84e64",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 30,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [
+      "mathematical notation on page 1: its symbols are kept as characters, its layout (fractions, sub- and superscripts, radicals) is not"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: formula layout.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "104375fdefb0dedb8a6e80158b0124b2f7578a7f15104d67d320f12957094a95",
+    "text": "[Page 1]\nEnergy: E = mc2\n∑ ≤ ∞",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 30,
+      "lines": 2,
+      "glyphs": 15,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "math"
+      ]
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123408,
+    "millis": 10
+   }
+  },
+  "p12-annotations-form.pdf": {
+   "kind": "generated",
+   "sha256": "3ecc350cf64f3896be29c8b49020211b95c0ecf30a881da6eeeb51a56a1d9882",
+   "manifest_sha256": "3ecc350cf64f3896be29c8b49020211b95c0ecf30a881da6eeeb51a56a1d9882",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 18,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [
+      "annotations on page 1 (1: comments, highlights, stamps or attachments; not read)",
+      "form fields on page 1 (1; their values are not read)",
+      "JavaScript (not run and not read)",
+      "embedded files (not opened)"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: annotations, form fields, JavaScript, embedded files.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "873cc7426d09e648182c8bc70cdad40051cddeb3feeb5258298efb6b1632297e",
+    "text": "[Page 1]\nForm page",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 18,
+      "lines": 1,
+      "glyphs": 8,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "annotations",
+       "form_fields"
+      ]
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 124476,
+    "millis": 10
+   }
+  },
+  "p13-invisible-ocr-layer.pdf": {
+   "kind": "generated",
+   "sha256": "8a2cd245266b7aba8fa54e2e6aa6100d980cdbd46e7bbc394276cae4602ab1e9",
+   "manifest_sha256": "8a2cd245266b7aba8fa54e2e6aa6100d980cdbd46e7bbc394276cae4602ab1e9",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 34,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line",
+      "invisible text on page 1 (often an OCR layer over a scan; kept as is, its accuracy is not checked)"
+     ],
+     "left_out": [
+      "images on page 1 (1 in all; images are not read, no OCR)"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: images.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "7963b3dac1cb9ea5c049845417f24d6c89681e7cc30600479f4b3806fc8575f7",
+    "text": "[Page 1]\nScanned invoice number 42",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 34,
+      "lines": 1,
+      "glyphs": 22,
+      "rotated_lines": 0,
+      "invisible_chars": 22,
+      "wide_gaps": 0,
+      "omissions": [
+       "images"
+      ]
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 178407,
+    "millis": 10
+   }
+  },
+  "p14-outside-and-duplicates.pdf": {
+   "kind": "generated",
+   "sha256": "706c2ba2ffcebf2ac6625d09db4a9b1284401e8cb2117d8539c61bfee92129cf",
+   "manifest_sha256": "706c2ba2ffcebf2ac6625d09db4a9b1284401e8cb2117d8539c61bfee92129cf",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 45,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [
+      "19 characters drawn outside the visible page area on page 1"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: text outside the page.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "79d817f3c9aed6acbb14bf1d1e8f140892e39af0d4d5fa62c313d75c9f1dc4b6",
+    "text": "[Page 1]\nVisible line\nStroked once\nBold twice",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 45,
+      "lines": 3,
+      "glyphs": 31,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": [
+       "outside"
+      ]
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123527,
+    "millis": 10
+   }
+  },
+  "p15-positioned-words.pdf": {
+   "kind": "generated",
+   "sha256": "fbb319f049fa518c15961d937986bc7414ab432d43b027c0273911c357430d41",
+   "manifest_sha256": "fbb319f049fa518c15961d937986bc7414ab432d43b027c0273911c357430d41",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 60,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [],
+     "note": null,
+     "reader": "pdf-experiment-1",
+     "status": "complete"
+    },
+    "text_sha256": "80f25bf1070e8e89c1d9fd3667d6a9e7dc03ce811ba5f19943b0a1df537545c1",
+    "text": "[Page 1]\nWord spacing by position\nKerning\nWide gaps\nTab\tstop",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 60,
+      "lines": 4,
+      "glyphs": 43,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 1,
+      "omissions": []
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123520,
+    "millis": 10
+   }
+  },
+  "p16-text-cap.pdf": {
+   "kind": "generated",
+   "sha256": "7b26b99aaf1515bc3c15fed92ebcd078b6fd2e3b2a07d78971af1b253208b201",
+   "manifest_sha256": "7b26b99aaf1515bc3c15fed92ebcd078b6fd2e3b2a07d78971af1b253208b201",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 1000000,
+     "covered": [
+      "the text layer of all 120 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [
+      "the last 81211 characters of the text (from page 111 on)"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: text past the length limit.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "e33cf7dded45e9fbf9f0936cf9180821c043c1ac9829c228a233dfd2a363af4d",
+    "text": null,
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 9008,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 2,
+      "state": "text",
+      "start": 9018,
+      "end": 18017,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 3,
+      "state": "text",
+      "start": 18027,
+      "end": 27026,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 4,
+      "state": "text",
+      "start": 27036,
+      "end": 36035,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 5,
+      "state": "text",
+      "start": 36045,
+      "end": 45044,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 6,
+      "state": "text",
+      "start": 45054,
+      "end": 54053,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 7,
+      "state": "text",
+      "start": 54063,
+      "end": 63062,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 8,
+      "state": "text",
+      "start": 63072,
+      "end": 72071,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 9,
+      "state": "text",
+      "start": 72081,
+      "end": 81080,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 10,
+      "state": "text",
+      "start": 81091,
+      "end": 90090,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 11,
+      "state": "text",
+      "start": 90101,
+      "end": 99100,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     },
+     {
+      "page": 12,
+      "state": "text",
+      "start": 99111,
+      "end": 108110,
+      "lines": 90,
+      "glyphs": 7380,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 120,
+    "millis": 489
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 5323007,
+    "millis": 580
+   }
+  },
+  "p17-glyph-budget.pdf": {
+   "kind": "generated",
+   "sha256": "cea65f0c92fa31c6648849a0a2b3bf4109a0053e8669c0849758943bf774d6da",
+   "manifest_sha256": "cea65f0c92fa31c6648849a0a2b3bf4109a0053e8669c0849758943bf774d6da",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF passes this reader's limit on characters drawn.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 930
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 6387057,
+    "millis": 855
+   }
+  },
+  "p18-draw-budget.pdf": {
+   "kind": "generated",
+   "sha256": "d41ebf229302b92d205468d74a758df8a3d209f6838b28a66f2fe80ee554f69c",
+   "manifest_sha256": "d41ebf229302b92d205468d74a758df8a3d209f6838b28a66f2fe80ee554f69c",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF passes this reader's limit on drawing operations.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 733
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 31154245,
+    "millis": 671
+   }
+  },
+  "a01-flate-bomb.pdf": {
+   "kind": "adversarial",
+   "sha256": "9fb3801f6198819c2a80a6bf21bc7299f6b8bd4b532c47dd8bda5d19f01e6332",
+   "manifest_sha256": "9fb3801f6198819c2a80a6bf21bc7299f6b8bd4b532c47dd8bda5d19f01e6332",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream expands beyond this reader's limit of 16 MiB.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 10
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 16932255,
+    "millis": 20
+   }
+  },
+  "a02-nested-flate.pdf": {
+   "kind": "adversarial",
+   "sha256": "68c803b08d6d134ea919b0f3e6c67d330a441aa9e6a867031cdd9cc35f5a354f",
+   "manifest_sha256": "68c803b08d6d134ea919b0f3e6c67d330a441aa9e6a867031cdd9cc35f5a354f",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream expands beyond this reader's limit of 16 MiB.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 10
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 16920993,
+    "millis": 20
+   }
+  },
+  "a03-image-label-bomb.pdf": {
+   "kind": "adversarial",
+   "sha256": "0c43c257cad36ef00ee6d92b7fe95f0e2d442140b1025ec4d44be2929d9c78d8",
+   "manifest_sha256": "0c43c257cad36ef00ee6d92b7fe95f0e2d442140b1025ec4d44be2929d9c78d8",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream expands beyond this reader's limit of 64 MiB.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 46
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 67362323,
+    "millis": 51
+   }
+  },
+  "a04-decoded-total.pdf": {
+   "kind": "adversarial",
+   "sha256": "d61d2006d3712a2b8a3d0a15ef7f7d8586c208318a577ba0c280bcd23ef06cc9",
+   "manifest_sha256": "d61d2006d3712a2b8a3d0a15ef7f7d8586c208318a577ba0c280bcd23ef06cc9",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF's non-image streams expand to more than this reader's limit (128 MiB).",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 97
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 17162991,
+    "millis": 102
+   }
+  },
+  "a05-too-many-pages.pdf": {
+   "kind": "adversarial",
+   "sha256": "80b65cd4ed3a4fbc50d24ccc53d429dc99ad846976622d4bf1be9e1285271081",
+   "manifest_sha256": "80b65cd4ed3a4fbc50d24ccc53d429dc99ad846976622d4bf1be9e1285271081",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF has more pages than this reader's limit (500).",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 3
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 1782279,
+    "millis": 10
+   }
+  },
+  "a06-declared-objects.pdf": {
+   "kind": "adversarial",
+   "sha256": "a581b949de07bf3bf5ff96a76983c67c8b8af828b0cfd84c5d999dad26a22678",
+   "manifest_sha256": "a581b949de07bf3bf5ff96a76983c67c8b8af828b0cfd84c5d999dad26a22678",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF declares more objects than this reader's limit (200000).",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11545,
+    "millis": 10
+   }
+  },
+  "a07a-deep-stream-dict.pdf": {
+   "kind": "adversarial",
+   "sha256": "d63394bbed188ae6a3bb2e6e61e95afaf541ba43587d418edd3945a793cb6894",
+   "manifest_sha256": "d63394bbed188ae6a3bb2e6e61e95afaf541ba43587d418edd3945a793cb6894",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream's dictionary could not be checked before reading.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11481,
+    "millis": 10
+   }
+  },
+  "a07b-deep-page-dict.pdf": {
+   "kind": "adversarial",
+   "sha256": "43113ab8ae8d44c6f6302fa9fbc3113e7f702887b871985a65a7efad408738dc",
+   "manifest_sha256": "43113ab8ae8d44c6f6302fa9fbc3113e7f702887b871985a65a7efad408738dc",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF has no pages.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 126408,
+    "millis": 10
+   }
+  },
+  "a08-form-recursion.pdf": {
+   "kind": "adversarial",
+   "sha256": "b3fcc48cdd5b2dd142e28f1636d90ac9759e55278ae7fda6621b74f6071fcca5",
+   "manifest_sha256": "b3fcc48cdd5b2dd142e28f1636d90ac9759e55278ae7fda6621b74f6071fcca5",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 13,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line"
+     ],
+     "left_out": [],
+     "note": null,
+     "reader": "pdf-experiment-1",
+     "status": "complete"
+    },
+    "text_sha256": "d79d1826b13d5fe1cca205a827732198af7e79df52a6f385b520771dda22f962",
+    "text": "[Page 1]\nloop",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text",
+      "start": 9,
+      "end": 13,
+      "lines": 1,
+      "glyphs": 4,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 1,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123419,
+    "millis": 10
+   }
+  },
+  "a09-form-fanout.pdf": {
+   "kind": "adversarial",
+   "sha256": "b782e8e1b3ded008c504a376c347e2fcfc40b1ceb9ea2e10701e75d8b470be63",
+   "manifest_sha256": "b782e8e1b3ded008c504a376c347e2fcfc40b1ceb9ea2e10701e75d8b470be63",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF passes this reader's limit on characters drawn.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 1399
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 124815,
+    "millis": 1377
+   }
+  },
+  "a10-lzw.pdf": {
+   "kind": "adversarial",
+   "sha256": "57eb6344d58164dc6047ce9920b85b7b1078bfb876557155edf6d8c3c0615243",
+   "manifest_sha256": "57eb6344d58164dc6047ce9920b85b7b1078bfb876557155edf6d8c3c0615243",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF uses legacy LZW compression, which this experiment does not read.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11511,
+    "millis": 10
+   }
+  },
+  "a11-codec-on-content.pdf": {
+   "kind": "adversarial",
+   "sha256": "a6359b08d6b8b23cfafd3d83778b7fe943854902a2e0be146deac933539fa442",
+   "manifest_sha256": "a6359b08d6b8b23cfafd3d83778b7fe943854902a2e0be146deac933539fa442",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "An image codec is used on a stream that is not an image.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11477,
+    "millis": 10
+   }
+  },
+  "a12-indirect-filter.pdf": {
+   "kind": "adversarial",
+   "sha256": "dc16d598403997a87c52963180b4bed52c9f80c6d1bc1358a456d4ca7f2f08dd",
+   "manifest_sha256": "dc16d598403997a87c52963180b4bed52c9f80c6d1bc1358a456d4ca7f2f08dd",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream's filter list is stored elsewhere in the file; this reader does not guess its size.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11549,
+    "millis": 10
+   }
+  },
+  "a13-unknown-filter.pdf": {
+   "kind": "adversarial",
+   "sha256": "e717c3bb5aee617957f2ed74d619d4213e237def33ee80ad3249fd9c5e134448",
+   "manifest_sha256": "e717c3bb5aee617957f2ed74d619d4213e237def33ee80ad3249fd9c5e134448",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream uses a filter this reader does not know.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11463,
+    "millis": 10
+   }
+  },
+  "a14-run-length-bomb.pdf": {
+   "kind": "adversarial",
+   "sha256": "101f32c8ac7d6dfdd51305bf92f243ce1ed62cd741a149a14f4dc1ad295be1fb",
+   "manifest_sha256": "101f32c8ac7d6dfdd51305bf92f243ce1ed62cd741a149a14f4dc1ad295be1fb",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream expands beyond this reader's limit of 16 MiB.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 11
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 34087903,
+    "millis": 21
+   }
+  },
+  "a15-stream-count.pdf": {
+   "kind": "adversarial",
+   "sha256": "0ddc80fd2bc9433e00fce24cdab228eda752ebb514df90057f341fc739708144",
+   "manifest_sha256": "0ddc80fd2bc9433e00fce24cdab228eda752ebb514df90057f341fc739708144",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF has more streams than this reader's limit (50000).",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 9
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 8921889,
+    "millis": 23
+   }
+  },
+  "a16-big-input.pdf": {
+   "kind": "adversarial",
+   "sha256": "da3f12fa23d557118162917c4f2a1288278cdd41ba7c0882758712bac3feae1f",
+   "manifest_sha256": "da3f12fa23d557118162917c4f2a1288278cdd41ba7c0882758712bac3feae1f",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF is larger than this reader's input limit (32 MiB).",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 67119375,
+    "millis": 188
+   }
+  },
+  "a17-fake-endstream.pdf": {
+   "kind": "adversarial",
+   "sha256": "d7d06b8e1c126eb0633b8481647ec6f95589d4e22e1219e86e3df423b3b7f4b3",
+   "manifest_sha256": "d7d06b8e1c126eb0633b8481647ec6f95589d4e22e1219e86e3df423b3b7f4b3",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A stream expands beyond this reader's limit of 16 MiB.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 14
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 16932255,
+    "millis": 21
+   }
+  },
+  "a18-encrypted-owner-only.pdf": {
+   "kind": "adversarial",
+   "sha256": "7ce351b13a871dc4d70231a1b7781d06b117d2cd6973937f906f962302d6b6ba",
+   "manifest_sha256": "7ce351b13a871dc4d70231a1b7781d06b117d2cd6973937f906f962302d6b6ba",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 12581,
+    "millis": 10
+   }
+  },
+  "a19-encrypted-user-password.pdf": {
+   "kind": "adversarial",
+   "sha256": "fc466b504d1743233c2abff62dc11aa1e961513c5e16a56370e62c841f7794c5",
+   "manifest_sha256": "707a47a8b2257d29f26e2f835cefdec632024f51dd360ef731cfd5aeaef809f9",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 12581,
+    "millis": 10
+   }
+  },
+  "a20-escaped-encrypt.pdf": {
+   "kind": "adversarial",
+   "sha256": "9a45307dd9e7b9899c4eb88e8153342d6609c1335f8add623032cbcac32c22c9",
+   "manifest_sha256": "9a45307dd9e7b9899c4eb88e8153342d6609c1335f8add623032cbcac32c22c9",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11557,
+    "millis": 10
+   }
+  },
+  "c01-truncated-half.pdf": {
+   "kind": "damaged",
+   "sha256": "f63b545276485d60d4827094835211abd919970d6b31c33712c84ae98fcdce22",
+   "manifest_sha256": "f63b545276485d60d4827094835211abd919970d6b31c33712c84ae98fcdce22",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11504,
+    "millis": 10
+   }
+  },
+  "c02-truncated-tail.pdf": {
+   "kind": "damaged",
+   "sha256": "a469df01766a19e5cd3f38862c420cbbd498b439af9a3108ad7be04e0a35c495",
+   "manifest_sha256": "a469df01766a19e5cd3f38862c420cbbd498b439af9a3108ad7be04e0a35c495",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 12528,
+    "millis": 10
+   }
+  },
+  "c03-wrong-startxref.pdf": {
+   "kind": "damaged",
+   "sha256": "6ed6fb3c062d2033f2e63c741ee77d46d3a8bfdd1a61b449a8622ad4c40a1961",
+   "manifest_sha256": "6ed6fb3c062d2033f2e63c741ee77d46d3a8bfdd1a61b449a8622ad4c40a1961",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF's cross-reference data is damaged (the offset at its end is wrong).",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 11510,
+    "millis": 10
+   }
+  },
+  "c04-damaged-flate.pdf": {
+   "kind": "damaged",
+   "sha256": "2afede156d914baab2fad425c549408896206558aa91fb69493fb45b36e6c859",
+   "manifest_sha256": "2afede156d914baab2fad425c549408896206558aa91fb69493fb45b36e6c859",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "A compressed stream in the PDF is damaged.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123346,
+    "millis": 10
+   }
+  },
+  "c05-not-a-pdf.pdf": {
+   "kind": "damaged",
+   "sha256": "88917e70d33dc5fd8f493a1923b4f37e2a45d9aa20bc30f484fe8ab82a6cae80",
+   "manifest_sha256": "88917e70d33dc5fd8f493a1923b4f37e2a45d9aa20bc30f484fe8ab82a6cae80",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The file has no PDF header.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 10454,
+    "millis": 10
+   }
+  },
+  "c06-garbage.pdf": {
+   "kind": "damaged",
+   "sha256": "2d1d7654e9a7d520bdf666c91c25959b2d8b4e7077884d0029b714af83701df3",
+   "manifest_sha256": "2d1d7654e9a7d520bdf666c91c25959b2d8b4e7077884d0029b714af83701df3",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The file ends before its end-of-file marker; it is truncated or damaged.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 18672,
+    "millis": 10
+   }
+  },
+  "c07-page-count.pdf": {
+   "kind": "damaged",
+   "sha256": "7760200ea2080e1553edc9db00020456ba425240254ed994b9c467fc8a74f708",
+   "manifest_sha256": "7760200ea2080e1553edc9db00020456ba425240254ed994b9c467fc8a74f708",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF's page tree is damaged: it declares 3 pages but 2 were found.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 123449,
+    "millis": 11
+   }
+  },
+  "c08-empty.pdf": {
+   "kind": "damaged",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The file has no PDF header.",
+     "reader": "pdf-experiment-1",
+     "status": "failed"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 10390,
+    "millis": 10
+   }
+  },
+  "e01-libreoffice.pdf": {
+   "kind": "exported",
+   "sha256": "b9aec91cdbb6884c0f577a9e691244e08ef7b70575a8bdc14a33a5ac38302977",
+   "manifest_sha256": "b9aec91cdbb6884c0f577a9e691244e08ef7b70575a8bdc14a33a5ac38302977",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 325,
+     "covered": [
+      "the text layer of all 2 pages in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line",
+      "rotated text on page 2, each rotated line kept as its own line"
+     ],
+     "left_out": [
+      "images on page 1 (1 in all; images are not read, no OCR)",
+      "ruled lines forming a table or chart grid on page 1: its text is kept in drawing order, its rows and columns are not",
+      "mathematical notation on page 1: its symbols are kept as characters, its layout (fractions, sub- and superscripts, radicals) is not"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: images, table structure, formula layout.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "5874fb99a7acf40aeebaa24a04fa5b52e8f1551ef29adc2049c5692ca7a2ec52",
+    "text": "[Page 1]\nTraeva export test\nEnglish paragraph for the reader.\n这是中文段落，用于版本记忆测试。\nMixed 中文 and English text.\nName\tVersion\tSize\nalpha\tv1.0\t10 KB\nbeta\tv2.0\t12 KB\nSum ∑ x ≤ ∞ and √2\n[Page 2]\nSecond page heading\nColumn one first line.\nColumn one second line.\nColumn two first line.\nColumn two second line.\nBefore\nRotated label\nafter",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 175,
+      "lines": 8,
+      "glyphs": 135,
+      "rotated_lines": 0,
+      "invisible_chars": 0,
+      "wide_gaps": 6,
+      "omissions": [
+       "images",
+       "grid",
+       "math"
+      ]
+     },
+     {
+      "page": 2,
+      "state": "text",
+      "start": 185,
+      "end": 325,
+      "lines": 8,
+      "glyphs": 118,
+      "rotated_lines": 1,
+      "invisible_chars": 0,
+      "wide_gaps": 0,
+      "omissions": []
+     }
+    ],
+    "page_count": 2,
+    "millis": 1
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 336936,
+    "millis": 10
+   }
+  },
+  "e02-chromium.pdf": {
+   "kind": "exported",
+   "sha256": "5ec70413c075c25dc4edb97eb43bd5966fc10a7f7b0b489ccfce207b23942710",
+   "manifest_sha256": "5ec70413c075c25dc4edb97eb43bd5966fc10a7f7b0b489ccfce207b23942710",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 299,
+     "covered": [
+      "the text layer of the page in the order the PDF draws it: one line per text line, each page after a \"[Page N]\" line",
+      "rotated text on page 1, each rotated line kept as its own line"
+     ],
+     "left_out": [
+      "images on page 1 (1 in all; images are not read, no OCR)",
+      "ruled lines forming a table or chart grid on page 1: its text is kept in drawing order, its rows and columns are not",
+      "mathematical notation on page 1: its symbols are kept as characters, its layout (fractions, sub- and superscripts, radicals) is not"
+     ],
+     "note": "Not all of this PDF is in the text. Left out: images, table structure, formula layout.",
+     "reader": "pdf-experiment-1",
+     "status": "partial"
+    },
+    "text_sha256": "79f353293c541195635c834596460ba092c2ef24579f3421d549153fa84c7729",
+    "text": "[Page 1]\nTraeva browser export\nEnglish paragraph for the reader.\n这是中文段落，用于版本记忆测试。\nMixed 中文 and English text.\nName Version Size\nalpha v1.0\t10 KB\nbeta\tv2.0\t12 KB\nSum ∑ x ≤ ∞ and √2\nColumn one first line.\nColumn one second line.\nColumn two first line.\nColumn two second line.\nBefore\tafter\nRotated label",
+    "pages": [
+     {
+      "page": 1,
+      "state": "text_with_omissions",
+      "start": 9,
+      "end": 299,
+      "lines": 14,
+      "glyphs": 239,
+      "rotated_lines": 1,
+      "invisible_chars": 0,
+      "wide_gaps": 4,
+      "omissions": [
+       "images",
+       "grid",
+       "math"
+      ]
+     }
+    ],
+    "page_count": 1,
+    "millis": 3
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 945285,
+    "millis": 10
+   }
+  },
+  "e03a-libreoffice-open-password.pdf": {
+   "kind": "exported",
+   "sha256": "b756d9f606149f712068b70df9dbf36a732818812766b478d10a6338bbc52719",
+   "manifest_sha256": "b756d9f606149f712068b70df9dbf36a732818812766b478d10a6338bbc52719",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 26917,
+    "millis": 10
+   }
+  },
+  "e03b-libreoffice-permissions-only.pdf": {
+   "kind": "exported",
+   "sha256": "2f629ad196344ae1dcedd0b2f792b29573212a96865d1c76bcbfccb5332f9dfa",
+   "manifest_sha256": "2f629ad196344ae1dcedd0b2f792b29573212a96865d1c76bcbfccb5332f9dfa",
+   "verdict": "PASS",
+   "problems": [],
+   "actual": {
+    "summary": {
+     "chars": 0,
+     "covered": [],
+     "left_out": [],
+     "note": "The PDF is encrypted. This reader does not open encrypted PDFs, even when no password is needed.",
+     "reader": "pdf-experiment-1",
+     "status": "unsupported"
+    },
+    "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "text": "",
+    "pages": [],
+    "page_count": 0,
+    "millis": 0
+   },
+   "isolated": {
+    "outcome": "finished",
+    "peak_heap_bytes": 26917,
+    "millis": 10
+   }
+  }
+ },
+ "isolation_limits": {
+  "p18 with a 16 MiB heap cap": {
+   "expected": "memory_limit",
+   "actual": "memory_limit",
+   "status": "unsupported",
+   "note": "The reader needed more than 16 MiB of memory in its isolated process."
+  },
+  "p16 with a 0 s time limit": {
+   "expected": "time_limit",
+   "actual": "time_limit",
+   "status": "unsupported",
+   "note": "The reader did not finish within 0 seconds in its isolated process."
+  }
+ },
+ "totals": {
+  "fixtures_pass": 51,
+  "fixtures_fail": 0,
+  "checks_ok": true,
+  "generated_hashes_ok": true,
+  "exported_hashes_ok": true,
+  "isolation_limits_ok": true
+ }
+}

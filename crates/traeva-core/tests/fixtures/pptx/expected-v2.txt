@@ -1,0 +1,17 @@
+[Slide 1]
+[Title]
+Second title
+[Text]
+Second body
+[Notes]
+Second speaker note revised v2
+
+[Slide 2]
+[Title]
+First title 中国
+[Text]
+First body
+Second paragraph 🦀
+[Notes]
+First speaker note
+Note line two

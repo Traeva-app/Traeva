@@ -1,0 +1,35 @@
+   Compiling traeva-core v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-projection/crates/traeva-core)
+   Compiling traeva-xlsx-projection-candidate v0.1.0 (<HOME>/Developer/Traeva-F-xlsx-projection/experiments/xlsx-reader/projection)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 22.84s
+     Running tests/shared_helper.rs (experiments/xlsx-reader/projection/target/debug/deps/shared_helper-c95168cfefdb228c)
+
+running 5 tests
+test four_reader_gate_never_reclassifies_txt_md_or_docx ... ok
+test preview_visibility_and_cache_qualifier_have_actual_typed_recognition ... ok
+test actual_name_helper_roundtrips_every_delimiter_and_non_bmp ... ok
+test candidate_one_sheet_label_is_recognized_by_the_real_helper ... FAILED
+test escaped_source_is_preserved_and_never_becomes_known_or_unknown_structure ... FAILED
+
+failures:
+
+---- candidate_one_sheet_label_is_recognized_by_the_real_helper stdout ----
+
+thread 'candidate_one_sheet_label_is_recognized_by_the_real_helper' (16101877) panicked at tests/shared_helper.rs:109:5:
+assertion failed: matches!(structure_line(XLSX_READER, line), Some(StructureLine::Sheet { .. }))
+
+---- escaped_source_is_preserved_and_never_becomes_known_or_unknown_structure stdout ----
+
+thread 'escaped_source_is_preserved_and_never_becomes_known_or_unknown_structure' (16101878) panicked at tests/shared_helper.rs:67:5:
+assertion `left == right` failed
+  left: 4
+ right: 5
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    candidate_one_sheet_label_is_recognized_by_the_real_helper
+    escaped_source_is_preserved_and_never_becomes_known_or_unknown_structure
+
+test result: FAILED. 3 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+error: test failed, to rerun pass `--test shared_helper`

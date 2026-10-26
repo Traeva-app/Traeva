@@ -1,0 +1,44 @@
+{
+  "review_type": "independent development subagent static review; not R1 acceptance",
+  "scope": {
+    "crates/traeva-core/src/docx.rs": "765946eb65cf3e48f0daf90367b7a3ea37d339503a4b7d65efeaf45c49371fc2",
+    "crates/traeva-core/src/docx_tests.rs": "6062aad762985254e3cb3c6fdf892634ae16638ea573e6f88a04f1df8fd3e5a5",
+    "crates/traeva-core/tests/docx_reader/probe.rs": "6c117b77f77b27dc8fc03e322fbaf8422b4e12d998be8cef5a4a1cfb9700fa2b",
+    "crates/traeva-core/tests/docx_reader/snapshot_tests.rs": "3bf14c0fb8b5e106cb7c58297efa0194fe714c9f95226c90546418a9b33a15b9"
+  },
+  "findings_fixed": [
+    "Test referenced nonexistent FileBusy; changed to public FileChanging.",
+    "Clarified single-object watch binding and 100ms test polling boundary.",
+    "Added writer progress counters bracketing the concurrent capture attempt."
+  ],
+  "final_static_result": "No remaining actionable defect in these four files. git diff --check passed.",
+  "independent_test_execution": "Reviewer reran 6 Snapshot and 2 targeted Reader tests using an existing compiled artifact, not an independent fresh build. Final counter-only revision was statically reviewed.",
+  "not_reviewed": [
+    "final PR commit",
+    "production Word Memory",
+    "Go/No-Go"
+  ],
+  "caveats": [
+    "Concurrent prefix writes are scheduling-dependent stress replay, not a deterministic interleaving proof.",
+    "100ms test polling does not establish production two-second watcher capture rate."
+  ],
+  "evidence_consistency_review": {
+    "result": "PASS: W1-W8 match local evidence; v3 remains an explicit capture GAP; no production Word Memory acceptance claimed",
+    "report_sha256": "838469e4c0e3da0b7eba17a49565995b1b46464068a6583e98f017e1a2660150",
+    "machine_evidence_sha256": "b82bbb4ed177c1a6d2d1fa805d9b7c92745dbddfb9f0f8d0dd36cb637aa7e8a7",
+    "verified": [
+      "Word saved package and expected-text hashes",
+      "753ms save interval",
+      "one immutable snapshot per original-object watch",
+      "FileChanged outcomes and retained v3 gap",
+      "12 fresh-process exact SnapshotRef/hash/text checks",
+      "actual v4 SIGKILL exit -9 and recovery",
+      "raw log hashes and published-body exclusion"
+    ],
+    "not_performed": [
+      "independent Word GUI rerun",
+      "full fresh build by reviewer",
+      "R1 acceptance"
+    ]
+  }
+}

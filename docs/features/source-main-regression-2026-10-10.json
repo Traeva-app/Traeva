@@ -1,0 +1,3249 @@
+{
+  "kind": "C developer regression evidence, not independent acceptance",
+  "initial_main": "6cc3a60742c54cac6e3e056eb422cf2af36d2bd2",
+  "latest_main": "7c64dbac0772ccf8835a81ab59d734db8a7ce067",
+  "latest_binary_sha256": "2851ebae399c1e3dfcc4b02c5d9f320fbaa018271892b5dc0c1e8236275add19",
+  "chrome": "Chrome/155.0.8059.39",
+  "macos": "27.0.1 arm64",
+  "schema_version": 9,
+  "contract_version": 16,
+  "automatic_verified": "FROZEN_NOT_IMPLEMENTED_NOT_PASS",
+  "initial_evidence_cross_check": {
+    "passed": 22,
+    "failed": 0,
+    "limitations": 9
+  },
+  "latest_checks": {
+    "all_restart_tables_identical": true,
+    "all_same_version_restart_tables_identical": true,
+    "source_one_import_time_preserved": true,
+    "source_one_confirmation_time_preserved": true,
+    "family_association_does_not_create_source_association": true,
+    "source_off_preserves_associations": true,
+    "memory_saved_while_source_off": true,
+    "no_model_consent_or_analysis": true,
+    "default_data_metadata_unchanged": true
+  },
+  "known_failure": {
+    "owner": "B UI / A shared permission boundary",
+    "actual": "Memory candidate-capture notice retained Inbox path after Organize committed move to Organized",
+    "code_inference_not_executed": "An old notice with null occupant token may enable capture at the new place",
+    "handoff": "https://github.com/P30g53/Traeva/issues/65#issuecomment-6102864317"
+  },
+  "limitations": [
+    "Initial move/Undo/relocate/replacement UI cases ran on 6cc3a60; their Source/core code is byte-identical in 7c64dba. Newest app tested Chrome, confirmation, UNKNOWN, family association, normal restart and Source-off coexistence.",
+    "Loopback HTTP synthetic TXT downloads, not public HTTPS or real user profile.",
+    "Normal quit/reopen, not power loss or forced-crash recovery.",
+    "Metadata snapshots include two unexplained ctime-only changes. No claim of process-attributed zero metadata writes.",
+    "Raw evidence and local logs are retained under outputs/source-main-regression; browser profile and pairing credentials are excluded."
+  ],
+  "stages": [
+    {
+      "stage": "startup",
+      "at_ms": 1791670576563,
+      "raw_sha256": "eaca084f0a1c9a7118e85ad0ae76eeb1f750a0868138b3792c476776620ed0f0",
+      "capture_enabled": false,
+      "counts": {
+        "authorized_roots": 0,
+        "files": 0,
+        "source_records": 0,
+        "source_candidates": 0,
+        "source_associations": 0,
+        "source_history": 0,
+        "memory_watches": 0,
+        "snapshots": 0,
+        "memory_chains": 0,
+        "memory_families": 0,
+        "memory_members": 0,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 0,
+        "action_events": 0,
+        "path_history": 0,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [],
+      "source_records": [],
+      "associations": [],
+      "candidates": [],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "collected",
+      "at_ms": 1791670629987,
+      "raw_sha256": "b8778daef6127a3d16da8ad42e81d9cb9a3a770bac8ba0587b7b28c017ad153c",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 0,
+        "source_history": 0,
+        "memory_watches": 0,
+        "snapshots": 0,
+        "memory_chains": 0,
+        "memory_families": 0,
+        "memory_members": 0,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 0,
+        "action_events": 0,
+        "path_history": 1,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "after-cancel",
+      "at_ms": 1791670647745,
+      "raw_sha256": "ed090b0c75988edef10465fbf0e0060af5627ef461ae8c7cb36ad973a882f042",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 0,
+        "source_history": 0,
+        "memory_watches": 0,
+        "snapshots": 0,
+        "memory_chains": 0,
+        "memory_families": 0,
+        "memory_members": 0,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 0,
+        "action_events": 0,
+        "path_history": 1,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "after-confirm",
+      "at_ms": 1791670660741,
+      "raw_sha256": "502e03e5802561e478688c0aa1f22c866a1162fe875492fe72376c06fa0ee35b",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 0,
+        "snapshots": 0,
+        "memory_chains": 0,
+        "memory_families": 0,
+        "memory_members": 0,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 0,
+        "action_events": 0,
+        "path_history": 1,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "memory-on",
+      "at_ms": 1791670745701,
+      "raw_sha256": "bd6363608e6b05ecc2aada355883d60cb4f622fc2a077e1982adfa629cc45c70",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 1,
+        "snapshots": 1,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 1,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 0,
+        "action_events": 0,
+        "path_history": 1,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "organize-preview",
+      "at_ms": 1791670911691,
+      "raw_sha256": "252a6998f97baa4188a4ecf7c095e696e2a90532c06cb3ff10df6cc3a073fb0f",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 1,
+        "snapshots": 1,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 1,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 0,
+        "action_events": 0,
+        "path_history": 1,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "organize-moved",
+      "at_ms": 1791670916893,
+      "raw_sha256": "cbfb8e173d3ef6091ec7c1309fbe0f6e2754c3426b988b6b5dfe6d0b4708f5b3",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 1,
+        "snapshots": 1,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 1,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 1,
+        "action_events": 3,
+        "path_history": 2,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Organized/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Organized/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        }
+      }
+    },
+    {
+      "stage": "undo-preview",
+      "at_ms": 1791670949255,
+      "raw_sha256": "95fb7990970054c1b7db0bfcdb65db09558f7238d6aaf0baa3891df86e7e3357",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 1,
+        "snapshots": 1,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 1,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 1,
+        "action_events": 3,
+        "path_history": 2,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Organized/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Organized/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        }
+      }
+    },
+    {
+      "stage": "undone",
+      "at_ms": 1791670959594,
+      "raw_sha256": "05cf1cbdeec4679b495b207a9db2322943eda1fcd5e02ee6ed84132067cd1d72",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 1,
+        "snapshots": 1,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 1,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 3,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "edited-in-place",
+      "at_ms": 1791670976398,
+      "raw_sha256": "778242cc2d2abac870439015d1ec42d63ac770acf8159e803b589d3283155cbf",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 1,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 1,
+        "snapshots": 2,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 1,
+        "memory_edges": 0,
+        "memory_gaps": 0,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 3,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "memory-relocated",
+      "at_ms": 1791671015142,
+      "raw_sha256": "c172a29c244c363f0ad33eb458426e7a8f7b7f698efdc81f1cf51a1c5a53e63e",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 2,
+        "source_records": 1,
+        "source_candidates": 1,
+        "source_associations": 1,
+        "source_history": 1,
+        "memory_watches": 2,
+        "snapshots": 3,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 2,
+        "memory_edges": 1,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 4,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "source-relocated",
+      "at_ms": 1791671167805,
+      "raw_sha256": "2a0a63dfb83f626cead4232aa08eed83f526e66ebd2641139df0a3042bc08c28",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 2,
+        "source_records": 1,
+        "source_candidates": 2,
+        "source_associations": 1,
+        "source_history": 2,
+        "memory_watches": 2,
+        "snapshots": 3,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 2,
+        "memory_edges": 1,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 4,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169497582,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "f31731d28b661bf04d67ef8e05710c26103522605cf9e716217cd2d9783b427a"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "replaced",
+      "at_ms": 1791671186205,
+      "raw_sha256": "c3b3c0c2980e99e49ef6126db7dd143be1f1dc7f120c238abf29a4af1c971c11",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 3,
+        "source_records": 1,
+        "source_candidates": 2,
+        "source_associations": 1,
+        "source_history": 2,
+        "memory_watches": 2,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 3,
+        "memory_edges": 1,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 5,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "memory-continued",
+      "at_ms": 1791671202172,
+      "raw_sha256": "168633b5efa517058683f6a2e448ee6b20fbef56c77eb6de4e20299c7d7ef856",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 3,
+        "source_records": 1,
+        "source_candidates": 2,
+        "source_associations": 1,
+        "source_history": 2,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 3,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 5,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "replacement-details",
+      "at_ms": 1791671240913,
+      "raw_sha256": "60cfb3c4c630f68b70ceb9be55fccdd9118e3cf75403a99b6bbdab1870af8c2f",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 3,
+        "source_records": 1,
+        "source_candidates": 2,
+        "source_associations": 1,
+        "source_history": 2,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 3,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 5,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "repeat-download",
+      "at_ms": 1791671254585,
+      "raw_sha256": "2815a5cf12dbe1d61a8cbf9e88d04f76287dc1ce9499b0147dfdfdf212802a24",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 4,
+        "source_records": 2,
+        "source_candidates": 3,
+        "source_associations": 1,
+        "source_history": 2,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 3,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 6,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "rejected",
+      "at_ms": 1791671263549,
+      "raw_sha256": "95f794c968ccadffc63e61e1e73c5996945ae5a90eeb9d6acc54c84fb9a8b02f",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 4,
+        "source_records": 2,
+        "source_candidates": 3,
+        "source_associations": 1,
+        "source_history": 3,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 3,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 6,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "before-close",
+      "at_ms": 1791671301628,
+      "raw_sha256": "26749fb2c326cb6c9f2f02a3abbfc9999e74b5074eed09e88ff8cdf4f1722614",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 4,
+        "source_records": 2,
+        "source_candidates": 4,
+        "source_associations": 1,
+        "source_history": 3,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 3,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 6,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "restarted-latest",
+      "at_ms": 1791671399579,
+      "raw_sha256": "1af05603713c984c4fbf46cb023c03cb16f5d9b3c5d32aec775a70d1fc8d7308",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 4,
+        "source_records": 2,
+        "source_candidates": 4,
+        "source_associations": 1,
+        "source_history": 3,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 3,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 6,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "latest-associated",
+      "at_ms": 1791671453136,
+      "raw_sha256": "59231870b30f43e1a41691d68fe20cc242a0a9243feae3a27a5c26ef013a3a86",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 5,
+        "source_records": 2,
+        "source_candidates": 4,
+        "source_associations": 1,
+        "source_history": 3,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 4,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 7,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        },
+        {
+          "file_id": "02dc43fe-8423-488a-86ed-6d4ace90f91c",
+          "relative_path": "Inbox/unrelated.md",
+          "presence": "present",
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "byte_length": 69
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "latest-family-source-unknown",
+      "at_ms": 1791671501521,
+      "raw_sha256": "d49e61784cbd0bf527340878e23e8f55a77a8c5959556efec3d3a1bba772b51c",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 6,
+        "source_records": 3,
+        "source_candidates": 5,
+        "source_associations": 1,
+        "source_history": 3,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 4,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 8,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        },
+        {
+          "file_id": "02dc43fe-8423-488a-86ed-6d4ace90f91c",
+          "relative_path": "Inbox/unrelated.md",
+          "presence": "present",
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "byte_length": 69
+        },
+        {
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "relative_path": "Inbox/source-df7c63ea.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "3",
+          "imported_at_ms": 1791671477743,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/source-df7c63ea.txt": {
+          "dev": 16777232,
+          "inode": 169701662,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "92374de611442a67f111a41e4f1ddc3a16fbfb856d0d4a4e5cfb7c859c8a52ac"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "latest-confirmed",
+      "at_ms": 1791671520220,
+      "raw_sha256": "d3f66dd89d2f8c5d563a9020393189e0326c18ed4b05570252a2cf88b6e1dbe1",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 6,
+        "source_records": 3,
+        "source_candidates": 5,
+        "source_associations": 2,
+        "source_history": 4,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 4,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 8,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        },
+        {
+          "file_id": "02dc43fe-8423-488a-86ed-6d4ace90f91c",
+          "relative_path": "Inbox/unrelated.md",
+          "presence": "present",
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "byte_length": 69
+        },
+        {
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "relative_path": "Inbox/source-df7c63ea.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "3",
+          "imported_at_ms": 1791671477743,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "original_file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "relation": "download",
+          "confirmed_at_ms": 1791671516853
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/source-df7c63ea.txt": {
+          "dev": 16777232,
+          "inode": 169701662,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "92374de611442a67f111a41e4f1ddc3a16fbfb856d0d4a4e5cfb7c859c8a52ac"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "latest-normal-restart",
+      "at_ms": 1791671542772,
+      "raw_sha256": "7bda9381ae6c95d2feadf1c84d9621202deeea81d0e901113c756bc997a22370",
+      "capture_enabled": true,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 6,
+        "source_records": 3,
+        "source_candidates": 5,
+        "source_associations": 2,
+        "source_history": 4,
+        "memory_watches": 3,
+        "snapshots": 4,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 4,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 8,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        },
+        {
+          "file_id": "02dc43fe-8423-488a-86ed-6d4ace90f91c",
+          "relative_path": "Inbox/unrelated.md",
+          "presence": "present",
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "byte_length": 69
+        },
+        {
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "relative_path": "Inbox/source-df7c63ea.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "3",
+          "imported_at_ms": 1791671477743,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "original_file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "relation": "download",
+          "confirmed_at_ms": 1791671516853
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28727,
+          "nlink": 1,
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/source-df7c63ea.txt": {
+          "dev": 16777232,
+          "inode": 169701662,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "92374de611442a67f111a41e4f1ddc3a16fbfb856d0d4a4e5cfb7c859c8a52ac"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    },
+    {
+      "stage": "source-off-memory-continues",
+      "at_ms": 1791671568133,
+      "raw_sha256": "ea1f295adb10f7c845cbd7bf4751b8b0f98e8487653243c3bd06eec19ce25ce5",
+      "capture_enabled": false,
+      "counts": {
+        "authorized_roots": 1,
+        "files": 6,
+        "source_records": 3,
+        "source_candidates": 5,
+        "source_associations": 2,
+        "source_history": 4,
+        "memory_watches": 3,
+        "snapshots": 5,
+        "memory_chains": 1,
+        "memory_families": 1,
+        "memory_members": 4,
+        "memory_edges": 2,
+        "memory_gaps": 1,
+        "actions": 2,
+        "action_events": 6,
+        "path_history": 8,
+        "memory_consents": 0,
+        "memory_change_analyses": 0
+      },
+      "files": [
+        {
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "missing",
+          "sha256": "377b7ea9281322eb35e08b4a160fae9b331302673fbcdf60f746683252a67469",
+          "byte_length": 28727
+        },
+        {
+          "file_id": "ee3cce58-2447-41f3-9c78-2431b7b149d3",
+          "relative_path": "External/renamed-download.txt",
+          "presence": "present",
+          "sha256": "1f7655cdec4c8067a44a5b236d48882e6dfda1d4bb0e2e5f8a36dea6c16f1912",
+          "byte_length": 28779
+        },
+        {
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "relative_path": "Inbox/source-6d36b2d5.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        },
+        {
+          "file_id": "02dc43fe-8423-488a-86ed-6d4ace90f91c",
+          "relative_path": "Inbox/unrelated.md",
+          "presence": "present",
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "byte_length": 69
+        },
+        {
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "relative_path": "Inbox/source-df7c63ea.txt",
+          "presence": "present",
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "byte_length": 28672
+        }
+      ],
+      "source_records": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "1",
+          "imported_at_ms": 1791670625345,
+          "reason": null
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "2",
+          "imported_at_ms": 1791671241736,
+          "reason": null
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "profile_id": "3831c641-09ab-4dbb-8e86-871ff24a2f88",
+          "download_id": "3",
+          "imported_at_ms": 1791671477743,
+          "reason": null
+        }
+      ],
+      "associations": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "original_file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "relation": "download",
+          "confirmed_at_ms": 1791670654912
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "original_file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "relation": "download",
+          "confirmed_at_ms": 1791671516853
+        }
+      ],
+      "candidates": [
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "d357887c-7c95-4e3c-bf19-9b960499c595",
+          "status": "active"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "537607c8-e5ff-4853-878b-4b6fe7bc5a43",
+          "status": "active"
+        },
+        {
+          "source_id": "f9a63d5e-cd0f-4bdc-85b6-ee5e632db4fb",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "rejected"
+        },
+        {
+          "source_id": "b831545a-a0d0-43ee-86fd-5eba904c0c0d",
+          "file_id": "3a233653-b0d8-4f1f-894f-5bf625be7280",
+          "status": "active"
+        },
+        {
+          "source_id": "d9666861-4b52-4c87-9f1a-30651a4002cc",
+          "file_id": "e9b78e2c-2cbe-49d5-866e-c30b1f3ace9f",
+          "status": "active"
+        }
+      ],
+      "user_files": {
+        "External/renamed-download.txt": {
+          "dev": 16777232,
+          "inode": 169634388,
+          "size": 28779,
+          "nlink": 1,
+          "sha256": "1f7655cdec4c8067a44a5b236d48882e6dfda1d4bb0e2e5f8a36dea6c16f1912",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/memory-other.md": {
+          "dev": 16777232,
+          "inode": 169469413,
+          "size": 64,
+          "nlink": 1,
+          "sha256": "27dbe6960a8c3f8764d1c104e421c8581fae9cd1bd7c25e4307a2976b9db8427",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        },
+        "Inbox/source-6d36b2d5.txt": {
+          "dev": 16777232,
+          "inode": 169646861,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "c1c61a70e5a043d891fec96f73344d661aa7777ec0d30a8e362a419991472e5e"
+          }
+        },
+        "Inbox/source-df7c63ea.txt": {
+          "dev": 16777232,
+          "inode": 169701662,
+          "size": 28672,
+          "nlink": 1,
+          "sha256": "a3081fbb845f34cf2eb794c22241618d8512a20118f2fb6f969bf5b8742f3c95",
+          "xattrs": {
+            "com.apple.macl": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd",
+            "com.apple.quarantine": "92374de611442a67f111a41e4f1ddc3a16fbfb856d0d4a4e5cfb7c859c8a52ac"
+          }
+        },
+        "Inbox/unrelated.md": {
+          "dev": 16777232,
+          "inode": 169469409,
+          "size": 69,
+          "nlink": 1,
+          "sha256": "afec8c6b4b2bc222e85949699fb2a49ea4d31539b6655755c0ab560315570105",
+          "xattrs": {
+            "com.apple.provenance": "b3781f5b27a4fe25a5b85c9d02beed6a3cf4b4048ae5cb18e090b12b959a0ccd"
+          }
+        }
+      }
+    }
+  ],
+  "raw_evidence_index": [
+    {
+      "name": "after-cancel.json",
+      "sha256": "ed090b0c75988edef10465fbf0e0060af5627ef461ae8c7cb36ad973a882f042",
+      "bytes": 6409
+    },
+    {
+      "name": "after-confirm.json",
+      "sha256": "502e03e5802561e478688c0aa1f22c866a1162fe875492fe72376c06fa0ee35b",
+      "bytes": 7466
+    },
+    {
+      "name": "assertions-initial.json",
+      "sha256": "24560a08cf81c497cbdef36a9832662d93f9bbb5cb87551c03216a17f07d8d9c",
+      "bytes": 26419
+    },
+    {
+      "name": "assertions-initial.md",
+      "sha256": "55297753d7246766d6c53001e4d479744fc9409a41cff31b90351294924a1fc4",
+      "bytes": 5456
+    },
+    {
+      "name": "before-close.json",
+      "sha256": "26749fb2c326cb6c9f2f02a3abbfc9999e74b5074eed09e88ff8cdf4f1722614",
+      "bytes": 27779
+    },
+    {
+      "name": "before-restart.json",
+      "sha256": "d22c17dd0b55a6aeb856aacc12ccd94c28dec2b3d9c076cb42eaf57962919b64",
+      "bytes": 792
+    },
+    {
+      "name": "chrome-adapter/browser-events.json",
+      "sha256": "e0e71ac71a2f7b518d55ba6f25690ce8f9454ef1370e5f93633f32f18748f78c",
+      "bytes": 2776
+    },
+    {
+      "name": "chrome-adapter/chrome-delivery.json",
+      "sha256": "8befded4604c2a61cbf72a2862ba56221d9516730400379278b8915861539db7",
+      "bytes": 1122
+    },
+    {
+      "name": "chrome-adapter/environment.json",
+      "sha256": "49c143d00cb00df24398ab8dd18caf909713d1cf56831683f5eae871aea6065a",
+      "bytes": 774
+    },
+    {
+      "name": "chrome-adapter/extension-storage-redacted.json",
+      "sha256": "28d74b77f103222e4cf2e7abcd81a46aba95235123da15a7d410628f3ffacdc3",
+      "bytes": 320
+    },
+    {
+      "name": "chrome-adapter/outcome.json",
+      "sha256": "055bd05abadf376b602bfe0e5d11efa35c399f2ad5e8e27f37e164988e04c948",
+      "bytes": 64
+    },
+    {
+      "name": "chrome-adapter/repeat-download.json",
+      "sha256": "89bc056bf06cb7102fff256456bdcaed5ec7b893d010b0a226ea7b45d9488b2a",
+      "bytes": 704
+    },
+    {
+      "name": "chrome-delivery.json",
+      "sha256": "8befded4604c2a61cbf72a2862ba56221d9516730400379278b8915861539db7",
+      "bytes": 1122
+    },
+    {
+      "name": "chrome-latest-delivery.json",
+      "sha256": "31b2fe0e0981bb900ac004dc055c88c6f8c557f090e976d36700344cb2d77f45",
+      "bytes": 1122
+    },
+    {
+      "name": "chrome-latest-main/browser-events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "name": "chrome-latest-main/extension-storage-redacted.json",
+      "sha256": "28d74b77f103222e4cf2e7abcd81a46aba95235123da15a7d410628f3ffacdc3",
+      "bytes": 320
+    },
+    {
+      "name": "chrome-latest-main/failure.json",
+      "sha256": "41eadd15ac5bc4f06f79ba63f90aa679d791baaaf88833dde3aeac4fea4dcc2e",
+      "bytes": 549
+    },
+    {
+      "name": "chrome-latest-main/outcome.json",
+      "sha256": "860b8bef10bec00a2d721f5d5bc239ae73ea1309d204851137b3b80736f4d231",
+      "bytes": 64
+    },
+    {
+      "name": "chrome-latest-main-retry/browser-events.json",
+      "sha256": "bf9ea180f76767fef70cfd2c82beaea3913642e9a32190a516beeaf65861010d",
+      "bytes": 1471
+    },
+    {
+      "name": "chrome-latest-main-retry/chrome-delivery.json",
+      "sha256": "31b2fe0e0981bb900ac004dc055c88c6f8c557f090e976d36700344cb2d77f45",
+      "bytes": 1122
+    },
+    {
+      "name": "chrome-latest-main-retry/environment.json",
+      "sha256": "49c143d00cb00df24398ab8dd18caf909713d1cf56831683f5eae871aea6065a",
+      "bytes": 774
+    },
+    {
+      "name": "chrome-latest-main-retry/extension-storage-redacted.json",
+      "sha256": "f5abcb0f33ebfaa05bb5d1e127fa5eb1e6e668856dccee3cedd776bfafb74eab",
+      "bytes": 320
+    },
+    {
+      "name": "chrome-latest-main-retry/outcome.json",
+      "sha256": "055bd05abadf376b602bfe0e5d11efa35c399f2ad5e8e27f37e164988e04c948",
+      "bytes": 64
+    },
+    {
+      "name": "chrome-latest-retry.log",
+      "sha256": "66445f2c80d1e18995471595a938d9f178842aff9ca6df26195dd8747dcf2a34",
+      "bytes": 218
+    },
+    {
+      "name": "chrome-latest-run.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "name": "chrome-run.log",
+      "sha256": "4e6ab9d522fa4c78c9a4acbd805750bb49fda29c185879b8d5a8bd5cee2b87f3",
+      "bytes": 254
+    },
+    {
+      "name": "cleanup.json",
+      "sha256": "eb1cc017a532a5b6b4a3a9859eb33a358c0dcea9fde17a4643b4570da5c58ea0",
+      "bytes": 316
+    },
+    {
+      "name": "collected.json",
+      "sha256": "b8778daef6127a3d16da8ad42e81d9cb9a3a770bac8ba0587b7b28c017ad153c",
+      "bytes": 6406
+    },
+    {
+      "name": "default-data-metadata-comparison.json",
+      "sha256": "a344b27554fcfb133f1aa4fe7a96195288899d919902c4caabe94141e85e63f2",
+      "bytes": 1076
+    },
+    {
+      "name": "edited-in-place.json",
+      "sha256": "778242cc2d2abac870439015d1ec42d63ac770acf8159e803b589d3283155cbf",
+      "bytes": 15983
+    },
+    {
+      "name": "environment.json",
+      "sha256": "6e994b5056b62187d9eecc31cf81105594ba60610703233249ced430516f320d",
+      "bytes": 1323
+    },
+    {
+      "name": "file-selected.json",
+      "sha256": "f36b00d000ffc1c666b331ee82a735ad5af0787d9b7ba1dc6daa427baf529105",
+      "bytes": 7466
+    },
+    {
+      "name": "first-close.json",
+      "sha256": "912434f9fd2b3b0417d9949e19cf5136f25b5c43189d0a87c339d0c622f9c91f",
+      "bytes": 123
+    },
+    {
+      "name": "latest-associated.json",
+      "sha256": "59231870b30f43e1a41691d68fe20cc242a0a9243feae3a27a5c26ef013a3a86",
+      "bytes": 29459
+    },
+    {
+      "name": "latest-build.json",
+      "sha256": "821b8b68eda279572cfb07d4da4284db5eca344c1b4aa20d4947bd663ab53c7a",
+      "bytes": 200
+    },
+    {
+      "name": "latest-confirmed.json",
+      "sha256": "d3f66dd89d2f8c5d563a9020393189e0326c18ed4b05570252a2cf88b6e1dbe1",
+      "bytes": 33786
+    },
+    {
+      "name": "latest-family-source-unknown.json",
+      "sha256": "d49e61784cbd0bf527340878e23e8f55a77a8c5959556efec3d3a1bba772b51c",
+      "bytes": 32776
+    },
+    {
+      "name": "latest-normal-close.json",
+      "sha256": "10d1984248741b546abdfb0a2fea04fc678d547275ca6512930a786b5569c51a",
+      "bytes": 113
+    },
+    {
+      "name": "latest-normal-restart.json",
+      "sha256": "7bda9381ae6c95d2feadf1c84d9621202deeea81d0e901113c756bc997a22370",
+      "bytes": 33791
+    },
+    {
+      "name": "memory-continued.json",
+      "sha256": "168633b5efa517058683f6a2e448ee6b20fbef56c77eb6de4e20299c7d7ef856",
+      "bytes": 23500
+    },
+    {
+      "name": "memory-on.json",
+      "sha256": "bd6363608e6b05ecc2aada355883d60cb4f622fc2a077e1982adfa629cc45c70",
+      "bytes": 9165
+    },
+    {
+      "name": "memory-relocated.json",
+      "sha256": "c172a29c244c363f0ad33eb458426e7a8f7b7f698efdc81f1cf51a1c5a53e63e",
+      "bytes": 19535
+    },
+    {
+      "name": "mutations-initial.json",
+      "sha256": "a212c8e9765fccb7db83e8490d144220e7402b4546477dbf0d9378ddbb59520c",
+      "bytes": 1272
+    },
+    {
+      "name": "mutations.json",
+      "sha256": "9f44169160e60afbb183e87e82e292e08703dccd68e9398332fff4ce056e4273",
+      "bytes": 1797
+    },
+    {
+      "name": "organize-moved.json",
+      "sha256": "cbfb8e173d3ef6091ec7c1309fbe0f6e2754c3426b988b6b5dfe6d0b4708f5b3",
+      "bytes": 12253
+    },
+    {
+      "name": "organize-preview.json",
+      "sha256": "252a6998f97baa4188a4ecf7c095e696e2a90532c06cb3ff10df6cc3a073fb0f",
+      "bytes": 9172
+    },
+    {
+      "name": "rejected.json",
+      "sha256": "95f794c968ccadffc63e61e1e73c5996945ae5a90eeb9d6acc54c84fb9a8b02f",
+      "bytes": 27300
+    },
+    {
+      "name": "repeat-download.json",
+      "sha256": "2815a5cf12dbe1d61a8cbf9e88d04f76287dc1ce9499b0147dfdfdf212802a24",
+      "bytes": 26804
+    },
+    {
+      "name": "replaced.json",
+      "sha256": "c3b3c0c2980e99e49ef6126db7dd143be1f1dc7f120c238abf29a4af1c971c11",
+      "bytes": 22695
+    },
+    {
+      "name": "replacement-details.json",
+      "sha256": "60cfb3c4c630f68b70ceb9be55fccdd9118e3cf75403a99b6bbdab1870af8c2f",
+      "bytes": 23503
+    },
+    {
+      "name": "restart-comparison.json",
+      "sha256": "8fabe1e7d5344a5a3a62d5b0a51120d378d600f57ce47469326a096ef003ffb3",
+      "bytes": 185
+    },
+    {
+      "name": "restart-same-version-comparison.json",
+      "sha256": "8fabe1e7d5344a5a3a62d5b0a51120d378d600f57ce47469326a096ef003ffb3",
+      "bytes": 185
+    },
+    {
+      "name": "restarted-latest.json",
+      "sha256": "1af05603713c984c4fbf46cb023c03cb16f5d9b3c5d32aec775a70d1fc8d7308",
+      "bytes": 27783
+    },
+    {
+      "name": "source-off-memory-continues.json",
+      "sha256": "ea1f295adb10f7c845cbd7bf4751b8b0f98e8487653243c3bd06eec19ce25ce5",
+      "bytes": 34448
+    },
+    {
+      "name": "source-relocated.json",
+      "sha256": "2a0a63dfb83f626cead4232aa08eed83f526e66ebd2641139df0a3042bc08c28",
+      "bytes": 20539
+    },
+    {
+      "name": "startup.json",
+      "sha256": "eaca084f0a1c9a7118e85ad0ae76eeb1f750a0868138b3792c476776620ed0f0",
+      "bytes": 2691
+    },
+    {
+      "name": "undo-preview.json",
+      "sha256": "95fb7990970054c1b7db0bfcdb65db09558f7238d6aaf0baa3891df86e7e3357",
+      "bytes": 12251
+    },
+    {
+      "name": "undone.json",
+      "sha256": "05cf1cbdeec4679b495b207a9db2322943eda1fcd5e02ee6ed84132067cd1d72",
+      "bytes": 15327
+    }
+  ]
+}
