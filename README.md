@@ -1,5 +1,7 @@
 # Traeva
 
+> **About this repository:** This public repository holds Traeva's final source code, as submitted to the 2026 Congressional App Challenge. Traeva was developed in a separate private repository from September 27 to October 22, 2026: 861 commits, 265 pull requests (256 merged) and 67 issues. That repository stays private because its history contains personal information. Some links in these docs point to its issues and pull requests, so they will not open.
+> 
 Traeva is a Mac file app designed for students with ADHD (attention deficit hyperactivity disorder). It helps you find study materials, organize files, and get back old versions of your assignments.
 
 I want to cut down the steps of looking for materials while studying. For example, you get interrupted while writing a report, and when you come back you have to figure out which file and which version you were on; or you download a pile of materials and never get around to organizing them. Traeva brings file organization and search together in one app, using file content to help you get back to the assignment in front of you.
