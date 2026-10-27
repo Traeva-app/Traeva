@@ -77,7 +77,7 @@ Normal organizing moves a file only after you confirm; Organize dropped files au
 
 Development needs macOS, the Xcode build tools, Node.js 22.18 or later with npm, and Rust. The Rust version is pinned by `rust-toolchain.toml`. Put the source in a local folder that iCloud, Dropbox or OneDrive does not sync.
 
-Unzip the submitted `Traeva-source.zip` to get the `Traeva` folder. In Terminal, go into this folder and run:
+Download this repository (Code → Download ZIP) and unzip it. In Terminal, go into the unzipped folder and run:
 
 ```bash
 npm ci
